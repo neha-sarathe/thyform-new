@@ -1,0 +1,54 @@
+.auth.auth-img-bg .auth-form-transparents {
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+}
+.brand-logo-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-top: 30px;
+    margin-bottom: 0rem !important;
+}
+.brand-logo1{
+    width: 197px !important;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 1rem !important;
+}
+.login-heading{
+    padding-left: 14px;
+    line-height: 23px;
+
+}
+.login-bg{
+    background-color: #fff;
+}
+.brand-logo1 img{
+    width: 100% !important;
+    height: auto;
+}
+
+.input-login{
+    background-color: transparent !important;
+    border: 1px solid #ced4da !important;
+    color: #20252a !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+}
+
+.input-login:focus{
+    background-color: transparent !important;
+    border: 1px solid #ced4da !important;
+    color: #20252a !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+}
+
+.input-login::target-text{
+    background-color: transparent !important;
+    border: 1px solid #ced4da !important;
+    color: #20252a !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+}
+.dashboard-margin{
+    margin-top: 105px;
+}

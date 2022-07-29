@@ -1,0 +1,219 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.svg {
+  transform: -rotate(90deg); /* IE 9 */
+  transform: rotate(90deg);
+  
+}
+.ql-font-arial,
+.ql-font span[data-value="arial"]::before {
+  font-family: Arial, sans-serif;
+}
+.ql-font-comic-sans,
+.ql-font span[data-value="comic-sans"]::before {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.ql-font-courier-new,
+.ql-font span[data-value="courier-new"]::before {
+  font-family: "Courier New";
+}
+.ql-font-georgia,
+.ql-font span[data-value="georgia"]::before {
+  font-family: Georgia, serif;
+}
+.ql-font-helvetica,
+.ql-font span[data-value="helvetica"]::before {
+  font-family: Helvetica, sans-serif;
+}
+.ql-font-lucida,
+.ql-font span[data-value="lucida"]::before {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* Set content for sizes */
+.ql-size-extra-small,
+.ql-size span[data-value="extra-small"]::before {
+  font-size: 13px !important;
+}
+.ql-size-small,
+.ql-size span[data-value="small"]::before {
+  font-size: 14px !important;
+}
+.ql-size-medium,
+.ql-size span[data-value="medium"]::before {
+  font-size: 18px !important;
+}
+.ql-size-large,
+.ql-size span[data-value="large"]::before {
+  font-size: 20px !important;
+};
+.ButtonWrap__root___1EO_R{
+  background-color: red !important;
+}
+.IconButton__icon-bold___2zl9t {
+  background-image: url(./images/tn_text.svg) !important;
+  background-size: 18px !important;
+  
+ 
+  }
+  
+  .EditorToolbar__root___3_Aqz{
+    background-color: #282c34 !important;
+  }
+  .ButtonGroup__root___3lEAn{
+    background-color: transparent !important;
+   
+  }
+  .IconButton__icon-italic___2hHzc{
+    background-image: url(./images/tn_text.svg) !important;
+    background-image: url(./images/tn_text.svg) !important;
+  background-size: 12px !important;
+  padding-left: 60px !important;
+  border-left-style: groove !important;
+  border-width: 0.5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  margin-left: 16px!important;
+  }
+  .IconButton__icon-strikethrough___QtE2X{
+    background-image: url(./images/b_tag.svg) !important;
+    background-size: 12px !important;
+  padding-left: 0px !important;
+  border-left-style: groove !important;
+  border-width: 0.5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  }
+  .Button__root___1gz0c {
+    border: 0px !important;
+    background:transparent !important;
+    
+  }
+ .Button__root___1gz0c{
+    background-color: transparent !important;
+  }
+  .IconButton__root___3tqZW {
+    background-color: transparent !important;
+  }
+  .ButtonGroup__root___3lEAn>div:first-child>button{
+    background-color: transparent !important;
+  }
+  .IconButton__icon-code___3F1pe{
+    background-image: url(./images/center_tag.svg) !important;
+    background-size: 16px !important;
+  padding-left: 0px !important;
+  border-left-style: groove !important;
+  border-width: 0.5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  }
+  .IconButton__icon-underline___2EmZJ{
+    background-image: url(./images/A_Tech.svg) !important;
+    background-size: 14px !important;
+  padding-left: 0px !important;
+  border-left-style: groove !important;
+  border-bottom: 10px white !important;
+  border-width: 10px !important;
+  border-width: 0.5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  }
+  
+  .IconButton__icon-align_left___1S9rt{
+    background-image: url(./images/dell_image.svg) !important;
+    background-size: 20px !important;
+  padding-left: 0px !important;
+  border-left-style: groove !important;
+  border-bottom: 10px white !important;
+  border-width: 10px !important;
+  border-width: 0.5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+      }
+  .IconButton__icon-align_center___KBWGR{
+   background-image: url(./images/gaama_image.svg) !important;
+  background-size: 16px !important;  
+  }
+  .IconButton__icon-align_right___1bWGZ{
+    background-image: url(./images/desh_imge.svg) !important;
+    background-size: 14px !important;
+  padding-left: 0px !important;
+  border-left-style: groove !important;
+  border-bottom: 10px white !important;
+  border-width: 10px !important;
+  border-width: 0.5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+      }
+  .IconButton__icon-align_justify___3eBV5{
+    background-image: url(./images/All_image.svg) !important;
+    background-size: 16px !important;
+  padding-left: 0px !important;
+  border-left-style: groove !important;
+  border-bottom: 10px white !important;
+  border-width: 10px !important;
+  border-width: 0.5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important; 
+  }
+  .IconButton__icon-unordered-list-item___Pvkrr {
+    background-image: url(./images/star.image.svg) !important;
+    background-size: 16px !important;
+  padding-left: 0px !important;
+  border-left-style: groove !important;
+  border-Right-style: groove !important;
+  border-bottom: 10px white !important;
+  border-width: 10px !important;
+  border-width: 0.5px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important; 
+  } 
+  .IconButton__icon-ordered-list-item___2rzD0 {
+    display: none !important;
+  }
+  .IconButton__icon-blockquote___17VSX {
+    display: none !important;
+  }
+  .Button__root___1gz0c:disabled>*{
+    display: none !important; 
+  }
+  .IconButton__icon-image___1gW7U{
+    display: none !important;
+  }
+  

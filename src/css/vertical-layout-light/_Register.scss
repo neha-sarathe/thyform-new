@@ -1,0 +1,141 @@
+.mandatory{
+    
+    font-style: italic;
+    color: #a9a9a9;
+    margin: 22px 0;
+
+}
+.heading-form{
+    font-family: "ProximaNova-Semibold",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    margin-top: 22px;
+    margin-bottom: 11px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.second-heading-form{
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 22px;
+    font-family: "ProximaNova-Semibold",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+input[type="radio"]{
+    display: none;
+ 
+  }
+  input[type="radio"] + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: transparent;
+    vertical-align: middle;
+    border: 2px solid #d0e3e9;
+    border-radius: 50%;
+    padding: 3px;
+    margin:0 5px;
+    
+  }
+  input[type="radio"]:checked + label span {
+    width: 19px;
+    height: 19px;
+    background: black;
+    background-clip: content-box;
+    background-color: black;
+    // -webkit-transition: border .15s ease-in-out;
+    // -o-transition: border .15s ease-in-out;
+    // transition: border .15s ease-in-out;
+  } 
+.lables-div{
+    width: 46%;
+    padding-right: 40px;
+}
+.lables-divs{
+    width: 37%;
+}
+.div-search-input{
+    width: 33%;
+}
+.second-lable{
+    margin-left: 45px;
+    // font-weight: normal;
+    // cursor: pointer;
+}
+
+.search-input{
+    border: 2px solid #d0e3e9;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 6px 6px 6px 10px;
+    width: 100%;
+}
+.search-input:focus{
+    border: 2px solid black;
+
+}
+.search-input::placeholder{
+    padding: 1px;
+}
+.form-bg{
+    background-color: #fff;
+}
+
+.search-input-div{
+    width: 41%;
+
+}
+.search-input-div1{
+    margin-left: 61px !important;
+}
+
+.register-number{
+    width: 195px;
+}
+.input-group-text{
+    border-color: #dee2e6;
+    padding: 0.1rem 0.75rem !important;
+}
+.btn-default{
+    color: #fff;
+    background-color: #17264d;
+    border-color: #17264d;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 3px;
+    align-items: center;
+    display: flex;
+}
+.para-form-div{
+    width: 36%;
+}
+.para-form{
+ 
+//   padding: 25px;
+  padding-top: 0;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.lable-form{
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #17264d;
+    font-weight: 600;
+}
+
+.auth-form-btn{
+    background: #2ee86a;
+    border: 1px solid #2ee86a;
+    padding: 8px 32px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: white;
+}
