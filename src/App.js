@@ -38,6 +38,7 @@ import Condition from './pages/jotform/Condition';
 import Auto from './pages/jotform/Auto';
 import Rept from './pages/jotform/Rept';
 import Option from './pages/jotform/Option';
+import MobileNotification from './pages/jotform/MobileNotification';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -65,77 +66,79 @@ function App() {
         window.location.pathname == '/jotform' ? <><JotformNav /></> : ''
       }
       {
-        window.location.pathname == '/setting' ? <><JotformNav /></> : ''
+        window.location.pathname == '/setting' || 'Setting_email' || 'Condition' || 'thankyoupage' || 'mobilenotification' ? <><JotformNav /></> : ''
       }
       {
-        window.location.pathname == '/publish' ? <><JotformNav /></> : ''
+        window.location.pathname == '/publish' || 'Assign' || 'Email' || 'Prefill' || 'Pdf' ? <><JotformNav /></> : ''
       }
-      {window.location.pathname == '/dashboard' && window.location.pathname == '/jotform' || '/setting' || '/publish' ? <>
-        <Router>
-          {localStorage.getItem('token') ? <Navbar /> : ''}
-          {localStorage.getItem('token') ? <Dark /> : ''}
-          {localStorage.getItem('token') ? <Sidbar /> : ''}
-          {/* <Navbar />
+      {
+        window.location.pathname == '/dashboard' && window.location.pathname == '/jotform' || '/setting' || '/publish' ? <>
+          <Router>
+            {localStorage.getItem('token') ? <Navbar /> : ''}
+            {localStorage.getItem('token') ? <Dark /> : ''}
+            {localStorage.getItem('token') ? <Sidbar /> : ''}
+            {/* <Navbar />
         <Dark />
         <Sidbar /> */}
-          {/* <JotformNav /> */}
-          {/* {
+            {/* <JotformNav /> */}
+            {/* {
           window.location.pathname == "/dashboard" ? <JotformNav /> : ''
         } */}
-          <Routes>
-            <Route path='/allform' element={<Allform />} />
-            <Route path='/jotform' element={<Jotform />} />
-            <Route path='/allform' element={<Allform />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/chart" element={<Chart />} />
-            <Route path="/" element={<Register />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/publish' element={<Publish />} />
-            <Route path='/setting' element={<Setting />} />
-            <Route path='/Newform' element={<CustomToolbar />} />
-            <Route path='/Settingform' element={<Settingform />} />
-            <Route path='/Setting_email' element={<Setting_email />} />
-            <Route path='/thankyoupage' element={<Thankyoupage />} />
-            <Route path='/Assign' element={<Assign />} />
-            <Route path='/Email' element={<Email />} />
-            <Route path='/Prefill' element={<Prefill />} />
-            <Route path='/Pdf' element={<Pdf />} />
-
-            <Route path='/Condition' element={<Condition />} />
-            <Route path='/Auto' element={<Auto />} />
-            <Route path='/Rept' element={<Rept />} />
-            <Route path='/Option' element={<Option />} />
-          </Routes>
-        </Router></> : <>
-        <div class="container-scroller">
-          <div class="container-fluid page-body-wrapper">
-            {
-              console.log('aaaaaaaaaaaaa', window.location.pathname)
-            }
-            {/* {window.location.pathname == '/dashboard' || window.location.href == '/chart' ? <Navbar /> : 'aadfsdfdsf'}
+            <Routes>
+              <Route path='/allform' element={<Allform />} />
+              <Route path='/jotform' element={<Jotform />} />
+              <Route path='/allform' element={<Allform />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/chart" element={<Chart />} />
+              <Route path="/" element={<Register />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/publish' element={<Publish />} />
+              <Route path='/setting' element={<Setting />} />
+              <Route path='/Newform' element={<CustomToolbar />} />
+              <Route path='/Settingform' element={<Settingform />} />
+              <Route path='/Setting_email' element={<Setting_email />} />
+              <Route path='/thankyoupage' element={<Thankyoupage />} />
+              <Route path='/Assign' element={<Assign />} />
+              <Route path='/Email' element={<Email />} />
+              <Route path='/Prefill' element={<Prefill />} />
+              <Route path='/Pdf' element={<Pdf />} />
+              <Route path='/Condition' element={<Condition />} />
+              <Route path='/mobilenotification' element={<MobileNotification />} />
+              <Route path='/Auto' element={<Auto />} />
+              <Route path='/Rept' element={<Rept />} />
+              <Route path='/Option' element={<Option />} />
+            </Routes>
+          </Router></> : <>
+          <div class="container-scroller">
+            <div class="container-fluid page-body-wrapper">
+              {
+                console.log('aaaaaaaaaaaaa', window.location.pathname)
+              }
+              {/* {window.location.pathname == '/dashboard' || window.location.href == '/chart' ? <Navbar /> : 'aadfsdfdsf'}
             {window.location.pathname == '/dashboard' || window.location.href == '/chart' ? <Dark /> : ''}
             {window.location.pathname == '/dashboard' || window.location.href == '/chart' ? <Sidbar /> : 'fdsfsd>'} */}
-            <Router>
-              {/* <Navbar />
+              <Router>
+                {/* <Navbar />
         <Dark />
         <Sidbar /> */}
-              {window.location.pathname == '/dashboard' || window.location.href == '/chart' ? <Sidbar /> : 'sddsdds'}
-              <Routes>
-                <Route path='/allform' element={<Allform />} />
-                <Route path='/jotform' element={<Jotform />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/chart" element={<Chart />} />
-                <Route path="/" element={<Register />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/publish' element={<Publish />} />
-                <Route path='/setting' element={<Setting />} />
-              </Routes>
-            </Router>
+                {window.location.pathname == '/dashboard' || window.location.href == '/chart' ? <Sidbar /> : 'sddsdds'}
+                <Routes>
+                  <Route path='/allform' element={<Allform />} />
+                  <Route path='/jotform' element={<Jotform />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/chart" element={<Chart />} />
+                  <Route path="/" element={<Register />} />
+                  <Route path='/login' element={<Login />} />
+                  <Route path='/publish' element={<Publish />} />
+                  <Route path='/setting' element={<Setting />} />
+                </Routes>
+              </Router>
+            </div>
+            {/* <!-- page-body-wrapper ends --> */}
           </div>
-          {/* <!-- page-body-wrapper ends --> */}
-        </div>
-        {/* <!-- container-scroller --> */}
-        {/* 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 */}</>}
+          {/* <!-- container-scroller --> */}
+          {/* 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 */}</>
+      }
 
     </>
   );

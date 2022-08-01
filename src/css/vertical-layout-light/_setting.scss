@@ -588,7 +588,9 @@
   .mainsetting-div{
     padding: 12px 27px 12px 26px;
   }
-
+.setting_form_ml{
+  margin-left: 250px;
+}
   .show-more-btn{
     background: #9b8a73;
     border: 1px solid #9b8a73;
@@ -600,10 +602,13 @@
   }
 
   .thankyou-radio{
-    width: 100%;
+    width: 65%;
     box-shadow: 0 2px 2px rgb(87 100 126 / 21%);
     background-color: #ffffff;
     padding: 16px 12px 14px 14px;
+  }
+  .ml_contain{
+    margin-left: 80px;
   }
   .big_div{
     background-color: #c71d38;
@@ -825,4 +830,7 @@ background-color: #78BB07;
     .enda:hover{
     background-color: #f5f5f5;
     }
-    
+    /* css 01/Aug/22 */
+    .set_margin{
+      margin: 60px 0px 0px 220px;
+    }

@@ -4,24 +4,26 @@ import { BiLineChart } from "react-icons/bi";
 export const Sidbar = () => {
   return (
     <>
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
-              <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-              <i class="menu-arrow"></i>
+      <nav className="sidebar sidebar-offcanvas" id="sidebar">
+        <ul className="nav">
+          <li className="nav-item">
+            <a className="nav-link" data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
+              <i className="mdi mdi-grid-large menu-icon"></i>
+              <span className="menu-title">Dashboard</span>
+              <i className="menu-arrow"></i>
             </a>
-            <div class="collapse" id="dashboards">
-              <ul class="nav flex-column sub-menu">
-                {/* <li class="nav-item"> <Link class="nav-link" to="/">Defualt</Link></li> */}
-                <li class="nav-item"> <a class="nav-link" href="pages/dashboards/crm.html">CRM</a></li>
+            <div className="collapse" id="dashboards">
+              { /*<ul class="nav flex-column sub-menu"> */}
+              {/* <li class="nav-item"> <Link class="nav-link" to="/">Default</Link></li> */}
+              {/* <li class="nav-item"> <a class="nav-link" href="pages/dashboards/crm.html">CRM</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/purple.html">Purple</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/purple-dark.html">Purple Dark</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/sales.html">Sale</a></li>
               </ul>
+              */}
             </div>
           </li>
+          {/*
           <li class="nav-item">
             <a class="nav-link" href="pages/widgets/widgets.html">
               <i class="mdi mdi-book menu-icon"></i>
@@ -104,25 +106,28 @@ export const Sidbar = () => {
               </ul>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+*/}
+          <li className="nav-item">
+            <a className="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <BiLineChart />
-              <span class="menu-title">Charts</span>
-              <i class="menu-arrow"></i>
+              <span className="menu-title">Charts</span>
+              <i className="menu-arrow"></i>
             </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
+            <div className="collapse" id="charts">
+              <ul className="nav flex-column sub-menu">
                 {/* <li class="nav-item"> <Link class="nav-link" to='/chart'>ChartJs</Link></li> */}
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/morris.html">Morris</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/flot-chart.html">Flot</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/google-charts.html">Google charts</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/sparkline.html">Sparkline js</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/c3.html">C3 charts</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartist.html">Chartists</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/justGage.html">JustGage</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/chart.html">Chart Js</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/morris.html">Morris</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/flot-chart.html">Flot</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/google-charts.html">Google charts</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/sparkline.html">Sparkline js</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/c3.html">C3 charts</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/chartist.html">Chartists</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/justGage.html">JustGage</a></li>
               </ul>
             </div>
           </li>
+          {/*
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="menu-icon mdi mdi-table"></i>
@@ -275,6 +280,7 @@ export const Sidbar = () => {
               <span class="menu-title">Documentation</span>
             </a>
           </li>
+          */}
         </ul>
       </nav></>
   )
