@@ -46,11 +46,11 @@ const Condition = () => {
     <>
       <SettingSidebar />
       {/* Condition page */}
-      <main class="page-content">
-        <div class="container ">
-          <div class="row felx align-items-center justify-content-center">
+      <main className="page-content">
+        <div className="container ">
+          <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
-            <div class="col- col_6 set_margin">
+            <div className="col- col_6 set_margin">
 
               {/* Direct link div start */}
               <div className='main_w'>
@@ -67,10 +67,10 @@ const Condition = () => {
               </div>
               {/* direct link div end */}
               {/* form div start*/}
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item standard">
+              <div className="accordion" id="accordionExample">
+                <div className="accordion-item standard">
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                    <div class="accordion-header" id="headingOne">
+                    <div className="accordion-header" id="headingOne">
                       <div className=''>
                         <div className='d-flex '>
                           <li className='shown px-2 rounded-1'>
@@ -92,10 +92,10 @@ const Condition = () => {
                 </div>
               </div>
               {/* second card start */}
-              <div class="accordion mt-3" id="accordionExample">
-                <div class="accordion-item standard">
+              <div className="accordion mt-3" id="accordionExample">
+                <div className="accordion-item standard">
                   <div className='d-flex Main_bg justify-content-between align-items-center px-3 py-3'>
-                    <div class="accordion-header" id="headingOne">
+                    <div className="accordion-header" id="headingOne">
                       <div className=''>
                         <div className='d-flex '>
                           <li className='shown px-2 rounded-1'>
@@ -121,9 +121,9 @@ const Condition = () => {
               </div>
               {/* second card end */}
             </div>
-            <div class="col-3">
+            <div className="col-3">
             </div>
-            <div class="col-3">
+            <div className="col-3">
             </div>
           </div>
         </div>

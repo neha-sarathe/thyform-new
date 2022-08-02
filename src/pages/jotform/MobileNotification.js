@@ -4,11 +4,11 @@ const MobileNotification = () => {
     return (
         <>
             <SettingSidebar />
-            <main class="page-content">
-                <div class="container">
-                    <div class="row felx align-items-center justify-content-center">
+            <main className="page-content">
+                <div className="container">
+                    <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}
-                        <div class="col- col_6 set_margin">
+                        <div className="col- col_6 set_margin">
 
                             {/* Direct link div start */}
                             <div className='main_w'>
@@ -24,10 +24,10 @@ const MobileNotification = () => {
                             </div>
                             {/* direct link div end */}
                             {/* form div start*/}
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item standard">
+                            <div className="accordion" id="accordionExample">
+                                <div className="accordion-item standard">
 
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         {/* first man div start  */}
                                         <div className=''>
                                             <form className='bg-white shadow-sm  rounded-1 p-3 position-relative'>
@@ -90,9 +90,9 @@ const MobileNotification = () => {
 
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div className="col-3">
                         </div>
-                        <div class="col-3">
+                        <div className="col-3">
                         </div>
                     </div>
                 </div>

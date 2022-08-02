@@ -14,11 +14,11 @@ const Setting_email = () => {
 
       {/* Setting_email page */}
 
-      <main class="page-content">
-        <div class="container">
-          <div class="row felx align-items-center justify-content-center">
+      <main className="page-content">
+        <div className="container">
+          <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
-            <div class="col- col_6 set_margin">
+            <div className="col- col_6 set_margin">
 
               {/* Direct link div start */}
               <div className='main_w'>
@@ -34,8 +34,8 @@ const Setting_email = () => {
               </div>
               {/* direct link div end */}
               {/* form div start*/}
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item standard">
+              <div className="accordion" id="accordionExample">
+                <div className="accordion-item standard">
                   <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
                     <div class="accordion-header" id="headingOne">
                       <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

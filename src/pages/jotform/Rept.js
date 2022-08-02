@@ -44,16 +44,16 @@ const Auto = () => {
   return (
     <>
       <main>
-        <div class="page-wrapper chiller-theme toggled">
-          <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-            <i class="fas fa-bars"></i>
+        <div className="page-wrapper chiller-theme toggled">
+          <a id="show-sidebar" className="btn btn-sm btn-dark" href="#">
+            <i className="fas fa-bars"></i>
           </a>
-          <nav id="sidebarsetting" class="sidebar-wrapper2">
-            <div class="sidebar-content">
-              <div class="sidebar-brand">
+          <nav id="sidebarsetting" className="sidebar-wrapper2">
+            <div className="sidebar-content">
+              <div className="sidebar-brand">
                 <a href="#">pro sidebar</a>
                 <div id="close-sidebar">
-                  <i class="fas fa-times"></i>
+                  <i className="fas fa-times"></i>
                 </div>
               </div>
               {/* <div class="sidebar-header">
@@ -86,7 +86,7 @@ const Auto = () => {
         </div>
       </div>
    */}
-              <div class="sidebar-menu">
+              <div className="sidebar-menu">
                 <ul>
                   {/* <li class="header-menu">
             <span>General</span>
@@ -285,11 +285,11 @@ const Auto = () => {
             </div>
 
           </nav>
-          <main class="page-content">
-            <div class="container ">
-              <div class="row felx align-items-center justify-content-center">
+          <main className="page-content">
+            <div className="container ">
+              <div className="row felx align-items-center justify-content-center">
                 {/* main div start */}
-                <div class="col-10">
+                <div className="col-10">
 
                   {/* Direct link div start */}
                   <div className='main_w'>
@@ -307,10 +307,10 @@ const Auto = () => {
                     </div>
                   </div>
                   <div>
-                    <nav class="nav  flex-column flex-sm-row bg-white mx-5 px-5 border border-black py-2">
-                      <a class="flex-sm-fill text-sm-center nav-link px-4 text-black text_design" aria-current="page" href="#">EMAIL</a>
-                      <a class="flex-sm-fill text-sm-center nav-link text-black" href="#">RECIPIENTS</a>
-                      <a class="flex-sm-fill text-sm-center nav-link text-black" href="#">ADVANCED</a>
+                    <nav className="nav  flex-column flex-sm-row bg-white mx-5 px-5 border border-black py-2">
+                      <a className="flex-sm-fill text-sm-center nav-link px-4 text-black text_design" aria-current="page" href="#">EMAIL</a>
+                      <a className="flex-sm-fill text-sm-center nav-link text-black" href="#">RECIPIENTS</a>
+                      <a className="flex-sm-fill text-sm-center nav-link text-black" href="#">ADVANCED</a>
                     </nav>
                     <div className='mx-5 bg-white py-5' >
                       <div className='mx-4 mt-3'>
@@ -324,7 +324,7 @@ const Auto = () => {
                           </li>
                         </div>
                         <div className='mt-2'>
-                          <input class="form-control " type="text" placeholder="Jotform" aria-label=" example" />
+                          <input className="form-control " type="text" placeholder="Jotform" aria-label=" example" />
 
                         </div>
 
@@ -340,7 +340,7 @@ const Auto = () => {
                           </li>
                         </div>
                         <div className='mt-2'>
-                          <input class="form-control " type="text" placeholder="noreply@jotform.com" aria-label=" example" />
+                          <input className="form-control " type="text" placeholder="noreply@jotform.com" aria-label=" example" />
 
                         </div>
 
@@ -359,7 +359,7 @@ const Auto = () => {
                           </li>
                         </div>
                         <div className='mt-2 position-relative'>
-                          <input class="form-control " type="text" placeholder="Email" aria-label=" example" />
+                          <input className="form-control " type="text" placeholder="Email" aria-label=" example" />
                           <div className='position-absolute new_icon_3'>
                             <img src={email_icon_1} height="10px" alt="manual" />
 
@@ -376,9 +376,9 @@ const Auto = () => {
                   {/* form div start*/}
 
                 </div>
-                <div class="col-1">
+                <div className="col-1">
                 </div>
-                <div class="col-1">
+                <div className="col-1">
                 </div>
               </div>
             </div>

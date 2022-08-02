@@ -42,19 +42,19 @@ const Assign = () => {
     <>
       <PublishSidebar />
       <main>
-        <div class="page-wrapper chiller-theme toggled ">
+        <div className="page-wrapper chiller-theme toggled ">
           <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-            <i class="fas fa-bars"></i>
+            <i className="fas fa-bars"></i>
           </a>
 
-          <main class="page-content">
+          <main className="page-content">
             {/* <Settingform /> */}
             {/* <Thankyoupage /> */}
             {/* main container */}
-            <div class="container ">
-              <div class="row felx align-items-center justify-content-center">
+            <div className="container ">
+              <div className="row felx align-items-center justify-content-center">
                 {/* main div start */}
-                <div class="col- col_6">
+                <div className="col- col_6">
                   <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                     <div>
                       <ul className='d-flex align-items-center pt-3'>
@@ -111,7 +111,7 @@ const Assign = () => {
                         </div>
                       </div>
 
-                      <div class="mb-3 d-flex position-relative">
+                      <div className="mb-3 d-flex position-relative">
                         <input type="text" id="disabledTextInput" class="form-control i_form" placeholder=" https://www.jotform.com/build/221860994544061/publish" />
                         <button className='bg-success rounded-3 border-white py-2 px-3 text-white w-56 copy_button'>
                           COPY LINK
@@ -135,7 +135,7 @@ const Assign = () => {
 
                       </div>
                       <div>
-                        <div class="mt-3 position-relative">
+                        <div className="mt-3 position-relative">
                           {/* <label for="disabledTextInput" class="form-label">Disabled input</label> */}
                           <input type="text" id="disabledTextInput" class="form-control" placeholder="https://www.jotform.com/build/221860994544061/publish" />
                           <div className='position-absolute link_c'>
@@ -165,9 +165,9 @@ const Assign = () => {
                   {/* two blocks div start*/}
                 </div>
                 {/* main div end */}
-                <div class="col-3">
+                <div className="col-3">
                 </div>
-                <div class="col-3">
+                <div className="col-3">
                 </div>
 
               </div>

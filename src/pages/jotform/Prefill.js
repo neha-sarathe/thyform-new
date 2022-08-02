@@ -52,19 +52,19 @@ const Prefill = () => {
     <>
       <PublishSidebar />
       <main>
-        <div class="page-wrapper chiller-theme toggled ">
+        <div className="page-wrapper chiller-theme toggled ">
           <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-            <i class="fas fa-bars"></i>
+            <i className="fas fa-bars"></i>
           </a>
 
-          <main class="page-content">
+          <main className="page-content">
             {/* <Settingform /> */}
             {/* <Thankyoupage /> */}
             {/* main container */}
-            <div class="container ">
-              <div class="row felx align-items-center justify-content-center">
+            <div className="container ">
+              <div className="row felx align-items-center justify-content-center">
                 {/* main div start */}
-                <div class="col- col_6">
+                <div className="col- col_6">
                   <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                     <div>
                       <ul className='d-flex align-items-center pt-3'>
@@ -352,9 +352,9 @@ const Prefill = () => {
                   {/* two blocks div start*/}
                 </div>
                 {/* main div end */}
-                <div class="col-3">
+                <div className="col-3">
                 </div>
-                <div class="col-3">
+                <div className="col-3">
                 </div>
 
               </div>
