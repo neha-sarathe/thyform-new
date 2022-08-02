@@ -59,20 +59,28 @@ function App() {
   console.log(window.location.pathname, 'window.location.pathname')
   return (
     <>
+      {/* {
+        window.location.pathname == '/login' ? '' : <><JotformNav /></>
+      } */}
       {
-        window.location.pathname == '/dashboard' ? <><Navbar /><Sidbar /></> : ''
+        window.location.pathname === '/dashboard' ? <><Navbar /><Sidbar /></> : ''
       }
       {
-        window.location.pathname == '/jotform' ? <><JotformNav /></> : ''
+        window.location.pathname === '/jotform' || window.location.pathname === '/setting' || window.location.pathname === '/publish' || window.location.pathname === '/settingform' || window.location.pathname
+          === '/Setting_email' || window.location.pathname === '/Condition' || window.location.pathname
+          === '/thankyoupage' || window.location.pathname === '/mobilenotification' || window.location.pathname
+          === '/Assign' || window.location.pathname === '/Email' || window.location.pathname === '/Prefill' ||
+          window.location.pathname === '/Pdf' ? <><JotformNav /></> : ''
       }
-      {
+      {/* {
         window.location.pathname == '/setting' || 'Setting_email' || 'Condition' || 'thankyoupage' || 'mobilenotification' ? <><JotformNav /></> : ''
-      }
-      {
+      } */}
+      {/* {
         window.location.pathname == '/publish' || 'Assign' || 'Email' || 'Prefill' || 'Pdf' ? <><JotformNav /></> : ''
-      }
+      } */}
       {
-        window.location.pathname == '/dashboard' && window.location.pathname == '/jotform' || '/setting' || '/publish' ? <>
+        window.location.pathname === '/dashboard' && window.location.pathname === '/jotform' || '/setting'
+          || '/publish' ? <>
           <Router>
             {localStorage.getItem('token') ? <Navbar /> : ''}
             {localStorage.getItem('token') ? <Dark /> : ''}
@@ -121,7 +129,7 @@ function App() {
                 {/* <Navbar />
         <Dark />
         <Sidbar /> */}
-                {window.location.pathname == '/dashboard' || window.location.href == '/chart' ? <Sidbar /> : 'sddsdds'}
+                {window.location.pathname === '/dashboard' || window.location.href === '/chart' ? <Sidbar /> : 'sddsdds'}
                 <Routes>
                   <Route path='/allform' element={<Allform />} />
                   <Route path='/jotform' element={<Jotform />} />
