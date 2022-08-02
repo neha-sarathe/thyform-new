@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Line, Bar, Doughnut, Pie, Scatter} from 'react-chartjs-2';
 
 
- const Chartss = () => {
+ const Charts = () => {
    
  const  data = {
     labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
@@ -263,4 +263,4 @@ const scatterChartOptions = {
       </div></>
   )
 }
-export default Chartss;
+export default Charts;

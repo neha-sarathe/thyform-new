@@ -23,8 +23,8 @@ export const Sidbar = () => {
               */}
             </div>
           </li>
-          {/*
-          <li class="nav-item">
+          {/* 
+            <li class="nav-item">
             <a class="nav-link" href="pages/widgets/widgets.html">
               <i class="mdi mdi-book menu-icon"></i>
               <span class="menu-title">Widgets</span>
@@ -93,6 +93,7 @@ export const Sidbar = () => {
               </ul>
             </div>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#editors" aria-expanded="false" aria-controls="editors">
               <i class="menu-icon mdi mdi-code-braces"></i>
@@ -105,8 +106,8 @@ export const Sidbar = () => {
                 <li class="nav-item"><a class="nav-link" href="pages/forms/code_editor.html">Code editors</a></li>
               </ul>
             </div>
-          </li>
-*/}
+          </li> */}
+
           <li className="nav-item">
             <a className="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <BiLineChart />
@@ -116,7 +117,7 @@ export const Sidbar = () => {
             <div className="collapse" id="charts">
               <ul className="nav flex-column sub-menu">
                 {/* <li class="nav-item"> <Link class="nav-link" to='/chart'>ChartJs</Link></li> */}
-                <li className="nav-item"> <a className="nav-link" href="pages/charts/chart.html">Chart Js</a></li>
+                <li className="nav-item"> <a className="nav-link" href="/Charts">Chart Js</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/morris.html">Morris</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/flot-chart.html">Flot</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/google-charts.html">Google charts</a></li>
@@ -127,7 +128,7 @@ export const Sidbar = () => {
               </ul>
             </div>
           </li>
-          {/*
+{/*
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="menu-icon mdi mdi-table"></i>
@@ -280,7 +281,7 @@ export const Sidbar = () => {
               <span class="menu-title">Documentation</span>
             </a>
           </li>
-          */}
+        */}
         </ul>
       </nav></>
   )

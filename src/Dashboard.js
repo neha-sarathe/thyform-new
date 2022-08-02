@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactApexChart from './chart'
+import { Bar } from 'react-chartjs-2'
 export const Dashboard = (props) => {
-  console.log(props.theme,'theme123456')
+  console.log(props.theme, 'theme123456')
   return (
- <>
-  <div class="main-panel" >
+    <>
+      <div class="main-panel" >
         <div class="content-wrapper">
           <div class="row">
             <div class="col-sm-12 dashboard-margin">
@@ -33,7 +34,7 @@ export const Dashboard = (props) => {
                   </div>
                 </div>
                 <div class="tab-content tab-content-basic">
-                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="statistics-details d-flex align-items-center justify-content-between">
@@ -69,7 +70,7 @@ export const Dashboard = (props) => {
                           </div>
                         </div>
                       </div>
-                    </div> 
+                    </div>
                     <div class="row">
                       <div class="col-lg-8 d-flex flex-column">
                         <div class="row flex-grow">
@@ -78,15 +79,15 @@ export const Dashboard = (props) => {
                               <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-start">
                                   <div>
-                                   <h4 class="card-title card-title-dash">Performance Line Chart</h4>
-                                   <h5 class="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5>
+                                    <h4 class="card-title card-title-dash">Performance Line Chart</h4>
+                                    <h5 class="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5>
                                   </div>
                                   <div id="performance-line-legend">
-                                   
+
                                   </div>
                                 </div>
                                 <div class="chartjs-wrapper mt-4">
-                                <ReactApexChart />
+                                  <ReactApexChart />
                                 </div>
                               </div>
                             </div>
@@ -155,7 +156,7 @@ export const Dashboard = (props) => {
                                 <div class="d-sm-flex justify-content-between align-items-start">
                                   <div>
                                     <h4 class="card-title card-title-dash">Market Overview</h4>
-                                   <p class="card-subtitle card-subtitle-dash">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                    <p class="card-subtitle card-subtitle-dash">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
                                   </div>
                                   <div>
                                     <div class="dropdown">
@@ -176,7 +177,7 @@ export const Dashboard = (props) => {
                                   <div class="me-3"><div id="marketing-overview-legend"></div></div>
                                 </div>
                                 <div class="chartjs-bar-wrapper mt-3">
-                                  <canvas id="marketingOverview"></canvas>
+                                  <Bar />
                                 </div>
                               </div>
                             </div>
@@ -203,7 +204,7 @@ export const Dashboard = (props) => {
                                 <div class="d-sm-flex justify-content-between align-items-start">
                                   <div>
                                     <h4 class="card-title card-title-dash">Pending Requests</h4>
-                                   <p class="card-subtitle card-subtitle-dash">You have 50+ new requests</p>
+                                    <p class="card-subtitle card-subtitle-dash">You have 50+ new requests</p>
                                   </div>
                                   <div>
                                     <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add new member</button>
@@ -216,7 +217,7 @@ export const Dashboard = (props) => {
                                         <th>
                                           <div class="form-check form-check-flat mt-0">
                                             <label class="form-check-label">
-                                              <input type="checkbox" class="form-check-input" aria-checked="false"/><i class="input-helper"></i></label>
+                                              <input type="checkbox" class="form-check-input" aria-checked="false" /><i class="input-helper"></i></label>
                                           </div>
                                         </th>
                                         <th>Customer</th>
@@ -230,12 +231,12 @@ export const Dashboard = (props) => {
                                         <td>
                                           <div class="form-check form-check-flat mt-0">
                                             <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" aria-checked="false"/><i class="input-helper"></i></label>
+                                              <input type="checkbox" class="form-check-input" aria-checked="false" /><i class="input-helper"></i></label>
                                           </div>
                                         </td>
                                         <td>
                                           <div class="d-flex ">
-                                            <img src="../../images/faces/face1.jpg" alt=""/>
+                                            <img src="../../images/faces/face1.jpg" alt="" />
                                             <div>
                                               <h6>Brandon Washington</h6>
                                               <p>Head admin</p>
@@ -253,7 +254,7 @@ export const Dashboard = (props) => {
                                               <p>85/162</p>
                                             </div>
                                             <div class="progress progress-md">
-                                              <div class="progress-bar bg-success" role="progressbar" style={{"width": "85%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-success" role="progressbar" style={{ "width": "85%" }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                           </div>
                                         </td>
@@ -263,12 +264,12 @@ export const Dashboard = (props) => {
                                         <td>
                                           <div class="form-check form-check-flat mt-0">
                                             <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" aria-checked="false"/><i class="input-helper"></i></label>
+                                              <input type="checkbox" class="form-check-input" aria-checked="false" /><i class="input-helper"></i></label>
                                           </div>
                                         </td>
                                         <td>
                                           <div class="d-flex">
-                                            <img src="../../images/faces/face2.jpg" alt=""/>
+                                            <img src="../../images/faces/face2.jpg" alt="" />
                                             <div>
                                               <h6>Laura Brooks</h6>
                                               <p>Head admin</p>
@@ -286,7 +287,7 @@ export const Dashboard = (props) => {
                                               <p>85/162</p>
                                             </div>
                                             <div class="progress progress-md">
-                                              <div class="progress-bar bg-success" role="progressbar" style={{"width": "65%"}} aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-success" role="progressbar" style={{ "width": "65%" }} aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                           </div>
                                         </td>
@@ -296,12 +297,12 @@ export const Dashboard = (props) => {
                                         <td>
                                           <div class="form-check form-check-flat mt-0">
                                             <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" aria-checked="false"/><i class="input-helper"></i></label>
+                                              <input type="checkbox" class="form-check-input" aria-checked="false" /><i class="input-helper"></i></label>
                                           </div>
                                         </td>
                                         <td>
                                           <div class="d-flex">
-                                            <img src="../../images/faces/face3.jpg" alt=""/>
+                                            <img src="../../images/faces/face3.jpg" alt="" />
                                             <div>
                                               <h6>Wayne Murphy</h6>
                                               <p>Head admin</p>
@@ -319,7 +320,7 @@ export const Dashboard = (props) => {
                                               <p>85/162</p>
                                             </div>
                                             <div class="progress progress-md">
-                                              <div class="progress-bar bg-warning" role="progressbar" style={{"width": "38%" }} aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-warning" role="progressbar" style={{ "width": "38%" }} aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                           </div>
                                         </td>
@@ -329,12 +330,12 @@ export const Dashboard = (props) => {
                                         <td>
                                           <div class="form-check form-check-flat mt-0">
                                             <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" aria-checked="false"/><i class="input-helper"></i></label>
+                                              <input type="checkbox" class="form-check-input" aria-checked="false" /><i class="input-helper"></i></label>
                                           </div>
                                         </td>
                                         <td>
                                           <div class="d-flex">
-                                            <img src="../../images/faces/face4.jpg" alt=""/>
+                                            <img src="../../images/faces/face4.jpg" alt="" />
                                             <div>
                                               <h6>Matthew Bailey</h6>
                                               <p>Head admin</p>
@@ -352,7 +353,7 @@ export const Dashboard = (props) => {
                                               <p>85/162</p>
                                             </div>
                                             <div class="progress progress-md">
-                                              <div class="progress-bar bg-danger" role="progressbar" style={{"width": "15%"}} aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-danger" role="progressbar" style={{ "width": "15%" }} aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                           </div>
                                         </td>
@@ -362,12 +363,12 @@ export const Dashboard = (props) => {
                                         <td>
                                           <div class="form-check form-check-flat mt-0">
                                             <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" aria-checked="false"/><i class="input-helper"></i></label>
+                                              <input type="checkbox" class="form-check-input" aria-checked="false" /><i class="input-helper"></i></label>
                                           </div>
                                         </td>
                                         <td>
                                           <div class="d-flex">
-                                            <img src="../../images/faces/face5.jpg" alt=""/>
+                                            <img src="../../images/faces/face5.jpg" alt="" />
                                             <div>
                                               <h6>Katherine Butler</h6>
                                               <p>Head admin</p>
@@ -385,7 +386,7 @@ export const Dashboard = (props) => {
                                               <p>85/162</p>
                                             </div>
                                             <div class="progress progress-md">
-                                              <div class="progress-bar bg-success" role="progressbar" style={{"width": "65%"}} aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-success" role="progressbar" style={{ "width": "65%" }} aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                           </div>
                                         </td>
@@ -455,7 +456,7 @@ export const Dashboard = (props) => {
                                     </div>
                                   </div>
                                 </div>
-                                
+
                                 <div class="list align-items-center pt-3">
                                   <div class="wrapper w-100">
                                     <p class="mb-0">
@@ -548,7 +549,7 @@ export const Dashboard = (props) => {
                                         <li class="d-block">
                                           <div class="form-check w-100">
                                             <label class="form-check-label">
-                                              <input class="checkbox" type="checkbox"/> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
+                                              <input class="checkbox" type="checkbox" /> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
                                             </label>
                                             <div class="d-flex mt-2">
                                               <div class="ps-4 text-small me-3">24 June 2020</div>
@@ -560,7 +561,7 @@ export const Dashboard = (props) => {
                                         <li class="d-block">
                                           <div class="form-check w-100">
                                             <label class="form-check-label">
-                                              <input class="checkbox" type="checkbox"/> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
+                                              <input class="checkbox" type="checkbox" /> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
                                             </label>
                                             <div class="d-flex mt-2">
                                               <div class="ps-4 text-small me-3">23 June 2020</div>
@@ -571,7 +572,7 @@ export const Dashboard = (props) => {
                                         <li>
                                           <div class="form-check w-100">
                                             <label class="form-check-label">
-                                              <input class="checkbox" type="checkbox"/> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
+                                              <input class="checkbox" type="checkbox" /> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
                                             </label>
                                             <div class="d-flex mt-2">
                                               <div class="ps-4 text-small me-3">24 June 2020</div>
@@ -582,7 +583,7 @@ export const Dashboard = (props) => {
                                         <li class="border-bottom-0">
                                           <div class="form-check w-100">
                                             <label class="form-check-label">
-                                              <input class="checkbox" type="checkbox"/> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
+                                              <input class="checkbox" type="checkbox" /> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
                                             </label>
                                             <div class="d-flex mt-2">
                                               <div class="ps-4 text-small me-3">24 June 2020</div>
@@ -658,7 +659,7 @@ export const Dashboard = (props) => {
                                     <div class="mt-3">
                                       <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                         <div class="d-flex">
-                                          <img class="img-sm rounded-10" src="../../images/faces/face1.jpg" alt="profile"/>
+                                          <img class="img-sm rounded-10" src="../../images/faces/face1.jpg" alt="profile" />
                                           <div class="wrapper ms-3">
                                             <p class="ms-1 mb-1 fw-bold">Brandon Washington</p>
                                             <small class="text-muted mb-0">162543</small>
@@ -670,7 +671,7 @@ export const Dashboard = (props) => {
                                       </div>
                                       <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                         <div class="d-flex">
-                                          <img class="img-sm rounded-10" src="../../images/faces/face2.jpg" alt="profile"/>
+                                          <img class="img-sm rounded-10" src="../../images/faces/face2.jpg" alt="profile" />
                                           <div class="wrapper ms-3">
                                             <p class="ms-1 mb-1 fw-bold">Wayne Murphy</p>
                                             <small class="text-muted mb-0">162543</small>
@@ -682,7 +683,7 @@ export const Dashboard = (props) => {
                                       </div>
                                       <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                         <div class="d-flex">
-                                          <img class="img-sm rounded-10" src="../../images/faces/face3.jpg" alt="profile"/>
+                                          <img class="img-sm rounded-10" src="../../images/faces/face3.jpg" alt="profile" />
                                           <div class="wrapper ms-3">
                                             <p class="ms-1 mb-1 fw-bold">Katherine Butler</p>
                                             <small class="text-muted mb-0">162543</small>
@@ -694,7 +695,7 @@ export const Dashboard = (props) => {
                                       </div>
                                       <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                         <div class="d-flex">
-                                          <img class="img-sm rounded-10" src="../../images/faces/face4.jpg" alt="profile"/>
+                                          <img class="img-sm rounded-10" src="../../images/faces/face4.jpg" alt="profile" />
                                           <div class="wrapper ms-3">
                                             <p class="ms-1 mb-1 fw-bold">Matthew Bailey</p>
                                             <small class="text-muted mb-0">162543</small>
@@ -706,7 +707,7 @@ export const Dashboard = (props) => {
                                       </div>
                                       <div class="wrapper d-flex align-items-center justify-content-between pt-2">
                                         <div class="d-flex">
-                                          <img class="img-sm rounded-10" src="../../images/faces/face5.jpg" alt="profile"/>
+                                          <img class="img-sm rounded-10" src="../../images/faces/face5.jpg" alt="profile" />
                                           <div class="wrapper ms-3">
                                             <p class="ms-1 mb-1 fw-bold">Rafell John</p>
                                             <small class="text-muted mb-0">Alaska, USA</small>

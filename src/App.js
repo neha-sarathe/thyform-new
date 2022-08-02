@@ -19,7 +19,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidbar from './Sidbar';
 import Navbar from './Navbar';
 import Dashboard from './Dashboard';
-import Chart from './Charts'
+import Charts from './Charts'
 import Register from './Register';
 import Login from './userpages/Login'
 import { ThemeProvider } from "styled-components";
@@ -79,8 +79,8 @@ function App() {
         window.location.pathname == '/publish' || 'Assign' || 'Email' || 'Prefill' || 'Pdf' ? <><JotformNav /></> : ''
       } */}
       {
-        window.location.pathname === '/dashboard' && window.location.pathname === '/jotform' || '/setting'
-          || '/publish' ? <>
+        window.location.pathname === '/dashboard' || window.location.pathname === '/jotform' || '/setting'
+          || '/publish' || window.location.pathname === '/Charts' ? <>
           <Router>
             {localStorage.getItem('token') ? <Navbar /> : ''}
             {localStorage.getItem('token') ? <Dark /> : ''}
@@ -88,6 +88,7 @@ function App() {
             {/* <Navbar />
         <Dark />
         <Sidbar /> */}
+            <Dark />
             {/* <JotformNav /> */}
             {/* {
           window.location.pathname == "/dashboard" ? <JotformNav /> : ''
@@ -97,7 +98,7 @@ function App() {
               <Route path='/jotform' element={<Jotform />} />
               <Route path='/allform' element={<Allform />} />
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/chart" element={<Chart />} />
+              <Route path="/Charts" element={<Charts />} />
               <Route path="/" element={<Register />} />
               <Route path='/login' element={<Login />} />
               <Route path='/publish' element={<Publish />} />
@@ -129,12 +130,12 @@ function App() {
                 {/* <Navbar />
         <Dark />
         <Sidbar /> */}
-                {window.location.pathname === '/dashboard' || window.location.href === '/chart' ? <Sidbar /> : 'sddsdds'}
+                {window.location.pathname === '/dashboard' || window.location.href == '/chart' ? <Sidbar /> : 'sddsdds'}
                 <Routes>
                   <Route path='/allform' element={<Allform />} />
                   <Route path='/jotform' element={<Jotform />} />
                   <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/chart" element={<Chart />} />
+                  <Route path="/chart" element={<Charts />} />
                   <Route path="/" element={<Register />} />
                   <Route path='/login' element={<Login />} />
                   <Route path='/publish' element={<Publish />} />

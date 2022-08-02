@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import $ from 'jquery'
-import { FiSettings } from "react-icons/fi";
-import { Link } from 'react-router-dom';
-import condition_icon from '../../images/contion_icon.svg';
-import Mobile_icon from '../../images/Mobile_icon.svg'
-import Sa_accordian from '../../images/Sa_accordian.svg'
+// import $ from 'jquery'
+// import { FiSettings } from "react-icons/fi";
+// import { Link } from 'react-router-dom';
+// import condition_icon from '../../images/contion_icon.svg';
+// import Mobile_icon from '../../images/Mobile_icon.svg'
+// import Sa_accordian from '../../images/Sa_accordian.svg'
 import SettingSidebar from './SettingSidebar';
 const Setting_email = () => {
 
@@ -37,8 +37,8 @@ const Setting_email = () => {
               <div className="accordion" id="accordionExample">
                 <div className="accordion-item standard">
                   <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
-                    <div class="accordion-header" id="headingOne">
-                      <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div className="accordion-header" id="headingOne">
+                      <button className="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
                       </button>
                     </div>
@@ -46,7 +46,7 @@ const Setting_email = () => {
                       <h5 className='fw-bold heading pt-2'>Add an email</h5>
                     </div>
                   </div>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     {/* first man div start  */}
                     <div className=''>
                       <form className='bg-white shadow-sm  rounded-1 p-3 position-relative'>
@@ -317,9 +317,9 @@ const Setting_email = () => {
         */}
               </div>
             </div>
-            <div class="col-3">
+            <div className="col-3">
             </div>
-            <div class="col-3">
+            <div className="col-3">
             </div>
           </div>
         </div>
