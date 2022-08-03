@@ -1,7 +1,9 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { Link } from "react-router-dom";
 const Login = () => {
+
+  const [pincode, setPincode] = useState('');
 
   const [image, setImage] = useState({ preview: "", raw: "" });
   useEffect(() => {
@@ -53,7 +55,7 @@ const Login = () => {
       enableDragSort("drag-sort-enable");
     })();
   }, []);
- 
+
 
   const handleChange = e => {
     if (e.target.files.length) {
@@ -63,7 +65,17 @@ const Login = () => {
       });
     }
   };
-  
+
+  const onPincode = e => {
+    const { value } = e.target;
+    // console.log('Input value: ', value);
+
+    const re = /^[0-9\b]+$/;
+    if (value === "" || re.test(value)) {
+      setPincode(value);
+    }
+  }
+
   return (
     <>
       <div class="container-scroller">
@@ -85,38 +97,38 @@ const Login = () => {
                 <div class="auth-form-transparent auth-form-transparents text-left p-3">
                   <div class="brand-logo brand-logo-main">
                     <div className="brand-logo1">
-                    {image.preview ? (
-          <img src={image.preview} alt="dummy" className="upload-img" />
-        ) : (
-          <>
+                      {image.preview ? (
+                        <img src={image.preview} alt="dummy" className="upload-img" />
+                      ) : (
+                        <>
                           <img src="../../images/Logo.png" alt="logo" />
-          </>
-        )}
+                        </>
+                      )}
                       <h6 class="fw-light login-heading">
                         Happy to see you again!
                       </h6>
                     </div>
                     <div className="icon change-logo-btn">
-              <label htmlFor="upload-button">
-              <FiLogIn
-                      style={{
-                        width: "55px",
-                        height: "auto",
-                        color: "#ced4da",
-                        cursor:'pointer'
-                      }}
-                    />
-      </label>
-      <input
-        type="file"
-        id="upload-button"
-        style={{ display: "none" }}
-        onChange={handleChange}
-      />
-                
+                      <label htmlFor="upload-button">
+                        <FiLogIn
+                          style={{
+                            width: "55px",
+                            height: "auto",
+                            color: "#ced4da",
+                            cursor: 'pointer'
+                          }}
+                        />
+                      </label>
+                      <input
+                        type="file"
+                        id="upload-button"
+                        style={{ display: "none" }}
+                        onChange={handleChange}
+                      />
+
+                    </div>
+
                   </div>
-               
-              </div>
 
                   <form class="pt-3">
                     <div class="form-group">
@@ -148,38 +160,40 @@ const Login = () => {
 
                     <div class="form-group">
                       <div class="input-group">
-                
+
                         <input
                           type="phone"
                           className="form-control  border-left-0 input-login"
                           id="exampleInputfPassword"
                           placeholder="pin code"
+                          value={pincode}
+                          onChange={onPincode}
                         />
                       </div>
                     </div>
                     <div className="d-flex justify-content-between align-items-center">
 
-                 
-                    <div class="my-2 d-flex  align-items-center">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckDefault"
-                      />
-                      <label
-                        class="form-check-label ms-2"
-                        for="flexCheckDefault"
-                      >
-                        Remember Me
-                      </label>
-                   
-                    </div>
-                    {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
+
+                      <div class="my-2 d-flex  align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label
+                          class="form-check-label ms-2"
+                          for="flexCheckDefault"
+                        >
+                          Remember Me
+                        </label>
+
+                      </div>
+                      {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
                     </div>
                     <div class="d-grid mt-3 gap-2 col-12 mx-auto mb-2">
                       <button class="btn btn-primary" type="button">
-                       <Link to='/allform'> Signin</Link>
+                        <Link to='/allform'> Signin</Link>
                       </button>
                       {/* <button class="btn btn-primary" type="button">Button</button> */}
                     </div>
@@ -190,7 +204,7 @@ const Login = () => {
                       </Link>{" "}
                       to register.
                     </p>
-         
+
                   </form>
                   <hr className="mt-5" />
 

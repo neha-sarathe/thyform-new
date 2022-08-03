@@ -183,7 +183,7 @@ export const Dashboard = (props) => {
                             </div>
                           </div>
                         </div>
-                        <div class="row flex-grow">
+                        {/* <div class="row flex-grow">
                           <div class="col-12 grid-margin stretch-card">
                             <div class="card card-rounded table-darkBGImg">
                               <div class="card-body">
@@ -196,7 +196,7 @@ export const Dashboard = (props) => {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                         <div class="row flex-grow">
                           <div class="col-12 grid-margin stretch-card">
                             <div class="card card-rounded">
@@ -399,7 +399,7 @@ export const Dashboard = (props) => {
                             </div>
                           </div>
                         </div>
-                        <div class="row flex-grow">
+                        {/* <div class="row flex-grow">
                           <div class="col-md-6 col-lg-6 grid-margin stretch-card">
                             <div class="card card-rounded">
                               <div class="card-body card-rounded">
@@ -528,7 +528,7 @@ export const Dashboard = (props) => {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                       <div class="col-lg-4 d-flex flex-column">
                         <div class="row flex-grow">

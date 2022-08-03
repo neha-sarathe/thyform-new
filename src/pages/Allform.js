@@ -187,7 +187,7 @@ const Allform = () => {
         <div id="content">
 
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <div class="container-fluid bg-primary">
 
               <button type="button" id="sidebarCollapse" class="btn btn-info">
                 <FiAlignJustify />
@@ -212,29 +212,7 @@ const Allform = () => {
                             </li>
                         </ul>
                     </div> */}
-            </div>
-          </nav>
-          <div class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-
-
-              <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                <ul class="navform navbar-nav ml-auto align-items-center">
-                  <li class="nav-item active p-3 formlink">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  </li>
-                  <li class="nav-item ps-4 formlink">
-                    <FiStar style={{ fontSize: '22px' }} />
-                  </li>
-                  <li class="nav-item ps-3 formlink">
-                    <a class="nav-link a" href="#">Page</a>
-                  </li>
-                  <li class="nav-item ps-3 formlink">
-                    <h4>Form</h4>
-                    <p>one submission Created on Jun 28, 2022</p>
-                  </li>
-                </ul>
-                <ul class="navform navbar-nav ml-auto align-items-center right-nav">
+<ul class="navform navbar-nav ml-auto align-items-center right-nav">
                   <li class="nav-item active ps-3 formlink">
                     <a href='/dashboard' class="nav-link-hover">analytics</a>
                   </li>
@@ -424,9 +402,222 @@ const Allform = () => {
                   </li>
 
                 </ul>
+
+            </div>
+          </nav>
+          {/* <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+
+              <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navform navbar-nav ml-auto align-items-center">
+                  <li class="nav-item active p-3 formlink">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </li>
+                  <li class="nav-item ps-4 formlink">
+                    <FiStar style={{ fontSize: '22px' }} />
+                  </li>
+                  <li class="nav-item ps-3 formlink">
+                    <a class="nav-link a" href="#">Page</a>
+                  </li>
+                  <li class="nav-item ps-3 formlink">
+                    <h4>Form</h4>
+                    <p>one submission Created on Jun 28, 2022</p>
+                  </li>
+                </ul>
+                <ul class="navform navbar-nav ml-auto align-items-center right-nav">
+                  <li class="nav-item active ps-3 formlink">
+                    <a href='/dashboard' class="nav-link-hover">analytics</a>
+                  </li>
+                  <li className="nav-item ps-3 formlink">
+                    <Link className="nav-link-hover" to='/'>Inbox</Link>
+                  </li>
+                  <li class="nav-item ps-3 formlink">
+                    {/* <button onClick={onClick} className="menu-trigger1">
+          <span>more</span>
+          
+        </button>
+        <div
+         style={{display:'flex'}}
+          ref={dropdownRef}
+          className={`menus1 ${isActive ? "actives" : "inactive"}`}
+        >
+          <ul>
+          <li>
+          PUBLISH
+            </li>
+           
+            <li>
+              <a href="#">Publish Form</a>
+            </li>
+            <li>
+              <a href="#">Share as Template</a>
+            </li>
+            <li>
+              <a href="#">Assign Form</a>
+            </li>
+            <li>
+              <a href="#">Create Prefill</a>
+            </li>
+            <li>
+              <a href="#">Create an App</a>
+            </li>
+            
+          </ul>
+          <ul>
+          <li>
+           DATA
+            </li>
+            <li>
+              <a href="#">Submissions</a>
+            </li>
+            <li>
+              <a href="#">Inbox</a>
+            </li>
+            <li>
+              <a href="#">Form Analytics</a>
+            </li>
+            <li>
+              <a href="#">Create Report</a>
+            </li>
+            <li>
+              <a href="#">Create PDF Document</a>
+            </li>
+           
+            <li>
+              <a href="#"> Create Approval Flow</a>
+            </li>
+          </ul>
+          <ul>
+          <li>
+           FORM
+            </li>
+            <li>
+              <a href="#">Edit</a>
+            </li>
+            <li>
+              <a href="#">Edit</a>
+            </li>
+            <li>
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <a href="#">Rename</a>
+            </li>
+            <li>
+              <a href="#">Clone</a>
+            </li>
+            <li>
+              <a href="#">Disable</a>
+            </li>
+            <li>
+              <a href="#">Revision History</a>
+            </li>
+            <li>
+              <a href="#">Archive</a>
+            </li>
+            <li>
+              <a href="#">Delete</a>
+            </li>
+          </ul>
+        </div> */}
+                {/*    <ul class="navform">
+
+                      <li class="button-dropdown formlink">
+                        <a href="javascript:void(0)" class="dropdown-toggle drop">
+                          More <span>▼</span>
+                        </a>
+                        <div class="dropdown-menu largest-list">
+                          <ul>
+                            <li>
+                              <a href="#" className='drop'>  PUBLISH</a>
+                            </li>
+
+                            <li>
+                              <a href="#" className='drop'>Publish Form</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Share as Template</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Assign Form</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Create Prefill</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Create an App</a>
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <a href="#" className='drop'>  DATA</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Submissions</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Inbox</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Form Analytics</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Create Report</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Create PDF Document</a>
+                            </li>
+
+                            <li>
+                              <a href="#" className='drop'> Create Approval Flow</a>
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <a href="#" className='drop'>  FORM</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Edit</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Edit</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Settings</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Rename</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Clone</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Disable</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Revision History</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Archive</a>
+                            </li>
+                            <li>
+                              <a href="#" className='drop'>Delete</a>
+                            </li>
+                          </ul>
+                        </div>
+
+
+                      </li>
+
+
+                    </ul>
+                  </li>
+
+                </ul>
               </div>
             </div>
-          </div>
+          </div> */}
 
 
           <div class="line"></div>
