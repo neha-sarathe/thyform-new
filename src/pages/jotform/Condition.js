@@ -102,8 +102,8 @@ const Condition = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className='mt-2' width="20" height="20" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="128" cy="128" r="40" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle></svg>
                           </li>
                           <li className='mx-4 '>
-                            <h5 className='remider fw-bold .showhover'>SHOW / HIDE FIELD</h5>
-                            <p className='remider fs_6 showhover'>Change visibility of field(s) depending on `IF` State conditions.</p>
+                            <h5 className='remider fw-bold .showhover'>UPDATE / CALCULATE FIELD</h5>
+                            <p className='remider fs_6 showhover'>Use values from fields to do complex calculations.</p>
                           </li>
                         </div>
                       </div>

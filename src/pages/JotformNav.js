@@ -6,7 +6,7 @@ export const JotformNav = () => {
 
       {/* <ul className='jotlist'> */}
       <div className='row jotlist'>
-        <div className='col-md-1 col-sm-1 col-xs-1 col-lg-1'>
+        <div className='col-md-1 col-sm-1 col-xs-1 col-lg-1 mt-3'>
           <a class="navbar-brand brand-logo" href="/dashboard">
             <i className='fa fa-arrow-left text-white'></i>
           </a>
