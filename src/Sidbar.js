@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+// import Charts from './Charts';
 import { BiLineChart } from "react-icons/bi";
 export const Sidbar = () => {
   return (
     <>
+  
       <nav className="sidebar sidebar-offcanvas" id="sidebar">
         <ul className="nav">
           <li className="nav-item">
@@ -111,24 +113,24 @@ export const Sidbar = () => {
           <li className="nav-item">
             <a className="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <BiLineChart />
-              <span className="menu-title">Charts</span>
+              <span className="menu-title icon_margin">Charts</span>
               <i className="menu-arrow"></i>
             </a>
             <div className="collapse" id="charts">
               <ul className="nav flex-column sub-menu">
-                {/* <li class="nav-item"> <Link class="nav-link" to='/chart'>ChartJs</Link></li> */}
-                <li className="nav-item"> <a className="nav-link" href="/Charts">Chart Js</a></li>
-                <li className="nav-item"> <a className="nav-link" href="pages/charts/morris.html">Morris</a></li>
-                <li className="nav-item"> <a className="nav-link" href="pages/charts/flot-chart.html">Flot</a></li>
+                {/* <li class="nav-item"> <Link class="nav-link" to='/Charts'>ChartJs</Link></li> */}
+                <li className="nav-item"> <a className="nav-link" href="./charts">Chart Js</a></li>
+                <li className="nav-item"> <Link to="/morris" className="nav-link" >Morris</Link></li>
+                {/* <li className="nav-item"> <a className="nav-link" href="pages/charts/flot-chart.html">Flot</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/google-charts.html">Google charts</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/sparkline.html">Sparkline js</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/c3.html">C3 charts</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/chartist.html">Chartists</a></li>
-                <li className="nav-item"> <a className="nav-link" href="pages/charts/justGage.html">JustGage</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/charts/justGage.html">JustGage</a></li> */}
               </ul>
             </div>
           </li>
-{/*
+          {/*
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="menu-icon mdi mdi-table"></i>
@@ -283,7 +285,8 @@ export const Sidbar = () => {
           </li>
         */}
         </ul>
-      </nav></>
+      </nav>
+      </>
   )
 }
 export default Sidbar;

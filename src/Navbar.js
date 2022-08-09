@@ -1,8 +1,40 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import $ from "jquery";
 import { FiAlignJustify } from "react-icons/fi";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 export const Navbar = () => {
+  $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebars').toggleClass('active');
+    });
+  });
+
+  $(document).ready(function (e) {
+    function t(t) {
+      e(t).bind("click", function (t) {
+        t.preventDefault();
+        e(this).parent().fadeOut()
+      })
+    }
+    e(".dropdown-toggle").click(function () {
+      var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
+      e(".button-dropdown .dropdown-menu").hide();
+      e(".button-dropdown .dropdown-toggle").removeClass("actives1");
+      if (t) {
+        e(this).parents(".button-dropdown").children(".dropdown-menu").toggle().parents(".button-dropdown").children(".dropdown-toggle").addClass("actives1")
+        e(this).parents(".button-dropdown").children(".dropdown-menu").css("display", "flex");
+      }
+    });
+    e(document).bind("click", function (t) {
+      var n = e(t.target);
+      if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-menu").hide();
+    });
+    e(document).bind("click", function (t) {
+      var n = e(t.target);
+      if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-toggle").removeClass("actives1");
+    })
+  });
+  const navigate = useNavigate();
 
   return (
     <>
@@ -173,7 +205,7 @@ export const Navbar = () => {
                 <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
                 <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
                 <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
-                <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+                <button class="dropdown-item" onClick={() => { localStorage.clear(); navigate("/"); window.location.reload(); }}><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</button>
               </div>
             </li>
           </ul>

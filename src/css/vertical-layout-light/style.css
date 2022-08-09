@@ -31382,7 +31382,7 @@ div.tagsinput span.tag a {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  margin-top: -107%;
+  margin-top: 90px;
   float: right;
 }
 
