@@ -72,7 +72,7 @@ const dataBar = {
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(255,99,132,0.4)',
       hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [92, 70, 45, 70, 45, 50, 92]
+      data: [92, 70, 60, 70, 60, 50, 92]
     }
   ]
 };

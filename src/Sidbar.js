@@ -17,10 +17,10 @@ export const Sidbar = () => {
             <div className="collapse" id="dashboards">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <Link class="nav-link" to="/dashboard">Default</Link></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/dashboards/crm.html">CRM</a></li>
+                {/* <li class="nav-item"> <a class="nav-link" href="pages/dashboards/crm.html">CRM</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/purple.html">Purple</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/purple-dark.html">Purple Dark</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/dashboards/sales.html">Sale</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/dashboards/sales.html">Sale</a></li> */}
               </ul>
 
             </div>

@@ -42,6 +42,8 @@ import Rept from './pages/jotform/Rept';
 import Option from './pages/jotform/Option';
 import MobileNotification from './pages/jotform/MobileNotification';
 import Morris from './Morris';
+import PreviewNav from './pages/jotform/components/PreviewNav';
+import { Phone } from './pages/jotform/Phone';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -61,7 +63,7 @@ const themes = {
 function App() {
   const [user, setUser] = React.useState('');
   const [jotform, setJotform] = React.useState('jotform');
-  const[register,setregister]= React.useState("/");
+  const [register, setregister] = React.useState("/");
   console.log(user, 'user9999')
   useEffect(() => {
     const token_get = localStorage.getItem('user')
@@ -76,12 +78,12 @@ function App() {
 
   return (
     <>
-      {user && window.location.pathname === '/dashboard' || window.location.pathname==="/charts" || window.location.pathname
-      ==="/morris" ? (
+      {user && window.location.pathname === '/dashboard' || window.location.pathname === "/charts" || window.location.pathname
+        === "/morris" ? (
         <>  <div class="container-scroller">
           <div class="container-fluid page-body-wrapper">
             <Router>
-              <Sidbar /><Navbar />
+              <Sidbar /><Navbar /> <Dark />
               <Routes>
 
                 <Route path="/dashboard" element={<Dashboard />} />
@@ -96,22 +98,22 @@ function App() {
 
           </div></div>
         </>
-      ): user && window.location.pathname === '/allform'? (<Router>
-          <Routes>
+      ) : user && window.location.pathname === '/allform' ? (<Router> 
+        <Routes>
           <Route path='/allform' element={<Allform />} />
-          </Routes>
-        </Router>
-     
-      ) : user && window.location.pathname === '/allform' || window.location.pathname=== "/jotform" 
-      ||window.location.pathname=== "/publish" ||window.location.pathname=== "/setting" ||window.location.pathname
-      === "/Newform" ||window.location.pathname=== "/Settingform" ||window.location.pathname=== "/Setting_email"
-      ||window.location.pathname=== "/thankyoupage" ||window.location.pathname=== "/Assign" 
-      ||window.location.pathname=== "/Email" ||window.location.pathname=== "/Prefill"
-      ||window.location.pathname=== "/Pdf" ||window.location.pathname=== "/Condition"
-      ||window.location.pathname=== "/mobilenotification" ? (
+        </Routes>
+      </Router>
+
+      ) : window.location.pathname === "/jotform"
+        || window.location.pathname === "/publish" || window.location.pathname === "/setting" || window.location.pathname
+        === "/Newform" || window.location.pathname === "/Settingform" || window.location.pathname === "/Setting_email"
+        || window.location.pathname === "/thankyoupage" || window.location.pathname === "/Assign"
+        || window.location.pathname === "/Email" || window.location.pathname === "/Prefill"
+        || window.location.pathname === "/Pdf" || window.location.pathname === "/Condition"
+        || window.location.pathname === "/mobilenotification" ? (
 
         <Router>
-          <JotformNav/>
+          <JotformNav /> 
           <Routes>
             {/* <Route path='/allform' element={<Allform />} /> */}
             <Route path='/jotform' element={<Jotform />} />
@@ -130,23 +132,31 @@ function App() {
             <Route path='/Auto' element={<Auto />} />
             <Route path='/Rept' element={<Rept />} />
             <Route path='/Option' element={<Option />} />
-            </Routes>
+            {/* <Route path='/phone' element={<Phone />} /> */}
+          </Routes>
 
         </Router>
 
+      ) : window.location.pathname === '/phone' ? (<Router>
+        <Routes>
+          <Route path='/phone' element={<Phone />} />
+        </Routes>
+      </Router>
+
       )
-     :  window.location.pathname === '/' || window.location.pathname=== "/login" ? (<Router> <Routes>
-        {/* <Route path='/allform' element={<Allform />} />
+        : window.location.pathname === '/' || window.location.pathname === "/login" ? (<Router>  
+          <Routes>
+            {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
-        <Route path="/" element={<Register />} />
-        <Route path='/login' element={<Login setUser={handleLogin} />} />
-        {/* <Route path='/publish' element={<Publish />} /> */}
-        <Route
-          path="*"
-          element={<Navigate to="/" replace />}
-        />
-      </Routes> </Router>
-      ) :''}</>
+            <Route path="/" element={<Register />} />
+            <Route path='/login' element={<Login setUser={handleLogin} />} />
+            {/* <Route path='/publish' element={<Publish />} /> */}
+            {/* <Route
+            path="/"
+            element={<Navigate to="/" replace />}
+          /> */}
+          </Routes> </Router>
+        ) : ''}</>
   );
 }
 

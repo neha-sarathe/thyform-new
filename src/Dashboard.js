@@ -49,7 +49,7 @@ export const Dashboard = (props) => {
     }
   });
   const donutdata = {
-    labels: ['total','Tue','Wed','Thurs','Fri'],
+    labels: ['Total','Net','Gross','AVG'],
     datasets: [
         {
             label: 'Attendance for Week 1',
@@ -85,6 +85,7 @@ const donutoptions = {
               animateScale: true,
                          }
       },
+      
       legend: {
         legend: {
           cursor: "pointer",

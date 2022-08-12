@@ -136,7 +136,7 @@ const Register = () => {
       setTxtno2(value);
     }
   }
-  
+
   const onSpendOther = e => {
     const { value } = e.target;
 
@@ -442,11 +442,11 @@ const Register = () => {
                           <input type="text" class="search-input" />
                         </div> */}
                         <div class="input-group search-input-div">
-                          <span class="input-group-text" id="basic-addon1">@</span>
+                          <span class="input-group-text" id="basic-addon1">£</span>
                           <input type="text" class="form-control search-input" placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend} onChange={onSpend} />
-                        </div>      
-                           </div>
+                        </div>
+                      </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className="lable-form">Does your organisation have a website?*</label>
@@ -624,8 +624,8 @@ const Register = () => {
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                                 <input type="text" class="search-input"
-                                 value={houseno}
-                                 onChange={onHouseNo} />
+                                  value={houseno}
+                                  onChange={onHouseNo} />
                               </div>
 
                             </div>
@@ -684,12 +684,12 @@ const Register = () => {
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                     {/*     <input type="text" class="search-input"
+                      {/*     <input type="text" class="search-input"
                             value={spend} onChange={onSpend} />
                         </div>
 
                       </div> */}
-                       <div className="d-flex mt-3 align-items-center">
+                      <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className="lable-form">
                             What's your expected monthly spend for this
@@ -701,11 +701,11 @@ const Register = () => {
                           <input type="text" class="search-input" />
                         </div> */}
                         <div class="input-group search-input-div">
-                          <span class="input-group-text" id="basic-addon1">@</span>
+                          <span class="input-group-text" id="basic-addon1">£</span>
                           <input type="text" class="form-control search-input" placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend2} onChange={onSpendOther} />
-                        </div>      
-                           </div>
+                        </div>
+                      </div>
 
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">

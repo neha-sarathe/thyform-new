@@ -118,22 +118,8 @@ const Allform = () => {
 
             </li>
             <hr></hr>
-            <li>
-              <Link to='/' class="">ASSIGNED FORMS    </Link>
-              {/* <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul> */}
-
-            </li>
-            <hr></hr>
+           
+        
             <li>
               <Link to='/' class="">My Drafts</Link>
               {/* <ul class="collapse list-unstyled" id="homeSubmenu">

@@ -1,6 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
+import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min';
 import $ from "jquery";
 import { FiAlignJustify } from "react-icons/fi";
+import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 export const Navbar = () => {
   $(document).ready(function () {
@@ -15,6 +20,47 @@ export const Navbar = () => {
         t.preventDefault();
         e(this).parent().fadeOut()
       })
+    }
+    if ($("#timepicker-example").length) {
+      $('#timepicker-example').datetimepicker({
+        format: 'LT'
+      });
+    }
+    if ($(".color-picker").length) {
+      $('.color-picker').asColorPicker();
+    }
+    if ($("#datepicker-popup").length) {
+      $('#datepicker-popup').datepicker({
+        enableOnReadonly: true,
+        todayHighlight: true,
+      });
+    }
+    if ($("#inline-datepicker").length) {
+      $('#inline-datepicker').datepicker({
+        enableOnReadonly: true,
+        todayHighlight: true,
+      });
+    }
+    if ($(".datepicker-autoclose").length) {
+      $('.datepicker-autoclose').datepicker({
+        autoclose: true
+      });
+    }
+    if ($('input[name="date-range"]').length) {
+      $('input[name="date-range"]').daterangepicker();
+    }
+    if ($('.input-daterange').length) {
+      $('.input-daterange input').each(function () {
+        $(this).datepicker('clearDates');
+      });
+      $('.input-daterange').datepicker({});
+    }
+    if ($("#datepicker-popup").length) {
+      $('#datepicker-popup').datepicker({
+        enableOnReadonly: true,
+        todayHighlight: true,
+      });
+      $("#datepicker-popup").datepicker("setDate", "0");
     }
     e(".dropdown-toggle").click(function () {
       var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
@@ -35,7 +81,7 @@ export const Navbar = () => {
     })
   });
   const navigate = useNavigate();
-
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <>
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
@@ -96,12 +142,19 @@ export const Navbar = () => {
             </div>
           </li> */}
             <li class="nav-item d-none d-lg-block">
-              <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+              {/* <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
                 <span class="input-group-addon input-group-prepend border-right">
                   <span class="icon-calendar input-group-text calendar-icon"></span>
                 </span>
                 <input type="text" class="form-control" />
+              </div> */}
+              <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+                <span class="input-group-addon input-group-prepend border-right">
+                  <span class=" input-group-text "><FaRegCalendarAlt /></span>
+                </span>
+                <input type="text" class="form-control input_date" />
               </div>
+              {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
             </li>
             <li class="nav-item d-none d-lg-block">
               <div id="create-form" class="create-form">

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FiLogIn } from "react-icons/fi";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Login = (props) => {
-const navigate = useNavigate();
+  const navigate = useNavigate();
   const [pincode, setPincode] = useState('');
 
   const [image, setImage] = useState({ preview: "", raw: "" });
@@ -192,8 +192,8 @@ const navigate = useNavigate();
                       {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
                     </div>
                     <div class="d-grid mt-3 gap-2 col-12 mx-auto mb-2">
-                      <button class="btn btn-primary" type="button" onClick={() => { props.setUser(); navigate("/allform"); window.location.reload(); }}>
-                        <Link to='/allform'> Signin</Link>
+                      <button class="btn btn-primary" type="button" onClick={() => { props.setUser(); navigate("../allform"); window.location.reload(); }}>
+                        Signin
                       </button>
                       {/* <button class="btn btn-primary" type="button">Button</button> */}
                     </div>
