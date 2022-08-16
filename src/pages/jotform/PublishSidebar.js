@@ -27,10 +27,10 @@ const PublishSidebar = () => {
       }
     });
 
-    $("#close-sidebar").click(function () {
+    $("#close-sidebarw").click(function () {
       $(".page-wrapper").removeClass("toggled");
     });
-    $("#show-sidebar").click(function () {
+    $("#show-sidebarw").click(function () {
       $(".page-wrapper").addClass("toggled");
     });
 
@@ -40,8 +40,8 @@ const PublishSidebar = () => {
     <>
       <main>
         <div className="page-wrapper chiller-theme toggled ">
-          <a id="show-sidebar" className="btn btn-sm btn-dark" href="#">
-            <i className="fas fa-bars"></i>
+          <a id="show-sidebarw" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
           </a>
           <nav id="sidebarsetting" className="sidebar-wrapper2">
             <div className="sidebar-content">
@@ -340,9 +340,7 @@ const PublishSidebar = () => {
 
 
         </div>
-        <div>
-
-        </div>
+      
       </main>
 
     </>

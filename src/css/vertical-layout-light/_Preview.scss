@@ -1,0 +1,134 @@
+.preview-nav{
+      background: linear-gradient(270deg,#2e69ff,#2e69ff 99.97%);
+}
+.nav-tabs .nav-link{
+    background: transparent; 
+    color: #ffffff;
+    border-radius: 0;
+   border: none;
+    padding: 0.75rem 1.5rem
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    color: #ffffff;
+    background-color: #3339fdbd;
+    border-color: #ebedf2 #ebedf2 #ffffff;
+    height: 100%;
+}
+.fill-btn{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin-left: 8px;
+    padding: 5px;
+}
+.fill-btn:hover{
+    background-color:#3339fdbd;
+    border: none;
+    color: #fff;
+    margin-left: 8px;
+    
+
+}
+.Preview{
+    color: #fff;
+    min-width: 20px !important;
+    font-size: 14px !important;
+    margin-left: -75px;
+    padding-top: 16px !important;
+    justify-content: space-around;
+  }
+  .dlYzuC{
+    color:#ffffff !important;
+}
+
+label{
+    color:black
+}
+.marvel-device-wrapper div{
+    margin: auto !important;
+}
+
+// .marvel-device.iphone6{
+//     width: 542px !important;
+//     height: 667px !important;
+// }
+
+.marvel-device.iphone6 .speaker{
+    display: none !important
+}
+
+.marvel-device.iphone6 .sensor{
+    display: none !important;
+}
+
+.marvel-device.iphone6 .camera{
+    display: none;
+}
+.marvel-device.iphone6 .home{
+    // left: 44% !important;
+    display: none;
+}
+// .mobile-view{
+
+//     // width: 515px;
+//     // margin: auto !important;
+//     display: block;
+//     position: relative;
+//     left: 3%;
+//     top: 35px !important;
+// }
+.form-head-mobile{
+    padding: 40px;
+    box-shadow: 0px 2px 30px 2px rgb(0 0 0 / 10%) !important;
+    background: #fff;
+    font-size: 20px !important;
+}
+.form-text-mobile{
+    font-size: 53px;
+    text-align: left;
+    color: #2c3345 !important;
+}
+.form-btn-mobile{
+    box-shadow: 0px 2px 30px 2px rgb(0 0 0 / 10%) !important;
+    background: #fff;
+    top: 14px;
+    position: relative;
+    padding: 15px;
+    
+}
+ .btn-submit-mobile{
+    font-size: 45px !important; 
+    padding: 8px;
+    color: #fff;
+    background-color: green !important;
+ }
+.mob-tab-view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.svg-tab{
+    width: 27px !important;
+    cursor: pointer;
+}
+.text-hyphan{
+    color: #000;
+    // padding-top: 6px;
+    height: 62px;
+    border-left: 1px solid black;
+    /* padding-left: 4px; */
+    margin-left: 9px;
+}
+.prview-mobile-center{
+    text-align: center;
+    margin-top: 39px;
+    
+
+}
+.tabicon{
+    width: 27px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+
+}
+

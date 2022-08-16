@@ -6,13 +6,31 @@
 // body{
 // 	background: #1E1F25;
 // }
+#heading-advanced{
+  display: none !important;
+}
+#heading-layout{
+  display: none !important;
+}
+#heading-data{
+  display: none !important;
+}
+#heading-premium{
+  display: none !important  ;
+}
+.calculater{
+  padding-top: 7px;
+}
+.calculater svg{
+  fill:#ffff
+}
 .jotlist{
 	display: flex;
 	width: 100%;
 	height: auto;
 	margin: auto;
 	max-width: 100%;
-	justify-content: center;
+	// justify-content: center;
 	text-align: center;
     font-size: 17px;
     position: fixed;
@@ -28,13 +46,7 @@
 	min-width: 20px;
   font-size: 17px;
 }
-.Preview{
-  color: #fff;
-  min-width: 20px !important;
-  font-size: 14px !important;
-  margin-left: -75px;
-  padding-top: 16px !important;
-}
+
 .logodashboard{
   width: 55px;
     background-color: #fff;

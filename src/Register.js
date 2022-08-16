@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiSearch, FiChevronRight } from 'react-icons/fi'
+import Dark from "./DarkAuth";
 const Register = () => {
   const [radio, setRadio] = useState("Limited");
   const [show, setShow] = useState(false);
@@ -161,10 +162,11 @@ const Register = () => {
 
   return (
     <>
+      <Dark />
       <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
           <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
-            <div class="row flex-grow form-bg drag-sort-enable">
+            <div class="row flex-grow form-bg1 drag-sort-enable">
               <div class="col-lg-6 register-half-bg d-flex flex-row">
                 <p class="text-white font-weight-medium text-center flex-grow align-self-end">
                   Copyright &copy; 2021 All rights reserved.

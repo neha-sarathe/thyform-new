@@ -1,18 +1,5 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
-import { Navigate } from 'react-router-dom';
-import styled from "styled-components";
-import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/js/bootstrap.min';
-import './vendors/feather/feather.css'
-import './vendors/mdi/css/materialdesignicons.min.css'
-import './vendors/ti-icons/css/themify-icons.css'
-import './vendors/typicons/typicons.css'
-import './vendors/simple-line-icons/css/simple-line-icons.css'
-import './vendors/css/vendor.bundle.base.css'
-import './css/vertical-layout-light/style.css'
-import './App.scss'
+
 import Setting from './pages/jotform/Setting'
 import Publish from './pages/jotform/Publish'
 // import Build from './pages/'
@@ -44,6 +31,7 @@ import MobileNotification from './pages/jotform/MobileNotification';
 import Morris from './Morris';
 import PreviewNav from './pages/jotform/PreviewNav';
 import { Phone } from './pages/jotform/Phone';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -60,10 +48,10 @@ const themes = {
   light: LightTheme,
   dark: DarkTheme,
 }
-function App() {
+function Routing() {
   const [user, setUser] = React.useState('');
-  const [jotform, setJotform] = React.useState('jotform');
-  const [register, setregister] = React.useState("/");
+  // const [jotform, setJotform] = React.useState('jotform');
+  // const [register, setregister] = React.useState("/");
   console.log(user, 'user9999')
   useEffect(() => {
     const token_get = localStorage.getItem('user')
@@ -78,8 +66,8 @@ function App() {
 
   return (
     <>
-      {user && window.location.pathname === '/dashboard' || window.location.pathname === "/charts" || window.location.pathname
-        === "/morris" ? (
+      {user && (window.location.pathname === '/dashboard') || (window.location.pathname === "/charts") || (window.location.pathname
+        === "/morris") ? (
         <>  <div class="container-scroller">
           <div class="container-fluid page-body-wrapper">
             <Router>
@@ -133,17 +121,18 @@ function App() {
             <Route path='/Auto' element={<Auto />} />
             <Route path='/Rept' element={<Rept />} />
             <Route path='/Option' element={<Option />} />
-            {/* <Route path='/phone' element={<Phone />} /> */}
+          
           </Routes>
 
         </Router>
 
       ) : window.location.pathname === '/phone' ? (<Router>
-
+<TabList/>
         <Routes>
 
           <Route path='/phone' element={<Phone />} />
         </Routes>
+      
       </Router>
 
       )
@@ -153,11 +142,14 @@ function App() {
             <Route path='/jotform' element={<Jotform />} /> */}
             <Route path="/" element={<Register />} />
             <Route path='/login' element={<Login setUser={handleLogin} />} />
-
-
+            {/* <Route path='/publish' element={<Publish />} /> */}
+            {/* <Route
+            path="/"
+            element={<Navigate to="/" replace />}
+          /> */}
           </Routes> </Router>
         ) : ''}</>
   );
 }
 
-export default App;
+export default Routing;

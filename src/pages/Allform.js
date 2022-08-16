@@ -39,7 +39,7 @@ const Allform = () => {
       if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-toggle").removeClass("actives1");
     })
   });
-  
+
   return (
     <>
       <div class="wrapper">
@@ -88,8 +88,8 @@ const Allform = () => {
 
             </li>
             <hr></hr>
-           
-              {/* <ul class="collapse list-unstyled" id="homeSubmenu">
+
+            {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="#">Home 1</a>
                         </li>
@@ -101,7 +101,7 @@ const Allform = () => {
                         </li>
                     </ul> */}
 
-           
+
             <li>
               <Link to='/' class="">ASSIGNED FORMS</Link>
               {/* <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -118,8 +118,8 @@ const Allform = () => {
 
             </li>
             <hr></hr>
-           
-        
+
+
             <li>
               <Link to='/' class="">My Drafts</Link>
               {/* <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -300,7 +300,7 @@ const Allform = () => {
                         More <span>▼</span>
                       </a>
                       <div class="dropdown-menu largest-list">
-                        <ul>
+                        {/* <ul>
                           <li>
                             <a href="#" className='drop'>  PUBLISH</a>
                           </li>
@@ -320,9 +320,9 @@ const Allform = () => {
                           <li>
                             <a href="#" className='drop'>Create an App</a>
                           </li>
-                        </ul>
+                        </ul> */}
                         <ul>
-                          <li>
+                          {/* <li>
                             <a href="#" className='drop'>  DATA</a>
                           </li>
                           <li>
@@ -330,22 +330,22 @@ const Allform = () => {
                           </li>
                           <li>
                             <a href="#" className='drop'>Inbox</a>
-                          </li>
+                          </li> */}
                           <li>
                             <a href="#" className='drop'>Form Analytics</a>
                           </li>
-                          <li>
+                          {/* <li>
                             <a href="#" className='drop'>Create Report</a>
-                          </li>
+                          </li> */}
                           <li>
                             <a href="#" className='drop'>Create PDF Document</a>
                           </li>
-
+                          {/* 
                           <li>
                             <a href="#" className='drop'> Create Approval Flow</a>
-                          </li>
+                          </li> */}
                         </ul>
-                        <ul>
+                        {/* <ul>
                           <li>
                             <a href="#" className='drop'>  FORM</a>
                           </li>
@@ -376,7 +376,7 @@ const Allform = () => {
                           <li>
                             <a href="#" className='drop'>Delete</a>
                           </li>
-                        </ul>
+                        </ul> */}
                       </div>
 
 
@@ -610,7 +610,7 @@ const Allform = () => {
 
         </div>
       </div>
-      
+
     </>
   )
 }
