@@ -16,7 +16,7 @@ const Dark = () => {
 
 
         //background constants
-        var login_success =
+        
         var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink";
         var sidebar_classes = "sidebar-light sidebar-dark";
         var $body = $("body");
