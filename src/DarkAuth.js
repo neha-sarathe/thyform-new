@@ -14,7 +14,40 @@ const Dark = () => {
         $("#settings-trigger").on("click", function () {
             $("#theme-settings").toggleClass("open");
         });
+        $(".tiles.primary").on("click", function () {
+            $(".navbar").removeClass(navbar_classes);
+            $(".navbar").addClass("navbar-primary");
+            $(".tiles").removeClass("selected");
+            $(this).addClass("selected");
+        });
+        //sidebar backgrounds
+        $("#sidebar-light-theme").on("click", function () {
+            $body.removeClass(sidebar_classes);
+            $body.addClass("sidebar-light");
+            $(".sidebar-bg-options").removeClass("selected");
+            $(this).addClass("selected");
+        });
+        $("#sidebar-dark-theme").on("click", function () {
+            $body.removeClass(sidebar_classes);
+            $body.addClass("sidebar-dark");
+            $(".sidebar-bg-options").removeClass("selected");
+            $(this).addClass("selected");
+        });
 
+
+        //Navbar Backgrounds
+        $(".tiles.primary").on("click", function () {
+            $(".navbar").removeClass(navbar_classes);
+            $(".navbar").addClass("navbar-primary");
+            $(".tiles").removeClass("selected");
+            $(this).addClass("selected");
+        });
+        $(".tiles.success").on("click", function () {
+            $(".navbar").removeClass(navbar_classes);
+            $(".navbar").addClass("navbar-success");
+            $(".tiles").removeClass("selected");
+            $(this).addClass("selected");
+        });
 
         //background constants
         var auth_classes = "bg-dark bg-white text-white text-dark navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink"
