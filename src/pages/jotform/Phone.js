@@ -1,12 +1,36 @@
 import React, { useState } from 'react'
 import PreviewNav from './PreviewNav'
+import {
+    AiOutlineDesktop,
+    AiOutlineTablet,
+    AiOutlineMobile,
+
+} from "react-icons/ai";
+
+import { BsArrowUpRightSquare } from "react-icons/bs";
+import { IoIosTabletLandscape, IoIosTabletPortrait } from "react-icons/io";
 import $ from 'jquery'
 // import DeviceEmulator from 'react-device-emulator';
 // import 'react-device-emulator/lib/styles/style.css';
-import { MarvelDevices } from "react-css-devices";
-export const Phone = () => {
+// import { MarvelDevices } from "react-css-devices";
+// import Device from "react-device-frame";
+export const Phone = ({ checked, setChecked }) => {
     const [potrait, setPotrait] = useState('portrait')
     const [landscape, setLandScape] = useState();
+    const [show, setShow] = useState(true);
+    const handleMobile = () => {
+        setShow(true);
+    };
+    const handleTable = () => {
+        setShow(false);
+    };
+    const content = (
+        <div>
+            <p>this is content</p>
+            <p>wahtever you want to have in here is fine</p>
+
+        </div>
+    );
     const potraitChange = () => {
         // document.getElementsByClassName('mobile-view').style.width=
         // $(function () {
@@ -40,33 +64,358 @@ export const Phone = () => {
 
     return (
         <>
-            <div> <PreviewNav /></div>
-            <div className='prview-mobile-center'><p>ORIENTATION</p>
-
-                <div className='mob-tab-view'><div className='svg-tab' onClick={potraitChange}><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/svg/2000" class="ji-svg"><g transform="translate(8 3)" fill="#000"><path d="M16.105 24.21a1.105 1.105 0 100-2.21 1.105 1.105 0 000 2.21zM11 6.5a.5.5 0 00-.5.5v18a.5.5 0 00.5.5h9.895a.5.5 0 00.5-.5V7a.5.5 0 00-.5-.5H11zM11 5h9.895a2 2 0 012 2v18a2 2 0 01-2 2H11a2 2 0 01-2-2V7a2 2 0 012-2zm3.553 3h3.315a.553.553 0 110 1.105h-3.315a.553.553 0 010-1.105z"></path></g></svg> </div><div className='text-hyphan'>&nbsp;<div class='tabicon' onClick={LandscapeChange}><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/svg/2000" class="ji-svg "><path d="M16.105 24.21a1.105 1.105 0 100-2.21 1.105 1.105 0 000 2.21zM11 6.5a.5.5 0 00-.5.5v18a.5.5 0 00.5.5h9.895a.5.5 0 00.5-.5V7a.5.5 0 00-.5-.5H11zM11 5h9.895a2 2 0 012 2v18a2 2 0 01-2 2H11a2 2 0 01-2-2V7a2 2 0 012-2zm3.553 3h3.315a.553.553 0 110 1.105h-3.315a.553.553 0 010-1.105z"></path></svg></div></div></div></div>
+            <div> <PreviewNav checked={checked} setChecked={setChecked} /></div>
+          
             <div style={{ marginTop: "70px" }}>  <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">  <MarvelDevices
-                    deviceName={"iphone6"}
-                    color={"white"}
-                    orientation={potrait ? potrait : landscape}
-                    transform={0.5}
-                    type="tab" withDeviceSwitch withRotator
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div className="formpage_container">
+         <h6 className="mt-3 orientaion-text">ORIENTATION</h6>
+         <div>
+           <span className="incon-container" onClick={handleMobile}>
+             <AiOutlineMobile className="formpage_icon-tabland" />
+           </span>
+           <span className="incon-container-right" onClick={handleTable}>
+             <AiOutlineMobile className="formpage_icon-mobhori" />
+           </span>
+         </div>
+         {show ? (
+           <div className="formpage_desktop-mob">
+             <div className="mobile-border">
+               <div className="mobile_heading">
+                 <h1>Heading</h1>
+               </div>
+               <form>
+                 <div class="row jumbotron">
+                   <div class="col-sm-6 form-group">
+                     <label for="name-f">First Name</label>
+                     <input
+                       type="text"
+                       class="form-control"
+                       name="fname"
+                       id="name-f"
+                       placeholder="Enter your first name."
+                       required
+                     />
+                   </div>
+                   <div class="col-sm-6 form-group">
+                     <label for="name-l">Last name</label>
+                     <input
+                       type="text"
+                       class="form-control"
+                       name="lname"
+                       id="name-l"
+                       placeholder=" last name."
+                       required
+                     />
+                   </div>
+                   <div class="col-sm-12 form-group">
+                     <label for="email">Email</label>
+                     <input
+                       type="email"
+                       class="form-control"
+                       name="email"
+                       id="email"
+                       placeholder=" email."
+                       required
+                     />
+                   </div>
+                   <div class="col-sm-6 form-group"></div>
+                   <div class="col-sm-12 form-group">
+                     <label for="email">Phonenumber</label>
+                     <input
+                       type="number"
+                       class="form-control"
+                       name="email"
+                       id="email"
+                       placeholder="phonenumber."
+                       required
+                     />
+                   </div>
+                   <div class="col-sm-6 form-group"></div>
+                   <div class="col-sm-12 form-group">
+                     <label for="email">Date</label>
+                     <input
+                       type="date"
+                       class="form-control"
+                       name="email"
+                       id="email"
+                       placeholder="date."
+                       required
+                     />
+                   </div>
+                   <div class="col-sm-6 form-group"></div>
+                 </div>
+               </form>
+             </div>
 
-                >
+             <h1>
+               {" "}
+               <span class="dot"></span>
+             </h1>
+           </div>
+         ) : (
+           <div className="formpage_desktop-mob-hor">
+             <h1 className="vertical-tab-button">
+               <span class="dot-mobvertical"></span>
+             </h1>
+             {/* <iframe name="my-iframe" target="my-iframe"> */}
+             <div className="mob-border-vertical" target="my-iframe">
+               <div className="vertical-align-mob">
+                 <div className="desktop_heading">
+                   <h1>Heading</h1>
+                 </div>
+                 <form className="form_data">
+                   <div className="row mobile_input">
+                     <div className="col">
+                       <label>Name</label>
+                       <input
+                         type="text"
+                         className="form-control input_field_mob"
+                         placeholder="First name"
+                       />
+                     </div>
+                     <div className="col mt-3">
+                       <label>Email</label>
+                       <input
+                         type="email"
+                         className="form-control input_field_mob"
+                         placeholder="email"
+                       />
+                     </div>
+                     <div className="col mt-3">
+                       <label>Phone Number</label>
+                       <input
+                         type="number"
+                         className="form-control input_field_mob"
+                       />
+                     </div>
+                     <div className="col mt-3 mb-5">
+                       <label>Date</label>
+                       <input
+                         type="Date"
+                         className="form-control input_field_mob"
+                         placeholder="Date"
+                       />
+                     </div>
+                   </div>
+                   <div className="row mobile_input">
+                     <div className="col">
+                       <label className="lastname_heading">Email</label>
+                       <input
+                         type="email"
+                         className="form-control input_field_mob"
+                         placeholder="Last name"
+                       />
+                     </div>
+                   </div>
+                 </form>
+               </div>
+             </div>
+           </div>
+         )}
+       </div>
+                    {/* <div className='mobile-view'><div className='form-head-mobile'><h4 className='form-text-mobile'>Form</h4></div><div><div className='form-btn-mobile'><button className='btn  w-100 btn-submit-mobile'>Submit</button></div></div></div> */}
 
-                    <div className='mobile-view'><div className='form-head-mobile'><h4 className='form-text-mobile'>Form</h4></div><div><div className='form-btn-mobile'><button className='btn  w-100 btn-submit-mobile'>Submit</button></div></div></div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div className="formpage_container">
+                    <h6 className="mt-3">ORIENTATION</h6>
+                    <div>
+                        <span className="incon-container" onClick={handleMobile}>
+                            <IoIosTabletPortrait className="formpage_icon-tabland" />
+                        </span>
+                        <span className="incon-container-right" onClick={handleTable}>
+                            <IoIosTabletLandscape className="formpage_icon-tabland" />
+                        </span>
+                    </div>
+                    {show ? (
+                        <div className="formpage_desktop-tab">
+                            <div className="tab-border">
+                                <div className="desktop_heading">
+                                    <h1>Heading</h1>
+                                </div>
+                                <form className="form_data">
+                                    <div className="row desktop_input">
+                                        <div className="col">
+                                            <label>Name</label>
+                                            <input
+                                                type="text"
+                                                className="form-control input_field"
+                                                placeholder="First name"
+                                            />
+                                        </div>
+                                        <div className="col mt-3">
+                                            <label>Email</label>
+                                            <input
+                                                type="email"
+                                                className="form-control input_field"
+                                                placeholder="email"
+                                            />
+                                        </div>
+                                        <div className="col mt-3">
+                                            <label>Phone Number</label>
+                                            <input
+                                                type="number"
+                                                className="form-control input_field"
+                                            />
+                                        </div>
+                                        <div className="col mt-3 mb-5">
+                                            <label>Date</label>
+                                            <input
+                                                type="Date"
+                                                className="form-control input_field"
+                                                placeholder="Date"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="row desktop_input">
+                                        <div className="col">
+                                            <label className="lastname_heading">Email</label>
+                                            <input
+                                                type="email"
+                                                className="form-control input_field"
+                                                placeholder="Last name"
+                                            />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <h1>
+                                {" "}
+                                <span class="dot"></span>
+                            </h1>
+                        </div>
+                    ) : (
+                        <div className="formpage_desktop-tab1-horizontal">
+                            <h1 className="vertical-tab-button">
+                                <span class="dot-vertical"></span>
+                            </h1>
+                            <div className="tab-border-vertical " target="my-iframe">
+                                <div className="vertical-align">
+                                    <div className="desktop_heading">
+                                        <h1>Heading</h1>
+                                    </div>
+                                    <form className="form_data">
+                                        <div className="row desktop_input">
+                                            <div className="col">
+                                                <label>Name</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control input_field-vertical"
+                                                    placeholder="First name"
+                                                />
+                                            </div>
+                                            <div className="col mt-3">
+                                                <label>Email</label>
+                                                <input
+                                                    type="email"
+                                                    className="form-control input_field-vertical"
+                                                    placeholder="email"
+                                                />
+                                            </div>
+                                            <div className="col mt-3">
+                                                <label>Phone Number</label>
+                                                <input
+                                                    type="number"
+                                                    className="form-control input_field-vertical"
+                                                />
+                                            </div>
+                                            <div className="col mt-3 mb-5">
+                                                <label>Date</label>
+                                                <input
+                                                    type="Date"
+                                                    className="form-control input_field-vertical "
+                                                    placeholder="Date"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="row desktop_input">
+                                            <div className="col">
+                                                <label className="lastname_heading">Email</label>
+                                                <input
+                                                    type="email"
+                                                    className="form-control input_field-vertical"
+                                                    placeholder="Last name"
+                                                />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div></div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div className="formpage_container">
+                    <div className="formpage_desktop">
+                        <div className="desktop_heading">
+                            <h1>Heading</h1>
+                        </div>
 
-                </MarvelDevices></div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><MarvelDevices
-                    deviceName={"macbook"}
-                    color={"white"}
-                    orientation={potrait ? potrait : landscape}
-                    transform={0.5}
+                        <form>
+                            <div class="row jumbotron">
+                                <div class="col-sm-6 form-group">
+                                    <label for="name-f">First Name</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="fname"
+                                        id="name-f"
+                                        placeholder="Enter your first name."
+                                        required
+                                    />
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <label for="name-l">Last name</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="lname"
+                                        id="name-l"
+                                        placeholder=" last name."
+                                        required
+                                    />
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <label for="email">Email</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        name="email"
+                                        id="email"
+                                        placeholder=" email."
+                                        required
+                                    />
+                                </div>
+                                <div class="col-sm-6 form-group"></div>
+                                <div class="col-sm-6 form-group">
+                                    <label for="email">Phonenumber</label>
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        name="email"
+                                        id="email"
+                                        placeholder="phonenumber."
+                                        required
+                                    />
+                                </div>
+                                <div class="col-sm-6 form-group"></div>
+                                <div class="col-sm-6 form-group">
+                                    <label for="email">Date</label>
+                                    <input
+                                        type="date"
+                                        class="form-control"
+                                        name="email"
+                                        id="email"
+                                        placeholder="date."
+                                        required
+                                    />
+                                </div>
+                                <div class="col-sm-6 form-group"></div>
+                            </div>
+                        </form>
 
-
-                ><h1>Welcome to React Device Emulator</h1>
-                </MarvelDevices></div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">.tttttttttttttttttttttttttttttttttttttttttttttt..</div>
+                        {/* changes */}
+                    </div>
+                </div></div>
             </div></div>
         </>
     )

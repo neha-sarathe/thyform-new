@@ -7,7 +7,11 @@ import { formIoData } from "./const";
 import "formiojs/dist/formio.full.css";
 const Jotform = () => {
   const [formData, setFormData] = useState(formIoData);
-  console.log('formData', formData);
+
+  console.log('formData', formData, 'window.localStorage.getItem', window.localStorage.getItem('switch'));
+  useEffect(() => {
+    window.localStorage.getItem('switch')
+  }, [])
   const printResult = () => {
     Formio.createForm(document.getElementById("formio-result"), {
       components: formData.components

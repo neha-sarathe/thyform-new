@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import logo from './logo.svg';
 import { Navigate } from 'react-router-dom';
 import styled from "styled-components";
@@ -61,6 +61,7 @@ const themes = {
   dark: DarkTheme,
 }
 function App() {
+  const [checked, setChecked] = useState(true);
   const [user, setUser] = React.useState('');
   const [jotform, setJotform] = React.useState('jotform');
   const [register, setregister] = React.useState("/");
@@ -113,50 +114,42 @@ function App() {
         || window.location.pathname === "/mobilenotification" ? (
 
         <Router>
-          <JotformNav />
-          <Routes>
+         {checked ? <JotformNav checked={checked} setChecked={setChecked}/> : ''} 
+        {checked ?<Routes>
             {/* <Route path='/allform' element={<Allform />} /> */}
-            <Route path='/jotform' element={<Jotform />} />
-            <Route path='/publish' element={<Publish />} />
-            <Route path='/setting' element={<Setting />} />
+            <Route path='/jotform' element={<Jotform checked={checked} setChecked={setChecked} />} />
+            <Route path='/publish' element={<Publish checked={checked} setChecked={setChecked} />} />
+            <Route path='/setting' element={<Setting checked={checked} setChecked={setChecked} />} />
             <Route path='/Newform' element={<CustomToolbar />} />
-            <Route path='/Settingform' element={<Settingform />} />
-            <Route path='/Setting_email' element={<Setting_email />} />
-            <Route path='/thankyoupage' element={<Thankyoupage />} />
+            <Route path='/Settingform' element={<Settingform checked={checked} setChecked={setChecked} />} />
+            <Route path='/Setting_email' element={<Setting_email checked={checked} setChecked={setChecked} />} />
+            <Route path='/thankyoupage' element={<Thankyoupage checked={checked} setChecked={setChecked} />} />
 
-            <Route path='/Assign' element={<Assign />} />
-            <Route path='/Email' element={<Email />} />
-            <Route path='/Prefill' element={<Prefill />} />
-            <Route path='/Pdf' element={<Pdf />} />
-            <Route path='/Condition' element={<Condition />} />
-            <Route path='/mobilenotification' element={<MobileNotification />} />
-            <Route path='/Auto' element={<Auto />} />
+            <Route path='/Assign' element={<Assign checked={checked} setChecked={setChecked} />} />
+            <Route path='/Email' element={<Email checked={checked} setChecked={setChecked} />} />
+            <Route path='/Prefill' element={<Prefill  />} />
+            <Route path='/Pdf' element={<Pdf  />} />
+            <Route path='/Condition' element={<Condition  />} />
+            <Route path='/mobilenotification' element={<MobileNotification  />} />
+            <Route path='/Auto' element={<Auto />}  />
             <Route path='/Rept' element={<Rept />} />
-            <Route path='/Option' element={<Option />} />
+            <Route path='/Option' element={<Option  />} />
             {/* <Route path='/phone' element={<Phone />} /> */}
-          </Routes>
-
+          </Routes> :  <Phone checked={checked} setChecked={setChecked}/>
+}  
+         
         </Router>
 
-      ) : window.location.pathname === '/phone' ? (<Router>
-
+      ) : window.location.pathname === '/' || window.location.pathname === "/login" ? (<Router>
         <Routes>
-
-          <Route path='/phone' element={<Phone />} />
-        </Routes>
-      </Router>
-
-      )
-        : window.location.pathname === '/' || window.location.pathname === "/login" ? (<Router>
-          <Routes>
-            {/* <Route path='/allform' element={<Allform />} />
+          {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
-            <Route path="/" element={<Register />} />
-            <Route path='/login' element={<Login setUser={handleLogin} />} />
+          <Route path="/" element={<Register />} />
+          <Route path='/login' element={<Login setUser={handleLogin} />} />
 
 
-          </Routes> </Router>
-        ) : ''}</>
+        </Routes> </Router>
+      ) : ''}</>
   );
 }
 

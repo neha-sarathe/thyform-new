@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import SettingSidebar from "./SettingSidebar";
+import { Editor } from "@tinymce/tinymce-react";
 const MobileNotification = () => {
+    const [content, setState] = useState();
+
+    const handleChange = (content, editor) => {
+        setState({ content });
+    }
+
+    const handleSubmit = (event) => {
+        alert("Text was submitted: " + content);
+        event.preventDefault();
+    }
+
     return (
         <>
             <SettingSidebar />
@@ -9,7 +21,21 @@ const MobileNotification = () => {
                     <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}
                         <div className="col- col_6 set_margin">
-
+                            {/* <div id="app-cover1">
+  <div class="row row1">
+   
+  
+    <div class="toggle-button-cover">
+ 
+        <div class="button1 r" id="button-3">
+          <input type="checkbox" class="checkbox1" />
+          <div class="knobs1"></div>
+          <div class="layer1"></div>
+        </div>
+      
+    </div>
+  </div>
+</div> */}
                             {/* Direct link div start */}
                             <div className='main_w'>
                                 <div className=' underline d-flex align-items-center '>
@@ -41,7 +67,7 @@ const MobileNotification = () => {
                                                                 </li>
                                                                  */}
                                                                 <li className='fs-6 text-black map'>
-                                                                    <h5 className='fs-7 fw-bold heading_5 remider'>Turn on notifications</h5>
+                                                                    <h6 className='fw-bold heading_5 remider'>Turn on notifications</h6>
                                                                     <p className='paragraph remider'>Enable mobile app notifications for this form.</p>
                                                                 </li>
                                                             </div>
@@ -49,7 +75,21 @@ const MobileNotification = () => {
                                                         <div>
                                                             <ul className='d-flex align-items-center justify-content-center'>
                                                                 <li className='mt-2'>
-                                                                    {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg> */}
+                                                                    <div id="app-cover1">
+                                                                        <div class="row row1">
+
+
+                                                                            <div class="toggle-button-cover">
+
+                                                                                <div class="button1 r" id="button-3">
+                                                                                    <input type="checkbox" class="checkbox1" />
+                                                                                    <div class="knobs1"></div>
+                                                                                    <div class="layer1"></div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </li>
                                                             </ ul>
                                                         </div>
@@ -77,7 +117,63 @@ const MobileNotification = () => {
                                                             </ ul>
                                                         </div>
                                                     </div>
+                                                    <div className='d-flex notification-div-main mt-3 bg-info align-items-center justify-content-center'>
+
+                                                        <div className="col-md-6 notification-div">
+                                                            <p className="notification-para1">To receive mobile notifications</p>
+                                                            <p className="notification-para2">download the Jotform Mobile Forms app.</p>
+                                                        </div>
+                                                        <div className="col-md-6 d-flex justify-content-center">
+                                                            <div className="banner-col-btn1"><img src="https://cdn.jotfor.ms/assets/img/mobile/app-store-blue.svg" /></div>
+                                                            <div className="banner-col-btn2"><img src="https://cdn.jotfor.ms/assets/img/mobile/google-play-blue.svg" /></div>
+                                                        </div>
+
+                                                    </div>
                                                 </fieldset>
+                                                <div className="mt-5">
+                                                    <h6>Notification Title</h6>
+                                                    <Editor
+                                                        apiKey="qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc"
+                                                        value={content}
+
+                                                        init={{
+                                                            height: 200,
+                                                            menubar: false,
+                                                            initialValue: '<p>Once upon a time...</p>',
+                                                            selector: "textarea.simple",
+                                                            toolbar: 'formatselect',
+                                                            plugins: [
+
+                                                                'fullscreen',
+                                                                // 'insertdatetime media table paste code help wordcount'
+                                                            ],
+                                                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                                                        }}
+                                                        onEditorChange={handleChange}
+                                                    />
+                                                </div>
+                                                <div className="mt-5">
+                                                    <h6>Notification Content</h6>
+                                                    <Editor
+                                                        apiKey="qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc"
+                                                        value={content}
+
+                                                        init={{
+                                                            height: 200,
+                                                            menubar: false,
+                                                            initialValue: '<p>Once upon a time...</p>',
+                                                            selector: "textarea.simple",
+                                                            toolbar: 'formatselect',
+                                                            plugins: [
+
+                                                                'fullscreen',
+                                                                // 'insertdatetime media table paste code help wordcount'
+                                                            ],
+                                                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                                                        }}
+                                                        onEditorChange={handleChange}
+                                                    />
+                                                </div>
                                                 {/* <div className='position-absolute succes bg-opacity-75'>
 
                                                 </div> */}

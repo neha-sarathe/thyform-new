@@ -1,24 +1,140 @@
 import React, { useState } from 'react'
 import ReactApexChart from './chart'
 import Chart from 'react-apexcharts';
+import { PieChart } from "react-minimal-pie-chart";
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  BarChart,
+  Bar,
+} from "recharts";
+// import "./Dashboard.css";
+import { Dropdown } from "react-bootstrap";
+// import { PieChart } from "react-minimal-pie-chart";
 import Sidbar from './Sidbar';
 import { Doughnut } from 'react-chartjs-2';
+
+const bar_data = [
+  {
+    name: "JAN",
+    ["Last week"]: 110,
+    ["This week"]: 215,
+    // amt: 2400,
+  },
+  {
+    name: "FEB",
+    ["Last week"]: 290,
+    ["This week"]: 220,
+    // amt: 2210,
+  },
+  {
+    name: "MAR",
+    ["Last week"]: 210,
+    ["This week"]: 200,
+    // amt: 2290,
+  },
+  {
+    name: "APR",
+    ["Last week"]: 250,
+    ["This week"]: 190,
+    // amt: 2000,
+  },
+  {
+    name: "MAY",
+    ["Last week"]: 290,
+    ["This week"]: 220,
+    // amt: 2181,
+  },
+  {
+    name: "JUN",
+    ["Last week"]: 230,
+    ["This week"]: 110,
+    // amt: 2500,
+  },
+  {
+    name: "JUL",
+    ["Last week"]: 290,
+    ["This week"]: 210,
+    // amt: 2100,
+  },
+  {
+    name: "AUG",
+    ["Last week"]: 210,
+    ["This week"]: 110,
+    // amt: 2100,
+  },
+  {
+    name: "SEP",
+    ["Last week"]: 280,
+    ["This week"]: 205,
+    // amt: 2100,
+  },
+  {
+    name: "OCT",
+    ["Last week"]: 220,
+    ["This week"]: 202,
+    // amt: 2100,
+  },
+  {
+    name: "NOV",
+    ["Last week"]: 0,
+    ["This week"]: 201,
+    // amt: 2100,
+  },
+  {
+    name: "DEC",
+    ["Last week"]: 300,
+    ["This week"]: 150,
+    amt: 2100,
+  },
+];
+
 export const Dashboard = (props) => {
   console.log(props.theme, 'theme123456');
   const [seriesData, setSeriesData] = useState([{
     name: 'Net Profit',
-    data: [215, 290, 200, 250, 290, 230, 290, 210, 280, 220, 201, 300]
+    data: [18, 25, 39, 11, 24]
   }]);
   const [optionData, setOptionData] = useState({
     chart: {
       type: 'bar',
-      height: 350
+      height:100,
+      colors: ['red'],
+    
+      toolbar: {
+        show: true,
+        tools: {
+          download: false
+        }
+      }
+    },
+    grid: {
+      show: false,      // you can either change hear to disable all grids
+      xaxis: {
+        lines: {
+            show: false
+        }
+    },   
+    yaxis: {
+        lines: {
+            show: false
+        }
+    }
     },
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '25%',
-        endingShape: 'rounded'
+        columnWidth: '40%',
+        endingShape: 'rounded',
+     
       },
     },
     dataLabels: {
@@ -27,10 +143,10 @@ export const Dashboard = (props) => {
     stroke: {
       show: true,
       width: 2,
-      // colors: ['transparent']
+      colors: ['transparent']
     },
     xaxis: {
-      categories: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      categories: ['JAN', 'FEB', 'MAR', 'APR', 'MAY'],
     },
     yaxis: {
       title: {
@@ -49,53 +165,83 @@ export const Dashboard = (props) => {
     }
   });
   const donutdata = {
-    labels: ['Total','Net','Gross','AVG'],
+    labels: ['Total', 'Net', 'Gross', 'AVG'],
     datasets: [
-        {
-            label: 'Attendance for Week 1',
-            data: [55,25,25,25],
-            borderColor: ['rgba(255,206,86,0.2)'],
-            backgroundColor: ['rgba(232,99,132,1)',
-            'rgba(232,211,6,1)',
-            'rgba(54,162,235,1)',
-            'rgba(255,159,64,1)',
-            ],
-            pointBackgroundColor: 'rgba(255,206,86,0.2)',
-        }
+      {
+        label: 'Attendance for Week 1',
+        data: [55, 25, 25, 25],
+        borderColor: ['rgba(255,206,86,0.2)'],
+        backgroundColor: ['rgba(232,99,132,1)',
+          'rgba(232,211,6,1)',
+          'rgba(54,162,235,1)',
+          'rgba(255,159,64,1)',
+        ],
+        pointBackgroundColor: 'rgba(255,206,86,0.2)',
+      }
 
     ]
-}
+  }
 
-const donutoptions = {
-  cornerRadius:19,
-  plugins: {
+  const donutoptions = {
+    cornerRadius: 19,
+    plugins: {
       title: {
-          display: true,
-          text: 'Doughnut Chart',
-          color:'blue',
-          font: {
-              size:34
-          },
-          padding:{
-              top:30,
-              bottom:30
-          },
-          responsive:true,
-          animation:{
-              animateScale: true,
-                         }
+        display: true,
+        text: 'Doughnut Chart',
+        color: 'blue',
+        font: {
+          size: 34
+        },
+        padding: {
+          top: 30,
+          bottom: 30
+        },
+        responsive: true,
+        animation: {
+          animateScale: true,
+        }
       },
-      
+
       legend: {
         legend: {
           cursor: "pointer",
-          display:true,
-          position:'bottom',
+          display: true,
+          position: 'bottom',
           labels: {
             usePointStyle: true,
-            boxWidth:10,
-            }}}
-  }}
+            boxWidth: 10,
+          }
+        }
+      }
+    }
+  }
+  const linedata = [
+    {
+      name: "sun",
+      datavalue: 30,
+    },
+    {
+      name: "sun",
+      datavalue: 38,
+    },
+    {
+      name: "sun",
+      datavalue: 50,
+    },
+    {
+      name: "sun",
+      datavalue: 25,
+    },
+    {
+      name: "sun",
+      datavalue: 20,
+    },
+    {
+      name: "sun",
+      datavalue: 50,
+    },
+  ];
+
   return (
     <>
 
@@ -201,7 +347,27 @@ const donutoptions = {
                                   </div>
                                   <div className="col-sm-8">
                                     <div className="status-summary-chart-wrapper pb-4">
-                                      <canvas id="status-summary"></canvas>
+                                      <div className="isecstatus-div">
+                                        <ResponsiveContainer width="100%" aspect={3}>
+                                          <LineChart
+                                            data={linedata}
+                                          // margin={{
+                                          //   top: 10,
+                                          //   right: 120,
+                                          //   left: 40,
+                                          //   bottom: 0,
+                                          // }}
+                                          >
+                                            <Line
+                                              dataKey="datavalue"
+                                              type="monotone"
+                                              stroke="#01b6a0"
+                                              strokeWidth={5}
+                                              dot={false}
+                                            />
+                                          </LineChart>
+                                        </ResponsiveContainer>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -215,22 +381,26 @@ const donutoptions = {
                                   <div className="col-sm-6">
                                     <div className="d-flex justify-content-between align-items-center mb-2 mb-sm-0">
                                       <div className="circle-progress-width">
-                                        <div id="totalVisitors" className="progressbar-js-circle pr-2"></div>
+                                        <div id="totalVisitors" className="progressbar-js-circle pr-2"><div class="spinner-border spinner-border-md text-primary"  role="status">
+                                          <span class="visually-hidden">Loading...</span>
+                                        </div></div>
                                       </div>
                                       <div>
                                         <p className="text-small mb-2">Total Visitors</p>
-                                        <h4 className="mb-0 fw-bold">26.80%</h4>
+                                        <h4 className="mb-0 fw-bold text-dark">26.80%</h4>
                                       </div>
                                     </div>
                                   </div>
                                   <div className="col-sm-6">
                                     <div className="d-flex justify-content-between align-items-center">
                                       <div className="circle-progress-width">
-                                        <div id="visitperday" className="progressbar-js-circle pr-2"></div>
+                                        <div id="visitperday" className="progressbar-js-circle pr-2"><div class="spinner-border text-light" role="status">
+                                          <span class="visually-hidden">Loading...</span>
+                                        </div></div>
                                       </div>
                                       <div>
                                         <p className="text-small mb-2">Visits per day</p>
-                                        <h4 className="mb-0 fw-bold">9065</h4>
+                                        <h4 className="mb-0 fw-bold text-dark">9065</h4>
                                       </div>
                                     </div>
                                   </div>
@@ -244,38 +414,93 @@ const donutoptions = {
                     <div className="row">
                       <div className="col-lg-8 d-flex flex-column">
                         <div className="row flex-grow">
-                          <div className="col-12 grid-margin stretch-card">
-                            <div className="card card-rounded">
+                          <div className="col-md-12">
+                            {/* <div className="row abc"> */}
+                            {/* <div className="col-xl-6 col-lg-12 grid-margin stretch-card pqr">
+                <div className="card second-row"></div>
+              </div> */}
+                            {/* <div className="col-md-12 grid-margin pqr"> */}
+                            <div className="card bar-card">
                               <div className="card-body">
-                                <div className="d-sm-flex justify-content-between align-items-start">
-                                  <div>
-                                    <h4 className="card-title card-title-dash">Market Overview</h4>
-                                    <p className="card-subtitle card-subtitle-dash">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                  </div>
-                                  <div>
-                                    <div className="dropdown">
-                                      <button className="btn btn-light dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> This month </button>
-                                      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                        <h6 className="dropdown-header">Settings</h6>
-                                        <a className="dropdown-item" href="#">Action</a>
-                                        <a className="dropdown-item" href="#">Another action</a>
-                                        <a className="dropdown-item" href="#">Something else here</a>
-                                        <div className="dropdown-divider"></div>
-                                        <a className="dropdown-item" href="#">Separated link</a>
-                                      </div>
-                                    </div>
+                                <h4 className="mb-0 chart-heading">Market Overview</h4>
+                                <div className="bar-chart-para d-flex align-items-center justify-content-between w-100">
+                                  <p className="mb-0">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                  </p>
+                                  <div className="dropdown">
+                                    <Dropdown>
+                                      <Dropdown.Toggle
+                                        variant="btn btn-outline-secondary dropdown-toggle"
+                                        id="dropdownMenuButtons4"
+                                      >
+                                        This month
+                                      </Dropdown.Toggle>
+                                      <Dropdown.Menu>
+                                        <Dropdown.Item >
+                                          Daily
+                                        </Dropdown.Item>
+                                        <Dropdown.Item >
+                                          Weekly
+                                        </Dropdown.Item>
+                                        <Dropdown.Item >
+                                          Monthly
+                                        </Dropdown.Item>
+                                      </Dropdown.Menu>
+                                    </Dropdown>
                                   </div>
                                 </div>
-                                <div className="d-sm-flex align-items-center mt-1 justify-content-between">
-                                  <div className="d-sm-flex align-items-center mt-4 justify-content-between"><h2 className="me-2 fw-bold">$36,2531.00</h2><h4 className="me-2">USD</h4><h4 className="text-success">(+1.37%)</h4></div>
-                                  <div className="me-3"><div id="marketing-overview-legend"></div></div>
+                                <div className="d-flex align-items-end justify-content-between mt-3">
+                                  <div className="d-flex align-items-end">
+                                    <h3 className="mb-0 font-weight-semibold bar-doller">$36,2531.00</h3>
+                                    <h4 className="mb-0 font-weight-medium mr-2 ml-2 mb-1 usd-data">USD</h4>
+                                    <h4 className="mb-0 text-success font-weight-semibold mb-1 ms-2">
+                                      (+1.37%)
+                                    </h4>
+                                  </div>
+                                  <div class="d-flex justify-content-between mx-4 chart-color">
+                                    <div><span class="dot1 mx-2"></span>This week</div>
+                                    <div><span class="dot2 mx-2"></span>Last week</div></div>
                                 </div>
-                                <div className="chartjs-bar-wrapper mt-3">
-                                  {/* <Bar /> */}
-                                  <Chart options={optionData} series={seriesData} type="bar" height={350} />
+                                <div>
+                                  <BarChart
+                                    width={650}
+                                    height={300}
+                                    data={bar_data}
+                                    margin={{
+                                      top: 20,
+                                      right: 5,
+                                      left: 2,
+                                      bottom: 5,
+                                    }}
+                                  >
+                                    <CartesianGrid vertical={false} />
+                                    <XAxis dataKey="name" tickLine={false} />
+                                    <YAxis axisLine={false} tickCount="4" tickLine={false} />
+                                    <Tooltip />
+
+                                    <Bar
+                                      dataKey={`This week`}
+                                      stackId="a"
+                                      fill="#52cdff"
+                                      barSize={12}
+                                    // background={true}
+
+                                    />
+                                    <Bar
+                                      dataKey={`Last week`}
+                                      stackId="a"
+                                      fill="#1f3bb3"
+                                      barSize={12}
+                                    // background={true}
+                                    />
+                                  </BarChart>
                                 </div>
                               </div>
                             </div>
+                            {/* </div> */}
+
+                            {/* <div className="col-md-12 grid-margin"></div> */}
+                            {/* </div> */}
                           </div>
                         </div>
                         {/* <div className="row flex-grow">
@@ -695,17 +920,46 @@ const donutoptions = {
                           </div>
                         </div> */}
                         <div className="row flex-grow">
-                          <div className="col-12 grid-margin stretch-card">
-                            <div className="card card-rounded">
-                              <div className="card-body">
-                                <div className="row">
-                                  <div className="col-lg-12">
-                                    <div className="d-flex justify-content-between align-items-center mb-3">
-                                      <h4 className="card-title card-title-dash">Type By Amount</h4>
-                                    </div>
-                                    <Doughnut data={donutdata} options={donutoptions} />
-                                    <div id="doughnut-chart-legend" className="mt-5 text-center"></div>
-                                  </div>
+                          <div className="col-md-12 grid-margin">
+                            <div className="card pie-chart">
+                              <div className="Todocard-body">
+                                <h4 className="mt-3 ml-4">Type By Amount</h4>
+                                <div>
+                                  <PieChart
+                                    radius={30}
+
+                                    // label={({ dataEntry }) => dataEntry.value}
+                                    // labelStyle={{
+                                    //   fontSize: '5px',
+                                    //   fontFamily: 'sans-serif',
+                                    //   fill: '#E38627',
+                                    // }}
+                                    // labelPosition={100}
+                                    lineWidth={50}
+                                    data={[
+                                      { title: "One", value: 40, color: "#1F3BB3" },
+                                      { title: "Two", value: 15, color: "#FDD0C7" },
+                                      { title: "Three", value: 10, color: "#52CDFF" },
+                                      { title: "Three", value: 20, color: "#81DADA" },
+                                    ]}
+                                  />
+
+                                  {/* <ul className="d-flex align-items-center justify-content-between w-100">
+                        <li>
+                          {" "}
+                          <span>Total</span>
+                        </li>
+                        <li>Net</li>
+                        <li>Gross</li>
+                        <li>AVG</li>
+                      </ul> */}
+                                </div>
+                                {/* <p>hello</p> */}
+                                <div class="d-flex justify-content-between mx-4 type-dot">
+                                  <div><span class="dot1 mx-2"></span>Total</div>
+                                  <div><span class="dot2 mx-2"></span>Net</div>
+                                  <div><span class="dot3 mx-2"></span>Gross</div>
+                                  <div><span class="dot4 mx-2"></span>AVG</div>
                                 </div>
                               </div>
                             </div>
@@ -732,7 +986,7 @@ const donutoptions = {
                                       </div>
                                     </div>
                                     <div className="mt-3">
-                                      <canvas id="leaveReport"></canvas>
+                                    <Chart options={optionData} series={seriesData} type="bar" height={200} />
                                     </div>
                                   </div>
                                 </div>

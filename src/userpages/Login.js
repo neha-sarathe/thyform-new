@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
+import Dark from "../DarkAuth";
 const Login = (props) => {
   const navigate = useNavigate();
   const [pincode, setPincode] = useState('');
@@ -78,6 +79,7 @@ const Login = (props) => {
   console.log(props, 'props.handleLogin')
   return (
     <>
+     <Dark />
       <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
           <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
