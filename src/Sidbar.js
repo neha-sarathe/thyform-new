@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 // import Charts from './Charts';
 import { BiLineChart } from "react-icons/bi";
+import { RiLayoutGridLine } from "react-icons/ri";
 export const Sidbar = () => {
   return (
     <>
@@ -10,7 +11,7 @@ export const Sidbar = () => {
         <ul className="nav">
           <li className="nav-item">
             <a className="nav-link" data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
-              <i className="mdi mdi-grid-large menu-icon"></i>
+              <RiLayoutGridLine />
               <span className="menu-title">Dashboard</span>
               <i className="menu-arrow"></i>
             </a>

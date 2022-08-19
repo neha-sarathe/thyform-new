@@ -10721,7 +10721,33 @@ progress {
   background-color: #e9ecef;
   opacity: 1;
 }
+.dash-chart-dark{
+  background:rgb(30, 40, 61) !important;
+}
+.dash-chart-light{
+  background:#ffffff !important;
+}
+.chart-bg-dark {
+  background:rgb(30, 40, 61) !important;
+  color:white !important;
+}
 
+.chart-bg-light{
+  background:#ffffff !important;
+  color:#000000 !important;
+}
+.percent-dark{
+  color:#000000 !important;
+}
+.percent-light{
+  color:#ffffff !important;
+}
+.title-light-color{
+  color:#ffffff !important;
+}
+.title-dark-color{
+  color:#000000 !important;
+}
 .form-control::file-selector-button, .asColorPicker-input::file-selector-button, .dataTables_wrapper select::file-selector-button, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::file-selector-button,
 .jsgrid .jsgrid-table .jsgrid-filter-row select::file-selector-button, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::file-selector-button, .select2-container--default .select2-selection--single::file-selector-button, .select2-container--default .select2-selection--single .select2-search__field::file-selector-button, .typeahead::file-selector-button,
 .tt-query::file-selector-button,
@@ -20416,8 +20442,15 @@ html {
 .container-scroller {
   overflow: hidden;
   width: 100%;
+  background: #F4F5F7;
+}
+.body-light{
+  background:#F4F5F7;
 }
 
+.body-dark{
+  background:#232227;
+}
 pre {
   background: color(gray-lighter);
   padding: 15px;
@@ -31394,7 +31427,7 @@ div.tagsinput span.tag a {
 }
 
 .content-wrapper {
-  background: #F4F5F7;
+  /* background: #F4F5F7; */
   padding: 1.5rem 2.187rem 1.5rem 3.5rem;
   width: 100%;
   -webkit-flex-grow: 1;
@@ -31410,7 +31443,7 @@ div.tagsinput span.tag a {
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 97px);
-  background: #F4F5F7;
+  /* background: blue; */
   font-family: "Manrope", sans-serif;
   font-weight: 500;
   padding: 0;
@@ -31816,7 +31849,7 @@ div.tagsinput span.tag a {
   -moz-transition: background 0.25s ease;
   -ms-transition: background 0.25s ease;
   box-shadow: none;
-  background: #F4F5F7;
+  /* background: #F4F5F7; */
   /* Navbar color variations */
 }
 
@@ -33205,7 +33238,7 @@ div.tagsinput span.tag a {
 }
 
 .navbar.navbar-dark .navbar-menu-wrapper {
-  background: #1E283D;
+  background:#232227;
 }
 
 .navbar.navbar-dark:not(.navbar-light) .navbar-menu-wrapper .navbar-toggler {

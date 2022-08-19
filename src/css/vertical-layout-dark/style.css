@@ -30676,7 +30676,13 @@ div.tagsinput span.tag a {
   border-bottom: none;
   /* Navbar color variations */
 }
+.body-light{
+  background:#F4F5F7;
+}
 
+.body-dark{
+  background:#232227;
+}
 .navbar .navbar-brand-wrapper {
   background: #1F2127;
   transition: width 0.25s ease, background 0.25s ease;
@@ -31731,7 +31737,7 @@ div.tagsinput span.tag a {
 
 @media (min-width: 992px) {
   .boxed-layout .container-scroller {
-    background: #c6c8ca;
+    background: green;
     padding: 0 calc((100% - 1200px) / 2);
   }
   .boxed-layout .navbar.fixed-top {
@@ -31827,7 +31833,7 @@ div.tagsinput span.tag a {
   width: auto;
   margin: 0;
   padding: 0;
-  background: #ffffff;
+  /* background: #ffffff; */
 }
 
 .settings-panel .nav-tabs .nav-item {

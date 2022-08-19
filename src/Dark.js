@@ -18,8 +18,13 @@ const Dark = () => {
 
 
     //background constants
+    var body_classes = "body-light body-dark ";
+    var percent_classes = "percent-dark percent-light";
+    var chart_classes = "dash-chart-dark dash-chart-light ";
+    var chart1_classes = "chart-bg-dark chart-bg-light"
     var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink";
     var sidebar_classes = "sidebar-light sidebar-dark";
+    var chart_title_classes = "title-light-color  title-dark-color"
     var $body = $("body");
 
     //sidebar backgrounds
@@ -116,6 +121,7 @@ const Dark = () => {
         $("#root").toggleClass('sidebar-icon-only');
       }
     });
+    // container-scroller
     $(".color-theme.primary").on("click", function () {
       $(".navbar").removeClass(navbar_classes);
       $(".navbar").addClass("navbar-primary");
@@ -205,9 +211,33 @@ const Dark = () => {
     //     $(".tiles").removeClass("selected");
     //     $(this).addClass("selected");
     //   });
-    $(".color-theme.brown").on("click", function () {
-      $body.removeClass(navbar_classes);
-      $body.addClass("navbar-info");
+    // $(".color-theme.brown").on("click", function () {
+    //   $body.removeClass(navbar_classes);
+    //   $body.addClass("navbar-info");
+    //   $(".sidebar-bg-options").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.dark").on("click", function () {
+    //   $body.removeClass(body_classes);
+    //   $body.addClass("body-dark");
+    //   $(".sidebar-bg-options").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });chart_title_classes
+    $(".color-theme.dark").on("click", function () {
+      $(".container-scroller").removeClass(body_classes);
+      $(".card-rounded").removeClass(chart_classes);
+      $(".pie-chart").removeClass(chart_classes);
+      $(".bar-card").removeClass(chart_classes);
+      $(".rate-percentage").removeClass(percent_classes);
+      $(".chart-dark-bg").removeClass(chart1_classes);
+      $(".card-title").removeClass(chart_title_classes);
+      $(".container-scroller").addClass("body-dark");
+      $(".card-rounded").addClass("dash-chart-dark");
+      $(".bar-card").addClass("dash-chart-dark");
+      $(".pie-chart").addClass("dash-chart-dark");
+      $(".rate-percentage").addClass("percent-light");
+      $(".chart-dark-bg").addClass("chart-bg-dark")
+      $(".card-title").addClass("title-light-color");
       $(".sidebar-bg-options").removeClass("selected");
       $(this).addClass("selected");
     });
@@ -223,7 +253,25 @@ const Dark = () => {
       $(".sidebar-bg-options").removeClass("selected");
       $(this).addClass("selected");
     });
-
+    // chart-dark-bg  chart-bg-dark chart-bg-light
+    $(".color-theme.default").on("click", function () {
+      $(".container-scroller").removeClass(body_classes);
+      $(".card-rounded").removeClass(chart_classes);
+      $(".bar-card").removeClass(chart_classes);
+      $(".pie-chart").removeClass(chart_classes);
+      $(".card-title").removeClass(chart_title_classes);
+      $(".rate-percentage").removeClass(percent_classes)
+      $(".chart-dark-bg").removeClass(chart1_classes)
+      $(".container-scroller").addClass("body-light");
+      $(".card-rounded").addClass("dash-chart-light");
+      $(".bar-card").addClass("dash-chart-light");
+      $(".pie-chart").addClass("dash-chart-light");
+      $(".card-title").addClass("title-dark-color");
+      $(".chart-dark-bg").addClass("chart-bg-light")
+      $(".rate-percentage").addClass("percent-dark")
+      $(".sidebar-bg-options").removeClass("selected");
+      $(this).addClass("selected");
+    });
 
 
   });
