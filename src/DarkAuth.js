@@ -12,7 +12,8 @@ const Dark = () => {
         });
 
         $("#settings-trigger").on("click", function () {
-            $("#theme-settings").toggleClass("open");
+            $("#theme-settings").addClass("open");
+            // $("#theme-settings").toggle("open");
         });
         $(".tiles.primary").on("click", function () {
             $(".navbar").removeClass(navbar_classes);

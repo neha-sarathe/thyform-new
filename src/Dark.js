@@ -2,233 +2,235 @@ import React from 'react'
 import { FiSettings } from "react-icons/fi";
 import $ from "jquery";
 const Dark = () => {
-    $(function() {
-        $(".nav-settings").on("click", function() {
-          $("#right-sidebar").toggleClass("open");
-        });
-        $(".settings-close").on("click", function() {
-          $("#right-sidebar,#theme-settings").removeClass("open");
-        });
-    
-        $("#settings-trigger").on("click" , function(){
-          $("#theme-settings").toggleClass("open");
-        });
-    
-    
-        //background constants
-        var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink";
-        var sidebar_classes = "sidebar-light sidebar-dark";
-        var $body = $("body");
-    
-        //sidebar backgrounds
-        $("#sidebar-light-theme").on("click" , function(){
-          $body.removeClass(sidebar_classes);
-          $body.addClass("sidebar-light");
-          $(".sidebar-bg-options").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $("#sidebar-dark-theme").on("click" , function(){
-          $body.removeClass(sidebar_classes);
-          $body.addClass("sidebar-dark");
-          $(".sidebar-bg-options").removeClass("selected");
-          $(this).addClass("selected");
-        });
-    
-    
-        //Navbar Backgrounds
-        $(".tiles.primary").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".navbar").addClass("navbar-primary");
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $(".tiles.success").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".navbar").addClass("navbar-success");
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $(".tiles.warning").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".navbar").addClass("navbar-warning");
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $(".tiles.danger").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".navbar").addClass("navbar-danger");
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $(".tiles.light").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".navbar").addClass("navbar-light");
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $(".tiles.info").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".navbar").addClass("navbar-info");
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $(".tiles.dark").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".navbar").addClass("navbar-dark");
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $(".tiles.default").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-        $(".tiles.default").on("click" , function(){
-          $(".navbar").removeClass(navbar_classes);
-          $(".tiles").removeClass("selected");
-          $(this).addClass("selected");
-        });
-    
-        $(".color-theme.default").click(function(){
-          $(".color-theme.default").attr({
-            "href" : "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-light/index.html",
-            "title" : "Light"
-          });
-        });
-        $(".color-theme.dark").click(function(){
-          $(".color-theme.dark").attr({
-            "href" : "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-dark/index.html",
-            "title" : "Dark"
-          });
-        });
-        $(".color-theme.brown").click(function(){
-          $(".color-theme.brown").attr({
-            "href" : "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-brown/index.html",
-            "title" : "Brown"
-          });
-        });
-        $('[data-bs-toggle="minimize"]').on("click", function() {
-            if (($( "#root" ).hasClass('sidebar-toggle-display')) || ($( "#root" ).hasClass('sidebar-absolute'))) {
-                $( "#root" ).toggleClass('sidebar-hidden');
-            } else {
-                $( "#root" ).toggleClass('sidebar-icon-only');
-            }
-          });
-          $(".color-theme.primary").on("click" , function(){
-            $(".navbar").removeClass(navbar_classes);
-            $(".navbar").addClass("navbar-primary");
-            $(".tiles").removeClass("selected");
-            $(this).addClass("selected");
+  $(function () {
+    $(".nav-settings").on("click", function () {
+      // $("#right-sidebar").toggleClass("open");
+      $("#right-sidebar").addClass("open");
+    });
+    $(".settings-close").on("click", function () {
+      $("#right-sidebar,#theme-settings").removeClass("open");
+    });
 
-            
-          });
-          $(".color-theme.success").on("click" , function(){
-            $(".navbar").removeClass(navbar_classes);
-            $(".navbar").addClass("navbar-success");
-            $(".tiles").removeClass("selected");
-            $(this).addClass("selected");
-          });
-          $(".color-theme.warning").on("click" , function(){
-            $(".navbar").removeClass(navbar_classes);
-            $(".navbar").addClass("navbar-warning");
-            $(".tiles").removeClass("selected");
-            $(this).addClass("selected");
-          });
-          $(".color-theme.danger").on("click" , function(){
-            $(".navbar").removeClass(navbar_classes);
-            $(".navbar").addClass("navbar-danger");
-            $(".tiles").removeClass("selected");
-            $(this).addClass("selected");
-          });
-          $(".color-theme.light").on("click" , function(){
-            $(".navbar").removeClass(navbar_classes);
-            $(".navbar").addClass("navbar-light");
-            $(".tiles").removeClass("selected");
-            $(this).addClass("selected");
-          });
-          $(".color-theme.brown").on("click" , function(){
-            $(".navbar").removeClass(navbar_classes);
-            $(".navbar").addClass("navbar-info");
-            $(".tiles").removeClass("selected");
-            $(this).addClass("selected");
-          });
-          $(".color-theme.dark").on("click" , function(){
-            $(".navbar").removeClass(navbar_classes);
-            $(".navbar").addClass("navbar-dark");
-            $(".tiles").removeClass("selected");
-            $(this).addClass("selected");
-          });
-          $(".color-theme.default").on("click" , function(){
-            $(".navbar").removeClass(navbar_classes);
-            $(".tiles").removeClass("selected");
-            $(this).addClass("selected");
-          });
-        //   $(".color-theme.default").on("click" , function(){
-        //     $(".navbar").removeClass(navbar_classes);
-        //     $(".tiles").removeClass("selected");
-        //     $(this).addClass("selected");
-        //   });
+    $("#settings-trigger").on("click", function () {
+      // $("#theme-settings").toggleClass("open");
+      $("#theme-settings").addClass("open");
+    });
 
 
-        //   side
-        // $(".color-theme.primary").on("click" , function(){
-        //     $body.removeClass(sidebar_classes);
-        //     $body.addClass("sidebar-light");
-        //     $(".sidebar-bg-options").removeClass("selected");
-        //     $(this).addClass("selected");
+    //background constants
+    var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink";
+    var sidebar_classes = "sidebar-light sidebar-dark";
+    var $body = $("body");
 
-            
-        //   });
-        //   $(".color-theme.success").on("click" , function(){
-        //     $body.removeClass(sidebar_classes);
-        //   $body.addClass("sidebar-dark");
-        //   $(".sidebar-bg-options").removeClass("selected");
-        //   $(this).addClass("selected");
-        //   });
-        //   $(".color-theme.warning").on("click" , function(){
-        //     $(".navbar").removeClass(navbar_classes);
-        //     $(".navbar").addClass("navbar-warning");
-        //     $(".tiles").removeClass("selected");
-        //     $(this).addClass("selected");
-        //   });
-        //   $(".color-theme.danger").on("click" , function(){
-        //     $(".navbar").removeClass(navbar_classes);
-        //     $(".navbar").addClass("navbar-danger");
-        //     $(".tiles").removeClass("selected");
-        //     $(this).addClass("selected");
-        //   });
-        //   $(".color-theme.light").on("click" , function(){
-        //     $(".navbar").removeClass(navbar_classes);
-        //     $(".navbar").addClass("navbar-light");
-        //     $(".tiles").removeClass("selected");
-        //     $(this).addClass("selected");
-        //   });
-          $(".color-theme.brown").on("click" , function(){
-            $body.removeClass(navbar_classes);
-            $body.addClass("navbar-info");
-            $(".sidebar-bg-options").removeClass("selected");
-            $(this).addClass("selected");
-          });
-          $(".color-theme.dark").on("click" , function(){
-            $body.removeClass(sidebar_classes);
-            $body.addClass("sidebar-dark");
-            $(".sidebar-bg-options").removeClass("selected");
-            $(this).addClass("selected");
-          });
-          $(".color-theme.default").on("click" , function(){
-            $body.removeClass(sidebar_classes);
-                $body.addClass("sidebar-light");
-                $(".sidebar-bg-options").removeClass("selected");
-                $(this).addClass("selected");
-          });
-      
+    //sidebar backgrounds
+    $("#sidebar-light-theme").on("click", function () {
+      $body.removeClass(sidebar_classes);
+      $body.addClass("sidebar-light");
+      $(".sidebar-bg-options").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $("#sidebar-dark-theme").on("click", function () {
+      $body.removeClass(sidebar_classes);
+      $body.addClass("sidebar-dark");
+      $(".sidebar-bg-options").removeClass("selected");
+      $(this).addClass("selected");
+    });
 
-      
+
+    //Navbar Backgrounds
+    $(".tiles.primary").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-primary");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".tiles.success").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-success");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".tiles.warning").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-warning");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".tiles.danger").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-danger");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".tiles.light").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-light");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".tiles.info").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-info");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".tiles.dark").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-dark");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".tiles.default").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".tiles.default").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+    $(".color-theme.default").click(function () {
+      $(".color-theme.default").attr({
+        "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-light/index.html",
+        "title": "Light"
       });
+    });
+    $(".color-theme.dark").click(function () {
+      $(".color-theme.dark").attr({
+        "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-dark/index.html",
+        "title": "Dark"
+      });
+    });
+    $(".color-theme.brown").click(function () {
+      $(".color-theme.brown").attr({
+        "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-brown/index.html",
+        "title": "Brown"
+      });
+    });
+    $('[data-bs-toggle="minimize"]').on("click", function () {
+      if (($("#root").hasClass('sidebar-toggle-display')) || ($("#root").hasClass('sidebar-absolute'))) {
+        $("#root").toggleClass('sidebar-hidden');
+      } else {
+        $("#root").toggleClass('sidebar-icon-only');
+      }
+    });
+    $(".color-theme.primary").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-primary");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+
+
+    });
+    $(".color-theme.success").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-success");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".color-theme.warning").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-warning");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".color-theme.danger").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-danger");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".color-theme.light").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-light");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".color-theme.brown").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-info");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".color-theme.dark").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-dark");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".color-theme.default").on("click", function () {
+      $(".navbar").removeClass(navbar_classes);
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    //   $(".color-theme.default").on("click" , function(){
+    //     $(".navbar").removeClass(navbar_classes);
+    //     $(".tiles").removeClass("selected");
+    //     $(this).addClass("selected");
+    //   });
+
+
+    //   side
+    // $(".color-theme.primary").on("click" , function(){
+    //     $body.removeClass(sidebar_classes);
+    //     $body.addClass("sidebar-light");
+    //     $(".sidebar-bg-options").removeClass("selected");
+    //     $(this).addClass("selected");
+
+
+    //   });
+    //   $(".color-theme.success").on("click" , function(){
+    //     $body.removeClass(sidebar_classes);
+    //   $body.addClass("sidebar-dark");
+    //   $(".sidebar-bg-options").removeClass("selected");
+    //   $(this).addClass("selected");
+    //   });
+    //   $(".color-theme.warning").on("click" , function(){
+    //     $(".navbar").removeClass(navbar_classes);
+    //     $(".navbar").addClass("navbar-warning");
+    //     $(".tiles").removeClass("selected");
+    //     $(this).addClass("selected");
+    //   });
+    //   $(".color-theme.danger").on("click" , function(){
+    //     $(".navbar").removeClass(navbar_classes);
+    //     $(".navbar").addClass("navbar-danger");
+    //     $(".tiles").removeClass("selected");
+    //     $(this).addClass("selected");
+    //   });
+    //   $(".color-theme.light").on("click" , function(){
+    //     $(".navbar").removeClass(navbar_classes);
+    //     $(".navbar").addClass("navbar-light");
+    //     $(".tiles").removeClass("selected");
+    //     $(this).addClass("selected");
+    //   });
+    $(".color-theme.brown").on("click", function () {
+      $body.removeClass(navbar_classes);
+      $body.addClass("navbar-info");
+      $(".sidebar-bg-options").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".color-theme.dark").on("click", function () {
+      $body.removeClass(sidebar_classes);
+      $body.addClass("sidebar-dark");
+      $(".sidebar-bg-options").removeClass("selected");
+      $(this).addClass("selected");
+    });
+    $(".color-theme.default").on("click", function () {
+      $body.removeClass(sidebar_classes);
+      $body.addClass("sidebar-light");
+      $(".sidebar-bg-options").removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+
+
+  });
   return (
-   <>
-    <div class="theme-setting-wrapper">
-        <div id="settings-trigger"><FiSettings class="text-white"/></div>
+    <>
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><FiSettings class="text-white" /></div>
         <div id="theme-settings" class="settings-panel">
           <i class="settings-close ti-close"></i>
           <p class="settings-heading">SIDEBAR SKINS</p>
@@ -245,8 +247,8 @@ const Dark = () => {
           </div>
           <p class="settings-heading mt-2">THEMES</p>
           <div class="color-themes mx-0 px-4">
-            <div  class="color-theme default"></div>
-            <div  class="color-theme dark"></div>
+            <div class="color-theme default"></div>
+            <div class="color-theme dark"></div>
             {/* <div  class="color-theme brown"></div> */}
           </div>
         </div>
@@ -266,7 +268,7 @@ const Dark = () => {
             <div class="add-items d-flex px-3 mb-0">
               <form class="form w-100">
                 <div class="form-group d-flex">
-                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do"/>
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do" />
                   <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
                 </div>
               </form>
@@ -276,7 +278,7 @@ const Dark = () => {
                 <li>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="checkbox" type="checkbox"/>
+                      <input class="checkbox" type="checkbox" />
                       Team review meeting at 3.00 PM
                     </label>
                   </div>
@@ -285,7 +287,7 @@ const Dark = () => {
                 <li>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="checkbox" type="checkbox"/>
+                      <input class="checkbox" type="checkbox" />
                       Prepare for presentation
                     </label>
                   </div>
@@ -294,7 +296,7 @@ const Dark = () => {
                 <li>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="checkbox" type="checkbox"/>
+                      <input class="checkbox" type="checkbox" />
                       Resolve all the low priority tickets due today
                     </label>
                   </div>
@@ -303,7 +305,7 @@ const Dark = () => {
                 <li class="completed">
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="checkbox" type="checkbox" checked/>
+                      <input class="checkbox" type="checkbox" checked />
                       Schedule meeting for next week
                     </label>
                   </div>
@@ -312,7 +314,7 @@ const Dark = () => {
                 <li class="completed">
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="checkbox" type="checkbox" checked/>
+                      <input class="checkbox" type="checkbox" checked />
                       Project review
                     </label>
                   </div>
@@ -346,7 +348,7 @@ const Dark = () => {
             </div>
             <ul class="chat-list">
               <li class="list active">
-                <div class="profile"><img src="/images/faces/face1.jpg" alt="image"/><span class="online"></span></div>
+                <div class="profile"><img src="/images/faces/face1.jpg" alt="image" /><span class="online"></span></div>
                 <div class="info">
                   <p>Thomas Douglas</p>
                   <p>Available</p>
@@ -354,7 +356,7 @@ const Dark = () => {
                 <small class="text-muted my-auto">19 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="/images/faces/face2.jpg" alt="image"/><span class="offline"></span></div>
+                <div class="profile"><img src="/images/faces/face2.jpg" alt="image" /><span class="offline"></span></div>
                 <div class="info">
                   <div class="wrapper d-flex">
                     <p>Catherine</p>
@@ -365,7 +367,7 @@ const Dark = () => {
                 <small class="text-muted my-auto">23 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="/images/faces/face3.jpg" alt="image"/><span class="online"></span></div>
+                <div class="profile"><img src="/images/faces/face3.jpg" alt="image" /><span class="online"></span></div>
                 <div class="info">
                   <p>Daniel Russell</p>
                   <p>Available</p>
@@ -373,7 +375,7 @@ const Dark = () => {
                 <small class="text-muted my-auto">14 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="/images/faces/face4.jpg" alt="image"/><span class="offline"></span></div>
+                <div class="profile"><img src="/images/faces/face4.jpg" alt="image" /><span class="offline"></span></div>
                 <div class="info">
                   <p>James Richardson</p>
                   <p>Away</p>
@@ -381,7 +383,7 @@ const Dark = () => {
                 <small class="text-muted my-auto">2 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="/images/faces/face5.jpg" alt="image"/><span class="online"></span></div>
+                <div class="profile"><img src="/images/faces/face5.jpg" alt="image" /><span class="online"></span></div>
                 <div class="info">
                   <p>Madeline Kennedy</p>
                   <p>Available</p>
@@ -389,7 +391,7 @@ const Dark = () => {
                 <small class="text-muted my-auto">5 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="../../images/faces/face6.jpg" alt="image"/><span class="online"></span></div>
+                <div class="profile"><img src="../../images/faces/face6.jpg" alt="image" /><span class="online"></span></div>
                 <div class="info">
                   <p>Sarah Graves</p>
                   <p>Available</p>
@@ -401,7 +403,7 @@ const Dark = () => {
           {/* <!-- chat tab ends --> */}
         </div>
       </div>
-   </>
+    </>
   )
 }
 

@@ -110,6 +110,11 @@ input[type="radio"]{
     border-radius: 3px;
     align-items: center;
     display: flex;
+    line-height: 0;
+   
+}
+.find-btn-postcode button{
+    height: 95%;
 }
 .para-form-div{
     width: 36%;

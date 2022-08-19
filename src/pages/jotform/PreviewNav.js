@@ -83,7 +83,7 @@ const PreviewNav = ({ checked, setChecked }) => {
           <section className="form-check form-switch">
             <input class="form-check-input checkinput" type="checkbox" role="switch" id="flexSwitchCheckChecked" onChange={e => handleChange(e)}
               defaultChecked={checked} />
-       
+
           </section>
 
         </div>

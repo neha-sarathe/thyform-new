@@ -236,7 +236,9 @@ const Register = () => {
                   {radio === "Limited" ? (
                     <>
                       {" "}
+                      <br />
                       <h6 class="second-heading-form">Search by:</h6>
+                 
                       <input
                         id="users"
                         type="radio"
@@ -366,7 +368,7 @@ const Register = () => {
                     </>
                   ) : radio === "Sole" ? (
                     <>
-                      {" "}
+                      {" "}     <br />
                       <div className="d-flex mt-4 align-items-center">
                         <div className=" lables-div">
                           <label className="lable-form">Business name*</label>
@@ -514,8 +516,11 @@ const Register = () => {
                             placeholder="Business Type"
                           />
                         </div>
+
                       </div> */}
+                           <br />
                       <div className="d-flex mt-3 align-items-center">
+                        
                         <div className=" lables-div">
                           <label className="lable-form">Business Name*</label>
                         </div>
@@ -574,9 +579,9 @@ const Register = () => {
                             placeholder="Enter your postcode*"
                             className="search-input"
                           />
-                            <div className="ps-4">
+                            <div className="ps-4 find-btn-postcode">
                               <button type="submit" className="btn-default">
-                                find
+                                find &nbsp;  <i class="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                               </button>
                             </div></div>
                           {!show ? (

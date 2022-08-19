@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import { Navigate } from 'react-router-dom';
 import styled from "styled-components";
@@ -6,7 +6,7 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import './vendors/feather/feather.css'
-import './vendors/mdi/css/materialdesignicons.min.css'
+// import './vendors/mdi/css/materialdesignicons.min.css'
 import './vendors/ti-icons/css/themify-icons.css'
 import './vendors/typicons/typicons.css'
 import './vendors/simple-line-icons/css/simple-line-icons.css'
@@ -114,8 +114,8 @@ function App() {
         || window.location.pathname === "/mobilenotification" ? (
 
         <Router>
-         {checked ? <JotformNav checked={checked} setChecked={setChecked}/> : ''} 
-        {checked ?<Routes>
+          {checked ? <JotformNav checked={checked} setChecked={setChecked} /> : ''}
+          {checked ? <Routes>
             {/* <Route path='/allform' element={<Allform />} /> */}
             <Route path='/jotform' element={<Jotform checked={checked} setChecked={setChecked} />} />
             <Route path='/publish' element={<Publish checked={checked} setChecked={setChecked} />} />
@@ -127,17 +127,17 @@ function App() {
 
             <Route path='/Assign' element={<Assign checked={checked} setChecked={setChecked} />} />
             <Route path='/Email' element={<Email checked={checked} setChecked={setChecked} />} />
-            <Route path='/Prefill' element={<Prefill  />} />
-            <Route path='/Pdf' element={<Pdf  />} />
-            <Route path='/Condition' element={<Condition  />} />
-            <Route path='/mobilenotification' element={<MobileNotification  />} />
-            <Route path='/Auto' element={<Auto />}  />
+            <Route path='/Prefill' element={<Prefill />} />
+            <Route path='/Pdf' element={<Pdf />} />
+            <Route path='/Condition' element={<Condition />} />
+            <Route path='/mobilenotification' element={<MobileNotification />} />
+            <Route path='/Auto' element={<Auto />} />
             <Route path='/Rept' element={<Rept />} />
-            <Route path='/Option' element={<Option  />} />
+            <Route path='/Option' element={<Option />} />
             {/* <Route path='/phone' element={<Phone />} /> */}
-          </Routes> :  <Phone checked={checked} setChecked={setChecked}/>
-}  
-         
+          </Routes> : <Phone checked={checked} setChecked={setChecked} />
+          }
+
         </Router>
 
       ) : window.location.pathname === '/' || window.location.pathname === "/login" ? (<Router>

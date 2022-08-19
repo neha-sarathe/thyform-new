@@ -57,7 +57,10 @@ const Allform = () => {
             <h4 className='side-head'>MY FORMS</h4>
             <hr></hr>
             <li>
-              <Link to='/allform' class="">All Forms</Link>
+              <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                All Forms
+              </button>
+              {/* <Link to='/allform' class="">All Forms</Link> */}
               {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="#">Home 1</a>
@@ -607,7 +610,23 @@ const Allform = () => {
 
           <div class="line"></div>
 
-
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
