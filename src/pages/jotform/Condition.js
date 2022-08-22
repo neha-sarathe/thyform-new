@@ -192,7 +192,7 @@ const Condition = () => {
                     </li>
                   </div>
                 </div>
-              </div>me nahi karunga ab task
+              </div>
               <div className="accordion" id="accordionExample">
                 <div className="accordion-item standard">
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
