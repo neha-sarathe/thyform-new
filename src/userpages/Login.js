@@ -88,9 +88,9 @@ const Login = (props) => {
                 class="col-lg-8 login-half-bg d-flex flex-row box"
                 draggable="true"
               >
-                <p class="text-white font-weight-medium text-center flex-grow align-self-end">
+                {/* <p class="text-white font-weight-medium text-center flex-grow align-self-end">
                   Copyright &copy; 2021 All rights reserved.
-                </p>
+                </p> */}
               </div>
               <div
                 class="col-lg-4 d-flex align-items-center justify-content-center box"

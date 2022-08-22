@@ -320,7 +320,7 @@ export const Dashboard = (props) => {
                                 <div className="d-sm-flex justify-content-between align-items-start">
                                   <div>
                                     <h4 className="card-title card-title-dash">Performance Line Chart</h4>
-                                    <h5 className="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5>
+                                    {/* <h5 className="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5> */}
                                   </div>
                                   <div id="performance-line-legend">
 
@@ -423,7 +423,7 @@ export const Dashboard = (props) => {
                             <div className="card bar-card">
                               <div className="card-body">
                                 <h4 className="mb-0 chart-heading">Market Overview</h4>
-                                <div className="bar-chart-para d-flex align-items-center justify-content-between w-100">
+                                {/* <div className="bar-chart-para d-flex align-items-center justify-content-between w-100">
                                   <p className="mb-0">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                   </p>
@@ -448,7 +448,7 @@ export const Dashboard = (props) => {
                                       </Dropdown.Menu>
                                     </Dropdown>
                                   </div>
-                                </div>
+                                </div> */}
                                 <div className="d-flex align-items-end justify-content-between mt-3">
                                   <div className="d-flex align-items-end">
                                     <h3 className="mb-0 font-weight-semibold bar-doller">$36,2531.00</h3>
@@ -975,7 +975,7 @@ export const Dashboard = (props) => {
                                       <div>
                                         <h4 className="card-title card-title-dash">Leave Report</h4>
                                       </div>
-                                      <div>
+                                      {/* <div>
                                         <div className="dropdown">
                                           <button className="btn btn-light dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Month Wise </button>
                                           <div className="dropdown-menu" aria-labelledby="dropdownMenuButton3">
@@ -983,7 +983,7 @@ export const Dashboard = (props) => {
                                             <a className="dropdown-item" href="#">Year Wise</a>
                                           </div>
                                         </div>
-                                      </div>
+                                      </div> */}
                                     </div>
                                     <div className="mt-3">
                                     <Chart options={optionData} series={seriesData} type="bar" height={200} />

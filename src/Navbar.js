@@ -87,17 +87,17 @@ export const Navbar = () => {
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
           <div class="me-3">
-            <button class="navbar-toggler navbar-toggler align-self-center text-dark" type="button" data-bs-toggle="minimize">
+            <button class="navbar-toggler navbar-toggler align-self-center " type="button" data-bs-toggle="minimize">
               <FiAlignJustify />
             </button>
           </div>
           <div>
-            <a class="navbar-brand brand-logo" href="index.html">
+            <Link class="navbar-brand brand-logo" to="/dashboard">
               <img src="../../images/Logo.png" alt="logo" />
-            </a>
-            <a class="navbar-brand brand-logo-mini" href="index.html">
+            </Link>
+            <Link class="navbar-brand brand-logo-mini" to="/dashboard">
               <img src="/images/Logo.png" alt="logo" />
-            </a>
+            </Link>
           </div>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-top">
@@ -150,7 +150,7 @@ export const Navbar = () => {
               </div> */}
               <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
                 <span class="input-group-addon input-group-prepend border-right">
-                  <span class=" input-group-text "><FaRegCalendarAlt /></span>
+                  <span class=" input-group-text text-dark "><FaRegCalendarAlt /></span>
                 </span>
                 <input type="text" class="form-control input_date" />
               </div>
@@ -263,7 +263,7 @@ export const Navbar = () => {
             </li>
           </ul>
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
-            <span class="mdi mdi-menu"></span>
+          <FiAlignJustify />
           </button>
         </div>
       </nav></>

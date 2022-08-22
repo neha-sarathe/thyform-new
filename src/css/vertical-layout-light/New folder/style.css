@@ -33608,7 +33608,7 @@ padding-left: 16px;
   .sidebar-icon-only .navbar .navbar-brand-wrapper {
     width: 70px;
     padding-left: 1.625rem;
-    background: #fff;
+    /* background: #fff; */
   }
   .sidebar-dark.sidebar-icon-only .navbar .navbar-brand-wrapper .navbar-toggler {
     color: #484848;

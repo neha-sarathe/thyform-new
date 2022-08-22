@@ -81,6 +81,9 @@ input[type="radio"]{
 .search-input::placeholder{
     padding: 1px;
 }
+.search-input-post::placeholder{
+    font-size: 12px;
+}
 .form-bg{
     background-color: #fff;
 }
@@ -112,6 +115,10 @@ input[type="radio"]{
     display: flex;
     line-height: 0;
    
+   
+}
+.btn-find-post{
+    width:84px;
 }
 .find-btn-postcode button{
     height: 95%;

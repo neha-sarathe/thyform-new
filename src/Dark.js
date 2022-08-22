@@ -227,16 +227,20 @@ const Dark = () => {
       $(".container-scroller").removeClass(body_classes);
       $(".card-rounded").removeClass(chart_classes);
       $(".pie-chart").removeClass(chart_classes);
+      $(".navbar-brand-wrapper").removeClass(body_classes)
       $(".bar-card").removeClass(chart_classes);
       $(".rate-percentage").removeClass(percent_classes);
       $(".chart-dark-bg").removeClass(chart1_classes);
       $(".card-title").removeClass(chart_title_classes);
+      $(".navbar-toggler").removeClass(percent_classes)
       $(".container-scroller").addClass("body-dark");
       $(".card-rounded").addClass("dash-chart-dark");
       $(".bar-card").addClass("dash-chart-dark");
       $(".pie-chart").addClass("dash-chart-dark");
       $(".rate-percentage").addClass("percent-light");
-      $(".chart-dark-bg").addClass("chart-bg-dark")
+      $(".sidebar").addClass("body-dark")
+      $(".navbar-toggler").addClass("percent-light")
+      $(".chart-dark-bg").addClass("chart-bg-dark");
       $(".card-title").addClass("title-light-color");
       $(".sidebar-bg-options").removeClass("selected");
       $(this).addClass("selected");
@@ -262,13 +266,17 @@ const Dark = () => {
       $(".card-title").removeClass(chart_title_classes);
       $(".rate-percentage").removeClass(percent_classes)
       $(".chart-dark-bg").removeClass(chart1_classes)
+      $(".navbar-toggler").removeClass(percent_classes)
+      $(".navbar-brand-wrapper").removeClass(body_classes)
       $(".container-scroller").addClass("body-light");
+      $(".sidebar").addClass("body-light")
       $(".card-rounded").addClass("dash-chart-light");
       $(".bar-card").addClass("dash-chart-light");
       $(".pie-chart").addClass("dash-chart-light");
       $(".card-title").addClass("title-dark-color");
       $(".chart-dark-bg").addClass("chart-bg-light")
-      $(".rate-percentage").addClass("percent-dark")
+      $(".rate-percentage").addClass("percent-dark");
+      $(".navbar-toggler").addClass("percent-dark")
       $(".sidebar-bg-options").removeClass("selected");
       $(this).addClass("selected");
     });

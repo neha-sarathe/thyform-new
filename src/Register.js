@@ -168,9 +168,9 @@ const Register = () => {
           <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
             <div class="row flex-grow form-bg1 drag-sort-enable text-dark bg-white">
               <div class="col-lg-6 register-half-bg d-flex flex-row">
-                <p class="text-white font-weight-medium text-center flex-grow align-self-end">
+                {/* <p class="text-white font-weight-medium text-center flex-grow align-self-end">
                   Copyright &copy; 2021 All rights reserved.
-                </p>
+                </p> */}
               </div>
 
               <div class="col-lg-6 d-flex align-items-center justify-content-center">
@@ -188,8 +188,8 @@ const Register = () => {
                     </div>
                   </div>
                   {/* <h6 class="mandatory">*This is a mandatory field</h6> */}
-                  <h4 className="heading-form">Your business</h4>
-                  <h6 class="second-heading-form">
+                  <h4 className="heading-form dark-mode-text">Your business</h4>
+                  <h6 class="second-heading-form dark-mode-text">
                     Please select your business type:
                   </h6>
                   <input
@@ -201,8 +201,9 @@ const Register = () => {
                     onClick={() => {
                       handleRadio("Limited");
                     }}
+
                   />
-                  <label for="individual">
+                  <label for="individual" className='dark-mode-text'>
                     <span></span>Limited Company
                   </label>
 
@@ -216,7 +217,7 @@ const Register = () => {
                       handleRadio("Sole");
                     }}
                   />
-                  <label for="organization" className="second-lable">
+                  <label for="organization" className="second-lable dark-mode-text">
                     <span></span>Sole Trader
                   </label>
 
@@ -230,15 +231,15 @@ const Register = () => {
                       handleRadio("Other");
                     }}
                   />
-                  <label for="org" className="second-lable">
+                  <label for="org" className="second-lable dark-mode-text">
                     <span></span>Other (e.g. Partnership)
                   </label>
                   {radio === "Limited" ? (
                     <>
                       {" "}
                       <br />
-                      <h6 class="second-heading-form">Search by:</h6>
-                 
+                      <h6 class="second-heading-form dark-mode-text">Search by:</h6>
+
                       <input
                         id="users"
                         type="radio"
@@ -246,7 +247,7 @@ const Register = () => {
                         value="users"
                         onClick={() => { setText(true) }}
                       />
-                      <label for="users">
+                      <label for="users" className='dark-mode-text'>
                         <span></span>Business name
                       </label>
                       <input
@@ -256,7 +257,7 @@ const Register = () => {
                         value="userss"
                         onClick={() => { setText(false) }}
                       />
-                      <label for="userss" className="second-lable">
+                      <label for="userss" className="second-lable dark-mode-text">
                         <span></span>Company Registration Number
                       </label>
                       <div className="d-flex mt-5">
@@ -270,7 +271,7 @@ const Register = () => {
                           />
                         </div>
                         <div className="ps-4">
-                          <button type="submit" className="btn-default">
+                          <button type="submit" className="btn-default ">
                             SEARCH &nbsp;  <i class="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                           </button>
                         </div>
@@ -518,9 +519,9 @@ const Register = () => {
                         </div>
 
                       </div> */}
-                           <br />
+                      <br />
                       <div className="d-flex mt-3 align-items-center">
-                        
+
                         <div className=" lables-div">
                           <label className="lable-form">Business Name*</label>
                         </div>
@@ -577,11 +578,11 @@ const Register = () => {
                           <div className="d-flex"><input
                             type="text"
                             placeholder="Enter your postcode*"
-                            className="search-input"
+                            className="search-input search-input-post"
                           />
                             <div className="ps-4 find-btn-postcode">
-                              <button type="submit" className="btn-default">
-                                find &nbsp;  <i class="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
+                              <button type="submit" className="btn-default btn-find-post">
+                                Find &nbsp;  <i class="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                               </button>
                             </div></div>
                           {!show ? (

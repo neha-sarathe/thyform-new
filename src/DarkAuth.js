@@ -51,7 +51,8 @@ const Dark = () => {
         });
 
         //background constants
-        var auth_classes = "bg-dark bg-white text-white text-dark navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink"
+        var auth_classes = "bg-dark bg-white  navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink"
+        var auth_text_classes = "text-white text-dark "
         var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink";
         var sidebar_classes = "sidebar-light sidebar-dark";
         var $body = $("body");
@@ -62,7 +63,7 @@ const Dark = () => {
             $(this).addClass("selected");
         });
         // .login-bg
-     
+
 
 
         //Navbar Backgrounds
@@ -81,15 +82,23 @@ const Dark = () => {
 
         $(".tiles.dark").on("click", function () {
             $(".form-bg1").removeClass(auth_classes);
+            $(".lable-form").removeClass(auth_text_classes);
+            $(".dark-mode-text").removeClass(auth_text_classes);
+            $(".dark-mode-text").addClass("text-white")
             $(".lable-form").addClass("text-white")
-            $(".form-bg1").addClass("bg-dark").addClass("text-white");
+            $(".form-bg1").addClass("bg-dark");
+            $(".form-bg1").addClass("text-white")
             $(".tiles").removeClass("selected");
             $(this).addClass("selected");
         });
         $(".tiles.default").on("click", function () {
             $(".form-bg1").removeClass(auth_classes);
+            $(".lable-form").removeClass(auth_text_classes);
+            $(".dark-mode-text").removeClass(auth_text_classes);
+            $(".dark-mode-text").addClass("text-dark")
             $(".lable-form").addClass("text-dark")
-            $(".form-bg1").addClass("bg-white").addClass("text-dark");
+            $(".form-bg1").addClass("bg-white");
+            $(".form-bg1").addClass("text-dark")
             $(".tiles").removeClass("selected");
             $(this).addClass("selected");
         });
@@ -108,7 +117,7 @@ const Dark = () => {
             $(".tiles").removeClass("selected");
             $(this).addClass("selected");
         });
-      
+
 
 
 
@@ -120,12 +129,12 @@ const Dark = () => {
                 <div id="theme-settings" class="settings-panel">
                     <i class="settings-close ti-close"></i>
 
-                    <p class="settings-heading mt-2">Auth Skin</p>
+                    <p class="settings-heading mt-2">THEMES</p>
                     <div class="color-tiles mx-0 px-4">
 
                         <div class="tiles dark"></div>
                         <div class="tiles default"></div>
-                        
+
                     </div>
 
                 </div>

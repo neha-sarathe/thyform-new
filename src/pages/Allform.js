@@ -174,8 +174,8 @@ const Allform = () => {
 
         <div id="content">
 
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid bg-primary">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0">
+            <div class="container-fluid bg-primary ps-1">
 
               <button type="button" id="sidebarCollapse" class="btn btn-info">
                 <FiAlignJustify />
