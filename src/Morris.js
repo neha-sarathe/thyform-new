@@ -128,7 +128,7 @@ const datadonut = {
   },
   text: "23%",
 };
-const Morris = (props) => {
+const Morris = ({ darkmodes, setDarkmodes }) => {
 
 
   const data = {
@@ -206,7 +206,7 @@ const Morris = (props) => {
       <div className="morris-main chart-width">
         <div className="d-flex row">
           <div className="col-md-6 grid-margin stretch-card">
-            <div className="card chart-dark-bg">
+            <div className={"card chart-dark-bg " + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
               <div className="card-body">
                 <h4 className="card-title">Line Chart</h4>
                 <div>
@@ -218,7 +218,7 @@ const Morris = (props) => {
           </div>
 
           <div className="col-md-6 grid-margin stretch-card">
-            <div className="card chart-dark-bg">
+            <div className={"card chart-dark-bg " + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
               <div className="card-body">
                 <h4 className="card-title">Bar Chart</h4>
                 <div>
@@ -236,7 +236,7 @@ const Morris = (props) => {
         </div>
         <div className="d-flex row">
           <div className="col-md-6 grid-margin stretch-card">
-            <div className="card chart-dark-bg">
+            <div className={"card chart-dark-bg " + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
               <div className="card-body">
                 <h4 className="card-title">Area Chart</h4>
                 <div>
@@ -248,7 +248,7 @@ const Morris = (props) => {
             </div>
           </div>
           <div className="col-md-6 grid-margin stretch-card">
-            <div className="card chart-dark-bg">
+            <div className={"card chart-dark-bg " + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
               <div className="card-body">
                 <h4 className="card-title">Doughnut Chart</h4>
                 <div>

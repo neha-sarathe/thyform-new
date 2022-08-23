@@ -32,17 +32,27 @@
 .input-login{
     background-color: transparent !important;
     border: 1px solid #ced4da !important;
-    color: #20252a !important;
+    // color: #20252a ;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
 }
-
-.input-login:focus{
+.login-dark-text{
+    color:white !important;
+}
+.login-light-text{
+    color:black !important;
+}
+.input-login-light:focus{
     background-color: transparent !important;
     border: 1px solid #ced4da !important;
     color: #20252a !important;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
 }
-
+.input-login-dark:focus{
+    background-color: transparent !important;
+    border: 1px solid #ced4da !important;
+    color: #ffffff !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+}
 .input-login::target-text{
     background-color: transparent !important;
     border: 1px solid #ced4da !important;

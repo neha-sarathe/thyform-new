@@ -50,7 +50,7 @@ const Auto = () => {
           <nav id="sidebarsetting" className="sidebar-wrapper2">
             <div className="sidebar-content">
               <div className="sidebar-brand">
-                <a href="#">pro sidebar</a>
+          
                 <div id="close-sidebar">
                   <i className="fas fa-times"></i>
                 </div>

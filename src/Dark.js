@@ -1,7 +1,8 @@
 import React from 'react'
 import { FiSettings } from "react-icons/fi";
 import $ from "jquery";
-const Dark = () => {
+const Dark = ({ darkmodes, setDarkmodes }) => {
+  console.log(darkmodes, 'darkmodes')
   $(function () {
     $(".nav-settings").on("click", function () {
       // $("#right-sidebar").toggleClass("open");
@@ -19,6 +20,8 @@ const Dark = () => {
 
     //background constants
     var body_classes = "body-light body-dark ";
+    var summarychart_classes = "Summary-status-dark Summary-status-light bg-primary";
+    var calender_classes = "body-dark-calander body-light-calander"
     var percent_classes = "percent-dark percent-light";
     var chart_classes = "dash-chart-dark dash-chart-light ";
     var chart1_classes = "chart-bg-dark chart-bg-light"
@@ -96,24 +99,24 @@ const Dark = () => {
       $(this).addClass("selected");
     });
 
-    $(".color-theme.default").click(function () {
-      $(".color-theme.default").attr({
-        "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-light/index.html",
-        "title": "Light"
-      });
-    });
-    $(".color-theme.dark").click(function () {
-      $(".color-theme.dark").attr({
-        "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-dark/index.html",
-        "title": "Dark"
-      });
-    });
-    $(".color-theme.brown").click(function () {
-      $(".color-theme.brown").attr({
-        "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-brown/index.html",
-        "title": "Brown"
-      });
-    });
+    // $(".color-theme.default").click(function () {
+    //   $(".color-theme.default").attr({
+    //     "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-light/index.html",
+    //     "title": "Light"
+    //   });
+    // });
+    // $(".color-theme.dark").click(function () {
+    //   $(".color-theme.dark").attr({
+    //     "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-dark/index.html",
+    //     "title": "Dark"
+    //   });
+    // });
+    // $(".color-theme.brown").click(function () {
+    //   $(".color-theme.brown").attr({
+    //     "href": "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-brown/index.html",
+    //     "title": "Brown"
+    //   });
+    // });
     $('[data-bs-toggle="minimize"]').on("click", function () {
       if (($("#root").hasClass('sidebar-toggle-display')) || ($("#root").hasClass('sidebar-absolute'))) {
         $("#root").toggleClass('sidebar-hidden');
@@ -122,55 +125,55 @@ const Dark = () => {
       }
     });
     // container-scroller
-    $(".color-theme.primary").on("click", function () {
-      $(".navbar").removeClass(navbar_classes);
-      $(".navbar").addClass("navbar-primary");
-      $(".tiles").removeClass("selected");
-      $(this).addClass("selected");
+    // $(".color-theme.primary").on("click", function () {
+    //   $(".navbar").removeClass(navbar_classes);
+    //   $(".navbar").addClass("navbar-primary");
+    //   $(".tiles").removeClass("selected");
+    //   $(this).addClass("selected");
 
 
-    });
-    $(".color-theme.success").on("click", function () {
-      $(".navbar").removeClass(navbar_classes);
-      $(".navbar").addClass("navbar-success");
-      $(".tiles").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    $(".color-theme.warning").on("click", function () {
-      $(".navbar").removeClass(navbar_classes);
-      $(".navbar").addClass("navbar-warning");
-      $(".tiles").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    $(".color-theme.danger").on("click", function () {
-      $(".navbar").removeClass(navbar_classes);
-      $(".navbar").addClass("navbar-danger");
-      $(".tiles").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    $(".color-theme.light").on("click", function () {
-      $(".navbar").removeClass(navbar_classes);
-      $(".navbar").addClass("navbar-light");
-      $(".tiles").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    $(".color-theme.brown").on("click", function () {
-      $(".navbar").removeClass(navbar_classes);
-      $(".navbar").addClass("navbar-info");
-      $(".tiles").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    $(".color-theme.dark").on("click", function () {
-      $(".navbar").removeClass(navbar_classes);
-      $(".navbar").addClass("navbar-dark");
-      $(".tiles").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    $(".color-theme.default").on("click", function () {
-      $(".navbar").removeClass(navbar_classes);
-      $(".tiles").removeClass("selected");
-      $(this).addClass("selected");
-    });
+    // });
+    // $(".color-theme.success").on("click", function () {
+    //   $(".navbar").removeClass(navbar_classes);
+    //   $(".navbar").addClass("navbar-success");
+    //   $(".tiles").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.warning").on("click", function () {
+    //   $(".navbar").removeClass(navbar_classes);
+    //   $(".navbar").addClass("navbar-warning");
+    //   $(".tiles").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.danger").on("click", function () {
+    //   $(".navbar").removeClass(navbar_classes);
+    //   $(".navbar").addClass("navbar-danger");
+    //   $(".tiles").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.light").on("click", function () {
+    //   $(".navbar").removeClass(navbar_classes);
+    //   $(".navbar").addClass("navbar-light");
+    //   $(".tiles").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.brown").on("click", function () {
+    //   $(".navbar").removeClass(navbar_classes);
+    //   $(".navbar").addClass("navbar-info");
+    //   $(".tiles").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.dark").on("click", function () {
+    //   $(".navbar").removeClass(navbar_classes);
+    //   $(".navbar").addClass("navbar-dark");
+    //   $(".tiles").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.default").on("click", function () {
+    //   $(".navbar").removeClass(navbar_classes);
+    //   $(".tiles").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
     //   $(".color-theme.default").on("click" , function(){
     //     $(".navbar").removeClass(navbar_classes);
     //     $(".tiles").removeClass("selected");
@@ -223,66 +226,85 @@ const Dark = () => {
     //   $(".sidebar-bg-options").removeClass("selected");
     //   $(this).addClass("selected");
     // });chart_title_classes
-    $(".color-theme.dark").on("click", function () {
-      $(".container-scroller").removeClass(body_classes);
-      $(".card-rounded").removeClass(chart_classes);
-      $(".pie-chart").removeClass(chart_classes);
-      $(".navbar-brand-wrapper").removeClass(body_classes)
-      $(".bar-card").removeClass(chart_classes);
-      $(".rate-percentage").removeClass(percent_classes);
-      $(".chart-dark-bg").removeClass(chart1_classes);
-      $(".card-title").removeClass(chart_title_classes);
-      $(".navbar-toggler").removeClass(percent_classes)
-      $(".container-scroller").addClass("body-dark");
-      $(".card-rounded").addClass("dash-chart-dark");
-      $(".bar-card").addClass("dash-chart-dark");
-      $(".pie-chart").addClass("dash-chart-dark");
-      $(".rate-percentage").addClass("percent-light");
-      $(".sidebar").addClass("body-dark")
-      $(".navbar-toggler").addClass("percent-light")
-      $(".chart-dark-bg").addClass("chart-bg-dark");
-      $(".card-title").addClass("title-light-color");
-      $(".sidebar-bg-options").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    $(".color-theme.dark").on("click", function () {
-      $body.removeClass(sidebar_classes);
-      $body.addClass("sidebar-dark");
-      $(".sidebar-bg-options").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    $(".color-theme.default").on("click", function () {
-      $body.removeClass(sidebar_classes);
-      $body.addClass("sidebar-light");
-      $(".sidebar-bg-options").removeClass("selected");
-      $(this).addClass("selected");
-    });
-    // chart-dark-bg  chart-bg-dark chart-bg-light
-    $(".color-theme.default").on("click", function () {
-      $(".container-scroller").removeClass(body_classes);
-      $(".card-rounded").removeClass(chart_classes);
-      $(".bar-card").removeClass(chart_classes);
-      $(".pie-chart").removeClass(chart_classes);
-      $(".card-title").removeClass(chart_title_classes);
-      $(".rate-percentage").removeClass(percent_classes)
-      $(".chart-dark-bg").removeClass(chart1_classes)
-      $(".navbar-toggler").removeClass(percent_classes)
-      $(".navbar-brand-wrapper").removeClass(body_classes)
-      $(".container-scroller").addClass("body-light");
-      $(".sidebar").addClass("body-light")
-      $(".card-rounded").addClass("dash-chart-light");
-      $(".bar-card").addClass("dash-chart-light");
-      $(".pie-chart").addClass("dash-chart-light");
-      $(".card-title").addClass("title-dark-color");
-      $(".chart-dark-bg").addClass("chart-bg-light")
-      $(".rate-percentage").addClass("percent-dark");
-      $(".navbar-toggler").addClass("percent-dark")
-      $(".sidebar-bg-options").removeClass("selected");
-      $(this).addClass("selected");
-    });
+    // $(".color-theme.dark").on("click", function () {
+    //   $(".container-scroller").removeClass(body_classes);
+    //   $(".card-rounded").removeClass(chart_classes);
+    //   $(".pie-chart").removeClass(chart_classes);
+    //   $(".navbar-brand-wrapper").removeClass(body_classes)
+    //   $(".bar-card").removeClass(chart_classes);
+    //   $(".rate-percentage").removeClass(percent_classes);
+    //   $(".chart-dark-bg").removeClass(chart1_classes);
+    //   $(".card-title").removeClass(chart_title_classes);
+    //   $(".navbar-toggler").removeClass(percent_classes)
+    //   $(".Summary-status").removeClass(summarychart_classes);
+    //   $(".navbar-date-picker").removeClass(calender_classes);
+    //   $(".sidebar").removeClass(body_classes)
+    //   $(".container-scroller").addClass("body-dark");
+    //   $(".navbar-date-picker").addClass("body-dark-calander");
+    //   $(".card-rounded").addClass("dash-chart-dark");
+    //   $(".bar-card").addClass("dash-chart-dark");
+    //   $(".pie-chart").addClass("dash-chart-dark");
+    //   $(".rate-percentage").addClass("percent-light");
+    //   $(".sidebar").addClass("body-dark")
+    //   $(".navbar-toggler").addClass("percent-light");
+    //   $(".Summary-status").addClass("Summary-status-dark")
+    //   $(".chart-dark-bg").addClass("chart-bg-dark");
+    //   $(".card-title").addClass("title-light-color");
+    //   $(".sidebar-bg-options").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.dark").on("click", function () {
+    //   $body.removeClass(sidebar_classes);
+    //   $body.addClass("sidebar-dark");
+    //   $(".sidebar-bg-options").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // $(".color-theme.default").on("click", function () {
+    //   $body.removeClass(sidebar_classes);
+    //   $body.addClass("sidebar-light");
+    //   $(".sidebar-bg-options").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
+    // chart-dark-bg  chart-bg-dark chart-bg-light 
+
+    // $(".color-theme.default").on("click", function () {
+    //   $(".container-scroller").removeClass(body_classes);
+    //   $(".card-rounded").removeClass(chart_classes);
+    //   $(".bar-card").removeClass(chart_classes);
+    //   $(".pie-chart").removeClass(chart_classes);
+    //   $(".card-title").removeClass(chart_title_classes);
+    //   $(".rate-percentage").removeClass(percent_classes)
+    //   $(".chart-dark-bg").removeClass(chart1_classes)
+    //   $(".navbar-toggler").removeClass(percent_classes)
+    //   $(".navbar-brand-wrapper").removeClass(body_classes)
+    //   $(".sidebar").removeClass(body_classes)
+    //   $(".Summary-status").removeClass(summarychart_classes);
+    //   $(".navbar-date-picker").removeClass(calender_classes);
+    //   $(".container-scroller").addClass("body-light");
+    //   $(".sidebar").addClass("body-light")
+    //   $(".card-rounded").addClass("dash-chart-light");
+    //   $(".bar-card").addClass("dash-chart-light");
+    //   $(".pie-chart").addClass("dash-chart-light");
+    //   $(".card-title").addClass("title-dark-color");
+    //   $(".chart-dark-bg").addClass("chart-bg-light")
+    //   $(".rate-percentage").addClass("percent-dark");
+    //   $(".Summary-status").addClass("bg-primary");
+    //   $(".navbar-date-picker").addClass("body-light-calander");
+    //   $(".navbar-toggler").addClass("percent-dark")
+    //   $(".sidebar-bg-options").removeClass("selected");
+    //   $(this).addClass("selected");
+    // });
 
 
   });
+
+  const handleMode = () => {
+    setDarkmodes(true)
+  }
+
+  const handletheme = () => {
+    setDarkmodes(false)
+  }
   return (
     <>
       <div class="theme-setting-wrapper">
@@ -303,8 +325,8 @@ const Dark = () => {
           </div>
           <p class="settings-heading mt-2">THEMES</p>
           <div class="color-themes mx-0 px-4">
-            <div class="color-theme default"></div>
-            <div class="color-theme dark"></div>
+            <div class="color-theme default" onClick={handletheme} ></div>
+            <div class="color-theme dark" onClick={handleMode} ></div>
             {/* <div  class="color-theme brown"></div> */}
           </div>
         </div>

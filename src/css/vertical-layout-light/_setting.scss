@@ -110,7 +110,7 @@
     height: 100%;
     max-height: 100%;
     position: fixed;
-    top: 65px;
+    top: 60px;
     left: -300px;
     z-index: 999;
   }
@@ -290,6 +290,10 @@
   }
   .list-sidebar-jotform{
     border-bottom: 1px solid #3a3f48 !important;
+  }
+  .list-sidebar-jotform[aria-expanded="true"]{
+ background-color: #fff !important;
+ color: black !important;
   }
   .sidebar-wrapper2 .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
     content: "\f111";

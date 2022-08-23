@@ -7,7 +7,7 @@ import $ from "jquery";
 import { FiAlignJustify } from "react-icons/fi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-export const Navbar = () => {
+export const Navbar = ({darkmodes,setDarkmodes}) => {
   $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
       $('#sidebars').toggleClass('active');
@@ -85,9 +85,9 @@ export const Navbar = () => {
   return (
     <>
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
-        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class={"text-center navbar-brand-wrapper d-flex align-items-center justify-content-start"+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
           <div class="me-3">
-            <button class="navbar-toggler navbar-toggler align-self-center " type="button" data-bs-toggle="minimize">
+            <button class={"navbar-toggler navbar-toggler align-self-center " + (darkmodes ? "text-white " : "text-dark ")} type="button" data-bs-toggle="minimize">
               <FiAlignJustify />
             </button>
           </div>
@@ -100,7 +100,7 @@ export const Navbar = () => {
             </Link>
           </div>
         </div>
-        <div class="navbar-menu-wrapper d-flex align-items-top">
+        <div class={"navbar-menu-wrapper d-flex align-items-top " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
           <ul class="p-0">
             <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
               <h3 class="welcome-text">Good Morning, <span class="text-black fw-bold">John Doe</span></h3>

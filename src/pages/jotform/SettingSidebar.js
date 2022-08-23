@@ -15,7 +15,7 @@ const SettingSidebar = () => {
                     <nav id="sidebarsetting" class="sidebar-wrapper2">
                         <div class="sidebar-content">
                             <div class="sidebar-brand">
-                                <a href="#">pro sidebar</a>
+                        
                                 <div id="close-sidebar">
                                     <i class="fas fa-times"></i>
                                 </div>
@@ -85,12 +85,12 @@ const SettingSidebar = () => {
                                             </ul>
                                         </Link>
                                     </div>
-                                    <li>
+                                    {/* <li>
                                         <a href="#">
                                             <i class="fa fa-folder"></i>
                                             <span>Examples</span>
                                         </a>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                         </div>

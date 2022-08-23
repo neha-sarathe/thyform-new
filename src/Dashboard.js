@@ -106,9 +106,9 @@ export const Dashboard = (props) => {
   const [optionData, setOptionData] = useState({
     chart: {
       type: 'bar',
-      height:100,
+      height: 100,
       colors: ['red'],
-    
+
       toolbar: {
         show: true,
         tools: {
@@ -120,21 +120,21 @@ export const Dashboard = (props) => {
       show: false,      // you can either change hear to disable all grids
       xaxis: {
         lines: {
-            show: false
+          show: false
         }
-    },   
-    yaxis: {
+      },
+      yaxis: {
         lines: {
-            show: false
+          show: false
         }
-    }
+      }
     },
     plotOptions: {
       bar: {
         horizontal: false,
         columnWidth: '40%',
         endingShape: 'rounded',
-     
+
       },
     },
     dataLabels: {
@@ -280,32 +280,32 @@ export const Dashboard = (props) => {
                         <div className="statistics-details d-flex align-items-center justify-content-between">
                           <div>
                             <p className="statistics-title">Bounce Rate</p>
-                            <h3 className="rate-percentage">32.53%</h3>
+                            <h3 className={"rate-percentage " + (props.darkmodes ? "text-white body-dark" : "text-dark body-light")}>32.53%</h3>
                             <p className="text-danger d-flex"><i className="mdi mdi-menu-down"></i><span>-0.5%</span></p>
                           </div>
                           <div>
                             <p className="statistics-title">Page Views</p>
-                            <h3 className="rate-percentage">7,682</h3>
+                            <h3 className={"rate-percentage " + (props.darkmodes ? "text-white body-dark" : "text-dark body-light")}>7,682</h3>
                             <p className="text-success d-flex"><i className="mdi mdi-menu-up"></i><span>+0.1%</span></p>
                           </div>
                           <div>
                             <p className="statistics-title">New Sessions</p>
-                            <h3 className="rate-percentage">68.8</h3>
+                            <h3 className={"rate-percentage " + (props.darkmodes ? "text-white body-dark" : "text-dark body-light")}>68.8</h3>
                             <p className="text-danger d-flex"><i className="mdi mdi-menu-down"></i><span>68.8</span></p>
                           </div>
                           <div className="d-none d-md-block">
                             <p className="statistics-title">Avg. Time on Site</p>
-                            <h3 className="rate-percentage">2m:35s</h3>
+                            <h3 className={"rate-percentage " + (props.darkmodes ? "text-white body-dark" : "text-dark body-light")}>2m:35s</h3>
                             <p className="text-success d-flex"><i className="mdi mdi-menu-down"></i><span>+0.8%</span></p>
                           </div>
                           <div className="d-none d-md-block">
                             <p className="statistics-title">New Sessions</p>
-                            <h3 className="rate-percentage">68.8</h3>
+                            <h3 className={"rate-percentage " + (props.darkmodes ? "text-white body-dark" : "text-dark body-light")}>68.8</h3>
                             <p className="text-danger d-flex"><i className="mdi mdi-menu-down"></i><span>68.8</span></p>
                           </div>
                           <div className="d-none d-md-block">
                             <p className="statistics-title">Avg. Time on Site</p>
-                            <h3 className="rate-percentage">2m:35s</h3>
+                            <h3 className={"rate-percentage " + (props.darkmodes ? "text-white body-dark" : "text-dark body-light")}>2m:35s</h3>
                             <p className="text-success d-flex"><i className="mdi mdi-menu-down"></i><span>+0.8%</span></p>
                           </div>
                         </div>
@@ -315,11 +315,11 @@ export const Dashboard = (props) => {
                       <div className="col-lg-8 d-flex flex-column">
                         <div className="row flex-grow">
                           <div className="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
-                            <div className="card card-rounded">
+                            <div className={"card card-rounded " + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="card-body">
                                 <div className="d-sm-flex justify-content-between align-items-start">
                                   <div>
-                                    <h4 className="card-title card-title-dash">Performance Line Chart</h4>
+                                    <h4 className={"card-title card-title-dash "+ (props.darkmodes ? "text-white " : "text-dark ")}>Performance Line Chart</h4>
                                     {/* <h5 className="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5> */}
                                   </div>
                                   <div id="performance-line-legend">
@@ -337,7 +337,7 @@ export const Dashboard = (props) => {
                       <div className="col-lg-4 d-flex flex-column">
                         <div className="row flex-grow">
                           <div className="col-md-6 col-lg-12 grid-margin stretch-card">
-                            <div className="card bg-primary card-rounded">
+                            <div className={"card  card-rounded Summary-status " + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark bg-primary")}>
                               <div className="card-body pb-0">
                                 <h4 className="card-title card-title-dash text-white mb-4">Status Summary</h4>
                                 <div className="row">
@@ -375,19 +375,19 @@ export const Dashboard = (props) => {
                             </div>
                           </div>
                           <div className="col-md-6 col-lg-12 grid-margin stretch-card">
-                            <div className="card card-rounded">
+                            <div className={"card card-rounded " + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="card-body">
                                 <div className="row">
                                   <div className="col-sm-6">
                                     <div className="d-flex justify-content-between align-items-center mb-2 mb-sm-0">
                                       <div className="circle-progress-width">
-                                        <div id="totalVisitors" className="progressbar-js-circle pr-2"><div class="spinner-border spinner-border-md text-primary"  role="status">
+                                        <div id="totalVisitors" className="progressbar-js-circle pr-2"><div class="spinner-border spinner-border-md text-primary" role="status">
                                           <span class="visually-hidden">Loading...</span>
                                         </div></div>
                                       </div>
                                       <div>
                                         <p className="text-small mb-2">Total Visitors</p>
-                                        <h4 className="mb-0 fw-bold text-dark">26.80%</h4>
+                                        <h4 className={"mb-0 fw-bold "+ (props.darkmodes ? "text-white " : "text-dark ")}>26.80%</h4>
                                       </div>
                                     </div>
                                   </div>
@@ -400,7 +400,7 @@ export const Dashboard = (props) => {
                                       </div>
                                       <div>
                                         <p className="text-small mb-2">Visits per day</p>
-                                        <h4 className="mb-0 fw-bold text-dark">9065</h4>
+                                        <h4 className={"mb-0 fw-bold " + (props.darkmodes ? "text-white " : "text-dark ")}>9065</h4>
                                       </div>
                                     </div>
                                   </div>
@@ -420,9 +420,9 @@ export const Dashboard = (props) => {
                 <div className="card second-row"></div>
               </div> */}
                             {/* <div className="col-md-12 grid-margin pqr"> */}
-                            <div className="card bar-card">
+                            <div className={"card bar-card "  + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="card-body">
-                                <h4 className="mb-0 chart-heading">Market Overview</h4>
+                                <h4 className={"mb-0 chart-heading "+ (props.darkmodes ? "text-white " : "text-dark ")}>Market Overview</h4>
                                 {/* <div className="bar-chart-para d-flex align-items-center justify-content-between w-100">
                                   <p className="mb-0">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -451,8 +451,8 @@ export const Dashboard = (props) => {
                                 </div> */}
                                 <div className="d-flex align-items-end justify-content-between mt-3">
                                   <div className="d-flex align-items-end">
-                                    <h3 className="mb-0 font-weight-semibold bar-doller">$36,2531.00</h3>
-                                    <h4 className="mb-0 font-weight-medium mr-2 ml-2 mb-1 usd-data">USD</h4>
+                                    <h3 className={"mb-0 font-weight-semibold bar-doller "+ (props.darkmodes ? "text-white " : "text-dark ")}>$36,2531.00</h3>
+                                    <h4 className={"mb-0 font-weight-medium mr-2 ml-2 mb-1 usd-data "+ (props.darkmodes ? "text-white " : "text-dark ")}>USD</h4>
                                     <h4 className="mb-0 text-success font-weight-semibold mb-1 ms-2">
                                       (+1.37%)
                                     </h4>
@@ -921,9 +921,9 @@ export const Dashboard = (props) => {
                         </div> */}
                         <div className="row flex-grow">
                           <div className="col-md-12 grid-margin">
-                            <div className="card pie-chart">
+                            <div className={"card pie-chart" + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="Todocard-body">
-                                <h4 className="mt-3 ml-4">Type By Amount</h4>
+                                <h4 className={"mt-3 ml-4 ms-4 "+ (props.darkmodes ? "text-white " : "text-dark ")}>Type By Amount</h4>
                                 <div>
                                   <PieChart
                                     radius={30}
@@ -967,13 +967,13 @@ export const Dashboard = (props) => {
                         </div>
                         <div className="row flex-grow">
                           <div className="col-12 grid-margin stretch-card">
-                            <div className="card card-rounded">
+                            <div className={"card card-rounded "  + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="card-body">
                                 <div className="row">
                                   <div className="col-lg-12">
                                     <div className="d-flex justify-content-between align-items-center mb-3">
                                       <div>
-                                        <h4 className="card-title card-title-dash">Leave Report</h4>
+                                        <h4 className={"card-title card-title-dash"+ (props.darkmodes ? "text-white " : "text-dark ")}>Leave Report</h4>
                                       </div>
                                       {/* <div>
                                         <div className="dropdown">
@@ -986,7 +986,7 @@ export const Dashboard = (props) => {
                                       </div> */}
                                     </div>
                                     <div className="mt-3">
-                                    <Chart options={optionData} series={seriesData} type="bar" height={200} />
+                                      <Chart options={optionData} series={seriesData} type="bar" height={200} />
                                     </div>
                                   </div>
                                 </div>

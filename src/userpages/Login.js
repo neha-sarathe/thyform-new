@@ -79,11 +79,11 @@ const Login = (props) => {
   console.log(props, 'props.handleLogin')
   return (
     <>
-     <Dark />
+      <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
       <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
           <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
-            <div class="row flex-grow login-bg drag-sort-enable">
+            <div class={"row flex-grow login-bg drag-sort-enable" + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
               <div
                 class="col-lg-8 login-half-bg d-flex flex-row box"
                 draggable="true"
@@ -106,7 +106,7 @@ const Login = (props) => {
                           <img src="../../images/Logo.png" alt="logo" />
                         </>
                       )}
-                      <h6 class="fw-light login-heading">
+                      <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
                         Happy to see you again!
                       </h6>
                     </div>
@@ -126,6 +126,7 @@ const Login = (props) => {
                         id="upload-button"
                         style={{ display: "none" }}
                         onChange={handleChange}
+
                       />
 
                     </div>
@@ -137,9 +138,10 @@ const Login = (props) => {
                       <div class="input-group">
                         <input
                           type="text"
-                          className="form-control  border-left-0  input-login"
+                          className={"form-control  border-left-0  input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputEfmail"
-                          placeholder="Username"
+                          placeholder="Usernames"
+
                         />
                       </div>
                     </div>
@@ -153,7 +155,7 @@ const Login = (props) => {
                     </div> */}
                         <input
                           type="password"
-                          className="form-control  border-left-0 input-login"
+                          className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
                           placeholder="Password"
                         />
@@ -165,7 +167,7 @@ const Login = (props) => {
 
                         <input
                           type="phone"
-                          className="form-control  border-left-0 input-login"
+                          className={"form-control  border-left-0 input-login " + ( props.darkmodes ? " login-dark-text " : " login-light-text " )}
                           id="exampleInputfPassword"
                           placeholder="pin code"
                           value={pincode}
@@ -178,13 +180,13 @@ const Login = (props) => {
 
                       <div class="my-2 d-flex  align-items-center">
                         <input
-                          class="form-check-input"
+                          className={"form-check-input "+ ( props.darkmodes ? " login-dark-text " : " login-light-text " )}
                           type="checkbox"
                           value=""
                           id="flexCheckDefault"
                         />
                         <label
-                          class="form-check-label ms-2"
+                          class={"form-check-label ms-2 "+ (props.darkmodes ? "text-white" : "text-dark ")}
                           for="flexCheckDefault"
                         >
                           Remember Me
@@ -199,7 +201,7 @@ const Login = (props) => {
                       </button>
                       {/* <button class="btn btn-primary" type="button">Button</button> */}
                     </div>
-                    <p className="already-login">
+                    <p className={"already-login " + ( props.darkmodes ? " login-dark-text input-login-dark" : " login-light-text input-login-light" )}>
                       Not a member yet? Click{" "}
                       <Link to="/" class="auth-link text-black">
                         here

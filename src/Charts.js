@@ -3,7 +3,7 @@ import { Line, Bar, Doughnut, Pie, Scatter } from 'react-chartjs-2';
 
 
 
-const Charts = () => {
+const Charts = ({ darkmodes, setDarkmodes }) => {
 
   const data = {
     labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
@@ -190,80 +190,80 @@ const Charts = () => {
   return (
     <>
       {/* <!-- partial --> */}
-      
-        <div className="main-panel dashboard-margin">
-          <div className="content-wrapper">
-            <div className="row">
-              <div className="col-lg-6 grid-margin stretch-card">
-                <div className="card chart-dark-bg">
-                  <div className="card-body">
-                    <h4 className="card-title">Line chart </h4>
-                    <Line data={data} options={options} />
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 grid-margin stretch-card">
-                <div className="card chart-dark-bg">
-                  <div className="card-body">
-                    <h4 className="card-title">Bar chart</h4>
-                    {/* <canvas id="barChart"></canvas> */}
-                    <Bar data={data} options={options} />
-                  </div>
+
+      <div className="main-panel dashboard-margin">
+        <div className="content-wrapper">
+          <div className="row">
+            <div className="col-lg-6 grid-margin stretch-card">
+              <div className={"card chart-dark-bg " + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
+                <div className="card-body">
+                  <h4 className="card-title">Line chart </h4>
+                  <Line data={data} options={options} />
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-6 grid-margin stretch-card">
-                <div className="card chart-dark-bg">
-                  <div className="card-body">
-                    <h4 className="card-title">Area chart</h4>
-                    {/* <canvas id="areaChart"></canvas> */}
-                    <Line data={areaData} options={areaOptions} />
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 grid-margin stretch-card">
-                <div className="card chart-dark-bg">
-                  <div className="card-body">
-                    <h4 className="card-title">Doughnut chart</h4>
-                    {/* <canvas id="doughnutChart"></canvas> */}
-                    <Doughnut data={doughnutPieData} options={doughnutPieOptions} />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
-                <div className="card chart-dark-bg">
-                  <div className="card-body">
-                    <h4 className="card-title">Pie chart</h4>
-                    {/* <canvas id="pieChart"></canvas> */}
-                    <Pie data={doughnutPieData} options={doughnutPieOptions} />
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
-                <div className="card chart-dark-bg">
-                  <div className="card-body">
-                    <h4 className="card-title">Scatter chart</h4>
-                    {/* <canvas id="scatterChart"></canvas> */}
-                    <Scatter data={scatterChartData} options={scatterChartOptions} />
-                  </div>
+            <div className="col-lg-6 grid-margin stretch-card">
+              <div className={"card chart-dark-bg " + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
+                <div className="card-body">
+                  <h4 className="card-title">Bar chart</h4>
+                  {/* <canvas id="barChart"></canvas> */}
+                  <Bar data={data} options={options} />
                 </div>
               </div>
             </div>
           </div>
-          {/* <!-- content-wrapper ends -->
-        <!-- partial:../../partials/_footer.html --> */}
-          <footer className="footer">
-            <div className="d-sm-flex justify-content-center justify-content-sm-between">
-              <span className="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
-              <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+          <div className="row">
+            <div className="col-lg-6 grid-margin stretch-card">
+              <div className={"card chart-dark-bg "  + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
+                <div className="card-body">
+                  <h4 className="card-title">Area chart</h4>
+                  {/* <canvas id="areaChart"></canvas> */}
+                  <Line data={areaData} options={areaOptions} />
+                </div>
+              </div>
             </div>
-          </footer>
-          {/* <!-- partial --> */}
+            <div className="col-lg-6 grid-margin stretch-card">
+              <div className={"card chart-dark-bg "  + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
+                <div className="card-body">
+                  <h4 className="card-title">Doughnut chart</h4>
+                  {/* <canvas id="doughnutChart"></canvas> */}
+                  <Doughnut data={doughnutPieData} options={doughnutPieOptions} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
+              <div className={"card chart-dark-bg "  + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
+                <div className="card-body">
+                  <h4 className="card-title">Pie chart</h4>
+                  {/* <canvas id="pieChart"></canvas> */}
+                  <Pie data={doughnutPieData} options={doughnutPieOptions} />
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
+              <div className={"card chart-dark-bg " + (darkmodes ? "chart-bg-dark" : "chart-bg-light")}>
+                <div className="card-body">
+                  <h4 className="card-title">Scatter chart</h4>
+                  {/* <canvas id="scatterChart"></canvas> */}
+                  <Scatter data={scatterChartData} options={scatterChartOptions} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </>
+        {/* <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html --> */}
+        <footer className="footer">
+          <div className="d-sm-flex justify-content-center justify-content-sm-between">
+            <span className="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
+            <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+          </div>
+        </footer>
+        {/* <!-- partial --> */}
+      </div>
+    </>
   )
 }
 export default Charts;

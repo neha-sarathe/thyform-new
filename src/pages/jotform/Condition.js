@@ -121,7 +121,7 @@ const Condition = () => {
                 </div>
               </div>
               {/* second card end */}
-              <div className="accordion" id="accordionExample">
+              <div className="accordion mt-3" id="accordionExample">
                 <div className="accordion-item standard">
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
@@ -145,13 +145,13 @@ const Condition = () => {
                   </div>
                 </div>
               </div>
-              <div className="accordion" id="accordionExample">
+              <div className="accordion mt-3" id="accordionExample">
                 <div className="accordion-item standard">
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>
                         <div className='d-flex '>
-                          <li className='shown px-2 rounded-1 calculater'>
+                          <li className='shown px-2 rounded-1 calculater bg-success'>
                             <FaShare />
                           </li>
                           <li className='mx-4 '>
@@ -169,13 +169,13 @@ const Condition = () => {
                   </div>
                 </div>
               </div>
-              <div className="accordion" id="accordionExample">
+              <div className="accordion mt-3" id="accordionExample">
                 <div className="accordion-item standard">
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>
                         <div className='d-flex '>
-                          <li className='shown px-2 rounded-1 calculater'>
+                          <li className='shown px-2 rounded-1 calculater bg-success'>
                             <FaCheckCircle />
                           </li>
                           <li className='mx-4 '>
@@ -193,13 +193,13 @@ const Condition = () => {
                   </div>
                 </div>
               </div>
-              <div className="accordion" id="accordionExample">
+              <div className="accordion mt-3" id="accordionExample">
                 <div className="accordion-item standard">
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>
                         <div className='d-flex '>
-                          <li className='shown px-2 rounded-1 calculater'>
+                          <li className='shown px-2 rounded-1 calculater' style={{backgroundColor:"#b559d4"}}>
                             <FaEnvelope />
                           </li>
                           <li className='mx-4 '>

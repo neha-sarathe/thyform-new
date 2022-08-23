@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 // import Charts from './Charts';
 import { BiLineChart } from "react-icons/bi";
 import { RiLayoutGridLine } from "react-icons/ri";
-export const Sidbar = () => {
+export const Sidbar = ({darkmodes,setDarkmodes}) => {
   return (
     <>
 
       <nav className="sidebar sidebar-offcanvas" id="sidebar">
         <ul className="nav">
-          <li className="nav-item">
-            <a className="nav-link" data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
-              <RiLayoutGridLine />
-              <span className="menu-title">Dashboard</span>
-              <i className="menu-arrow"></i>
+          <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}>
+            <a className={"nav-link " + (darkmodes ? "nav-link-dark-a" : "nav-link-light-a")} data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
+              <RiLayoutGridLine className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")}/>
+              <span className={"menu-title "+ (darkmodes ? "text-white " : "text-dark ")}>Dashboard</span>
+              <i className="menu-arrow "></i>
             </a>
             <div className="collapse" id="dashboards">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <Link class="nav-link" to="/dashboard">Default</Link></li>
+              <ul class={"nav flex-column sub-menu "+ (darkmodes ? "sub-menu-dark " : "sub-menu-light ")}>
+                <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}> <Link class="nav-link " to="/dashboard">Default</Link></li>
                 {/* <li class="nav-item"> <a class="nav-link" href="pages/dashboards/crm.html">CRM</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/purple.html">Purple</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/purple-dark.html">Purple Dark</a></li>
@@ -111,17 +111,17 @@ export const Sidbar = () => {
             </div>
           </li> */}
 
-          <li className="nav-item">
-            <a className="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+          <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}>
+            <a className={"nav-link " + (darkmodes ? "nav-link-dark-a" : "nav-link-light-a")}  data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <BiLineChart />
-              <span className="menu-title icon_margin">Charts</span>
+              <span className={"menu-title icon_margin "+ (darkmodes ? "text-white " : "text-dark ")}>Charts</span>
               <i className="menu-arrow"></i>
             </a>
             <div className="collapse" id="charts">
-              <ul className="nav flex-column sub-menu">
+              <ul className={"nav flex-column sub-menu "+ (darkmodes ? "sub-menu-dark " : "sub-menu-light ")}>
                 {/* <li class="nav-item"> <Link class="nav-link" to='/Charts'>ChartJs</Link></li> */}
-                <li className="nav-item"> <a className="nav-link" href="./charts">Chart Js</a></li>
-                <li className="nav-item"> <Link to="/morris" className="nav-link" >Morris</Link></li>
+                <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}> <Link className="nav-link " to="/charts">Chart Js</Link></li>
+                <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}> <Link to="/morris" className="nav-link " >Morris</Link></li>
                 {/* <li className="nav-item"> <a className="nav-link" href="pages/charts/flot-chart.html">Flot</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/google-charts.html">Google charts</a></li>
                 <li className="nav-item"> <a className="nav-link" href="pages/charts/sparkline.html">Sparkline js</a></li>

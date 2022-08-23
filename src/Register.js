@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiSearch, FiChevronRight } from 'react-icons/fi'
 import Dark from "./DarkAuth";
-const Register = () => {
+const Register = (props) => {
   const [radio, setRadio] = useState("Limited");
   const [show, setShow] = useState(false);
   const [text, setText] = useState(true);
@@ -159,14 +159,14 @@ const Register = () => {
       setHouseNo(value);
     }
   }
-
+  console.log('props.darkmodes', props.darkmodes)
   return (
     <>
-      <Dark />
+      <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
       <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
-          <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
-            <div class="row flex-grow form-bg1 drag-sort-enable text-dark bg-white">
+          <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg " >
+            <div class={" row flex-grow form-bg1 drag-sort-enable " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
               <div class="col-lg-6 register-half-bg d-flex flex-row">
                 {/* <p class="text-white font-weight-medium text-center flex-grow align-self-end">
                   Copyright &copy; 2021 All rights reserved.
@@ -203,7 +203,7 @@ const Register = () => {
                     }}
 
                   />
-                  <label for="individual" className='dark-mode-text'>
+                  <label for="individual" className={'dark-mode-text ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                     <span></span>Limited Company
                   </label>
 
@@ -257,7 +257,7 @@ const Register = () => {
                         value="userss"
                         onClick={() => { setText(false) }}
                       />
-                      <label for="userss" className="second-lable dark-mode-text">
+                      <label for="userss" className={"second-lable dark-mode-text "+ (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
                         <span></span>Company Registration Number
                       </label>
                       <div className="d-flex mt-5">
@@ -289,10 +289,11 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
-                          <label className="lable-form">Select business*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Select business*</label>
                         </div>
                         <div className="search-input-div search-input-div1">
-                          {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
+                          {/* <input type='se
+                          arch' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
                             class="  search-input"
                             id="exampleFormControlSelect2"
@@ -311,7 +312,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div style={{ paddingRight: '25px' }}>
-                          <label className="lable-form">Select director*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Select director*</label>
                         </div>
                         <div className="search-input-div search-input-div1">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -331,7 +332,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
-                          <div className="register-number"><label className="lable-form">Company registration number</label></div>
+                          <div className="register-number"><label className={"lable-form "  + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Company registration number</label></div>
                         </div>
                         <div className="search-input-div ">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -341,7 +342,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
-                          <div className="register-number">  <label className="lable-form">Registered business address*</label></div>
+                          <div className="register-number">  <label className={"lable-form "  + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address*</label></div>
                         </div>
                         <div className="search-input-div ">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -372,7 +373,7 @@ const Register = () => {
                       {" "}     <br />
                       <div className="d-flex mt-4 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Business name*</label>
+                          <label className={"lable-form" + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business name*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -388,7 +389,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Industry*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Industry*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -408,7 +409,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Number of employees*</label>
+                          <label className={"lable-form "  + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -420,7 +421,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Are you a contractor or freelancer?*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Are you a contractor or freelancer?*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -437,7 +438,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                             What's your expected monthly spend for this
                             account?*
                           </label>
@@ -454,7 +455,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Does your organisation have a website?*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your organisation have a website?*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -471,7 +472,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                             Business name as it should appear on card*
                           </label>
                         </div>
@@ -523,7 +524,7 @@ const Register = () => {
                       <div className="d-flex mt-3 align-items-center">
 
                         <div className=" lables-div">
-                          <label className="lable-form">Business Name*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business Name*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -539,7 +540,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Industry*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Industry*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -560,7 +561,7 @@ const Register = () => {
 
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Number of employees*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -572,7 +573,7 @@ const Register = () => {
                       </div>
                       <div className="d-flex mt-3">
                         <div className=" lables-div">
-                          <label className="lable-form">Business postcode*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business postcode*</label>
                         </div>
                         <div className="search-input-div div-search-input">
                           <div className="d-flex"><input
@@ -613,7 +614,7 @@ const Register = () => {
                           <div>
                             <div className="d-flex mt-3 align-items-center">
                               <div className=" lables-div">
-                                <label className="lable-form">Building No. or name</label>
+                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Building No. or name</label>
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -627,7 +628,7 @@ const Register = () => {
                             </div>
                             <div className="d-flex mt-3 align-items-center">
                               <div className=" lables-div">
-                                <label className="lable-form">House number*</label>
+                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>House number*</label>
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -639,7 +640,7 @@ const Register = () => {
                             </div>
                             <div className="d-flex mt-3 align-items-center">
                               <div className=" lables-div">
-                                <label className="lable-form">Address line*</label>
+                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Address line*</label>
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -651,7 +652,7 @@ const Register = () => {
                             </div>
                             <div className="d-flex mt-3 align-items-center">
                               <div className=" lables-div">
-                                <label className="lable-form">Town / City*</label>
+                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Town / City*</label>
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -667,7 +668,7 @@ const Register = () => {
 
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Are you a contractor or freelancer?*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >Are you a contractor or freelancer?*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -699,7 +700,7 @@ const Register = () => {
                       </div> */}
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                             What's your expected monthly spend for this
                             account?*
                           </label>
@@ -717,7 +718,7 @@ const Register = () => {
 
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">Does your organisation have a website?*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your organisation have a website?*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -735,7 +736,7 @@ const Register = () => {
 
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className="lable-form">
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                             Business name as it should appear on card*
                           </label>
                         </div>
