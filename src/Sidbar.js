@@ -112,9 +112,9 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
           </li> */}
 
           <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}>
-            <a className={"nav-link " + (darkmodes ? "nav-link-dark-a" : "nav-link-light-a")} data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+            <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <BiLineChart />
-              <span className={"menu-title icon_margin " + (darkmodes ? "text-white nav-link-mini-icon-dark" : "text-dark nav-link-mini-icon-light")}>Charts</span>
+              <span className={"menu-title icon_margin " + (darkmodes ? "text-white " : "text-dark ")}>Charts</span>
               <i className="menu-arrow"></i>
             </a>
             <div className="collapse" id="charts">
