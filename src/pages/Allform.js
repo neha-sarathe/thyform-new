@@ -3,6 +3,7 @@ import $ from 'jquery'
 import { FiAlignJustify, FiStar } from "react-icons/fi";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 import { Link } from 'react-router-dom';
+import Dark from '../DarkAuth';
 const Allform = () => {
   // const dropdownRef = useRef(null);
   // const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
@@ -42,6 +43,7 @@ const Allform = () => {
 
   return (
     <>
+    <Dark />
       <div class="wrapper">
 
         <nav id="sidebars">

@@ -82,12 +82,30 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
   });
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
+  const [check, setCheck] = useState(false);
+  const onCheck = ()=>{
+    setCheck(prevCheck => !prevCheck);
+  }
+  console.log('check6666',check)
+  useEffect(() => {
+    // 👇 add class to body element
+    if(check){
+      document.body.classList.add('sidebar-icon-only');
+    }
+    else{
+      document.body.classList.remove('sidebar-icon-only');
+    }
+    
+
+    // 👇️ removing classes from body element
+    // document.body.classList.remove('my-class-3');
+  }, [check]);
   return (
     <>
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
-        <div class={"text-center navbar-brand-wrapper d-flex align-items-center justify-content-start"+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+        <div class={"text-center navbar-brand-wrapper d-flex align-items-center justify-content-start "+ (darkmodes ? "text-white body-dark bg-mini-dark" : "text-dark body-light bg-mini-light")}>
           <div class="me-3">
-            <button class={"navbar-toggler navbar-toggler align-self-center " + (darkmodes ? "text-white " : "text-dark ")} type="button" data-bs-toggle="minimize">
+            <button  onClick={onCheck} class={"navbar-toggler  align-self-center " + (darkmodes ? "text-white " : "text-dark ") + (check ? "sidebar-icon-only " : " ")} type="button"  data-bs-toggle="minimize" >
               <FiAlignJustify />
             </button>
           </div>
@@ -148,9 +166,9 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
                 </span>
                 <input type="text" class="form-control" />
               </div> */}
-              <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+              <div id="datepicker-popup" className={"input-group date datepicker navbar-date-picker "+ (darkmodes ? "navbar-date-picker-dark" : "navbar-date-picker-light")}>
                 <span class="input-group-addon input-group-prepend border-right">
-                  <span class=" input-group-text text-dark "><FaRegCalendarAlt /></span>
+                  <span class={" input-group-text  "+ (darkmodes ? "text-white" : "text-dark")}><FaRegCalendarAlt className={'icondate'+ (darkmodes ? "text-white" : "text-dark")}/></span>
                 </span>
                 <input type="text" class="form-control input_date" />
               </div>

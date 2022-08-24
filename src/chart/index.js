@@ -42,7 +42,8 @@ const  options = {
     position: 'top',
     floating: true,
     verticalAlign: 'bottom',
-    align:'right'
+    align:'right',
+    maarginTop:'20px'
   },
 }
 const series = [{
@@ -131,6 +132,7 @@ const ReactApexChart  = ()=> {
                         left: 0,
                         bottom: 5,
                       }}
+                     
                     >
                       <CartesianGrid vertical={false} />
                       <XAxis
@@ -139,12 +141,17 @@ const ReactApexChart  = ()=> {
                         axisLine={false}
                         tickLine={false}
                         height={20}
+                        tick={{dx: 15}}
+                    
                       />
                       <YAxis axisLine={false} tickCount="4" tickLine={false} />
                       <Legend
                         align="right"
                         verticalAlign="top"
                         iconType="circle"
+                        wrapperStyle={{
+                          paddingBottom: "20px"
+                      }}
                       />
                       <Tooltip />
                       <Area
@@ -156,6 +163,7 @@ const ReactApexChart  = ()=> {
                         fill={'#e1ecfc'}
                         activeDot={true}
                         dot={{ strokeWidth: 3 }}
+                    
                       />
                       <Area
                         type="monotone"

@@ -82,15 +82,15 @@ function App() {
     <>
       {user && window.location.pathname === '/dashboard' || window.location.pathname === "/charts" || window.location.pathname
         === "/morris" ? (
-        <>  <div class={"container-scroller"  + (darkmode ? "text-white body-dark" : "text-dark body-light")}>
+        <>  <div class={"container-scroller" + (darkmode ? "text-white body-dark" : "text-dark body-light")}>
           <div class="container-fluid page-body-wrapper">
             <Router>
-              <Sidbar darkmodes={darkmode} setDarkmodes={setDarkmode}/><Navbar darkmodes={darkmode} setDarkmodes={setDarkmode}/> <Dark darkmodes={darkmode} setDarkmodes={setDarkmode}/>
+              <Sidbar darkmodes={darkmode} setDarkmodes={setDarkmode} /><Navbar darkmodes={darkmode} setDarkmodes={setDarkmode} /> <Dark darkmodes={darkmode} setDarkmodes={setDarkmode} />
               <Routes>
 
-                <Route path="/dashboard" element={<Dashboard darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
-                <Route path="/charts" element={<Charts darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
-                <Route path="/morris" element={<Morris darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
+                <Route path="/dashboard" element={<Dashboard darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+                <Route path="/charts" element={<Charts darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+                <Route path="/morris" element={<Morris darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
                 {/* <Route
                   path="*"
                   element={<Navigate to="/dashboard" replace />}
@@ -101,6 +101,7 @@ function App() {
           </div></div>
         </>
       ) : user && window.location.pathname === '/allform' ? (<Router>
+
         <Routes>
           <Route path='/allform' element={<Allform />} />
         </Routes>
@@ -145,8 +146,8 @@ function App() {
         <Routes>
           {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
-          <Route path="/" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
-          <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} usertoken={user} />} />
 
 
         </Routes> </Router>

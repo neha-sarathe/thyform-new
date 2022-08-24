@@ -260,7 +260,7 @@ const Register = (props) => {
                       <label for="userss" className={"second-lable dark-mode-text "+ (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
                         <span></span>Company Registration Number
                       </label>
-                      <div className="d-flex mt-5">
+                      <div className="d-flex mt-5 pt-3">
                         <div className="search-input-div">
                           <input
                             type="search"
@@ -271,7 +271,7 @@ const Register = (props) => {
                           />
                         </div>
                         <div className="ps-4">
-                          <button type="submit" className="btn-default ">
+                          <button type="submit" className="btn-default pt-2 pb-2">
                             SEARCH &nbsp;  <i class="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                           </button>
                         </div>
@@ -361,7 +361,7 @@ const Register = (props) => {
 
                         </p>
                         <Link
-                          class="btn  auth-form-btn auth-form-btn1"
+                          className={"btn  auth-form-btn auth-form-btn1 "+ (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />
@@ -373,7 +373,7 @@ const Register = (props) => {
                       {" "}     <br />
                       <div className="d-flex mt-4 align-items-center">
                         <div className=" lables-div">
-                          <label className={"lable-form" + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business name*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business name*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -496,7 +496,7 @@ const Register = (props) => {
 
                         </p>
                         <Link
-                          class="btn  auth-form-btn auth-form-btn1"
+                          className={"btn  auth-form-btn auth-form-btn1 "+ (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />
@@ -754,7 +754,7 @@ const Register = (props) => {
 
                       <div class="mt-3 text-end">
                         <Link
-                          class="btn  auth-form-btn auth-form-btn1"
+                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />

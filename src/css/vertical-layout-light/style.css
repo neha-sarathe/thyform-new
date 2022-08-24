@@ -11660,8 +11660,33 @@ textarea.is-invalid.tt-hint {
 .asColorPicker-wrap .form-select.is-invalid:focus {
   z-index: 3;
 }
-
-.btn, .fc button, .ajax-upload-dragdrop .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .swal2-styled, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel, .wizard > .actions a {
+.btn{
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1;
+  
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+ 
+  border: 1px solid transparent;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.3rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+/* .navbar-date-picker{
+background-color: transparent !important;
+}
+.input_date{
+  background-color: transparent !important;
+} */
+/* .navbar-date-picker{
+  background-color: transparent !important;
+  } */
+ .fc button, .ajax-upload-dragdrop .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .swal2-styled, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel, .wizard > .actions a {
   display: inline-block;
   font-weight: 400;
   line-height: 1;
@@ -11685,7 +11710,7 @@ textarea.is-invalid.tt-hint {
   }
 }
 
-.btn:hover, .fc button:hover, .ajax-upload-dragdrop .ajax-file-upload:hover, .swal2-modal .swal2-buttonswrapper .swal2-styled:hover, .wizard > .actions a:hover {
+ .fc button:hover, .ajax-upload-dragdrop .ajax-file-upload:hover, .swal2-modal .swal2-buttonswrapper .swal2-styled:hover, .wizard > .actions a:hover {
   color: #1F1F1F;
 }
 
@@ -31737,7 +31762,7 @@ padding-left: 16px;
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link {
-  color: #484848;
+  /* color: #484848; */
   padding: 0.7rem 1rem;
   position: relative;
   font-size: 12px;
@@ -32380,13 +32405,24 @@ padding-left: 16px;
 }
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item .navbar-date-picker {
-  background: #ffffff;
+  /* background: #ffffff; */
   font-family: "Manrope", sans-serif;
   height: 36px;
-  border: 1px solid #DFDFDF;
+ 
   border-radius: 6px;
 }
-
+.navbar-date-picker-dark{
+  background: #000;
+  border: 1px solid #DFDFDF;
+}
+.navbar-date-picker-light{
+  background: #ffffff;
+  border: 1px solid #000;
+}
+.navbar-date-picker-dark .input_date{
+  background-color: transparent !important;
+  color:white !important;
+}
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item .navbar-date-picker .calendar-icon {
   color: #000000;
   font-size: 12px;
@@ -33643,6 +33679,14 @@ padding-left: 16px;
   .sidebar-icon-only .navbar .navbar-brand-wrapper {
     width: 70px;
     padding-left: 1.625rem;
+    /* background: #fff; */
+  }
+  .sidebar-icon-only .navbar .bg-mini-dark{
+
+    background: #000;
+  }
+  .sidebar-icon-only .navbar .bg-mini-light{
+
     background: #fff;
   }
   .sidebar-dark.sidebar-icon-only .navbar .navbar-brand-wrapper .navbar-toggler {
@@ -33659,6 +33703,14 @@ padding-left: 16px;
   }
   .sidebar-icon-only .sidebar {
     width: 70px;
+    /* background: #fff; */
+  }
+  .sidebar-icon-only   .sidebar-bg-mini-dark{
+
+    background: #000;
+  }
+  .sidebar-icon-only  .sidebar-bg-mini-light{
+
     background: #fff;
   }
   .sidebar-icon-only .sidebar .nav {
@@ -33676,6 +33728,12 @@ padding-left: 16px;
     text-align: center;
     position: static;
   }
+  .sidebar-icon-only .sidebar .nav .nav-item .nav-link-mini-icon-dark {
+  color: white;
+  }
+  .sidebar-icon-only .sidebar .nav .nav-item .nav-link-mini-icon-light {
+    color: black;
+    }
   .sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item .nav-link {
     color: #484848;
   }
@@ -33824,7 +33882,15 @@ padding-left: 16px;
     width: 100%;
   }
 }
-
+.sidebar-new {
+  position: absolute;
+  top: 60px;
+  left: -15vw;
+  height: 100%;
+  width: 15vw;
+  transition: left 0.3s ease-in-out;
+  background-color: lightgray;
+}
 @media (min-width: 992px) {
   .sidebar-absolute .page-body-wrapper {
     position: relative;

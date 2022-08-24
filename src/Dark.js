@@ -117,13 +117,16 @@ const Dark = ({ darkmodes, setDarkmodes }) => {
     //     "title": "Brown"
     //   });
     // });
-    $('[data-bs-toggle="minimize"]').on("click", function () {
-      if (($("#root").hasClass('sidebar-toggle-display')) || ($("#root").hasClass('sidebar-absolute'))) {
-        $("#root").toggleClass('sidebar-hidden');
-      } else {
-        $("#root").toggleClass('sidebar-icon-only');
-      }
-    });
+    // $('[data-bs-toggle="minimize"]').on("click", function () {
+    //   if (($("#root").hasClass('sidebar-toggle-display')) || ($("#root").hasClass('sidebar-absolute'))) {
+    //     $("#root").removeClass("sidebar-icon-only");
+    //     $("#root").addClass('sidebar-hidden');
+    //   } else {
+    //     $("#root").removeClass('sidebar-hidden');
+    //     $("#root").addClass('sidebar-icon-only');
+    //   }
+    // });
+ 
     // container-scroller
     // $(".color-theme.primary").on("click", function () {
     //   $(".navbar").removeClass(navbar_classes);

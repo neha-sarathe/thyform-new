@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Phone } from './jotform/Phone';
 import $ from 'jquery'
+import Dark from '../DarkAuth';
 export const JotformNav = ({checked,setChecked}) => {
   let navigate = useNavigate();
   // const routeChange = () =>{ 
@@ -30,7 +31,7 @@ export const JotformNav = ({checked,setChecked}) => {
 
   return (
     <>
-
+<Dark />
       <div className='row jotlist justify-content-around'>
         <div className='col-md-1 col-sm-1 col-xs-1 col-lg-1 mt-3'>
           <a class="navbar-brand brand-logo" href="/dashboard">

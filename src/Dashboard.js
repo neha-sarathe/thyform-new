@@ -99,6 +99,7 @@ const bar_data = [
 
 export const Dashboard = (props) => {
   console.log(props.theme, 'theme123456');
+  
   const [seriesData, setSeriesData] = useState([{
     name: 'Net Profit',
     data: [18, 25, 39, 11, 24]
