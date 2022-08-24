@@ -32412,11 +32412,11 @@ padding-left: 16px;
   border-radius: 6px;
 }
 .navbar-date-picker-dark{
-  background: #000;
+  background: transparent;
   border: 1px solid #DFDFDF;
 }
 .navbar-date-picker-light{
-  background: #ffffff;
+  background: transparent;
   border: 1px solid #000;
 }
 .navbar-date-picker-dark .input_date{
