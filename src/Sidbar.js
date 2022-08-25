@@ -17,10 +17,10 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
 
       <nav className={"sidebar sidebar-offcanvas " + (darkmodes ? "sidebar-bg-mini-dark" : "sidebar-bg-mini-light")} id="sidebar">
         <ul className="nav">
-          <li class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHovering ? "hover-open" : "")}  onMouseOver={handleMouseOver}
+          <li class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") }  onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}>
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
-              <RiLayoutGridLine className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} />
+              <RiLayoutGridLine className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")+ (isHovering ? "hover-open" : "")} />
               <span className={"menu-title " + (darkmodes ? "text-white " : "text-dark ")}>Dashboard</span>
               <i className="menu-arrow "></i>
             </a>
@@ -120,10 +120,10 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
             </div>
           </li> */}
 
-          <li class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHovering ? "hover-open" : "") }  onMouseOver={handleMouseOver}
+          <li class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ")  }  onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}>
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <BiLineChart />
+              <BiLineChart className={isHovering ? "hover-open" : ""}/>
               <span className={"menu-title icon_margin " + (darkmodes ? "text-white " : "text-dark ")}>Charts</span>
               <i className="menu-arrow"></i>
             </a>
