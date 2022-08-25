@@ -6,15 +6,15 @@ import React, { useEffect } from 'react'
 // import Mobile_icon from '../../images/Mobile_icon.svg'
 // import Sa_accordian from '../../images/Sa_accordian.svg'
 import SettingSidebar from './SettingSidebar';
-const Setting_email = () => {
+const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
 
   return (
     <>
-      <SettingSidebar />
+      <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled}/>
 
       {/* Setting_email page */}
 
-      <main className="page-content">
+      <main className={"page-content "+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
         <div className="container">
           <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
@@ -35,7 +35,7 @@ const Setting_email = () => {
               {/* direct link div end */}
               {/* form div start*/}
               <div className="accordion" id="accordionExample">
-                <div className="accordion-item standard">
+                <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                   <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
                     <div className="accordion-header" id="headingOne">
                       <button className="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

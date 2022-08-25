@@ -4,7 +4,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import Navform from './Navform';
 import SettingSidebar from './SettingSidebar';
 
-const Thankyoupage = () => {
+const Thankyoupage = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
   const [radio, setRadio] = useState("Limited");
   const [show, setShow] = useState(false);
   const [text, setText] = useState(true)
@@ -15,9 +15,9 @@ const Thankyoupage = () => {
   return (
     <>
       <div>
-        <SettingSidebar />
+        <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled}/>
       </div>
-      <div class="container-fluid setting-form setting_form_ml">
+      <div class={"container setting-form setting_form_ml "+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
         <div className="form-setting-div">
           {" "}
           <div>
@@ -31,7 +31,7 @@ const Thankyoupage = () => {
             <p className="form-setting-p">Choose an Action After Submission:</p>
           </div>
         </div>
-        <div className='row d-flex '><div className='col-6'><div className='thankyou-radio'>
+        <div className='row d-flex '><div className='col-6'><div className={'thankyou-radio '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
           <input
             id="individual"
             checked={radio === "Limited"}
@@ -46,7 +46,7 @@ const Thankyoupage = () => {
             <span></span>Limited Company
           </label>
 
-        </div></div><div className='col-6'><div className='thankyou-radio'>
+        </div></div><div className='col-6'><div className={'thankyou-radio '+ (darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white ")}>
           <input
             id="organization"
             type="radio"
@@ -57,7 +57,7 @@ const Thankyoupage = () => {
               handleRadio("Sole");
             }}
           />
-          <label for="organization" className="second-lable">
+          <label for="organization" >
             <span></span>Sole Trader
           </label></div></div></div>
         <hr />

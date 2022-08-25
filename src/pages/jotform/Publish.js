@@ -4,7 +4,7 @@ import { FiSettings } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import PublishSidebar from './PublishSidebar';
 
-const Publish = () => {
+const Publish = ({darkmodes,setDarkmodes }) => {
   useEffect(() => {
     $(".sidebar-dropdown > a").click(function () {
       $(".sidebar-submenu").slideUp(200);
@@ -28,25 +28,25 @@ const Publish = () => {
       }
     });
 
-    $("#close-sidebar").click(function () {
-      $(".page-wrapper").removeClass("toggled");
-    });
-    $("#show-sidebar").click(function () {
-      $(".page-wrapper").addClass("toggled");
-    });
+    // $("#close-sidebar").click(function () {
+    //   $(".page-wrapper").removeClass("toggled");
+    // });
+    // $("#show-sidebar").click(function () {
+    //   $(".page-wrapper").addClass("toggled");
+    // });
 
   }, [])
 
   return (
     <>
-      <PublishSidebar />
+      <PublishSidebar  darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
       <main>
         <div className="page-wrapper chiller-theme toggled ">
           <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
             <i className="fas fa-bars"></i>
           </a>
 
-          <main className="page-content">
+          <main className={"page-content " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
             {/* <Settingform /> */}
             {/* <Thankyoupage /> */}
             {/* main container */}
@@ -78,7 +78,7 @@ const Publish = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="94.1" y1="161.9" x2="161.9" y2="94" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><path d="M145,178.9l-28.3,28.3a48,48,0,0,1-67.9-67.9L77.1,111" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path><path d="M178.9,145l28.3-28.3a48,48,0,0,0-67.9-67.9L111,77.1" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path></svg>
                       </li>
                       <li className='fs-6 text-black mt-5  map'>
-                        <h5 className='fs-8 heading_5'>DIRECT LINK OF YOUR FORM</h5>
+                        <h5 className={'fs-8 heading_5 ' + (darkmodes ? "text-white" : "text-dark ")}>DIRECT LINK OF YOUR FORM</h5>
                         <p className='paragraph '>Your form is securely published and ready to use at this address.</p>
                       </li>
                     </div>
@@ -86,12 +86,12 @@ const Publish = () => {
                   {/* direct link div end */}
                   {/* form div start*/}
 
-                  <form className='bg-white shadow-sm p-4 rounded-1'>
+                  <form className={'shadow-sm p-4 rounded-1 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between'>
                         <div className='d-flex '>
                           <li className='link'>
-                            <h6 className='fw-Semibold text-black mt-1'>LINK TO SHARE</h6>
+                            <h6 className={'fw-Semibold  mt-1 ' + (darkmodes ? "text-white " : "text-dark ")}>LINK TO SHARE</h6>
                           </li>
                           <li>
                             <ul className='d-flex border border-success border-1 rounded-pill border_width '>
@@ -115,7 +115,7 @@ const Publish = () => {
                         <input type="text" id="disabledTextInput" class="form-control" placeholder="https://www.jotform.com/build/221860994544061/publish" />
                       </div>
                       <div className="d-flex justify-content-end border_details">
-                        <button className='bg-success rounded-3 border-white py-2 px-3 text-white'>
+                        <button className='bg-success rounded-3 border-white py-2 px-3 text-white me-3'>
                           COPY LINK
                         </button>
                         <button className='bg-primary rounded-3 border-white py-2 px-3 text-white'>
@@ -126,7 +126,7 @@ const Publish = () => {
                       <div className='d-flex align-items-center justify-content-start mt-5'>
                         <div className='d-flex '>
                           <li className='link'>
-                            <h6 className='fw-Semibold text-black mt-1'>INVITE BY EMAIL </h6>
+                            <h6 className={'fw-Semibold text-black mt-1 ' + (darkmodes ? "text-white " : "text-dark ")}>INVITE BY EMAIL </h6>
                           </li>
                           <li>
                             <svg xmlns="http://www.w3.org/2000/svg" className='bg-white shadow-sm rounded-circle' width="16" height="16" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M207.4,115.1A8,8,0,0,1,200,120H136v96a8,8,0,0,1-16,0V120H56a8,8,0,0,1-7.4-4.9,8.4,8.4,0,0,1,1.7-8.8l72-72a8.1,8.1,0,0,1,11.4,0l72,72A8.4,8.4,0,0,1,207.4,115.1Z"></path></svg>
@@ -148,7 +148,7 @@ const Publish = () => {
                   {/* form div end */}
 
                   {/* two blocks div start*/}
-                  <div className='bg-white p-4 mt-4 rounded-1'>
+                  <div className={' p-4 mt-4 rounded-1 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <div className='d-flex align-items-center justify-content-between '>
                       <li>
                         <h6 className='fw-bold'>SHARE FORM</h6>
@@ -162,7 +162,7 @@ const Publish = () => {
                     </div>
                   </div>
                   {/* 2nd block div */}
-                  <div className='bg-white p-4 mt-4 rounded-1'>
+                  <div className={' p-4 mt-4 rounded-1 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <div className='d-flex align-items-center justify-content-between '>
                       <li>
                         <h6 className='fw-bold'>CREATE APP</h6>

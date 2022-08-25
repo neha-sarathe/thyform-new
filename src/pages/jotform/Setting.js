@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import Settingform from './Settingform';
 import condition_icon from '../../images/contion_icon.svg';
 import Mobile_icon from '../../images/Mobile_icon.svg'
-const Setting = () => {
+const Setting = ({darkmodes,setDarkmodes,jottoggled, setJottoggled}) => {
+  console.log("jottoggledqd", jottoggled)
   useEffect(() => {
     $(".sidebar-dropdown > a").click(function () {
       $(".sidebar-submenu").slideUp(200);
@@ -29,12 +30,12 @@ const Setting = () => {
       }
     });
 
-    $("#close-sidebar").click(function () {
-      $(".page-wrapper").removeClass("toggled");
-    });
-    $("#show-sidebar").click(function () {
-      $(".page-wrapper").addClass("toggled");
-    });
+    // $("#close-sidebar").click(function () {
+    //   $(".page-wrapper").removeClass("toggled");
+    // });
+    // $("#show-sidebar").click(function () {
+    //   $(".page-wrapper").addClass("toggled");
+    // });
 
   }, [])
 
@@ -226,9 +227,9 @@ const Setting = () => {
           </li> */}
 
 
-      <main class="page-content">
+      <main className={"page-content "+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
 
-        <Settingform />
+        <Settingform darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled1={jottoggled} setJottoggled1={setJottoggled}/>
 
       </main>
 

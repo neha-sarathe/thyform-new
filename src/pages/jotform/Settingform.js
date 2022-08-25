@@ -4,15 +4,16 @@ import condition_icon from '../../images/contion_icon.svg';
 import Mobile_icon from '../../images/Mobile_icon.svg'
 import SettingSidebar from "./SettingSidebar";
 
-const Settingform = () => {
+const Settingform = ({darkmodes,setDarkmodes,jottoggled, setJottoggled}) => {
+  console.log("jottoggledq", jottoggled)
   return (
     <>
 
-      <SettingSidebar />
+      <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled}/>
 
       {/*center content */}
 
-      <div class="container-fluid setting-form setting_form_ml">
+      <div class={"container-fluid setting-form  "+ (darkmodes ? "text-white body-dark " : "text-dark body-light ") +(jottoggled ? "" : "setting_form_ml") }>
         <div className="form-setting-div">
           {" "}
           <div>
@@ -25,7 +26,7 @@ const Settingform = () => {
             <p className="form-setting-p">Change form status and properties.</p>
           </div>
         </div>
-        <div className="form-setting-main-div">
+        <div className={"form-setting-main-div " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
 
           <div class="row mainsetting-div">
             <div class="form-group col-md-12 mt-3">

@@ -36,13 +36,16 @@
     position: fixed;
     z-index: 1;
 	// background: linear-gradient(270deg,#ff6100,#ffb841 99.97%);
+
+}
+.jotlist-light{
   background: linear-gradient(270deg,#1F3BB3,#2e69ff 99.97%);
 }
 .jot-link {
 	padding: 1rem 2rem 1.15rem;
   text-transform: uppercase;
   cursor: pointer;
-  color: #fff;
+  // color: #fff;
 	min-width: 20px;
   font-size: 17px;
 }
@@ -59,13 +62,31 @@
   background-size:  100%;
   color: #000000;
   animation: spring 300ms ease-out;
-  text-shadow: 0 -1px 0 #ef816c;
-	font-weight: bold;
+  // text-shadow: 0 -1px 0 #ef816c;
+	// font-weight: bold;
 }
-.jot-link:active {
-  transform: translateY(4px);
+.sidebar-link-jot ul:focus{
+  background-color: #ffffff !important;
+  color: #000000;
 }
+// .jot-link:active {
+//   transform: translateY(4px);
+// }
+.jotlink-a{
+  // background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
 
+  color:#ffffff ;
+}
+.jotlink-a:focus {
+  // background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-color:#ffffff !important;
+  background-size:100%;
+  color:black ;
+}
+.jotlink-a li:focus {
+
+  color:black !important;
+}
 @keyframes spring {
   15% {
     -webkit-transform-origin: center center;

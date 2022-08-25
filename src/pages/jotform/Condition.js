@@ -10,7 +10,7 @@ import dropdown from '../../images/dropdown.svg';
 import Option from './Option';
 import SettingSidebar from './SettingSidebar';
 import { FaCalculator, FaStarOfLife, FaShare, FaCheckCircle, FaEnvelope } from "react-icons/fa";
-const Condition = () => {
+const Condition = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
   {/* useEffect(() => {
     $(".sidebar-dropdown > a").click(function () {
       $(".sidebar-submenu").slideUp(200);
@@ -45,9 +45,9 @@ const Condition = () => {
 */}
   return (
     <>
-      <SettingSidebar />
+      <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled}/>
       {/* Condition page */}
-      <main className="page-content">
+      <main className={"page-content "+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
         <div className="container ">
           <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
@@ -61,15 +61,15 @@ const Condition = () => {
 
                   </li>
                   <li className='fs-6 text-black mt-5 pb-2 map'>
-                    <h5 className='fs-8 heading_5 remider' >NEW CONDITION</h5>
-                    <p className='paragraph '>Select a suitable condition type below to add a new condition.</p>
+                    <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white" : "text-dark ")} >NEW CONDITION</h5>
+                    <p className={'paragraph '+ (darkmodes ? "text-white" : "text-dark ")}>Select a suitable condition type below to add a new condition.</p>
                   </li>
                 </div>
               </div>
               {/* direct link div end */}
               {/* form div start*/}
               <div className="accordion" id="accordionExample">
-                <div className="accordion-item standard">
+                <div className={"accordion-item standard "+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>
@@ -94,7 +94,7 @@ const Condition = () => {
               </div>
               {/* second card start */}
               <div className="accordion mt-3" id="accordionExample">
-                <div className="accordion-item standard">
+                <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                   <div className='d-flex Main_bg justify-content-between align-items-center px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>
@@ -122,7 +122,7 @@ const Condition = () => {
               </div>
               {/* second card end */}
               <div className="accordion mt-3" id="accordionExample">
-                <div className="accordion-item standard">
+                <div className={"accordion-item standard "+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>
@@ -146,7 +146,7 @@ const Condition = () => {
                 </div>
               </div>
               <div className="accordion mt-3" id="accordionExample">
-                <div className="accordion-item standard">
+                <div className={"accordion-item standard "+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>
@@ -170,7 +170,7 @@ const Condition = () => {
                 </div>
               </div>
               <div className="accordion mt-3" id="accordionExample">
-                <div className="accordion-item standard">
+                <div className={"accordion-item standard "+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>
@@ -194,7 +194,7 @@ const Condition = () => {
                 </div>
               </div>
               <div className="accordion mt-3" id="accordionExample">
-                <div className="accordion-item standard">
+                <div className={"accordion-item standard "+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                   <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                     <div className="accordion-header" id="headingOne">
                       <div className=''>

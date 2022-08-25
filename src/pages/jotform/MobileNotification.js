@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SettingSidebar from "./SettingSidebar";
 import { Editor } from "@tinymce/tinymce-react";
-const MobileNotification = () => {
+const MobileNotification = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
     const [content, setState] = useState();
 
     const handleChange = (content, editor) => {
@@ -15,8 +15,8 @@ const MobileNotification = () => {
 
     return (
         <>
-            <SettingSidebar />
-            <main className="page-content">
+            <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled}/>
+            <main className={"page-content "+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
                 <div className="container">
                     <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}
@@ -43,8 +43,8 @@ const MobileNotification = () => {
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
                                     </li>
                                     <li className='fs-6 text-black mt-5 pb-2 map'>
-                                        <h5 className='fs-8 heading_5 remider' >MOBILE NOTIFICATION</h5>
-                                        <p className='paragraph '>Customize your app notifications.</p>
+                                        <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white" : "text-dark ")} >MOBILE NOTIFICATION</h5>
+                                        <p className={'paragraph '+ (darkmodes ? "text-white" : "text-dark ")}>Customize your app notifications.</p>
                                     </li>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ const MobileNotification = () => {
                                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         {/* first man div start  */}
                                         <div className=''>
-                                            <form className='bg-white shadow-sm  rounded-1 p-3 position-relative'>
+                                            <form className={'shadow-sm  rounded-1 p-3 position-relative '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                                                 <fieldset>
                                                     <div className='d-flex align-items-center justify-content-between '>
                                                         <div className='main_w'>
@@ -67,8 +67,8 @@ const MobileNotification = () => {
                                                                 </li>
                                                                  */}
                                                                 <li className='fs-6 text-black map'>
-                                                                    <h6 className='fw-bold heading_5 remider'>Turn on notifications</h6>
-                                                                    <p className='paragraph remider'>Enable mobile app notifications for this form.</p>
+                                                                    <h6 className={'fw-bold heading_5 remider '+ (darkmodes ? "text-white" : "text-dark ")}>Turn on notifications</h6>
+                                                                    <p className={'paragraph remider '+ (darkmodes ? "text-white" : "text-dark ")}>Enable mobile app notifications for this form.</p>
                                                                 </li>
                                                             </div>
                                                         </div>
@@ -104,8 +104,8 @@ const MobileNotification = () => {
                                                                 </li>
 
                                                                 <li className='fs-6 text-black map'>
-                                                                    <h5 className='fs-7 fw-bold heading_5 remider'>EDIT NOTIFICATION TEXT</h5>
-                                                                    <p className='paragraph remider'>Customize the content for your mobile app notifications.</p>
+                                                                    <h5 className={'fs-7 fw-bold heading_5 remider '+ (darkmodes ? "text-white" : "text-dark ")}>EDIT NOTIFICATION TEXT</h5>
+                                                                    <p className={'paragraph remider '+ (darkmodes ? "text-white" : "text-dark ")}>Customize the content for your mobile app notifications.</p>
                                                                 </li>
                                                             </div>
                                                         </div>

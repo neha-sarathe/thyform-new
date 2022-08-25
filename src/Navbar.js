@@ -176,7 +176,7 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
             </li>
             <li class="nav-item d-none d-lg-block">
               <div id="create-form" class="create-form">
-                <button className='create-form-btn'><a href='/jotform' class="">Create Form</a></button>
+               <a href='/jotform' class=""> <button className='create-form-btn'>Create Form</button></a>
               </div>
             </li>
             <li class="nav-item">

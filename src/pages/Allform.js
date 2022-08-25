@@ -4,7 +4,7 @@ import { FiAlignJustify, FiStar } from "react-icons/fi";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 import { Link } from 'react-router-dom';
 import Dark from '../DarkAuth';
-const Allform = () => {
+const Allform = ({darkmodes,setDarkmodes}) => {
   // const dropdownRef = useRef(null);
   // const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   // const onClick = () => setIsActive(!isActive);
@@ -43,13 +43,13 @@ const Allform = () => {
 
   return (
     <>
-    <Dark />
+    <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
       <div class="wrapper">
 
-        <nav id="sidebars">
-          <div class="sidebar-header">
+        <nav id="sidebars" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
+          <div class={"sidebar-header "+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
             <div className='allform-logo-div'>
-              <a class="navbar-brand brand-logo" href="/">
+              <a class="navbar-brand brand-logo" href="/dashboard">
                 <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
               </a>
             </div>
@@ -59,7 +59,7 @@ const Allform = () => {
             <h4 className='side-head'>MY FORMS</h4>
             <hr></hr>
             <li>
-              <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <button type="button" class={"btn "+ (darkmodes ? "text-white" : "text-dark ")} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 All Forms
               </button>
               {/* <Link to='/allform' class="">All Forms</Link> */}
@@ -174,10 +174,10 @@ const Allform = () => {
             </ul> */}
         </nav>
 
-        <div id="content">
+        <div id="content"  className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
 
-          <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0">
-            <div class="container-fluid bg-primary ps-1">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0 pb-0">
+            <div class={"container-fluid  ps-1 " + (darkmodes ? "text-white body-dark" : "text-dark bg-primary")}>
 
               <button type="button" id="sidebarCollapse" class="btn btn-info">
                 <FiAlignJustify />
@@ -610,7 +610,7 @@ const Allform = () => {
           </div> */}
 
 
-          <div class="line"></div>
+          {/* <div class="line"></div> */}
 
           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
