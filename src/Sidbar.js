@@ -1,15 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 // import Charts from './Charts';
 import { BiLineChart } from "react-icons/bi";
 import { RiLayoutGridLine } from "react-icons/ri";
 export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
   return (
     <>
 
       <nav className={"sidebar sidebar-offcanvas " + (darkmodes ? "sidebar-bg-mini-dark" : "sidebar-bg-mini-light")} id="sidebar">
         <ul className="nav">
-          <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}>
+          <li class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHovering ? "hover-open" : "")}  onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}>
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
               <RiLayoutGridLine className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} />
               <span className={"menu-title " + (darkmodes ? "text-white " : "text-dark ")}>Dashboard</span>
@@ -17,7 +26,7 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
             </a>
             <div className="collapse" id="dashboards">
               <ul class={"nav flex-column sub-menu " + (darkmodes ? "sub-menu-dark " : "sub-menu-light ")}>
-                <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}> <Link class={"nav-link " + (darkmodes ? "nav-link-dark-a" : "nav-link-light-a")} to="/dashboard">Default</Link></li>
+                <li class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ")}> <Link class={"nav-link " + (darkmodes ? "nav-link-dark-a" : "nav-link-light-a")} to="/dashboard">Default</Link></li>
                 {/* <li class="nav-item"> <a class="nav-link" href="pages/dashboards/crm.html">CRM</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/purple.html">Purple</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/dashboards/purple-dark.html">Purple Dark</a></li>
@@ -111,7 +120,8 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
             </div>
           </li> */}
 
-          <li class={"nav-item " + (darkmodes ? "nav-item-dark" : "nav-item-light")}>
+          <li class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHovering ? "hover-open" : "") }  onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}>
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <BiLineChart />
               <span className={"menu-title icon_margin " + (darkmodes ? "text-white " : "text-dark ")}>Charts</span>
