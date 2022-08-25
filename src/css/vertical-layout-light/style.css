@@ -32477,7 +32477,7 @@ padding-left: 16px;
   left: 0;
   top: 60%;
   transform: translateY(-50%);
-  color: #212121;
+  /* color: #212121; */
 }
 
 .rtl .navbar .navbar-menu-wrapper .navbar-nav .nav-item .search-form i {

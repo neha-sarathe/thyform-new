@@ -181,13 +181,13 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
             </li>
             <li class="nav-item">
               <form class="search-form" action="#">
-                <i class="icon-search"></i>
+                <i class={"icon-search "+ (darkmodes ? "text-white" : "text-dark")}></i>
                 <input type="search" class="form-control" placeholder="Search Here" title="Search here" />
               </form>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                <i class="icon-mail icon-lg"></i>
+                <i class={"icon-mail icon-lg "+ (darkmodes ? "text-white" : "text-dark")}></i>
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
                 <a class="dropdown-item py-3 border-bottom">
@@ -225,7 +225,7 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="icon-bell"></i>
+                <i className={"icon-bell "+ (darkmodes ? "text-white" : "text-dark")}></i>
                 <span class="count"></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
