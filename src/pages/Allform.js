@@ -49,7 +49,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
         <nav id="sidebars" className={darkmodes ? "text-white body-dark border-end" : "text-dark body-light border-end"}>
           <div class={"sidebar-header "+ (darkmodes ? "text-white body-dark border-bottom" : "text-dark body-light border-bottom")}>
             <div className='allform-logo-div'>
-              <a class="navbar-brand brand-logo" href="/dashboard">
+              <a class="navbar-brand brand-logo" href="#">
                 <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
               </a>
             </div>

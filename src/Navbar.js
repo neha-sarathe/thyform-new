@@ -7,7 +7,7 @@ import $ from "jquery";
 import { FiAlignJustify } from "react-icons/fi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-export const Navbar = ({darkmodes,setDarkmodes}) => {
+export const Navbar = ({ darkmodes, setDarkmodes }) => {
   $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
       $('#sidebars').toggleClass('active');
@@ -83,19 +83,19 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
   const [check, setCheck] = useState(false);
-  const onCheck = ()=>{
+  const onCheck = () => {
     setCheck(prevCheck => !prevCheck);
   }
-  console.log('check6666',check)
+  console.log('check6666', check)
   useEffect(() => {
     // 👇 add class to body element
-    if(check){
+    if (check) {
       document.body.classList.add('sidebar-icon-only');
     }
-    else{
+    else {
       document.body.classList.remove('sidebar-icon-only');
     }
-    
+
 
     // 👇️ removing classes from body element
     // document.body.classList.remove('my-class-3');
@@ -103,9 +103,9 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
   return (
     <>
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
-        <div class={"text-center navbar-brand-wrapper d-flex align-items-center justify-content-start "+ (darkmodes ? "text-white body-dark bg-mini-dark" : "text-dark body-light bg-mini-light")}>
+        <div class={"text-center navbar-brand-wrapper d-flex align-items-center justify-content-start " + (darkmodes ? "text-white body-dark bg-mini-dark" : "text-dark body-light bg-mini-light")}>
           <div class="me-3">
-            <button  onClick={onCheck} class={"navbar-toggler  align-self-center " + (darkmodes ? "text-white " : "text-dark ") + (check ? "sidebar-icon-only " : " ")} type="button"  data-bs-toggle="minimize" >
+            <button onClick={onCheck} class={"navbar-toggler  align-self-center " + (darkmodes ? "text-white " : "text-dark ") + (check ? "sidebar-icon-only " : " ")} type="button" data-bs-toggle="minimize" >
               <FiAlignJustify />
             </button>
           </div>
@@ -121,8 +121,8 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
         <div class={"navbar-menu-wrapper d-flex align-items-top " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
           <ul class="p-0">
             <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-              <h3 class="welcome-text">Good Morning, <span class="text-black fw-bold">John Doe</span></h3>
-              <h6 class="welcome-sub-text">Your performance summary this week </h6>
+              <h3 class="welcome-text" style={{ color: '#808191' }}>Good Morning, <span class={"text-black fw-bold " + (darkmodes ? "text-white " : "text-dark ")}>John Doe</span></h3>
+              <h6 class="welcome-sub-text" style={{ color: '#808191' }}>Your performance summary this week </h6>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
@@ -166,9 +166,9 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
                 </span>
                 <input type="text" class="form-control" />
               </div> */}
-              <div id="datepicker-popup" className={"input-group date datepicker navbar-date-picker "+ (darkmodes ? "navbar-date-picker-dark" : "navbar-date-picker-light")}>
+              <div id="datepicker-popup" className={"input-group date datepicker navbar-date-picker " + (darkmodes ? "navbar-date-picker-dark" : "navbar-date-picker-light")}>
                 <span class="input-group-addon input-group-prepend border-right">
-                  <span class={" input-group-text  "+ (darkmodes ? "text-white" : "text-dark")}><FaRegCalendarAlt className={'icondate'+ (darkmodes ? "text-white" : "text-dark")}/></span>
+                  <span class={" input-group-text  " + (darkmodes ? "text-white" : "text-dark")}><FaRegCalendarAlt className={'icondate' + (darkmodes ? "text-white" : "text-dark")} /></span>
                 </span>
                 <input type="text" class="form-control input_date" />
               </div>
@@ -176,18 +176,18 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
             </li>
             <li class="nav-item d-none d-lg-block">
               <div id="create-form" class="create-form">
-               <a href='/jotform' class=""> <button className='create-form-btn'>Create Form</button></a>
+                <a href='/jotform' class=""> <button className='create-form-btn'>Create Form</button></a>
               </div>
             </li>
             <li class="nav-item">
               <form class="search-form" action="#">
-                <i class={"icon-search "+ (darkmodes ? "text-white" : "text-dark")}></i>
+                <i class={"icon-search " + (darkmodes ? "text-white" : "text-dark")}></i>
                 <input type="search" class="form-control" placeholder="Search Here" title="Search here" />
               </form>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                <i class={"icon-mail icon-lg "+ (darkmodes ? "text-white" : "text-dark")}></i>
+                <i class={"icon-mail icon-lg " + (darkmodes ? "text-white" : "text-dark")}></i>
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
                 <a class="dropdown-item py-3 border-bottom">
@@ -225,7 +225,7 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <i className={"icon-bell "+ (darkmodes ? "text-white" : "text-dark")}></i>
+                <i className={"icon-bell " + (darkmodes ? "text-white" : "text-dark")}></i>
                 <span class="count"></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
@@ -281,7 +281,7 @@ export const Navbar = ({darkmodes,setDarkmodes}) => {
             </li>
           </ul>
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
-          <FiAlignJustify />
+            <FiAlignJustify />
           </button>
         </div>
       </nav></>

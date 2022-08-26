@@ -312,7 +312,7 @@ const Dark = ({ darkmodes, setDarkmodes }) => {
     <>
       <div class="theme-setting-wrapper">
         <div id="settings-trigger"><FiSettings class="text-white" /></div>
-        <div id="theme-settings" class="settings-panel">
+        <div id="theme-settings" className={"settings-panel "+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
           <i class="settings-close ti-close"></i>
           <p class="settings-heading">SIDEBAR SKINS</p>
           <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
