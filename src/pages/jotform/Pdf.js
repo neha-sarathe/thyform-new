@@ -4,7 +4,7 @@ import { FiSettings } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import PublishSidebar from './PublishSidebar';
 
-const Pdf = () => {
+const Pdf = ({darkmodes,setDarkmodes }) => {
   useEffect(() => {
     $(".sidebar-dropdown > a").click(function () {
       $(".sidebar-submenu").slideUp(200);
@@ -39,14 +39,14 @@ const Pdf = () => {
 
   return (
     <>
-      <PublishSidebar />
+      <PublishSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
       <main>
         <div className="page-wrapper chiller-theme toggled ">
           <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
             <i className="fas fa-bars"></i>
           </a>
 
-          <main className="page-content">
+          <main className={"page-content " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
             {/* <Settingform /> */}
             {/* <Thankyoupage /> */}
             {/* main container */}
@@ -78,7 +78,7 @@ const Pdf = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M64,160H48a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0v-8h8a24,24,0,0,0,0-48Zm0,32H56V176h8a8,8,0,0,1,0,16Zm132-16v12h16a8,8,0,0,1,0,16H196v12a8,8,0,0,1-16,0V168a8,8,0,0,1,8-8h28a8,8,0,0,1,0,16Zm-68-16H114a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h14a32,32,0,0,0,0-64Zm0,48h-6V176h6a16,16,0,0,1,0,32ZM48,136H208a8,8,0,0,0,8-8V88a8.1,8.1,0,0,0-2.3-5.7l-56-56A8.1,8.1,0,0,0,152,24H56A16,16,0,0,0,40,40v88A8,8,0,0,0,48,136ZM152,44l44,44H152Z"></path></svg>
                       </li>
                       <li className='fs-6 text-black mt-5 pb-2 map'>
-                        <h5 className='fs-8 heading_5 remider' >PDF</h5>
+                        <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")} >PDF</h5>
                         <p className='paragraph '>Download fillable PDF.</p>
                       </li>
                     </div>
@@ -86,13 +86,13 @@ const Pdf = () => {
                   {/* direct link div end */}
                   {/* form div start*/}
 
-                  <form className='bg-white shadow-sm  rounded-1 p-3 '>
+                  <form className={'shadow-sm  rounded-1 p-3 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between'>
                         <div className='main_w'>
                           <div className=' underline d-flex align-items-center '>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>DOWNLOAD PDF</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>DOWNLOAD PDF</h5>
                               <p className='paragraph '>Download fillable version of your form in PDF</p>
                             </li>
                           </div>

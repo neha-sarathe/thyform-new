@@ -110,11 +110,11 @@ function App() {
 
       ) : window.location.pathname === "/jotform"
         || window.location.pathname === "/publish" || window.location.pathname === "/setting" || window.location.pathname
-        === "/Newform" || window.location.pathname === "/settingform" || window.location.pathname === "/Setting_email"
-        || window.location.pathname === "/thankyoupage" || window.location.pathname === "/Assign"
+        === "/Newform" || window.location.pathname === "/setting/settingform" || window.location.pathname === "/setting/settingemail"
+        || window.location.pathname === "/setting/thankyoupage" || window.location.pathname === "/Assign"
         || window.location.pathname === "/Email" || window.location.pathname === "/Prefill"
-        || window.location.pathname === "/Pdf" || window.location.pathname === "/Condition"
-        || window.location.pathname === "/mobilenotification" ? (
+        || window.location.pathname === "/Pdf" || window.location.pathname === "/setting/condition"
+        || window.location.pathname === "/setting/mobilenotification" ? (
 
         <Router>
           {checked ? <JotformNav   checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/> : ''}
@@ -124,16 +124,16 @@ function App() {
             <Route path='/publish' element={<Publish jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
             <Route path='/setting' element={<Setting jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
             <Route path='/Newform' element={<CustomToolbar jottoggled={jottoggled} setJottoggled={setJottoggled}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
-            <Route path='/settingform' element={<Settingform jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
-            <Route path='/Setting_email' element={<Setting_email jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
-            <Route path='/thankyoupage' element={<Thankyoupage jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
+            <Route path='/setting/settingform' element={<Settingform jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
+            <Route path='/setting/settingemail' element={<Setting_email jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
+            <Route path='/setting/thankyoupage' element={<Thankyoupage jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
 
             <Route path='/Assign' element={<Assign jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
             <Route path='/Email' element={<Email jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
-            <Route path='/Prefill' element={<Prefill jottoggled={jottoggled} setJottoggled={setJottoggled} />} />
-            <Route path='/Pdf' element={<Pdf jottoggled={jottoggled} setJottoggled={setJottoggled} />} />
-            <Route path='/Condition' element={<Condition jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
-            <Route path='/mobilenotification' element={<MobileNotification jottoggled={jottoggled} setJottoggled={setJottoggled}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
+            <Route path='/Prefill' element={<Prefill  darkmodes={darkmode} setDarkmodes={setDarkmode} jottoggled={jottoggled} setJottoggled={setJottoggled} />} />
+            <Route path='/Pdf' element={<Pdf jottoggled={jottoggled} setJottoggled={setJottoggled}  darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/setting/condition' element={<Condition jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
+            <Route path='/setting/mobilenotification' element={<MobileNotification jottoggled={jottoggled} setJottoggled={setJottoggled}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
             <Route path='/Auto' element={<Auto jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
             <Route path='/Rept' element={<Rept jottoggled={jottoggled} setJottoggled={setJottoggled}  darkmodes={darkmode} setDarkmodes={setDarkmode}/>} />
             <Route path='/Option' element={<Option jottoggled={jottoggled} setJottoggled={setJottoggled} />} />

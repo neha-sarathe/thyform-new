@@ -81,7 +81,7 @@ a:focus {
 }
 
 #sidebars .sidebar-header {
-    padding: 20px;
+    padding: 0px;
     // background: #ECF0F1;
 }
 
@@ -94,7 +94,9 @@ a:focus {
     color: #fff;
     padding: 10px;
 }
-
+.container-home-header{
+    justify-content: end !important;
+}
 #sidebars ul li .a {
     padding: 10px;
     font-size: 1.1em;

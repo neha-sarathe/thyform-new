@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Link, useNavigate, NavLink } from 'react-router-dom'
 import { Phone } from './jotform/Phone';
 import $ from 'jquery'
 import Dark from '../DarkAuth';
-export const JotformNav = ({checked,setChecked,darkmodes,setDarkmodes,setJottoggled}) => {
+export const JotformNav = ({ checked, setChecked, darkmodes, setDarkmodes, setJottoggled }) => {
+  const [buildactive, setBuildActive] = useState(true);
+  const [publishactive, setPublishactive] = useState(false);
+  const [settingactive, setSettingactive] = useState(false);
   let navigate = useNavigate();
   // const routeChange = () =>{ 
   //   let path = '/phone'; 
@@ -25,25 +28,27 @@ export const JotformNav = ({checked,setChecked,darkmodes,setDarkmodes,setJottogg
 
   }
 
-  console.log(checked, 'checked5')
+  let page = ""
+  const path = window.location.pathname
+  page = path.split('/')
 
-    localStorage.setItem('switch', checked)
+  localStorage.setItem('switch', checked)
 
   return (
     <>
-<Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
-      <div className={'row jotlist justify-content-around '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark jotlist-light")}>
+      <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+      <div className={'row jotlist justify-content-around ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark jotlist-light")}>
         <div className='col-md-1 col-sm-1 col-xs-1 col-lg-1 mt-3'>
           <a class="navbar-brand brand-logo" href="/dashboard">
             <i className='fa fa-arrow-left text-white'></i>
-          </a> 
+          </a>
         </div>
         <div className='col-md-10 col-sm-10 col-xs-10 col-lg-10'>
 
           <div className='d-flex justify-content-center'>
-            <Link  to='/jotform' className='jotlink-a'><li className='jot-link'>BUILD</li></Link>
-            <Link  to='/setting' className='jotlink-a'><li className='jot-link' >SETTING</li></Link>
-            <Link  to='/publish' className='jotlink-a'><li className='jot-link'>PUBLISH</li></Link>
+            <NavLink to='/jotform' className={'jotlink-a ' + (page[1] === 'jotform' ? 'bg-white text-dark' : '')}  ><li className='jot-link'>BUILD</li></NavLink>
+            <NavLink to='/setting' className={'jotlink-a ' + (page[1] === 'setting' ? 'bg-white text-dark' : '')} ><li className='jot-link' >SETTING</li></NavLink>
+            <NavLink to='/publish' className={'jotlink-a ' + (page[1] === 'publish' ? 'bg-white text-dark' : '')} ><li className='jot-link'>PUBLISH</li></NavLink>
           </div>
         </div>
         <div className='col-md-1 col-sm-1 col-xs-1 col-lg-1'>

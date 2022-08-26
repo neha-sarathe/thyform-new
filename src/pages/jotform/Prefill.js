@@ -15,7 +15,7 @@ import monday from '../../images/monday.svg'
 import salesforce from '../../images/salesforce.svg'
 import hubspot from '../../images/hubspot.svg'
 import PublishSidebar from './PublishSidebar';
-const Prefill = () => {
+const Prefill = ({darkmodes,setDarkmodes }) => {
   useEffect(() => {
     $(".sidebar-dropdown > a").click(function () {
       $(".sidebar-submenu").slideUp(200);
@@ -50,14 +50,14 @@ const Prefill = () => {
 
   return (
     <>
-      <PublishSidebar />
+      <PublishSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
       <main>
         <div className="page-wrapper chiller-theme toggled ">
           <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
             <i className="fas fa-bars"></i>
           </a>
 
-          <main className="page-content">
+          <main className={"page-content " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
             {/* <Settingform /> */}
             {/* <Thankyoupage /> */}
             {/* main container */}
@@ -90,7 +90,7 @@ const Prefill = () => {
 
                       </li>
                       <li className='fs-6 text-black mt-5 pb-2 map'>
-                        <h5 className='fs-8 heading_5 remider' >PREFILL</h5>
+                        <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")} >PREFILL</h5>
                         <p className='paragraph '>Pre-populate your forms with data one of the following sources.</p>
                       </li>
                     </div>
@@ -98,7 +98,7 @@ const Prefill = () => {
                   {/* direct link div end */}
                   {/* form div start*/}
 
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative'>
+                  <form className={' shadow-sm  rounded-1 p-3 position-relative '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -107,7 +107,7 @@ const Prefill = () => {
                               <img src={manual} height="40px" alt="manual" />
                             </li>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>MANUAL PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>MANUAL PREFILL</h5>
                               <p className='paragraph remider'>Fill in specific fields on your form before sharing it with users.</p>
                             </li>
                           </div>
@@ -128,7 +128,7 @@ const Prefill = () => {
                   {/* 1st div end */}
 
 
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative mt-4'>
+                  <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -137,7 +137,7 @@ const Prefill = () => {
                               <img src={form} height="40px" alt="manual" />
                             </li>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>FORM PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>FORM PREFILL</h5>
                               <p className='paragraph remider'>Use submission info from another to pre-populate this form.</p>
                             </li>
                           </div>
@@ -156,7 +156,7 @@ const Prefill = () => {
                     </div>
                   </form>
                   {/* form div end */}
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative mt-4'>
+                  <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -166,7 +166,7 @@ const Prefill = () => {
                             </li>
 
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>TABLE PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>TABLE PREFILL</h5>
                               <p className='paragraph remider'>Use data from tables to pre-populate your form.</p>
                             </li>
                           </div>
@@ -184,7 +184,7 @@ const Prefill = () => {
 
                     </div>
                   </form>
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative mt-4'>
+                  <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -194,7 +194,7 @@ const Prefill = () => {
 
                             </li>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>SSO PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>SSO PREFILL</h5>
                               <p className='paragraph remider'>Autofill your form with information from your Single Sign-On provide.</p>
                             </li>
                           </div>
@@ -212,7 +212,7 @@ const Prefill = () => {
 
                     </div>
                   </form>
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative mt-4'>
+                  <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -221,7 +221,7 @@ const Prefill = () => {
                               <img src={airtable} height="40px" alt="manual" />
                             </li>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>AIRABLE PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>AIRABLE PREFILL</h5>
                               <p className='paragraph remider'>Use Airable records to pre-populate your form fields.</p>
                             </li>
                           </div>
@@ -239,7 +239,7 @@ const Prefill = () => {
 
                     </div>
                   </form>
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative mt-4'>
+                  <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -248,7 +248,7 @@ const Prefill = () => {
                               <img src={pipedrive} height="40px" alt="manual" />
                             </li>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>PIPEDRIVE PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>PIPEDRIVE PREFILL</h5>
                               <p className='paragraph remider'>Pre-populate your from with data from your Pipedeive CRM.</p>
                             </li>
                           </div>
@@ -266,7 +266,7 @@ const Prefill = () => {
 
                     </div>
                   </form>
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative mt-4'>
+                  <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -275,7 +275,7 @@ const Prefill = () => {
                               <img src={monday} height="40px" alt="manual" />
                             </li>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>MONDAY.COM PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>MONDAY.COM PREFILL</h5>
                               <p className='paragraph remider'>Use monday.com task information to pre-populate form fields.</p>
                             </li>
                           </div>
@@ -293,7 +293,7 @@ const Prefill = () => {
 
                     </div>
                   </form>
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative mt-4'>
+                  <form className={'shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -302,7 +302,7 @@ const Prefill = () => {
                               <img src={salesforce} height="40px" alt="manual" />
                             </li>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>SALESFORCE PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>SALESFORCE PREFILL</h5>
                               <p className='paragraph remider'>Pre-populate your form with data from your Salesform account.</p>
                             </li>
                           </div>
@@ -320,7 +320,7 @@ const Prefill = () => {
 
                     </div>
                   </form>
-                  <form className='bg-white shadow-sm  rounded-1 p-3 position-relative mt-4'>
+                  <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between '>
                         <div className='main_w'>
@@ -330,7 +330,7 @@ const Prefill = () => {
 
                             </li>
                             <li className='fs-6 text-black map'>
-                              <h5 className='fs-8 heading_5 remider'>HUMSPOT PREFILL</h5>
+                              <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>HUMSPOT PREFILL</h5>
                               <p className='paragraph remider'>Pre-populate your form with data from your Hubspot CRM.</p>
                             </li>
                           </div>

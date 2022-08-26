@@ -41,17 +41,17 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
     <>
       <main>
         <div className="page-wrapper chiller-theme toggled ">
-          <a id="show-sidebarw" class="btn btn-sm btn-dark" href="#">
+          {/* <a id="show-sidebarw" class="btn btn-sm btn-dark" href="#">
             <i class="fas fa-bars"></i>
-          </a>
-          <nav id="sidebarsetting" className={"sidebar-wrapper2 " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+          </a> */}
+          <nav id="sidebarsetting" className={"sidebar-wrapper2 " + (darkmodes ? "text-white body-dark border-end" : "text-dark body-light border-end")}>
             <div className="sidebar-content">
-              <div className="sidebar-brand">
+              {/* <div className="sidebar-brand">
 
                 <div id="close-sidebar">
                   <i className="fas fa-times"></i>
                 </div>
-              </div>
+              </div> */}
               {/* <div class="sidebar-header">
         <div class="user-pic">
           <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"

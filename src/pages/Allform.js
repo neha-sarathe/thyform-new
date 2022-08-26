@@ -22,7 +22,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
         e(this).parent().fadeOut()
       })
     }
-    e(".dropdown-toggle").click(function () {
+    e(".dropdown-toggle").on("click",function () {
       var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
       e(".button-dropdown .dropdown-menu").hide();
       e(".button-dropdown .dropdown-toggle").removeClass("actives1");
@@ -46,8 +46,8 @@ const Allform = ({darkmodes,setDarkmodes}) => {
     <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
       <div class="wrapper">
 
-        <nav id="sidebars" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
-          <div class={"sidebar-header "+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+        <nav id="sidebars" className={darkmodes ? "text-white body-dark border-end" : "text-dark body-light border-end"}>
+          <div class={"sidebar-header "+ (darkmodes ? "text-white body-dark border-bottom" : "text-dark body-light border-bottom")}>
             <div className='allform-logo-div'>
               <a class="navbar-brand brand-logo" href="/dashboard">
                 <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
@@ -177,14 +177,14 @@ const Allform = ({darkmodes,setDarkmodes}) => {
         <div id="content"  className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
 
           <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0 pb-0">
-            <div class={"container-fluid  ps-1 " + (darkmodes ? "text-white body-dark" : "text-dark bg-primary")}>
+            <div class={"container-fluid  ps-1 container-home-header " + (darkmodes ? "text-white body-dark border-bottom" : "text-dark bg-primary border-bottom")}>
 
-              <button type="button" id="sidebarCollapse" class="btn btn-info">
+              {/* <button type="button" id="sidebarCollapse" class="btn btn-info">
                 <FiAlignJustify />
-              </button>
-              <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              </button> */}
+              {/* <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 fgdgf
-              </button>
+              </button> */}
 
               {/* <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
