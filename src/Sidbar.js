@@ -27,9 +27,9 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
 {/* #191B20 */}
       <nav className={"sidebar sidebar-offcanvas " + (darkmodes ? "sidebar-bg-mini-dark" : "sidebar-bg-mini-light")} id="sidebar">
         <ul className="nav">
-          <li onMouseEnter={handleMouseOut} onMouseOut={handleMouseOut}  class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ")+ (isHoveringdash ? "hover-open" : "") }  >
+          <li onMouseOver={handleMouseOverdash} onMouseEnter={handleMouseOut} onMouseOut={handleMouseOut}  class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ")+ (isHoveringdash ? "hover-open" : "") }  >
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
-              <RiLayoutGridLine onMouseOver={handleMouseOverdash} 
+              <RiLayoutGridLine  
           className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} />
               <span className={"menu-title " + (darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Dashboard</span>
               <i className="menu-arrow "></i>
@@ -130,9 +130,9 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
             </div>
           </li> */}
 
-          <li  onMouseEnter={handleMouseOutdash} onMouseLeave={handleMouseOutdash} class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") +(isHovering ? "hover-open " : "") }  >
+          <li onMouseEnter={handleMouseOver} onMouseOver={handleMouseOutdash} onMouseLeave={handleMouseOutdash} class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") +(isHovering ? "hover-open " : "") }  >
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")}  data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <BiLineChart onMouseEnter={handleMouseOver}
+              <BiLineChart 
             />
               <span className={"menu-title icon_margin " + (darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Charts</span>
               <i className="menu-arrow"></i>
