@@ -1,12 +1,13 @@
-.mandatory{
-    
+.mandatory {
+
     font-style: italic;
     color: #a9a9a9;
     margin: 22px 0;
 
 }
-.heading-form{
-    font-family: "ProximaNova-Semibold",Helvetica,Arial,sans-serif;
+
+.heading-form {
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     margin-top: 22px;
     margin-bottom: 11px;
@@ -15,21 +16,22 @@
     color: inherit;
 }
 
-.second-heading-form{
+.second-heading-form {
     font-size: 20px;
     margin-top: 24px;
     margin-bottom: 22px;
-    font-family: "ProximaNova-Semibold",Helvetica,Arial,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 1.1;
     color: inherit;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     display: none;
- 
-  }
-  input[type="radio"] + label span {
+
+}
+
+input[type="radio"]+label span {
     display: inline-block;
     width: 19px;
     height: 19px;
@@ -38,10 +40,11 @@ input[type="radio"]{
     border: 2px solid #d0e3e9;
     border-radius: 50%;
     padding: 3px;
-    margin:0 5px;
-    
-  }
-  input[type="radio"]:checked + label span {
+    margin: 0 5px;
+
+}
+
+input[type="radio"]:checked+label span {
     width: 19px;
     height: 19px;
     background: black;
@@ -50,63 +53,93 @@ input[type="radio"]{
     // -webkit-transition: border .15s ease-in-out;
     // -o-transition: border .15s ease-in-out;
     // transition: border .15s ease-in-out;
-  } 
-.lables-div{
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lables-div {
     width: 46%;
     padding-right: 40px;
 }
-.lables-divs{
+
+.lables-divs {
     width: 37%;
 }
-.div-search-input{
+
+.div-search-input {
     width: 33%;
 }
-.second-lable{
+
+.second-lable {
     margin-left: 45px;
     // font-weight: normal;
     // cursor: pointer;
 }
 
-.search-input{
+// .register-half-div{
+
+// }
+.register-half-img {
+    width: 100%;
+    height: auto;
+}
+
+.search-input {
     border: 2px solid #d0e3e9;
     border-radius: 4px;
     box-shadow: none;
     padding: 6px 6px 6px 10px;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
-.search-input:focus{
+
+.search-input:focus {
     border: 2px solid black;
 
 }
-.search-input::placeholder{
+
+.search-input::placeholder {
     padding: 1px;
 }
-.search-input-post::placeholder{
+
+.search-input-post::placeholder {
     font-size: 12px;
 }
-.form-bg{
+
+.form-bg {
     background-color: #fff;
 }
 
-.search-input-div{
+.search-input-div {
     width: 41%;
-
+    font-family: 'Montserrat', sans-serif;
 }
-.search-input-div1{
+.already-login{
+    font-family: 'Montserrat', sans-serif;
+}
+.search-input-div1 {
     margin-left: 61px !important;
 }
 
-.register-number{
+.register-number {
     width: 195px;
 }
-.input-group-text{
+
+.input-group-text {
     border-color: #dee2e6;
     padding: 0.1rem 0.75rem !important;
 }
-.btn-default{
+
+.btn-default {
     color: #fff;
-    background-color: #17264d;
-    border-color: #17264d;
+    background-color: #DC143C;
+    border-color: #DC143C;
     padding: 5px;
     padding-left: 12px;
     padding-right: 12px;
@@ -114,76 +147,93 @@ input[type="radio"]{
     align-items: center;
     display: flex;
     line-height: 0;
-   
-   
+
+
 }
-.btn-find-post{
-    width:84px;
+
+.btn-find-post {
+    width: 84px;
 }
-.find-btn-postcode button{
+
+.find-btn-postcode button {
     height: 95%;
 }
-.para-form-div{
+
+.para-form-div {
     width: 36%;
 }
-.para-form{
- 
-//   padding: 25px;
-  padding-top: 0;
+
+.para-form {
+
+    //   padding: 25px;
+    padding-top: 0;
     vertical-align: middle;
     font-size: 14px;
     line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.lable-form{
+.lable-form {
     font-size: 16px;
     line-height: 1.42857143;
     color: #17264d;
     font-weight: 600;
 }
 
-.auth-form-btn{
- 
-  
+.auth-form-btn {
+
+
     padding: 8px 32px;
     font-size: 20px;
     line-height: 1.3333333;
     border-radius: 6px;
-   
+
 }
-.hover-text-white{
-    background: #2ee86a !important;
-    border: 1px solid #2ee86a ;
-    padding: 8px 32px;
-    font-size: 20px;
-    line-height: 1.3333333;
-    border-radius: 6px;
-    color: white !important;
-}
-.hover-text-white:hover{
-    background: #51c275;
-    border: 1px solid #2ee86a ;
+
+.hover-text-white {
+    background: #dc143c !important;
+    border: 1px solid #dc143c;
     padding: 8px 32px;
     font-size: 20px;
     line-height: 1.3333333;
     border-radius: 6px;
     color: white !important;
 }
-.FBKub{
-   height: 100vh !important
+
+.hover-text-white:hover {
+    background: #f52b54 ;
+    border: 1px solid #f52b54 ;
+    padding: 8px 32px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: white !important;
 }
-.hover-text-dark{
+.register-here{
+    cursor: pointer;
+    color: #dc143c !important;
+}
+.register-here:hover{
+    cursor: pointer;
+    color: #f52b54 ;
+}
+.FBKub {
+    height: 100vh !important
+}
+
+.hover-text-dark {
     background: #000 !important;
-    border: 1px solid #000 ;
+    border: 1px solid #000;
     padding: 8px 32px;
     font-size: 20px;
     line-height: 1.3333333;
     border-radius: 6px;
     color: white !important;
 }
-.hover-text-dark:hover{
+
+.hover-text-dark:hover {
     background: #2ee86a !important;
-    border: 1px solid #2ee86a ;
+    border: 1px solid #2ee86a;
     padding: 8px 32px;
     font-size: 20px;
     line-height: 1.3333333;

@@ -28,7 +28,7 @@ const Dark = ({ darkmodes, setDarkmodes }) => {
         var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink";
         var sidebar_classes = "sidebar-light sidebar-dark";
         var $body = $("body");
-    
+
 
 
     });
@@ -43,7 +43,7 @@ const Dark = ({ darkmodes, setDarkmodes }) => {
         <>
             <div class="theme-setting-wrapper">
                 <div id="settings-trigger"><FiSettings class="text-white" /></div>
-                <div id="theme-settings" class={"settings-panel "+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                <div id="theme-settings" class={"settings-panel " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <i class="settings-close ti-close"></i>
 
                     <p class="settings-heading mt-2">THEMES</p>

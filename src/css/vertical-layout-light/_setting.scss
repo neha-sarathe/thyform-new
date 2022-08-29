@@ -262,7 +262,7 @@
     animation: swing ease-in-out 0.5s 1 alternate;
   }
   .sidebar-wrapper2 .sidebar-menu .sidebar-dropdown > a:after {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     content: "\f105";
     font-style: normal;
@@ -299,7 +299,7 @@
   }
   .sidebar-wrapper2 .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
     content: "\f111";
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-style: normal;
     display: inline-block;
@@ -534,7 +534,7 @@
     width: 39px;
     padding: 7px;
     text-align: center;
-    background: rgb(255, 97, 0);
+    background: #dc143c;
     color: white;
     border-radius: 3px;
   }
@@ -599,8 +599,8 @@
   height: 100vh;
 }
   .show-more-btn{
-    background: #9b8a73;
-    border: 1px solid #9b8a73;
+    background: #dc143c;
+    border: 1px solid #dc143c;
     color: #fff;
     border-radius: 4px;
     padding: 12px;

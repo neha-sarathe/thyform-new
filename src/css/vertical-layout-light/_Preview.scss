@@ -10,7 +10,7 @@
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
     color: #ffffff;
-    background-color: #3339fdbd;
+    background-color: #f52b54 ;
     border-color: #ebedf2 #ebedf2 #ffffff;
     height: 100%;
 }
@@ -392,7 +392,7 @@
 .formpage_nav{
   width: 100%;
   height: 70px;
-  background: linear-gradient(270deg, #1F3BB3, #2e69ff 99.97%);
+  background: linear-gradient(270deg, #dc143c, #dc143c 99.97%);
 
   /* float: right; */
   display: flex;
@@ -632,12 +632,12 @@ div.tab-border-vertical{
 }
 .formpage_icon-tabland{
   font-size: 35px;
-  color: #4a9fff;
+  color: #dc143c;
   /* margin-top: 10px; */
 }
 .formpage_icon-mobhori{
   font-size: 35px;
-  color: #4a9fff;
+  color: #dc143c;
   -ms-transform: rotate(90deg); /* IE 9 */
   transform: rotate(90deg);
 }
@@ -779,7 +779,7 @@ div.mob-border-vertical{
   font-weight: 600;
 }
 .usd-data{
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   padding-left: 4px;
   color:black;

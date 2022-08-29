@@ -8696,7 +8696,7 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-family: 'Montserrat', sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -8718,7 +8718,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'Montserrat', sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -8894,7 +8894,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: var(--bs-font-monospace);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   direction: ltr /* rtl:ignore */;
   unicode-bidi: bidi-override;
@@ -8993,7 +8993,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   font-size: inherit;
   line-height: inherit;
 
@@ -11006,14 +11006,14 @@ textarea.form-control-lg {
 }
 
 .form-check-input:focus {
-  border-color: #86b7fe;
+  border-color: #dc143c;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem #f7c7d1;
 }
 
 .form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #dc143c;
+  border-color: #dc143c;
 }
 
 .form-check-input:checked[type="checkbox"] {
@@ -11735,8 +11735,8 @@ fieldset:disabled .wizard > .actions a,
 
 .btn-primary, .wizard > .actions a {
   color: #fff;
-  background-color: #1F3BB3;
-  border-color: #1F3BB3;
+  background-color: #DC143C;
+  border-color: #DC143C;
 }
 
 .btn-primary:hover, .wizard > .actions a:hover {
@@ -15111,7 +15111,7 @@ fieldset:disabled .wizard > .actions a,
   z-index: 1080;
   display: block;
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -15224,7 +15224,7 @@ fieldset:disabled .wizard > .actions a,
   z-index: 1070;
   display: block;
   max-width: 276px;
-  font-family: var(--bs-font-sans-serif);
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -16971,7 +16971,7 @@ fieldset:disabled .wizard > .actions a,
 }
 
 .font-monospace {
-  font-family: var(--bs-font-monospace) !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .fs-1 {
@@ -20195,7 +20195,7 @@ input:focus {
 /* Typography */
 body {
   font-size: 1rem;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: initial;
   line-height: normal;
   -webkit-font-smoothing: antialiased;
@@ -20504,7 +20504,7 @@ pre {
 code {
   padding: 5px;
   color: #F95F53;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 0.812rem;
   border-radius: 4px;
@@ -20596,7 +20596,7 @@ code {
   -webkit-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
   font-size: calc(0.812rem - 0.05rem);
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -20753,7 +20753,7 @@ code {
 }
 
 .bg-primary, .settings-panel .color-tiles .tiles.primary {
-  background: #1F3BB3 !important;
+  background: #DC143C !important;
 }
 
 .bg-purple {
@@ -21041,7 +21041,7 @@ code {
 }
 
 .performance-overview-carousel .carousel-control-prev:after {
-  font-family: "themify";
+  font-family: 'Montserrat', sans-serif;
   content: '\e64a';
   font-size: .875rem;
   color: #ffffff;
@@ -21059,7 +21059,7 @@ code {
 }
 
 .performance-overview-carousel .carousel-control-next:after {
-  font-family: "themify";
+  font-family: 'Montserrat', sans-serif;
   content: '\e649';
   font-size: .875rem;
   color: #ffffff;
@@ -21092,7 +21092,7 @@ code {
 }
 
 .detailed-report-carousel .carousel-control-prev:after {
-  font-family: "themify";
+  font-family: 'Montserrat', sans-serif;
   content: '\e64a';
   font-size: .875rem;
   color: #6c7383;
@@ -21110,7 +21110,7 @@ code {
 }
 
 .detailed-report-carousel .carousel-control-next:after {
-  font-family: "themify";
+  font-family: 'Montserrat', sans-serif;
   content: '\e649';
   font-size: .875rem;
   color: #6c7383;
@@ -21561,7 +21561,7 @@ code {
 }
 
 .accordion > .card .card-header a:before {
-  font-family: "themify";
+  font-family: 'Montserrat', sans-serif;
   position: absolute;
   right: 7px;
   top: 0;
@@ -22506,7 +22506,7 @@ code {
 
 /*social buttons*/
 .btn-primary, .wizard > .actions a {
-  background: #1F3BB3;
+  background: #DC143C;
   color: #ffffff;
 }
 
@@ -22515,7 +22515,7 @@ code {
 }
 
 .btn-primary:hover, .wizard > .actions a:hover, .btn-primary:focus, .wizard > .actions a:focus {
-  background: #172d88;
+  background: #e95a77;
   color: #ffffff;
 }
 
@@ -24391,7 +24391,7 @@ code {
   transition-duration: 0s;
   -webkit-transition-duration: 250ms;
   transition-duration: 250ms;
-  font-family: themify;
+  font-family: 'Montserrat', sans-serif;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transform: scale(0);
@@ -24586,7 +24586,7 @@ code {
   transition-duration: 0s;
   -webkit-transition-duration: 250ms;
   transition-duration: 250ms;
-  font-family: themify;
+  font-family: 'Montserrat', sans-serif;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transform: scale(0);
@@ -25857,7 +25857,7 @@ dl li {
 .list-ticked li:before,
 .list-arrow li:before,
 .list-star li:before {
-  font-family: "themify";
+  font-family: 'Montserrat', sans-serif;
   margin-left: -1.5rem;
   width: 1.5rem;
   margin-right: .5rem;
@@ -25991,7 +25991,7 @@ dl li {
   padding-left: 0;
   position: relative;
   margin-bottom: 0;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .icon-data-list li {
@@ -27264,7 +27264,7 @@ dl li {
 }
 
 .preview-list .preview-item .preview-item-content p .content-category {
-  font-family: 'source-sans-pro-semibold', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding-right: 15px;
   border-right: 1px solid #dee2e6;
 }
@@ -27403,7 +27403,7 @@ dl li {
 }
 
 .table.select-table td, .jsgrid .select-table.jsgrid-table td {
-  font-family: Manrope;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -27712,11 +27712,11 @@ dl li {
 }
 
 .home-tab {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .home-tab .nav-tabs {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   border-bottom: none;
 }
 
@@ -27737,7 +27737,7 @@ dl li {
   padding: 12px 14px;
   border: none;
   border-right: 1px solid #dee2e6;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: transparent;
 }
 
@@ -27760,7 +27760,7 @@ dl li {
 
 .home-tab .tab-content {
   padding: 24px 0;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   border: none;
 }
 
@@ -29181,7 +29181,7 @@ body.avgrund-active {
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:before,
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
   line-height: 2.5;
-  font-family: themify;
+  font-family: 'Montserrat', sans-serif;
   font-size: .65rem;
 }
 
@@ -29314,7 +29314,7 @@ body.avgrund-active {
 
 .expandable-table tr td.details-control:before {
   content: '\e64b';
-  font-family: "themify";
+  font-family: 'Montserrat', sans-serif;
 }
 
 .expandable-table tr.shown td.details-control:before {
@@ -29396,7 +29396,7 @@ table.dataTable tbody td.select-checkbox:after {
 
 .datepicker.datepicker-dropdown .datepicker-days table.table-condensed thead tr th.dow,
 .datepicker.datepicker-inline .datepicker-days table.table-condensed thead tr th.dow {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #1F1F1F;
   font-size: 0.875rem;
   font-weight: initial;
@@ -30139,7 +30139,7 @@ table.dataTable tbody td.select-checkbox:after {
 }
 
 .irs {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Slider Color variations */
@@ -30582,7 +30582,7 @@ table.dataTable tbody td.select-checkbox:after {
   border-radius: 3px;
   padding: 6px;
   font-size: .625rem;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1;
 }
 
@@ -30733,7 +30733,7 @@ div.tagsinput span.tag {
   color: #ffffff;
   padding: 6px 14px;
   font-size: .8125rem;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1;
 }
 
@@ -30844,7 +30844,7 @@ div.tagsinput span.tag a {
 .wysi-editor textarea {
   height: 280px;
   border: 1px solid #dee2e6;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
 }
 
@@ -31309,14 +31309,23 @@ div.tagsinput span.tag a {
 /*-------------------------------------------------------------------*/
 /* === Landing screens === */
 /* Auth */
-.auth .login-half-bg {
-  background: url("../../../public/images/auth/login-bg.jpg");
+/* .auth .login-half-bg {
+  background: url("../../../public/images/auth/login-bg.png");
   background-size: cover;
+} */
+.login-half-div{
+  width: 84%;
+  height: auto;
+  margin: auto;
 }
-
+.login-half-img{
+width: 100%;
+height: auto;
+}
 .auth .register-half-bg {
-  background: url("../../../public/images/auth/register-bg.jpg");
+  background: url("../../../public/images/auth/register-bg.png");
   background-size: cover;
+  background-position: center;
 }
 
 .auth.lock-full-bg {
@@ -31488,7 +31497,7 @@ div.tagsinput span.tag a {
 .sidebar {
   min-height: calc(100vh - 97px);
   /* background: blue; */
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   padding: 0;
   width: 220px;
@@ -31579,7 +31588,7 @@ div.tagsinput span.tag a {
 
 .sidebar .nav .nav-item .nav-link i.menu-arrow:before {
   content: "\F142";
-  font-family: "Material Design Icons";
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   display: block;
   font-size: 0.687rem;
@@ -32349,7 +32358,7 @@ padding-left: 16px;
 }
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item .welcome-text {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
@@ -32368,7 +32377,7 @@ padding-left: 16px;
 }
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item .welcome-sub-text {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -32390,7 +32399,7 @@ padding-left: 16px;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   min-width: 170px;
   height: 34px;
   background: #ffffff;
@@ -32406,7 +32415,7 @@ padding-left: 16px;
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item .navbar-date-picker {
   /* background: #ffffff; */
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 36px;
  
   border-radius: 6px;
@@ -34083,7 +34092,7 @@ padding-left: 16px;
 .settings-panel .settings-heading {
   padding: 16px 0 13px 35px;
   font-size: 0.812rem;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   line-height: 1;
   color: rgba(0, 0, 0, 0.9);
@@ -34278,7 +34287,7 @@ padding-left: 16px;
 }
 
 .settings-panel .events p {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -34329,7 +34338,7 @@ padding-left: 16px;
   right: 30px;
   height: 45px;
   width: 45px;
-  background: #1F3BB3;
+  background: #DC143C;
   z-index: 99;
   display: -webkit-flex;
   display: flex;

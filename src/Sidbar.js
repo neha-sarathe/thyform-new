@@ -29,8 +29,8 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
         <ul className="nav">
           <li onMouseOver={handleMouseOverdash} onMouseEnter={handleMouseOut} onMouseOut={handleMouseOut}  class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ")+ (isHoveringdash ? "hover-open" : "") }  >
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
-              <RiLayoutGridLine  
-          className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} />
+              <Link to="/dashboard"><RiLayoutGridLine  
+          className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} /></Link>
               <span className={"menu-title " + (darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Dashboard</span>
               <i className="menu-arrow "></i>
             </a>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiSearch, FiChevronRight } from 'react-icons/fi'
+// import register2 from '../public/images/auth/register-bg.png'
 import Dark from "./DarkAuth";
 const Register = (props) => {
   const [radio, setRadio] = useState("Limited");
@@ -66,7 +67,7 @@ const Register = (props) => {
 
     console.log('Input value: ', value);
 
-    const re = /^[A-Za-z]+$/;
+    const re =  /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
     if (value === "" || re.test(value)) {
       setTxt(value);
     }
@@ -77,7 +78,7 @@ const Register = (props) => {
 
     console.log('Input value: ', value);
 
-    const re = /^[A-Za-z]+$/;
+    const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
     if (value === "" || re.test(value)) {
       setTxtbn(value);
     }
@@ -121,7 +122,7 @@ const Register = (props) => {
 
     console.log('Input value: ', value);
 
-    const re = /^[A-Za-z]+$/;
+    const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
     if (value === "" || re.test(value)) {
       setTxtbn2(value);
     }
@@ -163,14 +164,15 @@ const Register = (props) => {
   return (
     <>
       <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
-      <div class="container-scroller">
-        <div class="container-fluid page-body-wrapper full-page-wrapper">
-          <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg " >
-            <div class={" row flex-grow form-bg1 drag-sort-enable " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
-              <div class="col-lg-6 register-half-bg d-flex flex-row">
-                {/* <p class="text-white font-weight-medium text-center flex-grow align-self-end">
-                  Copyright &copy; 2021 All rights reserved.
-                </p> */}
+      <div className="container-scroller">
+        <div className="container-fluid page-body-wrapper full-page-wrapper">
+          <div className="content-wrapper d-flex align-items-stretch auth auth-img-bg " >
+            <div className={" row flex-grow form-bg1 drag-sort-enable " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+              <div className="col-lg-6  d-flex flex-row">
+                {/* <div className="register-half-bg"></div> */}
+                <div className="register-half-div">
+                  <img src={process.env.PUBLIC_URL + "images/auth/register-bg.png"} className="register-half-img"/>
+                </div>
               </div>
 
               <div class="col-lg-6 d-flex align-items-center justify-content-center">
@@ -257,13 +259,13 @@ const Register = (props) => {
                         value="userss"
                         onClick={() => { setText(false) }}
                       />
-                      <label for="userss" className={"second-lable dark-mode-text "+ (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
+                      <label for="userss" className={"second-lable dark-mode-text " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
                         <span></span>Company Registration Number
                       </label>
                       <div className="d-flex mt-5 pt-3">
                         <div className="search-input-div">
                           <input
-                            type="search"
+                            type="text"
                             placeholder="Enter your business name*"
                             className="search-input"
                             value={txt}
@@ -332,7 +334,7 @@ const Register = (props) => {
                       </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
-                          <div className="register-number"><label className={"lable-form "  + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Company registration number</label></div>
+                          <div className="register-number"><label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Company registration number</label></div>
                         </div>
                         <div className="search-input-div ">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -342,7 +344,7 @@ const Register = (props) => {
                       </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
-                          <div className="register-number">  <label className={"lable-form "  + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address*</label></div>
+                          <div className="register-number">  <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address*</label></div>
                         </div>
                         <div className="search-input-div ">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -355,13 +357,13 @@ const Register = (props) => {
                       <div class="mt-3 text-end d-flex align-items-center justify-content-between">
                         <p className="already-login">
                           Already account please{" "}
-                          <Link to="/login" class="auth-link text-black">
+                          <Link to="/login" class="auth-link register-here register-here">
                             Login
                           </Link>{" "}
 
                         </p>
                         <Link
-                          className={"btn  auth-form-btn auth-form-btn1 "+ (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
+                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />
@@ -409,7 +411,7 @@ const Register = (props) => {
                       </div>
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
-                          <label className={"lable-form "  + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -490,13 +492,13 @@ const Register = (props) => {
                       <div class="mt-3 text-end d-flex align-items-center justify-content-between">
                         <p className="already-login">
                           Already account please{" "}
-                          <Link to="/login" class="auth-link text-black">
+                          <Link to="/login" class="auth-link register-here">
                             Login
                           </Link>{" "}
 
                         </p>
                         <Link
-                          className={"btn  auth-form-btn auth-form-btn1 "+ (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
+                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />
