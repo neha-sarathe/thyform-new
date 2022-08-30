@@ -205,7 +205,7 @@ const hideSwitch = ev => {
                       </button>
                       {/* <button class="btn btn-primary" type="button">Button</button> */}
                     </div>
-                    <p className={"already-login " + (props.darkmodes ? " login-dark-text input-login-dark" : " login-light-text input-login-light")}>
+                    <p className={"already-login ps-3 " + (props.darkmodes ? " login-dark-text input-login-dark" : " login-light-text input-login-light")}>
                       Not a member yet? Click{" "}
                       <Link to="/" class="auth-link login-here">
                         here
