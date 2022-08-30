@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import { Navigate } from 'react-router-dom';
 import styled from "styled-components";
+import AllformNav from './pages/AllformNav';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min';
@@ -104,14 +105,15 @@ function App() {
           </div></div>
         </>
       ) : user && window.location.pathname === '/allform' || window.location.pathname === "/myform" || window.location.pathname
-        === "/assignform" ? (<Router>
-
+        === "/assignform" ? (<div className="wrapper">
+        <Router>
+        <AllformNav darkmodes={darkmode} setDarkmodes={setDarkmode} />
           <Routes>
             <Route path='/allform' element={<Allform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/myform' element={<Myform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/assignform' element={<Assignform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           </Routes>
-        </Router>
+        </Router></div>
 
       ) : window.location.pathname === "/jotform"
         || window.location.pathname === "/publish/publish" || window.location.pathname === "/setting" || window.location.pathname
