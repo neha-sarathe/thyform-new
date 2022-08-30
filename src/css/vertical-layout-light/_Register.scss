@@ -89,7 +89,9 @@ input {
     width: 100%;
     height: auto;
 }
-
+.ace-xcode .ace_gutter{
+    height: 17px !important;
+  }
 .search-input {
     border: 1px solid #d0e3e9;
     border-radius: 4px;
