@@ -91,14 +91,18 @@ input {
 }
 
 .search-input {
-    border: 2px solid #d0e3e9;
+    border: 1px solid #d0e3e9;
     border-radius: 4px;
+    background-color: transparent;
     box-shadow: none;
     padding: 6px 6px 6px 10px;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
 }
-
+.form-control-dark:focus{
+    background-color: transparent !important;
+    color:'black'
+}
 .search-input:focus {
     border: 2px solid black;
 
@@ -106,6 +110,7 @@ input {
 
 .search-input::placeholder {
     padding: 1px;
+    color:#aaa7a7 !important;
 }
 
 .search-input-post::placeholder {
@@ -115,7 +120,11 @@ input {
 .form-bg {
     background-color: #fff;
 }
-
+.select-box-dark{
+    color: white;
+    background:#232227;
+    border: 1px solid white;
+}
 .search-input-div {
     width: 41%;
     font-family: 'Montserrat', sans-serif;

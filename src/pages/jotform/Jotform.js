@@ -24,14 +24,14 @@ const Jotform = () => {
   };
 
   useEffect(() => {
-    $(document).ready(function () {
-      $("#hide").click(function () {
-        $(".builder-sidebar").hide();
-      });
-      $("#show").click(function () {
-        $(".builder-sidebar").show();
-      });
-    });
+    // $(document).ready(function () {
+    //   $("#hide").click(function () {
+    //     $(".builder-sidebar").hide();
+    //   });
+    //   $("#show").click(function () {
+    //     $(".builder-sidebar").show();
+    //   });
+    // });
     // $( "#hide" ).click(function() {
     //   $( ".builder-sidebar" ).animate({
     //     opacity: 0.25,
@@ -64,10 +64,10 @@ const Jotform = () => {
         {/* <button className="green" onClick={printResult}>
       display result
     </button> */}
-        <div className="" style={{ paddingTop: '80px' }}>
+        {/* <div className="" style={{ paddingTop: '80px' }}>
           <button type="button" className="btn bg-primary text-white" id="hide">Hide</button>
           <button type="button" className="btn bg-primary text-white mx-1" id="show">Show</button>
-        </div>
+        </div> */}
         <FormBuilderIo
           form={formIoData}
           // onChange={schema => setFormData(schema)}
@@ -78,7 +78,7 @@ const Jotform = () => {
           saveText="Save Form"
           onSubmitDone={(data) => console.log(data)}
         />
-        <div style={{ display: "none" }}>
+        <div >
           <div id="formio-result" />
         </div>
       </div></>

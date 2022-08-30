@@ -90,7 +90,7 @@ const hideSwitch = ev => {
           <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
             <div class={"row flex-grow login-bg drag-sort-enable" + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
               <div
-                class="col-lg-8 login-half-bg d-flex flex-row box"
+                class="col-lg-7 login-half-bg d-flex flex-row box"
                 draggable="true"
               >
                 <div className="login-half-div">
@@ -98,7 +98,7 @@ const hideSwitch = ev => {
                 </div>
               </div>
               <div
-                class="col-lg-4 d-flex align-items-center justify-content-center box"
+                class="col-lg-5 d-flex align-items-center justify-content-center box"
                 draggable="true"
               >
                 <div class="auth-form-transparent auth-form-transparents text-left p-3">
@@ -111,12 +111,10 @@ const hideSwitch = ev => {
                           <img src="../../images/Logo.png" alt="logo" />
                         </>
                       )}
-                      <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
-                        Happy to see you again!
-                      </h6>
+                    
                     </div>
                     <div className="icon change-logo-btn">
-                      <label htmlFor="upload-button">
+                      <label htmlFor="upload-button mt-3">
                         <FiLogIn
                           style={{
                             width: "55px",
@@ -137,8 +135,10 @@ const hideSwitch = ev => {
                     </div>
 
                   </div>
-
-                  <form class="pt-3">
+                  <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
+                        Happy to see you again!
+                      </h6>
+                  <form class="pt-3 p-3">
                     <div class="form-group">
                       <div class="input-group">
                         <input

@@ -267,7 +267,7 @@ const Register = (props) => {
                           <input
                             type="text"
                             placeholder="Enter your business name*"
-                            className="search-input"
+                            className={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
                             value={txt}
                             onChange={onInputChange}
                           />
@@ -297,8 +297,9 @@ const Register = (props) => {
                           {/* <input type='se
                           arch' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class="  search-input"
+                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
+                            
                           >
                             <option>Select business</option>
                             <option>United States of America</option>
@@ -319,7 +320,7 @@ const Register = (props) => {
                         <div className="search-input-div search-input-div1">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class="  search-input"
+                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select director*</option>
@@ -363,7 +364,7 @@ const Register = (props) => {
 
                         </p>
                         <Link
-                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
+                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />
@@ -381,7 +382,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class="search-input"
+                            class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter Your Business Name"
                             value={txtbn}
                             onChange={onBusinessName}
@@ -396,7 +397,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class="  search-input"
+                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -415,7 +416,7 @@ const Register = (props) => {
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <input type="text" class="search-input" placeholder="Enter"
+                          <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno}
                             onChange={onEmployeesNo} />
                         </div>
@@ -428,7 +429,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class="  search-input"
+                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -451,7 +452,7 @@ const Register = (props) => {
                         </div> */}
                         <div class="input-group search-input-div">
                           <span class="input-group-text" id="basic-addon1">£</span>
-                          <input type="text" class="form-control search-input" placeholder="Enter" aria-label="Username"
+                          <input type="text" class={"form-control search-input "+ (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend} onChange={onSpend} />
                         </div>
                       </div>
@@ -462,7 +463,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class="  search-input"
+                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -482,7 +483,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class="search-input"
+                            class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter"
                           />
                         </div>
@@ -498,7 +499,7 @@ const Register = (props) => {
 
                         </p>
                         <Link
-                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
+                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />
@@ -532,7 +533,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class="search-input"
+                            class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Business name"
                             value={txtbn2}
                             onChange={onBusinessNameOther}
@@ -547,7 +548,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class="  search-input"
+                           class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -567,7 +568,7 @@ const Register = (props) => {
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <input type="text" class="search-input" placeholder="Enter"
+                          <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno2}
                             onChange={onEmployeesNoOther} />
                         </div>
@@ -581,7 +582,7 @@ const Register = (props) => {
                           <div className="d-flex"><input
                             type="text"
                             placeholder="Enter your postcode*"
-                            className="search-input search-input-post"
+                            className={"search-input search-input-post "+ (props.darkmodes ? "text-white" : "text-dark")}
                           />
                             <div className="ps-4 find-btn-postcode">
                               <button type="submit" className="btn-default btn-find-post">
@@ -622,7 +623,7 @@ const Register = (props) => {
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                                 <input
                                   type="text"
-                                  class="search-input"
+                                  class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
                                   placeholder="Building No. or name"
                                 />
                               </div>
@@ -634,7 +635,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class="search-input"
+                                <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
                                   value={houseno}
                                   onChange={onHouseNo} />
                               </div>
@@ -646,7 +647,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class="search-input"
+                                <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
                                   value={address}
                                   onChange={onAddress} />
                               </div>
@@ -658,7 +659,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class="search-input" />
+                                <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")} />
                               </div>
 
                             </div>
@@ -675,7 +676,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class="  search-input"
+                           class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -713,7 +714,7 @@ const Register = (props) => {
                         </div> */}
                         <div class="input-group search-input-div">
                           <span class="input-group-text" id="basic-addon1">£</span>
-                          <input type="text" class="form-control search-input" placeholder="Enter" aria-label="Username"
+                          <input type="text" class={"form-control search-input "+ (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend2} onChange={onSpendOther} />
                         </div>
                       </div>
@@ -725,7 +726,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class="  search-input"
+                           class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -746,7 +747,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class="search-input"
+                            class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter"
                           />
                         </div>
@@ -756,7 +757,7 @@ const Register = (props) => {
 
                       <div class="mt-3 text-end">
                         <Link
-                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-dark" : "hover-text-white")}
+                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />

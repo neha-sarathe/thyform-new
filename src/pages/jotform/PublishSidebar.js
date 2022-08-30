@@ -225,13 +225,13 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
                   {/* end list */}
 
                   {/* new list start */}
-                  <div className={'quick list-sidebar-jotform py-3 ' + (page[1] === 'publish' ? 'bg-white' : '')}>
-                    <Link to='/publish'>
+                  <div className={'quick list-sidebar-jotform py-3 ' + (page[2] === 'publish' ? 'bg-white' : '')}>
+                    <Link to='/publish/publish'>
                       <ul className='d-flex '>
-                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "ffffff" : "000000")} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="94.1" y1="161.9" x2="161.9" y2="94" fill="none" stroke={"#" + (darkmodes ? "ffffff" : "000000")} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><path d="M145,178.9l-28.3,28.3a48,48,0,0,1-67.9-67.9L77.1,111" fill="none" stroke={"#" + (darkmodes ? "ffffff" : "000000")} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path><path d="M178.9,145l28.3-28.3a48,48,0,0,0-67.9-67.9L111,77.1" fill="none" stroke={"#" + (darkmodes ? "ffffff" : "000000")} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path></svg></li>
+                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "fff" : "000")+ (page[2] === 'publish' ?  '000':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="94.1" y1="161.9" x2="161.9" y2="94" fill="none" stroke={"#" + (darkmodes ? "fff" : "000")+ (page[2] === 'publish' ?  '000':'')} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><path d="M145,178.9l-28.3,28.3a48,48,0,0,1-67.9-67.9L77.1,111" fill="none" stroke={"#" + (darkmodes ? "fff" : "000")+ (page[2] === 'publish' ?  '000':'')} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path><path d="M178.9,145l28.3-28.3a48,48,0,0,0-67.9-67.9L111,77.1" fill="none" stroke={"#" + (darkmodes ? "fff" : "000")+ (page[2] === 'publish' ?  '000':'')} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path></svg></li>
                         <li className='share'>
-                          <h6 className={'fw-semibold ' + (darkmodes ? "text-white" : "text-dark")}>QUICK SHARE</h6>
-                          <p className={' font_r fw-7 ' + (darkmodes ? "text-white" : "text-dark")}>Direct form link and social share.</p>
+                          <h6 className={'fw-semibold ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'publish' ? 'text-dark' : '')}>QUICK SHARE</h6>
+                          <p className={' font_r fw-7 ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'publish' ? 'text-dark' : '')}>Direct form link and social share.</p>
                         </li>
                       </ul>
                     </Link>
@@ -240,10 +240,10 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
                   <div className={'quick list-sidebar-jotform py-3 '+ (page[2] === 'Assign' ? 'bg-white' : '')}>
                     <Link to='/publish/Assign'>
                       <ul className='d-flex '>
-                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "ffffff" : "000000")} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M64,140a7.9,7.9,0,0,1-8,8H12a8.2,8.2,0,0,1-7.2-4.4,8.2,8.2,0,0,1,.8-8.4A67.8,67.8,0,0,1,33,113.5a40,40,0,1,1,66.3-37,8.1,8.1,0,0,1-3.8,8.4,64.3,64.3,0,0,0-27.8,33.8A61.6,61.6,0,0,0,64,140Zm186.4-4.8A67.8,67.8,0,0,0,223,113.5a40,40,0,1,0-66.3-37,8.1,8.1,0,0,0,3.8,8.4,64,64,0,0,1,27.8,33.8A61.6,61.6,0,0,1,192,140a7.9,7.9,0,0,0,8,8h44a8,8,0,0,0,6.4-12.8Zm-93.2,42.9a48,48,0,1,0-58.4,0,72.1,72.1,0,0,0-35.6,34.4,7.8,7.8,0,0,0,.5,7.7,7.8,7.8,0,0,0,6.7,3.8H185.6a7.8,7.8,0,0,0,6.7-3.8,7.8,7.8,0,0,0,.5-7.7A72.1,72.1,0,0,0,157.2,178.1Z"></path></svg></li>
+                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "fff" : "000")+ (page[2] === 'Assign' ?  '000':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M64,140a7.9,7.9,0,0,1-8,8H12a8.2,8.2,0,0,1-7.2-4.4,8.2,8.2,0,0,1,.8-8.4A67.8,67.8,0,0,1,33,113.5a40,40,0,1,1,66.3-37,8.1,8.1,0,0,1-3.8,8.4,64.3,64.3,0,0,0-27.8,33.8A61.6,61.6,0,0,0,64,140Zm186.4-4.8A67.8,67.8,0,0,0,223,113.5a40,40,0,1,0-66.3-37,8.1,8.1,0,0,0,3.8,8.4,64,64,0,0,1,27.8,33.8A61.6,61.6,0,0,1,192,140a7.9,7.9,0,0,0,8,8h44a8,8,0,0,0,6.4-12.8Zm-93.2,42.9a48,48,0,1,0-58.4,0,72.1,72.1,0,0,0-35.6,34.4,7.8,7.8,0,0,0,.5,7.7,7.8,7.8,0,0,0,6.7,3.8H185.6a7.8,7.8,0,0,0,6.7-3.8,7.8,7.8,0,0,0,.5-7.7A72.1,72.1,0,0,0,157.2,178.1Z"></path></svg></li>
                         <li className='share'>
-                          <h6 className={' fw-semibold ' + (darkmodes ? "text-white" : "text-dark")}>ASSIGN FORM</h6>
-                          <p className={' fw-7 font_r ' + (darkmodes ? "text-white" : "text-dark")}>Assign your forms to others.</p>
+                          <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'Assign' ? 'text-dark' : '')}>ASSIGN FORM</h6>
+                          <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'Assign' ? 'text-dark' : '')}>Assign your forms to others.</p>
                         </li>
                       </ul>
                     </Link>
@@ -251,10 +251,10 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
                   <div className={'quick list-sidebar-jotform py-3 '+ (page[2] === 'Email' ? 'bg-white' : '')}>
                     <Link to='/publish/Email'>
                       <ul className='d-flex '>
-                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "ffffff" : "000000")} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg></li>
+                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "fff" : "000")+ (page[2] === 'Email' ?  '000':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg></li>
                         <li className='share'>
-                          <h6 className={' fw-semibold ' + (darkmodes ? "text-white" : "text-dark")}>EMAIL</h6>
-                          <p className={' fw-7 font_r ' + (darkmodes ? "text-white" : "text-dark")}>Reminders and  instant sharing.</p>
+                          <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'Email' ? 'text-dark' : '')}>EMAIL</h6>
+                          <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'Email' ? 'text-dark' : '')}>Reminders and  instant sharing.</p>
                         </li>
                       </ul>
                     </Link>
@@ -262,10 +262,10 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
                   <div className={'quick list-sidebar-jotform py-3 '+ (page[2] === 'Prefill' ? 'bg-white' : '')}>
                     <Link to='/publish/Prefill'>
                       <ul className='d-flex '>
-                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "ffffff" : "000000")} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M88,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H96A8,8,0,0,1,88,64Zm128,56H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM56,56H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Z"></path></svg></li>
+                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "fff" : "000")+ (page[2] === 'Prefill' ?  '000':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M88,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H96A8,8,0,0,1,88,64Zm128,56H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM56,56H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Z"></path></svg></li>
                         <li className='share'>
-                          <h6 className={' fw-semibold ' + (darkmodes ? "text-white" : "text-dark")}>PREFILL</h6>
-                          <p className={' fw-7 font_r ' + (darkmodes ? "text-white" : "text-dark")}>Pre-populate your forms.</p>
+                          <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'Prefill' ? 'text-dark' : '')}>PREFILL</h6>
+                          <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'Prefill' ? 'text-dark' : '')}>Pre-populate your forms.</p>
                         </li>
                       </ul>
                     </Link>
@@ -273,10 +273,10 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
                   <div className={'quick list-sidebar-jotform py-3 '+ (page[2] === 'Pdf' ? 'bg-white' : '')}>
                     <Link to='/publish/Pdf'>
                       <ul className='d-flex '>
-                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "ffffff" : "000000")} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M64,160H48a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0v-8h8a24,24,0,0,0,0-48Zm0,32H56V176h8a8,8,0,0,1,0,16Zm132-16v12h16a8,8,0,0,1,0,16H196v12a8,8,0,0,1-16,0V168a8,8,0,0,1,8-8h28a8,8,0,0,1,0,16Zm-68-16H114a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h14a32,32,0,0,0,0-64Zm0,48h-6V176h6a16,16,0,0,1,0,32ZM48,136H208a8,8,0,0,0,8-8V88a8.1,8.1,0,0,0-2.3-5.7l-56-56A8.1,8.1,0,0,0,152,24H56A16,16,0,0,0,40,40v88A8,8,0,0,0,48,136ZM152,44l44,44H152Z"></path></svg></li>
+                        <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "fff" : "000")+ (page[2] === 'Pdf' ?  '000':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M64,160H48a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0v-8h8a24,24,0,0,0,0-48Zm0,32H56V176h8a8,8,0,0,1,0,16Zm132-16v12h16a8,8,0,0,1,0,16H196v12a8,8,0,0,1-16,0V168a8,8,0,0,1,8-8h28a8,8,0,0,1,0,16Zm-68-16H114a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h14a32,32,0,0,0,0-64Zm0,48h-6V176h6a16,16,0,0,1,0,32ZM48,136H208a8,8,0,0,0,8-8V88a8.1,8.1,0,0,0-2.3-5.7l-56-56A8.1,8.1,0,0,0,152,24H56A16,16,0,0,0,40,40v88A8,8,0,0,0,48,136ZM152,44l44,44H152Z"></path></svg></li>
                         <li className='share'>
-                          <h6 className={' fw-semibold ' + (darkmodes ? "text-white" : "text-dark")}>PDF</h6>
-                          <p className={' fw-7 font_r ' + (darkmodes ? "text-white" : "text-dark")}>Download fillable PDF.</p>
+                          <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'Pdf' ? 'text-dark' : '')}>PDF</h6>
+                          <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'Pdf' ? 'text-dark' : '')}>Download fillable PDF.</p>
                         </li>
                       </ul>
                     </Link>
