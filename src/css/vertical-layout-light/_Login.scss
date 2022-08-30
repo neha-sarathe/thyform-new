@@ -10,6 +10,7 @@
     align-items: center;
     // margin-top: 30px;
     margin-bottom: 0rem !important;
+    width: 93%;
 }
 .dashboard-icon{
     color: #dc143c;
@@ -53,7 +54,11 @@
     cursor: pointer;
     z-index: 12;
 }
-
+.login-text{
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    
+}
 .input-login {
     background-color: transparent !important;
     border: 1px solid #ced4da !important;

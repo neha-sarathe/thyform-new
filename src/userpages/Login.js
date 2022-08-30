@@ -111,11 +111,10 @@ const hideSwitch = ev => {
                           <img src="../../images/Logo.png" alt="logo" />
                         </>
                       )}
-                      <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
-                        Happy to see you again!
-                      </h6>
+                     
                     </div>
-                    <div className="icon change-logo-btn">
+                   
+                    <div className="icon change-logo-btn mt-3">
                       <label htmlFor="upload-button">
                         <FiLogIn
                           style={{
@@ -135,14 +134,16 @@ const hideSwitch = ev => {
                       />
 
                     </div>
-
+            
                   </div>
-
+                  <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
+                        Happy to see you again!
+                      </h6>
                   <form class="pt-3">
                     <div class="form-group">
-                      <div class="input-group  row d-flex justify-content-between">
-                      <div className="col-md-2"><label>Username</label></div>
-                      <div className="col-md-10">  <input
+                      <div class="input-group  row d-flex justify-content-between align-items-center">
+                      <div className="col-md-3 mt-1 login-text"><label>Username *</label></div>
+                      <div className="col-md-9">  <input
                           type="text"
                           className={"form-control  border-left-0  input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputEfmail"
@@ -153,9 +154,9 @@ const hideSwitch = ev => {
                     </div>
                     <div class="form-group">
                       {/* <label for="exampleInputPassword">Password</label> */}
-                      <div class="input-group row d-flex justify-content-between">
-                      <div className="col-md-2"> <label>Password</label></div>
-                      <div className="col-md-10">  <input
+                      <div class="input-group row d-flex justify-content-between align-items-center">
+                      <div className="col-md-3 mt-1 login-text"> <label>Password *</label></div>
+                      <div className="col-md-9">  <input
                           type={hide ? 'password' : 'input'}
                           className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
@@ -166,9 +167,9 @@ const hideSwitch = ev => {
                     </div>
 
                     <div class="form-group">
-                      <div class="input-group row d-flex justify-content-between">
-                      <div className="col-md-2"><label>pin code</label></div>
-                      <div className="col-md-10">  <input
+                      <div class="input-group row d-flex justify-content-between align-items-center">
+                      <div className="col-md-3 mt-1 login-text"><label>pin code *</label></div>
+                      <div className="col-md-9">  <input
                           type="phone"
                           className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
@@ -198,7 +199,7 @@ const hideSwitch = ev => {
                       </div>
                       {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
                     </div>
-                    <div class="d-grid mt-3 gap-2 col-12 mx-auto mb-2">
+                    <div class="d-grid mt-3 gap-2 col-11 mx-auto mb-2 ms-2">
                       <button class="btn btn-primary" type="button" onClick={() => { props.setUser(); navigate("../allform"); window.location.reload(false); }}>
                         Signin
                       </button>

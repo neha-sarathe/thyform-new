@@ -44,6 +44,8 @@ import MobileNotification from './pages/jotform/MobileNotification';
 import Morris from './Morris';
 import PreviewNav from './pages/jotform/PreviewNav';
 import { Phone } from './pages/jotform/Phone';
+import Myform from './pages/Myform';
+import Assignform from './pages/Assignform';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -101,12 +103,15 @@ function App() {
 
           </div></div>
         </>
-      ) : user && window.location.pathname === '/allform' ? (<Router>
+      ) : user && window.location.pathname === '/allform' || window.location.pathname === "/myform" || window.location.pathname
+        === "/assignform" ? (<Router>
 
-        <Routes>
-          <Route path='/allform' element={<Allform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-        </Routes>
-      </Router>
+          <Routes>
+            <Route path='/allform' element={<Allform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/myform' element={<Myform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/assignform' element={<Assignform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          </Routes>
+        </Router>
 
       ) : window.location.pathname === "/jotform"
         || window.location.pathname === "/publish/publish" || window.location.pathname === "/setting" || window.location.pathname

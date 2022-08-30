@@ -60,7 +60,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
             <hr></hr>
             <li>
               <button type="button" class={"btn "+ (darkmodes ? "text-white" : "text-dark ")} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                All Forms
+              Create a new folder
               </button>
               {/* <Link to='/allform' class="">All Forms</Link> */}
               {/* <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -78,7 +78,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
             </li>
             <hr></hr>
             <li>
-              <a href='/dashboard' class="">Create a new folder</a>
+              <a href='/assignform' class="">All Forms</a>
               {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="#">Home 1</a>
@@ -108,7 +108,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
 
 
             <li>
-              <Link to='/' class="">ASSIGNED FORMS</Link>
+              <Link to='/myform' class="">ASSIGNED FORMS</Link>
               {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="#">Home 1</a>
@@ -126,7 +126,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
 
 
             <li>
-              <Link to='/' class="">My Drafts</Link>
+              <Link to='/myform' class="">My Drafts</Link>
               {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="#">Home 1</a>
