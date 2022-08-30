@@ -277,7 +277,9 @@ const Register = (props) => {
                             SEARCH &nbsp;  <i class="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                           </button>
                         </div>
-                        <div className="ps-3 para-form-div">
+                        
+                      </div>
+                      <div className="ps-1 mt-3 para-form-div">
                           {text ? <p className="para-form">
                             Enter at least the first three characters of your
                             company name or your full company registration
@@ -288,7 +290,6 @@ const Register = (props) => {
                           </p>}
 
                         </div>
-                      </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Select business*</label>

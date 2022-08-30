@@ -126,46 +126,8 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
-            {/* <li class="nav-item dropdown d-none d-lg-block">
-            <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"> Select Category </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
-              <a class="dropdown-item py-3" >
-                <p class="mb-0 font-weight-medium float-left">Select category</p>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-item-content flex-grow py-2">
-                  <p class="preview-subject ellipsis font-weight-medium text-dark">Bootstrap Bundle </p>
-                  <p class="fw-light small-text mb-0">This is a Bundle featuring 16 unique dashboards</p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-item-content flex-grow py-2">
-                  <p class="preview-subject ellipsis font-weight-medium text-dark">Angular Bundle</p>
-                  <p class="fw-light small-text mb-0">Everything you’ll ever need for your Angular projects</p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-item-content flex-grow py-2">
-                  <p class="preview-subject ellipsis font-weight-medium text-dark">VUE Bundle</p>
-                  <p class="fw-light small-text mb-0">Bundle of 6 Premium Vue Admin Dashboard</p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-item-content flex-grow py-2">
-                  <p class="preview-subject ellipsis font-weight-medium text-dark">React Bundle</p>
-                  <p class="fw-light small-text mb-0">Bundle of 8 Premium React Admin Dashboard</p>
-                </div>
-              </a>
-            </div>
-          </li> */}
+
             <li class="nav-item d-none d-lg-block">
-              {/* <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
-                <span class="input-group-addon input-group-prepend border-right">
-                  <span class="icon-calendar input-group-text calendar-icon"></span>
-                </span>
-                <input type="text" class="form-control" />
-              </div> */}
               <div id="datepicker-popup" className={"input-group date datepicker navbar-date-picker " + (darkmodes ? "navbar-date-picker-dark" : "navbar-date-picker-light")}>
                 <span class="input-group-addon input-group-prepend border-right">
                   <span class={" input-group-text  " + (darkmodes ? "text-white" : "text-dark")}><FaRegCalendarAlt className={'icondate' + (darkmodes ? "text-white" : "text-dark")} /></span>
@@ -179,13 +141,13 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
                 <a href='/jotform' class=""> <button className='create-form-btn'>Create Form</button></a>
               </div>
             </li>
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <form class="search-form" action="#">
                 <i class={"icon-search " + (darkmodes ? "text-white" : "text-dark")}></i>
                 <input type="search" class="form-control" placeholder="Search Here" title="Search here" />
               </form>
-            </li>
-            <li class="nav-item dropdown">
+            </li> */}
+            {/* <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
                 <i class={"icon-mail icon-lg " + (darkmodes ? "text-white" : "text-dark")}></i>
               </a>
@@ -222,8 +184,8 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
                   </div>
                 </a>
               </div>
-            </li>
-            <li class="nav-item dropdown">
+            </li> */}
+            {/* <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <i className={"icon-bell " + (darkmodes ? "text-white" : "text-dark")}></i>
                 <span class="count"></span>
@@ -262,7 +224,7 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
                   </div>
                 </a>
               </div>
-            </li>
+            </li> */}
             <li class="nav-item dropdown d-none d-lg-block user-dropdown">
               <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <img class="img-xs rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image" /> </a>
@@ -270,12 +232,12 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
                 <div class="dropdown-header text-center">
                   <img class="img-md rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image" />
                   <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                  <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+                  {/* <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p> */}
                 </div>
-                <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
+                {/* <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
                 <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
                 <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
-                <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
+                <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a> */}
                 <button class="dropdown-item" onClick={() => { localStorage.clear(); navigate("/"); window.location.reload(); }}><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</button>
               </div>
             </li>

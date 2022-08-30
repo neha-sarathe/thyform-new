@@ -1,7 +1,7 @@
 .auth.auth-img-bg .auth-form-transparents {
     width: 85%;
-    margin: auto;
-    margin-top: 20px;
+    // margin: auto;
+    // margin-top: 20px;
 }
 
 .brand-logo-main {
@@ -11,7 +11,12 @@
     // margin-top: 30px;
     margin-bottom: 0rem !important;
 }
-
+.dashboard-icon{
+    color: #dc143c;
+}
+.dashboard-icon svg{
+    fill:#dc143c ;
+}
 .brand-logo1 {
     width: 197px !important;
     height: auto;
@@ -43,7 +48,7 @@
 
 .field-icon {
     position: absolute;
-    right: 13px;
+    right: 28px;
     top: 12px;
     cursor: pointer;
     z-index: 12;

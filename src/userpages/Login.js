@@ -111,10 +111,12 @@ const hideSwitch = ev => {
                           <img src="../../images/Logo.png" alt="logo" />
                         </>
                       )}
-                    
+                      <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
+                        Happy to see you again!
+                      </h6>
                     </div>
                     <div className="icon change-logo-btn">
-                      <label htmlFor="upload-button mt-3">
+                      <label htmlFor="upload-button">
                         <FiLogIn
                           style={{
                             width: "55px",
@@ -135,50 +137,45 @@ const hideSwitch = ev => {
                     </div>
 
                   </div>
-                  <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
-                        Happy to see you again!
-                      </h6>
-                  <form class="pt-3 p-3">
+
+                  <form class="pt-3">
                     <div class="form-group">
-                      <div class="input-group">
-                        <input
+                      <div class="input-group  row d-flex justify-content-between">
+                      <div className="col-md-2"><label>Username</label></div>
+                      <div className="col-md-10">  <input
                           type="text"
                           className={"form-control  border-left-0  input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputEfmail"
                           placeholder="Username"
 
                         />
-                      </div>
+                      </div></div>
                     </div>
                     <div class="form-group">
                       {/* <label for="exampleInputPassword">Password</label> */}
-                      <div class="input-group">
-                        {/* <div class="input-group-prepend bg-transparent">
-                      <span class="input-group-text bg-transparent border-right-0">
-                        <i class="ti-lock text-primary"></i>
-                      </span>
-                    </div> */}
-                        <input
+                      <div class="input-group row d-flex justify-content-between">
+                      <div className="col-md-2"> <label>Password</label></div>
+                      <div className="col-md-10">  <input
                           type={hide ? 'password' : 'input'}
                           className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
                           placeholder="Password"
                         />
                         <span className="password__show field-icon" onClick={hideSwitch}>{hide ? <FiEyeOff/> : <FiEye />}</span>
-                      </div>
+                      </div></div>
                     </div>
 
                     <div class="form-group">
-                      <div class="input-group">
-
-                        <input
+                      <div class="input-group row d-flex justify-content-between">
+                      <div className="col-md-2"><label>pin code</label></div>
+                      <div className="col-md-10">  <input
                           type="phone"
                           className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
                           placeholder="pin code"
                           value={pincode}
                           onChange={onPincode}
-                        />
+                        /></div>
                       </div>
                     </div>
                     <div className="d-flex justify-content-between align-items-center">

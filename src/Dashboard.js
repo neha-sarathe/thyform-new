@@ -482,7 +482,7 @@ export const Dashboard = (props) => {
                                     <Bar
                                       dataKey={`This week`}
                                       stackId="a"
-                                      fill="#52cdff"
+                                      fill="#dc143c"
                                       barSize={12}
                                     // background={true}
 
@@ -938,7 +938,7 @@ export const Dashboard = (props) => {
                                     // labelPosition={100}
                                     lineWidth={50}
                                     data={[
-                                      { title: "One", value: 40, color: "#1F3BB3" },
+                                      { title: "One", value: 40, color: "#dc143c" },
                                       { title: "Two", value: 15, color: "#FDD0C7" },
                                       { title: "Three", value: 10, color: "#52CDFF" },
                                       { title: "Three", value: 20, color: "#81DADA" },
