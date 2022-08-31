@@ -38,7 +38,7 @@ import Dark from '../DarkAuth';
           </li>
           <hr></hr>
           <li>
-            <a href='/assignform' class="">All Forms</a>
+            <a href='/allform' class="">All Forms</a>
             {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
                           <a href="#">Home 1</a>
@@ -68,7 +68,7 @@ import Dark from '../DarkAuth';
 
 
           <li>
-            <Link to='/myform' class="">ASSIGNED FORMS</Link>
+            <Link to='/assignform' class="">ASSIGNED FORMS</Link>
             {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
                           <a href="#">Home 1</a>
