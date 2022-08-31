@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
-import { FiEye,FiEyeOff } from "react-icons/fi";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 import Dark from "../DarkAuth";
 const Login = (props) => {
   const navigate = useNavigate();
   const [pincode, setPincode] = useState('');
-const [hide , setHide] = useState(true)
-const hideSwitch = ev => {
-  setHide(!hide )
-}
+  const [hide, setHide] = useState(true)
+  const hideSwitch = ev => {
+    setHide(!hide)
+  }
 
   const [image, setImage] = useState({ preview: "", raw: "" });
   useEffect(() => {
@@ -111,9 +111,9 @@ const hideSwitch = ev => {
                           <img src="../../images/Logo.png" alt="logo" />
                         </>
                       )}
-                     
+
                     </div>
-                   
+
                     <div className="icon change-logo-btn mt-3">
                       <label htmlFor="upload-button">
                         <FiLogIn
@@ -134,46 +134,46 @@ const hideSwitch = ev => {
                       />
 
                     </div>
-            
+
                   </div>
                   <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
-                        Happy to see you again!
-                      </h6>
+                    Happy to see you again!
+                  </h6>
                   <form class="pt-3">
                     <div class="form-group">
                       <div class="input-group  row d-flex justify-content-between align-items-center">
-                      <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Username *</label></div>
-                      <div className="col-md-9">  <input
+                        <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Username *</label></div>
+                        <div className="col-md-9">  <input
                           type="text"
                           className={"form-control  border-left-0  input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputEfmail"
                           placeholder="Username"
 
                         />
-                      </div></div>
+                        </div></div>
                     </div>
                     <div class="form-group">
                       {/* <label for="exampleInputPassword">Password</label> */}
                       <div class="input-group row d-flex justify-content-between align-items-center">
-                      <div className="col-md-3 mt-1 login-text"> <label className={props.darkmodes ? "text-white" : "text-dark"}>Password *</label></div>
-                      <div className="col-md-9">  <input
+                        <div className="col-md-3 mt-1 login-text"> <label className={props.darkmodes ? "text-white" : "text-dark"}>Password *</label></div>
+                        <div className="col-md-9">  <input
                           type={hide ? 'password' : 'input'}
                           className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
                           placeholder="Password"
                         />
-                        <span className="password__show field-icon" onClick={hideSwitch}>{hide ? <FiEyeOff/> : <FiEye />}</span>
-                      </div></div>
+                          <span className="password__show field-icon" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span>
+                        </div></div>
                     </div>
 
                     <div class="form-group">
                       <div class="input-group row d-flex justify-content-between align-items-center">
-                      <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>pin code *</label></div>
-                      <div className="col-md-9">  <input
+                        <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Pin code *</label></div>
+                        <div className="col-md-9">  <input
                           type="phone"
                           className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
-                          placeholder="pin code"
+                          placeholder="Pin code"
                           value={pincode}
                           onChange={onPincode}
                         /></div>
@@ -199,8 +199,8 @@ const hideSwitch = ev => {
                       </div>
                       {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
                     </div>
-                    <div class="d-grid mt-3 gap-2 col-11 mx-auto mb-2 ms-2">
-                      <button class="btn btn-primary" type="button" onClick={() => { props.setUser(); navigate("../allform"); window.location.reload(false); }}>
+                    <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0">
+                      <button class="btn btn-primary login-btn-width" type="button" onClick={() => { props.setUser(); navigate("../allform"); window.location.reload(false); }}>
                         Signin
                       </button>
                       {/* <button class="btn btn-primary" type="button">Button</button> */}
