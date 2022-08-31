@@ -142,7 +142,7 @@ const hideSwitch = ev => {
                   <form class="pt-3">
                     <div class="form-group">
                       <div class="input-group  row d-flex justify-content-between align-items-center">
-                      <div className="col-md-3 mt-1 login-text"><label>Username *</label></div>
+                      <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Username *</label></div>
                       <div className="col-md-9">  <input
                           type="text"
                           className={"form-control  border-left-0  input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
@@ -155,7 +155,7 @@ const hideSwitch = ev => {
                     <div class="form-group">
                       {/* <label for="exampleInputPassword">Password</label> */}
                       <div class="input-group row d-flex justify-content-between align-items-center">
-                      <div className="col-md-3 mt-1 login-text"> <label>Password *</label></div>
+                      <div className="col-md-3 mt-1 login-text"> <label className={props.darkmodes ? "text-white" : "text-dark"}>Password *</label></div>
                       <div className="col-md-9">  <input
                           type={hide ? 'password' : 'input'}
                           className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
@@ -168,7 +168,7 @@ const hideSwitch = ev => {
 
                     <div class="form-group">
                       <div class="input-group row d-flex justify-content-between align-items-center">
-                      <div className="col-md-3 mt-1 login-text"><label>pin code *</label></div>
+                      <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>pin code *</label></div>
                       <div className="col-md-9">  <input
                           type="phone"
                           className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}

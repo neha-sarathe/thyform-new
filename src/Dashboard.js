@@ -108,7 +108,9 @@ export const Dashboard = (props) => {
     chart: {
       type: 'bar',
       height: 100,
-      colors: ['red'],
+      fill: {
+        colors: ['#F44336', '#E91E63', '#9C27B0']
+      },
 
       toolbar: {
         show: true,

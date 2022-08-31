@@ -158,7 +158,7 @@ const ReactApexChart  = ()=> {
                         type="monotone"
                         dataKey={`This week`}
                         fillOpacity={0.5}
-                        stroke={'#1f3bb3'}
+                        stroke={'#dc143c'}
                         strokeWidth={2}
                         fill={'#e1ecfc'}
                         activeDot={true}

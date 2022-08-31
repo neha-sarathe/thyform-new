@@ -7,10 +7,10 @@ import {
   AiOutlineMobile,
 
 } from "react-icons/ai";
-
+import Dark from '../../DarkAuth';
 import { BsArrowUpRightSquare } from "react-icons/bs";
 
-const PreviewNav = ({ checked, setChecked }) => {
+const PreviewNav = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
   const [preview, setpreview] = useState(true);
   const [active, setActive] = useState("desktop");
   const [show, setShow] = useState(true);
@@ -27,7 +27,8 @@ const PreviewNav = ({ checked, setChecked }) => {
   }
   return (
     <>
-      <div className="formpage_nav">
+    <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
+      <div className={"formpage_nav "+ (darkmodes ? "text-white body-dark" : "formpage-nav-light")}>
         <div className="formpage_first_div">
           <div>
             <input className="formpage_input" />

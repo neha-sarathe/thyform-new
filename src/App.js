@@ -17,7 +17,7 @@ import './App.scss'
 import Setting from './pages/jotform/Setting'
 import Publish from './pages/jotform/Publish'
 // import Build from './pages/'
-import Allform from './pages/Allform'
+import Allform from './pages/Allform';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidbar from './Sidbar';
 import Navbar from './Navbar';

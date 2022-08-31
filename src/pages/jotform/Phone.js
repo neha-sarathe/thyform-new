@@ -14,7 +14,7 @@ import $ from 'jquery'
 // import 'react-device-emulator/lib/styles/style.css';
 // import { MarvelDevices } from "react-css-devices";
 // import Device from "react-device-frame";
-export const Phone = ({ checked, setChecked }) => {
+export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
     const [potrait, setPotrait] = useState('portrait')
     const [landscape, setLandScape] = useState();
     const [show, setShow] = useState(true);
@@ -64,12 +64,12 @@ export const Phone = ({ checked, setChecked }) => {
 
     return (
         <>
-            <div> <PreviewNav checked={checked} setChecked={setChecked} /></div>
+            <div> <PreviewNav checked={checked} setChecked={setChecked} darkmodes={darkmodes} setDarkmodes={setDarkmodes}/></div>
           
-            <div style={{ marginTop: "70px" }}>  <div class="tab-content" id="myTabContent">
+            <div style={{ paddingTop: "57px" }} className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>  <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div className="formpage_container">
-         <h6 className="mt-3 orientaion-text">ORIENTATION</h6>
+         <h6 className={"mt-3  "+(darkmodes ? "text-white " : "text-dark ")}>ORIENTATION</h6>
          <div>
            <span className="incon-container" onClick={handleMobile}>
              <AiOutlineMobile className="formpage_icon-tabland" />
@@ -82,7 +82,7 @@ export const Phone = ({ checked, setChecked }) => {
            <div className="formpage_desktop-mob">
              <div className="mobile-border">
                <div className="mobile_heading">
-                 <h1>Heading</h1>
+                 <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
                </div>
                <form>
                  <div class="row jumbotron">
@@ -162,7 +162,7 @@ export const Phone = ({ checked, setChecked }) => {
              <div className="mob-border-vertical" target="my-iframe">
                <div className="vertical-align-mob">
                  <div className="desktop_heading">
-                   <h1>Heading</h1>
+                   <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
                  </div>
                  <form className="form_data">
                    <div className="row mobile_input">
@@ -231,7 +231,7 @@ export const Phone = ({ checked, setChecked }) => {
                         <div className="formpage_desktop-tab">
                             <div className="tab-border">
                                 <div className="desktop_heading">
-                                    <h1>Heading</h1>
+                                    <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
                                 </div>
                                 <form className="form_data">
                                     <div className="row desktop_input">
@@ -292,7 +292,7 @@ export const Phone = ({ checked, setChecked }) => {
                             <div className="tab-border-vertical " target="my-iframe">
                                 <div className="vertical-align">
                                     <div className="desktop_heading">
-                                        <h1>Heading</h1>
+                                        <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
                                     </div>
                                     <form className="form_data">
                                         <div className="row desktop_input">
@@ -346,12 +346,12 @@ export const Phone = ({ checked, setChecked }) => {
                 </div></div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div className="formpage_container">
                     <div className="formpage_desktop">
-                        <div className="desktop_heading">
-                            <h1>Heading</h1>
+                        <div className="desktop_heading ps-3">
+                            <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
                         </div>
 
                         <form>
-                            <div class="row jumbotron">
+                            <div class="row jumbotron mt-3 container">
                                 <div class="col-sm-6 form-group">
                                     <label for="name-f">First Name</label>
                                     <input
@@ -385,7 +385,7 @@ export const Phone = ({ checked, setChecked }) => {
                                         required
                                     />
                                 </div>
-                                <div class="col-sm-6 form-group"></div>
+                                
                                 <div class="col-sm-6 form-group">
                                     <label for="email">Phonenumber</label>
                                     <input
@@ -397,7 +397,7 @@ export const Phone = ({ checked, setChecked }) => {
                                         required
                                     />
                                 </div>
-                                <div class="col-sm-6 form-group"></div>
+                               
                                 <div class="col-sm-6 form-group">
                                     <label for="email">Date</label>
                                     <input

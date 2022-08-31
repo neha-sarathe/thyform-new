@@ -31,7 +31,7 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
               <Link to="/dashboard" className='dashboard-icon'><RiLayoutGridLine
                 className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} /></Link>
-              <span className={"menu-title " + (darkmodes ? "text-white " : "text-dark ")}>Dashboard</span>
+              <span className={"menu-title " + (darkmodes ? "text-white " : "text-dark ") + (isHoveringdash && darkmodes ? "bg-dark text-white" : '')}>Dashboard</span>
               <i className="menu-arrow "></i>
             </a>
             <div className={"collapse " + (darkmodes ? "bg-dark " : "")} id="dashboards">
@@ -51,7 +51,7 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
             <a className={"nav-link dashboard-icon " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <BiLineChart
               />
-              <span className={"menu-title icon_margin " + (darkmodes ? "text-white" : "text-dark")}>Charts</span>
+              <span className={"menu-title icon_margin " + (darkmodes ? "text-white " : "text-dark ")+(isHovering && darkmodes ? "bg-dark text-white" : '')}>Charts</span>
               <i className="menu-arrow"></i>
             </a>
             <div className={"collapse " + (darkmodes ? "bg-dark " : "")} id="charts">
@@ -63,7 +63,15 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
               </ul>
             </div>
           </li>
-
+          <li onMouseOver={handleMouseOverdash} onMouseEnter={handleMouseOut} onMouseOut={handleMouseOut} class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHoveringdash ? "hover-open" : "")}  >
+          <a href="/allform" className={"nav-link d-flex " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} >
+             <RiLayoutGridLine
+                className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} />
+              <span className={"menu-title " + (darkmodes ? "text-white " : "text-dark ") + (isHoveringdash && darkmodes ? "bg-dark text-white" : '')}>Allform</span>
+              <i className="menu-arrow "></i>
+           
+              </a>
+          </li>
         </ul>
       </nav>
     </>

@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-
-export default class Myform extends Component {
-    render() {
+import Navbarallform from './Navbarallform'
+const Myform = ({darkmodes,setDarkmodes})=>{
         return (
-            <div>Myform</div>
+            <div style={{ width: '100%' }}>
+            <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
+                <Navbarallform />
+                Myform</div></div>
         )
     }
-}
+export default Myform;
