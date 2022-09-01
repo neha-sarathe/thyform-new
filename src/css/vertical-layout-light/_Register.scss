@@ -173,7 +173,24 @@ input {
 .para-form-div {
     width: 90%;
 }
-
+.formbuilder-dark div div .formbuilder  .formarea .formio-component .formio-form .builder-components .builder-component .formio-component label{
+    color: white !important;
+}
+.formbuilder-light div div .formbuilder  .formarea .formio-component .formio-form .builder-components .builder-component .formio-component label{
+color: black;
+}
+.has-feedback .form-control{
+    padding-left: 14px !important;
+}
+.col-form-label{
+    padding-left: 14px;
+}
+.form-check-label{
+    margin-left: 18px !important;
+}
+.field-required{
+    padding-left: 13px!important;
+}
 .para-form {
 
     //   padding: 25px;

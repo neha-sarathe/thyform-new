@@ -68,7 +68,7 @@ const SettingSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar, jottog
                                             <ul className='d-flex '>
                                                 <li className={darkmodes ? "text-white " : "text-dark "+ (page[2] === 'condition' ?  'text-dark':'')}>
                                                     {/* <img src={condition_icon} height="24px" alt="manual" /> */}
-                                                    <ImShuffle style={{ width: '28px', height: 'auto' }} />
+                                                   <div className={ page[2] === 'condition' ? 'text-dark' : ''}> <ImShuffle style={{ width: '28px', height: 'auto' }} /></div>
                                                 </li>
                                                 <li className='share'>
                                                     <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'condition' ? 'text-dark' : '')}>CONDITIONS</h6>
@@ -96,7 +96,7 @@ const SettingSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar, jottog
                                         <Link to="/setting/mobilenotification" className="sidebar-link-jot">
                                             <ul className='d-flex '>
                                                 <li className={darkmodes ? "text-white " : "text-dark "+ (page[2] === 'mobilenotification' ?  'text-dark':'')}>
-                                                    <ImMobile style={{ width: '28px', height: 'auto' }} />
+                                                <div className={ page[2] === 'mobilenotification' ? 'text-dark' : ''}>   <ImMobile style={{ width: '28px', height: 'auto' }} /></div>
                                                 </li>
                                                 <li className='share'>
                                                     <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-dark ")+ (page[2] === 'mobilenotification' ? 'text-dark':'')}>MOBILE NOTIFICATION</h6>

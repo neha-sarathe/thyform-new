@@ -310,8 +310,11 @@
     border-bottom: 1px solid #3a3f48 !important;
   }
   .list-sidebar-jotform[aria-expanded="true"]{
- background-color: #fff !important;
- color: black !important;
+ background-color: #f52b54  !important;
+ color: #ffffff !important;
+  }
+  #flexSwitchCheckChecked{
+    margin-top: -12px !important;
   }
   .sidebar-wrapper2 .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
     content: "\f111";

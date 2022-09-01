@@ -85,7 +85,7 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                  <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
                </div>
                <form>
-                 <div class="row jumbotron">
+                 <div class="row jumbotron pt-3">
                    <div class="col-sm-6 form-group">
                      <label for="name-f">First Name</label>
                      <input
@@ -93,57 +93,56 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                        class="form-control"
                        name="fname"
                        id="name-f"
-                       placeholder="Enter your first name."
+                       placeholder="First Name"
                        required
                      />
                    </div>
                    <div class="col-sm-6 form-group">
-                     <label for="name-l">Last name</label>
+                     <label for="name-l">Last Name</label>
                      <input
                        type="text"
                        class="form-control"
                        name="lname"
                        id="name-l"
-                       placeholder=" last name."
+                       placeholder=" Last Name"
                        required
                      />
                    </div>
-                   <div class="col-sm-12 form-group">
+                   <div class="col-sm-6 form-group">
                      <label for="email">Email</label>
                      <input
                        type="email"
                        class="form-control"
                        name="email"
                        id="email"
-                       placeholder=" email."
+                       placeholder="Email."
                        required
                      />
                    </div>
-                   <div class="col-sm-6 form-group"></div>
-                   <div class="col-sm-12 form-group">
-                     <label for="email">Phonenumber</label>
+                 
+                   <div class="col-sm-6 form-group">
+                     <label for="email">Phone Number</label>
                      <input
                        type="number"
                        class="form-control"
                        name="email"
                        id="email"
-                       placeholder="phonenumber."
+                       placeholder="Phone Number."
                        required
                      />
                    </div>
-                   <div class="col-sm-6 form-group"></div>
-                   <div class="col-sm-12 form-group">
+                   <div class="col-sm-6 form-group">
                      <label for="email">Date</label>
                      <input
                        type="date"
                        class="form-control"
                        name="email"
                        id="email"
-                       placeholder="date."
+                       placeholder="Date."
                        required
                      />
                    </div>
-                   <div class="col-sm-6 form-group"></div>
+                   
                  </div>
                </form>
              </div>
@@ -166,30 +165,31 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                  </div>
                  <form className="form_data">
                    <div className="row mobile_input">
-                     <div className="col">
+                     <div className="col-md-6">
                        <label>Name</label>
                        <input
                          type="text"
                          className="form-control input_field_mob"
-                         placeholder="First name"
+                         placeholder="First Name"
                        />
                      </div>
-                     <div className="col mt-3">
-                       <label>Email</label>
+                     <div className="col-md-6 ">
+                       <label className='ms-2 mb-1'>Last Name</label>
                        <input
-                         type="email"
+                         type="text"
                          className="form-control input_field_mob"
-                         placeholder="email"
+                         placeholder="Last Name"
                        />
                      </div>
-                     <div className="col mt-3">
-                       <label>Phone Number</label>
+                     <div className="col-md-6 mt-3">
+                       <label className='ms-2 mb-1'>Phone Number</label>
                        <input
                          type="number"
                          className="form-control input_field_mob"
+                         placeholder='Phone Number'
                        />
                      </div>
-                     <div className="col mt-3 mb-5">
+                     <div className="col-md-6 mt-3 ">
                        <label>Date</label>
                        <input
                          type="Date"
@@ -197,17 +197,18 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                          placeholder="Date"
                        />
                      </div>
-                   </div>
-                   <div className="row mobile_input">
-                     <div className="col">
-                       <label className="lastname_heading">Email</label>
+                     <div className="col-md-12 mt-3">
+                       <label className="ms-2 mb-1">Email</label>
                        <input
                          type="email"
                          className="form-control input_field_mob"
-                         placeholder="Last name"
+                         placeholder="Email"
                        />
                      </div>
                    </div>
+                   {/* <div className="row mobile_input">
+                    
+                   </div> */}
                  </form>
                </div>
              </div>
@@ -235,30 +236,31 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                                 </div>
                                 <form className="form_data">
                                     <div className="row desktop_input">
-                                        <div className="col">
-                                            <label>Name</label>
+                                        <div className="col-md-6">
+                                            <label>First Name</label>
                                             <input
                                                 type="text"
                                                 className="form-control input_field"
-                                                placeholder="First name"
+                                                placeholder="First Name"
                                             />
                                         </div>
-                                        <div className="col mt-3">
+                                        <div className="col-md-6 mt-3">
                                             <label>Email</label>
                                             <input
                                                 type="email"
                                                 className="form-control input_field"
-                                                placeholder="email"
+                                                placeholder="Email"
                                             />
                                         </div>
-                                        <div className="col mt-3">
+                                        <div className="col-md-6 mt-3">
                                             <label>Phone Number</label>
                                             <input
                                                 type="number"
                                                 className="form-control input_field"
+                                                placeholder='Phone Number'
                                             />
                                         </div>
-                                        <div className="col mt-3 mb-5">
+                                        <div className="col-md-6 mt-3 ">
                                             <label>Date</label>
                                             <input
                                                 type="Date"
@@ -266,17 +268,18 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                                                 placeholder="Date"
                                             />
                                         </div>
-                                    </div>
-                                    <div className="row desktop_input">
-                                        <div className="col">
-                                            <label className="lastname_heading">Email</label>
+                                        <div className="col-md-12 mt-3">
+                                            <label c>Email</label>
                                             <input
                                                 type="email"
                                                 className="form-control input_field"
-                                                placeholder="Last name"
+                                                placeholder="Email"
                                             />
                                         </div>
                                     </div>
+                                    {/* <div className="row desktop_input">
+                                        
+                                    </div> */}
                                 </form>
                             </div>
                             <h1>
@@ -296,48 +299,50 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                                     </div>
                                     <form className="form_data">
                                         <div className="row desktop_input">
-                                            <div className="col">
-                                                <label>Name</label>
+                                            <div className="col-md-6">
+                                                <label>First Name</label>
                                                 <input
                                                     type="text"
                                                     className="form-control input_field-vertical"
                                                     placeholder="First name"
                                                 />
                                             </div>
-                                            <div className="col mt-3">
-                                                <label>Email</label>
+                                            <div className="col-md-6">
+                                                <label>Last Name</label>
                                                 <input
                                                     type="email"
                                                     className="form-control input_field-vertical"
-                                                    placeholder="email"
+                                                    placeholder="Last Name"
                                                 />
                                             </div>
-                                            <div className="col mt-3">
+                                            <div className="col-md-6 mt-3">
                                                 <label>Phone Number</label>
                                                 <input
                                                     type="number"
                                                     className="form-control input_field-vertical"
+                                                    placeholder='Phone Number'
                                                 />
                                             </div>
-                                            <div className="col mt-3 mb-5">
+                                            <div className="col-md-6 mt-3 ">
                                                 <label>Date</label>
                                                 <input
-                                                    type="Date"
+                                                    type="date"
                                                     className="form-control input_field-vertical "
                                                     placeholder="Date"
                                                 />
                                             </div>
-                                        </div>
-                                        <div className="row desktop_input">
-                                            <div className="col">
-                                                <label className="lastname_heading">Email</label>
+                                            <div className="col-md-12 mt-3">
+                                                <label >Email</label>
                                                 <input
                                                     type="email"
                                                     className="form-control input_field-vertical"
-                                                    placeholder="Last name"
+                                                    placeholder="Email"
                                                 />
                                             </div>
                                         </div>
+                                        {/* <div className="row desktop_input">
+                                        
+                                        </div> */}
                                     </form>
                                 </div>
                             </div>
@@ -359,18 +364,18 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                                         class="form-control"
                                         name="fname"
                                         id="name-f"
-                                        placeholder="Enter your first name."
+                                        placeholder="First Name"
                                         required
                                     />
                                 </div>
                                 <div class="col-sm-6 form-group">
-                                    <label for="name-l">Last name</label>
+                                    <label for="name-l">Last Name</label>
                                     <input
                                         type="text"
                                         class="form-control"
                                         name="lname"
                                         id="name-l"
-                                        placeholder=" last name."
+                                        placeholder="Last Name"
                                         required
                                     />
                                 </div>
@@ -381,19 +386,19 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                                         class="form-control"
                                         name="email"
                                         id="email"
-                                        placeholder=" email."
+                                        placeholder="Email."
                                         required
                                     />
                                 </div>
                                 
                                 <div class="col-sm-6 form-group">
-                                    <label for="email">Phonenumber</label>
+                                    <label for="email">Phone Number</label>
                                     <input
                                         type="number"
                                         class="form-control"
                                         name="email"
                                         id="email"
-                                        placeholder="phonenumber."
+                                        placeholder="Phone Number."
                                         required
                                     />
                                 </div>
@@ -405,11 +410,11 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                                         class="form-control"
                                         name="email"
                                         id="email"
-                                        placeholder="date."
+                                        placeholder="Date."
                                         required
                                     />
                                 </div>
-                                <div class="col-sm-6 form-group"></div>
+                                {/* <div class="col-sm-6 form-group"></div> */}
                             </div>
                         </form>
 

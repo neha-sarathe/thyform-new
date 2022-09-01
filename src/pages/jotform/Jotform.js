@@ -5,7 +5,7 @@ import { formIoData } from "./const";
 // import JotformNav from "../JotformNav";
 
 import "formiojs/dist/formio.full.css";
-const Jotform = () => {
+const Jotform = ({darkmodes,setDarkmodes }) => {
   const [formData, setFormData] = useState(formIoData);
 
   console.log('formData', formData, 'window.localStorage.getItem', window.localStorage.getItem('switch'));
@@ -60,7 +60,7 @@ const Jotform = () => {
   return (
     <>
       {/* <JotformNav/>  */}
-      <div>
+      <div className={darkmodes ? "body-dark formbuilder-dark" : 'formbuilder-light'}>
         {/* <button className="green" onClick={printResult}>
       display result
     </button> */}
@@ -74,6 +74,7 @@ const Jotform = () => {
           onSubmit={(data) => {
             console.log(data);
           }}
+
           saveForm={(data) => setFormData(data)}
           saveText="Save Form"
           onSubmitDone={(data) => console.log(data)}

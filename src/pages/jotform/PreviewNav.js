@@ -82,7 +82,7 @@ const PreviewNav = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
           </div> */}
           <section className="after_build_form">Preview Form </section>
           <section className="form-check form-switch">
-            <input class="form-check-input checkinput" type="checkbox" role="switch" id="flexSwitchCheckChecked" onChange={e => handleChange(e)}
+            <input class="form-check-input checkinput" type="checkbox" role="switch"  onChange={e => handleChange(e)}
               defaultChecked={checked} />
 
           </section>
