@@ -25,8 +25,8 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
   return (
     <>
       {/* #191B20 */}
-      <nav className={"sidebar sidebar-offcanvas " + (darkmodes ? "sidebar-bg-mini-dark" : "sidebar-bg-mini-light")} id="sidebar">
-        <ul className="nav">
+      <nav  onMouseLeave={handleMouseOut} className={"sidebar sidebar-offcanvas " + (darkmodes ? "sidebar-bg-mini-dark" : "sidebar-bg-mini-light")} id="sidebar">
+        <ul className="nav"  onMouseLeave={handleMouseOutdash}>
           <li onMouseOver={handleMouseOverdash} onMouseEnter={handleMouseOut} onMouseOut={handleMouseOut} class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHoveringdash ? "hover-open" : "")}  >
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">
               <Link to="/dashboard" className='dashboard-icon'><RiLayoutGridLine
@@ -47,7 +47,7 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
           </li>
 
 
-          <li onMouseEnter={handleMouseOver} onMouseOver={handleMouseOutdash} onMouseLeave={handleMouseOutdash} class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHovering ? "hover-open " : "")}  >
+          <li onMouseEnter={handleMouseOver} onMouseOver={handleMouseOutdash} onMouseLeave={handleMouseOutdash}  class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHovering ? "hover-open " : "")}  >
             <a className={"nav-link dashboard-icon " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <BiLineChart
               />
@@ -63,15 +63,7 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
               </ul>
             </div>
           </li>
-          <li onMouseOver={handleMouseOverdash} onMouseEnter={handleMouseOut} onMouseOut={handleMouseOut} class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHoveringdash ? "hover-open" : "")}  >
-          <a href="/allform" className={"nav-link d-flex " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} >
-             <RiLayoutGridLine
-                className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} />
-              <span className={"menu-title " + (darkmodes ? "text-white " : "text-dark ") + (isHoveringdash && darkmodes ? "bg-dark text-white" : '')}>Allform</span>
-              <i className="menu-arrow "></i>
-           
-              </a>
-          </li>
+       
         </ul>
       </nav>
     </>

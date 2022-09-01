@@ -141,12 +141,18 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
                 <a href='/jotform' class=""> <button className='create-form-btn'>Create Form</button></a>
               </div>
             </li>
-            {/* <li class="nav-item">
-              <form class="search-form" action="#">
-                <i class={"icon-search " + (darkmodes ? "text-white" : "text-dark")}></i>
-                <input type="search" class="form-control" placeholder="Search Here" title="Search here" />
-              </form>
-            </li> */}
+            <li class="nav-item d-none d-lg-block">
+              <div id="create-form" class="create-form">
+                <a href="/allform"  >
+             {/* <RiLayoutGridLine
+                className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} /> */}
+             <button className='create-form-btn'>Allform</button>
+              {/* <i className="menu-arrow "></i> */}
+           
+              </a>
+              </div>
+            </li>
+         
             {/* <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
                 <i class={"icon-mail icon-lg " + (darkmodes ? "text-white" : "text-dark")}></i>

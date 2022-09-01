@@ -19,7 +19,7 @@ import Dark from '../DarkAuth';
           <h4 className='side-head'>MY FORMS</h4>
           <hr></hr>
           <li>
-            <button type="button" class={"btn "+ (darkmodes ? "text-white" : "text-dark ")} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <button type="button" class={"border-0 bg-transparent "+ (darkmodes ? "text-white" : "text-dark ")} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Create a new folder
             </button>
             {/* <Link to='/allform' class="">All Forms</Link> */}
