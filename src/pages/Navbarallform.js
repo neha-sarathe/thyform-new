@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component ,useState} from 'react'
 import { Link } from 'react-router-dom'
+import { FiChevronDown } from "react-icons/fi";
 const Navbarallform = ({darkmodes,setDarkmodes}) => {
     const [actives1,setActives2] = useState(false);
     const handleactive = ()=>{
@@ -16,7 +17,7 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
                             <a href='/dashboard' class="nav-link-hover anchor_text_color">analytics</a>
                         </li>
                         <li className="nav-item ps-3 formlink">
-                            <Link className="nav-link-hover anchor_text_color" to='/'>Inbox</Link>
+                            <Link className="nav-link-hover anchor_text_color" to='/inbox'>Inbox</Link>
                         </li>
                         <li class="nav-item ps-3 formlink">
 
@@ -24,7 +25,7 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
 
                                 <li class="button-dropdown formlink">
                                     <div class={"dropdown-toggle drop "+ (actives1 ? "actives1" : '' )} onClick={handleactive}>
-                                        More <span>▼</span>
+                                        More <span><FiChevronDown /></span>
                                     </div>
                                     <div className={"more-dropdownmenu largest-list "+ (actives1 ? "moreoption-open" : 'moreoption-close' )}  >
 

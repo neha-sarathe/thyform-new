@@ -47,6 +47,7 @@ import PreviewNav from './pages/jotform/PreviewNav';
 import { Phone } from './pages/jotform/Phone';
 import Myform from './pages/Myform';
 import Assignform from './pages/Assignform';
+import Inbox from './pages/Inbox';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -104,7 +105,7 @@ function App() {
 
           </div></div>
         </>
-      ) : user && window.location.pathname === '/allform' || window.location.pathname === "/myform" || window.location.pathname
+      ) : user && window.location.pathname === '/allform' || window.location.pathname === '/inbox'|| window.location.pathname === "/myform" || window.location.pathname
         === "/assignform" ? (<div className="wrapper">
         <Router>
         <AllformNav darkmodes={darkmode} setDarkmodes={setDarkmode} />
@@ -112,6 +113,7 @@ function App() {
             <Route path='/allform' element={<Allform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/myform' element={<Myform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/assignform' element={<Assignform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/inbox' element={<Inbox darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           </Routes>
         </Router></div>
 

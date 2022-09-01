@@ -199,7 +199,7 @@ const Login = (props) => {
                       </div>
                       {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
                     </div>
-                    <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0">
+                    <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0 d-flex justify-content-center">
                       <button class="btn btn-primary login-btn-width" type="button" onClick={() => { props.setUser(); navigate("../allform"); window.location.reload(false); }}>
                         Signin
                       </button>

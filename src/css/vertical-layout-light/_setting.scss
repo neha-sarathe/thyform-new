@@ -329,14 +329,23 @@
     margin-right: 10px;
     font-size: 8px;
   }
-  
+  .svg-position{
+ position: relative; 
+ left: 8px;
+}
+.formpage_item .form-switch{
+  margin-top: -12px;
+}
+.formlink .dropdown-toggle::after{
+  display: none;
+}
   .sidebar-wrapper2 .sidebar-menu ul li a span.label,
   .sidebar-wrapper2 .sidebar-menu ul li a span.badge {
     float: right;
     margin-top: 8px;
     margin-left: 5px;
   }
-  
+
   .sidebar-wrapper2 .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .badge,
   .sidebar-wrapper2 .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .label {
     float: right;

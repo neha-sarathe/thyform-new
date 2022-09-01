@@ -50,7 +50,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
         <div id="content"  className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
 
         <Navbarallform darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
-        allform
+        All Form
           {/* <div class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
 

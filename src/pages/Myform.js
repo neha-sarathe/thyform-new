@@ -5,7 +5,7 @@ const Myform = ({darkmodes,setDarkmodes})=>{
             <div style={{ width: '100%' }}>
             <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
                 <Navbarallform />
-                Myform</div></div>
+                My Form</div></div>
         )
     }
 export default Myform;

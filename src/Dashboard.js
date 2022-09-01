@@ -970,7 +970,7 @@ export const Dashboard = (props) => {
                         </div>
                         <div className="row flex-grow">
                           <div className="col-12 grid-margin stretch-card">
-                            <div className={"card card-rounded "  + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
+                            <div className={"card card-rounded "  + (props.darkmodes ? " dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="card-body">
                                 <div className="row">
                                   <div className="col-lg-12">
