@@ -32,9 +32,9 @@ a:focus {
     margin-bottom: 40px;
     // box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-.navbar:hover{
-    background-color: #ECF0F1 !important;
-}
+// .navbar:hover{
+//     background-color: #ECF0F1 !important;
+// }
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
@@ -271,7 +271,9 @@ ul.CTAs a {
 .navform li .dropdown-menu.actives1 {
     display: flex;
 }
-
+.all-navbar{
+    border-radius: 1px !important;
+  }
 .navform li .dropdown-menu .drop {
     width: 150px;
 }

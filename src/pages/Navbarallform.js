@@ -9,8 +9,8 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
     console.log(actives1,'acitvsdfsdjflsdf')
     return (
         <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0 pb-0">
-                <div class={"container-fluid  ps-1 container-home-header " + (darkmodes ? "text-white body-dark border-bottom" : "text-dark bg-primary border-bottom")}>
+            <nav className={"navbar navbar-expand-lg all-navbar navbar-light bg-light pt-0 pb-0 " + (darkmodes ? "bg-dark border-bottom " : "text-dark bg-primary border-bottom ")}>
+                <div class="container-fluid  ps-1 container-home-header ">
                     <ul class="navform navbar-nav ml-auto align-items-center right-nav">
                         <li class="nav-item active ps-3 formlink">
                             <a href='/dashboard' class="nav-link-hover anchor_text_color">analytics</a>
