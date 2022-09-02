@@ -143,7 +143,7 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
             </li>
             <li class="nav-item d-none d-lg-block">
               <div id="create-form" class="create-form">
-                <a href="/allform"  >
+                <a href="/allform/allform"  >
              {/* <RiLayoutGridLine
                 className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} /> */}
              <button className='create-form-btn'>Allform</button>
