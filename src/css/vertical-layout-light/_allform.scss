@@ -65,6 +65,7 @@ a:focus {
 .allform-logo-div {
     width: 168px;
     height: auto;
+    margin: auto;
 }
 
 /* ---------------------------------------------------
@@ -168,7 +169,7 @@ a:focus {
 #sidebars ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    // background: #6d7fcc;
 }
 
 a[data-toggle="collapse"] {
