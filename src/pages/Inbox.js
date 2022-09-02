@@ -6,7 +6,7 @@ const Inbox = ({darkmodes})=>{
         <div style={{ width: '100%' }}>
                 <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
                     <Navbarallform />
-                    Assign Form</div></div>
+                    Inbox</div></div>
     )
   }
 export default Inbox;

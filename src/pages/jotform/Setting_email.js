@@ -18,7 +18,7 @@ const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
         <div className="container">
           <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
-            <div className="col- col_6 set_margin">
+            <div className="col-md-10  set_margin">
 
               {/* Direct link div start */}
               <div className='main_w'>

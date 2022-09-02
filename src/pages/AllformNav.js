@@ -17,25 +17,13 @@ import Dark from '../DarkAuth';
 
         <ul class="list-unstyled components">
           <h4 className='side-head'>MY FORMS</h4>
-          <hr></hr>
+          {/* <hr></hr>
           <li>
             <button type="button" class={"border-0 bg-transparent "+ (darkmodes ? "text-white" : "text-dark ")} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Create a new folder
             </button>
-            {/* <Link to='/allform' class="">All Forms</Link> */}
-            {/* <ul class="collapse list-unstyled" id="homeSubmenu">
-                      <li>
-                          <a href="#">Home 1</a>
-                      </li>
-                      <li>
-                          <a href="#">Home 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Home 3</a>
-                      </li>
-                  </ul> */}
-
-          </li>
+           
+          </li> */}
           <hr></hr>
           <li>
             <a href='/allform' class="">All Forms</a>
