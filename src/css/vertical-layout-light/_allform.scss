@@ -131,10 +131,22 @@ a:focus {
 
 #sidebars ul li a:hover {
     color: #7386D5;
-    background: #e0e0e0;
+    // background: #e0e0e0;
     border-radius: 4px;
 }
-
+.allform-list:hover{
+    background-color: #f52b54  !important;
+}
+.allform-list-focus1{
+    background-color: #f52b54  !important;
+}
+.allform-list-focusnone{
+    background: #616161 !important;
+}
+.allform-list-focus1:focus{
+    background-color: #f52b54  !important;
+    color: #ffffff !important;
+     }
 // .right-nav{
 //     display: none;
 // }
@@ -314,9 +326,12 @@ ul.CTAs a {
 }
 .allform-list{
     padding: 14px;
-    background: #616161 !important;
+   
     color: white;
-    margin-top: 5px;
+    margin-top: 3px;
+}
+.allform-list div:focus{
+    background:red !important;
 }
 @media screen and (min-device-width: 2530px) and (max-device-width: 2580px) {
     .dot-vertical {

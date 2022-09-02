@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Dark from '../DarkAuth';
  const AllformNav = ({darkmodes,setDarkmodes})=>{
-
+    let pages2 = ""
+    const pathnames = window.location.pathname;
+    pages2 = pathnames.split('/')
+    console.log(pages2[2],'all3333333', window.location.pathname)
+    
     return (
       <>
        <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
@@ -24,8 +28,8 @@ import Dark from '../DarkAuth';
             </button>
            
           </li> */}
-          <li className='allform-list'>
-            <a href='/allform' class="">All Forms</a>
+          <li>
+            <Link to='/allform/allform' ><div  className={'allform-list ' + (pages2[2] === 'allform' ? 'allform-list-focus1' : 'allform-list-focusnone')}>All Forms</div></Link>
            
 
           </li>
@@ -44,8 +48,8 @@ import Dark from '../DarkAuth';
                   </ul> */}
 
 
-          <li className='allform-list'>
-            <Link to='/assignform' class="">ASSIGNED FORMS</Link>
+          <li >
+            <Link to='/allform/assignform' ><div className={'allform-list ' + (pages2[2] === 'assignform' ? 'allform-list-focus1' : 'allform-list-focusnone')}>ASSIGNED FORMS</div></Link>
             {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
                           <a href="#">Home 1</a>
@@ -61,8 +65,8 @@ import Dark from '../DarkAuth';
           </li>
 
 
-          <li className='allform-list'>
-            <Link to='/myform' class="">My Drafts</Link>
+          <li >
+            <Link to='/allform/myform' ><div className={'allform-list ' +( pages2[2] === "myform" ? "allform-list-focus1" : 'allform-list-focusnone')}>My Drafts</div></Link>
             {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
                           <a href="#">Home 1</a>
@@ -77,36 +81,10 @@ import Dark from '../DarkAuth';
 
           </li>
 
-          {/* <li>
-                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                  <ul class="collapse list-unstyled" id="pageSubmenu">
-                      <li>
-                          <a href="#">Page 1</a>
-                      </li>
-                      <li>
-                          <a href="#">Page 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Page 3</a>
-                      </li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="#">Portfolio</a>
-              </li>
-              <li>
-                  <a href="#">Contact</a>
-              </li> */}
+   
         </ul>
 
-        {/* <ul class="list-unstyled CTAs">
-              <li>
-                  <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-              </li>
-              <li>
-                  <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-              </li>
-          </ul> */}
+   
       </nav>
 </>
     )

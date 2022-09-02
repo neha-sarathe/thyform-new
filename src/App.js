@@ -105,17 +105,17 @@ function App() {
 
           </div></div>
         </>
-      ) : user && window.location.pathname === '/allform' || window.location.pathname === '/inbox'|| window.location.pathname === "/myform" || window.location.pathname
-        === "/assignform" ? (<div className="wrapper">
+      ) : user && window.location.pathname === '/allform/allform' || window.location.pathname === '/allform/inbox'|| window.location.pathname === "/allform/myform" || window.location.pathname
+        === "/allform/assignform" ? (
         <Router>
-        <AllformNav darkmodes={darkmode} setDarkmodes={setDarkmode} />
+       
           <Routes>
-            <Route path='/allform' element={<Allform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-            <Route path='/myform' element={<Myform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-            <Route path='/assignform' element={<Assignform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-            <Route path='/inbox' element={<Inbox darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/allform' element={<Allform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/myform' element={<Myform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/assignform' element={<Assignform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/inbox' element={<Inbox darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           </Routes>
-        </Router></div>
+        </Router>
 
       ) : window.location.pathname === "/jotform"
         || window.location.pathname === "/publish/publish" || window.location.pathname === "/setting" || window.location.pathname

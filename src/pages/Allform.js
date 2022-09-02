@@ -5,6 +5,7 @@ import { useDetectOutsideClick } from "./useDetectOutsideClick";
 import { Link } from 'react-router-dom';
 import Dark from '../DarkAuth';
 import Navbarallform from './Navbarallform'
+import AllformNav from './AllformNav';
 const Allform = ({darkmodes,setDarkmodes}) => {
   // const dropdownRef = useRef(null);
   // const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
@@ -45,6 +46,8 @@ const Allform = ({darkmodes,setDarkmodes}) => {
   return (
     <>
     {/* <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/> */}
+    <div className="wrapper">
+                 <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
       <div style={{width:'100%'}}>
 
         <div id="content"  className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
@@ -287,7 +290,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
           </div>
         </div>
       </div>
-
+</div>
     </>
   )
 }

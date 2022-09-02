@@ -145,7 +145,7 @@ const Login = (props) => {
                         <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Username *</label></div>
                         <div className="col-md-9">  <input
                           type="text"
-                          className={"form-control  border-left-0  input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                          className={"form-control placeholder-login  border-left-0  input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputEfmail"
                           placeholder="Username"
 
@@ -158,7 +158,7 @@ const Login = (props) => {
                         <div className="col-md-3 mt-1 login-text"> <label className={props.darkmodes ? "text-white" : "text-dark"}>Password *</label></div>
                         <div className="col-md-9">  <input
                           type={hide ? 'password' : 'input'}
-                          className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                          className={"form-control placeholder-login  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
                           placeholder="Password"
                         />
@@ -171,7 +171,7 @@ const Login = (props) => {
                         <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Pin code *</label></div>
                         <div className="col-md-9">  <input
                           type="phone"
-                          className={"form-control  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                          className={"form-control placeholder-login  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
                           placeholder="Pin code"
                           value={pincode}

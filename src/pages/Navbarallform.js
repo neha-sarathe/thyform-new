@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 import { FiChevronDown } from "react-icons/fi";
 const Navbarallform = ({darkmodes,setDarkmodes}) => {
     const [actives1,setActives2] = useState(false);
+    let page1 = ""
+  const path1 = window.location.pathname
+  page1 = path1.split('/')
+  console.log(page1[2])
     const handleactive = ()=>{
         setActives2(!actives1)
     }
@@ -13,11 +17,11 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
             <nav className={"navbar navbar-expand-lg all-navbar navbar-light bg-light pt-0 pb-0 " + (darkmodes ? "text-dark bg-primary border-bottom  " : "text-dark bg-primary border-bottom ")}>
                 <div class="container-fluid  ps-1 container-home-header ">
                     <ul class="navform navbar-nav ml-auto align-items-center right-nav">
-                        <li class="nav-item active ps-3 formlink">
-                            <a href='/dashboard' class="nav-link-hover anchor_text_color">analytics</a>
+                        <li class={"nav-item active ps-3 formlink "+ (page1[1] === 'dashboard' ? "allform-list-focus1" : '')}>
+                            <a href='/dashboard' class="nav-link-hover anchor_text_color ">analytics</a>
                         </li>
-                        <li className="nav-item ps-3 formlink">
-                            <Link className="nav-link-hover anchor_text_color" to='/inbox'>Inbox</Link>
+                        <li className={'nav-item ps-3 formlink '+ (page1[2] === 'inbox' ? 'allform-list-focus1' : '')}>
+                            <Link className="nav-link-hover anchor_text_color" to='/allform/inbox'>Inbox</Link>
                         </li>
                         <li class="nav-item ps-3 formlink">
 

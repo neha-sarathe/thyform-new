@@ -37,13 +37,14 @@ export const JotformNav = ({ checked, setChecked, darkmodes, setDarkmodes, setJo
   return (
     <>
       <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
-      <div className='row jotlist justify-content-around text-dark jotlist-light'>
-        <div className='col-md-1 col-sm-1 col-xs-1 col-lg-1 mt-3'>
-          <a class="navbar-brand brand-logo" href="/dashboard">
+      <div className='row jotlist justify-content-between text-dark jotlist-light'>
+        <div className='col-md-2 col-sm-2 col-xs-2 col-lg-2 ps-0 d-flex'>
+          <div className='jotlogo-header'> <img src="../../images/Logo.png" alt="logo" className='allform-logo' /></div>
+          <a class="navbar-brand brand-logo ms-3 mt-2" href="/dashboard">
             <i className='fa fa-arrow-left text-white'></i>
           </a>
         </div>
-        <div className='col-md-10 col-sm-10 col-xs-10 col-lg-10'>
+        <div className='col-md-8 col-sm-8 col-xs-8 col-lg-8'>
 
           <div className='d-flex justify-content-center'>
             <NavLink to='/jotform' className={'jotlink-a ' + (page[1] === 'jotform' ? 'jotlinkfocus' : '')}  ><li className='jot-link'>BUILD</li></NavLink>

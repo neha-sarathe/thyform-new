@@ -87,6 +87,9 @@
   .page-content{
     height: 100%;
   }
+  .setting-email{
+    height: 100vh;
+  }
   @media screen and (min-width: 768px) {
     .page-wrapper.toggled .page-content {
       padding-left: 300px;
@@ -478,11 +481,11 @@
   //     background: #31353D;
   // }
   
-  .chiller-theme .sidebar-wrapper2 .sidebar-header,
-  .chiller-theme .sidebar-wrapper2 .sidebar-search,
-  .chiller-theme .sidebar-wrapper2 .sidebar-menu {
-    //   border-top: 1px solid #3a3f48;
-  }
+  // .chiller-theme .sidebar-wrapper2 .sidebar-header,
+  // .chiller-theme .sidebar-wrapper2 .sidebar-search,
+  // .chiller-theme .sidebar-wrapper2 .sidebar-menu {
+  //   //   border-top: 1px solid #3a3f48;
+  // }
   
   .chiller-theme .sidebar-wrapper2 .sidebar-search input.search-menu,
   .chiller-theme .sidebar-wrapper2 .sidebar-search .input-group-text {
@@ -741,6 +744,12 @@ padding: 0px;
  .remider{
   margin: 0px !important;
  }
+ .jotlogo-header{
+  width: 48%;
+    padding-top: 4px;
+    background: #ffff;
+    padding: 6px;
+ }
  .link_c{
   left: 10px;
   top: 10px;
@@ -852,9 +861,9 @@ background-color: #78BB07;
     .dropdown-center{
       margin-left: 150px;
     }
-    .btn{
+    // .btn{
 
-    }
+    // }
     .css-1s2u09g-control{
       padding-right: 200px !important;
       padding-left: 200px !important;
