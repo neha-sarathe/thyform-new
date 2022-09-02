@@ -6,8 +6,8 @@ import Dark from '../DarkAuth';
     return (
       <>
        <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
-      <nav id="sidebars" className={darkmodes ? "text-white body-dark border-end" : "text-dark body-light border-end"}>
-        <div class={"sidebar-header "+ (darkmodes ? "text-white body-dark border-bottom" : "text-dark body-light border-bottom")}>
+      <nav id="sidebars" className={darkmodes ? "text-white allform-bg-color border-end" : "text-dark allform-bg-color border-end"}>
+        <div class={"sidebar-header "+ (darkmodes ? "text-dark body-light border-bottom" : "text-dark body-light border-bottom")}>
           <div className='allform-logo-div'>
             <a class="navbar-brand brand-logo" href="#">
               <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
@@ -16,7 +16,7 @@ import Dark from '../DarkAuth';
         </div>
 
         <ul class="list-unstyled components">
-          <h4 className='side-head'>MY FORMS</h4>
+          <h4 className='side-head text-white'>MY FORMS</h4>
           {/* <hr></hr>
           <li>
             <button type="button" class={"border-0 bg-transparent "+ (darkmodes ? "text-white" : "text-dark ")} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -24,23 +24,12 @@ import Dark from '../DarkAuth';
             </button>
            
           </li> */}
-          <hr></hr>
-          <li>
+          <li className='allform-list'>
             <a href='/allform' class="">All Forms</a>
-            {/* <ul class="collapse list-unstyled" id="homeSubmenu">
-                      <li>
-                          <a href="#">Home 1</a>
-                      </li>
-                      <li>
-                          <a href="#">Home 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Home 3</a>
-                      </li>
-                  </ul> */}
+           
 
           </li>
-          <hr></hr>
+   
 
           {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
@@ -55,7 +44,7 @@ import Dark from '../DarkAuth';
                   </ul> */}
 
 
-          <li>
+          <li className='allform-list'>
             <Link to='/assignform' class="">ASSIGNED FORMS</Link>
             {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
@@ -70,10 +59,9 @@ import Dark from '../DarkAuth';
                   </ul> */}
 
           </li>
-          <hr></hr>
 
 
-          <li>
+          <li className='allform-list'>
             <Link to='/myform' class="">My Drafts</Link>
             {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
@@ -89,7 +77,6 @@ import Dark from '../DarkAuth';
 
           </li>
 
-          <hr></hr>
           {/* <li>
                   <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
                   <ul class="collapse list-unstyled" id="pageSubmenu">

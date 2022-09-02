@@ -309,7 +309,15 @@ ul.CTAs a {
     color: white !important;
 }
 
-
+.allform-bg-color{
+    background-color: #dc143c;
+}
+.allform-list{
+    padding: 14px;
+    background: #616161 !important;
+    color: white;
+    margin-top: 5px;
+}
 @media screen and (min-device-width: 2530px) and (max-device-width: 2580px) {
     .dot-vertical {
         margin: 0px 0px 0px 111px !important;
