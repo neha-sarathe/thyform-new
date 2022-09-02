@@ -81,6 +81,8 @@
   
   .page-wrapper.toggled .sidebar-wrapper2 {
     left: 0px;
+    padding: 12px;
+    background: #dc143c;
   }
   .page-content{
     height: 100vw;
@@ -229,7 +231,7 @@
   
   .sidebar-wrapper2 .sidebar-menu {
     padding-bottom: 10px;
-    margin-top: 37px;
+    // margin-top: 37px;
   }
   
   .sidebar-wrapper2 .sidebar-menu .header-menu span {
@@ -308,6 +310,9 @@
   }
   .list-sidebar-jotform{
     border-bottom: 1px solid #3a3f48 !important;
+    background: #616161 !important;
+    margin: auto;
+    margin-top: 5px;
   }
   .list-sidebar-jotform[aria-expanded="true"]{
  background-color: #f52b54  !important;
@@ -710,9 +715,9 @@
  .parlanch{
   margin-left: 20px;
  }
- .quick{
-  margin-left: 20px;
- }
+//  .quick{
+//   margin-left: 20px;
+//  }
  .share{
   margin-left: 10px;
  }

@@ -90,7 +90,7 @@ const Login = (props) => {
           <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
             <div class={"row flex-grow login-bg drag-sort-enable" + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
               <div
-                class="col-lg-7 login-half-bg d-flex flex-row box"
+                class="col-lg-6 login-half-bg d-flex flex-row box"
                 draggable="true"
               >
                 <div className="login-half-div">
@@ -98,7 +98,7 @@ const Login = (props) => {
                 </div>
               </div>
               <div
-                class="col-lg-5 d-flex align-items-center justify-content-center box"
+                class="col-lg-6 d-flex align-items-center justify-content-center box"
                 draggable="true"
               >
                 <div class="auth-form-transparent auth-form-transparents text-left p-3">
