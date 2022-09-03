@@ -126,7 +126,11 @@ function App() {
         || window.location.pathname === "/setting/mobilenotification" ? (
 
         <Router>
-          {checked ? <JotformNav checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} /> : ''}
+          {checked ?  <div className='d-flex'><div className='jotlogo-width'>  <div className='allform-logo-div'>
+            <a class="navbar-brand brand-logo" href="#">
+              <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
+            </a>
+          </div></div><div className=''><JotformNav checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} /></div></div> : ''}
           {checked ? <Routes>
             {/* <Route path='/allform' element={<Allform />} /> */}
             <Route path='/jotform' element={<Jotform checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />

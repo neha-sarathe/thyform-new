@@ -38,13 +38,13 @@ export const JotformNav = ({ checked, setChecked, darkmodes, setDarkmodes, setJo
     <>
       <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
       <div className='row jotlist justify-content-between text-dark jotlist-light'>
-        <div className='col-md-2 col-sm-2 col-xs-2 col-lg-2 ps-0 d-flex'>
-          <div><div className='jotlogo-header'> <img src="../../images/Logo.png" alt="logo" className='allform-logo' /></div></div>
+        <div className='col-md-1 col-sm-1 col-xs-1 col-lg-1 ps-0 d-flex'>
+         
           <a class="navbar-brand brand-logo ms-3 mt-2" href="/dashboard">
             <i className='fa fa-arrow-left text-white'></i>
           </a>
         </div>
-        <div className='col-md-8 col-sm-8 col-xs-8 col-lg-8'>
+        <div className='col-md-5 col-sm-5 col-xs-5 col-lg-5'>
 
           <div className='d-flex justify-content-center'>
             <NavLink to='/jotform' className={'jotlink-a ' + (page[1] === 'jotform' ? 'jotlinkfocus' : '')}  ><li className='jot-link'>BUILD</li></NavLink>
@@ -52,13 +52,13 @@ export const JotformNav = ({ checked, setChecked, darkmodes, setDarkmodes, setJo
             <NavLink to='/publish/publish' className={'jotlink-a ' + (page[1] === 'publish' ? 'jotlinkfocus' : '')} ><li className='jot-link'>PUBLISH</li></NavLink>
           </div>
         </div>
-        <div className='col-md-1 col-sm-1 col-xs-1 col-lg-1'>
-          <p className='Preview d-flex pt-2'>Preview Form
+        <div className='col-md-5 col-sm-5 col-xs-5 col-lg-5'>
+         <div className='preview-div-switch'><p className='Preview d-flex pt-2'>Preview Form
             <div class="form-switch" style={{ fontSize: "18px" }}>
               <input class="form-check-input switch" type="checkbox" role="switch"  onChange={e => handleChange(e)}
                 defaultChecked={checked} />
             </div>
-          </p>
+          </p></div> 
         </div>
       </div>
       {/* // : <Phone /> */}
