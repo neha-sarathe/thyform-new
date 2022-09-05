@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiSettings } from "react-icons/fi";
 import $ from "jquery";
+import { FiX } from "react-icons/fi";
 const Dark = ({ darkmodes, setDarkmodes }) => {
     console.log(darkmodes, 'darkmodes')
     $(function () {
@@ -44,13 +45,14 @@ const Dark = ({ darkmodes, setDarkmodes }) => {
             <div class="theme-setting-wrapper">
                 <div id="settings-trigger"><FiSettings class="text-white" /></div>
                 <div id="theme-settings" class={"settings-panel " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                    <i class="settings-close ti-close"></i>
+                   <div> <FiX class="settings-close ti-close"></FiX></div>
 
-                    <p class="settings-heading mt-2">THEMES</p>
+                    <p class="settings-heading mt-2">Choose your theme</p>
                     <div class="color-tiles mx-0 px-4">
 
-                        <div class="tiles dark" onClick={handleMode}></div>
-                        <div class="tiles default" onClick={handletheme}></div>
+                        <div class="tiles dark" onClick={handleMode}> <p className='dark-mode-click-text'>dark</p></div>
+                       
+                        <div class="tiles default" onClick={handletheme}><p className='dark-mode-click-text'>white</p></div>
 
                     </div>
 

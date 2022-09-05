@@ -29,7 +29,13 @@
     // padding-left: 14px;
     line-height: 23px;
     font-family: 'Montserrat', sans-serif;
+    padding-left: 2px;
 }
+.form-div-loginpage{
+    width: 99%;
+    margin: auto;
+}
+
 .placeholder-login::placeholder{
     padding: 1px; 
     color:#aaa7a7 !important;

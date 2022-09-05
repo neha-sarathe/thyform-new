@@ -126,7 +126,7 @@ function App() {
         || window.location.pathname === "/setting/mobilenotification" ? (
 
         <Router>
-          {checked ?  <div className='d-flex'><div className='jotlogo-width'>  <div className='allform-logo-div'>
+          {checked ?  <div className='d-flex fixed-top'><div className='jotlogo-width'>  <div className='allform-logo-div'>
             <a class="navbar-brand brand-logo" href="#">
               <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
             </a>

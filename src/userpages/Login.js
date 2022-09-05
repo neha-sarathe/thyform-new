@@ -139,6 +139,7 @@ const Login = (props) => {
                   <h6 class={"fw-light login-heading " + (props.darkmodes ? "text-white" : "text-dark ")}>
                     Happy to see you again!
                   </h6>
+                  <div className="form-div-loginpage">
                   <form class="pt-3">
                     <div class="form-group">
                       <div class="input-group  row d-flex justify-content-between align-items-center">
@@ -201,7 +202,7 @@ const Login = (props) => {
                     </div>
                     <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0 d-flex justify-content-center">
                       <button class="btn btn-primary login-btn-width" type="button" onClick={() => { props.setUser(); navigate("../allform/allform"); window.location.reload(false); }}>
-                        Signin
+                        log in
                       </button>
                       {/* <button class="btn btn-primary" type="button">Button</button> */}
                     </div>
@@ -213,7 +214,7 @@ const Login = (props) => {
                       to register.
                     </p>
 
-                  </form>
+                  </form></div>
                   <hr className="mt-5" />
 
                   {/* <p className="text-center">

@@ -8,7 +8,7 @@ const Myform = ({darkmodes,setDarkmodes})=>{
             <div style={{ width: '100%' }}>
             <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
                 <Navbarallform />
-                My Drafts</div></div></div>
+                <h1 className='text-center'>My Drafts</h1> </div></div></div>
         )
     }
 export default Myform;

@@ -326,10 +326,10 @@ const Dark = ({ darkmodes, setDarkmodes }) => {
             <div class="tiles dark"></div>
             <div class="tiles default"></div>
           </div>
-          <p class="settings-heading mt-2">THEMES</p>
+          <p class="settings-heading mt-2">Choose your theme</p>
           <div class="color-themes mx-0 px-4">
-            <div class="color-theme default" onClick={handletheme} ></div>
-            <div class="color-theme dark" onClick={handleMode} ></div>
+            <div class="color-theme default" onClick={handletheme} ><p className='dark-mode-click-text'>white</p></div>
+            <div class="color-theme dark" onClick={handleMode} ><p className='dark-mode-click-text'>dark</p></div>
             {/* <div  class="color-theme brown"></div> */}
           </div>
         </div>

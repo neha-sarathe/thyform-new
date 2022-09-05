@@ -65,12 +65,13 @@ const Register = (props) => {
   const onInputChange = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
+    // console.log('Input value: ', value);
 
-    const re =  /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
-    if (value === "" || re.test(value)) {
-      setTxt(value);
-    }
+    // const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+    // if (value === "" || re.test(value)) {
+    //   setTxt(value);
+    // }
+    setTxt(value);
   }
 
   const onBusinessName = e => {
@@ -171,7 +172,7 @@ const Register = (props) => {
               <div className="col-lg-6  d-flex flex-row">
                 {/* <div className="register-half-bg"></div> */}
                 <div className="register-half-div">
-                  <img src={process.env.PUBLIC_URL + "images/auth/register-bg.png"} className="register-half-img"/>
+                  <img src={process.env.PUBLIC_URL + "images/auth/register-bg.png"} className="register-half-img" />
                 </div>
               </div>
 
@@ -267,7 +268,7 @@ const Register = (props) => {
                           <input
                             type="text"
                             placeholder="Enter your business name*"
-                            className={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
+                            className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             value={txt}
                             onChange={onInputChange}
                           />
@@ -277,19 +278,19 @@ const Register = (props) => {
                             SEARCH &nbsp;  <i class="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                           </button>
                         </div>
-                        
+
                       </div>
                       <div className="ps-1 mt-3 para-form-div">
-                          {text ? <p className="para-form">
-                            Enter at least the first three characters of your
-                            company name or your full company registration
-                            number and press 'search' to locate your company
-                            details.
-                          </p> : <p className="para-form">
-                            Enter your full 8 digit company registration number. If your registration number is only seven digits, add a zero to the beginning. Companies registered in Scotland and Northern Ireland must add SC or NI to the beginning.
-                          </p>}
+                        {text ? <p className="para-form">
+                          Enter at least the first three characters of your
+                          company name or your full company registration
+                          number and press 'search' to locate your company
+                          details.
+                        </p> : <p className="para-form">
+                          Enter your full 8 digit company registration number. If your registration number is only seven digits, add a zero to the beginning. Companies registered in Scotland and Northern Ireland must add SC or NI to the beginning.
+                        </p>}
 
-                        </div>
+                      </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Select business*</label>
@@ -300,7 +301,7 @@ const Register = (props) => {
                           <select
                             class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
-                            
+
                           >
                             <option>Select business</option>
                             <option>United States of America</option>
@@ -383,7 +384,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
+                            class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter Your Business Name"
                             value={txtbn}
                             onChange={onBusinessName}
@@ -417,7 +418,7 @@ const Register = (props) => {
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
+                          <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno}
                             onChange={onEmployeesNo} />
                         </div>
@@ -453,7 +454,7 @@ const Register = (props) => {
                         </div> */}
                         <div class="input-group search-input-div">
                           <span class="input-group-text" id="basic-addon1">£</span>
-                          <input type="text" class={"form-control search-input "+ (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
+                          <input type="text" class={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend} onChange={onSpend} />
                         </div>
                       </div>
@@ -484,7 +485,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
+                            class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter"
                           />
                         </div>
@@ -534,7 +535,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
+                            class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Business name"
                             value={txtbn2}
                             onChange={onBusinessNameOther}
@@ -549,7 +550,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                           class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -569,7 +570,7 @@ const Register = (props) => {
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
+                          <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno2}
                             onChange={onEmployeesNoOther} />
                         </div>
@@ -583,7 +584,7 @@ const Register = (props) => {
                           <div className="d-flex"><input
                             type="text"
                             placeholder="Enter your postcode*"
-                            className={"search-input search-input-post "+ (props.darkmodes ? "text-white" : "text-dark")}
+                            className={"search-input search-input-post " + (props.darkmodes ? "text-white" : "text-dark")}
                           />
                             <div className="ps-4 find-btn-postcode">
                               <button type="submit" className="btn-default btn-find-post">
@@ -624,7 +625,7 @@ const Register = (props) => {
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                                 <input
                                   type="text"
-                                  class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
+                                  class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                   placeholder="Building No. or name"
                                 />
                               </div>
@@ -636,7 +637,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
+                                <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                   value={houseno}
                                   onChange={onHouseNo} />
                               </div>
@@ -648,7 +649,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
+                                <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                   value={address}
                                   onChange={onAddress} />
                               </div>
@@ -660,7 +661,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")} />
+                                <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} />
                               </div>
 
                             </div>
@@ -677,7 +678,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                           class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -715,7 +716,7 @@ const Register = (props) => {
                         </div> */}
                         <div class="input-group search-input-div">
                           <span class="input-group-text" id="basic-addon1">£</span>
-                          <input type="text" class={"form-control search-input "+ (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
+                          <input type="text" class={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend2} onChange={onSpendOther} />
                         </div>
                       </div>
@@ -727,7 +728,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                           class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -748,7 +749,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class={"search-input "+ (props.darkmodes ? "text-white" : "text-dark")}
+                            class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter"
                           />
                         </div>
