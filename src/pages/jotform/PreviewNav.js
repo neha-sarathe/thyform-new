@@ -28,7 +28,7 @@ const PreviewNav = ({ checked, setChecked, darkmodes, setDarkmodes }) => {
   return (
     <>
       <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
-      <div className={"formpage_nav " + (darkmodes ? "text-white body-dark" : "formpage-nav-light")}>
+      <div className={"formpage_nav formpage-nav-light"}>
         <div className="formpage_first_div">
           <div>
             <input className="formpage_input" />

@@ -31937,7 +31937,7 @@ padding-left: 16px;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
   -ms-transition: width 0.25s ease, background 0.25s ease;
-  width: 220px;
+  width: 280px;
   height: 97px;
   padding: 20px 35px;
 }
@@ -32051,7 +32051,7 @@ padding-left: 16px;
   padding-right: 2.187rem;
   padding-top: 30px;
   padding-bottom: 25px;
-  width: calc(100% - 220px);
+  width: calc(100% - 280px);
   height: 97px;
 }
 

@@ -14,7 +14,7 @@ const Settingform = ({darkmodes,setDarkmodes,jottoggled, setJottoggled}) => {
       {/*center content */}
 
       <div class={"container-fluid setting-form  "+ (darkmodes ? "text-white body-dark " : "text-dark body-light ") +(jottoggled ? "" : "setting_form_ml") }>
-        <div className="form-setting-div">
+     <div className="settingform-main">   <div className="form-setting-div">
           {" "}
           <div>
             <div className="form-setting-icon">
@@ -59,7 +59,7 @@ const Settingform = ({darkmodes,setDarkmodes,jottoggled, setJottoggled}) => {
         <div className="mt-3">
           <button className="show-more-btn">Show More Options</button>
         </div>
-
+</div>
       </div>
     </>
   );

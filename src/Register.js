@@ -16,6 +16,10 @@ const Register = (props) => {
   const [spend2, setSpend2] = useState('');
   const [address, setAddress] = useState('');
   const [houseno, setHouseNo] = useState('');
+  const [companynumber,setCompanyNumber] = useState(false)
+  const companyHandle = (value)=>{
+    setCompanyNumber(value)
+  }
   const handleRadio = (value) => {
     console.log(value, "value");
     setRadio(value);
@@ -265,13 +269,19 @@ const Register = (props) => {
                       </label>
                       <div className="d-flex mt-5 pt-3">
                         <div className="search-input-div">
-                          <input
-                            type="text"
-                            placeholder="Enter your business name*"
+                         {!text ? <input
+                            type="number"
+                            placeholder="Registration Number"
                             className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             value={txt}
                             onChange={onInputChange}
-                          />
+                          /> : <input
+                          type="text"
+                          placeholder="Enter your business name*"
+                          className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                          value={txt}
+                          onChange={onInputChange}
+                        /> } 
                         </div>
                         <div className="ps-4">
                           <button type="submit" className="btn-default pt-2 pb-2">
