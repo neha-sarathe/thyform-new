@@ -8,7 +8,7 @@ const Assignform = ({darkmodes,setDarkmodes})=> {
             <div style={{ width: '100%' }}>
                 <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
                     <Navbarallform />
-                    <h1 className='text-center'>  Assign Form </h1></div></div></div>
+                    <h1 className='text-center'>  Assign Forms </h1></div></div></div>
         )
     }
 export default Assignform;
