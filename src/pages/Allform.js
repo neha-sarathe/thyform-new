@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Dark from '../DarkAuth';
 import Navbarallform from './Navbarallform'
 import AllformNav from './AllformNav';
-const Allform = ({darkmodes,setDarkmodes}) => {
+const Allform = ({ darkmodes, setDarkmodes }) => {
   // const dropdownRef = useRef(null);
   // const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   // const onClick = () => setIsActive(!isActive);
@@ -24,7 +24,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
         e(this).parent().fadeOut()
       })
     }
-    e(".dropdown-toggle").on("click",function () {
+    e(".dropdown-toggle").on("click", function () {
       var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
       e(".button-dropdown .dropdown-menu").hide();
       e(".button-dropdown .dropdown-toggle").removeClass("actives1");
@@ -45,16 +45,16 @@ const Allform = ({darkmodes,setDarkmodes}) => {
 
   return (
     <>
-    {/* <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/> */}
-    <div className="wrapper">
-                 <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
-      <div style={{width:'100%'}}>
+      {/* <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/> */}
+      <div className="wrapper">
+        <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+        <div style={{ width: '100%' }}>
 
-        <div id="content"  className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
+          <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
 
-        <Navbarallform darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
-       <h1 className='text-center'> All Forms</h1>
-          {/* <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <Navbarallform darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+            <h1 className='text-center'> All Forms</h1>
+            {/* <div class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
 
 
@@ -170,7 +170,7 @@ const Allform = ({darkmodes,setDarkmodes}) => {
             </li>
           </ul>
         </div> */}
-          {/*    <ul class="navform">
+            {/*    <ul class="navform">
 
                       <li class="button-dropdown formlink">
                         <a href="javascript:void(0)" class="dropdown-toggle drop">
@@ -269,28 +269,28 @@ const Allform = ({darkmodes,setDarkmodes}) => {
           </div> */}
 
 
-          {/* <div class="line"></div> */}
+            {/* <div class="line"></div> */}
 
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-</div>
     </>
   )
 }
