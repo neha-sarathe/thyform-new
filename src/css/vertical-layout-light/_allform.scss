@@ -345,7 +345,9 @@ ul.CTAs a {
 .allform-list div:focus {
     background: red !important;
 }
-
+.close-icon-theme svg{
+color: red;
+}
 @media screen and (min-device-width: 2530px) and (max-device-width: 2580px) {
     .dot-vertical {
         margin: 0px 0px 0px 111px !important;
@@ -378,6 +380,19 @@ ul.CTAs a {
     .settingform-main{
         margin-left: 20%;
     }
+
+
+    .setting_ml-form{
+        margin-left:32% !important;
+       
+      }
+
+      .condition-height{
+        height: 100vh !important;
+      }
+      .set_margin{
+        margin-left: 320px !important;
+      }
 }
 
 .builder-sidebar_scroll {

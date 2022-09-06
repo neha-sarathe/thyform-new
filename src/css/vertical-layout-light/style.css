@@ -31408,7 +31408,7 @@ height: auto;
 }
 
 .auth .brand-logo img {
-  width: 90px;
+  width: 150px;
 }
 
 .auth form .form-group {
@@ -34268,7 +34268,7 @@ padding-left: 16px;
   position: absolute;
   top: 16px;
   right: 10px;
-  color: #1F3BB3;
+  color: #dc143c;
   background: transparent;
   border-radius: 4px;
   padding: 0 3px;

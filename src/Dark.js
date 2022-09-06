@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiSettings } from "react-icons/fi";
 import $ from "jquery";
+import { FiXSquare } from "react-icons/fi";
 const Dark = ({ darkmodes, setDarkmodes }) => {
   console.log(darkmodes, 'darkmodes')
   $(function () {
@@ -311,9 +312,9 @@ const Dark = ({ darkmodes, setDarkmodes }) => {
   return (
     <>
       <div class="theme-setting-wrapper">
-        <div id="settings-trigger"><FiSettings class="text-white" /></div>
+        <div id="settings-trigger" ><FiSettings class="text-white" /></div>
         <div id="theme-settings" className={"settings-panel "+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-          <i class="settings-close ti-close"></i>
+          <div className='close-icon-theme' style={{marginTop:'-9px'}}> <FiXSquare className="settings-close ti-close" style={{width:'64px'}}/></div>
           <p class="settings-heading">SIDEBAR SKINS</p>
           <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
           <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>

@@ -27,7 +27,7 @@ const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
                   </li>
                   <li className='fs-6 text-black mt-5 pb-2 map'>
-                    <h5 className='fs-8 heading_5 remider' >NEW EMAIL</h5>
+                    <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark")} >NEW EMAIL</h5>
                     <p className='paragraph '>Please select an email type below to create your email.</p>
                   </li>
                 </div>
