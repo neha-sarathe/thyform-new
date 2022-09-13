@@ -1,0 +1,110 @@
+.auth.auth-img-bg .auth-form-transparents {
+    width: 85%;
+    // margin: auto;
+    // margin-top: 20px;
+}
+
+.brand-logo-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-top: 30px;
+    margin-bottom: 0rem !important;
+    width: 93%;
+}
+.dashboard-icon{
+    color: #dc143c;
+}
+.dashboard-icon svg{
+    fill:#dc143c ;
+}
+.brand-logo1 {
+    width: 197px !important;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 1rem !important;
+}
+
+.login-heading {
+    // padding-left: 14px;
+    line-height: 23px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 2px;
+}
+.form-div-loginpage{
+    width: 99%;
+    margin: auto;
+}
+
+.placeholder-login::placeholder{
+    padding: 1px; 
+    color:#aaa7a7 !important;
+}
+.login-bg {
+    background-color: #fff;
+}
+.login-here{
+    cursor: pointer;
+    color: #dc143c;
+}
+.login-here:hover{
+    cursor: pointer;
+    color: #f52b54 ;
+}
+.brand-logo1 img {
+    width: 100% !important;
+    height: auto;
+}
+
+.field-icon {
+    position: absolute;
+    right: 28px;
+    top: 12px;
+    cursor: pointer;
+    z-index: 12;
+}
+.login-text{
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.input-login {
+    background-color: transparent !important;
+    border: 1px solid #ced4da !important;
+    // color: #20252a ;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+
+.login-dark-text {
+    color: white !important;
+}
+
+.login-light-text {
+    color: black !important;
+}
+
+.input-login-light:focus {
+    background-color: transparent !important;
+    border: 1px solid #ced4da !important;
+    color: #20252a !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+
+.input-login-dark:focus {
+    background-color: transparent !important;
+    border: 1px solid #ced4da !important;
+    color: #ffffff !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+
+.input-login::target-text {
+    background-color: transparent !important;
+    border: 1px solid #ced4da !important;
+    color: #20252a !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+
+.chart-width {
+    width: 78%;
+    margin: 7.5rem auto;
+}

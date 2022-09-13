@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+// body{
+// 	background: #1E1F25;
+// }
+#heading-advanced{
+  display: none !important;
+}
+#heading-layout{
+  display: none !important;
+}
+#heading-data{
+  display: none !important;
+}
+#heading-premium{
+  display: none !important  ;
+}
+.calculater{
+  padding-top: 7px;
+}
+.calculater svg{
+  fill:#ffff
+}
+.jotlist{
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	max-width: 100%;
+	// justify-content: center;
+	text-align: center;
+    font-size: 17px;
+    position: fixed;
+    z-index: 1;
+	// background: linear-gradient(270deg,#ff6100,#ffb841 99.97%);
+
+}
+.jotlist-light{
+  background: linear-gradient(270deg,#dc143c,#dc143c 99.97%);
+  position: fixed;
+  z-index: 1000;
+  padding: 2px;
+}
+.jot-link {
+	padding: 1rem 2rem 1.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+	min-width: 20px;
+  font-size: 17px;
+}
+
+.logodashboard{
+  width: 55px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.jot-link:hover {
+  // background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-color: #f52b54 ;
+  background-size:  100%;
+  color: #ffffff;
+  animation: spring 300ms ease-out;
+  // text-shadow: 0 -1px 0 #ef816c;
+	// font-weight: bold;
+}
+.sidebar-link-jot ul:focus{
+  background-color: #f52b54  !important;
+  color: #ffffff;
+}
+// .jot-link:active {
+//   transform: translateY(4px);
+// }
+.jotlink-a{
+  // background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+
+  color:#ffffff ;
+}
+.jotlink-a:focus {
+  // background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-color:#f52b54  !important;
+  background-size:100%;
+  color:#ffffff ;
+}
+.jotlinkfocus{
+  background-color:#f52b54  !important;
+  color:#ffffff ;
+}
+.jotlink-a li:focus {
+
+  color:#ffffff !important;
+}
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+.shameless-plug{
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  padding: 8px 20px;
+  color: #ccc;
+  text-decoration: none;
+}
+.position-absolute {
+  left: 0px;
+  top: 0px;
+  width: 8px;
+  height: 85px;
+}
+/* css 10/8/22 */
+.preview-link {
+	padding: 0rem 1rem 0.15rem;
+  // text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+	min-width: 15px;
+  font-size: 14px;
+}
+.preview-link:hover {
+
+  background-color: blue;
+  background-size:  100%;
+  color: #fff;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+	font-weight: bold;
+}
+.icon-margin{
+  margin-right: 50px;
+}
+.smartphone {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 360px;
+  height: 640px;
+  background: white;
+}

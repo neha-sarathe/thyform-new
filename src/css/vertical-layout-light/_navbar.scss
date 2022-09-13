@@ -1,0 +1,34 @@
+.create-form-btn{   
+ background-color: #dc143c;
+border-color: #dc143c;
+padding: 2px;
+border-radius: 2px;
+outline: none;
+border: 1px solid #dc143c;
+padding: 3px;
+padding-right: 18px;
+padding-left: 18px;
+color: #fff;
+}
+.create-link{
+    text-decoration: none;
+    color: #fff;
+}
+.display_flex{
+    display: flex;
+}
+.react-datepicker__input-container input{
+    width: 85% !important;
+}
+/* previewNav css*/
+.resizedTextbox {
+    // width: 350px; 
+    width: 100%;
+    height: 25px; 
+    padding: 1px;
+margin-right: 2px;
+}
+.profile_margin {
+    margin-top: 10%;
+}
+
