@@ -23,7 +23,7 @@ export const MyProfile = (props) => {
             <ProfileSidebar props={props} />
           </div>
           <div className='col-md-10'>
-            {/* <div className='d-flex flex-row'> */}
+            <div className='d-flex flex-row'>
               {profilePic.preview ? (
                 <img src={profilePic.preview} alt="Profile Picture" className="img-lg rounded-circle " />
               ) : (
@@ -34,9 +34,9 @@ export const MyProfile = (props) => {
 
 
               {/* <FiEdit3 className='ml-5'/> */}
-              <div className=''>
+              <div className='mt-5'>
                 <label htmlFor="upload-button">
-                  <i className="fa fa-pencil-square fa-stack-2x ml-0" aria-hidden="true" >
+                  <i className="fa fa-pencil-square fa-stack-2x ml-0 icon_width" aria-hidden="true" >
                 <input
                   type="file"
                   id="upload-button"
@@ -44,7 +44,7 @@ export const MyProfile = (props) => {
                   onChange={handleChange1}
                 /></i></label>
               </div>
-            {/* </div> */}
+            </div>
             <form>
               <div class="row">
                 <div class="form-group col-md-6">
