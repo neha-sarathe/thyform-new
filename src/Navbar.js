@@ -247,7 +247,7 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
                 <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
                 <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
                 <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a> */}
-                <button className="dropdown-item" onClick={() => { localStorage.clear(); navigate("/"); window.location.reload(); }}><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</button>
+                <button className="dropdown-item" onClick={() => { localStorage.clear(); navigate("/"); window.location.reload(); }}><i class="dropdown-item-icon mdi mdi-power text-primary"></i>Sign Out</button>
                 </div>
               </div>
             </li>

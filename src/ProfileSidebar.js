@@ -10,19 +10,20 @@ export const ProfileSidebar = (props) => {
   console.log('path====',page[1])
     return (
         <>
-            <nav id="sidebars" className={'container profile_margin ' + (props
+            <nav className={'container m-0 profile_margin ' + (props
                 && props.props.darkmodes ? "text-white body-dark" : "text-dark bg-white")}>
-                <ul class="list-unstyled components">
+                <ul class="list-unstyled">
                     {/* <h4 className='side-head'>Profile Settings</h4> */}
                     <li>
-                        <div className={(page[1] === 'myprofile' ? 'list-sidebar-focus' : ' list-sidebarjotform')}>
-                        <Link to="/myprofile"><FiUser className='mb-1' />Edit Profile</Link>
+                    <Link to="/myprofile">
+                        <div className={'text-center p-2 '+ (page[1] === 'myprofile' ? 'list-sidebar-focus' : ' list-sidebarjotform')}>
+                       <FiUser className='mb-1 me-2' />Edit Profile
 
-</div>
+</div></Link>
                     </li>
 
                 </ul>
-            </nav>
+            </nav> 
         </>
     )
 }
