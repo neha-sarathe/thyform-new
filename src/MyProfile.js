@@ -26,32 +26,17 @@ export const MyProfile = (props) => {
       setName(value);
     }
   }
-  const [email, setEmail] = useState('');
-  const onEmail = e => {
-    const { value } = e.target;
-
-    console.log('Input value: ', value);
-
-    const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (value === "" || re.test(value)) {
-      setEmail(value);
-    }
-  }
   // const [email, setEmail] = useState('');
-  // const [error, setError] = useState(null);
-  // function isValidEmail(email) {
-  //   return /\S+@\S+\.\S+/.test(email);
-  // }
-  // const onEmail = event => {
-  //   if (!isValidEmail(event.target.value)) {
-  //     setError('Email is invalid');
-  //   } else {
-  //     setError(null);
+  // const onEmail = e => {
+  //   const { value } = e.target;
+
+  //   console.log('Input value: ', value);
+
+  //   const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  //   if (value === "" || re.test(value)) {
+  //     setEmail(value);
   //   }
-
-  //   setEmail(event.target.value);
-  // };
-
+  // }
 
   const [mobile, setMobile] = useState('');
   const onMobile = e => {
@@ -132,7 +117,7 @@ export const MyProfile = (props) => {
                 </div>
                 <div class="search-input-div col-md-6 pt-4">
                   <label>Email</label>
-                  <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Email" value={email} onChange={onEmail} />
+                  <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Email" />
                   {/* {error && <h2 style={{ color: 'red' }}>{error}</h2>} */}
                 </div>
                 <div class="search-input-div col-md-6">
