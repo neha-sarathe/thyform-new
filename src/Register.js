@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiSearch, FiChevronRight } from 'react-icons/fi'
 // import register2 from '../public/images/auth/register-bg.png'
 import Dark from "./DarkAuth";
 const Register = (props) => {
+
+  const navigate = useNavigate();
   const [radio, setRadio] = useState("Limited");
   const [show, setShow] = useState(false);
   const [text, setText] = useState(true);
@@ -17,11 +19,20 @@ const Register = (props) => {
   const [address, setAddress] = useState('');
   const [houseno, setHouseNo] = useState('');
   const [companynumber, setCompanyNumber] = useState(false)
+  const [selectedData, setSelectedData] = useState('')
+  const [directorSelect, setDirectorSelect] = useState('')
+  const [checked, setChecked] = useState(false);
+  const [error, setError] = useState(false);
+  const [businessError, setBusinessError] = useState(false);
+  const [directorError, setDirectorError] = useState(false);
+  const [checkError, setCheckError] = useState(false);
+  const [website, setWebsite] = useState(false);
+
+  console.log('error', error);
   const companyHandle = (value) => {
     setCompanyNumber(value)
   }
   const handleRadio = (value) => {
-    console.log(value, "value");
     setRadio(value);
   };
   useEffect(() => {
@@ -81,7 +92,6 @@ const Register = (props) => {
   const onBusinessName = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
 
     const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
     if (value === "" || re.test(value)) {
@@ -92,7 +102,6 @@ const Register = (props) => {
   const onEmployeesNo = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
 
     const re = /^[0-9\b]+$/;
     if (value === "" || re.test(value)) {
@@ -103,7 +112,6 @@ const Register = (props) => {
   const onSpend = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
 
     const re = /^[0-9\b]+$/;
     if (value === "" || re.test(value)) {
@@ -114,7 +122,6 @@ const Register = (props) => {
   const onAddress = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
 
     const re = /^[0-9a-zA-Z]+$/;
     if (value === "" || re.test(value)) {
@@ -125,7 +132,6 @@ const Register = (props) => {
   const onBusinessNameOther = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
 
     const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
     if (value === "" || re.test(value)) {
@@ -136,7 +142,6 @@ const Register = (props) => {
   const onEmployeesNoOther = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
 
     const re = /^[0-9\b]+$/;
     if (value === "" || re.test(value)) {
@@ -147,7 +152,6 @@ const Register = (props) => {
   const onSpendOther = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
 
     const re = /^[0-9\b]+$/;
     if (value === "" || re.test(value)) {
@@ -158,7 +162,6 @@ const Register = (props) => {
   const onHouseNo = e => {
     const { value } = e.target;
 
-    console.log('Input value: ', value);
 
     const re = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
     if (value === "" || re.test(value)) {
@@ -182,10 +185,12 @@ const Register = (props) => {
         console.log('Query not found')
 
       ref.current.focus();
+      setShowResults(false);
     }
     else {
       setShowResults(true);
     }
+    setError(false)
   };
   let A = [{
     name: 'alpha',
@@ -197,9 +202,55 @@ const Register = (props) => {
     item.status = false;
 
   }
-  console.log(A);
-  console.log('props.darkmodes', props.darkmodes)
-  const select_data = ['United States of America', 'United Kingdom', 'India', 'Germany', 'Argentina']
+  // const select_data = ['United States of America', 'United Kingdom', 'India', 'Germany', 'Argentina']
+  const select_data = [
+    { key: 'america', value: 'United States of America' },
+    { key: 'unitedkingdom', value: 'United Kingdom' },
+    { key: 'india', value: 'India' },
+    { key: 'germany', value: 'Germany' },
+    { key: 'argentina', value: 'Argentina' }
+  ]
+
+  const handleSelect = (value) => {
+    setSelectedData(value)
+    setBusinessError(false)
+  }
+  const handleDirectorSelect = (value) => {
+    setDirectorSelect(value)
+    setDirectorError(false)
+  }
+
+  const handleCheckbox = () => {
+    setChecked(!checked)
+    setCheckError(false)
+  }
+
+  const nextPage = () => {
+    if (txt === '') {
+      setError('We could not find that company. Please enter at least the first three characters of your company name or your full company registration number.')
+    } else if (selectedData === '') {
+      setBusinessError('Please select your business')
+    } else if (directorSelect === '') {
+      setDirectorError('Please select the relevant director name')
+    } else if (checked === false) {
+      setCheckError('Please confirm company details are correct')
+    } else {
+      navigate('/registertwo')
+    }
+    // if (checked === true && selectedData && directorSelect) {
+    //   navigate('/login')
+    // }else{
+    //   setError()
+    //   alert('plz check')
+    // }
+
+  }
+
+  const handleorganisation = (value) => {
+    console.log('value....', value);
+    setWebsite(value)
+  }
+
 
   return (
     <>
@@ -215,23 +266,23 @@ const Register = (props) => {
                 </div>
               </div>
 
-              <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                <div class="auth-form-transparent text-left p-3">
-                  <div class="brand-logo">
+              <div className="col-lg-6 d-flex align-items-center justify-content-center">
+                <div className="auth-form-transparent text-left p-3">
+                  <div className="brand-logo">
                     {/* <img
                       src="https://www.bootstrapdash.com/demo/star-admin2-pro/template/images/logo.svg"
                       alt="logo"
                     /> */}
                     <div>
-                      <a class="navbar-brand brand-logo" href="/">
+                      <a className="navbar-brand brand-logo" href="/">
                         <img src="../../images/Logo.png" alt="logo" />
                       </a>
 
                     </div>
                   </div>
-                  {/* <h6 class="mandatory">*This is a mandatory field</h6> */}
+                  {/* <h6 className="mandatory">*This is a mandatory field</h6> */}
                   <h4 className="heading-form dark-mode-text">Your business</h4>
-                  <h6 class="second-heading-form dark-mode-text">
+                  <h6 className="second-heading-form dark-mode-text">
                     Please select your business type:
                   </h6>
                   <input
@@ -245,7 +296,7 @@ const Register = (props) => {
                     }}
 
                   />
-                  <label for="individual" className={'dark-mode-text ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                  <label htmlFor="individual" className={'dark-mode-text ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                     <span></span>Limited Company
                   </label>
 
@@ -259,7 +310,7 @@ const Register = (props) => {
                       handleRadio("Sole");
                     }}
                   />
-                  <label for="organization" className="second-lable dark-mode-text">
+                  <label htmlFor="organization" className="second-lable dark-mode-text">
                     <span></span>Sole Trader
                   </label>
 
@@ -273,14 +324,14 @@ const Register = (props) => {
                       handleRadio("Other");
                     }}
                   />
-                  <label for="org" className="second-lable dark-mode-text">
+                  <label htmlFor="org" className="second-lable dark-mode-text">
                     <span></span>Other (e.g. Partnership)
                   </label>
                   {radio === "Limited" ? (
                     <>
                       {" "}
                       <br />
-                      <h6 class="second-heading-form dark-mode-text">Search by:</h6>
+                      <h6 className="second-heading-form dark-mode-text">Search by:</h6>
 
                       <input
                         id="users"
@@ -289,7 +340,7 @@ const Register = (props) => {
                         value="users"
                         onClick={() => { setText(true) }}
                       />
-                      <label for="users" className='dark-mode-text'>
+                      <label htmlFor="users" className='dark-mode-text'>
                         <span></span>Business name
                       </label>
                       <input
@@ -299,7 +350,7 @@ const Register = (props) => {
                         value="userss"
                         onClick={() => { setText(false) }}
                       />
-                      <label for="userss" className={"second-lable dark-mode-text " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
+                      <label htmlFor="userss" className={"second-lable dark-mode-text " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
                         <span></span>Company Registration Number
                       </label>
                       <div className="d-flex mt-5 pt-3">
@@ -320,7 +371,7 @@ const Register = (props) => {
                         </div>
                         <div className="ps-4">
                           <button type="submit" className="btn-default pt-2 pb-2" onClick={handleClick}>
-                            SEARCH &nbsp;  <i class="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
+                            SEARCH &nbsp;  <i className="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                           </button>
                         </div>
 
@@ -337,7 +388,7 @@ const Register = (props) => {
                         </p> : <p className="para-form">
                           Enter your full 8 digit company registration number. If your registration number is only seven digits, add a zero to the beginning. Companies registered in Scotland and Northern Ireland must add SC or NI to the beginning.
                         </p>}
-
+                        <p className="para-form show_result">{error}</p>
                       </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
@@ -346,28 +397,47 @@ const Register = (props) => {
                         <div className="search-input-div search-input-div1">
                           {/* <input type='se
                           arch' placeholder='Enter your business name*' className='search-input'/> */}
-                          <select
-                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                          {/* <select
+                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                             ref={ref}
+                            disabled={txt ? false : true}
+                            onChange={(event) => handleSelect(event.target.value)}
+                            value={currentFruit}
                           >
                             <option value=''>select</option>
                             {select_data && select_data.map((data, i) => <option key={i} value={data}>{data}</option>)}
+                          </select> */}
+                          <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            id="exampleFormControlSelect2"
+                            ref={ref}
+                            disabled={txt ? false : true}
+                            value={selectedData}
+                          >
+                            <option value=''>select</option>
+                            {select_data.map((option, index) => (
+                              <option key={index} value={option.value}>
+                                {option.value}
+                              </option>
+                            ))}
                           </select>
+                          <p className="para-form show_result">{businessError}</p>
+
                         </div>
                         {/* <div className="ps-5 para-form-div"> */}
                         {/* <p className='para-form'>Enter at least the first three characters of your company name or your full company registration number and press 'search' to locate your company details.</p> */}
                         {/* </div> */}
                       </div>
-                      <div className="d-flex mt-3 align-items-center">
+                      <div className="d-flex mt-3">
                         <div style={{ paddingRight: '25px' }}>
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Select director*</label>
                         </div>
                         <div className="search-input-div search-input-div1">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <select
-                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                          {/* <select
+                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
+                            disabled={selectedData ? false : true}
                           >
                             <option>Select director*</option>
                             <option>United States of America</option>
@@ -375,7 +445,25 @@ const Register = (props) => {
                             <option>India</option>
                             <option>Germany</option>
                             <option>Argentina</option>
+                          </select> */}
+                          <select onChange={(event) => handleDirectorSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            id="exampleFormControlSelect2"
+                            ref={ref}
+                            disabled={selectedData ? false : true}
+                            value={directorSelect}
+                          >
+                            <option value=''>select</option>
+                            {select_data.map((option, index) => (
+                              <option key={index} value={option.value}>
+                                {option.value}
+                              </option>
+                            ))}
                           </select>
+                          <p className="para-form show_result">{directorError}</p>
+                          {
+                            selectedData ? <h6 className="mt-1">Please select the senior director. For example, a director with the majority of shareholdings or voting rights for the company.</h6> : ''
+                          }
+
                         </div>
 
                       </div>
@@ -384,37 +472,81 @@ const Register = (props) => {
                           <div className="register-number"><label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Company registration number</label></div>
                         </div>
                         <div className="search-input-div ">
-                          {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <p>None selected</p>
+                          {directorSelect ? <p>09529679</p> : <p>None selected</p>
+
+                          }
                         </div>
 
                       </div>
                       <div className="d-flex mt-4 align-items-center">
                         <div style={{ paddingRight: '17px' }}>
-                          <div className="register-number">  <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address*</label></div>
+                          <div className="register-number">
+                            <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address*</label>
+                          </div>
                         </div>
                         <div className="search-input-div ">
-                          {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <p>None selected</p>
-                        </div>
+                          {directorSelect ? <>
+                            <p>10 Greenwich Court 43 Autumn Way</p>
+                            <p>West Drayton</p>
+                            <p>UB7 9FB</p>
+                          </> : <p>None selected</p>
 
+                          }
+                        </div>
                       </div>
+                      {directorSelect ?
+                        <>
+                          <div className="d-flex mt-4">
+                            <div style={{ paddingRight: '17px' }}>
+                              <div className="register-number">
+                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Persons with significant control (PSCs)</label>
+                              </div>
+                            </div>
+                            <div className="search-input-div ">
+                              <p>2 active PSCs</p>
+                              <p>Name</p>
+                              <h6 className="fw-bold">Mr Seifudin Mohamedali</h6>
+                              <p>Name</p>
+                              <h6 className="fw-bold">Mr Taha Mohamedali</h6>
+                            </div>
+                            <div className="search-input-div pt-4">
+                              <p></p>
+                              <p>Date Of Birth</p>
+                              <h6 className="fw-bold">August 1947</h6>
+                              <p>Date Of Birth</p>
+                              <h6 className="fw-bold">May 1975</h6>
+                            </div>
+                          </div>
+                          <label className="float-none d-flex align-items-start mt-4" style={{ cursor: "pointer" }}>
+                            <input type="checkbox"
+                              defaultChecked={checked}
+                              onChange={handleCheckbox}
+                              className="mx-3"
+                            />
+                            <div><h6 className="fw-bold">I confirm that the company details are correct - including all persons with significant control.</h6>
+                              <h6 className="fw-bold mt-3">This information is based on Companies House records. If it isn’t correct you’ll need to submit a <a href="/#" className="text-primary">Confirmation Statement</a> to update your details before you apply.</h6></div>
+                          </label>
+                          <p className="para-form show_result">{checkError}</p>
+                        </>
+                        :
+                        ''}
 
                       <hr />
-                      <div class="mt-3 text-end d-flex align-items-center justify-content-between">
+                      <div className="mt-3 text-end d-flex align-items-center justify-content-between">
                         <p className="already-login">
                           Already account please{" "}
-                          <Link to="/login" class="auth-link register-here register-here">
+                          <Link to="/login" className="auth-link register-here register-here">
                             Login
                           </Link>{" "}
 
                         </p>
-                        <Link
+                        {/* <Link
                           className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
-                          to="/login"
+                          to ={checked==true? "/login" :'/'}
                         >
                           Next <FiChevronRight />
-                        </Link>
+                        </Link> */}
+                        <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button>
                       </div>
                     </>
                   ) : radio === "Sole" ? (
@@ -428,7 +560,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                            className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter Your Business Name"
                             value={txtbn}
                             onChange={onBusinessName}
@@ -443,7 +575,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -462,7 +594,7 @@ const Register = (props) => {
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
+                          <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno}
                             onChange={onEmployeesNo} />
                         </div>
@@ -475,7 +607,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                       
                           <select
-                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -495,11 +627,11 @@ const Register = (props) => {
                         </div>
                         {/* <div className="search-input-div">
                          
-                          <input type="text" class="search-input" />
+                          <input type="text" className="search-input" />
                         </div> */}
-                        <div class="input-group search-input-div">
-                          <span class="input-group-text" id="basic-addon1">£</span>
-                          <input type="text" class={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
+                        <div className="input-group search-input-div">
+                          <span className="input-group-text" id="basic-addon1">£</span>
+                          <input type="text" className={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend} onChange={onSpend} />
                         </div>
                       </div>
@@ -510,16 +642,34 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            onChange={(event) => handleorganisation(event.target.value)}
+                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
-                          >
+                          >Website address*
                             <option>Select</option>
-                            <option>Yes</option>
-                            <option>No</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
                           </select>
                         </div>
 
                       </div>
+                      {website === 'yes' ?
+                        <div className="d-flex mt-4 align-items-center">
+                          <div className=" lables-div">
+                            <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Website address*</label>
+                          </div>
+                          <div className="search-input-div">
+                            <input
+                              type="text"
+                              className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                              value={'www'}
+                              onChange={onBusinessName}
+                            />
+                          </div>
+
+                        </div>
+                        : ''}
+
                       {/*
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
@@ -531,7 +681,7 @@ const Register = (props) => {
                           
                           <input
                             type="text"
-                            class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                            className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter"
                           />
                         </div>
@@ -539,14 +689,15 @@ const Register = (props) => {
                       </div>
                       */}
                       <hr />
-                      <div class="mt-3 text-end d-flex align-items-center justify-content-between">
+                      <div className="mt-3 text-end d-flex align-items-center justify-content-between">
                         <p className="already-login">
                           Already account please{" "}
-                          <Link to="/login" class="auth-link register-here">
+                          <Link to="/login" className="auth-link register-here">
                             Login
                           </Link>{" "}
 
                         </p>
+                        {/* <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button> */}
                         <Link
                           className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
                           to="/login"
@@ -566,7 +717,7 @@ const Register = (props) => {
                       {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                       {/*   <input
                             type="text"
-                            class="search-input"
+                            className="search-input"
                             placeholder="Business Type"
                           />
                         </div>
@@ -582,7 +733,7 @@ const Register = (props) => {
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <input
                             type="text"
-                            class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                            className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Business name"
                             value={txtbn2}
                             onChange={onBusinessNameOther}
@@ -597,7 +748,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -617,7 +768,7 @@ const Register = (props) => {
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
+                          <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno2}
                             onChange={onEmployeesNoOther} />
                         </div>
@@ -635,7 +786,7 @@ const Register = (props) => {
                           />
                             <div className="ps-4 find-btn-postcode">
                               <button type="submit" className="btn-default btn-find-post">
-                                Find &nbsp;  <i class="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
+                                Find &nbsp;  <i className="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                               </button>
                             </div></div>
                           {!show ? (
@@ -672,7 +823,7 @@ const Register = (props) => {
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                                 <input
                                   type="text"
-                                  class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                                  className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                   placeholder="Building No. or name"
                                 />
                               </div>
@@ -684,7 +835,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                                <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                   value={houseno}
                                   onChange={onHouseNo} />
                               </div>
@@ -696,7 +847,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                                <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                   value={address}
                                   onChange={onAddress} />
                               </div>
@@ -708,7 +859,7 @@ const Register = (props) => {
                               </div>
                               <div className="search-input-div">
                                 {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                                <input type="text" class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} />
+                                <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} />
                               </div>
 
                             </div>
@@ -725,7 +876,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                          
                           <select
-                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -745,7 +896,7 @@ const Register = (props) => {
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                      {/*     <input type="text" class="search-input"
+                      {/*     <input type="text" className="search-input"
                             value={spend} onChange={onSpend} />
                         </div>
 
@@ -759,11 +910,11 @@ const Register = (props) => {
                         </div>
                         {/* <div className="search-input-div">
                          
-                          <input type="text" class="search-input" />
+                          <input type="text" className="search-input" />
                         </div> */}
-                        <div class="input-group search-input-div">
-                          <span class="input-group-text" id="basic-addon1">£</span>
-                          <input type="text" class={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
+                        <div className="input-group search-input-div">
+                          <span className="input-group-text" id="basic-addon1">£</span>
+                          <input type="text" className={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend2} onChange={onSpendOther} />
                         </div>
                       </div>
@@ -775,7 +926,7 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                            class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
@@ -796,7 +947,7 @@ const Register = (props) => {
                           
                           <input
                             type="text"
-                            class={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                            className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             placeholder="Enter"
                           />
                         </div>
@@ -805,7 +956,7 @@ const Register = (props) => {
                       */}
                       <hr />
 
-                      <div class="mt-3 text-end">
+                      <div className="mt-3 text-end">
                         <Link
                           className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
                           to="/login"
@@ -816,32 +967,32 @@ const Register = (props) => {
                     </>
                   )}
 
-                  {/* <form class="pt-3">
-                <div class="form-group">
+                  {/* <form className="pt-3">
+                <div className="form-group">
                   <label>Username</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend bg-transparent">
-                      <span class="input-group-text bg-transparent border-right-0">
-                        <i class="ti-user text-primary"></i>
+                  <div className="input-group">
+                    <div className="input-group-prepend bg-transparent">
+                      <span className="input-group-text bg-transparent border-right-0">
+                        <i className="ti-user text-primary"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control form-control-lg border-left-0" placeholder="Username"/>
+                    <input type="text" className="form-control form-control-lg border-left-0" placeholder="Username"/>
                   </div>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <label>Email</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend bg-transparent">
-                      <span class="input-group-text bg-transparent border-right-0">
-                        <i class="ti-email text-primary"></i>
+                  <div className="input-group">
+                    <div className="input-group-prepend bg-transparent">
+                      <span className="input-group-text bg-transparent border-right-0">
+                        <i className="ti-email text-primary"></i>
                       </span>
                     </div>
-                    <input type="email" class="form-control form-control-lg border-left-0" placeholder="Email"/>
+                    <input type="email" className="form-control form-control-lg border-left-0" placeholder="Email"/>
                   </div>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <label>Country</label>
-                  <select class="form-control form-control-lg" id="exampleFormControlSelect2">
+                  <select className="form-control form-control-lg" id="exampleFormControlSelect2">
                     <option>Country</option>
                     <option>United States of America</option>
                     <option>United Kingdom</option>
@@ -850,30 +1001,30 @@ const Register = (props) => {
                     <option>Argentina</option>
                   </select>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <label>Password</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend bg-transparent">
-                      <span class="input-group-text bg-transparent border-right-0">
-                        <i class="ti-lock text-primary"></i>
+                  <div className="input-group">
+                    <div className="input-group-prepend bg-transparent">
+                      <span className="input-group-text bg-transparent border-right-0">
+                        <i className="ti-lock text-primary"></i>
                       </span>
                     </div>
-                    <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password"/>                        
+                    <input type="password" className="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password"/>                        
                   </div>
                 </div>
-                <div class="mb-4">
-                  <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input"/>
+                <div className="mb-4">
+                  <div className="form-check">
+                    <label className="form-check-label text-muted">
+                      <input type="checkbox" className="form-check-input"/>
                       I agree to all Terms & Conditions
                     </label>
                   </div>
                 </div>
-                <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a>
+                <div className="mt-3">
+                  <a className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a>
                 </div>
-                <div class="text-center mt-4 fw-light">
-                  Already have an account? <a href="login.html" class="text-primary">Login</a>
+                <div className="text-center mt-4 fw-light">
+                  Already have an account? <a href="login.html" className="text-primary">Login</a>
                 </div>
               </form> */}
                 </div>

@@ -49,6 +49,7 @@ import Myform from './pages/Myform';
 import Assignform from './pages/Assignform';
 import Inbox from './pages/Inbox';
 import { MyProfile } from './MyProfile';
+import RegisterTwo from './userpages/RegisterTwo';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -158,11 +159,13 @@ function App() {
 
         </Router>
 
-      ) : window.location.pathname === '/' || window.location.pathname === "/login" ? (<Router>
+      ) : window.location.pathname === '/' || window.location.pathname === "/login" || window.location.pathname === "/registertwo" ? (<Router>
         <Routes>
           {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
           <Route path="/" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          {/* <Route path="/registertwo" element={<RegisterTwo /> */}
           <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} usertoken={user} />} />
 
 
