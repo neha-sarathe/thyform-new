@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FiSearch, FiChevronRight } from 'react-icons/fi'
 // import register2 from '../public/images/auth/register-bg.png'
@@ -165,7 +165,42 @@ const Register = (props) => {
       setHouseNo(value);
     }
   }
+  const [showResults, setShowResults] = useState(false)
+  const ref = useRef(null);
+  const handleClick = () => {
+    if (txt && txt.length >= 3) {
+      const query = txt;
+
+      const ar = [{ link: "apple" },
+      { link: "google" },
+      { link: "microsoft" }]
+
+      const result = ar.find(item => item.link.includes(query))
+      if (result)
+        console.log(result.link)
+      else
+        console.log('Query not found')
+
+      ref.current.focus();
+    }
+    else {
+      setShowResults(true);
+    }
+  };
+  let A = [{
+    name: 'alpha',
+    name: 'beta',
+  }
+  ]
+
+  for (let item of A) {
+    item.status = false;
+
+  }
+  console.log(A);
   console.log('props.darkmodes', props.darkmodes)
+  const select_data = ['United States of America', 'United Kingdom', 'India', 'Germany', 'Argentina']
+
   return (
     <>
       <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -284,7 +319,7 @@ const Register = (props) => {
                           />}
                         </div>
                         <div className="ps-4">
-                          <button type="submit" className="btn-default pt-2 pb-2">
+                          <button type="submit" className="btn-default pt-2 pb-2" onClick={handleClick}>
                             SEARCH &nbsp;  <i class="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                           </button>
                         </div>
@@ -292,10 +327,13 @@ const Register = (props) => {
                       </div>
                       <div className="ps-1 mt-3 para-form-div">
                         {text ? <p className="para-form">
-                          Enter at least the first three characters of your
-                          company name or your full company registration
-                          number and press 'search' to locate your company
-                          details.
+                          {showResults ?
+                            <p className="para-form show_result"> We couldn't find that company. Please enter at least the first three characters of your company name or your full company registration number.</p>
+                            : <p className="para-form"> "Enter at least the first three characters of your
+                              company name or your full company registration
+                              number and press search to locate your company
+                              details." </p>}
+
                         </p> : <p className="para-form">
                           Enter your full 8 digit company registration number. If your registration number is only seven digits, add a zero to the beginning. Companies registered in Scotland and Northern Ireland must add SC or NI to the beginning.
                         </p>}
@@ -311,14 +349,10 @@ const Register = (props) => {
                           <select
                             class={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
-
+                            ref={ref}
                           >
-                            <option>Select business</option>
-                            <option>United States of America</option>
-                            <option>United Kingdom</option>
-                            <option>India</option>
-                            <option>Germany</option>
-                            <option>Argentina</option>
+                            <option value=''>select</option>
+                            {select_data && select_data.map((data, i) => <option key={i} value={data}>{data}</option>)}
                           </select>
                         </div>
                         {/* <div className="ps-5 para-form-div"> */}
@@ -434,7 +468,7 @@ const Register = (props) => {
                         </div>
 
                       </div>
-                   {  /* <div className="d-flex mt-3 align-items-center">
+                      {  /* <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Are you a contractor or freelancer?*</label>
                         </div>
@@ -486,7 +520,7 @@ const Register = (props) => {
                         </div>
 
                       </div>
-                    {/*
+                      {/*
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
@@ -751,7 +785,7 @@ const Register = (props) => {
                         </div>
 
                       </div>
-{/*
+                      {/*
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
