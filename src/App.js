@@ -52,6 +52,7 @@ import { MyProfile } from './MyProfile';
 import { Archive } from './pages/Archive';
 import { Trash } from './pages/Trash';
 
+import RegisterTwo from './userpages/RegisterTwo';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -111,10 +112,10 @@ function App() {
           </div></div>
         </>
       ) : user && window.location.pathname === '/allform/allform' || window.location.pathname === '/allform/inbox'
-     || window.location.pathname === '/allform/archive' || window.location.pathname === '/allform/trash' || window.location.pathname === "/allform/myform" || window.location.pathname
+        || window.location.pathname === '/allform/archive' || window.location.pathname === '/allform/trash' || window.location.pathname === "/allform/myform" || window.location.pathname
         === "/allform/assignform" ? (
         <Router>
-       
+
           <Routes>
             <Route path='/allform/allform' element={<Allform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/allform/myform' element={<Myform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
@@ -134,7 +135,7 @@ function App() {
         || window.location.pathname === "/setting/mobilenotification" ? (
 
         <Router>
-          {checked ?  <div className='d-flex fixed-top'><div className='jotlogo-width'>  <div className='allform-logo-div'>
+          {checked ? <div className='d-flex fixed-top'><div className='jotlogo-width'>  <div className='allform-logo-div'>
             <a class="navbar-brand brand-logo" href="#">
               <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
             </a>
@@ -164,11 +165,13 @@ function App() {
 
         </Router>
 
-      ) : window.location.pathname === '/' || window.location.pathname === "/login" ? (<Router>
+      ) : window.location.pathname === '/' || window.location.pathname === "/login" || window.location.pathname === "/registertwo" ? (<Router>
         <Routes>
           {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
           <Route path="/" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          {/* <Route path="/registertwo" element={<RegisterTwo /> */}
           <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} usertoken={user} />} />
 
 
