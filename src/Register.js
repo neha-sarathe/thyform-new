@@ -14,6 +14,7 @@ const Register = (props) => {
   const [txtbn2, setTxtbn2] = useState('');
   const [txtno, setTxtno] = useState('');
   const [txtno2, setTxtno2] = useState('');
+  const [postCode, setpostCode] = useState('');
   const [spend, setSpend] = useState('');
   const [spend2, setSpend2] = useState('');
   const [address, setAddress] = useState('');
@@ -149,6 +150,7 @@ const Register = (props) => {
     if (value === "" || re.test(value)) {
       setTxtbn2(value);
     }
+    setOtherBusinessError(false)
   }
 
   const onEmployeesNoOther = e => {
@@ -159,6 +161,12 @@ const Register = (props) => {
     if (value === "" || re.test(value)) {
       setTxtno2(value);
     }
+    setOtherempError(false)
+  }
+  const onPostcode = e =>{
+    const { value } = e.target;
+    setpostCode(value)
+    setOtherPostcodeError(false)
   }
 
   const onSpendOther = e => {
@@ -169,6 +177,7 @@ const Register = (props) => {
     if (value === "" || re.test(value)) {
       setSpend2(value);
     }
+    setOtherSpendError(false)
   }
 
   const onHouseNo = e => {
@@ -236,6 +245,14 @@ const Register = (props) => {
     setChecked(!checked)
     setCheckError(false)
   }
+
+  const [otherBusinessError, setOtherBusinessError] = useState(false);
+  const [otherIndustryError, setOtherIndustryError] = useState(false);
+  const [otherempError, setOtherempError] = useState(false);
+  const [otherPostcodeError, setOtherPostcodeError] = useState(false);
+  const [otherSpendError, setOtherSpendError] = useState(false);
+  const [otherWebsiteError, setOtherWebsiteError] = useState(false);
+  
   const nextPage = () => {
     if (radio === "Limited") {
       if (txt === '') {
@@ -264,7 +281,19 @@ const Register = (props) => {
         navigate('/registerthree')
       }
     } else {
-      navigate('/registerfour')
+      if (txtbn2 === '') {
+        setOtherBusinessError('Please select your business type')
+      }else if (txtno2 === '') {
+        setOtherIndustryError('Please select your business type')
+      }else if (txtno2 === '') {
+        setOtherempError('Please select your business type')
+      }else if (postCode === '') {
+        setOtherPostcodeError('Please select your business type')
+      }else if (spend2 === '') {
+        setOtherSpendError('Please select your business type')
+      }else{
+        navigate('/registerfour')
+      } 
     }
 
   }
@@ -786,6 +815,7 @@ const Register = (props) => {
                             value={txtbn2}
                             onChange={onBusinessNameOther}
                           />
+                          <p className="para-form show_result">{otherBusinessError}</p>
                         </div>
 
                       </div>
@@ -806,6 +836,7 @@ const Register = (props) => {
                             <option>Germany</option>
                             <option>Argentina</option>
                           </select>
+                          <p className="para-form show_result">{otherIndustryError}</p>
                         </div>
 
                       </div>
@@ -819,6 +850,7 @@ const Register = (props) => {
                           <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno2}
                             onChange={onEmployeesNoOther} />
+                            <p className="para-form show_result">{otherempError}</p>
                         </div>
 
                       </div>
@@ -827,16 +859,21 @@ const Register = (props) => {
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business postcode*</label>
                         </div>
                         <div className="search-input-div div-search-input">
-                          <div className="d-flex"><input
+                          <div className="d-flex">
+                            <input
                             type="text"
+                            onChange={onPostcode}
+                            value={postCode}
                             placeholder="Enter your postcode*"
                             className={"search-input search-input-post " + (props.darkmodes ? "text-white" : "text-dark")}
                           />
+                          
                             <div className="ps-4 find-btn-postcode">
                               <button type="submit" className="btn-default btn-find-post">
                                 Find &nbsp;  <i className="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                               </button>
                             </div></div>
+                            <p className="para-form show_result">{otherPostcodeError}</p>
                           {!show ? (
                             <p
                               onClick={() => {
@@ -965,6 +1002,7 @@ const Register = (props) => {
                           <input type="text" className={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend2} onChange={onSpendOther} />
                         </div>
+                        <p className="para-form show_result">{otherSpendError}</p>
                       </div>
 
                       <div className="d-flex mt-3 align-items-center">
