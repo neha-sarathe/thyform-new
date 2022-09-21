@@ -27,6 +27,15 @@ const Register = (props) => {
   const [directorError, setDirectorError] = useState(false);
   const [checkError, setCheckError] = useState(false);
   const [website, setWebsite] = useState(false);
+  const [websiteName, setWebsiteName] = useState('www');
+  const [soleError, setSoleError] = useState(false);
+  const [industryError, setIndustryError] = useState(false);
+  const [employError, setEmployError] = useState(false);
+  const [spendError, setSpendError] = useState(false);
+  const [websiteSoleError, setWebsiteSoleError] = useState(false);
+  const [industryData, setIndustryData] = useState('');
+  const [websiteUrl, setWebsiteUrl] = useState(false);
+
 
   console.log('error', error);
   const companyHandle = (value) => {
@@ -97,6 +106,7 @@ const Register = (props) => {
     if (value === "" || re.test(value)) {
       setTxtbn(value);
     }
+    setSoleError(false)
   }
 
   const onEmployeesNo = e => {
@@ -107,6 +117,7 @@ const Register = (props) => {
     if (value === "" || re.test(value)) {
       setTxtno(value);
     }
+    setEmployError(false)
   }
 
   const onSpend = e => {
@@ -117,6 +128,7 @@ const Register = (props) => {
     if (value === "" || re.test(value)) {
       setSpend(value);
     }
+    setSpendError(false)
   }
 
   const onAddress = e => {
@@ -224,32 +236,60 @@ const Register = (props) => {
     setChecked(!checked)
     setCheckError(false)
   }
-
   const nextPage = () => {
-    if (txt === '') {
-      setError('We could not find that company. Please enter at least the first three characters of your company name or your full company registration number.')
-    } else if (selectedData === '') {
-      setBusinessError('Please select your business')
-    } else if (directorSelect === '') {
-      setDirectorError('Please select the relevant director name')
-    } else if (checked === false) {
-      setCheckError('Please confirm company details are correct')
+    if (radio === "Limited") {
+      if (txt === '') {
+        setError('We could not find that company. Please enter at least the first three characters of your company name or your full company registration number.')
+      } else if (selectedData === '') {
+        setBusinessError('Please select your business')
+      } else if (directorSelect === '') {
+        setDirectorError('Please select the relevant director name')
+      } else if (checked === false) {
+        setCheckError('Please confirm company details are correct')
+      } else {
+        navigate('/registertwo')
+      }
+    } else if (radio === "Sole") {
+      if (txtbn === '') {
+        setSoleError('Please enter your business name')
+      } else if (industryData === '') {
+        setIndustryError('Please select an industry from the dropdown. If your industry isn not listed, select other')
+      } else if (txtno === '') {
+        setEmployError('Please enter the number of employees your business has using only numbers')
+      } else if (spend === '') {
+        setSpendError('Please enter the expected monthly spend for this account')
+      } else if (website === false) {
+        setWebsiteSoleError('Please select yes or no')
+      } else {
+        navigate('/registerthree')
+      }
     } else {
-      navigate('/registertwo')
+      navigate('/registerfour')
     }
-    // if (checked === true && selectedData && directorSelect) {
-    //   navigate('/login')
-    // }else{
-    //   setError()
-    //   alert('plz check')
-    // }
 
   }
 
   const handleorganisation = (value) => {
-    console.log('value....', value);
     setWebsite(value)
+    setWebsiteSoleError(false)
   }
+
+  const handleIndustry = (value) => {
+    setIndustryData(value)
+    setIndustryError(false)
+  }
+  const onWebsite = (value) => {
+    setWebsiteName(value)
+    var res = websiteName.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    console.log('res', res);
+    if (res == null) {
+      setWebsiteUrl('Please enter a valid website address')
+    }
+    else {
+      setWebsiteUrl(true)
+    }
+  }
+
 
 
   return (
@@ -554,7 +594,7 @@ const Register = (props) => {
                       {" "}     <br />
                       <div className="d-flex mt-4 align-items-center">
                         <div className=" lables-div">
-                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business name*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business name..*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -565,6 +605,7 @@ const Register = (props) => {
                             value={txtbn}
                             onChange={onBusinessName}
                           />
+                          <p className="para-form show_result">{soleError}</p>
                         </div>
 
                       </div>
@@ -575,19 +616,23 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
+                            onChange={(event) => handleIndustry(event.target.value)}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
+                            value={industryData}
                           >
                             <option>Select</option>
-                            <option>United States of America</option>
-                            <option>United Kingdom</option>
-                            <option>India</option>
-                            <option>Germany</option>
-                            <option>Argentina</option>
+                            <option value="america">United States of America</option>
+                            <option value="kingdom">United Kingdom</option>
+                            <option value="india">India</option>
+                            <option value="germany">Germany</option>
+                            <option value="argentina">Argentina</option>
                           </select>
+                          <p className="para-form show_result">{industryError}</p>
                         </div>
 
                       </div>
+
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
@@ -597,6 +642,7 @@ const Register = (props) => {
                           <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno}
                             onChange={onEmployeesNo} />
+                          <p className="para-form show_result">{employError}</p>
                         </div>
 
                       </div>
@@ -633,6 +679,7 @@ const Register = (props) => {
                           <span className="input-group-text" id="basic-addon1">£</span>
                           <input type="text" className={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend} onChange={onSpend} />
+                          <p className="para-form show_result">{spendError}</p>
                         </div>
                       </div>
                       <div className="d-flex mt-3 align-items-center">
@@ -650,6 +697,7 @@ const Register = (props) => {
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                           </select>
+                          <p className="para-form show_result">{websiteSoleError}</p>
                         </div>
 
                       </div>
@@ -662,11 +710,11 @@ const Register = (props) => {
                             <input
                               type="text"
                               className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                              value={'www'}
-                              onChange={onBusinessName}
+                              value={websiteName}
+                              onChange={(event) => onWebsite(event.target.value)}
                             />
+                            <p className="para-form show_result">{websiteUrl}</p>
                           </div>
-
                         </div>
                         : ''}
 
@@ -697,13 +745,13 @@ const Register = (props) => {
                           </Link>{" "}
 
                         </p>
-                        {/* <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button> */}
-                        <Link
+                        <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button>
+                        {/* <Link
                           className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
-                          to="/login"
+                          to="/registerthree"
                         >
                           Next <FiChevronRight />
-                        </Link>
+                        </Link> */}
                       </div>
                     </>
                   ) : (
@@ -957,12 +1005,13 @@ const Register = (props) => {
                       <hr />
 
                       <div className="mt-3 text-end">
-                        <Link
+                        <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button>
+                        {/* <Link
                           className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
                           to="/login"
                         >
                           Next <FiChevronRight />
-                        </Link>
+                        </Link> */}
                       </div>
                     </>
                   )}

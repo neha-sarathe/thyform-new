@@ -50,6 +50,9 @@ import Assignform from './pages/Assignform';
 import Inbox from './pages/Inbox';
 import { MyProfile } from './MyProfile';
 import RegisterTwo from './userpages/RegisterTwo';
+import RegisterThree from './userpages/RegisterThree';
+import RegisterFour from './userpages/RegisterFour';
+import PersonalDetails from './userpages/personaldetails/PersonalDetails';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -73,7 +76,6 @@ function App() {
   const [jottoggled, setJottoggled] = useState(false);
   const [register, setregister] = React.useState("/");
   const [darkmode, setDarkmode] = useState(false)
-  console.log(user, 'user9999')
   useEffect(() => {
     const token_get = localStorage.getItem('user')
     if (token_get) {
@@ -83,7 +85,6 @@ function App() {
   }, [])
   const handleLogin = () => localStorage.setItem('user', 'token');
   const handleLogout = () => setUser('');
-  console.log(window.location.pathname, 'window.location.pathname')
 
   return (
     <>
@@ -159,13 +160,15 @@ function App() {
 
         </Router>
 
-      ) : window.location.pathname === '/' || window.location.pathname === "/login" || window.location.pathname === "/registertwo" ? (<Router>
+      ) : window.location.pathname === '/' || window.location.pathname === "/login" || window.location.pathname === "/registertwo" || window.location.pathname === "/registerthree" || window.location.pathname === "/registerfour" || window.location.pathname === "/personaldetails" ? (<Router>
         <Routes>
           {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
           <Route path="/" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-          {/* <Route path="/registertwo" element={<RegisterTwo /> */}
+          <Route path="/registerthree" element={<RegisterThree darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/registerfour" element={<RegisterFour darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/personaldetails" element={<PersonalDetails darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} usertoken={user} />} />
 
 

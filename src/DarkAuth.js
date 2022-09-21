@@ -4,7 +4,6 @@ import $ from "jquery";
 import { FiXSquare } from "react-icons/fi";
 import { FiMoon,FiSun } from "react-icons/fi";
 const Dark = ({ darkmodes, setDarkmodes }) => {
-    console.log(darkmodes, 'darkmodes')
     $(function () {
         $(".nav-settings").on("click", function () {
             $("#right-sidebar").toggleClass("open");
@@ -43,20 +42,20 @@ const Dark = ({ darkmodes, setDarkmodes }) => {
     }
     return (
         <>
-            <div class="theme-setting-wrapper">
-                <div id="settings-trigger"><FiSettings class="text-white" /></div>
-                <div id="theme-settings" class={"settings-panel " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                   <div className='close-icon-theme' style={{marginTop:'-9px'}}> <FiXSquare class="settings-close ti-close" style={{width:'64px'}} /></div>
+            <div className="theme-setting-wrapper">
+                <div id="settings-trigger"><FiSettings className="text-white" /></div>
+                <div id="theme-settings" className={"settings-panel " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                   <div className='close-icon-theme' style={{marginTop:'-9px'}}> <FiXSquare className="settings-close ti-close" style={{width:'64px'}} /></div>
 
                     <p className={"settings-heading mt-2 "+ (darkmodes ? "text-white " : "text-dark ")}>Choose your theme</p>
-                    <div class="color-tiles mx-0 px-4">
+                    <div className="color-tiles mx-0 px-4">
 
-                        {/* <div class="tiles dark" onClick={handleMode}> <p className='dark-mode-click-text'>dark</p></div>
+                        {/* <div className="tiles dark" onClick={handleMode}> <p className='dark-mode-click-text'>dark</p></div>
                        
-                        <div class="tiles default" onClick={handletheme}><p className='dark-mode-click-text'>white</p></div> */}
+                        <div className="tiles default" onClick={handletheme}><p className='dark-mode-click-text'>white</p></div> */}
                
-                        <button type="button" class="btn btn-primary btn-rounded" onClick={handletheme}><FiSun className='mb-1'/> Light</button>
-                        <button type="button" class="btn btn-primary btn-rounded" onClick={handleMode}> <FiMoon className='mb-1'/> Dark</button>
+                        <button type="button" className="btn btn-primary btn-rounded" onClick={handletheme}><FiSun className='mb-1'/> Light</button>
+                        <button type="button" className="btn btn-primary btn-rounded" onClick={handleMode}> <FiMoon className='mb-1'/> Dark</button>
                     </div>
 
                 </div>
