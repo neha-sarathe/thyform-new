@@ -49,6 +49,9 @@ import Myform from './pages/Myform';
 import Assignform from './pages/Assignform';
 import Inbox from './pages/Inbox';
 import { MyProfile } from './MyProfile';
+import { Archive } from './pages/Archive';
+import { Trash } from './pages/Trash';
+
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -107,7 +110,8 @@ function App() {
 
           </div></div>
         </>
-      ) : user && window.location.pathname === '/allform/allform' || window.location.pathname === '/allform/inbox'|| window.location.pathname === "/allform/myform" || window.location.pathname
+      ) : user && window.location.pathname === '/allform/allform' || window.location.pathname === '/allform/inbox'
+     || window.location.pathname === '/allform/archive' || window.location.pathname === '/allform/trash' || window.location.pathname === "/allform/myform" || window.location.pathname
         === "/allform/assignform" ? (
         <Router>
        
@@ -116,6 +120,8 @@ function App() {
             <Route path='/allform/myform' element={<Myform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/allform/assignform' element={<Assignform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/allform/inbox' element={<Inbox darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/archive' element={<Archive darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/trash' element={<Trash darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           </Routes>
         </Router>
 

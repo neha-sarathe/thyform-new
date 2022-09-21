@@ -405,3 +405,31 @@ color: red;
 .formbuilder-light {
     height: 100vh !important;
 }
+.full_width{
+    width: 100%;
+}
+.trans_background{
+    background:transparent !important;
+}
+.navbar_margin {
+    margin-bottom: 20px !important;
+}
+.link_color{
+    color: #616161 !important;
+}
+.form_padding{
+    padding-left: 30px !important;
+}
+.btn_height{
+    height: 44px;
+}
+
+/* search button color css changes on inbox page */
+
+.btn-outline-secondary{color:#dc143c;border-color:#dc143c}
+.btn-outline-secondary:hover{color:#fff;background-color:#dc143c;border-color:#dc143c}
+
+.search_col{
+    background-color: transparent;
+    color: #616161;
+}
