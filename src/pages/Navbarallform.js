@@ -14,7 +14,7 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
     console.log(actives1,'acitvsdfsdjflsdf')
     return (
         <>
-            <nav className={"navbar navbar-expand-lg all-navbar navbar-light bg-light pt-0 pb-0 " + (darkmodes ? "text-dark bg-primary border-bottom  " : "text-dark bg-primary border-bottom ")}>
+            <nav className={"navbar navbar-expand-lg all-navbar navbar-light bg-light pt-0 pb-0 navbar_margin " + (darkmodes ? "text-dark bg-primary border-bottom  " : "text-dark bg-primary border-bottom ")}>
                 <div class="container-fluid  ps-1 container-home-header ">
                     <ul class="navform navbar-nav ml-auto align-items-center right-nav">
                         <li class={"nav-item active ps-3 formlink "+ (page1[1] === 'dashboard' ? "allform-list-focus1" : '')}>
@@ -33,7 +33,7 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
                                     </div>
                                     <div className={"more-dropdownmenu largest-list "+ (actives1 ? "moreoption-open" : 'moreoption-close' )}  >
 
-                                        <ul>
+                                        <ul className='p-0'>
 
                                             <li>
                                                 <a href="#" className='drop'>Form Analytics</a>

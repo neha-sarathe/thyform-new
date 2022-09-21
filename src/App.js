@@ -49,6 +49,9 @@ import Myform from './pages/Myform';
 import Assignform from './pages/Assignform';
 import Inbox from './pages/Inbox';
 import { MyProfile } from './MyProfile';
+import { Archive } from './pages/Archive';
+import { Trash } from './pages/Trash';
+
 import RegisterTwo from './userpages/RegisterTwo';
 import RegisterThree from './userpages/RegisterThree';
 import RegisterFour from './userpages/RegisterFour';
@@ -109,15 +112,18 @@ function App() {
 
           </div></div>
         </>
-      ) : user && window.location.pathname === '/allform/allform' || window.location.pathname === '/allform/inbox'|| window.location.pathname === "/allform/myform" || window.location.pathname
+      ) : user && window.location.pathname === '/allform/allform' || window.location.pathname === '/allform/inbox'
+        || window.location.pathname === '/allform/archive' || window.location.pathname === '/allform/trash' || window.location.pathname === "/allform/myform" || window.location.pathname
         === "/allform/assignform" ? (
         <Router>
-       
+
           <Routes>
             <Route path='/allform/allform' element={<Allform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/allform/myform' element={<Myform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/allform/assignform' element={<Assignform darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/allform/inbox' element={<Inbox darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/archive' element={<Archive darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/trash' element={<Trash darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           </Routes>
         </Router>
 
@@ -130,7 +136,7 @@ function App() {
         || window.location.pathname === "/setting/mobilenotification" ? (
 
         <Router>
-          {checked ?  <div className='d-flex fixed-top'><div className='jotlogo-width'>  <div className='allform-logo-div'>
+          {checked ? <div className='d-flex fixed-top'><div className='jotlogo-width'>  <div className='allform-logo-div'>
             <a class="navbar-brand brand-logo" href="#">
               <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
             </a>
