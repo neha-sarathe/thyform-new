@@ -24,45 +24,45 @@ export const Archive = ({ darkmodes, setDarkmodes }) => {
 
                             <InboxNavbar />
                             <div className='row'>
-  <div className='col-md-4'>
-                            <nav id="sidebars" className={darkmodes ? "text-white border-end" : "text-dark border-end"}>
-                                <div class="input-group">
-                                    <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                    <input class="form-control py-2 border-right-0 border form_padding search_col" type="search" placeholder='Search' id="example-search-input" />
-                                    <span class="input-group-append">
-                                        <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
-                                            <FiFilter />
-                                        </button>
-                                    </span>
+                                <div className='col-md-4'>
+                                    <nav id="sidebars" className={darkmodes ? "text-white border-end" : "text-dark border-end"}>
+                                        <div class="input-group">
+                                            <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                            <input class="form-control py-2 border-right-0 border form_padding search_col" type="search" placeholder='Search' id="example-search-input" />
+                                            <span class="input-group-append">
+                                                <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
+                                                    <FiFilter />
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <ul class="list-unstyled components">
+                                            {/* <h4 className='side-head text-white'>MY FORMS</h4> */}
+                                            <li>
+                                                <Link to='' ><div className={'allform-list link_color ' + (sidebaroption[2] === '' ? 'allform-list-focus1' : ' ')}>Archive 1</div></Link>
+
+
+                                            </li>
+                                            <li >
+                                                <Link to='' ><div className={'allform-list link_color ' + (sidebaroption[2] === ' ' ? 'allform-list-focus1' : ' ')}>Archive 2</div></Link>
+                                            </li>
+
+
+                                            <li >
+                                                <Link to='' ><div className={'allform-list link_color ' + (sidebaroption[2] === " " ? "allform-list-focus1" : ' ')}>Archive 3</div></Link>
+                                            </li>
+
+
+                                        </ul>
+                                    </nav>
                                 </div>
-                                <ul class="list-unstyled components">
-                                    {/* <h4 className='side-head text-white'>MY FORMS</h4> */}
-                                    <li>
-                                        <Link to='' ><div className={'allform-list link_color ' + (sidebaroption[2] === '' ? 'allform-list-focus1' : ' ')}>Archive 1</div></Link> 
-
-
-                                    </li>
-                                    <li >
-                                        <Link to='' ><div className={'allform-list link_color ' + (sidebaroption[2] === ' ' ? 'allform-list-focus1' : ' ')}>Archive 2</div></Link>
-                                    </li>
-
-
-                                    <li >
-                                        <Link to='' ><div className={'allform-list link_color ' + (sidebaroption[2] === " " ? "allform-list-focus1" : ' ')}>Archive 3</div></Link>
-                                    </li>
-
-
-                                </ul>
-                            </nav>
+                                <div className='col-md-8'>
+                                    <p className='link_color'>
+                                        YOU DON’T HAVE ANY ARCHIVED SUBMISSIONS
+                                    </p>
+                                </div>
                             </div>
-                            <div className='col-md-8'>
-  <p className='link_color'>
-  YOU DON’T HAVE ANY ARCHIVED SUBMISSIONS
-</p>
-</div>
-</div>
                         </div>
                     </div>
                 </div>

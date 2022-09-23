@@ -14,7 +14,10 @@ const Register = (props) => {
   const [txtbn2, setTxtbn2] = useState('');
   const [txtno, setTxtno] = useState('');
   const [txtno2, setTxtno2] = useState('');
+<<<<<<< HEAD
+=======
   const [industryName, setIndustryName] = useState('');
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
   const [postCode, setpostCode] = useState('');
   const [spend, setSpend] = useState('');
   const [spend2, setSpend2] = useState('');
@@ -37,8 +40,12 @@ const Register = (props) => {
   const [websiteSoleError, setWebsiteSoleError] = useState(false);
   const [industryData, setIndustryData] = useState('');
   const [websiteUrl, setWebsiteUrl] = useState(false);
+<<<<<<< HEAD
+
+=======
   const [otherWebsiteName, setOtherWebsiteName] = useState('');
   
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
 
   console.log('error', error);
   const companyHandle = (value) => {
@@ -153,6 +160,8 @@ const Register = (props) => {
       setTxtbn2(value);
     }
     setOtherBusinessError(false)
+<<<<<<< HEAD
+=======
   }
   const handleOtherIndustry = (value)=>{
     setIndustryName(value)
@@ -161,6 +170,7 @@ const Register = (props) => {
   const handleOtherwebsite = value =>{
     setOtherWebsiteName(value)
     setOtherWebsiteError(false)
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
   }
 
   const onEmployeesNoOther = e => {
@@ -293,7 +303,11 @@ const Register = (props) => {
     } else {
       if (txtbn2 === '') {
         setOtherBusinessError('Please select your business type')
+<<<<<<< HEAD
+      }else if (txtno2 === '') {
+=======
       }else if (industryName === '') {
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
         setOtherIndustryError('Please select your business type')
       }else if (txtno2 === '') {
         setOtherempError('Please select your business type')
@@ -301,9 +315,13 @@ const Register = (props) => {
         setOtherPostcodeError('Please select your business type')
       }else if (spend2 === '') {
         setOtherSpendError('Please select your business type')
+<<<<<<< HEAD
+      }else{
+=======
       }else if (otherWebsiteName === '') {
         setOtherWebsiteError('Please select yes or no')
       } else{
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
         navigate('/registerfour')
       } 
     }
