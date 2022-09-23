@@ -37,11 +37,10 @@ const Register = (props) => {
   const [websiteSoleError, setWebsiteSoleError] = useState(false);
   const [industryData, setIndustryData] = useState('');
   const [websiteUrl, setWebsiteUrl] = useState(false);
-
+  const [searchText, setSearchText] = useState('');
   const [otherWebsiteName, setOtherWebsiteName] = useState('');
   
 
-  console.log('error', error);
   const companyHandle = (value) => {
     setCompanyNumber(value)
   }
@@ -201,9 +200,11 @@ const Register = (props) => {
     }
   }
   const [showResults, setShowResults] = useState(false)
-  const ref = useRef(null);
+  const input1 = useRef(null);
   const handleClick = () => {
+    input1.current.focus();
     if (txt && txt.length >= 3) {
+      
       const query = txt;
 
       const ar = [{ link: "apple" },
@@ -216,8 +217,9 @@ const Register = (props) => {
       else
         console.log('Query not found')
 
-      ref.current.focus();
+        
       setShowResults(false);
+      setSearchText(txt)
     }
     else {
       setShowResults(true);
@@ -493,8 +495,8 @@ const Register = (props) => {
                           </select> */}
                           <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
-                            ref={ref}
-                            disabled={txt ? false : true}
+                            ref={input1}
+                            disabled={searchText ? false : true}
                             value={selectedData}
                           >
                             <option value=''>select</option>
@@ -531,7 +533,6 @@ const Register = (props) => {
                           </select> */}
                           <select onChange={(event) => handleDirectorSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
-                            ref={ref}
                             disabled={selectedData ? false : true}
                             value={directorSelect}
                           >
