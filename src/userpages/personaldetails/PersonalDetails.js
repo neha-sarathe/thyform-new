@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { FiChevronRight, FiCheck } from 'react-icons/fi'
-// import register2 from '../public/images/auth/register-bg.png'
-=======
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight, FiCheck } from 'react-icons/fi'
->>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
 import Dark from "../../DarkAuth";
 const PersonalDetails = (props) => {
 
     const navigate = useNavigate();
     const [txt, setTxt] = useState('');
-<<<<<<< HEAD
-    const [error, setError] = useState(false);
-    const [maxValue, setMaxValue] = useState(false);
-=======
     const [selectedData, setSelectedData] = useState('')
     const [error, setError] = useState(false);
     const [businessError, setBusinessError] = useState(false);
@@ -82,7 +71,6 @@ const PersonalDetails = (props) => {
         { key: '4', value: '2003' },
         { key: '5', value: '2055' }
     ]
->>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
 
     useEffect(() => {
 
@@ -125,22 +113,6 @@ const PersonalDetails = (props) => {
     /*validations */
     const onInputChange = e => {
         const { value } = e.target;
-<<<<<<< HEAD
-        if (value.length <= 11) {
-            setTxt(value);
-            setMaxValue(false)
-        } else {
-            setMaxValue('Please enter no more than 10 characters.')
-        }
-        setError(false)
-    }
-
-    const nextPage = () => {
-        if (txt === '') {
-            setError('Please provide an answer')
-        } else {
-            navigate('/login')
-=======
         setMaxValue(value)
         setError(false)
 
@@ -195,13 +167,10 @@ const PersonalDetails = (props) => {
             setCheckedConfirmError('Please acknowledge the cover of the Financial Services Compensation Scheme')
         } else {
             // navigate('/login')
->>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
         }
 
     }
 
-<<<<<<< HEAD
-=======
     const handleorganisation = (value) => {
         setWebsite(value)
         setWebsiteError(true)
@@ -305,7 +274,6 @@ const PersonalDetails = (props) => {
         setBirthday({ birthday: newDate });
     }
 
->>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
 
     return (
         <>
@@ -315,10 +283,7 @@ const PersonalDetails = (props) => {
                     <div className="content-wrapper d-flex align-items-stretch auth auth-img-bg " >
                         <div className={" row flex-grow form-bg1 drag-sort-enable " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                             <div className="col-lg-6  d-flex flex-row">
-<<<<<<< HEAD
-=======
                                 {/* <div className="register-half-bg"></div> */}
->>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
                                 <div className="register-half-div">
                                     <img src={process.env.PUBLIC_URL + "images/auth/register-bg.png"} className="register-half-img" />
                                 </div>
@@ -335,30 +300,6 @@ const PersonalDetails = (props) => {
                                         </div>
                                     </div>
                                     <div>
-<<<<<<< HEAD
-                                        <h4 className="heading-form dark-mode-text">Your business income</h4>
-
-
-                                        <div className="d-flex mt-4 align-items-center">
-                                            <div className="w-25">
-                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>What is your expected annual turnover?*</label>
-                                            </div>
-                                            <div className="search-input-div search-input-div1">
-                                                <input
-                                                    type="number"
-                                                    placeholder="Registration Number"
-                                                    className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                    value={txt}
-                                                    onChange={onInputChange}
-                                                />
-                                                <p className="para-form show_result">{error}</p>
-                                                <p className="para-form show_result">{maxValue}</p>
-                                            </div>
-                                            {txt.length > 0 && txt.length <= 10 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
-
-                                        </div>
-                                        <hr />
-=======
                                         <h4 className="heading-form dark-mode-text">Tell Us About You</h4>
                                         <div className="d-flex mt-4 align-items-center">
                                             <div className="w-25">
@@ -670,7 +611,6 @@ const PersonalDetails = (props) => {
                                                 <p className="para-form show_result">{checkedConfirmError}</p>
                                                 <h6 className="fw-bold mt-3">You can see the fee information for this account <a href="/#" className="text-primary">here</a> </h6></div>
                                         </label>
->>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
                                         <div className="mt-3 text-end d-flex align-items-center justify-content-between">
                                             <p className="already-login">
                                                 Already account please{" "}
