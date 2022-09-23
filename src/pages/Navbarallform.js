@@ -36,7 +36,7 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
                                         <ul className='p-0'>
 
                                             <li>
-                                                <a href="#" className='drop'>Form Analytics</a>
+                                                <a href="/allform/formanalytics" className='drop'>Form Analytics</a>
                                             </li>
 
                                             <li>

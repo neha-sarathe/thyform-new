@@ -1,18 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FiChevronRight, FiCheck } from 'react-icons/fi'
+import { FiChevronRight } from 'react-icons/fi'
 import Dark from "../DarkAuth";
-const RegisterTwo = (props) => {
+import countryListAllIsoData from "./CountryList"
+const RegisterThree = (props) => {
 
     const navigate = useNavigate();
-    const [txt, setTxt] = useState('');
-    const [selectedData, setSelectedData] = useState('')
-    const [error, setError] = useState(false);
-    const [businessError, setBusinessError] = useState(false);
     const [websiteError, setWebsiteError] = useState(false);
-    const [website, setWebsite] = useState(false);
-    const [maxValue, setMaxValue] = useState(false);
-
+    const [website, setWebsite] = useState('');
+    const [payment, setPayment] = useState('');
+    const [paymentError, setPaymentError] = useState(false);
+    const [connections, setConnections] = useState('');
+    const [connectionsError, setConnectionsError] = useState(false);
+    const [contracts, setContracts] = useState('');
+    const [contractsError, setContractsError] = useState(false);
     useEffect(() => {
 
         function enableDragSort(listClass) {
@@ -52,74 +53,41 @@ const RegisterTwo = (props) => {
         (() => { enableDragSort('drag-sort-enable') })();
     }, [])
     /*validations */
-    const onInputChange = e => {
-        const { value } = e.target;
-        if (value.length <= 6) {
-            setTxt(value);
-            setMaxValue(false)
-        } else {
-            setMaxValue('Please enter no more than 5 characters.')
-        }
-        setError(false)
-
-    }
-    const ref = useRef(null);
-    let A = [{
-        name: 'alpha',
-        name: 'beta',
-    }
-    ]
-
-    for (let item of A) {
-        item.status = false;
-
-    }
-    const select_data = [
-        { key: 'america', value: 'United States of America' },
-        { key: 'unitedkingdom', value: 'United Kingdom' },
-        { key: 'india', value: 'India' },
-        { key: 'germany', value: 'Germany' },
-        { key: 'argentina', value: 'Argentina' }
-    ]
-
-    const handleSelect = (value) => {
-        setSelectedData(value)
-        setBusinessError(false)
-    }
 
     const nextPage = () => {
-        if (selectedData === '') {
-            setBusinessError('Please select an industry from the dropdown. If your industry is not listed, select other')
-        } else if (txt === '') {
-            setError('Please enter the number of employees your business has using only numbers')
-        } else if (websiteError === false) {
+        if (website === '') {
             setWebsiteError('Please select yes or no')
+        }else if (connections === '') {
+            setConnectionsError('Please select yes or no')
+        }else if (contracts === '') {
+            setContractsError('Please select yes or no')
         } else {
-            navigate('/registerthree')
+            navigate('/personaldetails')
         }
 
     }
 
     const handleorganisation = (value) => {
         setWebsite(value)
-        setWebsiteError(true)
+        setWebsiteError(false)
     }
-    const [message, setMessage] = useState('www');
-    const [websiteUrl, setWebsiteUrl] = useState(false);
-
-    const handleChange = e => {
-        setMessage(e.target.value);
-        var res = message.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-        console.log('res', res);
-        if (res == null) {
-            setWebsiteUrl('Please enter a valid website address')
-        }
-        else {
-            setWebsiteUrl(true)
-        }
 
 
-    };
+    const handlePayments = (value) =>{
+        console.log('value', value);
+        setPayment(value)
+        setPaymentError(false)
+    }
+
+    const handleConnections = (value) =>{
+        setConnections(value)
+        setConnectionsError(false)
+    }
+    const handleContracts = (value) =>{
+        setContracts(value)
+        setContractsError(false)
+    }
+
 
     return (
         <>
@@ -146,52 +114,13 @@ const RegisterTwo = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="heading-form dark-mode-text">Your business</h4>
+                                        <h4 className="heading-form dark-mode-text">Your business activity</h4>
                                         <div className="d-flex mt-4 align-items-center">
                                             <div className="w-25">
-                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Industry*</label>
+                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business receive payments from outside the UK?*</label>
                                             </div>
                                             <div className="search-input-div search-input-div1">
-                                                <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                                                    id="exampleFormControlSelect2"
-                                                    ref={ref}
-                                                    value={selectedData}
-                                                >
-                                                    <option value=''>select</option>
-                                                    {select_data.map((option, index) => (
-                                                        <option key={index} value={option.value}>
-                                                            {option.value}
-                                                        </option>
-                                                    ))}
-                                                </select>
-                                                <p className="para-form show_result">{businessError}</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="d-flex mt-4 align-items-center">
-                                            <div className="w-25">
-                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
-                                            </div>
-                                            <div className="search-input-div search-input-div1">
-                                                <input
-                                                    type="number"
-                                                    placeholder="Registration Number"
-                                                    className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                    value={txt}
-                                                    onChange={onInputChange}
-                                                />
-                                                <p className="para-form show_result">{error}</p>
-                                                <p className="para-form show_result">{maxValue}</p>
-                                            </div>
-                                            {txt.length === 5 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
-
-                                        </div>
-                                        <div className="d-flex mt-4 align-items-center">
-                                            <div className="w-25">
-                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business have a website?*</label>
-                                            </div>
-                                            <div className="search-input-div search-input-div1">
-                                                <select
+                                            <select
                                                     onChange={(event) => handleorganisation(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
@@ -200,28 +129,71 @@ const RegisterTwo = (props) => {
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
                                                 </select>
+                                                {website === 'yes'? <h6 className="para-form mt-2">This could be for goods & services or funding</h6>:''}
                                                 <p className="para-form show_result">{websiteError}</p>
+                                            </div>
+                                        </div>
+                                        {website === 'yes' ? 
+                                         <div className="d-flex mt-4 align-items-center">
+                                         <div className="w-25">
+                                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Which countries do you receive payments from?*</label>
+                                         </div>
+                                         <div className="search-input-div search-input-div1">
+                                             <select
+                                                 onChange={(event) => handlePayments(event.target.value)}
+                                                 className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                 id="exampleFormControlSelect2"
+                                             >Website address*
+                                                 <option value=''>select</option>
+                                                 {countryListAllIsoData && countryListAllIsoData.map((option, index) => (
+                              <option key={index} value={option.code}>
+                                {option.name}
+                              </option>
+                            ))}
+                                             </select>
+                                             <p className="para-form show_result">{paymentError}</p>
+
+                                         </div>
+                                     </div>
+                                     : ''
+                                        }
+                                       
+                                        <div className="d-flex mt-4 align-items-center">
+                                            <div className="w-25">
+                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Do you or any people within your business have political connections?*</label>
+                                            </div>
+                                            <div className="search-input-div search-input-div1">
+                                                <select
+                                                    onChange={(event) => handleConnections(event.target.value)}
+                                                    className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                    id="exampleFormControlSelect2"
+                                                >Website address*
+                                                    <option>Select</option>
+                                                    <option value="yes">Yes</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                                <p className="para-form show_result">{connectionsError}</p>
 
                                             </div>
                                         </div>
-                                        {website === 'yes' ?
-                                            <div className="d-flex mt-4 align-items-center">
-                                                <div className=" lables-div w-25">
-                                                    <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Website address*</label>
-                                                </div>
-                                                <div className="search-input-div search-input-div1">
-                                                    <input
-                                                        type="text"
-                                                        className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                        value={message}
-                                                        onChange={handleChange}
-                                                    />
-                                                </div>
-                                                {websiteUrl === true ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
-                                                <p className="para-form show_result">{websiteUrl}</p>
+                                        <div className="d-flex mt-4 align-items-center">
+                                            <div className="w-25">
+                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Is your business involved in any public contracts? e.g. government, council or NHS*</label>
+                                            </div>
+                                            <div className="search-input-div search-input-div1">
+                                                <select
+                                                    onChange={(event) => handleContracts(event.target.value)}
+                                                    className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                    id="exampleFormControlSelect2"
+                                                >Website address*
+                                                    <option>Select</option>
+                                                    <option value="yes">Yes</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                                <p className="para-form show_result">{contractsError}</p>
 
                                             </div>
-                                            : ''}
+                                        </div>
                                         <hr />
                                         <div className="mt-3 text-end d-flex align-items-center justify-content-between">
                                             <p className="already-login">
@@ -246,4 +218,4 @@ const RegisterTwo = (props) => {
     );
 };
 
-export default RegisterTwo;
+export default RegisterThree;

@@ -53,6 +53,13 @@ import { Archive } from './pages/Archive';
 import { Trash } from './pages/Trash';
 
 import RegisterTwo from './userpages/RegisterTwo';
+import RegisterThree from './userpages/RegisterThree';
+import RegisterFour from './userpages/RegisterFour';
+import PersonalDetails from './userpages/personaldetails/PersonalDetails';
+import { FormAnalytics } from './FormAnalytics/FormAnalytics';
+import { Month } from './FormAnalytics/Month';
+import { AllTime } from './FormAnalytics/AllTime';
+import { Custom } from './FormAnalytics/Custom';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -76,7 +83,6 @@ function App() {
   const [jottoggled, setJottoggled] = useState(false);
   const [register, setregister] = React.useState("/");
   const [darkmode, setDarkmode] = useState(false)
-  console.log(user, 'user9999')
   useEffect(() => {
     const token_get = localStorage.getItem('user')
     if (token_get) {
@@ -86,7 +92,6 @@ function App() {
   }, [])
   const handleLogin = () => localStorage.setItem('user', 'token');
   const handleLogout = () => setUser('');
-  console.log(window.location.pathname, 'window.location.pathname')
 
   return (
     <>
@@ -113,7 +118,8 @@ function App() {
         </>
       ) : user && window.location.pathname === '/allform/allform' || window.location.pathname === '/allform/inbox'
         || window.location.pathname === '/allform/archive' || window.location.pathname === '/allform/trash' || window.location.pathname === "/allform/myform" || window.location.pathname
-        === "/allform/assignform" ? (
+        === "/allform/assignform" || window.location.pathname === '/allform/formanalytics' || window.location.pathname === '/allform/month' || window.location.pathname === '/allform/alltime'
+        || window.location.pathname === '/allform/custom' ? (
         <Router>
 
           <Routes>
@@ -123,6 +129,10 @@ function App() {
             <Route path='/allform/inbox' element={<Inbox darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/allform/archive' element={<Archive darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path='/allform/trash' element={<Trash darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/formanalytics' element={<FormAnalytics darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/month' element={<Month darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/alltime' element={<AllTime darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path='/allform/custom' element={<Custom darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           </Routes>
         </Router>
 
@@ -165,13 +175,15 @@ function App() {
 
         </Router>
 
-      ) : window.location.pathname === '/' || window.location.pathname === "/login" || window.location.pathname === "/registertwo" ? (<Router>
+      ) : window.location.pathname === '/' || window.location.pathname === "/login" || window.location.pathname === "/registertwo" || window.location.pathname === "/registerthree" || window.location.pathname === "/registerfour" || window.location.pathname === "/personaldetails" ? (<Router>
         <Routes>
           {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
           <Route path="/" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-          {/* <Route path="/registertwo" element={<RegisterTwo /> */}
+          <Route path="/registerthree" element={<RegisterThree darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/registerfour" element={<RegisterFour darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/personaldetails" element={<PersonalDetails darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} usertoken={user} />} />
 
 

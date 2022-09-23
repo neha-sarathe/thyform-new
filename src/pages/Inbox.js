@@ -17,7 +17,7 @@ const Inbox = ({ darkmodes, setDarkmodes }) => {
   return (
     <>
       <div className="wrapper">
-        <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+        <AllformNav  />
         <div className='full_width'>
           <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
             <Navbarallform />
