@@ -75,12 +75,12 @@ const RegisterTwo = (props) => {
 
     }
     const select_data = [
-        { key: 'america', value: 'United States of America' },
-        { key: 'unitedkingdom', value: 'United Kingdom' },
-        { key: 'india', value: 'India' },
-        { key: 'germany', value: 'Germany' },
-        { key: 'argentina', value: 'Argentina' }
-    ]
+        { key: 'america', value: 'Example 1' },
+        { key: 'unitedkingdom', value: 'Example 2' },
+        { key: 'india', value: 'Example 3' },
+        { key: 'germany', value: 'Example 4' },
+        { key: 'argentina', value: 'Example 5' }
+      ]
 
     const handleSelect = (value) => {
         setSelectedData(value)

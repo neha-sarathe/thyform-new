@@ -14,6 +14,10 @@ const Register = (props) => {
   const [txtbn2, setTxtbn2] = useState('');
   const [txtno, setTxtno] = useState('');
   const [txtno2, setTxtno2] = useState('');
+<<<<<<< HEAD
+=======
+  const [industryName, setIndustryName] = useState('');
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
   const [postCode, setpostCode] = useState('');
   const [spend, setSpend] = useState('');
   const [spend2, setSpend2] = useState('');
@@ -36,7 +40,12 @@ const Register = (props) => {
   const [websiteSoleError, setWebsiteSoleError] = useState(false);
   const [industryData, setIndustryData] = useState('');
   const [websiteUrl, setWebsiteUrl] = useState(false);
+<<<<<<< HEAD
 
+=======
+  const [otherWebsiteName, setOtherWebsiteName] = useState('');
+  
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
 
   console.log('error', error);
   const companyHandle = (value) => {
@@ -151,6 +160,17 @@ const Register = (props) => {
       setTxtbn2(value);
     }
     setOtherBusinessError(false)
+<<<<<<< HEAD
+=======
+  }
+  const handleOtherIndustry = (value)=>{
+    setIndustryName(value)
+    setOtherIndustryError(false)
+  }
+  const handleOtherwebsite = value =>{
+    setOtherWebsiteName(value)
+    setOtherWebsiteError(false)
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
   }
 
   const onEmployeesNoOther = e => {
@@ -225,11 +245,11 @@ const Register = (props) => {
   }
   // const select_data = ['United States of America', 'United Kingdom', 'India', 'Germany', 'Argentina']
   const select_data = [
-    { key: 'america', value: 'United States of America' },
-    { key: 'unitedkingdom', value: 'United Kingdom' },
-    { key: 'india', value: 'India' },
-    { key: 'germany', value: 'Germany' },
-    { key: 'argentina', value: 'Argentina' }
+    { key: 'america', value: 'Example 1' },
+    { key: 'unitedkingdom', value: 'Example 2' },
+    { key: 'india', value: 'Example 3' },
+    { key: 'germany', value: 'Example 4' },
+    { key: 'argentina', value: 'Example 5' }
   ]
 
   const handleSelect = (value) => {
@@ -283,7 +303,11 @@ const Register = (props) => {
     } else {
       if (txtbn2 === '') {
         setOtherBusinessError('Please select your business type')
+<<<<<<< HEAD
       }else if (txtno2 === '') {
+=======
+      }else if (industryName === '') {
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
         setOtherIndustryError('Please select your business type')
       }else if (txtno2 === '') {
         setOtherempError('Please select your business type')
@@ -291,7 +315,13 @@ const Register = (props) => {
         setOtherPostcodeError('Please select your business type')
       }else if (spend2 === '') {
         setOtherSpendError('Please select your business type')
+<<<<<<< HEAD
       }else{
+=======
+      }else if (otherWebsiteName === '') {
+        setOtherWebsiteError('Please select yes or no')
+      } else{
+>>>>>>> bcdb720e9184b963ab6187a30378b11283a43c41
         navigate('/registerfour')
       } 
     }
@@ -826,15 +856,17 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
+                          onChange={(event) => handleOtherIndustry(event.target.value)}
+                          value={industryName}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
-                            <option>United States of America</option>
-                            <option>United Kingdom</option>
-                            <option>India</option>
-                            <option>Germany</option>
-                            <option>Argentina</option>
+                            <option value='America'>United States of America</option>
+                            <option value='Kingdom'>United Kingdom</option>
+                            <option value='India'>India</option>
+                            <option value='Germany'>Germany</option>
+                            <option value='Argentina'>Argentina</option>
                           </select>
                           <p className="para-form show_result">{otherIndustryError}</p>
                         </div>
@@ -1012,13 +1044,17 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
+                          onChange={(event) => handleOtherwebsite(event.target.value)}
+                          value={otherWebsiteName}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
                             <option>Select</option>
-                            <option>Yes</option>
-                            <option>No</option>
+                            <option value='yes'>Yes</option>
+                            <option value='no'>No</option>
                           </select>
+                          <p className="para-form show_result">{otherWebsiteError}</p>
+                          
                         </div>
 
                       </div>
