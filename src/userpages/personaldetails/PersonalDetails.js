@@ -75,14 +75,11 @@ const PersonalDetails = (props) => {
         { key: '4', value: '2003' },
         { key: '5', value: '2055' }
     ]
-<<<<<<< HEAD
-=======
     const options = [
         { value: 'French', label: 'French' },
         { value: 'French', label: 'French' },
         { value: 'English', label: 'English' },
     ];
->>>>>>> df1e90d26887a134b8a1e71b3de1efb3338fd5e8
 
     useEffect(() => {
 
@@ -322,8 +319,6 @@ const PersonalDetails = (props) => {
         setDateofBirthError(false)
     }
 
-<<<<<<< HEAD
-=======
     const customStyles = {
         // menu: (provided, state) => ({
         //   ...provided,
@@ -349,7 +344,6 @@ const PersonalDetails = (props) => {
         }
       }
 
->>>>>>> df1e90d26887a134b8a1e71b3de1efb3338fd5e8
 
     return (
         <>
