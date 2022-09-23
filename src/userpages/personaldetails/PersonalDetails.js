@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight, FiCheck } from 'react-icons/fi'
 import Dark from "../../DarkAuth";
+import Select from 'react-select';
+
 const PersonalDetails = (props) => {
 
     const navigate = useNavigate();
@@ -23,11 +25,11 @@ const PersonalDetails = (props) => {
     const [SurnameError, setSurnameError] = useState(false);
     const [dateofBirth, setDateofBirth] = useState('');
     const [dateofBirthError, setDateofBirthError] = useState(false);
-    const [nationality, setNationality] = useState('');
+    const [nationality, setNationality] = useState(null);
     const [nationalityError, setNationalityError] = useState(false);
-    const [PhoneNumber, setPhoneNumber] = useState('');
+    const [PhoneNumber, setPhoneNumber] = useState('0');
     const [PhoneNumberError, setPhoneNumberError] = useState(false);
-    const [mobileNumber, setMobileNumber] = useState('');
+    const [mobileNumber, setMobileNumber] = useState('07');
     const [mobileNumberError, setMobileNumberError] = useState(false);
     const [emailAddress, setEmailAddress] = useState('');
     const [emailAddressError, setEmailAddressError] = useState(false);
@@ -41,6 +43,7 @@ const PersonalDetails = (props) => {
     const [month, setMonth] = useState('');
     const [day, setDay] = useState('');
     const [birthday, setBirthday] = useState({ birthday: '' });
+    const [selectedOption, setSelectedOption] = useState(null);
 
     const select_data = [
         { key: 'america', value: 'Example 1' },
@@ -71,6 +74,11 @@ const PersonalDetails = (props) => {
         { key: '4', value: '2003' },
         { key: '5', value: '2055' }
     ]
+    const options = [
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'vanilla', label: 'Vanilla' },
+    ];
 
     useEffect(() => {
 
@@ -114,6 +122,11 @@ const PersonalDetails = (props) => {
     const onInputChange = e => {
         const { value } = e.target;
         setMaxValue(value)
+        // if (maxValue.length >= 3) {
+        //     setMaxValue(value)
+        // }else{
+        //     setError('plz enter max 3 char')
+        // }
         setError(false)
 
     }
@@ -127,8 +140,9 @@ const PersonalDetails = (props) => {
         setDateofBirth(value)
         setDateofBirthError(false)
     }
-    const onNationality = e => {
-        const { value } = e.target;
+    const onNationality = value => {
+        // const { value } = e.target;
+        console.log('value...........', value);
         setNationality(value)
         setNationalityError(false)
     }
@@ -147,9 +161,9 @@ const PersonalDetails = (props) => {
             setError('Please enter your first name')
         } else if (surname === '') {
             setSurnameError('Please enter your surname')
-        } else if (dateofBirth === '') {
+        } else if (birthday.birthday === '') {
             setDateofBirthError('Please select your date of birth')
-        } else if (nationality === '') {
+        } else if (nationality?.value === undefined) {
             setNationalityError('Please select an nationality from the dropdown')
         } else if (postCode === '') {
             setOtherPostcodeError('Please enter your postcode, press Find address and select your address from the options')
@@ -272,7 +286,33 @@ const PersonalDetails = (props) => {
 
         let newDate = new Date(year.date_year, month.date_mth, day.date_day);
         setBirthday({ birthday: newDate });
+        setDateofBirthError(false)
     }
+
+    const customStyles = {
+        // menu: (provided, state) => ({
+        //   ...provided,
+        //   width: state.selectProps.width,
+        //   borderBottom: '1px dotted pink',
+        //   color: state.selectProps.menuColor,
+        //   padding: 20,
+        //   display: state.selectProps.flex
+        // }),
+      
+        control: (_, { selectProps: { width, display, border, borderRadius }}) => ({
+          width: width,
+          display: display,
+          border: border,
+          borderRadius: borderRadius
+        }),
+      
+        singleValue: (provided, state) => {
+          const opacity = state.isDisabled ? 0.5 : 1;
+          const transition = 'opacity 300ms';
+      
+          return { ...provided, opacity, transition };
+        }
+      }
 
 
     return (
@@ -397,26 +437,54 @@ const PersonalDetails = (props) => {
                                                     value={dateofBirth}
                                                     onChange={onDateofBirth}
                                                 /> */}
-                                                <p className="para-form show_result">{dateofBirthError}</p>
-                                            </div>
-                                            {txt.length === 5 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
+                                            </div>
+
+                                            {txt.length === 5 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
+                                            <p className="para-form show_result">{dateofBirthError}</p>
                                         </div>
                                         <div className="d-flex mt-4 align-items-center">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Nationality*</label>
                                             </div>
                                             <div className="search-input-div search-input-div1">
-                                                <input
+                                            <Select
+                                                    styles={customStyles}
+                                                    display='flex'
+                                                    border="1px solid #d0e3e9"
+                                                    borderRadius="4px"
+                                                    className="nationality"
+                                                    value={nationality}
+                                                    onChange={e=>{
+                                                        setNationality();
+                                                        setNationalityError(false)
+                                                    } }
+                                                    options={options}
+                                                    placeholder="Search"
+                                                />
+                                            </div>
+                                            {/* <div className="search-input-div search-input-div1">
+                                                <Select
+                                                    className={"search-input nationality " + (props.darkmodes ? "text-white" : "text-dark")}
+                                                    styles={customStyles}
+                                                    value={nationality}
+                                                    onChange={e=>{
+                                                        setNationality();
+                                                        setNationalityError(false)
+                                                    } }
+                                                    options={options}
+                                                    placeholder="Search"
+                                                />
+                                               
+                                                <p className="para-form show_result">{nationalityError}</p>
+                                            </div> */}
+ {/* <input
                                                     type="text"
                                                     placeholder="Search"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={nationality}
                                                     onChange={onNationality}
-                                                />
-                                                <p className="para-form show_result">{nationalityError}</p>
-                                            </div>
-
+                                                /> */}
                                         </div>
                                         <div className="d-flex mt-4 align-items-center">
                                             <div className="w-25">
@@ -425,7 +493,7 @@ const PersonalDetails = (props) => {
                                             <div className="search-input-div search-input-div1">
                                                 <div className="d-flex">
                                                     <input
-                                                        type="text"
+                                                        type="number"
                                                         onChange={onPostcode}
                                                         value={postCode}
                                                         placeholder="Enter your postcode*"
@@ -524,8 +592,7 @@ const PersonalDetails = (props) => {
                                             </div>
                                             <div className="search-input-div search-input-div1">
                                                 <input
-                                                    type="text"
-                                                    placeholder="0"
+                                                    type="number"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={PhoneNumber}
                                                     onChange={onPhoneNumber}
@@ -541,12 +608,24 @@ const PersonalDetails = (props) => {
                                             </div>
                                             <div className="search-input-div search-input-div1">
                                                 <input
-                                                    type="text"
-                                                    placeholder="07"
+                                                    type="number"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={mobileNumber}
                                                     onChange={onMobileNumber}
                                                 />
+                                                 <label className="float-none d-flex align-items-baseline" style={{ cursor: "pointer" }}>
+                                            <input type="checkbox"
+                                                defaultChecked={checked}
+                                                onChange={handleCheckbox}
+                                                className="mx-1"
+                                            />
+
+                                            <div>
+                                                <p className="fw-bold mt-3"> Same as primary work phone number</p>
+                                                <p className="para-form show_result">{checkError}</p>
+                                            </div>
+                                        </label>
+                                               
                                                 <p className="para-form show_result">{mobileNumberError}</p>
                                             </div>
                                             {mobileNumberError.length <= 10 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
@@ -559,7 +638,7 @@ const PersonalDetails = (props) => {
                                             <div className="search-input-div search-input-div1">
                                                 <input
                                                     type="email"
-                                                    placeholder="Registration Number"
+                                                    placeholder="Enter your work email address"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={emailAddress}
                                                     onChange={onEmailAddress}
@@ -576,7 +655,7 @@ const PersonalDetails = (props) => {
                                             <div className="search-input-div search-input-div1">
                                                 <input
                                                     type="email"
-                                                    placeholder="Registration Number"
+                                                    placeholder="Confirm your email address"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={confirmEmail}
                                                     onChange={onConfirmEmail}
