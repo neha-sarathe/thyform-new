@@ -369,7 +369,7 @@ const PersonalDetails = (props) => {
                                                     ))}
                                                 </select>
                                                 <select
-                                                    className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                    className={"search-input " + (props.darkmodes ? "select-box-dark mx-2" : "select-box-white mx-2")}
                                                     id="exampleFormControlSelect2"
                                                     onChange={(event) => mergeDate('month', event.target.value)}>
                                                     <option value="">Month</option>
