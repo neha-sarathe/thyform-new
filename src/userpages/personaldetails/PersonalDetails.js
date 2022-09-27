@@ -25,15 +25,15 @@ const PersonalDetails = (props) => {
     const [SurnameError, setSurnameError] = useState(false);
     const [dateofBirth, setDateofBirth] = useState('');
     const [dateofBirthError, setDateofBirthError] = useState(false);
-    const [nationality, setNationality] = useState(null);
+    const [nationality, setNationality] = useState('');
     const [nationalityError, setNationalityError] = useState(false);
     const [PhoneNumber, setPhoneNumber] = useState('0');
+    console.log('PhoneNumber', PhoneNumber);
     const [PhoneNumberError, setPhoneNumberError] = useState(false);
     const [mobileNumber, setMobileNumber] = useState('07');
     const [mobileNumberError, setMobileNumberError] = useState(false);
     const [emailAddress, setEmailAddress] = useState('');
     const [emailAddressError, setEmailAddressError] = useState(false);
-    const [confirmEmail, setConfirmEmail] = useState('');
     const [confirmEmailError, setConfirmEmailError] = useState(false);
     const [checkedConfirm, setCheckedConfirm] = useState(false);
     const [checkedConfirmError, setCheckedConfirmError] = useState(false);
@@ -43,7 +43,8 @@ const PersonalDetails = (props) => {
     const [month, setMonth] = useState('');
     const [day, setDay] = useState('');
     const [birthday, setBirthday] = useState({ birthday: '' });
-    const [selectedOption, setSelectedOption] = useState(null);
+    const [confirmValue,setConfirmValue] = useState('')
+    const [confirmValueError,setConfirmValueError] = useState('')
 
     const select_data = [
         { key: 'america', value: 'Example 1' },
@@ -74,14 +75,11 @@ const PersonalDetails = (props) => {
         { key: '4', value: '2003' },
         { key: '5', value: '2055' }
     ]
-<<<<<<< HEAD
-=======
     const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' },
+        { value: 'French', label: 'French' },
+        { value: 'French', label: 'French' },
+        { value: 'English', label: 'English' },
     ];
->>>>>>> df1e90d26887a134b8a1e71b3de1efb3338fd5e8
 
     useEffect(() => {
 
@@ -166,24 +164,24 @@ const PersonalDetails = (props) => {
             setSurnameError('Please enter your surname')
         } else if (birthday.birthday === '') {
             setDateofBirthError('Please select your date of birth')
-        } else if (nationality?.value === undefined) {
+        } else if (nationality === '') {
             setNationalityError('Please select an nationality from the dropdown')
         } else if (postCode === '') {
             setOtherPostcodeError('Please enter your postcode, press Find address and select your address from the options')
-        } else if (PhoneNumber === '') {
+        } else if (PhoneNumber === '0') {
             setPhoneNumberError('Please enter your work phone number')
-        } else if (mobileNumber === '') {
+        } else if (mobileNumber === '07') {
             setMobileNumberError('Please enter a valid UK mobile number starting with 07')
         } else if (emailAddress === '') {
             setEmailAddressError('Please enter a valid email address')
-        } else if (confirmEmail === '') {
+        } else if (confirmValue === '') {
             setConfirmEmailError('Please confirm your email address')
         } else if (checked === false) {
             setCheckError('Please read the Terms & Conditions and check the box to show you agree to them')
         } else if (checkedConfirm === false) {
             setCheckedConfirmError('Please acknowledge the cover of the Financial Services Compensation Scheme')
         } else {
-            // navigate('/login')
+            navigate('/userform')
         }
 
     }
@@ -227,23 +225,52 @@ const PersonalDetails = (props) => {
 
     const onPhoneNumber = e => {
         const { value } = e.target;
-        setPhoneNumber(value)
+        // setPhoneNumber(value)
+        // setPhoneNumberError(false)
+        if (value.length <= 11) {
+            setPhoneNumber(value)
+            setPhoneNumberError(false)
+        }
         setPhoneNumberError(false)
     }
     const onMobileNumber = e => {
         const { value } = e.target;
-        setMobileNumber(value)
+        if (value.length <= 11) {
+            setMobileNumber(value)
         setMobileNumberError(false)
+        } 
+        // setMobileNumber(value)
+        // setMobileNumberError(false)
     }
     const onEmailAddress = e => {
         const { value } = e.target;
         setEmailAddress(value)
         setEmailAddressError(false)
     }
+    
     const onConfirmEmail = e => {
-        const { value } = e.target;
-        setConfirmEmail(value)
+        if (e.target.value != emailAddress)
+        {
+            setConfirmValueError('not match')
+        } else if (e.target.value === emailAddress) {
+            setConfirmValue(e.target.value)
+            setConfirmValueError('')
+        }else{
+            setConfirmValue(e.target.value)
+            setConfirmValueError('')
+        }
         setConfirmEmailError(false)
+        // const { value } = e.target;
+        
+        // setConfirmEmail(value)
+        // if (emailAddress != confirmEmail) {
+            
+        //     setConfirmEmailError('not match')
+        // }else{
+        //     setConfirmValue(confirmEmail)
+        //     setConfirmEmailError(false)
+        // }
+        // setConfirmEmailError(false)
     }
     const onHouseNo = e => {
         const { value } = e.target;
@@ -292,8 +319,6 @@ const PersonalDetails = (props) => {
         setDateofBirthError(false)
     }
 
-<<<<<<< HEAD
-=======
     const customStyles = {
         // menu: (provided, state) => ({
         //   ...provided,
@@ -319,7 +344,6 @@ const PersonalDetails = (props) => {
         }
       }
 
->>>>>>> df1e90d26887a134b8a1e71b3de1efb3338fd5e8
 
     return (
         <>
@@ -468,6 +492,7 @@ const PersonalDetails = (props) => {
                                                     options={options}
                                                     placeholder="Search"
                                                 />
+                                                <p className="para-form show_result">{nationalityError}</p>
                                             </div>
                                             {/* <div className="search-input-div search-input-div1">
                                                 <Select
@@ -511,6 +536,7 @@ const PersonalDetails = (props) => {
                                                             Find &nbsp;  <i className="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                                                         </button>
                                                     </div></div>
+                                                    {postCode === '' ? <h6 className="mt-2">This is where we will send your card and letters</h6>:''}
                                                 <p className="para-form show_result">{otherPostcodeError}</p>
                                                 {!show ? (
                                                     <p
@@ -602,13 +628,16 @@ const PersonalDetails = (props) => {
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={PhoneNumber}
                                                     onChange={onPhoneNumber}
+                                                    max="10"
+                                                    min="10"
                                                 />
+                                                {PhoneNumber === '0' ? <h6 className="mt-2">This can be a mobile number. Please enter numbers only. Spaces are not allowed.</h6>:''}
                                                 <p className="para-form show_result">{PhoneNumberError}</p>
                                             </div>
-                                            {PhoneNumberError.length <= 10 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
+                                            {PhoneNumber.length === 11 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Mobile number*</label>
                                             </div>
@@ -619,22 +648,21 @@ const PersonalDetails = (props) => {
                                                     value={mobileNumber}
                                                     onChange={onMobileNumber}
                                                 />
+                                                {mobileNumber === '07' ? <h6 className="mt-2">Please enter numbers only. Spaces are not allowed.</h6>:''}
+                                               
                                                  <label className="float-none d-flex align-items-baseline" style={{ cursor: "pointer" }}>
                                             <input type="checkbox"
-                                                defaultChecked={checked}
-                                                onChange={handleCheckbox}
                                                 className="mx-1"
                                             />
 
                                             <div>
-                                                <p className="fw-bold mt-3"> Same as primary work phone number</p>
-                                                <p className="para-form show_result">{checkError}</p>
+                                                <h6 className="mx-2 mt-3"> Same as primary work phone number</h6>
                                             </div>
                                         </label>
                                                
                                                 <p className="para-form show_result">{mobileNumberError}</p>
                                             </div>
-                                            {mobileNumberError.length <= 10 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
+                                            {mobileNumber.length === 11 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
                                         <div className="d-flex mt-4 align-items-center">
@@ -663,12 +691,13 @@ const PersonalDetails = (props) => {
                                                     type="email"
                                                     placeholder="Confirm your email address"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                    value={confirmEmail}
+                                                    // value={confirmValue}
                                                     onChange={onConfirmEmail}
                                                 />
+                                                <p className="para-form show_result">{confirmValueError}</p>
                                                 <p className="para-form show_result">{confirmEmailError}</p>
                                             </div>
-                                            {confirmEmailError ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
+                                            {/* {confirmEmailError ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''} */}
 
                                         </div>
                                         <hr />

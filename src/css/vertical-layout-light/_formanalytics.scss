@@ -20,3 +20,31 @@
   opacity: 1;
   z-index: 1;
 }
+
+.button_col {
+  background-color:transparent !important;
+  border-color: transparent !important; 
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #f52b54 !important;
+  border-color: #f52b54 !important; 
+}
+// .myClassBlack ul > li > button {
+//   background-color: red !important;
+//   color: black !important;
+// }
+// .myClassWhite ul > li > button {
+//   background-color: pink !important;
+//   color: white !important;
+// }
+.nav-tabs .nav-link {
+  color: #616161;
+}
+.tab-content{
+  border: none;
+}
+// .btn-lg:hover {
+//   color: lightgrey !important;
+//   width: 100% !important;
+// }

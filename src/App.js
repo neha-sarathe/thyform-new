@@ -60,6 +60,8 @@ import { FormAnalytics } from './FormAnalytics/FormAnalytics';
 import { Month } from './FormAnalytics/Month';
 import { AllTime } from './FormAnalytics/AllTime';
 import { Custom } from './FormAnalytics/Custom';
+import UserForm from './userpages/personaldetails/UserForm';
+import PaymentMode from './userpages/personaldetails/PaymentMode';
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -175,7 +177,7 @@ function App() {
 
         </Router>
 
-      ) : window.location.pathname === '/' || window.location.pathname === "/login" || window.location.pathname === "/registertwo" || window.location.pathname === "/registerthree" || window.location.pathname === "/registerfour" || window.location.pathname === "/personaldetails" ? (<Router>
+      ) : window.location.pathname === '/' || window.location.pathname === "/login" || window.location.pathname === "/registertwo" || window.location.pathname === "/registerthree" || window.location.pathname === "/registerfour" || window.location.pathname === "/personaldetails" || window.location.pathname === "/userform" || window.location.pathname === "/paymentmode" ? (<Router>
         <Routes>
           {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
@@ -184,6 +186,8 @@ function App() {
           <Route path="/registerthree" element={<RegisterThree darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           <Route path="/registerfour" element={<RegisterFour darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           <Route path="/personaldetails" element={<PersonalDetails darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/userform" element={<UserForm darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+          <Route path="/paymentmode" element={<PaymentMode darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
           <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} usertoken={user} />} />
 
 

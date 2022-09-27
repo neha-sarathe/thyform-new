@@ -1,69 +1,63 @@
 import React from 'react';
 import { NavFormAnalytics } from './NavFormAnalytics';
 import { OptionNavbar } from './OptionNavbar';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 export const FormAnalytics = ({ darkmodes, setDarkmodes }) => {
-    let pageactive = ""
-    const pathnames = window.location.pathname;
-    pageactive = pathnames.split('/')
-    console.log(pageactive[2], 'path......', window.location.pathname)
-
-    let active = ""
-    const path = window.location.pathname;
-    pageactive = path.split('/')
-    console.log(active[2], 'path=>', window.location.pathname)
-
+    console.log("darkmodes on FormAnalytics.....", darkmodes);
     return (
         <>
             <div className="wrapper">
-                {/* <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes} /> */}
 
                 <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
 
-                    <NavFormAnalytics darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
+                    <NavFormAnalytics darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
 
                     <div className='border rounded p-4 m-4'>
-                        <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
-                        <div className='row'>
-                            <div className='col-md-12 m-5 p-5 text-center'>
-                                <p>No data available for current time range</p>
+                        {/* <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes}/> */}
+                        <nav class="navbar navbar-light bg-light">
+                            <div class="container-fluid">
+                                <span class="navbar-brand mb-0 h4">FORM ANALYTICS</span>
                             </div>
-                        </div>
-                        <div class="container-fluid">
-                            <ul class="nav nav-tabs py-5 border-top border-bottom mb-5">
-                                <li class={"nav-item active ps-3 formlink item_space" + (pageactive[2] === '' ? "allform-list-focus1" : '')}>
-                                    <a href='#' class="nav-link-hover text-center link_color"> <p className="h1"> 6 </p> Views</a>
-                                </li>
-                                <li class={"nav-item formlink item_space" + (pageactive[2] === '' ? "allform-list-focus1" : '')}>
-                                    <a href="#" class="nav-link-hover text-center link_color"> <p className="h1"> 4 </p> Responses</a>
-                                </li>
-                                <li class={"nav-item formlink item_space" + (pageactive[2] === '' ? "allform-list-focus1" : '')}>
-                                    <a href="#" class="nav-link-hover text-center link_color"> <p className="h1"> 64% </p> Conversion Rate</a>
-                                </li>
-                                <li class={"nav-item formlink item_space" + (pageactive[2] === '' ? "allform-list-focus1" : '')}>
-                                    <a href="#" class="nav-link-hover text-center link_color"> <p className="h1"> 00:00 </p> Avg. Time</a>
-                                </li>
-                            </ul>
-                        </div>
+                        </nav>
+                        <Tabs
+                            defaultActiveKey="week"
+                            id="justify-tab-example"
+                            className={"mb-3 "+(darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                        >
+                            <Tab eventKey="week" title="This Week">
 
-                        <nav className={"navbar navbar-expand-lg all-navbar navbar-light bg-light pt-0 pb-0 " + (darkmodes ? "text-dark trans_background border-bottom  " : "text-dark trans_background border-bottom ")}>
-                <div class="container-fluid  ps-1">
-                    <ul class="nav nav-tabs">
-                        <li class={"nav-item active ps-3 formlink " + (active[2] === '' ? "allform-list-focus1" : '')}>
-                            <a href='' class="nav_item_hover link_color ">TRAFFIC</a>
-                        </li>
-                        <li class={"nav-item formlink " + (active[2] === '' ? "allform-list-focus1" : '')}>
-                            <a href="" class="nav_item_hover link_color">DEVICE</a>
-                        </li>
-                        <li class={"nav-item formlink " + (active[2] === '' ? "allform-list-focus1" : '')}>
-                            <a href="" class="nav_item_hover link_color">PLATFORM</a>
-                        </li>
-                        <li class={"nav-item formlink " + (active[2] === '' ? "allform-list-focus1" : '')}>
-                            <a href="" class="nav_item_hover link_color">LOCATION</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                                <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+                            </Tab>
+                            <Tab eventKey="month" title="This Month">
+                                <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+                            </Tab>
+                            <Tab eventKey="all-time" title="All-time">
+                                <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+                            </Tab>
+                            <Tab eventKey="custom" title="Custom">
+                                <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+                            </Tab>
+                        </Tabs>
+                        {/* <Tabs
+                            defaultActiveKey="traffic"
+                            id="uncontrolled-tab-example"
+                            className={"mb-3 "+darkmodes ? "text-white body-dark" : "text-dark body-light"}
+                        >
+                            <Tab eventKey="traffic" title="TRAFFIC">
+                               traffic data
+                            </Tab>
+                            <Tab eventKey="device" title="DEVICE">
+                                device data
+                            </Tab>
+                            <Tab eventKey="platform" title="PLATFORM">
+                                platform data
+                            </Tab>
+                            <Tab eventKey="location" title="LOCATION">
+                                location
+                            </Tab>
+                        </Tabs> */}
 
                     </div>
                 </div>
