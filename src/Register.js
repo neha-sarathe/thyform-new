@@ -39,7 +39,7 @@ const Register = (props) => {
   const [websiteUrl, setWebsiteUrl] = useState(false);
   const [searchText, setSearchText] = useState('');
   const [otherWebsiteName, setOtherWebsiteName] = useState('');
-  
+
 
   const companyHandle = (value) => {
     setCompanyNumber(value)
@@ -154,11 +154,11 @@ const Register = (props) => {
     }
     setOtherBusinessError(false)
   }
-  const handleOtherIndustry = (value)=>{
+  const handleOtherIndustry = (value) => {
     setIndustryName(value)
     setOtherIndustryError(false)
   }
-  const handleOtherwebsite = value =>{
+  const handleOtherwebsite = value => {
     setOtherWebsiteName(value)
     setOtherWebsiteError(false)
   }
@@ -173,7 +173,7 @@ const Register = (props) => {
     }
     setOtherempError(false)
   }
-  const onPostcode = e =>{
+  const onPostcode = e => {
     const { value } = e.target;
     setpostCode(value)
     setOtherPostcodeError(false)
@@ -204,7 +204,7 @@ const Register = (props) => {
   const handleClick = () => {
     input1.current.focus();
     if (txt && txt.length >= 3) {
-      
+
       const query = txt;
 
       const ar = [{ link: "apple" },
@@ -217,7 +217,7 @@ const Register = (props) => {
       else
         console.log('Query not found')
 
-        
+
       setShowResults(false);
       setSearchText(txt)
     }
@@ -265,7 +265,7 @@ const Register = (props) => {
   const [otherPostcodeError, setOtherPostcodeError] = useState(false);
   const [otherSpendError, setOtherSpendError] = useState(false);
   const [otherWebsiteError, setOtherWebsiteError] = useState(false);
-  
+
   const nextPage = () => {
     if (radio === "Limited") {
       if (txt === '') {
@@ -296,20 +296,20 @@ const Register = (props) => {
     } else {
       if (txtbn2 === '') {
         setOtherBusinessError('Please select your business type')
-      }else if (txtno2 === '') {
-      }else if (industryName === '') {
+      } else if (txtno2 === '') {
+      } else if (industryName === '') {
         setOtherIndustryError('Please select your business type')
-      }else if (txtno2 === '') {
+      } else if (txtno2 === '') {
         setOtherempError('Please select your business type')
-      }else if (postCode === '') {
+      } else if (postCode === '') {
         setOtherPostcodeError('Please select your business type')
-      }else if (spend2 === '') {
+      } else if (spend2 === '') {
         setOtherSpendError('Please select your business type')
-      }else if (otherWebsiteName === '') {
+      } else if (otherWebsiteName === '') {
         setOtherWebsiteError('Please select yes or no')
-      } else{
+      } else {
         navigate('/registerfour')
-      } 
+      }
     }
 
   }
@@ -841,8 +841,8 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                          onChange={(event) => handleOtherIndustry(event.target.value)}
-                          value={industryName}
+                            onChange={(event) => handleOtherIndustry(event.target.value)}
+                            value={industryName}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
@@ -867,7 +867,7 @@ const Register = (props) => {
                           <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno2}
                             onChange={onEmployeesNoOther} />
-                            <p className="para-form show_result">{otherempError}</p>
+                          <p className="para-form show_result">{otherempError}</p>
                         </div>
 
                       </div>
@@ -878,19 +878,19 @@ const Register = (props) => {
                         <div className="search-input-div div-search-input">
                           <div className="d-flex">
                             <input
-                            type="text"
-                            onChange={onPostcode}
-                            value={postCode}
-                            placeholder="Enter your postcode*"
-                            className={"search-input search-input-post " + (props.darkmodes ? "text-white" : "text-dark")}
-                          />
-                          
+                              type="text"
+                              onChange={onPostcode}
+                              value={postCode}
+                              placeholder="Enter your postcode*"
+                              className={"search-input search-input-post " + (props.darkmodes ? "text-white" : "text-dark")}
+                            />
+
                             <div className="ps-4 find-btn-postcode">
                               <button type="submit" className="btn-default btn-find-post">
                                 Find &nbsp;  <i className="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                               </button>
                             </div></div>
-                            <p className="para-form show_result">{otherPostcodeError}</p>
+                          <p className="para-form show_result">{otherPostcodeError}</p>
                           {!show ? (
                             <p
                               onClick={() => {
@@ -1029,8 +1029,8 @@ const Register = (props) => {
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
                           <select
-                          onChange={(event) => handleOtherwebsite(event.target.value)}
-                          value={otherWebsiteName}
+                            onChange={(event) => handleOtherwebsite(event.target.value)}
+                            value={otherWebsiteName}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                           >
@@ -1039,7 +1039,7 @@ const Register = (props) => {
                             <option value='no'>No</option>
                           </select>
                           <p className="para-form show_result">{otherWebsiteError}</p>
-                          
+
                         </div>
 
                       </div>
@@ -1065,12 +1065,6 @@ const Register = (props) => {
 
                       <div className="mt-3 text-end">
                         <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button>
-                        {/* <Link
-                          className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")}
-                          to="/login"
-                        >
-                          Next <FiChevronRight />
-                        </Link> */}
                       </div>
                     </>
                   )}

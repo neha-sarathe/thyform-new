@@ -5,7 +5,7 @@ import Dark from '../DarkAuth';
     let pages2 = ""
     const pathnames = window.location.pathname;
     pages2 = pathnames.split('/')
-    console.log(pages2[2],'all3333333', window.location.pathname)
+    console.log(pages2[2],'allformNav....', window.location.pathname)
     
     return (
       <>

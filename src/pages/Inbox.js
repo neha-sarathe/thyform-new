@@ -1,11 +1,10 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 import Navbarallform from './Navbarallform';
 import AllformNav from './AllformNav';
 import { Link } from 'react-router-dom';
 import { FiFilter } from "react-icons/fi";
 import { InboxNavbar } from './InboxNavbar';
-const Inbox = ({ darkmodes, setDarkmodes }) => {
+const Inbox = ({darkmodes, setDarkmodes}) => {
 
 
   let sidebaroption = ""
@@ -13,11 +12,11 @@ const Inbox = ({ darkmodes, setDarkmodes }) => {
   sidebaroption = pathnames.split('/')
   console.log(sidebaroption[2], 'path......', window.location.pathname)
 
-
+console.log("dark on inbox", darkmodes)
   return (
     <>
       <div className="wrapper">
-        <AllformNav  />
+        <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
         <div className='full_width'>
           <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
             <Navbarallform />

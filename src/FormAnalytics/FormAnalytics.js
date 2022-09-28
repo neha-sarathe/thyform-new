@@ -15,7 +15,7 @@ export const FormAnalytics = ({ darkmodes, setDarkmodes }) => {
                     <NavFormAnalytics darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
 
                     <div className='border rounded p-4 m-4'>
-                        {/* <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes}/> */}
+                     
                         <nav class="navbar navbar-light bg-light">
                             <div class="container-fluid">
                                 <span class="navbar-brand mb-0 h4">FORM ANALYTICS</span>
@@ -40,25 +40,7 @@ export const FormAnalytics = ({ darkmodes, setDarkmodes }) => {
                                 <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
                             </Tab>
                         </Tabs>
-                        {/* <Tabs
-                            defaultActiveKey="traffic"
-                            id="uncontrolled-tab-example"
-                            className={"mb-3 "+darkmodes ? "text-white body-dark" : "text-dark body-light"}
-                        >
-                            <Tab eventKey="traffic" title="TRAFFIC">
-                               traffic data
-                            </Tab>
-                            <Tab eventKey="device" title="DEVICE">
-                                device data
-                            </Tab>
-                            <Tab eventKey="platform" title="PLATFORM">
-                                platform data
-                            </Tab>
-                            <Tab eventKey="location" title="LOCATION">
-                                location
-                            </Tab>
-                        </Tabs> */}
-
+                 
                     </div>
                 </div>
             </div>
