@@ -725,7 +725,7 @@ const PersonalDetails = (props) => {
                                                 <p className="para-form show_result">{checkedConfirmError}</p>
                                                 <h6 className="fw-bold mt-3">You can see the fee information for this account <a href="/#" className="text-primary">here</a> </h6></div>
                                         </label>
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-between">
+                                        <div className="mt-3 text-end d-flex align-items-center justify-content-around">
                                             <p className="already-login">
                                                 Already account please{" "}
                                                 <Link to="/login" className="auth-link register-here register-here">

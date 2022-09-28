@@ -781,7 +781,7 @@ const Register = (props) => {
                       </div>
                       */}
                       <hr />
-                      <div className="mt-3 text-end d-flex align-items-center justify-content-between">
+                      <div className="mt-3 text-end d-flex align-items-center justify-content-around">
                         <p className="already-login">
                           Already account please{" "}
                           <Link to="/login" className="auth-link register-here">
