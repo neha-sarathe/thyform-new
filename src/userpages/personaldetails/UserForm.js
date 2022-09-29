@@ -390,7 +390,7 @@ const UserForm = (props) => {
                                         </div>
                                         <div className="d-flex mt-4 align-items-center">
                                             <div className="w-25">
-                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Password</label>
+                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Password*</label>
                                             </div>
                                             <div className="search-input-div search-input-div1">
                                                 <input
@@ -426,7 +426,7 @@ const UserForm = (props) => {
                                        
                                         <div className="d-flex mt-4 align-items-center">
                                             <div className="w-25">
-                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Pin</label>
+                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Pin*</label>
                                             </div>
                                             <div className="search-input-div search-input-div1">
                                                 <input
@@ -444,7 +444,7 @@ const UserForm = (props) => {
                                         </div>
                                         <div className="d-flex mt-4">
                                             <div className="w-25">
-                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Confirm Pin</label>
+                                                <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Confirm Pin*</label>
                                             </div>
                                             <div className="search-input-div search-input-div1">
                                                 <input
