@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; 
 import { FiSearch, FiChevronRight } from 'react-icons/fi'
 // import register2 from '../public/images/auth/register-bg.png'
 import Dark from "./DarkAuth";
 const Register = (props) => {
-
+  console.log('price..on register', props.priceSelect);
   const navigate = useNavigate();
   const [radio, setRadio] = useState("Limited");
   const [show, setShow] = useState(false);
@@ -334,7 +334,6 @@ const Register = (props) => {
       setWebsiteUrl(true)
     }
   }
-
 
 
   return (

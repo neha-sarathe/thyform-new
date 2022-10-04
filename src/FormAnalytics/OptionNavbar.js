@@ -4,26 +4,11 @@ import Tabs from 'react-bootstrap/Tabs';
 
 export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
     const [viewShow, setViewShow] = useState('');
-    // const [response, setResponse] = useState('');
-    // const [conversionRate, setConversion] = useState('');
-    // const [avgTime, setAvgTime] = useState('');
 
     const onViewShow = (value) => {
         setViewShow(value)
         console.log('value1', value);
     }
-    // const onResponse = (value) => {
-    //     setResponse(value)
-    //     console.log('value2', value);
-    // }
-    // const onConversion = (value) => {
-    //     setConversion(value)
-    //     console.log('value3', value);
-    // }
-    // const onAvgTime = (value) => {
-    //     setAvgTime(value)
-    //     console.log('value4', value);
-    // }
 
     return (
         <>
@@ -54,12 +39,12 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
             <Tabs
                 defaultActiveKey="traffic"
                 id="uncontrolled-tab-example"
-                className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                className="mb-3 " 
             >
                 <Tab eventKey="traffic" title="TRAFFIC">
                     {viewShow === "response"
                         ? <>
-                            <table class="table">
+                            <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                 <thead>
                                     <tr>
                                         <th style={{ width: "50%" }}>Recent Visitors</th>
@@ -96,7 +81,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                         </>
                         : viewShow === "conversionRate" ?
                             <>
-                                <table class="table">
+                               <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                     <thead>
                                         <tr>
                                             <th style={{ width: "50%" }}>Recent Visitors</th>
@@ -133,7 +118,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                             </>
                             : viewShow === "avgTime" ?
                                 <>
-                                    <table class="table">
+                                   <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                         <thead>
                                             <tr>
                                                 <th style={{ width: "50%" }}>Recent Visitors</th>
@@ -169,7 +154,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                                     </table>
                                 </>
                                 : <>
-                                    <table class="table">
+                                   <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                         <thead>
                                             <tr>
                                                 <th style={{ width: "50%" }}>Recent Visitors</th>
@@ -209,7 +194,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                 <Tab eventKey="device" title="DEVICE">
                     {viewShow === "response" ?
                         <>
-                            <table class="table">
+                           <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                 <thead>
                                     <tr>
                                         <th style={{ width: "50%" }}>Device Distribution</th>
@@ -243,7 +228,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                         </>
                         : viewShow === "conversionRate" ?
                             <>
-                                <table class="table">
+                                <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                     <thead>
                                         <tr>
                                             <th style={{ width: "50%" }}>Device Distribution</th>
@@ -277,7 +262,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                             </>
                             : viewShow === "avgTime" ?
                                 <>
-                                    <table class="table">
+                                   <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                         <thead>
                                             <tr>
                                                 <th style={{ width: "50%" }}>Device Distribution</th>
@@ -310,7 +295,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                                     </table>
                                 </>
                                 : <>
-                                    <table class="table">
+                                   <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                         <thead>
                                             <tr>
                                                 <th style={{ width: "50%" }}>Device Distribution</th>
@@ -346,7 +331,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                 <Tab eventKey="platform" title="PLATFORM">
                     {viewShow === "response" ?
                         <>
-                            <table class="table">
+                          <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                 <thead>
                                     <tr>
                                         <th style={{ width: "50%" }}>Browsers</th>
@@ -380,7 +365,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                         </>
                         : viewShow === "conversionRate" ?
                             <>
-                                <table class="table">
+                               <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                     <thead>
                                         <tr>
                                             <th style={{ width: "50%" }}>Browsers</th>
@@ -414,7 +399,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                             </>
                             : viewShow === "avgTime" ?
                                 <>
-                                    <table class="table">
+                                   <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                         <thead>
                                             <tr>
                                                 <th style={{ width: "50%" }}>Browsers</th>
@@ -447,7 +432,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                                     </table>
                                 </>
                                 : <>
-                                    <table class="table">
+                                   <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                         <thead>
                                             <tr>
                                                 <th style={{ width: "50%" }}>Browsers</th>
@@ -484,12 +469,12 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                 <Tab eventKey="location" title="LOCATION">
                     {viewShow === "response" ?
                         <>
-                            <table class="table">
+                            <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                 <thead>
                                     <tr>
                                         <th style={{ width: "90%" }}>Countries</th>
                                         <th style={{ width: "10%" }}>Views</th>
-                                   </tr>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
@@ -507,67 +492,18 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                                 </tbody>
                             </table>
                         </>
-                        : viewShow === "conversionRate" ? 
-                        <>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th style={{ width: "90%" }}>Countries</th>
-                                        <th style={{ width: "10%" }}>Views</th>
-                                   </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mark 3 location</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </>
-                            : viewShow === "avgTime" ? 
+                        : viewShow === "conversionRate" ?
                             <>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th style={{ width: "90%" }}>Countries</th>
-                                        <th style={{ width: "10%" }}>Views</th>
-                                   </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mark 4 location</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </>
-                                : <>
-                                <table class="table">
+                               <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
                                     <thead>
                                         <tr>
                                             <th style={{ width: "90%" }}>Countries</th>
                                             <th style={{ width: "10%" }}>Views</th>
-                                       </tr>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Mark 1 location</td>
+                                            <td>Mark 3 location</td>
                                             <td>Otto</td>
                                         </tr>
                                         <tr>
@@ -581,6 +517,55 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                                     </tbody>
                                 </table>
                             </>
+                            : viewShow === "avgTime" ?
+                                <>
+                                   <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
+                                        <thead>
+                                            <tr>
+                                                <th style={{ width: "90%" }}>Countries</th>
+                                                <th style={{ width: "10%" }}>Views</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mark 4 location</td>
+                                                <td>Otto</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Larry</td>
+                                                <td>the Bird</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </>
+                                : <>
+                                    <table className={"table " +(darkmodes ? "text-white body-dark " : "text-dark body-light ")}>
+                                        <thead>
+                                            <tr>
+                                                <th style={{ width: "90%" }}>Countries</th>
+                                                <th style={{ width: "10%" }}>Views</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mark 1 location</td>
+                                                <td>Otto</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Larry</td>
+                                                <td>the Bird</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </>
                     }
                 </Tab>
             </Tabs>

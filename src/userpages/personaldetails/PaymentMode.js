@@ -6,7 +6,24 @@ import Dark from "../../DarkAuth";
 import ToggleSwitch from "./Toggle";
 
 const PaymentMode = (props) => {
- 
+    const navigate = useNavigate();
+    // const [priceSelect, setPriceSelect] = useState('');
+
+    const onPriceSelect = (value) => {
+        props.setPriceSelect(value)
+        console.log('Price....', value);
+    }
+    console.log('Props value of toggle on paymentmode =', props.toggle);
+
+    const nextPage = () => {
+        if (!props.priceSelect || !props.toggle) {
+            console.log("please select one package option")
+        }
+        else {
+            navigate('/register');
+        }
+    }
+
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -33,57 +50,58 @@ const PaymentMode = (props) => {
                                     </div>
                                     <div>
                                         <h4 className="heading-form dark-mode-text mb-3">Payment Packages</h4>
-                                        <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected="Monthly" />
-
-                                        <div className="container-fluid p-0 mt-4">
-                                            <div className="row">
-                                                <div className="col-lg-4">
-                                                    <div class={"card card_style " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Monthly</h5>
+                                        <div className="float-end">
+                                            <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected={props.toggle} toggle={props.toggle} setToggle={props.setToggle} />
+                                        </div>
+                                        <div className="container-fluid p-0 mt-5">
+                                            <div className="row justify-content-center">
+                                                <div className="col-4">
+                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                                                        <div className="card-body">
+                                                            <h5 className="card-title">Monthly</h5>
                                                             <div className="d-flex">
-                                                                <p class="fs-1">$8 </p>
-                                                                <p class="fs-6 mt-4">/</p>
-                                                                <p class="fs-6 mt-4">month</p>
+                                                                <p className="fs-1">$8 </p>
+                                                                <p className="fs-6 mt-4">/</p>
+                                                                <p className="fs-6 mt-4">month</p>
                                                             </div>
-                                                            <p class="card-text">Manage all your teams’ work in one place</p>
-                                                            <a href="#" class="card-link"><button type="button" class="btn btn-primary btn-sm">Select</button></a>
+                                                            <p className="card-text">Manage all your teams’ work in one place</p>
+                                                            <button type="button" className="btn btn-primary btn-sm margin_btn_sm" onClick={() => onPriceSelect('Monthly')}>Select</button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-4">
-                                                    <div class={"card card_style " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Half Yearly</h5>
+                                                <div className="col-4">
+                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                                                        <div className="card-body">
+                                                            <h5 className="card-title">Half Yearly</h5>
                                                             <div className="d-flex">
-                                                                <p class="fs-1">$10 </p>
+                                                                <p className="fs-1">$10 </p>
                                                                 {/* <p class="fs-4 mt-3">/6months</p> */}
-                                                                <p class="fs-6 mt-4">/</p>
-                                                                <p class="fs-6 mt-4">6-month</p>
+                                                                <p className="fs-6 mt-4">/</p>
+                                                                <p className="fs-6 mt-4">6-month</p>
                                                             </div>
-                                                            <p class="card-text">Manage all your teams’ work in one place</p>
-                                                            <a href="#" class="card-link"><button type="button" class="btn btn-primary btn-sm">Select</button></a>
+                                                            <p className="card-text">Manage all your teams’ work in one place</p>
+                                                            <button type="button" className="btn btn-primary btn-sm margin_btn_sm" onClick={() => onPriceSelect('Half Yearly')}>Select</button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-4">
-                                                    <div class={"card card_style " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Yearly</h5>
+                                                <div className="col-4">
+                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                                                        <div className="card-body">
+                                                            <h5 className="card-title">Yearly</h5>
                                                             <div className="d-flex">
-                                                                <p class="fs-1">$16</p>
-                                                                <p class="fs-6 mt-4">/</p>
-                                                                <p class="fs-6 mt-4">year</p>
+                                                                <p className="fs-1">$16</p>
+                                                                <p className="fs-6 mt-4">/</p>
+                                                                <p className="fs-6 mt-4">year</p>
                                                             </div>
-                                                            <p class="card-text">Manage all your teams’ work in one place</p>
-                                                            <a href="#" class="card-link"><button type="button" class="btn btn-primary btn-sm">Select</button></a>
+                                                            <p className="card-text">Manage all your teams’ work in one place</p>
+                                                            <button type="button" className="btn btn-primary btn-sm margin_btn_sm" onClick={() => onPriceSelect('Yearly')}>Select</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <hr />
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-center">
+                                        <div className="mt-3 text-end d-flex align-items-center justify-content-evenly">
                                             <p className="already-login">
                                                 Already account please{" "}
                                                 <Link to="/login" className="auth-link register-here register-here">
@@ -91,12 +109,9 @@ const PaymentMode = (props) => {
                                                 </Link>{" "}
 
                                             </p>
-                                            <br/>
-                                            {/* <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick="">Next <FiChevronRight /></button> */}
+                                            <br />
+                                            <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button>
                                         </div>
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-center">
-                                        <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick="">Pay<FiChevronRight /></button>
-                                  </div>
                                     </div>
                                 </div>
                             </div>

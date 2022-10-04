@@ -27,7 +27,7 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
 
                             <ul class="navform">
 
-                                <li class="button-dropdown formlink">
+                                <li class="button-dropdown formlink remove_overlap">
                                     <div class={"dropdown-toggle drop "+ (actives1 ? "actives1" : '' )} onClick={handleactive}>
                                         More <span><FiChevronDown /></span>
                                     </div>
