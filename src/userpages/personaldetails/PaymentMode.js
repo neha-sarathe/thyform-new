@@ -16,7 +16,7 @@ const PaymentMode = (props) => {
     console.log('Props value of toggle on paymentmode =', props.toggle);
 
     const nextPage = () => {
-        if (!props.priceSelect || !props.toggle) {
+        if (!props.priceSelect) {
             console.log("please select one package option")
         }
         else {

@@ -240,6 +240,7 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
                   <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
                   
                   <Link to="/myprofile" className="dropdown-item">Profile Settings</Link>
+                  <Link to="#" className="dropdown-item">Upgrade</Link>
                  
                   {/* <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p> */}
                
