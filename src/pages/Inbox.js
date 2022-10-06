@@ -4,7 +4,11 @@ import AllformNav from './AllformNav';
 import { Link } from 'react-router-dom';
 import { FiFilter } from "react-icons/fi";
 import { InboxNavbar } from './InboxNavbar';
-const Inbox = ({darkmodes, setDarkmodes}) => {
+import { FaTrashAlt, FaArchive, FaCheck } from "react-icons/fa";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+
+const Inbox = ({ darkmodes, setDarkmodes }) => {
 
 
   let sidebaroption = ""
@@ -12,11 +16,11 @@ const Inbox = ({darkmodes, setDarkmodes}) => {
   sidebaroption = pathnames.split('/')
   console.log(sidebaroption[2], 'path......', window.location.pathname)
 
-console.log("dark on inbox", darkmodes)
+  console.log("dark on inbox", darkmodes)
   return (
     <>
       <div className="wrapper">
-        <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
+        <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
         <div className='full_width'>
           <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
             <Navbarallform />
@@ -25,17 +29,28 @@ console.log("dark on inbox", darkmodes)
               <div className='row'>
                 <div className='col-md-4'>
                   <nav id="sidebars" className={darkmodes ? "text-white border-end" : "text-dark border-end"}>
+
                     <div class="input-group">
-                      <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
-                        <i class="fa fa-search"></i>
-                      </button>
+                      <span class="input-group-prepend">
+                        <div class="input-group-text bg-transparent border-right-0 inbox_search">
+                          <i class="fa fa-search"></i>
+                        </div>
+                      </span>
                       <input class="form-control py-2 border-right-0 border form_padding search_col" type="search" placeholder='Search' id="example-search-input" />
                       <span class="input-group-append">
                         <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
-                          <FiFilter />
+                          Filter  <FiFilter />
                         </button>
                       </span>
                     </div>
+                    <div className='mt-3'>
+                      <FaCheck className='m-2' />
+                      <FaArchive className='m-2' data-toggle="tooltip" data-placement="top" title="Archive"/>
+                      <FaTrashAlt className='m-2' data-toggle="tooltip" data-placement="top" title="Move to Trash"/>
+                      <BsThreeDotsVertical />
+                      <button class="btn_down"><HiDownload/>Download</button>
+                    </div>
+                    <hr />
                     <ul class="list-unstyled components">
 
                       <li>

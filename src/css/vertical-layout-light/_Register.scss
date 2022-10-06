@@ -49,7 +49,7 @@ input[type="radio"]:checked+label span {
     height: 19px;
     background: black;
     background-clip: content-box;
-    background-color: black;
+    background-color: #dc143c;
     // -webkit-transition: border .15s ease-in-out;
     // -o-transition: border .15s ease-in-out;
     // transition: border .15s ease-in-out;
@@ -273,4 +273,11 @@ color: black;
 }
 .show_result{
     color: red;
+}
+
+.radius_sal{
+    border-radius: 2px !important;
+}
+.euro_size{
+    font-size: 25px;
 }

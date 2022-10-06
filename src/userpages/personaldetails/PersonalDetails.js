@@ -43,8 +43,8 @@ const PersonalDetails = (props) => {
     const [month, setMonth] = useState('');
     const [day, setDay] = useState('');
     const [birthday, setBirthday] = useState({ birthday: '' });
-    const [confirmValue,setConfirmValue] = useState('')
-    const [confirmValueError,setConfirmValueError] = useState('')
+    const [confirmValue, setConfirmValue] = useState('')
+    const [confirmValueError, setConfirmValueError] = useState('')
 
     const select_data = [
         { key: 'america', value: 'Example 1' },
@@ -219,15 +219,17 @@ const PersonalDetails = (props) => {
 
     const onPostcode = e => {
         const { value } = e.target;
-        setpostCode(value)
+        const re = /^[0-9\b]+$/;
+        if (re.test(value)) {
+            setpostCode(value)
+        }
         setOtherPostcodeError(false)
     }
 
     const onPhoneNumber = e => {
         const { value } = e.target;
-        // setPhoneNumber(value)
-        // setPhoneNumberError(false)
-        if (value.length <= 11) {
+        const re = /^[0-9\b]+$/;
+        if (value.length <= 11 && re.test(value)) {
             setPhoneNumber(value)
             setPhoneNumberError(false)
         }
@@ -235,36 +237,34 @@ const PersonalDetails = (props) => {
     }
     const onMobileNumber = e => {
         const { value } = e.target;
-        if (value.length <= 11) {
+        const re = /^[0-9\b]+$/;
+        if (value.length <= 11 && re.test(value)) {
             setMobileNumber(value)
-        setMobileNumberError(false)
-        } 
-        // setMobileNumber(value)
-        // setMobileNumberError(false)
+            setMobileNumberError(false)
+        }
     }
     const onEmailAddress = e => {
         const { value } = e.target;
         setEmailAddress(value)
         setEmailAddressError(false)
     }
-    
+
     const onConfirmEmail = e => {
-        if (e.target.value != emailAddress)
-        {
+        if (e.target.value != emailAddress) {
             setConfirmValueError('not match')
         } else if (e.target.value === emailAddress) {
             setConfirmValue(e.target.value)
             setConfirmValueError('')
-        }else{
+        } else {
             setConfirmValue(e.target.value)
             setConfirmValueError('')
         }
         setConfirmEmailError(false)
         // const { value } = e.target;
-        
+
         // setConfirmEmail(value)
         // if (emailAddress != confirmEmail) {
-            
+
         //     setConfirmEmailError('not match')
         // }else{
         //     setConfirmValue(confirmEmail)
@@ -328,21 +328,21 @@ const PersonalDetails = (props) => {
         //   padding: 20,
         //   display: state.selectProps.flex
         // }),
-      
-        control: (_, { selectProps: { width, display, border, borderRadius }}) => ({
-          width: width,
-          display: display,
-          border: border,
-          borderRadius: borderRadius
+
+        control: (_, { selectProps: { width, display, border, borderRadius } }) => ({
+            width: width,
+            display: display,
+            border: border,
+            borderRadius: borderRadius
         }),
-      
+
         singleValue: (provided, state) => {
-          const opacity = state.isDisabled ? 0.5 : 1;
-          const transition = 'opacity 300ms';
-      
-          return { ...provided, opacity, transition };
+            const opacity = state.isDisabled ? 0.5 : 1;
+            const transition = 'opacity 300ms';
+
+            return { ...provided, opacity, transition };
         }
-      }
+    }
 
 
     return (
@@ -478,17 +478,17 @@ const PersonalDetails = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Nationality*</label>
                                             </div>
                                             <div className="search-input-div search-input-div1">
-                                            <Select
+                                                <Select
                                                     styles={customStyles}
                                                     display='flex'
                                                     border="1px solid #d0e3e9"
                                                     borderRadius="4px"
                                                     className="nationality"
                                                     value={nationality}
-                                                    onChange={e=>{
+                                                    onChange={e => {
                                                         setNationality();
                                                         setNationalityError(false)
-                                                    } }
+                                                    }}
                                                     options={options}
                                                     placeholder="Search"
                                                 />
@@ -509,7 +509,7 @@ const PersonalDetails = (props) => {
                                                
                                                 <p className="para-form show_result">{nationalityError}</p>
                                             </div> */}
- {/* <input
+                                            {/* <input
                                                     type="text"
                                                     placeholder="Search"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
@@ -524,7 +524,7 @@ const PersonalDetails = (props) => {
                                             <div className="search-input-div search-input-div1">
                                                 <div className="d-flex">
                                                     <input
-                                                        type="number"
+                                                        type="text"
                                                         onChange={onPostcode}
                                                         value={postCode}
                                                         placeholder="Enter your postcode*"
@@ -536,7 +536,7 @@ const PersonalDetails = (props) => {
                                                             Find &nbsp;  <i className="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                                                         </button>
                                                     </div></div>
-                                                    {postCode === '' ? <h6 className="mt-2">This is where we will send your card and letters</h6>:''}
+                                                {postCode === '' ? <h6 className="mt-2">This is where we will send your card and letters</h6> : ''}
                                                 <p className="para-form show_result">{otherPostcodeError}</p>
                                                 {!show ? (
                                                     <p
@@ -624,14 +624,14 @@ const PersonalDetails = (props) => {
                                             </div>
                                             <div className="search-input-div search-input-div1">
                                                 <input
-                                                    type="number"
+                                                    type="text"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={PhoneNumber}
                                                     onChange={onPhoneNumber}
                                                     max="10"
                                                     min="10"
                                                 />
-                                                {PhoneNumber === '0' ? <h6 className="mt-2">This can be a mobile number. Please enter numbers only. Spaces are not allowed.</h6>:''}
+                                                {PhoneNumber === '0' ? <h6 className="mt-2">This can be a mobile number. Please enter numbers only. Spaces are not allowed.</h6> : ''}
                                                 <p className="para-form show_result">{PhoneNumberError}</p>
                                             </div>
                                             {PhoneNumber.length === 11 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
@@ -643,23 +643,23 @@ const PersonalDetails = (props) => {
                                             </div>
                                             <div className="search-input-div search-input-div1">
                                                 <input
-                                                    type="number"
+                                                    type="text"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={mobileNumber}
                                                     onChange={onMobileNumber}
                                                 />
-                                                {mobileNumber === '07' ? <h6 className="mt-2">Please enter numbers only. Spaces are not allowed.</h6>:''}
-                                               
-                                                 <label className="float-none d-flex align-items-baseline" style={{ cursor: "pointer" }}>
-                                            <input type="checkbox"
-                                                className="mx-1"
-                                            />
+                                                {mobileNumber === '07' ? <h6 className="mt-2">Please enter numbers only. Spaces are not allowed.</h6> : ''}
 
-                                            <div>
-                                                <h6 className="mx-2 mt-3"> Same as primary work phone number</h6>
-                                            </div>
-                                        </label>
-                                               
+                                                <label className="float-none d-flex align-items-baseline" style={{ cursor: "pointer" }}>
+                                                    <input type="checkbox"
+                                                        className="mx-1"
+                                                    />
+
+                                                    <div>
+                                                        <h6 className="mx-2 mt-3"> Same as primary work phone number</h6>
+                                                    </div>
+                                                </label>
+
                                                 <p className="para-form show_result">{mobileNumberError}</p>
                                             </div>
                                             {mobileNumber.length === 11 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}

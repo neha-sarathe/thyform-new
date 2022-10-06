@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+// import { FaEuroSign } from "react-icons/fa";
 import { FiChevronRight, FiCheck } from 'react-icons/fi'
 // import register2 from '../public/images/auth/register-bg.png'
 import Dark from "../DarkAuth";
@@ -51,7 +52,8 @@ const RegisterThree = (props) => {
     /*validations */
     const onInputChange = e => {
         const { value } = e.target;
-        if (value.length <= 11) {
+        const re = /^[0-9\b]+$/;
+        if (value.length <= 11 && re.test(value)) {
             setTxt(value);
             setMaxValue(false)
         } else {
@@ -102,17 +104,25 @@ const RegisterThree = (props) => {
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>What is your expected annual turnover?*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            {/* <div className="search-input-div search-input-div1"> */}
+                                            <div className="input-group search-input-div">
+                                                <span className="input-group-text euro_size" id="basic-addon1">£</span>
                                                 <input
-                                                    type="number"
+                                                    type="text"
+                                                    className={"form-control search-input radius_sal " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")}
+                                                    placeholder="" aria-label="Username"
+                                                    aria-describedby="basic-addon1" value={txt} onChange={onInputChange} />
+                                                {/* <input
+                                                    type="text"
                                                     placeholder="Registration Number"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={txt}
                                                     onChange={onInputChange}
-                                                />
-                                                <p className="para-form show_result">{error}</p>
-                                                <p className="para-form show_result">{maxValue}</p>
+                                                /> */}
+                                              
                                             </div>
+                                            <p className="para-form show_result">{error}</p>
+                                                <p className="para-form show_result">{maxValue}</p>
                                             {txt.length > 0 && txt.length <= 10 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>

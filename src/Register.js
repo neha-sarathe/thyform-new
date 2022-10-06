@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom"; 
+import { Link, useNavigate } from "react-router-dom";
 import { FiSearch, FiChevronRight } from 'react-icons/fi'
 // import register2 from '../public/images/auth/register-bg.png'
 import Dark from "./DarkAuth";
@@ -16,8 +16,8 @@ const Register = (props) => {
   const [txtno2, setTxtno2] = useState('');
   const [industryName, setIndustryName] = useState('');
   const [postCode, setpostCode] = useState('');
-  const [spend, setSpend] = useState('');
-  const [spend2, setSpend2] = useState('');
+  // const [spend, setSpend] = useState('');
+  // const [spend2, setSpend2] = useState('');
   const [address, setAddress] = useState('');
   const [houseno, setHouseNo] = useState('');
   const [companynumber, setCompanyNumber] = useState(false)
@@ -33,7 +33,7 @@ const Register = (props) => {
   const [soleError, setSoleError] = useState(false);
   const [industryError, setIndustryError] = useState(false);
   const [employError, setEmployError] = useState(false);
-  const [spendError, setSpendError] = useState(false);
+  // const [spendError, setSpendError] = useState(false);
   const [websiteSoleError, setWebsiteSoleError] = useState(false);
   const [industryData, setIndustryData] = useState('');
   const [websiteUrl, setWebsiteUrl] = useState(false);
@@ -123,16 +123,14 @@ const Register = (props) => {
     setEmployError(false)
   }
 
-  const onSpend = e => {
-    const { value } = e.target;
-
-
-    const re = /^[0-9\b]+$/;
-    if (value === "" || re.test(value)) {
-      setSpend(value);
-    }
-    setSpendError(false)
-  }
+  // const onSpend = e => {
+  //   const { value } = e.target;
+  //   const re = /^[0-9\b]+$/;
+  //   if (value === "" || re.test(value)) {
+  //     setSpend(value);
+  //   }
+  //   setSpendError(false)
+  // }
 
   const onAddress = e => {
     const { value } = e.target;
@@ -179,16 +177,14 @@ const Register = (props) => {
     setOtherPostcodeError(false)
   }
 
-  const onSpendOther = e => {
-    const { value } = e.target;
-
-
-    const re = /^[0-9\b]+$/;
-    if (value === "" || re.test(value)) {
-      setSpend2(value);
-    }
-    setOtherSpendError(false)
-  }
+  // const onSpendOther = e => {
+  //   const { value } = e.target;
+  //   const re = /^[0-9\b]+$/;
+  //   if (value === "" || re.test(value)) {
+  //     setSpend2(value);
+  //   }
+  //   setOtherSpendError(false)
+  // }
 
   const onHouseNo = e => {
     const { value } = e.target;
@@ -263,7 +259,7 @@ const Register = (props) => {
   const [otherIndustryError, setOtherIndustryError] = useState(false);
   const [otherempError, setOtherempError] = useState(false);
   const [otherPostcodeError, setOtherPostcodeError] = useState(false);
-  const [otherSpendError, setOtherSpendError] = useState(false);
+  // const [otherSpendError, setOtherSpendError] = useState(false);
   const [otherWebsiteError, setOtherWebsiteError] = useState(false);
 
   const nextPage = () => {
@@ -286,8 +282,6 @@ const Register = (props) => {
         setIndustryError('Please select an industry from the dropdown. If your industry isn not listed, select other')
       } else if (txtno === '') {
         setEmployError('Please enter the number of employees your business has using only numbers')
-      } else if (spend === '') {
-        setSpendError('Please enter the expected monthly spend for this account')
       } else if (website === false) {
         setWebsiteSoleError('Please select yes or no')
       } else {
@@ -303,8 +297,6 @@ const Register = (props) => {
         setOtherempError('Please select your business type')
       } else if (postCode === '') {
         setOtherPostcodeError('Please select your business type')
-      } else if (spend2 === '') {
-        setOtherSpendError('Please select your business type')
       } else if (otherWebsiteName === '') {
         setOtherWebsiteError('Please select yes or no')
       } else {
@@ -370,17 +362,19 @@ const Register = (props) => {
                     Please select your business type:
                   </h6>
                   <input
+
                     id="individual"
                     checked={radio === "Limited"}
                     type="radio"
                     name="business"
                     value="Limited"
+                    class="custom-control-input"
                     onClick={() => {
                       handleRadio("Limited");
                     }}
 
                   />
-                  <label htmlFor="individual" className={'dark-mode-text ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                  <label htmlFor="individual" className={'dark-mode-text custom-control-label green ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                     <span></span>Limited Company
                   </label>
 
@@ -637,7 +631,7 @@ const Register = (props) => {
                       {" "}     <br />
                       <div className="d-flex mt-4 align-items-center">
                         <div className=" lables-div">
-                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business name..*</label>
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Business name*</label>
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
@@ -707,24 +701,20 @@ const Register = (props) => {
 
                       </div>
 */}
-                      <div className="d-flex mt-3 align-items-center">
+                      {/* <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                             What's your expected monthly spend for this
                             account?*
                           </label>
                         </div>
-                        {/* <div className="search-input-div">
-                         
-                          <input type="text" className="search-input" />
-                        </div> */}
                         <div className="input-group search-input-div">
                           <span className="input-group-text" id="basic-addon1">£</span>
                           <input type="text" className={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend} onChange={onSpend} />
                           <p className="para-form show_result">{spendError}</p>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your organisation have a website?*</label>
@@ -1002,24 +992,21 @@ const Register = (props) => {
                         </div>
 
                       </div> */}
-                      <div className="d-flex mt-3 align-items-center">
+                      {/* <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                             What's your expected monthly spend for this
                             account?*
                           </label>
                         </div>
-                        {/* <div className="search-input-div">
-                         
-                          <input type="text" className="search-input" />
-                        </div> */}
+
                         <div className="input-group search-input-div">
                           <span className="input-group-text" id="basic-addon1">£</span>
                           <input type="text" className={"form-control search-input " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")} placeholder="Enter" aria-label="Username"
                             aria-describedby="basic-addon1" value={spend2} onChange={onSpendOther} />
                         </div>
                         <p className="para-form show_result">{otherSpendError}</p>
-                      </div>
+                      </div> */}
 
                       <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
@@ -1062,7 +1049,14 @@ const Register = (props) => {
                       */}
                       <hr />
 
-                      <div className="mt-3 text-end">
+                      <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                        <p className="already-login">
+                          Already account please{" "}
+                          <Link to="/login" className="auth-link register-here register-here">
+                            Login
+                          </Link>{" "}
+
+                        </p>
                         <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button>
                       </div>
                     </>

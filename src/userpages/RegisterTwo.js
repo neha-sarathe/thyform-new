@@ -54,7 +54,8 @@ const RegisterTwo = (props) => {
     /*validations */
     const onInputChange = e => {
         const { value } = e.target;
-        if (value.length <= 6) {
+        const re = /^[0-9\b]+$/;
+        if (value.length <= 6 && re.test(value)) {
             setTxt(value);
             setMaxValue(false)
         } else {
@@ -174,8 +175,8 @@ const RegisterTwo = (props) => {
                                             </div>
                                             <div className="search-input-div search-input-div1">
                                                 <input
-                                                    type="number"
-                                                    placeholder="Registration Number"
+                                                   type="text"
+                                                    placeholder="Number of employees"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={txt}
                                                     onChange={onInputChange}

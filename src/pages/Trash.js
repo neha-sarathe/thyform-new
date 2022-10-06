@@ -4,7 +4,9 @@ import AllformNav from './AllformNav';
 import { Link } from 'react-router-dom';
 import { FiFilter } from "react-icons/fi";
 import { InboxNavbar } from './InboxNavbar';
-
+import { FaTrashAlt, FaTrashRestoreAlt, FaCheck } from "react-icons/fa";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
 export const Trash = ({ darkmodes, setDarkmodes }) => {
 
     let sidebaroption = ""
@@ -26,17 +28,27 @@ export const Trash = ({ darkmodes, setDarkmodes }) => {
                             <div className='row'>
                                 <div className='col-md-4'>
                                     <nav id="sidebars" className={darkmodes ? "text-white border-end" : "text-dark border-end"}>
-                                        <div class="input-group">
-                                            <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                            <input class="form-control py-2 border-right-0 border form_padding search_col" type="search" placeholder='Search' id="example-search-input" />
-                                            <span class="input-group-append">
-                                                <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
-                                                    <FiFilter />
-                                                </button>
-                                            </span>
-                                        </div>
+                                    <div class="input-group">
+                      <span class="input-group-prepend">
+                        <div class="input-group-text bg-transparent border-right-0 inbox_search">
+                          <i class="fa fa-search"></i>
+                        </div>
+                      </span>
+                      <input class="form-control py-2 border-right-0 border form_padding search_col" type="search" placeholder='Search' id="example-search-input" />
+                      <span class="input-group-append">
+                        <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
+                          Filter  <FiFilter />
+                        </button>
+                      </span>
+                    </div>
+                    <div className='mt-3'>
+                      <FaCheck className='m-2' />
+                      <FaTrashRestoreAlt className='m-2' data-toggle="tooltip" data-placement="top" title="Restore" />
+                      <FaTrashAlt className='m-2' data-toggle="tooltip" data-placement="top" title="Delete Forever"/>
+                      <BsThreeDotsVertical />
+                      <button class="btn_down"><HiDownload/>Download</button>
+                    </div>
+                    <hr />
                                         <ul class="list-unstyled components">
                                             {/* <h4 className='side-head text-white'>MY FORMS</h4> */}
                                             <li>

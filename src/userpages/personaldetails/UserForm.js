@@ -182,7 +182,7 @@ const UserForm = (props) => {
         // } else {
         //     navigate('/paymentmode')
         // }
-        navigate('/login')
+        navigate('/payprocedure')
 
     }
 

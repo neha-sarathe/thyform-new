@@ -59,7 +59,7 @@ const PayProcedure = (props) => {
                                         <img src="..\..\images\payment\visa.png" width={"6%"} height={"3%"} alt="visa" />
                                         <img src="..\..\images\payment\master.png" width={"6%"} height={"3%"} alt="visa" />
                                         <img src="..\..\images\payment\debit.jpg" width={"6%"} height={"3%"} alt="visa" />
-                                        <img src="..\..\images\payment\credit.png" width={"6%"} height={"3%"} alt="visa" />
+                                        <img src="..\..\images\payment\credit2.png" width={"6%"} height={"3%"} alt="visa" />
                                         <img src="..\..\images\payment\american.png" width={"6%"} height={"3%"} alt="visa" />
                                         <form>
                                             <div class="row mt-4">
