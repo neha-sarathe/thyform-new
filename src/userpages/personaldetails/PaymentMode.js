@@ -49,11 +49,11 @@ const PaymentMode = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="heading-form dark-mode-text mb-3">Payment Packages</h4>
+                                        <h4 className="heading-form dark-mode-text mb-3">Payment Packages</h4> 
                                         <div className="float-end">
                                             <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected={props.toggle} toggle={props.toggle} setToggle={props.setToggle} />
                                         </div>
-                                        <div className="container-fluid p-0 mt-5">
+                                        <div className="container-fluid p-0 mt-5 pt-3">
                                             <div className="row justify-content-center">
                                                 <div className="col-4">
                                                     <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
