@@ -141,9 +141,9 @@ const PayProcedure = (props) => {
                                                 <p>$480</p>
                                                 </div>
                                             </div>
-                                            <div className='pt-4'>
+                                            {/* <div className='pt-4'>
                                                 <button type="submit" class="btn btn-primary">Payment</button>
-                                            </div>
+                                            </div> */}
                                         </form>
                                         <hr />
                                         <div className="mt-3 text-end d-flex align-items-center justify-content-around">
@@ -154,7 +154,7 @@ const PayProcedure = (props) => {
                                                 </Link>{" "}
 
                                             </p>
-                                            <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button>
+                                            <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Payment <FiChevronRight /></button>
                                         </div>
                                     </div>
                                 </div>

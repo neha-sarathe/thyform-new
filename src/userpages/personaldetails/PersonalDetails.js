@@ -1,12 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight, FiCheck } from 'react-icons/fi'
 import Dark from "../../DarkAuth";
 import Select from 'react-select';
+import DatePicker from "react-datepicker";
+import { getMonth, getYear } from 'date-fns';
+import range from "lodash/range";
+import countryListAllIsoData from "../CountryList";
 
 const PersonalDetails = (props) => {
 
     const navigate = useNavigate();
+    const [startDate, setStartDate] = useState(new Date());
     const [txt, setTxt] = useState('');
     const [selectedData, setSelectedData] = useState('')
     const [error, setError] = useState(false);
@@ -45,6 +50,8 @@ const PersonalDetails = (props) => {
     const [birthday, setBirthday] = useState({ birthday: '' });
     const [confirmValue, setConfirmValue] = useState('')
     const [confirmValueError, setConfirmValueError] = useState('')
+
+
 
     const select_data = [
         { key: 'america', value: 'Example 1' },
@@ -122,20 +129,21 @@ const PersonalDetails = (props) => {
     /*validations */
     const onInputChange = e => {
         const { value } = e.target;
+        const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+        if (value === "" || re.test(value)){
         setMaxValue(value)
-        // if (maxValue.length >= 3) {
-        //     setMaxValue(value)
-        // }else{
-        //     setError('plz enter max 3 char')
-        // }
+       
         setError(false)
-
+        }
     }
     const onSurname = e => {
         const { value } = e.target;
+        const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+        if (value === "" || re.test(value)){
         setSurname(value)
         setSurnameError(false)
     }
+}
     const onDateofBirth = e => {
         const { value } = e.target;
         setDateofBirth(value)
@@ -283,19 +291,18 @@ const PersonalDetails = (props) => {
     }
     const onBuildingName = e => {
         const { value } = e.target;
+        const re = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
+        if (value === "" || re.test(value)) {
         setBuildingName(value);
 
-        // const re = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
-        // if (value === "" || re.test(value)) {
-        //     setBuildingName(value);
-        // }
+        }
     }
 
     const onAddress = e => {
         const { value } = e.target;
 
 
-        const re = /^[0-9a-zA-Z]+$/;
+        const re = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
         if (value === "" || re.test(value)) {
             setAddress(value);
         }
@@ -344,7 +351,26 @@ const PersonalDetails = (props) => {
         }
     }
 
-
+    const handleNationality = (value) =>{
+        console.log('value', value);
+        setNationality(value);
+        setNationalityError(false)
+    }
+    const years = range(1920, getYear(new Date()) + 1, 1);
+    const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -429,7 +455,61 @@ const PersonalDetails = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Date of birth*</label>
                                             </div>
                                             <div className="search-input-div search-input-div1 d-flex">
-                                                <select className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="dd/MM/yyyy" className={"date_pick "+ (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} /> */}
+                                                <DatePicker
+                                                    renderCustomHeader={({
+                                                        date,
+                                                        changeYear,
+                                                        changeMonth,
+                                                        decreaseMonth,
+                                                        increaseMonth,
+                                                        prevMonthButtonDisabled,
+                                                        nextMonthButtonDisabled,
+                                                    }) => (
+                                                        <div
+                                                            style={{
+                                                                margin: 10,
+                                                                display: "flex",
+                                                                justifyContent: "center",
+                                                            }}
+                                                        >
+                                                            <button onClick={decreaseMonth} disabled={prevMonthButtonDisabled}>
+                                                                {"<"}
+                                                            </button>
+                                                            <select
+                                                                value={getYear(date)}
+                                                                onChange={({ target: { value } }) => mergeDate(changeYear(value))}
+                                                            >
+                                                                {years.map((option) => (
+                                                                    <option key={option} value={option}>
+                                                                        {option}
+                                                                    </option>
+                                                                ))}
+                                                            </select>
+
+                                                            <select
+                                                                value={months[getMonth(date)]}
+                                                                onChange={({ target: { value } }) =>
+                                                                    mergeDate(changeMonth(months.indexOf(value)))
+                                                                }
+                                                            >
+                                                                {months.map((option) => (
+                                                                    <option key={option} value={option}>
+                                                                        {option}
+                                                                    </option>
+                                                                ))}
+                                                            </select>
+
+                                                            <button onClick={increaseMonth} disabled={nextMonthButtonDisabled}>
+                                                                {">"}
+                                                            </button>
+                                                        </div>
+                                                    )}
+                                                    selected={startDate}
+                                                    onChange={(date) => mergeDate(setStartDate(date))}
+                                                    className={"date_pick " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}
+                                                />
+                                                {/* <select className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2" onChange={(event) => mergeDate('day', event.target.value)}>
                                                     <option value="">Day</option>
                                                     {day_data.map((option, index) => (
@@ -459,14 +539,7 @@ const PersonalDetails = (props) => {
                                                             {option.value}
                                                         </option>
                                                     ))}
-                                                </select>
-                                                {/* <input
-                                                    type="text"
-                                                    placeholder="Registration Number"
-                                                    className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                    value={dateofBirth}
-                                                    onChange={onDateofBirth}
-                                                /> */}
+                                                </select> */}
 
                                             </div>
 
@@ -478,7 +551,7 @@ const PersonalDetails = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Nationality*</label>
                                             </div>
                                             <div className="search-input-div search-input-div1">
-                                                <Select
+                                                {/* <Select
                                                     styles={customStyles}
                                                     display='flex'
                                                     border="1px solid #d0e3e9"
@@ -491,7 +564,21 @@ const PersonalDetails = (props) => {
                                                     }}
                                                     options={options}
                                                     placeholder="Search"
-                                                />
+                                                /> */}
+                                             
+                                                <select
+                                                    onChange={(event) => handleNationality(event.target.value)}
+                                                    className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                    id="exampleFormControlSelect2"
+                                                >Website address*
+                                                    <option value=''>select</option>
+                                                    {countryListAllIsoData && countryListAllIsoData.map((option, index) => (
+                                                        <option key={index} value={option.code}>
+                                                            {option.name}
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                               
                                                 <p className="para-form show_result">{nationalityError}</p>
                                             </div>
                                             {/* <div className="search-input-div search-input-div1">

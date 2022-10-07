@@ -55,7 +55,7 @@ const RegisterTwo = (props) => {
     const onInputChange = e => {
         const { value } = e.target;
         const re = /^[0-9\b]+$/;
-        if (value.length <= 6 && re.test(value)) {
+        if (value.length <= 5 && re.test(value)) {
             setTxt(value);
             setMaxValue(false)
         } else {

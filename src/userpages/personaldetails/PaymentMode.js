@@ -7,12 +7,18 @@ import ToggleSwitch from "./Toggle";
 
 const PaymentMode = (props) => {
     const navigate = useNavigate();
-    // const [priceSelect, setPriceSelect] = useState('');
+    const [toggle, setToggle] = useState(props?.toggle);
 
     const onPriceSelect = (value) => {
         props.setPriceSelect(value)
-        console.log('Price....', value);
+        setToggle(value);
     }
+
+
+    // const onPriceSelect = (value) => {
+    //     props.setPriceSelect(value)
+    //     console.log('Price....', value);
+    // }
     console.log('Props value of toggle on paymentmode =', props.toggle);
 
     const nextPage = () => {
@@ -49,9 +55,10 @@ const PaymentMode = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="heading-form dark-mode-text mb-3">Payment Packages</h4> 
+                                        <h4 className="heading-form dark-mode-text mb-3">Payment Packages</h4>
                                         <div className="float-end">
-                                            <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected={props.toggle} toggle={props.toggle} setToggle={props.setToggle} />
+                                            {/* <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected={props.toggle} toggle={props.toggle} setToggle={props.setToggle} /> */}
+                                            <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected={toggle} toggle={toggle} setToggle={setToggle} />
                                         </div>
                                         <div className="container-fluid p-0 mt-5 pt-3">
                                             <div className="row justify-content-center">
@@ -80,7 +87,7 @@ const PaymentMode = (props) => {
                                                                 <p className="fs-6 mt-4">6-month</p>
                                                             </div>
                                                             <p className="card-text">Manage all your teams’ work in one place</p>
-                                                            <button type="button" className="btn btn-primary btn-sm margin_btn_sm" onClick={() => onPriceSelect('Half Yearly')}>Select</button>
+                                                            <button type="button" className="btn btn-primary btn-sm margin_btn_sm" onClick={() => onPriceSelect('Half-Yearly')}>Select</button>
                                                         </div>
                                                     </div>
                                                 </div>

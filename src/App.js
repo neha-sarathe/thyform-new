@@ -84,7 +84,7 @@ function App() {
   const [register, setregister] = React.useState("/");
   const [darkmode, setDarkmode] = useState(false);
   const [priceSelect, setPriceSelect] = useState('');
-  const [toggle,setToggle] =useState('Monthly');
+  const [toggle, setToggle] = useState('Monthly');
   useEffect(() => {
     const token_get = localStorage.getItem('user')
     if (token_get) {
@@ -178,8 +178,8 @@ function App() {
           <Routes>
             {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
-             <Route path="/" element={<PaymentMode darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect}   toggle={toggle} setToggle={setToggle}/>} />
-            <Route path="/register" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode}  priceSelect={priceSelect} setPriceSelect={setPriceSelect}/>} />
+            <Route path="/" element={<PaymentMode darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
+            <Route path="/register" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} />} />
             <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path="/registerthree" element={<RegisterThree darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
             <Route path="/registerfour" element={<RegisterFour darkmodes={darkmode} setDarkmodes={setDarkmode} />} />

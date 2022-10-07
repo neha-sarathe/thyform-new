@@ -1,18 +1,35 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-.card_style{
+.card_style {
     width: 12rem;
     border: 1px solid gray;
     border-radius: 5px !important;
 }
-.card_center{
-    margin: 0 auto; 
-    float: none; 
-    margin-bottom: 10px; 
+
+.card_center {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
 }
-.margin_btn_sm{
+
+.margin_btn_sm {
     margin-left: 25%;
 }
-.input_wid{
+
+.input_wid {
     width: 82% !important;
+}
+
+.date_pick {
+    border: 1px solid #d0e3e9;
+    border-radius: 4px;
+    background-color: transparent;
+    box-shadow: none;
+    overflow: hidden;
+    text-align: center;
+    padding: 6px 6px 6px 10px;
+}
+
+.react-datepicker__input-container input {
+    width: 100% !important;
 }
