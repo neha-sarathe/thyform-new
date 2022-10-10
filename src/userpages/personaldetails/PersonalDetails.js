@@ -260,10 +260,12 @@ const PersonalDetails = (props) => {
     const onConfirmEmail = e => {
         if (e.target.value != emailAddress) {
             setConfirmValueError('not match')
-        } else if (e.target.value === emailAddress) {
-            setConfirmValue(e.target.value)
-            setConfirmValueError('')
-        } else {
+        } 
+        // else if (e.target.value === emailAddress) {
+        //     setConfirmValue(e.target.value)
+        //     setConfirmValueError('')
+        // } 
+        else {
             setConfirmValue(e.target.value)
             setConfirmValueError('')
         }

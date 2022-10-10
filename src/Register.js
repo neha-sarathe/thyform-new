@@ -89,8 +89,21 @@ const Register = (props) => {
     (() => { enableDragSort('drag-sort-enable') })();
   }, [])
   /*validations */
-  const onInputChange = e => {
+  const onInputChange = (e) => {
     const { value } = e.target;
+    if (text){
+      const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+      if (value === "" || re.test(value)) {
+        setTxt(value);
+      }
+    }
+    else{
+      const re = /^[0-9\b]+$/;
+      if (value === "" || re.test(value)) {
+        setTxt(value);
+      }
+
+    }
 
     // console.log('Input value: ', value);
 
@@ -98,7 +111,7 @@ const Register = (props) => {
     // if (value === "" || re.test(value)) {
     //   setTxt(value);
     // }
-    setTxt(value);
+   
   }
 
   const onBusinessName = e => {
@@ -434,7 +447,7 @@ const Register = (props) => {
                       <div className="d-flex mt-5 pt-3">
                         <div className="search-input-div">
                           {!text ? <input
-                            type="number"
+                            type="text"
                             placeholder="Registration Number"
                             className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                             value={txt}

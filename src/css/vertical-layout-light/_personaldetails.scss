@@ -33,3 +33,19 @@
 .react-datepicker__input-container input {
     width: 100% !important;
 }
+
+.password_icon {
+    position: absolute;
+    right: 182px;
+    top: 282px;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.confirm_icon {
+    position: absolute;
+    right: 182px;
+    top: 346px;
+    cursor: pointer;
+    z-index: 12;
+}

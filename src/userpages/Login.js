@@ -164,7 +164,8 @@ const Login = (props) => {
                           placeholder="Password"
                         />
                           <span className="password__show field-icon" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span>
-                        </div></div>
+                        </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
