@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight } from 'react-icons/fi'
 import Dark from "../DarkAuth";
 import countryListAllIsoData from "./CountryList"
-const RegisterThree = (props) => {
+const RegisterFour = (props) => {
 
     const navigate = useNavigate();
     const [websiteError, setWebsiteError] = useState(false);
@@ -115,11 +115,11 @@ const RegisterThree = (props) => {
                                     </div>
                                     <div>
                                         <h4 className="heading-form dark-mode-text">Your business activity</h4>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business receive payments from outside the UK?*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div search-input-div1 pb-4">
                                             <select
                                                     onChange={(event) => handleorganisation(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -134,11 +134,11 @@ const RegisterThree = (props) => {
                                             </div>
                                         </div>
                                         {website === 'yes' ? 
-                                         <div className="d-flex mt-4 align-items-center">
+                                         <div className="d-flex mt-4">
                                          <div className="w-25">
                                              <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Which countries do you receive payments from?*</label>
                                          </div>
-                                         <div className="search-input-div search-input-div1">
+                                         <div className="search-input-div search-input-div1 pb-4">
                                              <select
                                                  onChange={(event) => handlePayments(event.target.value)}
                                                  className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -158,11 +158,11 @@ const RegisterThree = (props) => {
                                      : ''
                                         }
                                        
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Do you or any people within your business have political connections?*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div search-input-div1 pb-4">
                                                 <select
                                                     onChange={(event) => handleConnections(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -176,11 +176,11 @@ const RegisterThree = (props) => {
 
                                             </div>
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Is your business involved in any public contracts? e.g. government, council or NHS*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div search-input-div1 pb-4">
                                                 <select
                                                     onChange={(event) => handleContracts(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -218,4 +218,4 @@ const RegisterThree = (props) => {
     );
 };
 
-export default RegisterThree;
+export default RegisterFour;

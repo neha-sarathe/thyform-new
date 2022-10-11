@@ -574,16 +574,20 @@ const Register = (props) => {
                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address*</label>
                           </div>
                         </div>
-                        <div className="search-input-div ">
+                        {/* <div className="search-input-div"> */}
                           {directorSelect ? <>
+                            <div className="search-input-div mt-5 pt-4">
                             <p>10 Greenwich Court 43 Autumn Way</p>
                             <p>West Drayton</p>
                             <p>UB7 9FB</p>
-                          </> : <p>None selected</p>
-
+                            </div>
+                          </> : 
+                             <div className="search-input-div">
+                          <p>None selected</p>
+                          </div>
                           }
                         </div>
-                      </div>
+                    
                       {directorSelect ?
                         <>
                           <div className="d-flex mt-4">
@@ -592,7 +596,7 @@ const Register = (props) => {
                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Persons with significant control (PSCs)</label>
                               </div>
                             </div>
-                            <div className="search-input-div ">
+                            <div className="search-input-div">
                               <p>2 active PSCs</p>
                               <p>Name</p>
                               <h6 className="fw-bold">Mr Seifudin Mohamedali</h6>

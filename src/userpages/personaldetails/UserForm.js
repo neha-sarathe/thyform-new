@@ -125,7 +125,7 @@ const UserForm = (props) => {
                                     <div>
                                         <h4 className="heading-form dark-mode-text">Payment</h4>
 
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>User Name*</label>
                                             </div>
@@ -141,7 +141,7 @@ const UserForm = (props) => {
                                             </div>
 
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Password*</label>
                                             </div>
@@ -161,7 +161,7 @@ const UserForm = (props) => {
                                             </div>
 
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Confirm Password*</label>
                                             </div>
@@ -183,7 +183,7 @@ const UserForm = (props) => {
 
                                         </div>
 
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Pin*</label>
                                             </div>

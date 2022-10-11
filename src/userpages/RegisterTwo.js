@@ -148,7 +148,7 @@ const RegisterTwo = (props) => {
                                     </div>
                                     <div>
                                         <h4 className="heading-form dark-mode-text">Your business</h4>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Industry*</label>
                                             </div>
@@ -169,7 +169,7 @@ const RegisterTwo = (props) => {
                                             </div>
                                         </div>
 
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
                                             </div>
@@ -187,7 +187,7 @@ const RegisterTwo = (props) => {
                                             {txt.length === 5 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business have a website?*</label>
                                             </div>
@@ -206,7 +206,7 @@ const RegisterTwo = (props) => {
                                             </div>
                                         </div>
                                         {website === 'yes' ?
-                                            <div className="d-flex mt-4 align-items-center">
+                                            <div className="d-flex mt-4">
                                                 <div className=" lables-div w-25">
                                                     <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Website address*</label>
                                                 </div>

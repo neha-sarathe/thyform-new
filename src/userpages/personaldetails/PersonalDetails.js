@@ -130,20 +130,20 @@ const PersonalDetails = (props) => {
     const onInputChange = e => {
         const { value } = e.target;
         const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
-        if (value === "" || re.test(value)){
-        setMaxValue(value)
-       
-        setError(false)
+        if (value === "" || re.test(value)) {
+            setMaxValue(value)
+
+            setError(false)
         }
     }
     const onSurname = e => {
         const { value } = e.target;
         const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
-        if (value === "" || re.test(value)){
-        setSurname(value)
-        setSurnameError(false)
+        if (value === "" || re.test(value)) {
+            setSurname(value)
+            setSurnameError(false)
+        }
     }
-}
     const onDateofBirth = e => {
         const { value } = e.target;
         setDateofBirth(value)
@@ -260,7 +260,7 @@ const PersonalDetails = (props) => {
     const onConfirmEmail = e => {
         if (e.target.value != emailAddress) {
             setConfirmValueError('not match')
-        } 
+        }
         // else if (e.target.value === emailAddress) {
         //     setConfirmValue(e.target.value)
         //     setConfirmValueError('')
@@ -295,7 +295,7 @@ const PersonalDetails = (props) => {
         const { value } = e.target;
         const re = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
         if (value === "" || re.test(value)) {
-        setBuildingName(value);
+            setBuildingName(value);
 
         }
     }
@@ -353,7 +353,7 @@ const PersonalDetails = (props) => {
         }
     }
 
-    const handleNationality = (value) =>{
+    const handleNationality = (value) => {
         console.log('value', value);
         setNationality(value);
         setNationalityError(false)
@@ -399,7 +399,7 @@ const PersonalDetails = (props) => {
                                     </div>
                                     <div>
                                         <h4 className="heading-form dark-mode-text">Tell Us About You</h4>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Title*</label>
                                             </div>
@@ -419,7 +419,7 @@ const PersonalDetails = (props) => {
                                             </div>
                                         </div>
 
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>First name*</label>
                                             </div>
@@ -431,11 +431,12 @@ const PersonalDetails = (props) => {
                                                     value={maxValue}
                                                     onChange={onInputChange}
                                                 />
+                                                <p className="para-form show_result">{error}</p>
                                             </div>
                                             {/* {txt ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''} */}
-                                            <p className="para-form show_result">{error}</p>
+
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Surname*</label>
                                             </div>
@@ -452,7 +453,7 @@ const PersonalDetails = (props) => {
                                             {txt.length === 5 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Date of birth*</label>
                                             </div>
@@ -548,7 +549,7 @@ const PersonalDetails = (props) => {
                                             {txt.length === 5 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
                                             <p className="para-form show_result">{dateofBirthError}</p>
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Nationality*</label>
                                             </div>
@@ -567,7 +568,7 @@ const PersonalDetails = (props) => {
                                                     options={options}
                                                     placeholder="Search"
                                                 /> */}
-                                             
+
                                                 <select
                                                     onChange={(event) => handleNationality(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -580,7 +581,7 @@ const PersonalDetails = (props) => {
                                                         </option>
                                                     ))}
                                                 </select>
-                                               
+
                                                 <p className="para-form show_result">{nationalityError}</p>
                                             </div>
                                             {/* <div className="search-input-div search-input-div1">
@@ -606,7 +607,7 @@ const PersonalDetails = (props) => {
                                                     onChange={onNationality}
                                                 /> */}
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Home postcode*</label>
                                             </div>
@@ -653,7 +654,7 @@ const PersonalDetails = (props) => {
                                             <>
                                                 {" "}
                                                 <div>
-                                                    <div className="d-flex mt-4 align-items-center">
+                                                    <div className="d-flex mt-4 ">
                                                         <div className="w-25">
                                                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Building No. or name</label>
                                                         </div>
@@ -667,7 +668,7 @@ const PersonalDetails = (props) => {
                                                             />
                                                         </div>
                                                     </div>
-                                                    <div className="d-flex mt-4 align-items-center">
+                                                    <div className="d-flex mt-4">
                                                         <div className="w-25">
                                                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>House number*</label>
                                                         </div>
@@ -678,7 +679,7 @@ const PersonalDetails = (props) => {
                                                         </div>
 
                                                     </div>
-                                                    <div className="d-flex mt-4 align-items-center">
+                                                    <div className="d-flex mt-4">
                                                         <div className="w-25">
                                                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Address line*</label>
                                                         </div>
@@ -689,7 +690,7 @@ const PersonalDetails = (props) => {
                                                         </div>
 
                                                     </div>
-                                                    <div className="d-flex mt-4 align-items-center">
+                                                    <div className="d-flex mt-4">
                                                         <div className="w-25">
                                                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Town / City*</label>
                                                         </div>
@@ -707,7 +708,7 @@ const PersonalDetails = (props) => {
                                             ""
                                         )}
                                         <h4 className="heading-form dark-mode-text">Tell Us How We Can Contact You</h4>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Primary work phone number*</label>
                                             </div>
@@ -754,7 +755,7 @@ const PersonalDetails = (props) => {
                                             {mobileNumber.length === 11 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Work email address*</label>
                                             </div>
@@ -771,7 +772,7 @@ const PersonalDetails = (props) => {
                                             {emailAddressError ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Confirm email address*</label>
                                             </div>
