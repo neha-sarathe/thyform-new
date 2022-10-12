@@ -82,7 +82,7 @@ const RegisterThree = (props) => {
                         <div className={" row flex-grow form-bg1 drag-sort-enable " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                             <div className="col-lg-6  d-flex flex-row">
                                 <div className="register-half-div">
-                                    <img src={process.env.PUBLIC_URL + "images/auth/register-bg.png"} className="register-half-img" />
+                                    <img src={process.env.PUBLIC_URL + "images/auth/register-bg.png"} className="register-half-img" alt="register-img"/>
                                 </div>
                             </div>
 
@@ -100,7 +100,7 @@ const RegisterThree = (props) => {
                                         <h4 className="heading-form dark-mode-text">Your business income</h4>
 
 
-                                        <div className="d-flex mt-4 align-items-center">
+                                        <div className="d-flex mt-4">
                                             <div className="w-25">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>What is your expected annual turnover?*</label>
                                             </div>
@@ -109,7 +109,7 @@ const RegisterThree = (props) => {
                                                 <span className="input-group-text euro_size" id="basic-addon1">£</span>
                                                 <input
                                                     type="text"
-                                                    className={"form-control search-input radius_sal " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")}
+                                                    className={"form-control search-input radius_sal input_height_register " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")}
                                                     placeholder="" aria-label="Username"
                                                     aria-describedby="basic-addon1" value={txt} onChange={onInputChange} />
                                                 {/* <input
@@ -126,6 +126,7 @@ const RegisterThree = (props) => {
                                             {txt.length > 0 && txt.length <= 10 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
+                                      
                                         <hr />
                                         <div className="mt-3 text-end d-flex align-items-center justify-content-around">
                                             <p className="already-login">
@@ -137,6 +138,7 @@ const RegisterThree = (props) => {
                                             </p>
                                             <button className={"btn  auth-form-btn auth-form-btn1 " + (props.darkmodes ? "hover-text-white" : "hover-text-white")} onClick={nextPage}>Next <FiChevronRight /></button>
                                         </div>
+                                       
                                     </div>
                                 </div>
                             </div>
