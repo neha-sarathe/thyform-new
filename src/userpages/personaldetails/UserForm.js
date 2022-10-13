@@ -123,7 +123,7 @@ const UserForm = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="heading-form dark-mode-text">Payment</h4>
+                                        <h4 className="heading-form dark-mode-text">Set Password and Pin</h4>
 
                                         <div className="d-flex mt-4">
                                             <div className="w-25">

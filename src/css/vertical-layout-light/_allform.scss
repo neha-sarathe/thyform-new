@@ -345,9 +345,11 @@ ul.CTAs a {
 .allform-list div:focus {
     background: red !important;
 }
-.close-icon-theme svg{
-color: red;
+
+.close-icon-theme svg {
+    color: red;
 }
+
 @media screen and (min-device-width: 2530px) and (max-device-width: 2580px) {
     .dot-vertical {
         margin: 0px 0px 0px 111px !important;
@@ -368,80 +370,102 @@ color: red;
     .builder-sidebar_scroll {
         height: 100vh !important;
     }
-    .sidebar-wrapper2{
+
+    .sidebar-wrapper2 {
         width: 536px !important;
     }
+
     .builder-sidebar_scroll {
         background: #dc143c;
         width: 535px !important;
     }
+
     // .setting_form_ml{
     //     margin-left: 27% !important;
     // }
-    .ml_contain{
+    .ml_contain {
         margin-left: 29% !important;
     }
-    .settingform-main{
+
+    .settingform-main {
         margin-left: 20%;
     }
 
 
-    .setting_ml-form{
-        margin-left:32% !important;
-       
-      }
+    .setting_ml-form {
+        margin-left: 32% !important;
 
-      .condition-height{
+    }
+
+    .condition-height {
         height: 100vh !important;
-      }
-      .set_margin{
+    }
+
+    .set_margin {
         margin-left: 320px !important;
-      }
+    }
 }
 
 .builder-sidebar_scroll {
     height: 100vh !important;
 }
+
 .formbuilder-light {
     height: 100vh !important;
 }
-.full_width{
+
+.full_width {
     width: 100%;
 }
-.trans_background{
-    background:transparent !important;
+
+.trans_background {
+    background: transparent !important;
 }
+
 .navbar_margin {
     margin-bottom: 20px !important;
 }
-.link_color{
+
+.link_color {
     color: #616161 !important;
 }
-.form_padding{
+
+.form_padding {
     padding-left: 15px !important;
 }
-.btn_height{
+
+.btn_height {
     height: 44px;
-    border-radius: 0px!important
+    border-radius: 0px !important
 }
 
 /* search button color css changes on inbox page */
 
-.btn-outline-secondary{color:#dc143c;border-color:#dc143c}
-.btn-outline-secondary:hover{color:#fff;background-color:#dc143c;border-color:#dc143c}
+.btn-outline-secondary {
+    color: #dc143c;
+    border-color: #dc143c
+}
 
-.search_col{
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #dc143c;
+    border-color: #dc143c
+}
+
+.search_col {
     background-color: transparent;
     color: #616161;
 }
-.remove_overlap{
+
+.remove_overlap {
     z-index: 5;
 }
-.inbox_search{
-padding: 14px 10px !important;
+
+.inbox_search {
+    padding: 14px 10px !important;
 }
 
-.btn_down{
+.btn_down {
     background-color: #dc143c;
     border: none;
     color: white;
@@ -449,11 +473,12 @@ padding: 14px 10px !important;
     cursor: pointer;
     font-size: 14px;
     margin-left: 30px;
-  }
-  
-  .btn_down:hover {
+}
+
+.btn_down:hover {
     background-color: #f52b54;
-  }
+}
+
 //   .inbox-equal-width{
 //     padding-left: 19px!important;
 //     padding-right: 19px !important;
@@ -466,3 +491,35 @@ padding: 14px 10px !important;
 //     padding-left: 20px!important;
 //     padding-right: 20px !important;
 //   }
+.inbox_nav_link {
+    text-decoration: none;
+    // color: rgb(10, 21, 81) !important;
+    font-size: 15px;
+    display: inline-block !important;
+    padding: 1em 0.75em !important;
+    font-weight: 500 !important;
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 1;
+}
+
+.inbox_link_bgcolor {
+    background-color: #dc143c !important;
+    color: #ffffff !important;
+    margin-right: 10px;
+}
+
+.inbox-list-focus1 {
+    background-color: transparent !important; 
+    color: #616161 !important;
+}
+.more_option_style{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    margin-top: 6px;
+    text-align: left;
+    right: 0px;
+    border: 1px solid #dc143c;
+    border-top-right-radius: 0px;
+}

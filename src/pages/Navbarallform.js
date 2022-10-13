@@ -31,7 +31,7 @@ const Navbarallform = ({darkmodes,setDarkmodes}) => {
                                     <div class={"dropdown-toggle drop "+ (actives1 ? "actives1" : '' )} onClick={handleactive}>
                                         More <span><FiChevronDown /></span>
                                     </div>
-                                    <div className={"more-dropdownmenu largest-list "+ (actives1 ? "moreoption-open" : 'moreoption-close' )}  >
+                                    <div className={"more_option_style largest-list "+ (actives1 ? "moreoption-open" : 'moreoption-close' )}  >
 
                                         <ul className='p-0'>
 

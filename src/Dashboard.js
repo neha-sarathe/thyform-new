@@ -99,7 +99,7 @@ const bar_data = [
 
 export const Dashboard = (props) => {
   console.log(props.theme, 'theme123456');
-  
+
   const [seriesData, setSeriesData] = useState([{
     name: 'Net Profit',
     data: [18, 25, 39, 11, 24]
@@ -322,7 +322,7 @@ export const Dashboard = (props) => {
                               <div className="card-body">
                                 <div className="d-sm-flex justify-content-between align-items-start">
                                   <div>
-                                    <h4 className={"card-title card-title-dash "+ (props.darkmodes ? "text-white " : "text-dark ")}>Performance Line Chart</h4>
+                                    <h4 className={"card-title card-title-dash " + (props.darkmodes ? "text-white " : "text-dark ")}>Performance Line Chart</h4>
                                     {/* <h5 className="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5> */}
                                   </div>
                                   <div id="performance-line-legend">
@@ -384,25 +384,27 @@ export const Dashboard = (props) => {
                                   <div className="col-sm-6">
                                     <div className="d-flex justify-content-between align-items-center mb-2 mb-sm-0">
                                       <div className="circle-progress-width">
-                                        <div id="totalVisitors" className="progressbar-js-circle pr-2"><div class="spinner-border spinner-border-md text-primary" role="status">
-                                          <span class="visually-hidden">Loading...</span>
-                                        </div></div>
+                                        <div id="totalVisitors" className="progressbar-js-circle pr-2">
+                                          <div class="spinner-border spinner-border-md text-primary spinner_size" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div></div>
                                       </div>
                                       <div>
-                                        <p className="text-small mb-2">Total Visitors</p>
-                                        <h4 className={"mb-0 fw-bold "+ (props.darkmodes ? "text-white " : "text-dark ")}>26.80%</h4>
+                                        <p className="text-small font_spinner mb-2">Total Visitors</p>
+                                        <h4 className={"mb-0 fw-bold " + (props.darkmodes ? "text-white " : "text-dark ")}>26.80%</h4>
                                       </div>
                                     </div>
                                   </div>
                                   <div className="col-sm-6">
                                     <div className="d-flex justify-content-between align-items-center">
                                       <div className="circle-progress-width">
-                                        <div id="visitperday" className="progressbar-js-circle pr-2"><div class="spinner-border text-light" role="status">
+                                        <div id="visitperday" className="progressbar-js-circle pr-2">
+                                          <div class="spinner-border text-light spinner_size" role="status">
                                           <span class="visually-hidden">Loading...</span>
                                         </div></div>
                                       </div>
                                       <div>
-                                        <p className="text-small mb-2">Visits per day</p>
+                                        <p className="text-small font_spinner mb-2">Visits per day</p>
                                         <h4 className={"mb-0 fw-bold " + (props.darkmodes ? "text-white " : "text-dark ")}>9065</h4>
                                       </div>
                                     </div>
@@ -423,9 +425,9 @@ export const Dashboard = (props) => {
                 <div className="card second-row"></div>
               </div> */}
                             {/* <div className="col-md-12 grid-margin pqr"> */}
-                            <div className={"card bar-card "  + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
+                            <div className={"card bar-card " + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="card-body">
-                                <h4 className={"mb-0 chart-heading "+ (props.darkmodes ? "text-white " : "text-dark ")}>Market Overview</h4>
+                                <h4 className={"mb-0 chart-heading " + (props.darkmodes ? "text-white " : "text-dark ")}>Market Overview</h4>
                                 {/* <div className="bar-chart-para d-flex align-items-center justify-content-between w-100">
                                   <p className="mb-0">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -454,8 +456,8 @@ export const Dashboard = (props) => {
                                 </div> */}
                                 <div className="d-flex align-items-end justify-content-between mt-3">
                                   <div className="d-flex align-items-end">
-                                    <h3 className={"mb-0 font-weight-semibold bar-doller "+ (props.darkmodes ? "text-white " : "text-dark ")}>$36,2531.00</h3>
-                                    <h4 className={"mb-0 font-weight-medium mr-2 ml-2 mb-1 usd-data "+ (props.darkmodes ? "text-white " : "text-dark ")}>USD</h4>
+                                    <h3 className={"mb-0 font-weight-semibold bar-doller " + (props.darkmodes ? "text-white " : "text-dark ")}>$36,2531.00</h3>
+                                    <h4 className={"mb-0 font-weight-medium mr-2 ml-2 mb-1 usd-data " + (props.darkmodes ? "text-white " : "text-dark ")}>USD</h4>
                                     <h4 className="mb-0 text-success font-weight-semibold mb-1 ms-2">
                                       (+1.37%)
                                     </h4>
@@ -465,6 +467,7 @@ export const Dashboard = (props) => {
                                     <div><span class="dot2 mx-2"></span>Last week</div></div>
                                 </div>
                                 <div>
+                                <ResponsiveContainer width="100%" aspect={3}>
                                   <BarChart
                                     width={650}
                                     height={300}
@@ -497,6 +500,7 @@ export const Dashboard = (props) => {
                                     // background={true}
                                     />
                                   </BarChart>
+                                  </ResponsiveContainer>
                                 </div>
                               </div>
                             </div>
@@ -926,7 +930,7 @@ export const Dashboard = (props) => {
                           <div className="col-md-12 grid-margin">
                             <div className={"card pie-chart" + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="Todocard-body">
-                                <h4 className={"mt-3 ml-4 ms-4 "+ (props.darkmodes ? "text-white " : "text-dark ")}>Type By Amount</h4>
+                                <h4 className={"mt-3 ml-4 ms-4 " + (props.darkmodes ? "text-white " : "text-dark ")}>Type By Amount</h4>
                                 <div>
                                   <PieChart
                                     radius={30}
@@ -970,13 +974,13 @@ export const Dashboard = (props) => {
                         </div>
                         <div className="row flex-grow">
                           <div className="col-12 grid-margin stretch-card">
-                            <div className={"card card-rounded "  + (props.darkmodes ? " dash-chart-dark" : "text-dark dash-chart-light")}>
+                            <div className={"card card-rounded " + (props.darkmodes ? " dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="card-body">
                                 <div className="row">
                                   <div className="col-lg-12">
                                     <div className="d-flex justify-content-between align-items-center mb-3">
                                       <div>
-                                        <h4 className={"card-title card-title-dash"+ (props.darkmodes ? "text-white " : "text-dark ")}>Leave Report</h4>
+                                        <h4 className={"card-title card-title-dash" + (props.darkmodes ? "text-white " : "text-dark ")}>Leave Report</h4>
                                       </div>
                                       {/* <div>
                                         <div className="dropdown">
