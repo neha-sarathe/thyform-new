@@ -8,6 +8,7 @@ import ToggleSwitch from "./Toggle";
 const PaymentMode = (props) => {
     const navigate = useNavigate();
     const [toggle, setToggle] = useState(props?.toggle);
+    const [navigates, setNavigates] = useState(0);
 
     const onPriceSelect = (value) => {
         props.setPriceSelect(value)
@@ -58,7 +59,7 @@ const PaymentMode = (props) => {
                                         <h4 className="heading-form dark-mode-text mb-3">Payment Packages</h4>
                                         <div className="float-end">
                                             {/* <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected={props.toggle} toggle={props.toggle} setToggle={props.setToggle} /> */}
-                                            <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected={toggle} toggle={toggle} setToggle={setToggle} />
+                                            <ToggleSwitch values={['Monthly', 'Half-Yearly', 'Yearly']} selected={toggle} toggle={toggle} setToggle={setToggle} setPriceSelect={props.setPriceSelect} />
                                         </div>
                                         <div className="container-fluid p-0 mt-5 pt-3">
                                             <div className="row justify-content-center">

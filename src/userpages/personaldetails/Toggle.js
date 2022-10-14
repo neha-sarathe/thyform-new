@@ -1,6 +1,6 @@
 // import React, { Component } from 'react';
 // import { render } from 'react-dom';
-import React from 'react';
+import React,{useState} from 'react';
 import { Switch, SwitchLabel, SwitchRadio, SwitchSelection } from './SwitchBtn';
 
 {/*
@@ -54,9 +54,13 @@ export default ToggleSwitch;
 
 const ToggleSwitch = (props) => {
   // const [toggle,setToggle] =useState('');
+  const [navigates, setNavigates] = useState(0);
+  const [toggling, setToggling] = useState(props?.toggle );
 
   const handleChange = (val) => {
     props.setToggle(val);
+    props.setPriceSelect(val)
+    setNavigates(1);
   }
   const titleCase = str =>
     str.split(/\s+/).map(w => w[0].toUpperCase() + w.slice(1)).join(' ');

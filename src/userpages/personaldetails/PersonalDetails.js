@@ -50,8 +50,8 @@ const PersonalDetails = (props) => {
     const [birthday, setBirthday] = useState({ birthday: '' });
     const [confirmValue, setConfirmValue] = useState('')
     const [confirmValueError, setConfirmValueError] = useState('')
-
-
+    const [show2, setShow2] = useState(false);
+    // const [houseError, setHouseError] = useState(false);
 
     const select_data = [
         { key: 'america', value: 'Example 1' },
@@ -188,7 +188,11 @@ const PersonalDetails = (props) => {
             setCheckError('Please read the Terms & Conditions and check the box to show you agree to them')
         } else if (checkedConfirm === false) {
             setCheckedConfirmError('Please acknowledge the cover of the Financial Services Compensation Scheme')
-        } else {
+        } 
+        // else if (houseno === '') {
+        //     setHouseError('Please enter your House number')
+        // }
+        else {
             navigate('/userform')
         }
 
@@ -227,7 +231,7 @@ const PersonalDetails = (props) => {
 
     const onPostcode = e => {
         const { value } = e.target;
-        const re = /^[0-9\b]+$/;
+        const re = /^[A-Za-z0-9]+$/;
         if (re.test(value)) {
             setpostCode(value)
         }
@@ -289,6 +293,7 @@ const PersonalDetails = (props) => {
         const re = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
         if (value === "" || re.test(value)) {
             setHouseNo(value);
+            // setHouseError(false);
         }
     }
     const onBuildingName = e => {
@@ -398,6 +403,9 @@ const PersonalDetails = (props) => {
                                         </div>
                                     </div>
                                     <div>
+                                    <p className="text-end para_col">
+                    You have selected {props.priceSelect} package
+                  </p>
                                         <h4 className="heading-form dark-mode-text">Tell Us About You</h4>
                                         <div className="d-flex mt-4">
                                             <div className="w-25">
@@ -622,7 +630,9 @@ const PersonalDetails = (props) => {
                                                     />
 
                                                     <div className="ps-4 find-btn-postcode">
-                                                        <button type="submit" className="btn-default btn-find-post">
+                                                        <button type="submit" className="btn-default btn-find-post" onClick={() => {
+                                                            setShow2(true);
+                                                        }}>
                                                             Find &nbsp;  <i className="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                                                         </button>
                                                     </div></div>
@@ -650,7 +660,7 @@ const PersonalDetails = (props) => {
 
                                         </div>
 
-                                        {show ? (
+                                        {show || show2 ? (
                                             <>
                                                 {" "}
                                                 <div>
@@ -676,6 +686,7 @@ const PersonalDetails = (props) => {
                                                             <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                                 value={houseno}
                                                                 onChange={onHouseNo} />
+                                                                 {/* <p className="para-form show_result">{houseError}</p> */}
                                                         </div>
 
                                                     </div>

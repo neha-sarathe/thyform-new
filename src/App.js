@@ -83,7 +83,7 @@ function App() {
   const [jottoggled, setJottoggled] = useState(false);
   const [register, setregister] = React.useState("/");
   const [darkmode, setDarkmode] = useState(false);
-  const [priceSelect, setPriceSelect] = useState('');
+  const [priceSelect, setPriceSelect] = useState('Monthly');
   const [toggle, setToggle] = useState('Monthly');
   useEffect(() => {
     const token_get = localStorage.getItem('user')
@@ -179,13 +179,13 @@ function App() {
             {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
             <Route path="/" element={<PaymentMode darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
-            <Route path="/register" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} />} />
-            <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-            <Route path="/registerthree" element={<RegisterThree darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-            <Route path="/registerfour" element={<RegisterFour darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-            <Route path="/personaldetails" element={<PersonalDetails darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-            <Route path="/userform" element={<UserForm darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-            <Route path="/payprocedure" element={<PayProcedure darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+            <Route path="/register" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
+            <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
+            <Route path="/registerthree" element={<RegisterThree darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
+            <Route path="/registerfour" element={<RegisterFour darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
+            <Route path="/personaldetails" element={<PersonalDetails darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
+            <Route path="/userform" element={<UserForm darkmodes={darkmode} setDarkmodes={setDarkmode}priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
+            <Route path="/payprocedure" element={<PayProcedure darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
             <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} usertoken={user} />} />
 
 

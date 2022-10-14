@@ -25,6 +25,7 @@ const UserForm = (props) => {
     const [pinError, setPinError] = useState(false);
 
     const [noMatchError, setNoMatchError] = useState('');
+    const [noPinMatch, setNoPinMatch] = useState('');
 
     // const [hide, setHide] = useState(true)
     // const [hide2, setHide2] = useState(true)
@@ -39,11 +40,11 @@ const UserForm = (props) => {
     /*validations */
     const onInputChange = e => {
         const { value } = e.target;
-        const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
-        if (value === "" || re.test(value)) {
+        // const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+        // if (value === "" || re.test(value)) {
             setName(value)
             setError(false)
-        }
+        // }
     }
     const onPassword = e => {
         const { value } = e.target;
@@ -74,12 +75,14 @@ const UserForm = (props) => {
         setPinNumberError(false)
     }
     const onPin = e => {
-        const { value } = e.target;
-        if (value.length <= 11) {
-            setPin(value)
-            setPinError(false)
+        if (e.target.value != pinNumber) {
+            setNoPinMatch("Not Match")
         }
-
+        else {
+            setPin(e.target.value)
+            setNoPinMatch('')
+        }
+        setPinError(false)
     }
     const nextPage = () => {
         if (name === '') {
@@ -123,6 +126,9 @@ const UserForm = (props) => {
                                         </div>
                                     </div>
                                     <div>
+                                        <p className="text-end para_col">
+                                            You have selected {props.priceSelect} package
+                                        </p>
                                         <h4 className="heading-form dark-mode-text">Set Password and Pin</h4>
 
                                         <div className="d-flex mt-4">
@@ -209,12 +215,13 @@ const UserForm = (props) => {
                                                 <input
                                                     type="text"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                    value={pin}
+                                                    // value={pin}
                                                     onChange={onPin}
                                                     placeholder="Enter your confirm pin number"
                                                 />
 
                                                 <p className="para-form show_result">{pinError}</p>
+                                                <p className="para-form show_result">{noPinMatch}</p>
                                             </div>
                                         </div>
                                         <hr />

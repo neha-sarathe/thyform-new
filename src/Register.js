@@ -8,7 +8,7 @@ const Register = (props) => {
   const navigate = useNavigate();
   const [radio, setRadio] = useState("Limited");
   const [show, setShow] = useState(false);
-  const [text, setText] = useState(true);
+  const [text, setText] = useState('users');
   const [txt, setTxt] = useState('');
   const [txtbn, setTxtbn] = useState('');
   const [txtbn2, setTxtbn2] = useState('');
@@ -47,6 +47,9 @@ const Register = (props) => {
   const handleRadio = (value) => {
     setRadio(value);
   };
+  const handleuser = (value) =>{
+    setText(value);
+  }
   useEffect(() => {
     /* Made with love by @fitri
      This is a component of my ReactJS project
@@ -91,7 +94,7 @@ const Register = (props) => {
   /*validations */
   const onInputChange = (e) => {
     const { value } = e.target;
-    if (text){
+    if (text==="users"){
       const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
       if (value === "" || re.test(value)) {
         setTxt(value);
@@ -371,6 +374,11 @@ const Register = (props) => {
                   </div>
                   {/* <h6 className="mandatory">*This is a mandatory field</h6> */}
                   <h4 className="heading-form dark-mode-text">Your business</h4>
+            
+                  <p className="text-end para_col">
+                    You have selected {props.priceSelect} package
+                  </p>
+                 
                   <h6 className="second-heading-form dark-mode-text">
                     Please select your business type:
                   </h6>
@@ -427,9 +435,11 @@ const Register = (props) => {
                       <input
                         id="users"
                         type="radio"
+                        checked={text === "users"}
                         name="user"
                         value="users"
-                        onClick={() => { setText(true) }}
+                        // onClick={() => { setText('users') }}
+                        onClick={() => { handleuser('users') }}
                       />
                       <label htmlFor="users" className='dark-mode-text'>
                         <span></span>Business name
@@ -437,16 +447,18 @@ const Register = (props) => {
                       <input
                         id="userss"
                         type="radio"
+                        checked={text === "registration"}
                         name="user"
-                        value="userss"
-                        onClick={() => { setText(false) }}
+                        value="registration"
+                        // onClick={() => { setText('registration') }}
+                        onClick={() => { handleuser('registration') }}
                       />
                       <label htmlFor="userss" className={"second-lable dark-mode-text " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
                         <span></span>Company Registration Number
                       </label>
                       <div className="d-flex mt-5 pt-3">
                         <div className="search-input-div">
-                          {!text ? <input
+                          {text==="registration" ? <input
                             type="text"
                             placeholder="Registration Number"
                             className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
@@ -468,7 +480,7 @@ const Register = (props) => {
 
                       </div>
                       <div className="ps-1 mt-3 para-form-div">
-                        {text ? <p className="para-form">
+                        {text ==="users" ? <p className="para-form">
                           {showResults ?
                             <p className="para-form show_result"> We couldn't find that company. Please enter at least the first three characters of your company name or your full company registration number.</p>
                             : <p className="para-form"> "Enter at least the first three characters of your

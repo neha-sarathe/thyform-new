@@ -97,6 +97,9 @@ const RegisterThree = (props) => {
                                         </div>
                                     </div>
                                     <div>
+                                    <p className="text-end para_col">
+                    You have selected {props.priceSelect} package
+                  </p>
                                         <h4 className="heading-form dark-mode-text">Your business income</h4>
 
 
