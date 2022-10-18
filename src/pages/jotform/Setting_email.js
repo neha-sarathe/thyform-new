@@ -1,25 +1,21 @@
-import React, { useEffect } from 'react'
-// import $ from 'jquery'
-// import { FiSettings } from "react-icons/fi";
-// import { Link } from 'react-router-dom';
-// import condition_icon from '../../images/contion_icon.svg';
-// import Mobile_icon from '../../images/Mobile_icon.svg'
-// import Sa_accordian from '../../images/Sa_accordian.svg'
+import React, { useState, useEffect } from 'react'
+import { MdEmail } from "react-icons/md";
+import { TbArrowBigRight } from "react-icons/tb";
 import SettingSidebar from './SettingSidebar';
-const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
+const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
+  const [show, setShow] = useState(false);
 
   return (
     <>
-      <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled}/>
+      <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
 
       {/* Setting_email page */}
 
-      <main className={"page-content setting-email  "+ (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+      <main className={"page-content setting-email  " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
         <div className="container">
           <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
             <div className="col-md-10  set_margin">
-
               {/* Direct link div start */}
               <div className='main_w'>
                 <div className=' underline d-flex align-items-center '>
@@ -27,18 +23,24 @@ const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
                   </li>
                   <li className='fs-6 text-black mt-5 pb-2 map'>
-                    <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark")} >NEW EMAIL</h5>
+                    <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark")} >NEW EMAIL</h5>
                     <p className='paragraph '>Please select an email type below to create your email.</p>
                   </li>
                 </div>
               </div>
               {/* direct link div end */}
               {/* form div start*/}
-              <div className="accordion" id="accordionExample">
-                <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+
+              {/* <div className="accordion" id="accordionExample"> */}
+
+              <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                {!show ? (
+                  <>
                   <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
                     <div className="accordion-header" id="headingOne">
-                      <button className="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <button className="border border-white bg-white" type="button" onClick={() => {
+                        setShow(true);
+                      }}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
                       </button>
                     </div>
@@ -46,8 +48,98 @@ const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
                       <h5 className='fw-bold heading pt-2'>Add an email</h5>
                     </div>
                   </div>
-                  <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    {/* first man div start  */}
+                   <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                   <fieldset>
+                     <div className='d-flex align-items-center justify-content-between '>
+                       <div className='main_w'>
+                         <div className=' underline d-flex align-items-center py-2 mx-2 '>
+                           <li>
+                             {/* <img src={manual} height="40px" alt="manual" /> */}
+                           </li>
+                           <li className='fs-6 text-black map'>
+                             <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>AUTORESPONDER 1</h5>
+                         <p className='paragraph remider'> <MdEmail color="green"/>
+                           Jotform
+                           <TbArrowBigRight color="green"/>
+                           Email
+                           </p> 
+                           </li>
+                         </div>
+                       </div>
+                       <div>
+                         {/* <ul className='d-flex align-items-center justify-content-center'>
+                           <li className='mt-2'>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                           </li>
+                         </ul> */}
+                       </div>
+                     </div>
+                   </fieldset>
+                   <div className='position-absolute bg-success'>
+
+                   </div>
+                 </form>
+                 <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                   <fieldset>
+                     <div className='d-flex align-items-center justify-content-between '>
+                       <div className='main_w'>
+                         <div className=' underline d-flex align-items-center py-2 mx-2 '>
+                           <li>
+                             {/* <img src={manual} height="40px" alt="manual" /> */}
+                           </li>
+                           <li className='fs-6 text-black map'>
+                             <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>NOTIFICATION 1</h5>
+                             <p className='paragraph remider'> <MdEmail color="green"/>
+                           Jotform
+                           <TbArrowBigRight color="green"/>
+                           Email
+                           </p>
+                           </li>
+                         </div>
+                       </div>
+                       <div>
+                        
+                       </div>
+                     </div>
+                   </fieldset>
+                   <div className='position-absolute bg-success'>
+
+                   </div>
+                 </form>
+                 <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                   <fieldset>
+                     <div className='d-flex align-items-center justify-content-between '>
+                       <div className='main_w'>
+                         <div className=' underline d-flex align-items-center py-2 mx-2 '>
+                           <li>
+                             {/* <img src={manual} height="40px" alt="manual" /> */}
+                           </li>
+                           <li className='fs-6 text-black map'>
+                             <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>AUTORESPONDER 2</h5>
+                             <p className='paragraph remider'> <MdEmail color="green"/>
+                           Jotform
+                           <TbArrowBigRight color="green"/>
+                           Email
+                           </p>
+                           </li>
+                         </div>
+                       </div>
+                       <div>
+                         
+                       </div>
+                     </div>
+                   </fieldset>
+                   <div className='position-absolute bg-success'>
+
+                   </div>
+                 </form>
+                 </>
+                ) : (
+                  <>
+                    <button className="show-more-btn mb-4 " onClick={() => {
+                      setShow(false);
+                    }}>   <i className='fa fa-arrow-left text-white'></i>
+                    </button>
                     <div className=''>
                       <form className='bg-white shadow-sm  rounded-1 p-3 position-relative'>
                         <fieldset>
@@ -77,7 +169,7 @@ const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
                         </div>
                       </form>
                     </div>
-                    {/* first man div end  */}
+
                     <div className='mt-4'>
                       <form className='bg-white shadow  rounded-1 p-3 position-relative '>
                         <fieldset>
@@ -107,9 +199,11 @@ const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
                         </div>
                       </form>
                     </div>
-                  </div>
-                </div>
-                {/*
+                  </>)
+                };
+                {/* </div> */}
+              </div>
+              {/*
 <form className='bg-white shadow  rounded-1  position-relative mt-4'>
   <fieldset>
     <div className='d-flex align-items-center justify-content-between pb-1'>
@@ -315,7 +409,7 @@ const Setting_email = ({darkmodes,setDarkmodes,jottoggled,setJottoggled}) => {
     </div>
         </form> 
         */}
-              </div>
+              {/* </div> */}
             </div>
             <div className="col-3">
             </div>

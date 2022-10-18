@@ -53,7 +53,7 @@ const RegisterThree = (props) => {
     const onInputChange = e => {
         const { value } = e.target;
         const re = /^[0-9\b]+$/;
-        if (value.length <= 11 && re.test(value)) {
+        if (value.length <= 10 && re.test(value)) {
             setTxt(value);
             setMaxValue(false)
         } else {
@@ -64,7 +64,7 @@ const RegisterThree = (props) => {
     }
 
     const nextPage = () => {
-        if (txt === '') {
+        if (txt.length<6 && txt === '') {
             setError('Please provide an answer')
         } else {
             navigate('/registerfour')
@@ -114,7 +114,8 @@ const RegisterThree = (props) => {
                                                     type="text"
                                                     className={"form-control search-input radius_sal input_height_register " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")}
                                                     placeholder="" aria-label="Username"
-                                                    aria-describedby="basic-addon1" value={txt} onChange={onInputChange} />
+                                                    aria-describedby="basic-addon1" value={txt} onChange={onInputChange}
+                                                   />
                                                 {/* <input
                                                     type="text"
                                                     placeholder="Registration Number"
@@ -126,7 +127,7 @@ const RegisterThree = (props) => {
                                             </div>
                                             <p className="para-form show_result">{error}</p>
                                                 <p className="para-form show_result">{maxValue}</p>
-                                            {txt.length > 0 && txt.length <= 10 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
+                                            {txt.length >= 6 && txt.length <= 10 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
                                       
