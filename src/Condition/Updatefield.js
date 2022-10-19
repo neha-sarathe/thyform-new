@@ -1,10 +1,11 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import SettingSidebar from '../pages/jotform/SettingSidebar'
+import { FaCalculator } from "react-icons/fa";
 
-const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
-  const navigate = useNavigate();
-  return (
+const Updatefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
+    const navigate = useNavigate();
+    return (
     <>
       <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
       <main className={"page-content " + (darkmodes ? "text-white body-dark condition-height" : "text-dark body-light condition-height")}>
@@ -20,13 +21,13 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               <div className='main_w'>
                 <div className=' underline d-flex align-items-center '>
 
-                  <li className='shown px-2 rounded-1 mt-4'>
-                    <svg xmlns="http://www.w3.org/2000/svg" className='mt-2 mb-2' width="20" height="20" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="128" cy="128" r="40" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle></svg>
+                  <li className='shown px-2 rounded-1 mt-4 py-2'>
+                  <FaCalculator />
                   </li>
 
                   <li className='fs-6 text-black mt-5 pb-2 map'>
-                    <h5 className={'remider fw-bold .showhover ' + (darkmodes ? "text-white" : "text-dark ")}>SHOW / HIDE FIELD</h5>
-                    <p className={'paragraph ' + (darkmodes ? "text-white" : "text-dark ")}>Change visibility of field(s) depending on `IF` State conditions.</p>
+                    <h5 className={'remider fw-bold .showhover ' + (darkmodes ? "text-white" : "text-dark ")}>UPDATE / CALCULATE FIELD</h5>
+                    <p className={'paragraph ' + (darkmodes ? "text-white" : "text-dark ")}>Use values from fields to do complex calculations.</p>
                   </li>
                 </div>
               </div>
@@ -141,4 +142,4 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
   )
 }
 
-export default Showfield
+export default Updatefield

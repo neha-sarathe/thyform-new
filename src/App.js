@@ -60,6 +60,14 @@ import { FormAnalytics } from './FormAnalytics/FormAnalytics';
 import UserForm from './userpages/personaldetails/UserForm';
 import PaymentMode from './userpages/personaldetails/PaymentMode';
 import PayProcedure from './userpages/personaldetails/PayProcedure';
+import Showfield from './Condition/Showfield';
+import Updatefield from './Condition/Updatefield';
+import Enablefield from './Condition/Enablefield';
+import Skippage from './Condition/Skippage';
+import Changethanks from './Condition/Changethanks';
+import ChangeEmail from './Condition/ChangeEmail';
+import Notification from './Emails/Notification';
+
 const LightTheme = {
   pageBackground: "white",
   titleColor: "#dc658b",
@@ -141,7 +149,14 @@ function App() {
           || window.location.pathname === "/setting/thankyoupage" || window.location.pathname === "/publish/Assign"
           || window.location.pathname === "/publish/Email" || window.location.pathname === "/publish/Prefill"
           || window.location.pathname === "/publish/Pdf" || window.location.pathname === "/setting/condition"
-          || window.location.pathname === "/setting/mobilenotification" ? (
+          || window.location.pathname === "/setting/mobilenotification"
+          || window.location.pathname === "/showfield"
+          || window.location.pathname === "/updatefield" 
+          || window.location.pathname === "/enablefield"
+          || window.location.pathname === "/skippage"
+          || window.location.pathname === "/changethanks"
+          || window.location.pathname === "/changeemail" 
+          || window.location.pathname === "/notification" ? (
 
           <Router>
             {checked ? <div className='d-flex fixed-top'><div className='jotlogo-width'>  <div className='allform-logo-div'>
@@ -168,8 +183,16 @@ function App() {
               <Route path='/Auto' element={<Auto jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/Rept' element={<Rept jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/Option' element={<Option jottoggled={jottoggled} setJottoggled={setJottoggled} />} />
+              <Route path='/showfield' element={<Showfield jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+              <Route path='/updatefield' element={<Updatefield jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+              <Route path='/enablefield' element={<Enablefield jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+              <Route path='/skippage' element={<Skippage jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+              <Route path='/changethanks' element={<Changethanks jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+              <Route path='/changeemail' element={<ChangeEmail jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+              <Route path='/notification' element={<Notification jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               {/* <Route path='/phone' element={<Phone />} /> */}
             </Routes> : <Phone checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />
+
             }
 
           </Router>
