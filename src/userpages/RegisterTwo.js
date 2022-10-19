@@ -12,6 +12,9 @@ const RegisterTwo = (props) => {
     const [websiteError, setWebsiteError] = useState(false);
     const [website, setWebsite] = useState(false);
     const [maxValue, setMaxValue] = useState(false);
+    const [message, setMessage] = useState('');
+    const [websiteaddError, setWebsiteaddError] = useState(false);
+    const [websiteUrl, setWebsiteUrl] = useState(false);
 
     useEffect(() => {
 
@@ -89,24 +92,26 @@ const RegisterTwo = (props) => {
     }
 
     const nextPage = () => {
+        let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
         if (selectedData === '') {
             setBusinessError('Please select an industry from the dropdown. If your industry is not listed, select other')
         } else if (txt === '') {
             setError('Please enter the number of employees your business has using only numbers')
         } else if (websiteError === false) {
             setWebsiteError('Please select yes or no')
+         }else if (website === 'yes' &&  !message){
+            setWebsiteaddError('Enter Website Adress')
+        }else if (!pattern.test(message)) {
+            setWebsiteaddError("Email is Invalid")
         } else {
             navigate('/registerthree')
         }
-
     }
 
     const handleorganisation = (value) => {
         setWebsite(value)
         setWebsiteError(true)
     }
-    const [message, setMessage] = useState('www');
-    const [websiteUrl, setWebsiteUrl] = useState(false);
 
     const handleChange = e => {
         setMessage(e.target.value);
@@ -118,8 +123,6 @@ const RegisterTwo = (props) => {
         else {
             setWebsiteUrl(true)
         }
-
-
     };
 
     return (
@@ -143,13 +146,12 @@ const RegisterTwo = (props) => {
                                             <a className="navbar-brand brand-logo" href="/">
                                                 <img src="../../images/Logo.png" alt="logo" />
                                             </a>
-
                                         </div>
                                     </div>
                                     <div>
                                     <p className="text-end para_col">
-                    You have selected {props.priceSelect} package
-                  </p>
+                                       You have selected {props.priceSelect} package
+                                    </p>
                                         <h4 className="heading-form dark-mode-text">Your business</h4>
                                         <div className="d-flex mt-4">
                                             <div className="w-25">
@@ -222,7 +224,7 @@ const RegisterTwo = (props) => {
                                                     />
                                                 </div>
                                                 {websiteUrl === true ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
-                                                <p className="para-form show_result">{websiteUrl}</p>
+                                                <p className="para-form show_result">{websiteaddError}</p>
 
                                             </div>
                                             : ''}

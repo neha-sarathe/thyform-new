@@ -73,7 +73,7 @@ const PaymentMode = (props) => {
                                                                 <p className="fs-6 mt-4">month</p>
                                                             </div>
                                                             <p className="card-text">Manage all your teams’ work in one place</p>
-                                                            <button type="button" className="btn btn-primary btn-sm margin_btn_sm" onClick={() => onPriceSelect('Monthly')}>Select</button>
+                                                            <button type="button" className="btn btn-sm margin_btn_sm select-button-color" onClick={() => onPriceSelect('Monthly')}>Select</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -88,7 +88,7 @@ const PaymentMode = (props) => {
                                                                 <p className="fs-6 mt-4">6-month</p>
                                                             </div>
                                                             <p className="card-text">Manage all your teams’ work in one place</p>
-                                                            <button type="button" className="btn btn-primary btn-sm margin_btn_sm" onClick={() => onPriceSelect('Half-Yearly')}>Select</button>
+                                                            <button type="button" className="btn btn-sm margin_btn_sm select-button-color" onClick={() => onPriceSelect('Half-Yearly')}>Select</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -102,7 +102,7 @@ const PaymentMode = (props) => {
                                                                 <p className="fs-6 mt-4">year</p>
                                                             </div>
                                                             <p className="card-text">Manage all your teams’ work in one place</p>
-                                                            <button type="button" className="btn btn-primary btn-sm margin_btn_sm" onClick={() => onPriceSelect('Yearly')}>Select</button>
+                                                            <button type="button" className="btn btn-sm margin_btn_sm select-button-color" onClick={() => onPriceSelect('Yearly')}>Select</button>
                                                         </div>
                                                     </div>
                                                 </div>

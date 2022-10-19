@@ -395,7 +395,7 @@ const Register = (props) => {
                     }}
 
                   />
-                  <label htmlFor="individual" className={'dark-mode-text custom-control-label green ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                  <label htmlFor="individual" className={'dark-mode-text green ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                     <span></span>Limited Company
                   </label>
 
@@ -456,7 +456,7 @@ const Register = (props) => {
                       <label htmlFor="userss" className={"second-lable dark-mode-text " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
                         <span></span>Company Registration Number
                       </label>
-                      <div className="d-flex mt-5 pt-3">
+                      <div className="register-business-input">
                         <div className="search-input-div">
                           {text==="registration" ? <input
                             type="text"
@@ -472,7 +472,7 @@ const Register = (props) => {
                             onChange={onInputChange}
                           />}
                         </div>
-                        <div className="ps-4">
+                        <div className="business-search-button">
                           <button type="submit" className="btn-default pt-2 pb-2" onClick={handleClick}>
                             SEARCH &nbsp;  <i className="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                           </button>

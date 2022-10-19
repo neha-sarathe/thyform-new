@@ -33,7 +33,6 @@ const PersonalDetails = (props) => {
     const [nationality, setNationality] = useState('');
     const [nationalityError, setNationalityError] = useState(false);
     const [PhoneNumber, setPhoneNumber] = useState('0');
-    console.log('PhoneNumber', PhoneNumber);
     const [PhoneNumberError, setPhoneNumberError] = useState(false);
     const [mobileNumber, setMobileNumber] = useState('07');
     const [mobileNumberError, setMobileNumberError] = useState(false);
@@ -164,6 +163,7 @@ const PersonalDetails = (props) => {
     }
 
     const nextPage = () => {
+        let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
         if (selectedData === '') {
             setBusinessError('Please select your title')
         } else if (maxValue === '') {
@@ -182,9 +182,15 @@ const PersonalDetails = (props) => {
             setMobileNumberError('Please enter a valid UK mobile number starting with 07')
         } else if (emailAddress === '') {
             setEmailAddressError('Please enter a valid email address')
-        } else if (confirmValue === '') {
+        }else if (!pattern.test(emailAddress)) {
+            setEmailAddressError("Email is Invalid")
+        }else if (!pattern.test(confirmValue)) {
+            setConfirmEmailError("Email is Invalid")
+        }else if (confirmValue === '') {
             setConfirmEmailError('Please confirm your email address')
-        } else if (checked === false) {
+        }else if (!confirmValue == emailAddress) {
+            setConfirmEmailError('Email does not match')
+        }else if (checked === false) {
             setCheckError('Please read the Terms & Conditions and check the box to show you agree to them')
         } else if (checkedConfirm === false) {
             setCheckedConfirmError('Please acknowledge the cover of the Financial Services Compensation Scheme')
@@ -195,7 +201,6 @@ const PersonalDetails = (props) => {
         else {
             navigate('/userform')
         }
-
     }
 
     const handleorganisation = (value) => {
