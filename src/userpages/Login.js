@@ -3,6 +3,7 @@ import { FiLogIn } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import Dark from "../DarkAuth";
+
 const Login = (props) => {
   const navigate = useNavigate();
   const [pincode, setPincode] = useState('');
@@ -146,7 +147,7 @@ const Login = (props) => {
                         <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Username *</label></div>
                         <div className="col-md-9">  <input
                           type="text"
-                          className={"form-control placeholder-login  border-left-0  input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                          className={"form-control placeholder-login   input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputEfmail"
                           placeholder="Username"
 
@@ -159,7 +160,7 @@ const Login = (props) => {
                         <div className="col-md-3 mt-1 login-text"> <label className={props.darkmodes ? "text-white" : "text-dark"}>Password *</label></div>
                         <div className="col-md-9">  <input
                           type={hide ? 'password' : 'input'}
-                          className={"form-control placeholder-login  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                          className={"form-control placeholder-login input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
                           placeholder="Password"
                         />
@@ -173,7 +174,7 @@ const Login = (props) => {
                         <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Pin code *</label></div>
                         <div className="col-md-9">  <input
                           type="phone"
-                          className={"form-control placeholder-login  border-left-0 input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                          className={"form-control placeholder-login input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
                           id="exampleInputfPassword"
                           placeholder="Pin code"
                           value={pincode}
@@ -201,8 +202,8 @@ const Login = (props) => {
                       </div>
                       {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
                     </div>
-                    <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0 d-flex justify-content-center">
-                      <button class="btn btn-primary login-btn-width" type="button" onClick={() => { props.setUser(); navigate("../allform/allform"); window.location.reload(false); }}>
+                    <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0 d-flex justify-content-center login-button-color">
+                      <button class="btn login-btn-width text-white"  type="button" onClick={() => { props.setUser(); navigate("../allform/allform"); window.location.reload(false); }}>
                         Log in
                       </button>
                       {/* <button class="btn btn-primary" type="button">Button</button> */}

@@ -99,10 +99,10 @@ const RegisterTwo = (props) => {
             setError('Please enter the number of employees your business has using only numbers')
         } else if (websiteError === false) {
             setWebsiteError('Please select yes or no')
-         }else if (website === 'yes' &&  !message){
+         }else if (website === 'yes' ||  !message){
             setWebsiteaddError('Enter Website Adress')
-        }else if (!pattern.test(message)) {
-            setWebsiteaddError("Email is Invalid")
+        }else if (!message) {
+            setWebsiteaddError("Please Enter Website Address")
         } else {
             navigate('/registerthree')
         }

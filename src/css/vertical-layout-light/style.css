@@ -9773,7 +9773,9 @@ progress {
   }
   .col-md-4, .lightGallery .image-tile {
     flex: 0 0 auto;
-    width: 33.33333%;
+    /* width: 33.33333%; */
+    width: 28.33333%;
+    /* margin-left: -956px !important; */
   }
   .col-md-5 {
     flex: 0 0 auto;
