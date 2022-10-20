@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom';
 import styled from "styled-components";
 import AllformNav from './pages/AllformNav';
 import './App.css';
+import './index.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import './vendors/feather/feather.css'
@@ -67,6 +68,7 @@ import Skippage from './Condition/Skippage';
 import Changethanks from './Condition/Changethanks';
 import ChangeEmail from './Condition/ChangeEmail';
 import Notification from './Emails/Notification';
+import AutoResponder from './Emails/AutoResponder';
 
 const LightTheme = {
   pageBackground: "white",
@@ -156,7 +158,8 @@ function App() {
           || window.location.pathname === "/skippage"
           || window.location.pathname === "/changethanks"
           || window.location.pathname === "/changeemail" 
-          || window.location.pathname === "/notification" ? (
+          || window.location.pathname === "/notification" 
+          || window.location.pathname === "/autoresponder" ? (
 
           <Router>
             {checked ? <div className='d-flex fixed-top'><div className='jotlogo-width'>  <div className='allform-logo-div'>
@@ -190,6 +193,7 @@ function App() {
               <Route path='/changethanks' element={<Changethanks jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/changeemail' element={<ChangeEmail jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/notification' element={<Notification jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+              <Route path='/autoresponder' element={<AutoResponder jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               {/* <Route path='/phone' element={<Phone />} /> */}
             </Routes> : <Phone checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />
 

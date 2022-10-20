@@ -34387,3 +34387,6 @@ padding-left: 16px;
 }
 
 
+.show-hov:hover{
+  background-color: #0099ff !important;
+}

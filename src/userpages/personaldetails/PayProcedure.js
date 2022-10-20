@@ -167,14 +167,14 @@ const PayProcedure = (props) => {
                                             </div>
 
                                             <div className='row'>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Expiration*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="MM/YY"
                                                         value={expiration}
                                                         onChange={onExpiration} />
                                                     <p className="para-form show_result">{expirationError}</p>
                                                 </div>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Security Code*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Security Code"
                                                         value={secureCode}
@@ -183,14 +183,14 @@ const PayProcedure = (props) => {
                                                 </div>
                                             </div>
                                             <div className='row'>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>First Name*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="First Name"
                                                         value={fname}
                                                         onChange={onFname} />
                                                     <p className="para-form show_result">{fnameError}</p>
                                                 </div>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Surname*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Surname"
                                                         value={surname}
@@ -199,14 +199,14 @@ const PayProcedure = (props) => {
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Company Name*</label>
                                                     <input type="text" class={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Company Name"
                                                         value={company}
                                                         onChange={onCompany} />
                                                     <p className="para-form show_result">{companyError}</p>
                                                 </div>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Address*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Search Location" 
                                                      value={address}
@@ -215,14 +215,14 @@ const PayProcedure = (props) => {
                                                 </div>
                                             </div>
                                             <div className='row'>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>City*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="City" 
                                                     value={city}
                                                     onChange={onCity}/>
                                                     <p className="para-form show_result">{cityError}</p>
                                                 </div>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Post Code*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Post Code"
                                                     value={post}
@@ -231,33 +231,33 @@ const PayProcedure = (props) => {
                                                 </div>
                                             </div>
                                             <div className='row'>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Country*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Country" 
                                                      value={country}
                                                      onChange={onCountry}/>
                                                      <p className="para-form show_result">{countryError}</p>
                                                 </div>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <label>VAT Number</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="VAT Number" />
                                                 </div>
                                             </div>
                                             <div className='row'>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <p>Basic Plan 5 Seats</p>
 
                                                     <p> Yearly Plan 18% savings</p>
                                                 </div>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <p>($40*12 Months) $480</p>
                                                 </div>
                                             </div>
                                             <div className='row'>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <p>Total</p>
                                                 </div>
-                                                <div class="search-input-div col-md-6 pt-4">
+                                                <div class="search-pay-div col-md-6 pt-4">
                                                     <p>$480</p>
                                                 </div>
                                             </div>

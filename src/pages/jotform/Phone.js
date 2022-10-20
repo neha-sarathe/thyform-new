@@ -356,7 +356,7 @@ export const Phone = ({ checked, setChecked,darkmodes,setDarkmodes }) => {
                         </div>
 
                         <form>
-                            <div class="row jumbotron mt-3 container">
+                            <div class="row jumbotron me-0 mr-0 ml-0 ms-0 mt-3 container">
                                 <div class="col-sm-6 form-group">
                                     <label for="name-f">First Name</label>
                                     <input

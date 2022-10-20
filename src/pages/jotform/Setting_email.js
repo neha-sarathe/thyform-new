@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { MdEmail } from "react-icons/md";
 import { TbArrowBigRight } from "react-icons/tb";
 import SettingSidebar from './SettingSidebar';
+import { Link, useNavigate } from 'react-router-dom';
+
 const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
   const [show, setShow] = useState(false);
 
@@ -36,169 +38,172 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
               <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                 {!show ? (
                   <>
-                  <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
-                    <div className="accordion-header" id="headingOne">
-                      <button className="border border-white bg-white" type="button" onClick={() => {
-                        setShow(true);
-                      }}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
-                      </button>
+                    <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
+                      <div className="accordion-header" id="headingOne">
+                        <button className="border border-white bg-white" type="button" onClick={() => {
+                          setShow(true);
+                        }}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
+                        </button>
+                      </div>
+                      <div>
+                        <h5 className='fw-bold heading pt-2'>Add an email</h5>
+                      </div>
                     </div>
-                    <div>
-                      <h5 className='fw-bold heading pt-2'>Add an email</h5>
-                    </div>
-                  </div>
-                   <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                   <fieldset>
-                     <div className='d-flex align-items-center justify-content-between '>
-                       <div className='main_w'>
-                         <div className=' underline d-flex align-items-center py-2 mx-2 '>
-                           <li>
-                             {/* <img src={manual} height="40px" alt="manual" /> */}
-                           </li>
-                           <li className='fs-6 text-black map'>
-                             <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>AUTORESPONDER 1</h5>
-                         <p className='paragraph remider'> <MdEmail color="green"/>
-                           Jotform
-                           <TbArrowBigRight color="green"/>
-                           Email
-                           </p> 
-                           </li>
-                         </div>
-                       </div>
-                       <div>
-                         {/* <ul className='d-flex align-items-center justify-content-center'>
+                    <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                      <fieldset>
+                        <div className='d-flex align-items-center justify-content-between '>
+                          <div className='main_w'>
+                            <div className=' underline d-flex align-items-center py-2 mx-2 '>
+                              <li>
+                                {/* <img src={manual} height="40px" alt="manual" /> */}
+                              </li>
+                              <li className='fs-6 text-black map'>
+                                <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>AUTORESPONDER 1</h5>
+                                <p className='paragraph remider'> <MdEmail color="green" />
+                                  Jotform
+                                  <TbArrowBigRight color="green" />
+                                  Email
+                                </p>
+                              </li>
+                            </div>
+                          </div>
+                          <div>
+                            {/* <ul className='d-flex align-items-center justify-content-center'>
                            <li className='mt-2'>
                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
                            </li>
                          </ul> */}
-                       </div>
-                     </div>
-                   </fieldset>
-                   <div className='position-absolute bg-success'>
+                          </div>
+                        </div>
+                      </fieldset>
+                      <div className='position-absolute bg-success'>
 
-                   </div>
-                 </form>
-                 <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                   <fieldset>
-                     <div className='d-flex align-items-center justify-content-between '>
-                       <div className='main_w'>
-                         <div className=' underline d-flex align-items-center py-2 mx-2 '>
-                           <li>
-                             {/* <img src={manual} height="40px" alt="manual" /> */}
-                           </li>
-                           <li className='fs-6 text-black map'>
-                             <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>NOTIFICATION 1</h5>
-                             <p className='paragraph remider'> <MdEmail color="green"/>
-                           Jotform
-                           <TbArrowBigRight color="green"/>
-                           Email
-                           </p>
-                           </li>
-                         </div>
-                       </div>
-                       <div>
-                        
-                       </div>
-                     </div>
-                   </fieldset>
-                   <div className='position-absolute bg-success'>
+                      </div>
+                    </form>
+                    <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                      <fieldset>
+                        <div className='d-flex align-items-center justify-content-between '>
+                          <div className='main_w'>
+                            <div className=' underline d-flex align-items-center py-2 mx-2 '>
+                              <li>
+                                {/* <img src={manual} height="40px" alt="manual" /> */}
+                              </li>
+                              <li className='fs-6 text-black map'>
+                                <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>NOTIFICATION 1</h5>
+                                <p className='paragraph remider'> <MdEmail color="green" />
+                                  Jotform
+                                  <TbArrowBigRight color="green" />
+                                  Email
+                                </p>
+                              </li>
+                            </div>
+                          </div>
+                          <div>
 
-                   </div>
-                 </form>
-                 <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                   <fieldset>
-                     <div className='d-flex align-items-center justify-content-between '>
-                       <div className='main_w'>
-                         <div className=' underline d-flex align-items-center py-2 mx-2 '>
-                           <li>
-                             {/* <img src={manual} height="40px" alt="manual" /> */}
-                           </li>
-                           <li className='fs-6 text-black map'>
-                             <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>AUTORESPONDER 2</h5>
-                             <p className='paragraph remider'> <MdEmail color="green"/>
-                           Jotform
-                           <TbArrowBigRight color="green"/>
-                           Email
-                           </p>
-                           </li>
-                         </div>
-                       </div>
-                       <div>
-                         
-                       </div>
-                     </div>
-                   </fieldset>
-                   <div className='position-absolute bg-success'>
+                          </div>
+                        </div>
+                      </fieldset>
+                      <div className='position-absolute bg-success'>
 
-                   </div>
-                 </form>
-                 </>
+                      </div>
+                    </form>
+                    <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                      <fieldset>
+                        <div className='d-flex align-items-center justify-content-between '>
+                          <div className='main_w'>
+                            <div className=' underline d-flex align-items-center py-2 mx-2 '>
+                              <li>
+                                {/* <img src={manual} height="40px" alt="manual" /> */}
+                              </li>
+                              <li className='fs-6 text-black map'>
+                                <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>AUTORESPONDER 2</h5>
+                                <p className='paragraph remider'> <MdEmail color="green" />
+                                  Jotform
+                                  <TbArrowBigRight color="green" />
+                                  Email
+                                </p>
+                              </li>
+                            </div>
+                          </div>
+                          <div>
+
+                          </div>
+                        </div>
+                      </fieldset>
+                      <div className='position-absolute bg-success'>
+
+                      </div>
+                    </form>
+                  </>
                 ) : (
                   <>
-                    <button className="show-more-btn mb-4 " onClick={() => {
+                    <button className="back-btn-in mb-4 " onClick={() => {
                       setShow(false);
                     }}>   <i className='fa fa-arrow-left text-white'></i>
                     </button>
-                    <div className=''>
-                      <form className='bg-white shadow-sm  rounded-1 p-3 position-relative'>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <div className='main_w'>
-                              <div className=' underline d-flex align-items-center py-2 mx-2 '>
-                                <li className='background p-2 rounded-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M207.8,112a79.7,79.7,0,0,0-79.2-80H128a79.9,79.9,0,0,0-79.8,80c0,34.3-7.1,53.7-13,63.9a16.2,16.2,0,0,0-.1,16.1A15.9,15.9,0,0,0,49,200H88a40,40,0,0,0,80,0h39a15.9,15.9,0,0,0,13.9-8,16.2,16.2,0,0,0-.1-16.1C214.9,165.7,207.8,146.3,207.8,112ZM128,224a24.1,24.1,0,0,1-24-24h48A24.1,24.1,0,0,1,128,224ZM224.9,73.3a9.3,9.3,0,0,1-3.5.8,7.9,7.9,0,0,1-7.2-4.5,97,97,0,0,0-35-38.8,8,8,0,0,1,8.5-13.6,111.7,111.7,0,0,1,40.8,45.4A8,8,0,0,1,224.9,73.3Zm-190.3.8a9.3,9.3,0,0,1-3.5-.8,8,8,0,0,1-3.6-10.7A111.7,111.7,0,0,1,68.3,17.2a8,8,0,0,1,8.5,13.6,97,97,0,0,0-35,38.8A7.9,7.9,0,0,1,34.6,74.1Z"></path></svg>
-                                </li>
-                                <li className='fs-6 text-black map'>
-                                  <h5 className='fs-7 fw-bold heading_5 remider'>NOTIFICATION EMAIL</h5>
-                                  <p className='paragraph remider'>Receive an email when someone fills your form.</p>
-                                </li>
+                    <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/notification">
+                      <div className=''>
+                        <form className='bg-white shadow-sm  rounded-1 p-3 position-relative'>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
+                              <div className='main_w'>
+                                <div className=' underline d-flex align-items-center py-2 mx-2 '>
+                                  <li className='background p-2 rounded-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M207.8,112a79.7,79.7,0,0,0-79.2-80H128a79.9,79.9,0,0,0-79.8,80c0,34.3-7.1,53.7-13,63.9a16.2,16.2,0,0,0-.1,16.1A15.9,15.9,0,0,0,49,200H88a40,40,0,0,0,80,0h39a15.9,15.9,0,0,0,13.9-8,16.2,16.2,0,0,0-.1-16.1C214.9,165.7,207.8,146.3,207.8,112ZM128,224a24.1,24.1,0,0,1-24-24h48A24.1,24.1,0,0,1,128,224ZM224.9,73.3a9.3,9.3,0,0,1-3.5.8,7.9,7.9,0,0,1-7.2-4.5,97,97,0,0,0-35-38.8,8,8,0,0,1,8.5-13.6,111.7,111.7,0,0,1,40.8,45.4A8,8,0,0,1,224.9,73.3Zm-190.3.8a9.3,9.3,0,0,1-3.5-.8,8,8,0,0,1-3.6-10.7A111.7,111.7,0,0,1,68.3,17.2a8,8,0,0,1,8.5,13.6,97,97,0,0,0-35,38.8A7.9,7.9,0,0,1,34.6,74.1Z"></path></svg>
+                                  </li>
+                                  <li className='fs-6 text-black map'>
+                                    <h5 className='fs-7 fw-bold heading_5 remider'>NOTIFICATION EMAIL</h5>
+                                    <p className='paragraph remider'>Receive an email when someone fills your form.</p>
+                                  </li>
+                                </div>
+                              </div>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ ul>
                               </div>
                             </div>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ ul>
-                            </div>
+                          </fieldset>
+                          <div className='position-absolute succes bg-opacity-75'>
+
                           </div>
-                        </fieldset>
-                        <div className='position-absolute succes bg-opacity-75'>
-
-                        </div>
-                      </form>
-                    </div>
-
-                    <div className='mt-4'>
-                      <form className='bg-white shadow  rounded-1 p-3 position-relative '>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <div className='main_w'>
-                              <div className=' underline d-flex align-items-center py-2 mx-2 '>
-                                <li className='bg-success p-2 rounded-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M207.8,112a79.7,79.7,0,0,0-79.2-80H128a79.9,79.9,0,0,0-79.8,80c0,34.3-7.1,53.7-13,63.9a16.2,16.2,0,0,0-.1,16.1A15.9,15.9,0,0,0,49,200H88a40,40,0,0,0,80,0h39a15.9,15.9,0,0,0,13.9-8,16.2,16.2,0,0,0-.1-16.1C214.9,165.7,207.8,146.3,207.8,112ZM128,224a24.1,24.1,0,0,1-24-24h48A24.1,24.1,0,0,1,128,224ZM224.9,73.3a9.3,9.3,0,0,1-3.5.8,7.9,7.9,0,0,1-7.2-4.5,97,97,0,0,0-35-38.8,8,8,0,0,1,8.5-13.6,111.7,111.7,0,0,1,40.8,45.4A8,8,0,0,1,224.9,73.3Zm-190.3.8a9.3,9.3,0,0,1-3.5-.8,8,8,0,0,1-3.6-10.7A111.7,111.7,0,0,1,68.3,17.2a8,8,0,0,1,8.5,13.6,97,97,0,0,0-35,38.8A7.9,7.9,0,0,1,34.6,74.1Z"></path></svg>
-                                </li>
-                                <li className='fs-6 text-black map'>
-                                  <h5 className='fs-7 fw-bold heading_5 remider'>AUTORESPONDER EMAIL</h5>
-                                  <p className='paragraph remider'>Send autoresponder email to the person who fills your form. </p>
-                                </li>
+                        </form>
+                      </div>
+                    </Link>
+                    <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/autoresponder">
+                      <div className='mt-4'>
+                        <form className='bg-white shadow  rounded-1 p-3 position-relative '>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
+                              <div className='main_w'>
+                                <div className=' underline d-flex align-items-center py-2 mx-2 '>
+                                  <li className='bg-success p-2 rounded-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M207.8,112a79.7,79.7,0,0,0-79.2-80H128a79.9,79.9,0,0,0-79.8,80c0,34.3-7.1,53.7-13,63.9a16.2,16.2,0,0,0-.1,16.1A15.9,15.9,0,0,0,49,200H88a40,40,0,0,0,80,0h39a15.9,15.9,0,0,0,13.9-8,16.2,16.2,0,0,0-.1-16.1C214.9,165.7,207.8,146.3,207.8,112ZM128,224a24.1,24.1,0,0,1-24-24h48A24.1,24.1,0,0,1,128,224ZM224.9,73.3a9.3,9.3,0,0,1-3.5.8,7.9,7.9,0,0,1-7.2-4.5,97,97,0,0,0-35-38.8,8,8,0,0,1,8.5-13.6,111.7,111.7,0,0,1,40.8,45.4A8,8,0,0,1,224.9,73.3Zm-190.3.8a9.3,9.3,0,0,1-3.5-.8,8,8,0,0,1-3.6-10.7A111.7,111.7,0,0,1,68.3,17.2a8,8,0,0,1,8.5,13.6,97,97,0,0,0-35,38.8A7.9,7.9,0,0,1,34.6,74.1Z"></path></svg>
+                                  </li>
+                                  <li className='fs-6 text-black map'>
+                                    <h5 className='fs-7 fw-bold heading_5 remider'>AUTORESPONDER EMAIL</h5>
+                                    <p className='paragraph remider'>Send autoresponder email to the person who fills your form. </p>
+                                  </li>
+                                </div>
+                              </div>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-success ut'>
+                          </fieldset>
+                          <div className='position-absolute bg-success ut'>
 
-                        </div>
-                      </form>
-                    </div>
+                          </div>
+                        </form>
+                      </div>
+                    </Link>
                   </>)
                 };
                 {/* </div> */}

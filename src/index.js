@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 import App from './App';
 import { createStore, applyMiddleware } from "redux";
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import thunkMiddileware from "redux-thunk";
 import { Provider } from "react-redux";
 import reportWebVitals from './reportWebVitals';

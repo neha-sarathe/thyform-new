@@ -244,6 +244,8 @@
 
 .register-business-input{
   display: inline-flex !important; 
+  width: 92%;
+    margin-top: 20px;
 }
 .business-search-button{
   margin-left: 20px !important;
@@ -258,13 +260,13 @@ border-radius: 5px;
 .sidebar{
   width: 280px;
   min-height: 100vh;
-  box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
-  background-color: #fff;
-  position: fixed;
+  /* box-shadow: 0px 4px 8px rgb(0 0 0 / 16%); */
+  background-color: #f4f5f7;
+  /* position: fixed; */
   top: 0;
   left: -100%;
   z-index: 1;
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 .sidebar.active{
   left: 0;
