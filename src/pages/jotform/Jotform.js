@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-// import { FormBuilder } from "cb-react-forms";
+import { FormBuilder } from "cb-react-forms";
 
 const Jotform = ({darkmodes,setDarkmodes }) => {
   const [formData, setFormData] = useState();
@@ -10,7 +10,7 @@ const Jotform = ({darkmodes,setDarkmodes }) => {
         <br/>
         <br/>
         <br/>
-          {/* <FormBuilder onSubmit={data => console.log("Data---->",data)} /> */}
+          <FormBuilder onSubmit={data => console.log("Data---->",data)} />
         <div >
           <div id="formio-result" />
         </div>

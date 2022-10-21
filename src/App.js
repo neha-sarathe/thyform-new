@@ -194,6 +194,7 @@ function App() {
               <Route path='/changeemail' element={<ChangeEmail jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/notification' element={<Notification jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/autoresponder' element={<AutoResponder jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
+              
               {/* <Route path='/phone' element={<Phone />} /> */}
             </Routes> : <Phone checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />
 
