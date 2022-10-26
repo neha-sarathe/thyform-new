@@ -375,11 +375,11 @@ const Register = (props) => {
                   {/* <h6 className="mandatory">*This is a mandatory field</h6> */}
                   <h4 className="heading-form dark-mode-text">Your business</h4>
             
-                  <p className="text-end para_col">
+                  {/* <p className="text-end para_col">
                     You have selected {props.priceSelect} package
-                  </p>
+                  </p> */}
                  
-                  <h6 className="second-heading-form dark-mode-text">
+                  <h6 className="second-heading-form heading-second-business dark-mode-text">
                     Please select your business type:
                   </h6>
                   <input
@@ -395,7 +395,7 @@ const Register = (props) => {
                     }}
 
                   />
-                  <label htmlFor="individual" className={'dark-mode-text green ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                  <label htmlFor="individual" className={'dark-mode-text green lable-first ' + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                     <span></span>Limited Company
                   </label>
 
@@ -430,7 +430,7 @@ const Register = (props) => {
                     <>
                       {" "}
                       <br />
-                      <h6 className="second-heading-form dark-mode-text">Search by:</h6>
+                      <h6 className="second-heading-form dark-mode-text search-by-margin">Search by:</h6>
 
                       <input
                         id="users"
@@ -441,7 +441,7 @@ const Register = (props) => {
                         // onClick={() => { setText('users') }}
                         onClick={() => { handleuser('users') }}
                       />
-                      <label htmlFor="users" className='dark-mode-text'>
+                      <label htmlFor="users" className='dark-mode-text second-lable1 '>
                         <span></span>Business name
                       </label>
                       <input
@@ -453,10 +453,10 @@ const Register = (props) => {
                         // onClick={() => { setText('registration') }}
                         onClick={() => { handleuser('registration') }}
                       />
-                      <label htmlFor="userss" className={"second-lable dark-mode-text " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
+                      <label htmlFor="userss" className={"second-lable dark-mode-text company-number-registration " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} >
                         <span></span>Company Registration Number
                       </label>
-                      <div className="register-business-input">
+                      <div className="register-business-input d-inline-flex input-for-registration mt-2 pt-3 ">
                         <div className="search-input-div">
                           {text==="registration" ? <input
                             type="text"
@@ -638,7 +638,7 @@ const Register = (props) => {
                         ''}
 
                       <hr />
-                      <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                      <div className="mt-3 text-end  align-items-center justify-content-around">
                         <p className="already-login">
                           Already account please{" "}
                           <Link to="/login" className="auth-link register-here register-here">
@@ -799,7 +799,7 @@ const Register = (props) => {
                       </div>
                       */}
                       <hr />
-                      <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                      <div className="mt-3 text-end  align-items-center justify-content-around">
                         <p className="already-login">
                           Already account please{" "}
                           <Link to="/login" className="auth-link register-here">
@@ -1078,7 +1078,7 @@ const Register = (props) => {
                       */}
                       <hr />
 
-                      <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                      <div className="mt-3 text-end  align-items-center justify-content-around">
                         <p className="already-login">
                           Already account please{" "}
                           <Link to="/login" className="auth-link register-here register-here">

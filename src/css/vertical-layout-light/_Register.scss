@@ -293,3 +293,100 @@ color: black;
     /* width: 71%; */
     font-family: "Montserrat", sans-serif;
 }
+
+.text-end{
+    display: flex;
+    text-align: right !important;
+}
+.input-for-registration{
+    width: 100%;
+}
+.selectflex{
+    display: flex;
+  }
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .second-lable{
+        margin-top: 15px;
+        margin-left: 0;
+       
+    }
+    .search-by-margin{
+        margin-top: 102px;
+    }
+    .second-heading-form{
+        line-height: 3.5;
+        margin-left: 13px;
+         margin-bottom: 0;
+    }
+    .heading-second-business{
+        font-size: 16px;
+        line-height: 14px;
+        margin-bottom: 22px;
+        margin-left: 0;
+    }
+    .company-number-registration{
+        margin-left: 0;
+    }
+    .search-input-div{
+        width: 60%;
+    }
+    .search-input-div1{
+        margin-left: 0 !important;
+    }
+    .text-end{
+        display: block;
+        text-align: center !important;
+    }
+  .field-icon{
+    top: 48px;
+  }
+  .business-search-button{
+    margin-right: 14px;
+  }
+  .selectflex{
+    display: block;
+    justify-content: space-between;
+  }
+  .div-search-inputs{
+    width: 100%;
+  }
+  .auth .brand-logo{
+    margin-bottom: 0;
+  }
+}
+  
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-color: yellow;
+    }
+}
+  
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    .second-lable{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .second-lable1{
+        font-size: 13px;
+    }
+    .lable-first{
+        font-size: 13px; 
+    }
+}
+  
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+    body {
+        background-color: green;
+    }
+}
+  
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+    body {
+        background-color: white;
+    }
+}

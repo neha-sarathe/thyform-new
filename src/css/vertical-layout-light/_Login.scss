@@ -12,12 +12,15 @@
     margin-bottom: 0rem !important;
     width: 93%;
 }
-.dashboard-icon{
+
+.dashboard-icon {
     color: #dc143c;
 }
-.dashboard-icon svg{
-    fill:#dc143c ;
+
+.dashboard-icon svg {
+    fill: #dc143c;
 }
+
 .brand-logo1 {
     width: 197px !important;
     height: auto;
@@ -31,26 +34,31 @@
     font-family: 'Montserrat', sans-serif;
     padding-left: 2px;
 }
-.form-div-loginpage{
+
+.form-div-loginpage {
     width: 99%;
     margin: auto;
 }
 
-.placeholder-login::placeholder{
-    padding: 1px; 
-    color:#aaa7a7 !important;
+.placeholder-login::placeholder {
+    padding: 1px;
+    color: #aaa7a7 !important;
 }
+
 .login-bg {
     background-color: #fff;
 }
-.login-here{
+
+.login-here {
     cursor: pointer;
     color: #dc143c;
 }
-.login-here:hover{
+
+.login-here:hover {
     cursor: pointer;
-    color: #f52b54 ;
+    color: #f52b54;
 }
+
 .brand-logo1 img {
     width: 100% !important;
     height: auto;
@@ -63,11 +71,13 @@
     cursor: pointer;
     z-index: 12;
 }
-.login-text{
+
+.login-text {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
+
 .input-login {
     background-color: transparent !important;
     border: 1px solid #ced4da !important;
@@ -108,13 +118,21 @@
     width: 78%;
     margin: 7.5rem auto;
 }
+
 @media screen and (min-device-width: 1441px) and (max-device-width: 3840px) {
-    .spinner_size{
-      width: 7rem !important;
-      height: 7rem !important;
-  }
-  .font_spinner{
-    font-size: 25px !important;
-  }
+    .spinner_size {
+        width: 7rem !important;
+        height: 7rem !important;
     }
-  
+
+    .font_spinner {
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .field-icon {
+        top: 48px;
+    }
+}

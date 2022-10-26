@@ -408,9 +408,9 @@ const PersonalDetails = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                    <p className="text-end para_col">
+                                    {/* <p className="text-end para_col">
                     You have selected {props.priceSelect} package
-                  </p>
+                  </p> */}
                                         <h4 className="heading-form dark-mode-text">Tell Us About You</h4>
                                         <div className="d-flex mt-4">
                                             <div className="w-25">

@@ -149,15 +149,15 @@ const RegisterTwo = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                    <p className="text-end para_col">
+                                    {/* <p className="text-end para_col">
                                        You have selected {props.priceSelect} package
-                                    </p>
+                                    </p> */}
                                         <h4 className="heading-form dark-mode-text">Your business</h4>
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="mt-4 selectflex">
+                                            <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Industry*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
                                                 <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
                                                     ref={ref}
@@ -174,11 +174,11 @@ const RegisterTwo = (props) => {
                                             </div>
                                         </div>
 
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className=" mt-4 selectflex">
+                                            <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
                                                 <input
                                                    type="text"
                                                     placeholder="Number of employees"
@@ -192,11 +192,11 @@ const RegisterTwo = (props) => {
                                             {txt.length === 5 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className=" mt-4 selectflex">
+                                            <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business have a website?*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
                                                 <select
                                                     onChange={(event) => handleorganisation(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -211,11 +211,11 @@ const RegisterTwo = (props) => {
                                             </div>
                                         </div>
                                         {website === 'yes' ?
-                                            <div className="d-flex mt-4">
-                                                <div className=" lables-div w-25">
+                                            <div className=" mt-4 selectflex">
+                                                <div className=" lables-div w-100">
                                                     <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Website address*</label>
                                                 </div>
-                                                <div className="search-input-div search-input-div1">
+                                                <div className="search-input-div div-search-inputs search-input-div1">
                                                     <input
                                                         type="text"
                                                         className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
@@ -229,7 +229,7 @@ const RegisterTwo = (props) => {
                                             </div>
                                             : ''}
                                         <hr />
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                                        <div className="mt-3 text-end  align-items-center justify-content-around">
                                             <p className="already-login">
                                                 Already account please{" "}
                                                 <Link to="/login" className="auth-link register-here register-here">

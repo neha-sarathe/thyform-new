@@ -97,18 +97,18 @@ const RegisterThree = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                    <p className="text-end para_col">
+                                    {/* <p className="text-end para_col">
                     You have selected {props.priceSelect} package
-                  </p>
+                  </p> */}
                                         <h4 className="heading-form dark-mode-text">Your business income</h4>
 
 
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>What is your expected annual turnover?*</label>
                                             </div>
                                             {/* <div className="search-input-div search-input-div1"> */}
-                                            <div className="input-group search-input-div">
+                                            <div className="input-group div-search-inputs search-input-div">
                                                 <span className="input-group-text euro_size" id="basic-addon1">£</span>
                                                 <input
                                                     type="text"
@@ -132,7 +132,7 @@ const RegisterThree = (props) => {
                                         </div>
                                       
                                         <hr />
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                                        <div className="mt-3 text-end  align-items-center justify-content-around">
                                             <p className="already-login">
                                                 Already account please{" "}
                                                 <Link to="/login" className="auth-link register-here register-here">

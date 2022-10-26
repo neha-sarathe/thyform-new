@@ -114,15 +114,15 @@ const RegisterFour = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                    <p className="text-end para_col">
+                                    {/* <p className="text-end para_col">
                     You have selected {props.priceSelect} package
-                  </p>
+                  </p> */}
                                         <h4 className="heading-form dark-mode-text">Your business activity</h4>
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business receive payments from outside the UK?*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1 pb-4">
+                                            <div className="search-input-div div-search-inputs search-input-div1 pb-4">
                                             <select
                                                     onChange={(event) => handleorganisation(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -137,11 +137,11 @@ const RegisterFour = (props) => {
                                             </div>
                                         </div>
                                         {website === 'yes' ? 
-                                         <div className="d-flex mt-4">
-                                         <div className="w-25">
+                                         <div className="selectflex mt-4">
+                                         <div className="w-100">
                                              <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Which countries do you receive payments from?*</label>
                                          </div>
-                                         <div className="search-input-div search-input-div1 pb-4">
+                                         <div className="search-input-div div-search-inputs search-input-div1 pb-4">
                                              <select
                                                  onChange={(event) => handlePayments(event.target.value)}
                                                  className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -161,11 +161,11 @@ const RegisterFour = (props) => {
                                      : ''
                                         }
                                        
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Do you or any people within your business have political connections?*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1 pb-4">
+                                            <div className="search-input-div div-search-inputs search-input-div1 pb-4">
                                                 <select
                                                     onChange={(event) => handleConnections(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -179,11 +179,11 @@ const RegisterFour = (props) => {
 
                                             </div>
                                         </div>
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Is your business involved in any public contracts? e.g. government, council or NHS*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1 pb-4">
+                                            <div className="search-input-div div-search-inputs search-input-div1 pb-4">
                                                 <select
                                                     onChange={(event) => handleContracts(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -198,7 +198,7 @@ const RegisterFour = (props) => {
                                             </div>
                                         </div>
                                         <hr />
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                                        <div className="mt-3 text-end  align-items-center justify-content-around">
                                             <p className="already-login">
                                                 Already account please{" "}
                                                 <Link to="/login" className="auth-link register-here register-here">
