@@ -698,7 +698,7 @@ body {
 }
 
 .setting_form_ml {
-  margin-left: 309px !important;
+  margin-left: 286px !important;
   // height: 100vh;
 }
 
@@ -710,7 +710,6 @@ body {
   padding: 12px;
   padding-right: 25px;
   padding-left: 25px;
-  margin-left: 190px;
 }
 
 .thankyou-radio {
@@ -1071,4 +1070,21 @@ body {
   display: inline-block;
   background-color: #fff;
   outline: 0;
+}
+.form-set-main-div {
+  width: 69%;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  box-shadow: inset 0 0 1px 0 #bfbfbf;
+}
+.form-set-right-div {
+  padding-left: 12px;
+  padding-top: 1px;
+}
+.mr-top{
+  margin-top: 80px;
+}
+.condition_margin_adjust{
+  margin: 0px 0px 0px 220px;  
 }

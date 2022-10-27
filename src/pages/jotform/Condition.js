@@ -98,22 +98,22 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white show-hov")}>
                       <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                         <div className="accordion-header" id="headingOne">
-                        <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/showfield">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1'>
-                                <svg xmlns="http://www.w3.org/2000/svg" className='mt-2' width="20" height="20" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="128" cy="128" r="40" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle></svg>
-                              </li>
-                             
+                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/showfield">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1'>
+                                  <svg xmlns="http://www.w3.org/2000/svg" className='mt-2' width="20" height="20" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="128" cy="128" r="40" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle></svg>
+                                </li>
+
                                 <li className='mx-4 '>
 
                                   <h5 className='remider fw-bold .showhover'>SHOW / HIDE FIELD</h5>
                                   <p className='remider fs_6 showhover'>Change visibility of field(s) depending on `IF` State conditions.</p>
 
                                 </li>
-                              
+
+                              </div>
                             </div>
-                          </div>
                           </Link>
                         </div>
                         {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
@@ -128,20 +128,19 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <div className='d-flex Main_bg justify-content-between align-items-center px-3 py-3'>
                         <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater'>
-                                <FaCalculator />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/updatefield">
+                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/updatefield">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater'>
+                                  <FaCalculator />
+                                </li>
                                 <li className='mx-4 '>
                                   <h5 className='remider fw-bold .showhover'>UPDATE / CALCULATE FIELD</h5>
                                   <p className='remider fs_6 showhover'>Use values from fields to do complex calculations.</p>
                                 </li>
-                              </Link>
+                              </div>
                             </div>
-                          </div>
-
+                            </Link>
                         </div>
                         {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
                         <li className='mt-2 enda'>
@@ -164,10 +163,10 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 <FaStarOfLife />
                               </li>
                               <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/enablefield">
-                              <li className='mx-4 '>
-                                <h5 className='remider fw-bold .showhover'>ENABLE / REQUIRE FIELD</h5>
-                                <p className='remider fs_6 showhover'>Require, Disable and Set Content Mask on a field.</p>
-                              </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover'>ENABLE / REQUIRE FIELD</h5>
+                                  <p className='remider fs_6 showhover'>Require, Disable and Set Content Mask on a field.</p>
+                                </li>
                               </Link>
                             </div>
                           </div>
@@ -190,10 +189,10 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 <FaShare />
                               </li>
                               <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/skippage">
-                              <li className='mx-4 '>
-                                <h5 className='remider fw-bold .showhover'>SKIP TO / HIDE A PAGE</h5>
-                                <p className='remider fs_6 showhover'>Allow users to jump to a part of your form according to their choices.</p>
-                              </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover'>SKIP TO / HIDE A PAGE</h5>
+                                  <p className='remider fs_6 showhover'>Allow users to jump to a part of your form according to their choices.</p>
+                                </li>
                               </Link>
                             </div>
                           </div>
@@ -216,10 +215,10 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 <FaCheckCircle />
                               </li>
                               <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changethanks">
-                              <li className='mx-4 '>
-                                <h5 className='remider fw-bold .showhover'>CHANGE “THANK YOU” PAGE</h5>
-                                <p className='remider fs_6 showhover'>Change "Thank You Page" action according to the form submission.</p>
-                              </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover'>CHANGE “THANK YOU” PAGE</h5>
+                                  <p className='remider fs_6 showhover'>Change "Thank You Page" action according to the form submission.</p>
+                                </li>
                               </Link>
                             </div>
                           </div>
@@ -242,10 +241,10 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 <FaEnvelope />
                               </li>
                               <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changeemail">
-                              <li className='mx-4 '>
-                                <h5 className='remider fw-bold .showhover'>CHANGE E-MAIL RECIPIENT</h5>
-                                <p className='remider fs_6 showhover'>Redirect your e-mail alerts according to the form entry.</p>
-                              </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover'>CHANGE E-MAIL RECIPIENT</h5>
+                                  <p className='remider fs_6 showhover'>Redirect your e-mail alerts according to the form entry.</p>
+                                </li>
                               </Link>
                             </div>
                           </div>

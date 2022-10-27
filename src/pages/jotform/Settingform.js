@@ -40,7 +40,7 @@ const Settingform = ({
                 <FiSettings style={{ width: "25px", height: "auto" }} />
               </div>
             </div>
-            <div className="form-setting-right-div">
+            <div className="form-set-right-div">
               <h2 className="form-setting-h1">FORM SETTINGS</h2>
               <p className="form-setting-p">
                 Change form status and properties.
@@ -49,7 +49,7 @@ const Settingform = ({
           </div>
           <div
             className={
-              "form-setting-main-div " +
+              "form-set-main-div " +
               (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")
             }
           >
@@ -99,7 +99,7 @@ const Settingform = ({
             ) : (
               <div
                 className={
-                  "form-setting-main-div " +
+                  "form-set-main-div " +
                   (darkmodes
                     ? "text-white dash-chart-dark"
                     : "text-dark bg-white")
