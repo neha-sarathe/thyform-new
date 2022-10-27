@@ -6,6 +6,9 @@ import PublishSidebar from './PublishSidebar';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Navform from './Navform';
+import DatePicker from "react-datepicker";
+import { getMonth, getYear } from 'date-fns';
+import range from "lodash/range";
 
 
 const Email = ({ darkmodes, setDarkmodes }) => {
@@ -45,6 +48,23 @@ const Email = ({ darkmodes, setDarkmodes }) => {
 
   }, [])
 
+  const [startDate, setStartDate] = useState(new Date());
+  const years = range(1990, getYear(new Date()) + 1, 1);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   return (
     <>
       <PublishSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
@@ -64,8 +84,8 @@ const Email = ({ darkmodes, setDarkmodes }) => {
 
                 {!show && !show2 ? (
                   <>
-                    <div className="col_6">
-                      <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
+                    <div className="col_6 mt-5">
+                      {/* <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                         <div>
                           <ul className='d-flex align-items-center pt-3'>
                             <li className=' class_i  fw-bold fs-4'>
@@ -81,7 +101,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                             <p className='text-black fw-bold pt-1'>Sign Up Now -  <span className='text-black fw-light'>its free!</span></p>
                           </button>
                         </div>
-                      </div>
+                      </div> */}
                       {/* Direct link div start */}
                       <div className='main_w'>
                         <div className=' underline d-flex align-items-center '>
@@ -194,7 +214,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                             <Navform placeholder={"Write something or insert a heart  ♥"} />
 
                             <button className="notify-btn mb-4 mt-5 float-right">
-                              SEND
+                              SAVE
                             </button>
                           </Tab>
 
@@ -225,7 +245,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                             </div>
 
                             <button className="notify-btn mb-4 mt-5 float-right">
-                              SEND
+                              SAVE
                             </button>
                           </Tab>
 
@@ -266,7 +286,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                             <Navform placeholder={"Write something or insert a heart  ♥"} />
 
                             <button className="notify-btn mb-4 mt-5 float-right">
-                              SEND
+                              SAVE
                             </button>
                           </Tab>
 
@@ -297,83 +317,227 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                             </div>
 
                             <button className="notify-btn mb-4 mt-5 float-right">
-                              SEND
+                              SAVE
                             </button>
                           </Tab>
 
                           <Tab eventKey="schedule" title="SCHEDULE">
                             <div class="form-group col-md-12 mt-3">
                               <h2 className="form-setting-title">Repeats</h2>
-                              </div>
-                                <Tabs
-                                  defaultActiveKey="daily"
-                                  id="fill-tab-example"
-                                  fill
-                                  className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
-                                >
-                                  <Tab eventKey="daily" title="Daily">
-                                    <div class="row mainsetting-div">
-                                      <div class="form-group col-md-12 mt-3">
-                                        <h2 className="form-setting-title">Send Date</h2>
-                                        <div>
-                                          <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                          </select>
-                                        </div>
-                                      </div>
+                            </div>
+                            <Tabs
+                              defaultActiveKey="daily"
+                              id="fill-tab-example"
+                              fill
+                              className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                            >
+                              <Tab eventKey="daily" title="Daily">
+                                <div class="row mainsetting-div">
+                                  <div class="form-group col-md-12 mt-3">
+                                    <h2 className="form-setting-title">Send Date</h2>
+                                    <div>
+                                      <select class="form-select date-width" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
                                     </div>
-                                  </Tab>
-                                  <Tab eventKey="weekly" title="Weekly">
-                                  <div class="row mainsetting-div">
-                                      <div class="form-group col-md-12 mt-3">
-                                        <h2 className="form-setting-title">Send Date</h2>
-                                        <div>
-                                          <select class="form-select date-width" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </Tab>
-                                  <Tab eventKey="monthly" title="Monthly">
-                                  <div class="row mainsetting-div">
-                                      <div class="form-group col-md-12 mt-3">
-                                        <h2 className="form-setting-title">Send Date</h2>
-                                        <div>
-                                          <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </Tab>
-
-                                </Tabs>
+                                  </div>
+                                </div>
+                                <hr />
                               </Tab>
-
+                              <Tab eventKey="weekly" title="Weekly">
+                                <div class="row mainsetting-div">
+                                  <div class="form-group col-md-12 mt-3">
+                                    <h2 className="form-setting-title">Send Date</h2>
+                                    <div>
+                                      <select class="form-select date-width" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <hr />
+                              </Tab>
+                              <Tab eventKey="monthly" title="Monthly">
+                                <div class="row mainsetting-div">
+                                  <div class="form-group col-md-12 mt-3">
+                                    <h2 className="form-setting-title">Send Date</h2>
+                                    <div>
+                                      <select class="form-select date-width" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <hr />
+                              </Tab>
                             </Tabs>
-                          </div>
+
+                            <div class="row mainsetting-div">
+
+                              <div class="form-group col-md-6 mt-3">
+                                <h2 className="form-setting-title">Send Time</h2>
+                                <div>
+                                  <select class="form-select time-select-width" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="form-group col-md-6 mt-3">
+                                <h2 className="form-setting-title">Timezone</h2>
+                                <div>
+                                  <select class="form-select time-select-width" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row mainsetting-div">
+                              <div class="form-group col-md-6 mt-3">
+                                <h2 className="form-setting-title">Start Date</h2>
+                                <DatePicker
+                                  renderCustomHeader={({
+                                    date,
+                                    changeYear,
+                                    changeMonth,
+                                    decreaseMonth,
+                                    increaseMonth,
+                                    prevMonthButtonDisabled,
+                                    nextMonthButtonDisabled,
+                                  }) => (
+                                    <div
+                                      style={{
+                                        margin: 10,
+                                        display: "flex",
+                                        justifyContent: "center",
+                                      }}
+                                    >
+                                      <button onClick={decreaseMonth} disabled={prevMonthButtonDisabled}>
+                                        {"<"}
+                                      </button>
+                                      <select
+                                        value={getYear(date)}
+                                        onChange={({ target: { value } }) => changeYear(value)}
+                                      >
+                                        {years.map((option) => (
+                                          <option key={option} value={option}>
+                                            {option}
+                                          </option>
+                                        ))}
+                                      </select>
+
+                                      <select
+                                        value={months[getMonth(date)]}
+                                        onChange={({ target: { value } }) =>
+                                          changeMonth(months.indexOf(value))
+                                        }
+                                      >
+                                        {months.map((option) => (
+                                          <option key={option} value={option}>
+                                            {option}
+                                          </option>
+                                        ))}
+                                      </select>
+
+                                      <button onClick={increaseMonth} disabled={nextMonthButtonDisabled}>
+                                        {">"}
+                                      </button>
+                                    </div>
+                                  )}
+                                  selected={startDate}
+                                  onChange={(date) => setStartDate(date)}
+                                />
+                              </div>
+                              <div class="form-group col-md-6 mt-3">
+                                <h2 className="form-setting-title">End Date</h2>
+                                <DatePicker
+                                  renderCustomHeader={({
+                                    date,
+                                    changeYear,
+                                    changeMonth,
+                                    decreaseMonth,
+                                    increaseMonth,
+                                    prevMonthButtonDisabled,
+                                    nextMonthButtonDisabled,
+                                  }) => (
+                                    <div
+                                      style={{
+                                        margin: 10,
+                                        display: "flex",
+                                        justifyContent: "center",
+                                      }}
+                                    >
+                                      <button onClick={decreaseMonth} disabled={prevMonthButtonDisabled}>
+                                        {"<"}
+                                      </button>
+                                      <select
+                                        value={getYear(date)}
+                                        onChange={({ target: { value } }) => changeYear(value)}
+                                      >
+                                        {years.map((option) => (
+                                          <option key={option} value={option}>
+                                            {option}
+                                          </option>
+                                        ))}
+                                      </select>
+
+                                      <select
+                                        value={months[getMonth(date)]}
+                                        onChange={({ target: { value } }) =>
+                                          changeMonth(months.indexOf(value))
+                                        }
+                                      >
+                                        {months.map((option) => (
+                                          <option key={option} value={option}>
+                                            {option}
+                                          </option>
+                                        ))}
+                                      </select>
+
+                                      <button onClick={increaseMonth} disabled={nextMonthButtonDisabled}>
+                                        {">"}
+                                      </button>
+                                    </div>
+                                  )}
+                                  selected={startDate}
+                                  onChange={(date) => setStartDate(date)}
+                                />
+                              </div>
+                            </div>
+                            <button className="notify-btn mb-4 mt-5 float-right">
+                              SAVE
+                            </button>
+                          </Tab>
+
+                        </Tabs>
                       </div>
-                    </>
+                    </div>
+                  </>
                 )}
 
-                    {/* main div end */}
-                    <div className="col-3">
-                    </div>
-                    <div className="col-3">
-                    </div>
+                {/* main div end */}
+                <div className="col-3">
+                </div>
+                <div className="col-3">
+                </div>
 
 
-                  </div>
+              </div>
             </div>
           </main>
 

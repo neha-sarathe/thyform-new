@@ -53,8 +53,8 @@ const Publish = ({darkmodes,setDarkmodes }) => {
             <div className="container ml_contain">
               <div className="row flex align-items-center justify-content-center">
                 {/* main div start */}
-                <div className="col- col_6">
-                  <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
+                <div className="col_6 mt-5">
+                  {/* <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                     <div>
                       <ul className='d-flex align-items-center pt-3'>
                         <li className=' class_i  fw-bold fs-4'>
@@ -70,7 +70,7 @@ const Publish = ({darkmodes,setDarkmodes }) => {
                         <p className='text-black fw-bold pt-1'>Sign Up Now -  <span className='text-black fw-light'>its free!</span></p>
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                   {/* Direct link div start */}
                   <div className='main_w'>
                     <div className=' underline d-flex align-items-center '>

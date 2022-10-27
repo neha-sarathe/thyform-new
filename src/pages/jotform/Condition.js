@@ -140,7 +140,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 </li>
                               </div>
                             </div>
-                            </Link>
+                          </Link>
                         </div>
                         {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
                         <li className='mt-2 enda'>
@@ -157,20 +157,19 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                         <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater'>
-                                <FaStarOfLife />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/enablefield">
+                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/enablefield">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater'>
+                                  <FaStarOfLife />
+                                </li>
                                 <li className='mx-4 '>
                                   <h5 className='remider fw-bold .showhover'>ENABLE / REQUIRE FIELD</h5>
                                   <p className='remider fs_6 showhover'>Require, Disable and Set Content Mask on a field.</p>
                                 </li>
-                              </Link>
+                              </div>
                             </div>
-                          </div>
-
+                          </Link>
                         </div>
                         {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
                         <li className='mt-2 enda'>
@@ -183,20 +182,19 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                         <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater bg-success'>
-                                <FaShare />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/skippage">
+                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/skippage">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                  <FaShare />
+                                </li>
                                 <li className='mx-4 '>
                                   <h5 className='remider fw-bold .showhover'>SKIP TO / HIDE A PAGE</h5>
                                   <p className='remider fs_6 showhover'>Allow users to jump to a part of your form according to their choices.</p>
                                 </li>
-                              </Link>
+                              </div>
                             </div>
-                          </div>
-
+                          </Link>
                         </div>
                         {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
                         <li className='mt-2 enda'>
@@ -209,20 +207,19 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                         <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater bg-success'>
-                                <FaCheckCircle />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changethanks">
+                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changethanks">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                  <FaCheckCircle />
+                                </li>
                                 <li className='mx-4 '>
                                   <h5 className='remider fw-bold .showhover'>CHANGE “THANK YOU” PAGE</h5>
                                   <p className='remider fs_6 showhover'>Change "Thank You Page" action according to the form submission.</p>
                                 </li>
-                              </Link>
+                              </div>
                             </div>
-                          </div>
-
+                          </Link>
                         </div>
                         {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
                         <li className='mt-2 enda'>
@@ -235,20 +232,19 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
                         <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater' style={{ backgroundColor: "#b559d4" }}>
-                                <FaEnvelope />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changeemail">
+                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changeemail">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater' style={{ backgroundColor: "#b559d4" }}>
+                                  <FaEnvelope />
+                                </li>
                                 <li className='mx-4 '>
                                   <h5 className='remider fw-bold .showhover'>CHANGE E-MAIL RECIPIENT</h5>
                                   <p className='remider fs_6 showhover'>Redirect your e-mail alerts according to the form entry.</p>
                                 </li>
-                              </Link>
+                              </div>
                             </div>
-                          </div>
-
+                          </Link>
                         </div>
                         {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
                         <li className='mt-2 enda'>
