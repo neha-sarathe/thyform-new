@@ -126,16 +126,16 @@ const UserForm = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <p className="text-end para_col">
+                                        {/* <p className="text-end para_col">
                                             You have selected {props.priceSelect} package
-                                        </p>
-                                        <h4 className="heading-form dark-mode-text">Set Password and Pin</h4>
+                                        </p> */}
+                                        <h4 className="heading-form setpassword-heading dark-mode-text">Set Password and Pin</h4>
 
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="lable-fix-width">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>User Name*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
                                                 <input
                                                     type="text"
                                                     placeholder="Enter your name"
@@ -147,11 +147,11 @@ const UserForm = (props) => {
                                             </div>
 
                                         </div>
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="lable-fix-width">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Password*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
 
                                                 <input
                                                     // type={hide ? 'password' : 'input'}
@@ -167,12 +167,12 @@ const UserForm = (props) => {
                                             </div>
 
                                         </div>
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="lable-fix-width">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Confirm Password*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
-                                                <div className="d-flex">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
+                                                <div >
                                                     <input
                                                         // type={hide2 ? 'password' : 'input'}
                                                         type="password"
@@ -189,11 +189,11 @@ const UserForm = (props) => {
 
                                         </div>
 
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="lable-fix-width">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Pin*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
                                                 <input
                                                     type="text"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
@@ -207,11 +207,11 @@ const UserForm = (props) => {
                                             {pinNumber.length === 11 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
 
                                         </div>
-                                        <div className="d-flex mt-4">
-                                            <div className="w-25">
+                                        <div className="selectflex mt-4">
+                                            <div className="lable-fix-width">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Confirm Pin*</label>
                                             </div>
-                                            <div className="search-input-div search-input-div1">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
                                                 <input
                                                     type="text"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
@@ -225,7 +225,7 @@ const UserForm = (props) => {
                                             </div>
                                         </div>
                                         <hr />
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                                        <div className="mt-3 text-end  align-items-center justify-content-around">
                                             <p className="already-login">
                                                 Already account please{" "}
                                                 <Link to="/login" className="auth-link register-here register-here">

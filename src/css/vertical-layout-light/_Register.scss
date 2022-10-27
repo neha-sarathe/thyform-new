@@ -304,6 +304,9 @@ color: black;
 .selectflex{
     display: flex;
   }
+  .lable-fix-width{
+    width: 25%;
+  }
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
     .second-lable{
@@ -353,6 +356,15 @@ color: black;
   }
   .auth .brand-logo{
     margin-bottom: 0;
+  }
+  .heading-form{
+    font-size: 25px;
+  }
+  .lable-fix-width{
+    width: 100%;
+  }
+  .setpassword-heading{
+    font-size: 23px;
   }
 }
   

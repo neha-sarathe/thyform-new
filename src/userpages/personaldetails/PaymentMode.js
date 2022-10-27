@@ -38,14 +38,14 @@ const PaymentMode = (props) => {
                 <div className="container-fluid page-body-wrapper full-page-wrapper">
                     <div className="content-wrapper d-flex align-items-stretch auth auth-img-bg " >
                         <div className={" row flex-grow form-bg1 drag-sort-enable " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
-                            <div className="col-lg-6  d-flex flex-row">
+                            <div className="col-lg-12 col-xl-6 d-flex flex-row">
                                 {/* <div className="register-half-bg"></div> */}
                                 <div className="register-half-div">
                                     <img src={process.env.PUBLIC_URL + "images/auth/register-bg.png"} className="register-half-img" />
                                 </div>
                             </div>
 
-                            <div className="col-lg-6 d-flex align-items-center justify-content-center">
+                            <div className="col-lg-12 col-xl-6 d-flex align-items-center justify-content-center">
                                 <div className="auth-form-transparent text-left p-3">
                                     <div className="brand-logo">
                                         <div>
@@ -63,7 +63,7 @@ const PaymentMode = (props) => {
                                         </div>
                                         <div className="container-fluid p-0 mt-5 pt-3">
                                             <div className="row justify-content-center">
-                                                <div className="col-4">
+                                                <div className="col-12 col-sm-4 ">
                                                     <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                                                         <div className="card-body">
                                                             <h5 className="card-title">Monthly</h5>
@@ -77,7 +77,7 @@ const PaymentMode = (props) => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-4">
+                                                <div className="col-12 col-sm-4">
                                                     <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                                                         <div className="card-body">
                                                             <h5 className="card-title">Half Yearly</h5>
@@ -92,7 +92,7 @@ const PaymentMode = (props) => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-4">
+                                                <div className="col-12 col-sm-4">
                                                     <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
                                                         <div className="card-body">
                                                             <h5 className="card-title">Yearly</h5>
@@ -109,7 +109,7 @@ const PaymentMode = (props) => {
                                             </div>
                                         </div>
                                         <hr />
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-evenly">
+                                        <div className="mt-3 text-end align-items-center justify-content-evenly">
                                             <p className="already-login">
                                                 Already account please{" "}
                                                 <Link to="/login" className="auth-link register-here register-here">
