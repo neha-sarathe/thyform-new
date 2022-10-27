@@ -84,7 +84,7 @@ const RegisterTwo = (props) => {
         { key: 'india', value: 'Example 3' },
         { key: 'germany', value: 'Example 4' },
         { key: 'argentina', value: 'Example 5' }
-      ]
+    ]
 
     const handleSelect = (value) => {
         setSelectedData(value)
@@ -93,17 +93,25 @@ const RegisterTwo = (props) => {
 
     const nextPage = () => {
         let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
+        var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
+        var res = re.test(message);
+        console.log('res000000000000', res);
+        console.log(message, 'jfklsdjflksjdlkfjsldf','resresres',res, website, 'flsdjklfjsldkfjlksdjkflkds')
         if (selectedData === '') {
             setBusinessError('Please select an industry from the dropdown. If your industry is not listed, select other')
         } else if (txt === '') {
             setError('Please enter the number of employees your business has using only numbers')
         } else if (websiteError === false) {
             setWebsiteError('Please select yes or no')
-         }else if (website === 'yes' ||  !message){
+        } else if (!website === 'yes' || !res) {
             setWebsiteaddError('Enter Website Adress')
-        }else if (!message) {
+        } else if (!res) {
             setWebsiteaddError("Please Enter Website Address")
-        } else {
+        } else  if (res == null) {
+            setWebsiteUrl('Please enter a valid website address')
+        }
+      else{
+        setWebsiteUrl(true)
             navigate('/registerthree')
         }
     }
@@ -115,14 +123,9 @@ const RegisterTwo = (props) => {
 
     const handleChange = e => {
         setMessage(e.target.value);
-        var res = message.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-        console.log('res', res);
-        if (res == null) {
-            setWebsiteUrl('Please enter a valid website address')
-        }
-        else {
-            setWebsiteUrl(true)
-        }
+      
+       
+       
     };
 
     return (
@@ -149,7 +152,7 @@ const RegisterTwo = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                    {/* <p className="text-end para_col">
+                                        {/* <p className="text-end para_col">
                                        You have selected {props.priceSelect} package
                                     </p> */}
                                         <h4 className="heading-form dark-mode-text">Your business</h4>
@@ -180,7 +183,7 @@ const RegisterTwo = (props) => {
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1">
                                                 <input
-                                                   type="text"
+                                                    type="text"
                                                     placeholder="Number of employees"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={txt}
