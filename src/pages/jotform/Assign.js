@@ -112,7 +112,7 @@ const Assign = ({darkmodes,setDarkmodes }) => {
                       </div>
 
                       <div className="mb-3 d-flex position-relative">
-                        <input type="text" id="disabledTextInput" class="form-control i_form" placeholder=" https://www.jotform.com/build/221860994544061/publish" />
+                        <input type="text" id="disabledTextInput" class="form-control i_form form_change" placeholder=" https://www.jotform.com/build/221860994544061/publish" />
                         <button className='bg-success rounded-3 border-white py-2 px-3 text-white w-56 copy_button'>
                           COPY LINK
                         </button>
@@ -135,9 +135,9 @@ const Assign = ({darkmodes,setDarkmodes }) => {
 
                       </div>
                       <div>
-                        <div className="mt-3 position-relative">
+                        <div className="mt-3 position-relative"> 
                           {/* <label for="disabledTextInput" class="form-label">Disabled input</label> */}
-                          <input type="text" id="disabledTextInput" class="form-control" placeholder="https://www.jotform.com/build/221860994544061/publish" />
+                          <input type="text" id="disabledTextInput" class="form-control form-control-padding" placeholder="https://www.jotform.com/build/221860994544061/publish" />
                           <div className='position-absolute link_c'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#180c0c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V74.2l82.6,75.7a8,8,0,0,0,10.8,0L216,74.2V192Z"></path></svg>
                           </div>

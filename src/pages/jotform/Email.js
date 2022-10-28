@@ -124,12 +124,12 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <button className="border border-white bg-white" type="button" onClick={() => {
                                 setShow(true)
                               }}>
-                                <div className=' underline d-flex align-items-center '>
+                                <div className={' underline d-flex align-items-center ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                                   <li className='bg-success px-1   text-white fw-bold fs-4  mb-3'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
                                   </li>
                                   <li className='fs-6 text-black map'>
-                                    <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>SHARE ON EMAIL</h5>
+                                    <h5 align="left" className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>SHARE ON EMAIL</h5>
                                     <p className='paragraph '>Share a direct link to  your form via email.</p>
                                   </li>
                                 </div>
@@ -154,12 +154,12 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <button className="border border-white bg-white" type="button" onClick={() => {
                                 setShow2(true)
                               }}>
-                                <div className=' underline d-flex align-items-center '>
+                                <div className={'underline d-flex align-items-center ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                                   <li className='bg-success px-1   text-white fw-bold fs-4  mb-3'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M208,32H48A16,16,0,0,0,32,48V159.9h0V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V168H76.7L96,187.3a15.9,15.9,0,0,0,11.3,4.7h41.4a15.9,15.9,0,0,0,11.3-4.7L179.3,168H208v40Z"></path></svg>
                                   </li>
                                   <li className='fs-6 text-black map'>
-                                    <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>SCHEDULE A REMINDER EMAIL</h5>
+                                    <h5 align="left" className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>SCHEDULE A REMINDER EMAIL</h5>
                                     <p className='paragraph '>Send periodic emails to remind people to fill out your form.</p>
                                   </li>
                                 </div>
@@ -214,7 +214,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                             <Navform placeholder={"Write something or insert a heart  ♥"} />
 
                             <button className="notify-btn mb-4 mt-5 float-right">
-                              SAVE
+                              SEND
                             </button>
                           </Tab>
 
@@ -243,9 +243,8 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                 </div>
                               </div>
                             </div>
-
                             <button className="notify-btn mb-4 mt-5 float-right">
-                              SAVE
+                              SEND
                             </button>
                           </Tab>
 
@@ -284,7 +283,9 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               </div>
                             </div>
                             <Navform placeholder={"Write something or insert a heart  ♥"} />
-
+                            <button className="notify-btn mb-4 mt-5 float-left">
+                              CANCEL
+                            </button>
                             <button className="notify-btn mb-4 mt-5 float-right">
                               SAVE
                             </button>
@@ -315,7 +316,9 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                 </div>
                               </div>
                             </div>
-
+                            <button className="notify-btn mb-4 mt-5 float-left">
+                              CANCEL
+                            </button>
                             <button className="notify-btn mb-4 mt-5 float-right">
                               SAVE
                             </button>
@@ -519,6 +522,9 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                 />
                               </div>
                             </div>
+                            <button className="notify-btn mb-4 mt-5 float-left">
+                              CANCEL
+                            </button>
                             <button className="notify-btn mb-4 mt-5 float-right">
                               SAVE
                             </button>

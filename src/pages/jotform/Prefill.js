@@ -68,7 +68,7 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
             <i className="fas fa-bars"></i>
           </a>
 
-          <main className={"page-content " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+          <main className={"page-content page-content-padding " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
             {/* <Settingform /> */}
             {/* <Thankyoupage /> */}
             {/* main container */}
