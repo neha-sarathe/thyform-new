@@ -38,17 +38,19 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
               <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                 {!show ? (
                   <>
-                    <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
-                      <div className="accordion-header" id="headingOne">
-                        <button className="border border-white bg-white" type="button" onClick={() => {
-                          setShow(true);
-                        }}>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
-                        </button>
-                      </div>
-                      <div>
-                        <h5 className='fw-bold heading pt-2'>Add an email</h5>
-                      </div>
+                    <div>
+                      <button className="border border-white btn-block" type="button" onClick={() => {
+                        setShow(true);
+                      }}>
+                        <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
+                          <div className="accordion-header" id="headingOne">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
+                          </div>
+                          <div>
+                            <h5 className='fw-bold heading pt-2'>Add an email</h5>
+                          </div>
+                        </div>
+                      </button>
                     </div>
                     <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <fieldset>
@@ -205,7 +207,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                       </div>
                     </Link>
                   </>)
-                };
+                }
                 {/* </div> */}
               </div>
               {/*

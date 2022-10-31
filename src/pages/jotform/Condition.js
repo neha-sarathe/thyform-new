@@ -73,18 +73,18 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               </div>
               {!show ? (
                 <>
-                  <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
-                    <div className="">
-                      <button className="border border-white bg-white" type="button" onClick={() => {
-                        setShow(true);
-                      }}>
+                  <button className="border border-white btn-block" type="button" onClick={() => {
+                    setShow(true);
+                  }}>
+                    <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
+                      <div className="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
-                      </button>
+                      </div>
+                      <div>
+                        <h5 className='fw-bold heading pt-2'>Add a new condition</h5>
+                      </div>
                     </div>
-                    <div>
-                      <h5 className='fw-bold heading pt-2'>Add a new condition</h5>
-                    </div>
-                  </div>
+                  </button>
                 </>
               ) : (
                 <>
@@ -96,9 +96,10 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   {/* form div start*/}
                   <div className="accordion" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white show-hov")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/showfield">
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/showfield">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
+
                             <div className=''>
                               <div className='d-flex '>
                                 <li className='shown px-2 rounded-1'>
@@ -114,21 +115,22 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
 
                               </div>
                             </div>
-                          </Link>
+
+                          </div>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   {/* second card start */}
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/updatefield">
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/updatefield">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
                                 <li className='shown px-2 rounded-1 calculater'>
@@ -140,13 +142,13 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 </li>
                               </div>
                             </div>
-                          </Link>
+                          </div>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                       {/* second card start */}
 
                       {/* second card end */}
@@ -155,9 +157,9 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   {/* second card end */}
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/enablefield">
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/enablefield">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
                                 <li className='shown px-2 rounded-1 calculater'>
@@ -169,20 +171,20 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 </li>
                               </div>
                             </div>
-                          </Link>
+                          </div>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/skippage">
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/skippage">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
                                 <li className='shown px-2 rounded-1 calculater bg-success'>
@@ -194,20 +196,20 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 </li>
                               </div>
                             </div>
-                          </Link>
+                          </div>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changethanks">
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changethanks">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
                                 <li className='shown px-2 rounded-1 calculater bg-success'>
@@ -219,20 +221,21 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 </li>
                               </div>
                             </div>
-                          </Link>
+
+                          </div>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changeemail">
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changeemail">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
                                 <li className='shown px-2 rounded-1 calculater' style={{ backgroundColor: "#b559d4" }}>
@@ -244,13 +247,14 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                 </li>
                               </div>
                             </div>
-                          </Link>
+
+                          </div>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </>

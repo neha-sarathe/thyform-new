@@ -993,7 +993,7 @@ body {
 }
 
 .Main_bg:hover {
-  background-color: #09f;
+  background-color: #09f !important;
 
 }
 
@@ -1100,4 +1100,19 @@ body {
 }
 .page-content-padding{
   padding-left: 48px !important;
+}
+.condition-first-input {
+  width: 100%;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px !important;
+  padding: 6px 12px;
+  box-shadow: 0 2px 4px rgb(86 70 50 / 10%);
+  border: 1px solid #d9cec1;
+  color: #564632;
+  font-family: inherit;
+  line-height: 24px;
+  font-size: 14px;
+  display: inline-block;
+  background-color: #fff;
+  outline: 0;
 }

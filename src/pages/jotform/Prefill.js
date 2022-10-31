@@ -111,13 +111,14 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                       </div>
                       {/* direct link div end */}
                       {/* form div start*/}
+                      <button className="border border-white p-0 text-left btn-block " type="button" onClick={() => {
+                        setShow(true);
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
 
-                      <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left " type="button" onClick={() => {
-                              setShow(true);
-                            }}>
+                            <div className='d-flex align-items-center justify-content-between '>
+
                               <div className='main_w'>
 
                                 <div className={'underline d-flex align-items-center py-2 mx-2 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
@@ -130,30 +131,30 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
 
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-3'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-3'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-warning'>
+                          </fieldset>
+                          <div className='position-absolute bg-warning'>
 
-                        </div>
-                      </form>
+                          </div>
+                        </form>
+                      </button>
                       {/* 1st div end */}
 
-
-                      <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left" type="button" onClick={() => {
-                              setFormShow(true);
-                            }}>
+                      <button className="border border-white p-0 text-left btn-block mt-4" type="button" onClick={() => {
+                        setFormShow(true);
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
                                 <div className={'underline d-flex align-items-center py-2 mx-2 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                                   <li>
@@ -165,27 +166,27 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-info'>
+                          </fieldset>
+                          <div className='position-absolute bg-info'>
 
-                        </div>
-                      </form>
+                          </div>
+                        </form>
+                      </button>
                       {/* form div end */}
-                      <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left " type="button" onClick={() => {
-                              setTableShow(true);
-                            }}>
+                      <button className="border border-white p-0 text-left btn-block mt-4 " type="button" onClick={() => {
+                        setTableShow(true);
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
                                 <div className=' underline d-flex align-items-center py-2 mx-2 '>
                                   <li>
@@ -198,26 +199,26 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-success'>
+                          </fieldset>
+                          <div className='position-absolute bg-success'>
 
-                        </div>
-                      </form>
-                      <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left " type="button" onClick={() => {
-                              setSsoShow(true);
-                            }}>
+                          </div>
+                        </form>
+                      </button>
+                      <button className="border border-white p-0 text-left btn-block mt-4 " type="button" onClick={() => {
+                        setSsoShow(true);
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
                                 <div className=' underline d-flex align-items-center py-2 mx-2 '>
                                   <li>
@@ -229,26 +230,26 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-success bg-opacity-75'>
+                          </fieldset>
+                          <div className='position-absolute bg-success bg-opacity-75'>
 
-                        </div>
-                      </form>
-                      <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left " type="button" onClick={() => {
-                              setAirShow(true);
-                            }}>
+                          </div>
+                        </form>
+                      </button>
+                      <button className="border border-white p-0 text-left btn-block mt-4 " type="button" onClick={() => {
+                        setAirShow(true);
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
                                 <div className=' underline d-flex align-items-center py-2 mx-2 '>
                                   <li>
@@ -260,26 +261,26 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-primary bg-opacity-10'>
+                          </fieldset>
+                          <div className='position-absolute bg-primary bg-opacity-10'>
 
-                        </div>
-                      </form>
-                      <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left " type="button" onClick={() => {
-                              setPipeShow(true);
-                            }}>
+                          </div>
+                        </form>
+                      </button>
+                      <button className="border border-white p-0 text-left btn-block mt-4 " type="button" onClick={() => {
+                        setPipeShow(true);
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
                                 <div className=' underline d-flex align-items-center py-2 mx-2 '>
                                   <li>
@@ -291,26 +292,27 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-secondary'>
+                          </fieldset>
+                          <div className='position-absolute bg-secondary'>
 
-                        </div>
-                      </form>
-                      <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left " type="button" onClick={() => {
-                              setMondayShow(true);
-                            }}>
+                          </div>
+                        </form>
+                      </button>
+                      <button className="border border-white p-0 text-left btn-block mt-4 " type="button" onClick={() => {
+                        setMondayShow(true);
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
+
                               <div className='main_w'>
                                 <div className=' underline d-flex align-items-center py-2 mx-2 '>
                                   <li>
@@ -322,26 +324,26 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-black opacity-75'>
+                          </fieldset>
+                          <div className='position-absolute bg-black opacity-75'>
 
-                        </div>
-                      </form>
-                      <form className={'shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left " type="button" onClick={() => {
-                              setSaleShow(true);
-                            }}>
+                          </div>
+                        </form>
+                      </button>
+                      <button className="border border-white p-0 text-left btn-block mt-4 " type="button" onClick={() => {
+                        setSaleShow(true);
+                      }}>
+                        <form className={'shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
                                 <div className=' underline d-flex align-items-center py-2 mx-2 '>
                                   <li>
@@ -353,26 +355,26 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </fieldset>
-                        <div className='position-absolute bg-info opacity-50'>
+                          </fieldset>
+                          <div className='position-absolute bg-info opacity-50'>
 
-                        </div>
-                      </form>
-                      <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between '>
-                            <button className="border border-white p-0 text-left " type="button" onClick={() => {
-                              setHubShow(true);
-                            }}>
+                          </div>
+                        </form>
+                      </button>
+                      <button className="border border-white p-0 text-left btn-block mt-4 " type="button" onClick={() => {
+                        setHubShow(true);
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 position-relative ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
                                 <div className=' underline d-flex align-items-center py-2 mx-2 '>
                                   <li>
@@ -385,21 +387,20 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                   </li>
                                 </div>
                               </div>
-                            </button>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li className='mt-2'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                                </li>
-                              </ul>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li className='mt-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
+                          </fieldset>
+                          <div className='position-absolute bg-danger '>
+
                           </div>
-                        </fieldset>
-                        <div className='position-absolute bg-danger '>
-
-                        </div>
-                      </form>
-
+                        </form>
+                      </button>
                       {/* two blocks div start*/}
                     </div>
                   </>
@@ -494,17 +495,17 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                         </div>
                       </div>
                       <div className={"accordion-item standard p-3" + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                          <div className='p-4'>
-                            <h2 className="form-setting-title">Select a Form</h2>
-                            <div>
-                              <select class="form-select" aria-label="Default select example">
-                                <option selected>Select a form to get data from</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                              </select>
-                            </div>
+                        <div className='p-4'>
+                          <h2 className="form-setting-title">Select a Form</h2>
+                          <div>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>Select a form to get data from</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                            </select>
                           </div>
                         </div>
+                      </div>
                     </div>
 
                   </>
@@ -528,12 +529,12 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                         </div>
                       </div>
                       <div className={"accordion-item standard p-3" + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                          <div className='p-4'>
+                        <div className='p-4'>
                           <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>Enable SSO Prefill</h5>
-                            <p className='paragraph remider'>Activating prefill will enable SSO protection.</p>
-                            
-                          </div>
+                          <p className='paragraph remider'>Activating prefill will enable SSO protection.</p>
+
                         </div>
+                      </div>
                     </div>
                   </>
                 ) : airShow ? (
