@@ -42,8 +42,8 @@ const UserForm = (props) => {
         const { value } = e.target;
         // const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
         // if (value === "" || re.test(value)) {
-            setName(value)
-            setError(false)
+        setName(value)
+        setError(false)
         // }
     }
     const onPassword = e => {

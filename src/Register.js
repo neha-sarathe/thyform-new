@@ -4,7 +4,6 @@ import { FiSearch, FiChevronRight } from 'react-icons/fi'
 // import register2 from '../public/images/auth/register-bg.png'
 import Dark from "./DarkAuth";
 const Register = (props) => {
-  console.log('price..on register', props.priceSelect);
   const navigate = useNavigate();
   const [radio, setRadio] = useState("Limited");
   const [show, setShow] = useState(false);
@@ -47,7 +46,7 @@ const Register = (props) => {
   const handleRadio = (value) => {
     setRadio(value);
   };
-  const handleuser = (value) =>{
+  const handleuser = (value) => {
     setText(value);
   }
   useEffect(() => {
@@ -94,13 +93,13 @@ const Register = (props) => {
   /*validations */
   const onInputChange = (e) => {
     const { value } = e.target;
-    if (text==="users"){
+    if (text === "users") {
       const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
       if (value === "" || re.test(value)) {
         setTxt(value);
       }
     }
-    else{
+    else {
       const re = /^[0-9\b]+$/;
       if (value === "" || re.test(value)) {
         setTxt(value);
@@ -114,7 +113,7 @@ const Register = (props) => {
     // if (value === "" || re.test(value)) {
     //   setTxt(value);
     // }
-   
+
   }
 
   const onBusinessName = e => {
@@ -334,7 +333,7 @@ const Register = (props) => {
   const onWebsite = (value) => {
     setWebsiteName(value)
     var res = websiteName.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-    console.log('res', res);
+
     if (res == null) {
       setWebsiteUrl('Please enter a valid website address')
     }
@@ -374,11 +373,11 @@ const Register = (props) => {
                   </div>
                   {/* <h6 className="mandatory">*This is a mandatory field</h6> */}
                   <h4 className="heading-form dark-mode-text">Your business</h4>
-            
+
                   {/* <p className="text-end para_col">
                     You have selected {props.priceSelect} package
                   </p> */}
-                 
+
                   <h6 className="second-heading-form heading-second-business dark-mode-text">
                     Please select your business type:
                   </h6>
@@ -458,7 +457,7 @@ const Register = (props) => {
                       </label>
                       <div className="register-business-input d-inline-flex input-for-registration mt-2 pt-3 ">
                         <div className="search-input-div">
-                          {text==="registration" ? <input
+                          {text === "registration" ? <input
                             type="text"
                             placeholder="Registration Number"
                             className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
@@ -480,7 +479,7 @@ const Register = (props) => {
 
                       </div>
                       <div className="ps-1 mt-3 para-form-div">
-                        {text ==="users" ? <p className="para-form">
+                        {text === "users" ? <p className="para-form">
                           {showResults ?
                             <p className="para-form show_result"> We couldn't find that company. Please enter at least the first three characters of your company name or your full company registration number.</p>
                             : <p className="para-form"> "Enter at least the first three characters of your
@@ -587,19 +586,19 @@ const Register = (props) => {
                           </div>
                         </div>
                         {/* <div className="search-input-div"> */}
-                          {directorSelect ? <>
-                            <div className="search-input-div mt-5 pt-4">
+                        {directorSelect ? <>
+                          <div className="search-input-div mt-5 pt-4">
                             <p>10 Greenwich Court 43 Autumn Way</p>
                             <p>West Drayton</p>
                             <p>UB7 9FB</p>
-                            </div>
-                          </> : 
-                             <div className="search-input-div">
-                          <p>None selected</p>
                           </div>
-                          }
-                        </div>
-                    
+                        </> :
+                          <div className="search-input-div">
+                            <p>None selected</p>
+                          </div>
+                        }
+                      </div>
+
                       {directorSelect ?
                         <>
                           <div className="d-flex mt-4">

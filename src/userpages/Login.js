@@ -117,14 +117,14 @@ const Login = (props) => {
 
                     <div className="icon change-logo-btn mt-3">
                       {/* <label htmlFor="upload-button"> */}
-                        <FiLogIn
-                          style={{
-                            width: "55px",
-                            height: "auto",
-                            color: "#ced4da",
-                            // cursor: 'pointer'
-                          }}
-                        />
+                      <FiLogIn
+                        style={{
+                          width: "55px",
+                          height: "auto",
+                          color: "#ced4da",
+                          // cursor: 'pointer'
+                        }}
+                      />
                       {/* </label>
                        <input
                         type="file"
@@ -141,82 +141,82 @@ const Login = (props) => {
                     Happy to see you again!
                   </h6>
                   <div className="form-div-loginpage">
-                  <form class="pt-3">
-                    <div class="form-group">
-                      <div class="input-group  row d-flex justify-content-between align-items-center">
-                        <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Username *</label></div>
-                        <div className="col-md-9">  <input
-                          type="text"
-                          className={"form-control placeholder-login   input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
-                          id="exampleInputEfmail"
-                          placeholder="Username"
+                    <form class="pt-3">
+                      <div class="form-group">
+                        <div class="input-group  row d-flex justify-content-between align-items-center">
+                          <div className="col-md-3 col-lg-4 col-xl-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Username *</label></div>
+                          <div className="col-md-9 col-lg-8 col-xl-9">  <input
+                            type="text"
+                            className={"form-control placeholder-login   input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                            id="exampleInputEfmail"
+                            placeholder="Username"
 
-                        />
-                        </div></div>
-                    </div>
-                    <div class="form-group">
-                      {/* <label for="exampleInputPassword">Password</label> */}
-                      <div class="input-group row d-flex justify-content-between align-items-center">
-                        <div className="col-md-3 mt-1 login-text"> <label className={props.darkmodes ? "text-white" : "text-dark"}>Password *</label></div>
-                        <div className="col-md-9">  <input
-                          type={hide ? 'password' : 'input'}
-                          className={"form-control placeholder-login input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
-                          id="exampleInputfPassword"
-                          placeholder="Password"
-                        />
-                          <span className="password__show field-icon" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="input-group row d-flex justify-content-between align-items-center">
-                        <div className="col-md-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Pin code *</label></div>
-                        <div className="col-md-9">  <input
-                          type="phone"
-                          className={"form-control placeholder-login input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
-                          id="exampleInputfPassword"
-                          placeholder="Pin code"
-                          value={pincode}
-                          onChange={onPincode}
-                        /></div>
+                          />
+                          </div></div>
                       </div>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-
-
-                      <div class="my-2 d-flex  align-items-center">
-                        <input
-                          className={"form-check-input " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                        <label
-                          class={"form-check-label ms-2 " + (props.darkmodes ? "text-white" : "text-dark ")}
-                          for="flexCheckDefault"
-                        >
-                          Remember Me
-                        </label>
-
+                      <div class="form-group">
+                        {/* <label for="exampleInputPassword">Password</label> */}
+                        <div class="input-group row d-flex justify-content-between align-items-center">
+                          <div className="col-md-3 col-lg-4 col-xl-3 mt-1 login-text"> <label className={props.darkmodes ? "text-white" : "text-dark"}>Password *</label></div>
+                          <div className="col-md-9 col-lg-8 col-xl-9">  <input
+                            type={hide ? 'password' : 'input'}
+                            className={"form-control placeholder-login input-login " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                            id="exampleInputfPassword"
+                            placeholder="Password"
+                          />
+                            <span className="password__show field-icon" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span>
+                          </div>
+                        </div>
                       </div>
-                      {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
-                    </div>
-                    <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0 d-flex justify-content-center login-button-color">
-                      <button class="btn login-btn-width text-white"  type="button" onClick={() => { props.setUser(); navigate("../allform/allform"); window.location.reload(false); }}>
-                        Log in
-                      </button>
-                      {/* <button class="btn btn-primary" type="button">Button</button> */}
-                    </div>
-                    <p className={"already-login ps-3 " + (props.darkmodes ? " login-dark-text input-login-dark" : " login-light-text input-login-light")}>
-                      Not a member yet? Click{" "}
-                      <Link to="/" class="auth-link login-here">
-                        here
-                      </Link>{" "}
-                      to register.
-                    </p>
 
-                  </form></div>
+                      <div class="form-group">
+                        <div class="input-group row d-flex justify-content-between align-items-center">
+                          <div className="col-md-3 col-lg-4 col-xl-3 mt-1 login-text"><label className={props.darkmodes ? "text-white" : "text-dark"}>Pin code *</label></div>
+                          <div className="col-md-9 col-lg-8 col-xl-9">  <input
+                            type="phone"
+                            className={"form-control placeholder-login input-login  " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                            id="exampleInputfPassword"
+                            placeholder="Pin code"
+                            value={pincode}
+                            onChange={onPincode}
+                          /></div>
+                        </div>
+                      </div>
+                      <div className="d-flex justify-content-between align-items-center">
+
+
+                        <div class="my-2 d-flex  align-items-center">
+                          <input
+                            className={"form-check-input " + (props.darkmodes ? " login-dark-text " : " login-light-text ")}
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                          <label
+                            class={"form-check-label ms-2 " + (props.darkmodes ? "text-white" : "text-dark ")}
+                            for="flexCheckDefault"
+                          >
+                            Remember Me
+                          </label>
+
+                        </div>
+                        {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
+                      </div>
+                      <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0 d-flex justify-content-center login-button-color">
+                        <button class="btn login-btn-width text-white" type="button" onClick={() => { props.setUser(); navigate("../allform/allform"); window.location.reload(false); }}>
+                          Log in
+                        </button>
+                        {/* <button class="btn btn-primary" type="button">Button</button> */}
+                      </div>
+                      <p className={"already-login ps-3 " + (props.darkmodes ? " login-dark-text input-login-dark" : " login-light-text input-login-light")}>
+                        Not a member yet? Click{" "}
+                        <Link to="/" class="auth-link login-here">
+                          here
+                        </Link>{" "}
+                        to register.
+                      </p>
+
+                    </form></div>
                   <hr className="mt-5" />
 
                   {/* <p className="text-center">

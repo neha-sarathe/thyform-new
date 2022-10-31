@@ -96,7 +96,7 @@ const RegisterTwo = (props) => {
         var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
         var res = re.test(message);
         console.log('res000000000000', res);
-        console.log(message, 'jfklsdjflksjdlkfjsldf','resresres',res, website, 'flsdjklfjsldkfjlksdjkflkds')
+        console.log(message, 'jfklsdjflksjdlkfjsldf', 'resresres', res, website, 'flsdjklfjsldkfjlksdjkflkds')
         if (selectedData === '') {
             setBusinessError('Please select an industry from the dropdown. If your industry is not listed, select other')
         } else if (txt === '') {
@@ -107,11 +107,11 @@ const RegisterTwo = (props) => {
             setWebsiteaddError('Enter Website Adress')
         } else if (!res) {
             setWebsiteaddError("Please Enter Website Address")
-        } else  if (res == null) {
+        } else if (res == null) {
             setWebsiteUrl('Please enter a valid website address')
         }
-      else{
-        setWebsiteUrl(true)
+        else {
+            setWebsiteUrl(true)
             navigate('/registerthree')
         }
     }
@@ -123,9 +123,9 @@ const RegisterTwo = (props) => {
 
     const handleChange = e => {
         setMessage(e.target.value);
-      
-       
-       
+
+
+
     };
 
     return (

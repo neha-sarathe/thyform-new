@@ -146,9 +146,9 @@ const PayProcedure = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <p className="text-end para_col">
+                                        {/* <p className="text-end para_col">
                                             You have selected {props.priceSelect} package
-                                        </p>
+                                        </p> */}
                                         <h4 className="heading-form dark-mode-text">Payment Procedure</h4>
                                         <img src="..\..\images\payment\visa.png" width={"6%"} height={"3%"} alt="visa" />
                                         <img src="..\..\images\payment\master.png" width={"6%"} height={"3%"} alt="visa" />
@@ -208,35 +208,35 @@ const PayProcedure = (props) => {
                                                 </div>
                                                 <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Address*</label>
-                                                    <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Search Location" 
-                                                     value={address}
-                                                     onChange={onAddress}/>
+                                                    <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Search Location"
+                                                        value={address}
+                                                        onChange={onAddress} />
                                                     <p className="para-form show_result">{addressError}</p>
                                                 </div>
                                             </div>
                                             <div className='row'>
                                                 <div class="search-pay-div col-md-6 pt-4">
                                                     <label>City*</label>
-                                                    <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="City" 
-                                                    value={city}
-                                                    onChange={onCity}/>
+                                                    <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="City"
+                                                        value={city}
+                                                        onChange={onCity} />
                                                     <p className="para-form show_result">{cityError}</p>
                                                 </div>
                                                 <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Post Code*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Post Code"
-                                                    value={post}
-                                                    onChange={onPost} />
-                                                     <p className="para-form show_result">{postError}</p>
+                                                        value={post}
+                                                        onChange={onPost} />
+                                                    <p className="para-form show_result">{postError}</p>
                                                 </div>
                                             </div>
                                             <div className='row'>
                                                 <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Country*</label>
-                                                    <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Country" 
-                                                     value={country}
-                                                     onChange={onCountry}/>
-                                                     <p className="para-form show_result">{countryError}</p>
+                                                    <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Country"
+                                                        value={country}
+                                                        onChange={onCountry} />
+                                                    <p className="para-form show_result">{countryError}</p>
                                                 </div>
                                                 <div class="search-pay-div col-md-6 pt-4">
                                                     <label>VAT Number</label>
@@ -266,7 +266,7 @@ const PayProcedure = (props) => {
                                             </div> */}
                                         </form>
                                         <hr />
-                                        <div className="mt-3 text-end d-flex align-items-center justify-content-around">
+                                        <div className="mt-3 text-end align-items-center justify-content-around">
                                             <p className="already-login">
                                                 Already account please{" "}
                                                 <Link to="/login" className="auth-link register-here register-here">

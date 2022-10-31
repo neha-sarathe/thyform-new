@@ -1,119 +1,141 @@
 * {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
+
 // body{
 // 	background: #1E1F25;
 // }
-#heading-advanced{
+#heading-advanced {
   display: none !important;
 }
-#heading-layout{
+
+#heading-layout {
   display: none !important;
 }
-#heading-data{
+
+#heading-data {
   display: none !important;
 }
-#heading-premium{
-  display: none !important  ;
+
+#heading-premium {
+  display: none !important;
 }
-.calculater{
+
+.calculater {
   padding-top: 7px;
 }
-.calculater svg{
-  fill:#ffff
+
+.calculater svg {
+  fill: #ffff
 }
-.jotlist{
-	display: flex;
-	width: 100%;
-	height: auto;
-	margin: auto;
-	max-width: 100%;
-	// justify-content: center;
-	text-align: center;
-    font-size: 17px;
-    position: fixed;
-    z-index: 1;
-	// background: linear-gradient(270deg,#ff6100,#ffb841 99.97%);
+
+.jotlist {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  max-width: 100%;
+  // justify-content: center;
+  text-align: center;
+  font-size: 17px;
+  position: fixed;
+  z-index: 1;
+  // background: linear-gradient(270deg,#ff6100,#ffb841 99.97%);
 
 }
-.jotlist-light{
-  background: linear-gradient(270deg,#dc143c,#dc143c 99.97%);
+
+.jotlist-light {
+  background: linear-gradient(270deg, #dc143c, #dc143c 99.97%);
   position: fixed;
   z-index: 1000;
   padding: 2px;
 }
+
 .jot-link {
-	padding: 1rem 2rem 1.15rem;
+  padding: 1rem 2rem 1.15rem;
   text-transform: uppercase;
   cursor: pointer;
   color: #fff;
-	min-width: 20px;
+  min-width: 20px;
   font-size: 17px;
 }
 
-.logodashboard{
+.logodashboard {
   width: 55px;
-    background-color: #fff;
-    border-radius: 4px;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 .jot-link:hover {
   // background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
-  background-color: #f52b54 ;
-  background-size:  100%;
+  background-color: #f52b54;
+  background-size: 100%;
   color: #ffffff;
   animation: spring 300ms ease-out;
   // text-shadow: 0 -1px 0 #ef816c;
-	// font-weight: bold;
+  // font-weight: bold;
 }
-.sidebar-link-jot ul:focus{
-  background-color: #f52b54  !important;
+
+.sidebar-link-jot ul:focus {
+  background-color: #f52b54 !important;
   color: #ffffff;
 }
+
 // .jot-link:active {
 //   transform: translateY(4px);
 // }
-.jotlink-a{
+.jotlink-a {
   // background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
 
-  color:#ffffff ;
+  color: #ffffff;
 }
+
 .jotlink-a:focus {
   // background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
-  background-color:#f52b54  !important;
-  background-size:100%;
-  color:#ffffff ;
+  background-color: #f52b54 !important;
+  background-size: 100%;
+  color: #ffffff;
 }
-.jotlinkfocus{
-  background-color:#f52b54  !important;
-  color:#ffffff ;
+
+.jotlinkfocus {
+  background-color: #f52b54 !important;
+  color: #ffffff;
 }
+
 .jotlink-a li:focus {
 
-  color:#ffffff !important;
+  color: #ffffff !important;
 }
+
+.tox .tox-menubar {
+ justify-content:space-between;
+}
+
 @keyframes spring {
   15% {
     -webkit-transform-origin: center center;
     -webkit-transform: scale(1.2, 1.1);
   }
+
   40% {
     -webkit-transform-origin: center center;
     -webkit-transform: scale(0.95, 0.95);
   }
+
   75% {
     -webkit-transform-origin: center center;
     -webkit-transform: scale(1.05, 1);
   }
+
   100% {
     -webkit-transform-origin: center center;
     -webkit-transform: scale(1, 1);
   }
 }
 
-.shameless-plug{
+.shameless-plug {
   position: absolute;
   bottom: 10px;
   right: 0;
@@ -121,33 +143,38 @@
   color: #ccc;
   text-decoration: none;
 }
+
 .position-absolute {
   left: 0px;
   top: 0px;
   width: 8px;
   height: 85px;
 }
+
 /* css 10/8/22 */
 .preview-link {
-	padding: 0rem 1rem 0.15rem;
+  padding: 0rem 1rem 0.15rem;
   // text-transform: uppercase;
   cursor: pointer;
   color: #fff;
-	min-width: 15px;
+  min-width: 15px;
   font-size: 14px;
 }
+
 .preview-link:hover {
 
   background-color: blue;
-  background-size:  100%;
+  background-size: 100%;
   color: #fff;
   animation: spring 300ms ease-out;
   text-shadow: 0 -1px 0 #ef816c;
-	font-weight: bold;
+  font-weight: bold;
 }
-.icon-margin{
+
+.icon-margin {
   margin-right: 50px;
 }
+
 .smartphone {
   position: relative;
   width: 360px;

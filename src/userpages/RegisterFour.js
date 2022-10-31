@@ -57,9 +57,9 @@ const RegisterFour = (props) => {
     const nextPage = () => {
         if (website === '') {
             setWebsiteError('Please select yes or no')
-        }else if (connections === '') {
+        } else if (connections === '') {
             setConnectionsError('Please select yes or no')
-        }else if (contracts === '') {
+        } else if (contracts === '') {
             setContractsError('Please select yes or no')
         } else {
             navigate('/personaldetails')
@@ -73,17 +73,17 @@ const RegisterFour = (props) => {
     }
 
 
-    const handlePayments = (value) =>{
+    const handlePayments = (value) => {
         console.log('value', value);
         setPayment(value)
         setPaymentError(false)
     }
 
-    const handleConnections = (value) =>{
+    const handleConnections = (value) => {
         setConnections(value)
         setConnectionsError(false)
     }
-    const handleContracts = (value) =>{
+    const handleContracts = (value) => {
         setContracts(value)
         setContractsError(false)
     }
@@ -114,7 +114,7 @@ const RegisterFour = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                    {/* <p className="text-end para_col">
+                                        {/* <p className="text-end para_col">
                     You have selected {props.priceSelect} package
                   </p> */}
                                         <h4 className="heading-form dark-mode-text">Your business activity</h4>
@@ -123,7 +123,7 @@ const RegisterFour = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business receive payments from outside the UK?*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1 pb-4">
-                                            <select
+                                                <select
                                                     onChange={(event) => handleorganisation(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
@@ -132,35 +132,35 @@ const RegisterFour = (props) => {
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
                                                 </select>
-                                                {website === 'yes'? <h6 className="para-form mt-2">This could be for goods & services or funding</h6>:''}
+                                                {website === 'yes' ? <h6 className="para-form mt-2">This could be for goods & services or funding</h6> : ''}
                                                 <p className="para-form show_result">{websiteError}</p>
                                             </div>
                                         </div>
-                                        {website === 'yes' ? 
-                                         <div className="selectflex mt-4">
-                                         <div className="w-100">
-                                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Which countries do you receive payments from?*</label>
-                                         </div>
-                                         <div className="search-input-div div-search-inputs search-input-div1 pb-4">
-                                             <select
-                                                 onChange={(event) => handlePayments(event.target.value)}
-                                                 className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                                                 id="exampleFormControlSelect2"
-                                             >Website address*
-                                                 <option value=''>select</option>
-                                                 {countryListAllIsoData && countryListAllIsoData.map((option, index) => (
-                              <option key={index} value={option.code}>
-                                {option.name}
-                              </option>
-                            ))}
-                                             </select>
-                                             <p className="para-form show_result">{paymentError}</p>
+                                        {website === 'yes' ?
+                                            <div className="selectflex mt-4">
+                                                <div className="w-100">
+                                                    <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Which countries do you receive payments from?*</label>
+                                                </div>
+                                                <div className="search-input-div div-search-inputs search-input-div1 pb-4">
+                                                    <select
+                                                        onChange={(event) => handlePayments(event.target.value)}
+                                                        className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                        id="exampleFormControlSelect2"
+                                                    >Website address*
+                                                        <option value=''>select</option>
+                                                        {countryListAllIsoData && countryListAllIsoData.map((option, index) => (
+                                                            <option key={index} value={option.code}>
+                                                                {option.name}
+                                                            </option>
+                                                        ))}
+                                                    </select>
+                                                    <p className="para-form show_result">{paymentError}</p>
 
-                                         </div>
-                                     </div>
-                                     : ''
+                                                </div>
+                                            </div>
+                                            : ''
                                         }
-                                       
+
                                         <div className="selectflex mt-4">
                                             <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Do you or any people within your business have political connections?*</label>

@@ -67,7 +67,7 @@
 .field-icon {
     position: absolute;
     right: 28px;
-    top: 12px;
+    top: 6px;
     cursor: pointer;
     z-index: 12;
 }
@@ -133,6 +133,6 @@
 @media (max-width: 480px) {
 
     .field-icon {
-        top: 48px;
+        top: 5px;
     }
 }

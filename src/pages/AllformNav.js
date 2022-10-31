@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Dark from '../DarkAuth';
- const AllformNav = ({darkmodes,setDarkmodes})=>{
-    let pages2 = ""
-    const pathnames = window.location.pathname;
-    pages2 = pathnames.split('/')
-    console.log(pages2[2],'allformNav....', window.location.pathname)
-    
-    return (
-      <>
-       <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
-      <nav id="sidebars" className={darkmodes ? "text-white allform-bg-color border-end" : "text-dark allform-bg-color border-end"}>
-        <div class={"sidebar-header "+ (darkmodes ? "text-dark body-light border-bottom" : "text-dark body-light border-bottom")}>
+const AllformNav = ({ darkmodes, setDarkmodes }) => {
+  let pages2 = ""
+  const pathnames = window.location.pathname;
+  pages2 = pathnames.split('/')
+  console.log(pages2[2], 'allformNav....', window.location.pathname)
+
+  return (
+    <>
+      <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+      <nav id="sidebars all-form-sidebars" className={darkmodes ? "all-form-sidebars text-white allform-bg-color border-end" : "all-form-sidebars text-dark allform-bg-color border-end"}>
+        <div class={"sidebar-header " + (darkmodes ? "text-dark body-light border-bottom" : "text-dark body-light border-bottom")}>
           <div className='allform-logo-div'>
             <a class="navbar-brand brand-logo" href="#">
               <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
@@ -29,11 +29,11 @@ import Dark from '../DarkAuth';
            
           </li> */}
           <li>
-            <Link to='/allform/allform' ><div  className={'allform-list ' + (pages2[2] === 'allform' ? 'allform-list-focus1' : 'allform-list-focusnone')}>All Forms</div></Link>
-           
+            <Link to='/allform/allform' ><div className={'allform-list ' + (pages2[2] === 'allform' ? 'allform-list-focus1' : 'allform-list-focusnone')}>All Forms</div></Link>
+
 
           </li>
-   
+
 
           {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
@@ -66,7 +66,7 @@ import Dark from '../DarkAuth';
 
 
           <li >
-            <Link to='/allform/myform' ><div className={'allform-list ' +( pages2[2] === "myform" ? "allform-list-focus1" : 'allform-list-focusnone')}>My Drafts</div></Link>
+            <Link to='/allform/myform' ><div className={'allform-list ' + (pages2[2] === "myform" ? "allform-list-focus1" : 'allform-list-focusnone')}>My Drafts</div></Link>
             {/* <ul class="collapse list-unstyled" id="homeSubmenu">
                       <li>
                           <a href="#">Home 1</a>
@@ -81,12 +81,12 @@ import Dark from '../DarkAuth';
 
           </li>
 
-   
+
         </ul>
 
-   
+
       </nav>
-</>
-    )
+    </>
+  )
 }
 export default AllformNav;

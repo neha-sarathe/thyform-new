@@ -182,19 +182,19 @@ const PersonalDetails = (props) => {
             setMobileNumberError('Please enter a valid UK mobile number starting with 07')
         } else if (emailAddress === '') {
             setEmailAddressError('Please enter a valid email address')
-        }else if (!pattern.test(emailAddress)) {
+        } else if (!pattern.test(emailAddress)) {
             setEmailAddressError("Email is Invalid")
-        }else if (!pattern.test(confirmValue)) {
+        } else if (!pattern.test(confirmValue)) {
             setConfirmEmailError("Email is Invalid")
-        }else if (confirmValue === '') {
+        } else if (confirmValue === '') {
             setConfirmEmailError('Please confirm your email address')
-        }else if (!confirmValue == emailAddress) {
+        } else if (!confirmValue == emailAddress) {
             setConfirmEmailError('Email does not match')
-        }else if (checked === false) {
+        } else if (checked === false) {
             setCheckError('Please read the Terms & Conditions and check the box to show you agree to them')
         } else if (checkedConfirm === false) {
             setCheckedConfirmError('Please acknowledge the cover of the Financial Services Compensation Scheme')
-        } 
+        }
         // else if (houseno === '') {
         //     setHouseError('Please enter your House number')
         // }
@@ -408,7 +408,7 @@ const PersonalDetails = (props) => {
                                         </div>
                                     </div>
                                     <div>
-                                    {/* <p className="text-end para_col">
+                                        {/* <p className="text-end para_col">
                     You have selected {props.priceSelect} package
                   </p> */}
                                         <h4 className="heading-form dark-mode-text">Tell Us About You</h4>
@@ -691,7 +691,7 @@ const PersonalDetails = (props) => {
                                                             <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                                 value={houseno}
                                                                 onChange={onHouseNo} />
-                                                                 {/* <p className="para-form show_result">{houseError}</p> */}
+                                                            {/* <p className="para-form show_result">{houseError}</p> */}
                                                         </div>
 
                                                     </div>

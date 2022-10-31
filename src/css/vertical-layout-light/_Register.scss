@@ -89,9 +89,11 @@ input {
     width: 100%;
     height: auto;
 }
-.ace-xcode .ace_gutter{
+
+.ace-xcode .ace_gutter {
     height: 17px !important;
-  }
+}
+
 .search-input {
     border: 1px solid #d0e3e9;
     border-radius: 4px;
@@ -101,10 +103,12 @@ input {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
 }
-.form-control-dark:focus{
+
+.form-control-dark:focus {
     background-color: transparent !important;
-    color:'black'
+    color: 'black'
 }
+
 .search-input:focus {
     border: 2px solid black;
 
@@ -112,7 +116,7 @@ input {
 
 .search-input::placeholder {
     padding: 1px;
-    color:#aaa7a7 !important;
+    color: #aaa7a7 !important;
 }
 
 .search-input-post::placeholder {
@@ -122,18 +126,22 @@ input {
 .form-bg {
     background-color: #fff;
 }
-.select-box-dark{
+
+.select-box-dark {
     color: white;
-    background:#232227;
+    background: #232227;
     border: 1px solid white;
 }
+
 .search-input-div {
     width: 71%;
     font-family: 'Montserrat', sans-serif;
 }
-.already-login{
+
+.already-login {
     font-family: 'Montserrat', sans-serif;
 }
+
 .search-input-div1 {
     margin-left: 61px !important;
 }
@@ -173,27 +181,35 @@ input {
 .para-form-div {
     width: 90%;
 }
-.formbuilder-dark div div .formbuilder  .formarea .formio-component .formio-form .builder-components .builder-component .formio-component label{
+
+.formbuilder-dark div div .formbuilder .formarea .formio-component .formio-form .builder-components .builder-component .formio-component label {
     color: white !important;
 }
-.formbuilder-light div div .formbuilder  .formarea .formio-component .formio-form .builder-components .builder-component .formio-component label{
-color: black;
+
+.formbuilder-light div div .formbuilder .formarea .formio-component .formio-form .builder-components .builder-component .formio-component label {
+    color: black;
 }
-.formbuilder{
+
+.formbuilder {
     top: 54px;
 }
-.has-feedback .form-control{
+
+.has-feedback .form-control {
     padding-left: 14px !important;
 }
-.col-form-label{
+
+.col-form-label {
     padding-left: 14px;
 }
-.form-check-label{
+
+.form-check-label {
     margin-left: 18px !important;
 }
-.field-required{
-    padding-left: 13px!important;
+
+.field-required {
+    padding-left: 13px !important;
 }
+
 .para-form {
 
     //   padding: 25px;
@@ -232,22 +248,25 @@ color: black;
 }
 
 .hover-text-white:hover {
-    background: #f52b54 ;
-    border: 1px solid #f52b54 ;
+    background: #f52b54;
+    border: 1px solid #f52b54;
     padding: 8px 18px;
     font-size: 20px;
     line-height: 1.3333333;
     border-radius: 6px;
     color: white !important;
 }
-.register-here{
+
+.register-here {
     cursor: pointer;
     color: #dc143c !important;
 }
-.register-here:hover{
+
+.register-here:hover {
     cursor: pointer;
-    color: #f52b54 ;
+    color: #f52b54;
 }
+
 .FBKub {
     height: 100vh !important
 }
@@ -271,131 +290,157 @@ color: black;
     border-radius: 6px;
     color: white !important;
 }
-.show_result{
+
+.show_result {
     color: red;
 }
 
-.radius_sal{
+.radius_sal {
     border-radius: 2px !important;
 }
-.euro_size{
+
+.euro_size {
     font-size: 25px;
     height: 34px;
 }
-.input_height_register{
+
+.input_height_register {
     height: 0.75rem !important;
     padding: 1rem 0.75rem !important;
 }
-.para_col{
-    color:#dc143c;
+
+.para_col {
+    color: #dc143c;
 }
+
 .search-pay-div {
     /* width: 71%; */
     font-family: "Montserrat", sans-serif;
 }
 
-.text-end{
+.text-end {
     display: flex;
     text-align: right !important;
 }
-.input-for-registration{
+
+.input-for-registration {
     width: 100%;
 }
-.selectflex{
+
+.selectflex {
     display: flex;
-  }
-  .lable-fix-width{
+}
+
+.lable-fix-width {
     width: 25%;
-  }
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-    .second-lable{
+    .second-lable {
         margin-top: 15px;
         margin-left: 0;
-       
+
     }
-    .search-by-margin{
+
+    .search-by-margin {
         margin-top: 102px;
     }
-    .second-heading-form{
+
+    .second-heading-form {
         line-height: 3.5;
         margin-left: 13px;
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
-    .heading-second-business{
+
+    .heading-second-business {
         font-size: 16px;
         line-height: 14px;
         margin-bottom: 22px;
         margin-left: 0;
     }
-    .company-number-registration{
+
+    .company-number-registration {
         margin-left: 0;
     }
-    .search-input-div{
+
+    .search-input-div {
         width: 60%;
     }
-    .search-input-div1{
+
+    .search-input-div1 {
         margin-left: 0 !important;
     }
-    .text-end{
+
+    .text-end {
         display: block;
         text-align: center !important;
     }
-  .field-icon{
-    top: 48px;
-  }
-  .business-search-button{
-    margin-right: 14px;
-  }
-  .selectflex{
-    display: block;
-    justify-content: space-between;
-  }
-  .div-search-inputs{
-    width: 100%;
-  }
-  .auth .brand-logo{
-    margin-bottom: 0;
-  }
-  .heading-form{
-    font-size: 25px;
-  }
-  .lable-fix-width{
-    width: 100%;
-  }
-  .setpassword-heading{
-    font-size: 23px;
-  }
+
+    .field-icon {
+        top: 48px;
+    }
+
+    .business-search-button {
+        margin-right: 14px;
+    }
+
+    .selectflex {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .div-search-inputs {
+        width: 100%;
+    }
+
+    .auth .brand-logo {
+        margin-bottom: 0;
+    }
+
+    .heading-form {
+        font-size: 25px;
+    }
+
+    .lable-fix-width {
+        width: 100%;
+    }
+
+    .setpassword-heading {
+        font-size: 23px;
+    }
 }
-  
+
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
     body {
         background-color: yellow;
     }
 }
-  
+
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px){
-    .second-lable{
+@media (min-width: 768px) and (max-width: 1024px) {
+    .second-lable {
         font-size: 13px;
         margin-left: 10px;
     }
-    .second-lable1{
+
+    .second-lable1 {
         font-size: 13px;
     }
-    .lable-first{
-        font-size: 13px; 
+
+    .lable-first {
+        font-size: 13px;
     }
 }
-  
+
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px){
+@media (min-width: 1025px) and (max-width: 1280px) {
     body {
         background-color: green;
     }
 }
-  
+
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
     body {
