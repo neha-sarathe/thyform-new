@@ -6,6 +6,9 @@ import PublishSidebar from './PublishSidebar';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Navform from './Navform';
+import DatePicker from "react-datepicker";
+import { getMonth, getYear } from 'date-fns';
+import range from "lodash/range";
 
 
 const Email = ({ darkmodes, setDarkmodes }) => {
@@ -45,6 +48,23 @@ const Email = ({ darkmodes, setDarkmodes }) => {
 
   }, [])
 
+  const [startDate, setStartDate] = useState(new Date());
+  const years = range(1990, getYear(new Date()) + 1, 1);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   return (
     <>
       <PublishSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
@@ -64,8 +84,8 @@ const Email = ({ darkmodes, setDarkmodes }) => {
 
                 {!show && !show2 ? (
                   <>
-                    <div className="col_6">
-                      <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
+                    <div className="col_6 mt-5">
+                      {/* <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                         <div>
                           <ul className='d-flex align-items-center pt-3'>
                             <li className=' class_i  fw-bold fs-4'>
@@ -81,7 +101,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                             <p className='text-black fw-bold pt-1'>Sign Up Now -  <span className='text-black fw-light'>its free!</span></p>
                           </button>
                         </div>
-                      </div>
+                      </div> */}
                       {/* Direct link div start */}
                       <div className='main_w'>
                         <div className=' underline d-flex align-items-center '>
@@ -94,69 +114,85 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                           </li>
                         </div>
                       </div>
-                      {/* direct link div end */}
-                      {/* form div start*/}
+                    
+                      {/* <button className="border border-white bg-white btn-block" type="button" onClick={() => {
+                        setShow(true)
+                      }}>
+                        <form className={' shadow-sm  rounded-1 p-3 Main_bg ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <fieldset>
+                            <div className='d-flex align-items-center justify-content-between'>
+                              <div className='main_w'>
 
-                      <form className={' shadow-sm  rounded-1 p-3 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between'>
-                            <div className='main_w'>
-                              <button className="border border-white bg-white" type="button" onClick={() => {
-                                setShow(true)
-                              }}>
-                                <div className=' underline d-flex align-items-center '>
+                                <div className={' underline d-flex align-items-center  ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                                   <li className='bg-success px-1   text-white fw-bold fs-4  mb-3'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
                                   </li>
                                   <li className='fs-6 text-black map'>
-                                    <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>SHARE ON EMAIL</h5>
+                                    <h5 align="left" className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>SHARE ON EMAIL</h5>
                                     <p className='paragraph '>Share a direct link to  your form via email.</p>
                                   </li>
                                 </div>
-                              </button>
-                            </div>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#bdb3b8" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M229.7,109.7l-48,48A8.3,8.3,0,0,1,176,160a8.5,8.5,0,0,1-3.1-.6A8,8,0,0,1,168,152V112a87.9,87.9,0,0,0-85.2,66,8.1,8.1,0,0,1-7.8,6l-2-.3a8,8,0,0,1-5.7-9.7A103.9,103.9,0,0,1,168,96V56a8,8,0,0,1,4.9-7.4,8.4,8.4,0,0,1,8.8,1.7l48,48A8.1,8.1,0,0,1,229.7,109.7ZM192,208H40V88a8,8,0,0,0-16,0V208a16,16,0,0,0,16,16H192a8,8,0,0,0,0-16Z"></path></svg>
-                                </li>
 
-                              </ul>
+                              </div>
+                              <div>
+                                <ul className='d-flex align-items-center justify-content-center'>
+                                  <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#bdb3b8" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M229.7,109.7l-48,48A8.3,8.3,0,0,1,176,160a8.5,8.5,0,0,1-3.1-.6A8,8,0,0,1,168,152V112a87.9,87.9,0,0,0-85.2,66,8.1,8.1,0,0,1-7.8,6l-2-.3a8,8,0,0,1-5.7-9.7A103.9,103.9,0,0,1,168,96V56a8,8,0,0,1,4.9-7.4,8.4,8.4,0,0,1,8.8,1.7l48,48A8.1,8.1,0,0,1,229.7,109.7ZM192,208H40V88a8,8,0,0,0-16,0V208a16,16,0,0,0,16,16H192a8,8,0,0,0,0-16Z"></path></svg>
+                                  </li>
+
+                                </ul>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </form>
+                      </button> */}
+                      <button className="border border-white bg-white btn-block" type="button" onClick={() => {
+                        setShow(true)
+                      }}>
+                        <div className={'d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <div className="accordion-header" id="headingOne">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
+                                </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover' align="left">SHARE ON EMAIL</h5>
+                                  <p className='remider fs_6 showhover'>Share a direct link to  your form via email.</p>
+                                </li>
+                              </div>
                             </div>
                           </div>
+                          <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#bdb3b8" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M229.7,109.7l-48,48A8.3,8.3,0,0,1,176,160a8.5,8.5,0,0,1-3.1-.6A8,8,0,0,1,168,152V112a87.9,87.9,0,0,0-85.2,66,8.1,8.1,0,0,1-7.8,6l-2-.3a8,8,0,0,1-5.7-9.7A103.9,103.9,0,0,1,168,96V56a8,8,0,0,1,4.9-7.4,8.4,8.4,0,0,1,8.8,1.7l48,48A8.1,8.1,0,0,1,229.7,109.7ZM192,208H40V88a8,8,0,0,0-16,0V208a16,16,0,0,0,16,16H192a8,8,0,0,0,0-16Z"></path></svg>
+                          </li>
+                        </div>
+                      </button>
 
-                        </fieldset>
-                      </form>
-                      <form className={'shadow-sm  rounded-1 p-3 mt-3 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                        <fieldset>
-                          <div className='d-flex align-items-center justify-content-between'>
-                            <div className='main_w'>
-                              <button className="border border-white bg-white" type="button" onClick={() => {
-                                setShow2(true)
-                              }}>
-                                <div className=' underline d-flex align-items-center '>
-                                  <li className='bg-success px-1   text-white fw-bold fs-4  mb-3'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M208,32H48A16,16,0,0,0,32,48V159.9h0V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V168H76.7L96,187.3a15.9,15.9,0,0,0,11.3,4.7h41.4a15.9,15.9,0,0,0,11.3-4.7L179.3,168H208v40Z"></path></svg>
-                                  </li>
-                                  <li className='fs-6 text-black map'>
-                                    <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>SCHEDULE A REMINDER EMAIL</h5>
-                                    <p className='paragraph '>Send periodic emails to remind people to fill out your form.</p>
-                                  </li>
-                                </div>
-                              </button>
-                            </div>
-                            <div>
-                              <ul className='d-flex align-items-center justify-content-center'>
-                                <li>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#bdb3b8" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M229.7,109.7l-48,48A8.3,8.3,0,0,1,176,160a8.5,8.5,0,0,1-3.1-.6A8,8,0,0,1,168,152V112a87.9,87.9,0,0,0-85.2,66,8.1,8.1,0,0,1-7.8,6l-2-.3a8,8,0,0,1-5.7-9.7A103.9,103.9,0,0,1,168,96V56a8,8,0,0,1,4.9-7.4,8.4,8.4,0,0,1,8.8,1.7l48,48A8.1,8.1,0,0,1,229.7,109.7ZM192,208H40V88a8,8,0,0,0-16,0V208a16,16,0,0,0,16,16H192a8,8,0,0,0,0-16Z"></path></svg>
+                      <button className="border border-white bg-white btn-block" type="button" onClick={() => {
+                        setShow2(true)
+                      }}>
+                      
 
+                        <div className={'d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                          <div className="accordion-header" id="headingOne">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M208,32H48A16,16,0,0,0,32,48V159.9h0V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V168H76.7L96,187.3a15.9,15.9,0,0,0,11.3,4.7h41.4a15.9,15.9,0,0,0,11.3-4.7L179.3,168H208v40Z"></path></svg>
                                 </li>
-                              </ul>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover' align="left">SCHEDULE A REMINDER EMAIL</h5>
+                                  <p className='remider fs_6 showhover'>Send periodic emails to remind people to fill out your form.</p>
+                                </li>
+                              </div>
                             </div>
                           </div>
-
-                        </fieldset>
-                      </form>
+                          <li>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#bdb3b8" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M229.7,109.7l-48,48A8.3,8.3,0,0,1,176,160a8.5,8.5,0,0,1-3.1-.6A8,8,0,0,1,168,152V112a87.9,87.9,0,0,0-85.2,66,8.1,8.1,0,0,1-7.8,6l-2-.3a8,8,0,0,1-5.7-9.7A103.9,103.9,0,0,1,168,96V56a8,8,0,0,1,4.9-7.4,8.4,8.4,0,0,1,8.8,1.7l48,48A8.1,8.1,0,0,1,229.7,109.7ZM192,208H40V88a8,8,0,0,0-16,0V208a16,16,0,0,0,16,16H192a8,8,0,0,0,0-16Z"></path></svg>
+                          </li>
+                        </div>
+                      </button>
                       <div className='bg-black ' height="1px"></div>
                     </div>
                   </>
@@ -223,7 +259,6 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                 </div>
                               </div>
                             </div>
-
                             <button className="notify-btn mb-4 mt-5 float-right">
                               SEND
                             </button>
@@ -264,9 +299,11 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               </div>
                             </div>
                             <Navform placeholder={"Write something or insert a heart  ♥"} />
-
+                            <button className="notify-btn mb-4 mt-5 float-left">
+                              CANCEL
+                            </button>
                             <button className="notify-btn mb-4 mt-5 float-right">
-                              SEND
+                              SAVE
                             </button>
                           </Tab>
 
@@ -295,85 +332,234 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                 </div>
                               </div>
                             </div>
-
+                            <button className="notify-btn mb-4 mt-5 float-left">
+                              CANCEL
+                            </button>
                             <button className="notify-btn mb-4 mt-5 float-right">
-                              SEND
+                              SAVE
                             </button>
                           </Tab>
 
                           <Tab eventKey="schedule" title="SCHEDULE">
                             <div class="form-group col-md-12 mt-3">
                               <h2 className="form-setting-title">Repeats</h2>
-                              </div>
-                                <Tabs
-                                  defaultActiveKey="daily"
-                                  id="fill-tab-example"
-                                  fill
-                                  className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
-                                >
-                                  <Tab eventKey="daily" title="Daily">
-                                    <div class="row mainsetting-div">
-                                      <div class="form-group col-md-12 mt-3">
-                                        <h2 className="form-setting-title">Send Date</h2>
-                                        <div>
-                                          <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                          </select>
-                                        </div>
-                                      </div>
+                            </div>
+                            <Tabs
+                              defaultActiveKey="daily"
+                              id="fill-tab-example"
+                              fill
+                              className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                            >
+                              <Tab eventKey="daily" title="Daily">
+                                <div class="row mainsetting-div">
+                                  <div class="form-group col-md-12 mt-3">
+                                    <h2 className="form-setting-title">Send Date</h2>
+                                    <div>
+                                      <select class="form-select date-width" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
                                     </div>
-                                  </Tab>
-                                  <Tab eventKey="weekly" title="Weekly">
-                                  <div class="row mainsetting-div">
-                                      <div class="form-group col-md-12 mt-3">
-                                        <h2 className="form-setting-title">Send Date</h2>
-                                        <div>
-                                          <select class="form-select date-width" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </Tab>
-                                  <Tab eventKey="monthly" title="Monthly">
-                                  <div class="row mainsetting-div">
-                                      <div class="form-group col-md-12 mt-3">
-                                        <h2 className="form-setting-title">Send Date</h2>
-                                        <div>
-                                          <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </Tab>
-
-                                </Tabs>
+                                  </div>
+                                </div>
+                                <hr />
                               </Tab>
-
+                              <Tab eventKey="weekly" title="Weekly">
+                                <div class="row mainsetting-div">
+                                  <div class="form-group col-md-12 mt-3">
+                                    <h2 className="form-setting-title">Send Date</h2>
+                                    <div>
+                                      <select class="form-select date-width" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <hr />
+                              </Tab>
+                              <Tab eventKey="monthly" title="Monthly">
+                                <div class="row mainsetting-div">
+                                  <div class="form-group col-md-12 mt-3">
+                                    <h2 className="form-setting-title">Send Date</h2>
+                                    <div>
+                                      <select class="form-select date-width" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <hr />
+                              </Tab>
                             </Tabs>
-                          </div>
+
+                            <div class="row mainsetting-div">
+
+                              <div class="form-group col-md-6 mt-3">
+                                <h2 className="form-setting-title">Send Time</h2>
+                                <div>
+                                  <select class="form-select time-select-width" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="form-group col-md-6 mt-3">
+                                <h2 className="form-setting-title">Timezone</h2>
+                                <div>
+                                  <select class="form-select time-select-width" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row mainsetting-div">
+                              <div class="form-group col-md-6 mt-3">
+                                <h2 className="form-setting-title">Start Date</h2>
+                                <DatePicker
+                                  renderCustomHeader={({
+                                    date,
+                                    changeYear,
+                                    changeMonth,
+                                    decreaseMonth,
+                                    increaseMonth,
+                                    prevMonthButtonDisabled,
+                                    nextMonthButtonDisabled,
+                                  }) => (
+                                    <div
+                                      style={{
+                                        margin: 10,
+                                        display: "flex",
+                                        justifyContent: "center",
+                                      }}
+                                    >
+                                      <button onClick={decreaseMonth} disabled={prevMonthButtonDisabled}>
+                                        {"<"}
+                                      </button>
+                                      <select
+                                        value={getYear(date)}
+                                        onChange={({ target: { value } }) => changeYear(value)}
+                                      >
+                                        {years.map((option) => (
+                                          <option key={option} value={option}>
+                                            {option}
+                                          </option>
+                                        ))}
+                                      </select>
+
+                                      <select
+                                        value={months[getMonth(date)]}
+                                        onChange={({ target: { value } }) =>
+                                          changeMonth(months.indexOf(value))
+                                        }
+                                      >
+                                        {months.map((option) => (
+                                          <option key={option} value={option}>
+                                            {option}
+                                          </option>
+                                        ))}
+                                      </select>
+
+                                      <button onClick={increaseMonth} disabled={nextMonthButtonDisabled}>
+                                        {">"}
+                                      </button>
+                                    </div>
+                                  )}
+                                  selected={startDate}
+                                  onChange={(date) => setStartDate(date)}
+                                />
+                              </div>
+                              <div class="form-group col-md-6 mt-3">
+                                <h2 className="form-setting-title">End Date</h2>
+                                <DatePicker
+                                  renderCustomHeader={({
+                                    date,
+                                    changeYear,
+                                    changeMonth,
+                                    decreaseMonth,
+                                    increaseMonth,
+                                    prevMonthButtonDisabled,
+                                    nextMonthButtonDisabled,
+                                  }) => (
+                                    <div
+                                      style={{
+                                        margin: 10,
+                                        display: "flex",
+                                        justifyContent: "center",
+                                      }}
+                                    >
+                                      <button onClick={decreaseMonth} disabled={prevMonthButtonDisabled}>
+                                        {"<"}
+                                      </button>
+                                      <select
+                                        value={getYear(date)}
+                                        onChange={({ target: { value } }) => changeYear(value)}
+                                      >
+                                        {years.map((option) => (
+                                          <option key={option} value={option}>
+                                            {option}
+                                          </option>
+                                        ))}
+                                      </select>
+
+                                      <select
+                                        value={months[getMonth(date)]}
+                                        onChange={({ target: { value } }) =>
+                                          changeMonth(months.indexOf(value))
+                                        }
+                                      >
+                                        {months.map((option) => (
+                                          <option key={option} value={option}>
+                                            {option}
+                                          </option>
+                                        ))}
+                                      </select>
+
+                                      <button onClick={increaseMonth} disabled={nextMonthButtonDisabled}>
+                                        {">"}
+                                      </button>
+                                    </div>
+                                  )}
+                                  selected={startDate}
+                                  onChange={(date) => setStartDate(date)}
+                                />
+                              </div>
+                            </div>
+                            <button className="notify-btn mb-4 mt-5 float-left">
+                              CANCEL
+                            </button>
+                            <button className="notify-btn mb-4 mt-5 float-right">
+                              SAVE
+                            </button>
+                          </Tab>
+
+                        </Tabs>
                       </div>
-                    </>
+                    </div>
+                  </>
                 )}
 
-                    {/* main div end */}
-                    <div className="col-3">
-                    </div>
-                    <div className="col-3">
-                    </div>
+                {/* main div end */}
+                <div className="col-3">
+                </div>
+                <div className="col-3">
+                </div>
 
 
-                  </div>
+              </div>
             </div>
           </main>
 

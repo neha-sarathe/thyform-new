@@ -11,10 +11,10 @@ const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
             <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
             <main className={"page-content " + (darkmodes ? "text-white body-dark condition-height" : "text-dark body-light condition-height")}>
                 <div className="container ">
-                    <div className="row felx align-items-center justify-content-center">
+                    <div className="row felx align-items-center justify-content-center mr-top">
                         <div className="col_6 condition_margin_adjust">
 
-                            <button className="show-more-btn mb-4 " onClick={() => {
+                            <button className="show-more-btn mt-4 " onClick={() => {
                                 navigate("/setting/condition")
                             }}>   <i className='fa fa-arrow-left text-white'></i>
                             </button>

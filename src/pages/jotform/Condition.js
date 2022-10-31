@@ -73,18 +73,18 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               </div>
               {!show ? (
                 <>
-                  <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
-                    <div className="">
-                      <button className="border border-white bg-white" type="button" onClick={() => {
-                        setShow(true);
-                      }}>
+                  <button className="border border-white btn-block" type="button" onClick={() => {
+                    setShow(true);
+                  }}>
+                    <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
+                      <div className="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
-                      </button>
+                      </div>
+                      <div>
+                        <h5 className='fw-bold heading pt-2'>Add a new condition</h5>
+                      </div>
                     </div>
-                    <div>
-                      <h5 className='fw-bold heading pt-2'>Add a new condition</h5>
-                    </div>
-                  </div>
+                  </button>
                 </>
               ) : (
                 <>
@@ -96,58 +96,59 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   {/* form div start*/}
                   <div className="accordion" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white show-hov")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                        <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/showfield">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1'>
-                                <svg xmlns="http://www.w3.org/2000/svg" className='mt-2' width="20" height="20" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="128" cy="128" r="40" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle></svg>
-                              </li>
-                             
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/showfield">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
+
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1'>
+                                  <svg xmlns="http://www.w3.org/2000/svg" className='mt-2' width="20" height="20" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="128" cy="128" r="40" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle></svg>
+                                </li>
+
                                 <li className='mx-4 '>
 
                                   <h5 className='remider fw-bold .showhover'>SHOW / HIDE FIELD</h5>
                                   <p className='remider fs_6 showhover'>Change visibility of field(s) depending on `IF` State conditions.</p>
 
                                 </li>
-                              
+
+                              </div>
                             </div>
+
                           </div>
-                          </Link>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   {/* second card start */}
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater'>
-                                <FaCalculator />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/updatefield">
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/updatefield">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater'>
+                                  <FaCalculator />
+                                </li>
                                 <li className='mx-4 '>
                                   <h5 className='remider fw-bold .showhover'>UPDATE / CALCULATE FIELD</h5>
                                   <p className='remider fs_6 showhover'>Use values from fields to do complex calculations.</p>
                                 </li>
-                              </Link>
+                              </div>
                             </div>
                           </div>
-
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                       {/* second card start */}
 
                       {/* second card end */}
@@ -156,106 +157,104 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   {/* second card end */}
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater'>
-                                <FaStarOfLife />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/enablefield">
-                              <li className='mx-4 '>
-                                <h5 className='remider fw-bold .showhover'>ENABLE / REQUIRE FIELD</h5>
-                                <p className='remider fs_6 showhover'>Require, Disable and Set Content Mask on a field.</p>
-                              </li>
-                              </Link>
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/enablefield">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater'>
+                                  <FaStarOfLife />
+                                </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover'>ENABLE / REQUIRE FIELD</h5>
+                                  <p className='remider fs_6 showhover'>Require, Disable and Set Content Mask on a field.</p>
+                                </li>
+                              </div>
                             </div>
                           </div>
-
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater bg-success'>
-                                <FaShare />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/skippage">
-                              <li className='mx-4 '>
-                                <h5 className='remider fw-bold .showhover'>SKIP TO / HIDE A PAGE</h5>
-                                <p className='remider fs_6 showhover'>Allow users to jump to a part of your form according to their choices.</p>
-                              </li>
-                              </Link>
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/skippage">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                  <FaShare />
+                                </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover'>SKIP TO / HIDE A PAGE</h5>
+                                  <p className='remider fs_6 showhover'>Allow users to jump to a part of your form according to their choices.</p>
+                                </li>
+                              </div>
                             </div>
                           </div>
-
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater bg-success'>
-                                <FaCheckCircle />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changethanks">
-                              <li className='mx-4 '>
-                                <h5 className='remider fw-bold .showhover'>CHANGE “THANK YOU” PAGE</h5>
-                                <p className='remider fs_6 showhover'>Change "Thank You Page" action according to the form submission.</p>
-                              </li>
-                              </Link>
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changethanks">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                  <FaCheckCircle />
+                                </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover'>CHANGE “THANK YOU” PAGE</h5>
+                                  <p className='remider fs_6 showhover'>Change "Thank You Page" action according to the form submission.</p>
+                                </li>
+                              </div>
                             </div>
-                          </div>
 
+                          </div>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                      <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
-                        <div className="accordion-header" id="headingOne">
-                          <div className=''>
-                            <div className='d-flex '>
-                              <li className='shown px-2 rounded-1 calculater' style={{ backgroundColor: "#b559d4" }}>
-                                <FaEnvelope />
-                              </li>
-                              <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changeemail">
-                              <li className='mx-4 '>
-                                <h5 className='remider fw-bold .showhover'>CHANGE E-MAIL RECIPIENT</h5>
-                                <p className='remider fs_6 showhover'>Redirect your e-mail alerts according to the form entry.</p>
-                              </li>
-                              </Link>
+                      <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changeemail">
+                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                          <div className="accordion-header" id="headingOne">
+                            <div className=''>
+                              <div className='d-flex '>
+                                <li className='shown px-2 rounded-1 calculater' style={{ backgroundColor: "#b559d4" }}>
+                                  <FaEnvelope />
+                                </li>
+                                <li className='mx-4 '>
+                                  <h5 className='remider fw-bold .showhover'>CHANGE E-MAIL RECIPIENT</h5>
+                                  <p className='remider fs_6 showhover'>Redirect your e-mail alerts according to the form entry.</p>
+                                </li>
+                              </div>
                             </div>
-                          </div>
 
+                          </div>
+                          {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
+                          <li className='mt-2 enda'>
+                            <img src={dropdown} height="13px" className='dropi' alt="manual" />
+                          </li>
                         </div>
-                        {/* <button class="border border-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> */}
-                        <li className='mt-2 enda'>
-                          <img src={dropdown} height="13px" className='dropi' alt="manual" />
-                        </li>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </>

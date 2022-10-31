@@ -53,8 +53,8 @@ const Pdf = ({darkmodes,setDarkmodes }) => {
             <div className="container ml_contain">
               <div className="row felx align-items-center justify-content-center">
                 {/* main div start */}
-                <div className="col- col_6">
-                  <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
+                <div className="col_6 mt-5">
+                  {/* <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                     <div>
                       <ul className='d-flex align-items-center pt-3'>
                         <li className=' class_i  fw-bold fs-4'>
@@ -70,11 +70,11 @@ const Pdf = ({darkmodes,setDarkmodes }) => {
                         <p className='text-black fw-bold pt-1'>Sign Up Now -  <span className='text-black fw-light'>its free!</span></p>
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                   {/* Direct link div start */}
                   <div className='main_w'>
                     <div className=' underline d-flex align-items-center '>
-                      <li className='bg-danger opacity-50 px-2 mt-4  text-white fw-bold fs-4 rounded'>
+                      <li className='bg-danger opacity-90 px-2 mt-4  text-white fw-bold fs-4 rounded'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M64,160H48a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0v-8h8a24,24,0,0,0,0-48Zm0,32H56V176h8a8,8,0,0,1,0,16Zm132-16v12h16a8,8,0,0,1,0,16H196v12a8,8,0,0,1-16,0V168a8,8,0,0,1,8-8h28a8,8,0,0,1,0,16Zm-68-16H114a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h14a32,32,0,0,0,0-64Zm0,48h-6V176h6a16,16,0,0,1,0,32ZM48,136H208a8,8,0,0,0,8-8V88a8.1,8.1,0,0,0-2.3-5.7l-56-56A8.1,8.1,0,0,0,152,24H56A16,16,0,0,0,40,40v88A8,8,0,0,0,48,136ZM152,44l44,44H152Z"></path></svg>
                       </li>
                       <li className='fs-6 text-black mt-5 pb-2 map'>
