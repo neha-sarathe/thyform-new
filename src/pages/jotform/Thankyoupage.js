@@ -81,7 +81,7 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Enter URL</h2>
                         <div>
-                          <input type="text" className="form-setting-input" />
+                          <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")}/> 
                         </div>
                       </div>
                     </div>

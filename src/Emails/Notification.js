@@ -50,7 +50,7 @@ const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Email Subject*</h2>
                         <div>
-                          <input type="text" className="form-setting-input" />
+                          <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark " : "text-dark body-light ")}/>
                         </div>
                       </div>
                     </div>
@@ -73,7 +73,7 @@ const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Sender Name</h2>
                         <div>
-                          <select className="form-setting-input" name="cars" id="cars">
+                          <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                             <option value="volvo">Please Select</option>
                             <option value="saab">Example</option>
 
@@ -85,7 +85,7 @@ const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Reply-to Email</h2>
                         <div>
-                          <select className="form-setting-input" name="cars" id="cars">
+                          <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                             <option value="volvo">Please Select</option>
                             <option value="saab">Example</option>
                           </select>
@@ -96,7 +96,7 @@ const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Recipient Email*</h2>
                         <div>
-                          <input type="text" className="form-setting-input" />
+                          <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark " : "text-dark body-light ")} />
                         </div>
                       </div>
                     </div>
@@ -274,7 +274,7 @@ const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                         <h2 className="form-setting-title">Sender Email</h2>
                         <p className="form-setting-para">Users can receive emails using your own SMTP server instead of Jotform's servers.</p>
                         <div>
-                          <select className="form-setting-input" name="cars" id="cars">
+                          <select className={"form-setting-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
                             <option value="volvo">Please Select</option>
                             <option value="saab">+Add New Email Address</option>
                           </select>

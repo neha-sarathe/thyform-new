@@ -256,8 +256,8 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                                     <img src={airtable} height="40px" alt="manual" />
                                   </li>
                                   <li className='fs-6 text-black map'>
-                                    <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>AIRABLE PREFILL</h5>
-                                    <p className='paragraph remider'>Use Airable records to pre-populate your form fields.</p>
+                                    <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>AIRTABLE PREFILL</h5>
+                                    <p className='paragraph remider'>Use Airtable records to pre-populate your form fields.</p>
                                   </li>
                                 </div>
                               </div>
@@ -551,8 +551,8 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
 
                           </li>
                           <li className='fs-6 text-black mt-5 pb-2 map'>
-                            <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>AIRABLE PREFILL</h5>
-                            <p className='paragraph remider'>Use Airable records to pre-populate your form fields.</p>
+                            <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>AIRTABLE PREFILL</h5>
+                            <p className='paragraph remider'>Use Airtable records to pre-populate your form fields.</p>
                           </li>
                         </div>
                       </div>
