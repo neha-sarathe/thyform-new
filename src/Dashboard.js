@@ -193,7 +193,7 @@ export const Dashboard = (props) => {
         text: 'Doughnut Chart',
         color: 'blue',
         font: {
-          size: 34
+          size: '10px'
         },
         padding: {
           top: 30,

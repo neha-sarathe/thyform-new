@@ -142,9 +142,16 @@ const ReactApexChart  = ()=> {
                         tickLine={false}
                         height={20}
                         tick={{dx: 15}}
+                        style={{
+                          fontSize: '10px',
+                          fontFamily: 'Times New Roman',
+                      }}
                     
                       />
-                      <YAxis axisLine={false} tickCount="4" tickLine={false} />
+                      <YAxis axisLine={false} tickCount="4" tickLine={false}    style={{
+                          fontSize: '10px',
+                       
+                      }}/>
                       <Legend
                         align="right"
                         verticalAlign="top"

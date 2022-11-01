@@ -7,7 +7,7 @@ import $ from "jquery";
 import { FiAlignJustify } from "react-icons/fi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-export const Navbar = ({ darkmodes, setDarkmodes }) => {
+export const Navbar = ({ darkmodes, setDarkmodes,setMinimizemob }) => {
   $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
       $('#sidebars').toggleClass('active');
@@ -100,6 +100,9 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
     // 👇️ removing classes from body element
     // document.body.classList.remove('my-class-3');
   }, [check]);
+  const onCheckmobile = () => {
+    setMinimizemob(prevCheck => !prevCheck);
+  }
   return (
     <>
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
@@ -253,7 +256,7 @@ export const Navbar = ({ darkmodes, setDarkmodes }) => {
               </div>
             </li>
           </ul>
-          <button className="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+          <button onClick={onCheckmobile} className="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
             <FiAlignJustify />
           </button>
         </div>

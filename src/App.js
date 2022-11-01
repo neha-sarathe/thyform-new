@@ -89,6 +89,7 @@ const themes = {
 function App() {
   const [checked, setChecked] = useState(true);
   const [user, setUser] = React.useState('');
+  const [minimizemob, setMinimizemob] = useState(false);
   const [jotform, setJotform] = React.useState('jotform');
   const [jottoggled, setJottoggled] = useState(false);
   const [register, setregister] = React.useState("/");
@@ -110,9 +111,9 @@ function App() {
       {user && window.location.pathname === '/dashboard' || window.location.pathname === "/charts" || window.location.pathname
         === "/morris" || window.location.pathname === "/myprofile" ? (
         <>  <div class={"container-scroller" + (darkmode ? "text-white body-dark" : "text-dark body-light")}>
-          <div class="container-fluid page-body-wrapper">
+          <div class="container-fluid container-fluid-main page-body-wrapper">
             <Router>
-              <Sidbar darkmodes={darkmode} setDarkmodes={setDarkmode} /><Navbar darkmodes={darkmode} setDarkmodes={setDarkmode} /> <Dark darkmodes={darkmode} setDarkmodes={setDarkmode} />
+              <Sidbar minimizemob={minimizemob} setMinimizemob={setMinimizemob} darkmodes={darkmode} setDarkmodes={setDarkmode} /><Navbar minimizemob={minimizemob} setMinimizemob={setMinimizemob} darkmodes={darkmode} setDarkmodes={setDarkmode} /> <Dark darkmodes={darkmode} setDarkmodes={setDarkmode} />
               <Routes>
 
                 <Route path="/dashboard" element={<Dashboard darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
