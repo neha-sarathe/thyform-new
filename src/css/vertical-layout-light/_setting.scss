@@ -689,10 +689,12 @@ body {
   line-height: 24px;
   font-size: 14px;
   display: inline-block;
-  background-color: #fff;
+  background-color: transparent;
   outline: 0;
 }
-
+.form-setting-input:focus {
+  border: 2px solid black !important;
+}
 .mainsetting-div {
   padding: 12px 27px 12px 26px;
 }
@@ -1049,13 +1051,16 @@ body {
 .border-dotted {
   border: 2px dashed gray;
 }
+
 .thankyou-div {
   padding-left: 12px;
   padding-top: 1px;
 }
-.date-width{
+
+.date-width {
   width: 50%;
 }
+
 .authenticate-input {
   width: 60%;
   border: 1px solid #c5c5c5;
@@ -1071,6 +1076,7 @@ body {
   background-color: #fff;
   outline: 0;
 }
+
 .form-set-main-div {
   width: 69%;
   background: #ffffff;
@@ -1078,29 +1084,37 @@ body {
   border-radius: 4px;
   box-shadow: inset 0 0 1px 0 #bfbfbf;
 }
+
 .form-set-right-div {
   padding-left: 12px;
   padding-top: 1px;
 }
-.mr-top{
+
+.mr-top {
   margin-top: 80px;
 }
-.condition_margin_adjust{
-  margin: 0px 0px 0px 220px;  
+
+.condition_margin_adjust {
+  margin: 0px 0px 0px 220px;
 }
-.time-select-width{
+
+.time-select-width {
   width: 100%;
 }
-.form_change{
+
+.form_change {
   width: 78% !important;
   padding: 0.375rem 1.75rem !important;
 }
-.form-control-padding{
+
+.form-control-padding {
   padding: 0.375rem 2.75rem !important;
 }
-.page-content-padding{
+
+.page-content-padding {
   padding-left: 48px !important;
 }
+
 .condition-first-input {
   width: 100%;
   border: 1px solid #c5c5c5;
@@ -1115,4 +1129,41 @@ body {
   display: inline-block;
   background-color: #fff;
   outline: 0;
+}
+
+.width_show_field {
+  width: 100%;
+  margin-left: 120px;
+}
+
+.show_field_adjust {
+  width: 100%;
+  margin-left: 77px;
+}
+
+.show_field_do {
+  width: 100%;
+  margin-left: 108px;
+}
+.show_field_option {
+  width: 100%;
+  margin-left: 80px;
+}
+.show_field_page {
+  width: 100%;
+  margin-left: 84px;
+}
+.date_schedule {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: none;
+  overflow: hidden;
+  text-align: left;
+  padding: 6px 6px 6px 10px; 
+}
+.select_dark {
+  background: rgb(30, 40, 61) !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
 }

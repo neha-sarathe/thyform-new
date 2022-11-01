@@ -61,7 +61,8 @@ const Settingform = ({
                 </p>
 
                 <div>
-                  <input className="form-setting-input" />
+                  <input className={"form-setting-input "+
+              (darkmodes ? "text-white body-dark " : "text-dark body-light ")} />
                 </div>
               </div>
             </div>
@@ -75,7 +76,7 @@ const Settingform = ({
                 </p>
 
                 <div>
-                  <select className="form-setting-input" name="cars" id="cars">
+                  <select className={"form-setting-input "+(darkmodes ? "select_dark  " : "text-dark body-light ")} name="cars" id="cars">
                     <option value="volvo">Volvo</option>
                     <option value="saab">Saab</option>
                     <option value="opel">Opel</option>
@@ -128,7 +129,7 @@ const Settingform = ({
 
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -183,7 +184,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -216,7 +217,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -269,7 +270,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -288,7 +289,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -306,7 +307,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -336,7 +337,7 @@ const Settingform = ({
                       Enter the title that will be used as HTML page title.
                     </p>
                     <div>
-                      <input className="form-setting-input" />
+                      <input className={"form-setting-input "+(darkmodes ? "text-white body-dark " : "text-dark body-light ")} />
                     </div>
                   </div>
                 </div>
@@ -348,7 +349,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -369,7 +370,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -389,7 +390,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -405,7 +406,7 @@ const Settingform = ({
 
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark" : "text-dark body-light")}
                         name="cars"
                         id="cars"
                       >
@@ -425,7 +426,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -443,7 +444,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >
@@ -463,7 +464,7 @@ const Settingform = ({
                     </p>
                     <div>
                       <select
-                        className="form-setting-input"
+                        className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")}
                         name="cars"
                         id="cars"
                       >

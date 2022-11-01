@@ -59,7 +59,7 @@ const ChangeEmail = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
                                             <h2 className="form-setting-title mt-2">STATE</h2>
 
                                         </li>
-                                        <li className='width_show_field'>
+                                        <li className='show_field_adjust'>
 
                                             <select className="condition-first-input" name="cars" id="cars">
                                                 <option value="volvo">Please select a field</option>
@@ -79,7 +79,7 @@ const ChangeEmail = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
                                             <h2 className="form-setting-title mt-2">VALUE</h2>
 
                                         </li>
-                                        <li className='width_show_field'>
+                                        <li className='show_field_adjust'>
 
                                             <select className="condition-first-input" name="cars" id="cars">
                                                 <option value="volvo">Please select a field</option>
@@ -99,9 +99,9 @@ const ChangeEmail = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
                                             <h2 className="form-setting-title mt-2">DO</h2>
 
                                         </li>
-                                        <li className='width_show_field'>
+                                        <li className='show_field_do'>
 
-                                            <select className="condition-sec-input" name="cars" id="cars">
+                                            <select className="condition-first-input" name="cars" id="cars">
                                                 <option value="volvo">Please select condition action</option>
                                                 <option value="saab">Saab</option>
                                                 <option value="opel">Opel</option>
@@ -119,7 +119,7 @@ const ChangeEmail = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
                                             <h2 className="form-setting-title mt-2">PAGE</h2>
 
                                         </li>
-                                        <li className='width_show_field'>
+                                        <li className='show_field_page'>
 
                                             <select className="condition-first-input" name="cars" id="cars">
                                                 <option value="volvo">Please select a field</option>
