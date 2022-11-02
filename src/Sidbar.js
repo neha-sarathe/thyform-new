@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import Charts from './Charts';
 import { BiLineChart } from "react-icons/bi";
 import { RiLayoutGridLine } from "react-icons/ri";
-export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
+export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar,minimizemob }) => {
   const [isHoveringdash, setIsHoveringdash] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const handleMouseOver = () => {
@@ -25,7 +25,8 @@ export const Sidbar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
   return (
     <>
       {/* #191B20 */}
-      <nav  onMouseLeave={handleMouseOut} className={"sidebar sidebar-offcanvas " + (darkmodes ? "sidebar-bg-mini-dark" : "sidebar-bg-mini-light")} id="sidebar">
+      <nav  onMouseLeave={handleMouseOut} className={"sidebar sidebar-offcanvas " + (darkmodes ? "sidebar-bg-mini-dark" : "sidebar-bg-mini-light") + (minimizemob ? " sidebar-mini ":'')} id="sidebar">
+      {/* <nav  onMouseLeave={handleMouseOut} className={"sidebar sidebar-offcanvas " + (darkmodes ? "sidebar-bg-mini-dark" : "sidebar-bg-mini-light")} id="sidebar"> */}
         <ul className="nav"  onMouseLeave={handleMouseOutdash}>
           <li onMouseOver={handleMouseOverdash} onMouseEnter={handleMouseOut} onMouseOut={handleMouseOut} class={"nav-item " + (darkmodes ? "nav-item-dark " : "nav-item-light ") + (isHoveringdash ? "hover-open" : "")}  >
             <a className={"nav-link " + (darkmodes ? "nav-link-dark-a nav-link-mini-icon-dark" : "nav-link-light-a nav-link-mini-icon-light")} data-bs-toggle="collapse" href="#dashboards" aria-expanded="false" aria-controls="dashboards">

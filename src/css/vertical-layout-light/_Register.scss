@@ -409,14 +409,29 @@ input {
     .setpassword-heading {
         font-size: 23px;
     }
+    .navbar .navbar-menu-wrapper {
+        width: calc(100% - 160px);
+        padding-top: 12px;
+        padding-left: 15px;
+        padding-right: 11px;
+        height: auto;
+      }
+
+    .navbar .navbar-brand-wrapper .brand-logo-mini img {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+    }
+    .navbar .navbar-brand-wrapper {
+        width: 160px;
+        height: 59px;
+    }
+    .sidebar-mini {
+        top: -40px !important;
+    }
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-    body {
-        background-color: yellow;
-    }
-}
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -424,7 +439,25 @@ input {
         font-size: 13px;
         margin-left: 10px;
     }
-
+    .navbar .navbar-brand-wrapper {
+        width: 52%;
+        height: 59px;
+    }
+    .navbar .navbar-brand-wrapper .brand-logo-mini img {
+        width: calc(159px - 0px);
+        max-width: 100%;
+        margin: auto;
+    }
+    .navbar .navbar-menu-wrapper {
+        width: calc(100% - 52%);
+        padding-top: 12px;
+        padding-left: 15px;
+        padding-right: 11px;
+        height: auto;
+    }
+    .sidebar-offcanvas{
+        background-color: #F4F5F7;
+    }
     .second-lable1 {
         font-size: 13px;
     }
