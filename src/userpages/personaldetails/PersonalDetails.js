@@ -816,7 +816,7 @@ const PersonalDetails = (props) => {
                                             />
 
                                             <div>
-                                                <h6 className="fw-bold mt-3">I have read and accepted the current <a href="/#" className="text-primary"> Terms and Conditions</a> </h6>
+                                                <h6 className="fw-bold mt-3">I have read and accepted the current <a href="/#" className="confirm_text"> Terms and Conditions</a> </h6>
                                                 <p className="para-form show_result">{checkError}</p>
                                             </div>
                                         </label>
@@ -827,9 +827,9 @@ const PersonalDetails = (props) => {
                                                 className="mx-3"
                                             />
 
-                                            <div><h6 className="fw-bold mt-3">I acknowledge the cover of the <a href="/#" className="text-primary"> Financial Services Compensation Scheme</a><br /></h6>
+                                            <div><h6 className="fw-bold mt-3">I acknowledge the cover of the <a href="/#" className="confirm_text"> Financial Services Compensation Scheme</a><br /></h6>
                                                 <p className="para-form show_result">{checkedConfirmError}</p>
-                                                <h6 className="fw-bold mt-3">You can see the fee information for this account <a href="/#" className="text-primary">here</a> </h6></div>
+                                                <h6 className="fw-bold mt-3">You can see the fee information for this account <a href="/#" className="confirm_text">here</a> </h6></div>
                                         </label>
                                         <div className="mt-3 text-end  align-items-center justify-content-around">
                                             <p className="already-login">

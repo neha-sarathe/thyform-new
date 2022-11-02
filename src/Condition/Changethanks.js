@@ -41,7 +41,7 @@ const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                                         </li>
                                         <li className='width_show_field'>
 
-                                            <select className="condition-first-input" name="cars" id="cars">
+                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
                                                 <option value="volvo">Please select a field</option>
                                                 <option value="saab">Saab</option>
                                                 <option value="opel">Opel</option>
@@ -61,7 +61,7 @@ const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                                         </li>
                                         <li className='show_field_adjust'>
 
-                                            <select className="condition-first-input" name="cars" id="cars">
+                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
                                                 <option value="volvo">Please select a field</option>
                                                 <option value="saab">Saab</option>
                                                 <option value="opel">Opel</option>
@@ -81,7 +81,7 @@ const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                                         </li>
                                         <li className='show_field_adjust'>
 
-                                            <select className="condition-first-input" name="cars" id="cars">
+                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
                                                 <option value="volvo">Please select a field</option>
                                                 <option value="saab">Saab</option>
                                                 <option value="opel">Opel</option>
@@ -101,7 +101,7 @@ const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                                         </li>
                                         <li className='show_field_do'>
 
-                                            <select className="condition-first-input" name="cars" id="cars">
+                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
                                                 <option value="volvo">Please select condition action</option>
                                                 <option value="saab">Saab</option>
                                                 <option value="opel">Opel</option>
@@ -121,7 +121,7 @@ const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                                         </li>
                                         <li className='show_field_page'>
 
-                                            <select className="condition-first-input" name="cars" id="cars">
+                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
                                                 <option value="volvo">Please select a field</option>
                                                 <option value="saab">Saab</option>
                                                 <option value="opel">Opel</option>

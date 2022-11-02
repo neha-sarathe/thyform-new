@@ -104,11 +104,11 @@ const RegisterTwo = (props) => {
         } else if (websiteError === false) {
             setWebsiteError('Please select yes or no')
         } else if (!website === 'yes' || !res) {
-            setWebsiteaddError('Enter Website Adress')
+            setWebsiteaddError('Enter Website Address')
         } else if (!res) {
             setWebsiteaddError("Please Enter Website Address")
         } else if (res == null) {
-            setWebsiteUrl('Please enter a valid website address')
+            setWebsiteUrl('Please Enter a Valid Website Address')
         }
         else {
             setWebsiteUrl(true)
@@ -215,7 +215,7 @@ const RegisterTwo = (props) => {
                                         </div>
                                         {website === 'yes' ?
                                             <div className=" mt-4 selectflex">
-                                                <div className=" lables-div w-100">
+                                                <div className="w-100">
                                                     <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Website address*</label>
                                                 </div>
                                                 <div className="search-input-div div-search-inputs search-input-div1">
@@ -225,9 +225,9 @@ const RegisterTwo = (props) => {
                                                         value={message}
                                                         onChange={handleChange}
                                                     />
+                                                    <p className="para-form show_result">{websiteaddError}</p>
                                                 </div>
                                                 {websiteUrl === true ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
-                                                <p className="para-form show_result">{websiteaddError}</p>
 
                                             </div>
                                             : ''}

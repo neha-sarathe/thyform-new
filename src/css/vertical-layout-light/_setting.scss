@@ -1130,6 +1130,9 @@ body {
   background-color: #fff;
   outline: 0;
 }
+.condition-first-input:focus {
+  border: 2px solid black !important;
+}
 
 .width_show_field {
   width: 100%;

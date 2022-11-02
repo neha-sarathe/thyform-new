@@ -228,32 +228,29 @@ input {
 }
 
 .auth-form-btn {
-
-
-    padding: 8px 32px;
+   padding: 8px 32px;
     font-size: 20px;
     line-height: 1.3333333;
     border-radius: 6px;
-
 }
 
 .hover-text-white {
     background: #dc143c !important;
-    border: 1px solid #dc143c;
-    padding: 8px 18px;
-    font-size: 20px;
-    line-height: 1.3333333;
-    border-radius: 6px;
+    border: 1px solid #dc143c !important;
+    padding: 8px 18px !important;
+    font-size: 20px !important;
+    line-height: 1.3333333 !important;
+    border-radius: 6px !important;
     color: white !important;
 }
 
 .hover-text-white:hover {
-    background: #f52b54;
-    border: 1px solid #f52b54;
-    padding: 8px 18px;
-    font-size: 20px;
-    line-height: 1.3333333;
-    border-radius: 6px;
+    background: #f52b54 !important;
+    border: 1px solid #f52b54 !important;
+    padding: 8px 18px !important;
+    font-size: 20px !important;
+    line-height: 1.3333333 !important;
+    border-radius: 6px !important;
     color: white !important;
 }
 
@@ -409,23 +406,26 @@ input {
     .setpassword-heading {
         font-size: 23px;
     }
+
     .navbar .navbar-menu-wrapper {
         width: calc(100% - 160px);
         padding-top: 12px;
         padding-left: 15px;
         padding-right: 11px;
         height: auto;
-      }
+    }
 
     .navbar .navbar-brand-wrapper .brand-logo-mini img {
         width: 100%;
         max-width: 100%;
         margin: auto;
     }
+
     .navbar .navbar-brand-wrapper {
         width: 160px;
         height: 59px;
     }
+
     .sidebar-mini {
         top: -40px !important;
     }
@@ -439,15 +439,18 @@ input {
         font-size: 13px;
         margin-left: 10px;
     }
+
     .navbar .navbar-brand-wrapper {
         width: 52%;
         height: 59px;
     }
+
     .navbar .navbar-brand-wrapper .brand-logo-mini img {
         width: calc(159px - 0px);
         max-width: 100%;
         margin: auto;
     }
+
     .navbar .navbar-menu-wrapper {
         width: calc(100% - 52%);
         padding-top: 12px;
@@ -455,9 +458,11 @@ input {
         padding-right: 11px;
         height: auto;
     }
-    .sidebar-offcanvas{
+
+    .sidebar-offcanvas {
         background-color: #F4F5F7;
     }
+
     .second-lable1 {
         font-size: 13px;
     }
@@ -479,4 +484,25 @@ input {
     body {
         background-color: white;
     }
+}
+
+.confirm_text {
+    color: #dc143c !important;
+}
+
+.confirm_text:hover {
+    color: #f52b54 !important;
+}
+
+input[type=checkbox] {
+    accent-color: #dc143c !important;
+}
+
+.business-btn-height {
+    height: 37px;
+}
+
+option:focus {
+    background-color: red !important;
+    color: green !important;
 }

@@ -472,7 +472,7 @@ const Register = (props) => {
                           />}
                         </div>
                         <div className="business-search-button">
-                          <button type="submit" className="btn-default pt-2 pb-2" onClick={handleClick}>
+                          <button type="submit" className="btn-default pt-2 pb-2 business-btn-height" onClick={handleClick}>
                             SEARCH &nbsp;  <i className="icon-search" style={{ transform: 'rotate(80deg)' }}></i>
                           </button>
                         </div>
@@ -629,7 +629,7 @@ const Register = (props) => {
                               className="mx-3"
                             />
                             <div><h6 className="fw-bold">I confirm that the company details are correct - including all persons with significant control.</h6>
-                              <h6 className="fw-bold mt-3">This information is based on Companies House records. If it isn’t correct you’ll need to submit a <a href="/#" className="text-primary">Confirmation Statement</a> to update your details before you apply.</h6></div>
+                              <h6 className="fw-bold mt-3">This information is based on Companies House records. If it isn’t correct you’ll need to submit a <a href="/#" className="confirm_text">Confirmation Statement</a> to update your details before you apply.</h6></div>
                           </label>
                           <p className="para-form show_result">{checkError}</p>
                         </>
