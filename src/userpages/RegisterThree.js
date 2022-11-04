@@ -64,10 +64,12 @@ const RegisterThree = (props) => {
     }
 
     const nextPage = () => {
-        if (txt.length < 6 && txt === '') {
+        // console.log(txt.length, 'txt.length', Math.min(6))
+        if (txt.length < 6) {
             setError('Please provide an answer')
         } else {
             navigate('/registerfour')
+
         }
 
     }
@@ -114,7 +116,7 @@ const RegisterThree = (props) => {
                                                     type="text"
                                                     className={"form-control search-input radius_sal input_height_register " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")}
                                                     placeholder="" aria-label="Username"
-                                                    aria-describedby="basic-addon1" value={txt} onChange={onInputChange}
+                                                    aria-describedby="basic-addon1" value={txt} maxLength={10} onChange={onInputChange}
                                                 />
                                                 {/* <input
                                                     type="text"

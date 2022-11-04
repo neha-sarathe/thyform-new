@@ -58,7 +58,7 @@ const RegisterTwo = (props) => {
     const onInputChange = e => {
         const { value } = e.target;
         const re = /^[0-9\b]+$/;
-        if (value.length <= 5 && re.test(value)) {
+        if (value === "" || value.length <= 5 && re.test(value)) {
             setTxt(value);
             setMaxValue(false)
         } else {
@@ -177,7 +177,7 @@ const RegisterTwo = (props) => {
                                             </div>
                                         </div>
 
-                                        <div className=" mt-4 selectflex">
+                                        <div className="mt-4 selectflex">
                                             <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Number of employees*</label>
                                             </div>

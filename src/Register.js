@@ -579,7 +579,7 @@ const Register = (props) => {
                         </div>
 
                       </div>
-                      <div className="d-flex mt-4 align-items-center">
+                      <div className="d-flex mt-4 align-items-top">
                         <div style={{ paddingRight: '17px' }}>
                           <div className="register-number">
                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address*</label>
@@ -587,7 +587,7 @@ const Register = (props) => {
                         </div>
                         {/* <div className="search-input-div"> */}
                         {directorSelect ? <>
-                          <div className="search-input-div mt-5 pt-4">
+                          <div className="search-input-div ">
                             <p>10 Greenwich Court 43 Autumn Way</p>
                             <p>West Drayton</p>
                             <p>UB7 9FB</p>

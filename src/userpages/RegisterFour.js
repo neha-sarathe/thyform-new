@@ -122,7 +122,7 @@ const RegisterFour = (props) => {
                                             <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business receive payments from outside the UK?*</label>
                                             </div>
-                                            <div className="search-input-div div-search-inputs search-input-div1 pb-4">
+                                            <div className="search-input-div div-search-inputs search-input-div1">
                                                 <select
                                                     onChange={(event) => handleorganisation(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -132,12 +132,12 @@ const RegisterFour = (props) => {
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
                                                 </select>
-                                                {website === 'yes' ? <h6 className="para-form mt-2">This could be for goods & services or funding</h6> : ''}
+                                                <h6 className="para-form mt-2">This could be for goods & services or funding</h6>
                                                 <p className="para-form show_result">{websiteError}</p>
                                             </div>
                                         </div>
                                         {website === 'yes' ?
-                                            <div className="selectflex mt-4">
+                                            <div className="selectflex">
                                                 <div className="w-100">
                                                     <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Which countries do you receive payments from?*</label>
                                                 </div>
@@ -161,7 +161,7 @@ const RegisterFour = (props) => {
                                             : ''
                                         }
 
-                                        <div className="selectflex mt-4">
+                                        <div className={"selectflex "+(website === 'yes' ?'mt-4':'mt-1')}>
                                             <div className="w-100">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Do you or any people within your business have political connections?*</label>
                                             </div>

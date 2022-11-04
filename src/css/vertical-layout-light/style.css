@@ -11738,15 +11738,15 @@ fieldset:disabled .wizard > .actions a,
 }
 
 .btn-primary, .wizard > .actions a {
-  color: #fff;
-  background-color: #DC143C;
-  border-color: #DC143C;
+  color: #fff !important;
+  background-color: #dc143c !important;
+  border-color: #dc143c !important;
 }
 
 .btn-primary:hover, .wizard > .actions a:hover {
-  color: #fff;
-  background-color: #1a3298;
-  border-color: #192f8f;
+  color: #fff !important;
+  background-color: #f52b54 !important;
+  border-color: #f52b54 !important;
 }
 
 .btn-check:focus + .btn-primary, .wizard > .actions .btn-check:focus + a, .btn-primary:focus, .wizard > .actions a:focus {

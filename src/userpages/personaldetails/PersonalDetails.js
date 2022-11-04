@@ -50,7 +50,8 @@ const PersonalDetails = (props) => {
     const [confirmValue, setConfirmValue] = useState('')
     const [confirmValueError, setConfirmValueError] = useState('')
     const [show2, setShow2] = useState(false);
-    // const [houseError, setHouseError] = useState(false);
+    const [addressSelect, setAddressSelect] = useState('')
+    const [findError, setFindError] = useState(false);
 
     const select_data = [
         { key: 'america', value: 'Example 1' },
@@ -161,7 +162,10 @@ const PersonalDetails = (props) => {
         setSelectedData(value)
         setBusinessError(false)
     }
-
+    const handleAddressSelect = (value) => {
+        setAddressSelect(value)
+        // setAddSelectError(false)
+      }
     const nextPage = () => {
         let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
         if (selectedData === '') {
@@ -237,7 +241,7 @@ const PersonalDetails = (props) => {
     const onPostcode = e => {
         const { value } = e.target;
         const re = /^[A-Za-z0-9]+$/;
-        if (re.test(value)) {
+        if (value === "" || re.test(value)) {
             setpostCode(value)
         }
         setOtherPostcodeError(false)
@@ -248,7 +252,7 @@ const PersonalDetails = (props) => {
         const re = /^[0-9\b]+$/;
         if (value.length <= 11 && re.test(value)) {
             setPhoneNumber(value)
-            setPhoneNumberError(false)
+
         }
         setPhoneNumberError(false)
     }
@@ -257,8 +261,8 @@ const PersonalDetails = (props) => {
         const re = /^[0-9\b]+$/;
         if (value.length <= 11 && re.test(value)) {
             setMobileNumber(value)
-            setMobileNumberError(false)
         }
+        setMobileNumberError(false)
     }
     const onEmailAddress = e => {
         const { value } = e.target;
@@ -383,6 +387,15 @@ const PersonalDetails = (props) => {
         "November",
         "December",
     ];
+    const handleFind =()=>{
+        if(postCode===" "){
+            console.log("errorrrrrrrrrrrrrrr", postCode);
+            setFindError("Please enter your postcode, press Find address and select your address from the options")
+        }
+        else{
+        setShow2(true)
+        setFindError(false)
+         } }
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -635,18 +648,16 @@ const PersonalDetails = (props) => {
                                                     />
 
                                                     <div className="ps-4 find-btn-postcode">
-                                                        <button type="submit" className="btn-default btn-find-post" onClick={() => {
-                                                            setShow2(true);
-                                                        }}>
+                                                        <button type="submit" className="btn-default btn-find-post" onClick={handleFind}>
                                                             Find &nbsp;  <i className="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                                                         </button>
                                                     </div></div>
-                                                {postCode === '' ? <h6 className="mt-2">This is where we will send your card and letters</h6> : ''}
+                                                {/* {postCode === '' ? <h6 className="mt-2">This is where we will send your card and letters</h6> : ''} */}
                                                 <p className="para-form show_result">{otherPostcodeError}</p>
                                                 {!show ? (
                                                     <p
                                                         onClick={() => {
-                                                            setShow(true);
+                                                            (setShow(true)||setShow2(!show2));
                                                         }}
                                                         className="pt-2"
                                                     >
@@ -655,7 +666,7 @@ const PersonalDetails = (props) => {
                                                 ) : (
                                                     <p
                                                         onClick={() => {
-                                                            setShow(false);
+                                                            (setShow(false)||setShow2(!show2));
                                                         }}
                                                     >
                                                         Find address by lookup
@@ -664,8 +675,32 @@ const PersonalDetails = (props) => {
                                             </div>
 
                                         </div>
+                                        {show2 ?(
+                                             <div className="selectflex mt-4">
+                                             <div className="lable-fix-width">
+                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Home Address*</label>
+                                             </div>
+                                             <div className="search-input-div div-search-inputs search-input-div1">
+                                             <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                    id="exampleFormControlSelect2"
+                                                    value={addressSelect}
+                                                    placeholder="Enter Address"
+                                                >
+                                                    <option value=''>select</option>
+                                                    {select_data.map((option, index) => (
+                                                        <option key={index} value={option.value}>
+                                                            {option.value}
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                             </div>
 
-                                        {show || show2 ? (
+                                         </div>
+                                        ) : (
+                                            " "
+                                        )
+}
+                                        {show || addressSelect ? (
                                             <>
                                                 {" "}
                                                 <div>
@@ -679,18 +714,19 @@ const PersonalDetails = (props) => {
                                                                 onChange={onBuildingName}
                                                                 type="text"
                                                                 className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                                placeholder="Building No. or name"
+                                                                placeholder="Building No. or Name"
                                                             />
                                                         </div>
                                                     </div>
-                                                    <div className="d-flex mt-4">
-                                                        <div className="w-100">
+                                                    <div className="selectflex mt-4">
+                                                        <div className="lable-fix-width">
                                                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>House number*</label>
                                                         </div>
                                                         <div className="search-input-div div-search-inputs search-input-div1">
                                                             <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                                 value={houseno}
-                                                                onChange={onHouseNo} />
+                                                                onChange={onHouseNo}
+                                                                placeholder="House Number" />
                                                             {/* <p className="para-form show_result">{houseError}</p> */}
                                                         </div>
 
@@ -702,7 +738,8 @@ const PersonalDetails = (props) => {
                                                         <div className="search-input-div div-search-inputs search-input-div1">
                                                             <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                                 value={address}
-                                                                onChange={onAddress} />
+                                                                onChange={onAddress}
+                                                                placeholder="Address line" />
                                                         </div>
 
                                                     </div>
@@ -714,15 +751,17 @@ const PersonalDetails = (props) => {
                                                             <input
                                                                 value={townName}
                                                                 onChange={onTownName}
-                                                                type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} />
+                                                                type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} 
+                                                                placeholder="Town or City"/>
                                                         </div>
 
                                                     </div>
                                                 </div>
                                             </>
                                         ) : (
-                                            ""
+                                            " "
                                         )}
+                                        
                                         <h4 className="heading-form dark-mode-text">Tell Us How We Can Contact You</h4>
                                         <div className="selectflex mt-4">
                                             <div className="lable-fix-width">
@@ -737,7 +776,7 @@ const PersonalDetails = (props) => {
                                                     max="10"
                                                     min="10"
                                                 />
-                                                {PhoneNumber === '0' ? <h6 className="mt-2">This can be a mobile number. Please enter numbers only. Spaces are not allowed.</h6> : ''}
+                                                <h6 className="mt-2">This can be a mobile number. Please enter numbers only. Spaces are not allowed.</h6>
                                                 <p className="para-form show_result">{PhoneNumberError}</p>
                                             </div>
                                             {PhoneNumber.length === 11 ? <FiCheck className="text-success mt-1 mx-2 display-5" /> : ''}
@@ -754,7 +793,7 @@ const PersonalDetails = (props) => {
                                                     value={mobileNumber}
                                                     onChange={onMobileNumber}
                                                 />
-                                                {mobileNumber === '07' ? <h6 className="mt-2">Please enter numbers only. Spaces are not allowed.</h6> : ''}
+                                                <h6 className="mt-2">Please enter numbers only. Spaces are not allowed.</h6>
 
                                                 <label className="float-none d-flex align-items-baseline" style={{ cursor: "pointer" }}>
                                                     <input type="checkbox"
