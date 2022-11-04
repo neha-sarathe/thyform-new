@@ -58,7 +58,6 @@ const RegisterThree = (props) => {
 
         }
         setError(false)
-
     }
 
     const nextPage = () => {

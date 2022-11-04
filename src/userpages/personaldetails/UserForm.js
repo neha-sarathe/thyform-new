@@ -68,7 +68,7 @@ const UserForm = (props) => {
     const onPinNumber = e => {
         const { value } = e.target;
         const re = /^[0-9\b]+$/;
-        if (value.length <= 11 && re.test(value)) {
+        if (value === "" || value.length < 11 && re.test(value)) {
             setPinNumber(value)
             setPinNumberError(false)
         }
@@ -85,13 +85,19 @@ const UserForm = (props) => {
         setPinError(false)
     }
     const nextPage = () => {
+        // const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{12,}$/;
+
         if (name === '') {
             setError('Please Enter Username')
         } else if (password === '') {
             setPasswordError('Please enter Password')
-        } else if (confirm === '') {
+        } 
+        // else if (!regex.test(password)) {
+        //     setPasswordError('validation')
+        // } 
+        else if (confirm === '') {
             setConfirmError('Please enter Confirm Password')
-        } else if (pinNumber === '') {
+        } else if (pinNumber.length < 6) {
             setPinNumberError('Please enter Pin Number')
         } else if (pin === '') {
             setPinError('Please enter Confirm Pin Number')
