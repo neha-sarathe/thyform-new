@@ -14751,7 +14751,6 @@ fieldset:disabled .wizard > .actions a,
   text-decoration: none;
   opacity: 0.75;
 }
-
 .btn-close:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);

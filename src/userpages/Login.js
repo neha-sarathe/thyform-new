@@ -208,6 +208,7 @@ const Login = (props) => {
                         </button>
                         {/* <button class="btn btn-primary" type="button">Button</button> */}
                       </div>
+                      <hr className="mt-5" />
                       <p className={"already-login ps-3 " + (props.darkmodes ? " login-dark-text input-login-dark" : " login-light-text input-login-light")}>
                         Not a member yet? Click{" "}
                         <Link to="/" class="auth-link login-here">
@@ -217,7 +218,7 @@ const Login = (props) => {
                       </p>
 
                     </form></div>
-                  <hr className="mt-5" />
+                  
 
                   {/* <p className="text-center">
                     © Color Admin All Right Reserved 2021

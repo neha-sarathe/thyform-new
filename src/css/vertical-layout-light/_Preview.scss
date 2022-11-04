@@ -403,7 +403,11 @@
 }
 .login-btn-width{
   width: 94%;
-  margin-right: 26px;
+  // margin-right: 26px;
+}
+.login-btn-width:focus {
+  box-shadow: none !important;
+  border: none !important;
 }
 .formpage_first_div{
  margin-left: 40px;

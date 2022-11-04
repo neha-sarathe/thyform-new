@@ -20,7 +20,7 @@ p {
 a,
 a:hover,
 a:focus {
-    color: inherit;
+    color: inherit !important;
     text-decoration: none;
     transition: all 0.3s;
 }
@@ -471,6 +471,7 @@ ul.CTAs a {
 .search_col {
     background-color: transparent;
     color: #616161;
+    height: calc(1.5em + 1.12rem + 2px) !important;
 }
 
 .remove_overlap {
@@ -478,7 +479,7 @@ ul.CTAs a {
 }
 
 .inbox_search {
-    padding: 14px 10px !important;
+    padding: 12px 10px !important;
 }
 
 .btn_down {
