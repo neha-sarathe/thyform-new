@@ -85,13 +85,13 @@ const Publish = ({darkmodes,setDarkmodes }) => {
                   </div>
                   {/* direct link div end */}
                   {/* form div start*/}
-
+ 
                   <form className={'shadow-sm p-4 rounded-1 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
                       <div className='d-flex align-items-center justify-content-between'>
                         <div className='d-flex '>
                           <li className='link'>
-                            <h6 className={'fw-Semibold  mt-1 ' + (darkmodes ? "text-white " : "text-dark ")}>LINK TO SHARE</h6>
+                            <h6 className={'form-setting-title fw-Semibold  mt-1 ' + (darkmodes ? "text-white " : "text-dark ")}>LINK TO SHARE</h6>
                           </li>
                           <li>
                             <ul className='d-flex border border-success border-1 rounded-pill border_width '>
@@ -126,7 +126,7 @@ const Publish = ({darkmodes,setDarkmodes }) => {
                       <div className='d-flex align-items-center justify-content-start mt-5'>
                         <div className='d-flex '>
                           <li className='link'>
-                            <h6 className={'fw-Semibold text-black mt-1 ' + (darkmodes ? "text-white " : "text-dark ")}>INVITE BY EMAIL </h6>
+                            <h6 className={'form-setting-title fw-Semibold text-black mt-1 ' + (darkmodes ? "text-white " : "text-dark ")}>INVITE BY EMAIL </h6>
                           </li>
                           <li>
                             <svg xmlns="http://www.w3.org/2000/svg" className='bg-white shadow-sm rounded-circle' width="16" height="16" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M207.4,115.1A8,8,0,0,1,200,120H136v96a8,8,0,0,1-16,0V120H56a8,8,0,0,1-7.4-4.9,8.4,8.4,0,0,1,1.7-8.8l72-72a8.1,8.1,0,0,1,11.4,0l72,72A8.4,8.4,0,0,1,207.4,115.1Z"></path></svg>

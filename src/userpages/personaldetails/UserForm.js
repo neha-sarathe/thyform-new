@@ -85,7 +85,7 @@ const UserForm = (props) => {
         setPinError(false)
     }
     const nextPage = () => {
-        // const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{12,}$/;
+        // const regex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$/;
 
         if (name === '') {
             setError('Please Enter Username')

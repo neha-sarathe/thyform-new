@@ -27,7 +27,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                 </li>
 
                 <li className='fs-6 text-black mt-5 pb-2 map'>
-                  <h5 className={'remider fw-bold .showhover ' + (darkmodes ? "text-white" : "text-dark ")}>SKIP TO A PAGE</h5>
+                  <h5 className={'heading_5 remider fw-bold .showhover ' + (darkmodes ? "text-white" : "text-dark ")}>SKIP TO A PAGE</h5>
                   <p className={'paragraph ' + (darkmodes ? "text-white" : "text-dark ")}>Allow users to jump to a part of your form according to their choices.</p>
                 </li>
               </div>
@@ -36,7 +36,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               <div class="row mainsetting-div">
                 <div class="form-group col-md-12 mt-3 d-flex justify-content-between">
                   <li>
-                    <h2 className="form-setting-title mt-2">IF</h2>
+                    <h2 className="condition-title mt-2">IF</h2>
 
                   </li>
                   <li className='width_show_field'>
@@ -56,7 +56,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               <div class="row mainsetting-div">
                 <div class="form-group col-md-12 mt-3 d-flex justify-content-between">
                   <li>
-                    <h2 className="form-setting-title mt-2">STATE</h2>
+                    <h2 className="condition-title mt-2">STATE</h2>
 
                   </li>
                   <li className='show_field_adjust'>
@@ -76,7 +76,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               <div class="row mainsetting-div">
                 <div class="form-group col-md-12 mt-3 d-flex justify-content-between">
                   <li>
-                    <h2 className="form-setting-title mt-2">VALUE</h2>
+                    <h2 className="condition-title mt-2">VALUE</h2>
 
                   </li>
                   <li className='show_field_adjust'>
@@ -96,7 +96,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               <div class="row mainsetting-div">
                 <div class="form-group col-md-12 mt-3 d-flex justify-content-between">
                   <li>
-                    <h2 className="form-setting-title mt-2">DO</h2>
+                    <h2 className="condition-title mt-2">DO</h2>
 
                   </li>
                   <li className='show_field_do'>
@@ -116,7 +116,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               <div class="row mainsetting-div">
                 <div class="form-group col-md-12 mt-3 d-flex justify-content-between">
                   <li>
-                    <h2 className="form-setting-title mt-2">PAGE</h2>
+                    <h2 className="condition-title mt-2">PAGE</h2>
 
                   </li>
                   <li className='show_field_page'>
