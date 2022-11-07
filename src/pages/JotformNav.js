@@ -48,7 +48,7 @@ export const JotformNav = ({ checked, setChecked, darkmodes, setDarkmodes, setJo
 
           <div className='d-flex justify-content-center'>
             <NavLink to='/jotform' className={'jotlink-a ' + (page[1] === 'jotform' ? 'jotlinkfocus' : '')}  ><li className='jot-link'>BUILD</li></NavLink>
-            <NavLink to='/setting' className={'jotlink-a ' + (page[1] === 'setting' ? 'jotlinkfocus' : '')} ><li className='jot-link' >SETTING</li></NavLink>
+            <NavLink to='/setting/setting' className={'jotlink-a ' + (page[1] === 'setting' ? 'jotlinkfocus' : '')} ><li className='jot-link' >SETTING</li></NavLink>
             <NavLink to='/publish/publish' className={'jotlink-a ' + (page[1] === 'publish' ? 'jotlinkfocus' : '')} ><li className='jot-link'>PUBLISH</li></NavLink>
           </div>
         </div>

@@ -21,8 +21,8 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
               {/* Direct link div start */}
               <div className='main_w'>
                 <div className=' underline d-flex align-items-center '>
-                  <li className='bg-primary py- px-2 mt-4  text-white fw-bold fs-4 rounded-1'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
+                  <li className='bg-icon-color py- px-2 mt-4  text-white fw-bold fs-4 rounded-1'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="#dc143c"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
                   </li>
                   <li className='fs-6 text-black mt-5 pb-2 map'>
                     <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark")} >NEW EMAIL</h5>
@@ -42,23 +42,24 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                       <button className="border border-white btn-block" type="button" onClick={() => {
                         setShow(true);
                       }}>
-                        <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
+                        <div className='d-flex justify-content-center align-items-center py-2 border-theme'>
                           <div className="accordion-header" id="headingOne">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#dc143c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
                           </div>
                           <div>
-                            <h5 className='fw-bold heading pt-2'>Add an email</h5>
+                            <h5 className='fw-bold heading_css pt-2'>Add an email</h5>
                           </div>
                         </div>
                       </button>
                     </div>
+                    {/*
                     <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <fieldset>
                         <div className='d-flex align-items-center justify-content-between '>
                           <div className='main_w'>
                             <div className=' underline d-flex align-items-center py-2 mx-2 '>
                               <li>
-                                {/* <img src={manual} height="40px" alt="manual" /> */}
+                             
                               </li>
                               <li className='fs-6 text-black map'>
                                 <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>AUTORESPONDER 1</h5>
@@ -71,11 +72,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                             </div>
                           </div>
                           <div>
-                            {/* <ul className='d-flex align-items-center justify-content-center'>
-                           <li className='mt-2'>
-                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6a6a7c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm33.4,109.9-40,36A8.2,8.2,0,0,1,116,172a7.9,7.9,0,0,1-5.9-2.6,8,8,0,0,1,.5-11.3L144,128,110.6,97.9a8,8,0,0,1,10.8-11.8l40,36a8,8,0,0,1,0,11.8Z"></path></svg>
-                           </li>
-                         </ul> */}
+                            
                           </div>
                         </div>
                       </fieldset>
@@ -89,7 +86,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                           <div className='main_w'>
                             <div className=' underline d-flex align-items-center py-2 mx-2 '>
                               <li>
-                                {/* <img src={manual} height="40px" alt="manual" /> */}
+                               
                               </li>
                               <li className='fs-6 text-black map'>
                                 <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>NOTIFICATION 1</h5>
@@ -116,7 +113,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                           <div className='main_w'>
                             <div className=' underline d-flex align-items-center py-2 mx-2 '>
                               <li>
-                                {/* <img src={manual} height="40px" alt="manual" /> */}
+                             
                               </li>
                               <li className='fs-6 text-black map'>
                                 <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white " : "text-dark ")}>AUTORESPONDER 2</h5>
@@ -137,6 +134,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
 
                       </div>
                     </form>
+                    */}
                   </>
                 ) : (
                   <>

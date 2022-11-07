@@ -61,7 +61,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               {/* Direct link div start */}
               <div className='main_w'>
                 <div className=' underline d-flex align-items-center '>
-                  <li className='conduct py- px-2 mt-4  text-white fw-bold fs-4 rounded-1'>
+                  <li className='bg-icon-color py- px-2 mt-4  text-white fw-bold fs-4 rounded-1'>
                     <img src={condition_icon} height="18px" alt="manual" />
 
                   </li>
@@ -76,12 +76,12 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   <button className="border border-white btn-block" type="button" onClick={() => {
                     setShow(true);
                   }}>
-                    <div className='d-flex justify-content-center align-items-center py-2 border border-primary'>
+                    <div className='d-flex justify-content-center align-items-center py-2 border-theme'>
                       <div className="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4811df" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#dc143c" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
                       </div>
                       <div>
-                        <h5 className='fw-bold heading pt-2'>Add a new condition</h5>
+                        <h5 className='fw-bold heading_css pt-2'>Add a new condition</h5>
                       </div>
                     </div>
                   </button>

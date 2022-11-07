@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import $ from 'jquery'
 import { FiSettings } from "react-icons/fi";
 import { Link } from 'react-router-dom';
-import Settingform from './Settingform';
 import Thankyoupage from './Thankyoupage';
 import images from '../../images/checklist.png';
 import manual from '../../images/manual.svg';
@@ -99,7 +98,7 @@ const Prefill = ({ darkmodes, setDarkmodes }) => {
                       {/* Direct link div start */}
                       <div className='main_w'>
                         <div className=' underline d-flex align-items-center '>
-                          <li className='bg-secondary py- px-2 mt-4  text-white fw-bold fs-4 rounded'>
+                          <li className='bg-icon-color py- px-2 mt-4  text-white fw-bold fs-4 rounded'>
                             <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M88,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H96A8,8,0,0,1,88,64Zm128,56H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM56,56H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Z"></path></svg></li>
 
                           </li>

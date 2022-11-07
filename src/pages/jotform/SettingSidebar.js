@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
 import { FiSettings } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import condition_icon from '../../images/contion_icon.svg';
@@ -7,14 +7,14 @@ import { ImShuffle, ImMobile } from "react-icons/im";
 const SettingSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar, jottoggled, setJottoggled }) => {
     const [settingactive, setSettingactive] = useState(true);
     const [emailactive, setEmailActive] = useState(false);
-  const [conditionactive, setConditionactive] = useState(false);
-  const [thankyouactive, setThankactive] = useState(false);
-  const [mobileactive, setMobileactive] = useState(false);
-  
-  let page = ""
-  const path = window.location.pathname
-  page = path.split('/')
-  console.log(page[2])
+    const [conditionactive, setConditionactive] = useState(false);
+    const [thankyouactive, setThankactive] = useState(false);
+    const [mobileactive, setMobileactive] = useState(false);
+
+    let page = ""
+    const path = window.location.pathname
+    page = path.split('/')
+    console.log(page[2])
     const handleToggle = () => {
         setJottoggled(true)
     }
@@ -41,66 +41,66 @@ const SettingSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar, jottog
                             </div> */}
                             <div class="sidebar-menu">
                                 <ul>
-                                    <div className={'quick list-sidebar-jotform p-3 ' + (page[2] === 'settingform' ? 'list-sidebar-focus' : ' list-sidebarjotform')} onClick={() => { setEmailActive(false); setConditionactive(false); setThankactive(false); setMobileactive(false); setSettingactive(true) }}>
-                                        <Link to="/setting/settingform" className="sidebar-link-jot">
+                                    <div className={'quick list-sidebar-jotform p-3 ' + (page[2] === 'setting' ? 'list-sidebar-focus' : ' list-sidebarjotform')} onClick={() => { setEmailActive(false); setConditionactive(false); setThankactive(false); setMobileactive(false); setSettingactive(true) }}>
+                                        <Link to="/setting/setting" className="sidebar-link-jot">
                                             <ul className='d-flex '>
-                                                <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill={"#" + (darkmodes ? "fff" : "fff")+ (page[2] === 'settingform' ?  'fff':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="44" fill="none" stroke={"#" + (darkmodes ? "fff" : "fff")+ (page[2] === 'settingform' ?  'fff':'')} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></circle><path d="M183.7,65.1q3.8,3.5,7.2,7.2l27.3,3.9a103.2,103.2,0,0,1,10.2,24.6l-16.6,22.1s.3,6.8,0,10.2l16.6,22.1a102.2,102.2,0,0,1-10.2,24.6l-27.3,3.9s-4.7,4.9-7.2,7.2l-3.9,27.3a103.2,103.2,0,0,1-24.6,10.2l-22.1-16.6a57.9,57.9,0,0,1-10.2,0l-22.1,16.6a102.2,102.2,0,0,1-24.6-10.2l-3.9-27.3q-3.7-3.5-7.2-7.2l-27.3-3.9a103.2,103.2,0,0,1-10.2-24.6l16.6-22.1s-.2-6.8,0-10.2L27.6,100.8A102.2,102.2,0,0,1,37.8,76.2l27.3-3.9q3.5-3.7,7.2-7.2l3.9-27.3a103.2,103.2,0,0,1,24.6-10.2l22.1,16.6a57.9,57.9,0,0,1,10.2,0l22.1-16.6a102.2,102.2,0,0,1,24.6,10.2Z" fill="none" stroke={"#" + (darkmodes ? "fff" : "fff")+ (page[2] === 'settingform' ?  'fff':'')} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path></svg></li>
+                                                <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill={"#" + (darkmodes ? "fff" : "fff") + (page[2] === 'settingform' ? 'fff' : '')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="44" fill="none" stroke={"#" + (darkmodes ? "fff" : "fff") + (page[2] === 'settingform' ? 'fff' : '')} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></circle><path d="M183.7,65.1q3.8,3.5,7.2,7.2l27.3,3.9a103.2,103.2,0,0,1,10.2,24.6l-16.6,22.1s.3,6.8,0,10.2l16.6,22.1a102.2,102.2,0,0,1-10.2,24.6l-27.3,3.9s-4.7,4.9-7.2,7.2l-3.9,27.3a103.2,103.2,0,0,1-24.6,10.2l-22.1-16.6a57.9,57.9,0,0,1-10.2,0l-22.1,16.6a102.2,102.2,0,0,1-24.6-10.2l-3.9-27.3q-3.7-3.5-7.2-7.2l-27.3-3.9a103.2,103.2,0,0,1-10.2-24.6l16.6-22.1s-.2-6.8,0-10.2L27.6,100.8A102.2,102.2,0,0,1,37.8,76.2l27.3-3.9q3.5-3.7,7.2-7.2l3.9-27.3a103.2,103.2,0,0,1,24.6-10.2l22.1,16.6a57.9,57.9,0,0,1,10.2,0l22.1-16.6a102.2,102.2,0,0,1,24.6,10.2Z" fill="none" stroke={"#" + (darkmodes ? "fff" : "fff") + (page[2] === 'settingform' ? 'fff' : '')} stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path></svg></li>
                                                 <li className='share'>
-                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'settingform' ? 'text-dark' : '') }>SETTING FORM</h6>
-                                                    <p className={'font_r fw-7 ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'settingform' ? 'text-dark' : '')}>Form status and properties</p>
+                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'setting' ? 'text-white' : '')}>FORM SETTINGS</h6>
+                                                    <p className={'font_r fw-7 ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'setting' ? 'text-white' : '')}>Form status and properties</p>
                                                 </li>
                                             </ul>
                                         </Link>
                                     </div>
-                                    <div className={'quick list-sidebar-jotform p-3 '+ (page[2] === 'settingemail' ?  'list-sidebar-focus' : ' list-sidebarjotform')} >
+                                    <div className={'quick list-sidebar-jotform p-3 ' + (page[2] === 'settingemail' ? 'list-sidebar-focus' : ' list-sidebarjotform')} >
                                         <Link to="/setting/settingemail" className="sidebar-link-jot">
                                             <ul className='d-flex '>
-                                                <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill={"#" + (darkmodes ? "fff" : "fff")+ (page[2] === 'settingemail' ?  'fff':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg></li>
+                                                <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill={"#" + (darkmodes ? "fff" : "fff") + (page[2] === 'settingemail' ? 'fff' : '')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg></li>
                                                 <li className='share'>
-                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ")+ (page[2] === 'settingemail' ?  'text-dark' : '') }>EMAIL</h6>
-                                                    <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-white ")+ (page[2] === 'settingemail' ?  'text-dark' : '')}>Reminders and  instant sharing.</p>
+                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'settingemail' ? 'text-white' : '')}>EMAIL</h6>
+                                                    <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'settingemail' ? 'text-white' : '')}>Reminders and  instant sharing.</p>
                                                 </li>
                                             </ul>
                                         </Link>
                                     </div>
-                                    <div className={'quick list-sidebar-jotform p-3 '+ (page[2] === 'condition' ?  'list-sidebar-focus' : ' list-sidebarjotform')}>
+                                    <div className={'quick list-sidebar-jotform p-3 ' + (page[2] === 'condition' ? 'list-sidebar-focus' : ' list-sidebarjotform')}>
                                         <Link to="/setting/condition" className="sidebar-link-jot">
                                             <ul className='d-flex '>
-                                                <li className={darkmodes ? "text-white " : "text-white "+ (page[2] === 'condition' ?  'text-dark':'')}>
+                                                <li className={darkmodes ? "text-white " : "text-white " + (page[2] === 'condition' ? 'text-dark' : '')}>
                                                     {/* <img src={condition_icon} height="24px" alt="manual" /> */}
-                                                   <div className={ page[2] === 'condition' ? 'text-white' : ''}> <ImShuffle style={{ width: '28px', height: 'auto' }} /></div>
+                                                    <div className={page[2] === 'condition' ? 'text-white' : ''}> <ImShuffle style={{ width: '28px', height: 'auto' }} /></div>
                                                 </li>
                                                 <li className='share'>
-                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ")+ (page[2] === 'condition' ? 'text-dark' : '')}>CONDITIONS</h6>
-                                                    <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-white ")+ (page[2] === 'condition' ? 'text-dark':'')}>Create conditional logic.</p>
+                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'condition' ? 'text-white' : '')}>CONDITIONS</h6>
+                                                    <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'condition' ? 'text-white' : '')}>Create conditional logic.</p>
                                                 </li>
                                             </ul>
                                         </Link>
                                     </div>
-                                    <div className={'quick list-sidebar-jotform p-3 '+ (page[2] === 'thankyoupage' ?  'list-sidebar-focus' : ' list-sidebarjotform')}>
+                                    <div className={'quick list-sidebar-jotform p-3 ' + (page[2] === 'thankyoupage' ? 'list-sidebar-focus' : ' list-sidebarjotform')}>
                                         <Link to="/setting/thankyoupage" className="sidebar-link-jot">
                                             <ul className='d-flex '>
                                                 <li className=''>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill={"#" + (darkmodes ? "fff" : "fff")+ (page[2] === 'thankyoupage' ?  'fff':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm49.5,85.8-58.6,56a8.1,8.1,0,0,1-5.6,2.2,7.7,7.7,0,0,1-5.5-2.2l-29.3-28a8,8,0,1,1,11-11.6l23.8,22.7,53.2-50.7a8,8,0,0,1,11,11.6Z"></path></svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill={"#" + (darkmodes ? "fff" : "fff") + (page[2] === 'thankyoupage' ? 'fff' : '')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm49.5,85.8-58.6,56a8.1,8.1,0,0,1-5.6,2.2,7.7,7.7,0,0,1-5.5-2.2l-29.3-28a8,8,0,1,1,11-11.6l23.8,22.7,53.2-50.7a8,8,0,0,1,11,11.6Z"></path></svg>
                                                 </li>
                                                 <li className='share'>
-                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ")+ (page[2] === 'thankyoupage' ? 'text-dark':'')}>THANK YOU PAGE</h6>
-                                                    <p className={' font_r fw-7 ' + (darkmodes ? "text-white " : "text-white ")+ (page[2] === 'thankyoupage' ? 'text-dark':'')}>Shown after form submit.</p>
+                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'thankyoupage' ? 'text-white' : '')}>THANK YOU PAGE</h6>
+                                                    <p className={' font_r fw-7 ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'thankyoupage' ? 'text-white' : '')}>Shown after form submit.</p>
                                                 </li>
                                             </ul>
                                         </Link>
                                     </div>
 
 
-                                    <div className={'quick list-sidebar-jotform p-3  '+ (page[2] === 'mobilenotification' ?  'list-sidebar-focus' : ' list-sidebarjotform')}>
+                                    <div className={'quick list-sidebar-jotform p-3  ' + (page[2] === 'mobilenotification' ? 'list-sidebar-focus' : ' list-sidebarjotform')}>
                                         <Link to="/setting/mobilenotification" className="sidebar-link-jot">
                                             <ul className='d-flex '>
-                                                <li className={darkmodes ? "text-white " : "text-white "+ (page[2] === 'mobilenotification' ?  'text-white ':'')}>
-                                                <div className={ page[2] === 'mobilenotification' ? 'text-white' : ''}>   <ImMobile style={{ width: '28px', height: 'auto' }} /></div>
+                                                <li className={darkmodes ? "text-white " : "text-white " + (page[2] === 'mobilenotification' ? 'text-white ' : '')}>
+                                                    <div className={page[2] === 'mobilenotification' ? 'text-white' : ''}>   <ImMobile style={{ width: '28px', height: 'auto' }} /></div>
                                                 </li>
                                                 <li className='share'>
-                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ")+ (page[2] === 'mobilenotification' ? 'text-dark':'')}>MOBILE NOTIFICATION</h6>
-                                                    <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-white ")+ (page[2] === 'mobilenotification' ? 'text-dark':'')}>Customize your app notification</p>
+                                                    <h6 className={' fw-semibold ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'mobilenotification' ? 'text-white' : '')}>MOBILE NOTIFICATION</h6>
+                                                    <p className={' fw-7 font_r ' + (darkmodes ? "text-white " : "text-white ") + (page[2] === 'mobilenotification' ? 'text-white' : '')}>Customize your app notification</p>
                                                 </li>
                                             </ul>
                                         </Link>

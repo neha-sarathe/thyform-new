@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import $ from 'jquery'
 import { FiSettings } from "react-icons/fi";
 import { Link } from 'react-router-dom';
-import Settingform from './Settingform';
+import Setting from './Setting';
 import Thankyoupage from './Thankyoupage';
 import condition_icon from '../../images/contion_icon.svg';
 import Mobile_icon from '../../images/Mobile_icon.svg'
