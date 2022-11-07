@@ -4,6 +4,7 @@ import { FiChevronRight, FiCheck } from 'react-icons/fi'
 import Dark from "../../DarkAuth";
 import Select from 'react-select';
 import DatePicker from "react-datepicker";
+import moment from 'moment';
 import { getMonth, getYear } from 'date-fns';
 import range from "lodash/range";
 import countryListAllIsoData from "../CountryList";
@@ -396,6 +397,13 @@ const PersonalDetails = (props) => {
         setShow2(true)
         setFindError(false)
          } }
+         var fromMax = moment().add(0, 'day')
+         var eighteenYearsAgo = moment().subtract("years", 18);
+        //  console.log(this.state.playerId, OneSignal, 'jflkdskjfjdsl')
+         var valid = function (current) {
+ 
+             return (eighteenYearsAgo.isAfter(current) && fromMax >= current);
+         };
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -486,6 +494,9 @@ const PersonalDetails = (props) => {
                                             <div className="search-input-div div-search-inputs search-input-div1 d-flex">
                                                 {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="dd/MM/yyyy" className={"date_pick "+ (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} /> */}
                                                 <DatePicker
+                                         
+                                                 filterDate={valid}
+                                                maxDate={moment().subtract(18, "years")}
                                                     renderCustomHeader={({
                                                         date,
                                                         changeYear,
