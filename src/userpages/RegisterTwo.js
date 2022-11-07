@@ -93,7 +93,8 @@ const RegisterTwo = (props) => {
 
     const nextPage = () => {
         let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
-        var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
+        var re =/^[a-z0-9]+(\.?info)?@+[A-Za-z]{5,}?.com$/
+        // var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
         var res = re.test(message);
         console.log('res000000000000', res);
         console.log(message, 'jfklsdjflksjdlkfjsldf', 'resresres', res, website, 'flsdjklfjsldkfjlksdjkflkds')
@@ -127,7 +128,10 @@ const RegisterTwo = (props) => {
 
 
     };
-
+    const [selectcheck,setSelectcheck] = useState(false)
+const handlecheck = ()=>{
+setSelectcheck(true)
+}
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -168,7 +172,7 @@ const RegisterTwo = (props) => {
                                                 >
                                                     <option value=''>select</option>
                                                     {select_data.map((option, index) => (
-                                                        <option key={index} value={option.value}>
+                                                        <option className="option-background" key={index} value={option.value}>
                                                             {option.value}
                                                         </option>
                                                     ))}

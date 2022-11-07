@@ -331,6 +331,12 @@ input {
 .lable-fix-width {
     width: 25%;
 }
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #f3969a;
+}
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
@@ -502,7 +508,3 @@ input[type=checkbox] {
     height: 37px;
 }
 
-option:focus {
-    background-color: red !important;
-    color: green !important;
-}
