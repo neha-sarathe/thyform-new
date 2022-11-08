@@ -73,7 +73,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               </div>
               {!show ? (
                 <>
-                  <button className="border border-white btn-block" type="button" onClick={() => {
+                  <button className="btn-block" type="button" onClick={() => {
                     setShow(true);
                   }}>
                     <div className='d-flex justify-content-center align-items-center py-2 border-theme'>
