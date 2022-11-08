@@ -7,7 +7,7 @@ import { InboxNavbar } from './InboxNavbar';
 import { FaTrashAlt, FaArchive, FaCheck } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-
+import Mobilenav from './Mobilenav';
 const Inbox = ({ darkmodes, setDarkmodes }) => {
 
 
@@ -20,15 +20,18 @@ const Inbox = ({ darkmodes, setDarkmodes }) => {
   return (
     <>
       <div className="wrapper">
+       
         <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
+        {/* <Mobilenav darkmodes={darkmodes} setDarkmodes={setDarkmodes}/> */}
         <div className='full_width'>
           <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
             <Navbarallform />
-            <div className='border rounded p-4 m-4'>
+            <Mobilenav darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
+            <div className='border rounded maincontainer-inbox-navbar'>
               <InboxNavbar />
               <div className='row'>
                 <div className='col-md-4'>
-                  <nav id="sidebars" className={darkmodes ? "text-white border-end" : "text-dark border-end"}>
+                  <nav id="sidebars " className={darkmodes ? "text-white border-end sidebars-navbarall-form " : "text-dark border-end sidebars-navbarall-form "}>
 
                     <div class="input-group">
                       <span class="input-group-prepend">
@@ -72,7 +75,7 @@ const Inbox = ({ darkmodes, setDarkmodes }) => {
                   </nav>
                 </div>
                 <div className='col-md-8'>
-                  <p className='link_color'>
+                  <p className='link_color content-allform-data'>
                     YOU DON’T HAVE ANY SUBMISSIONS
                   </p>
                 </div>

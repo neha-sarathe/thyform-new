@@ -152,9 +152,9 @@ a:focus {
     background-color: #f52b54 !important;
 }
 
-.allform-list-focus1 {
-    background-color: #f52b54 !important;
-}
+// .allform-list-focus1 {
+//     background-color: #f52b54 !important;
+// }
 
 .allform-list-focusnone {
     background: #616161 !important;
@@ -345,8 +345,16 @@ ul.CTAs a {
 
 .anchor_text_color {
     color: white !important;
+    padding: 14px;
 }
-
+.allform-style{
+margin-bottom: 0 !important;
+padding-bottom: 0 !important;
+}
+.anchor_text_color:hover{
+    padding: 14px;
+    color: #fff !important;
+}
 .allform-bg-color {
     background-color: #dc143c;
 }
@@ -540,6 +548,8 @@ ul.CTAs a {
     right: 0px;
     border: 1px solid #dc143c;
     border-top-right-radius: 0px;
+    width: 202px;
+    color: #fff;
 }
 
 .all-form-anchor {
@@ -607,6 +617,7 @@ ul.CTAs a {
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
+    width: 30px;
 }
 
 #menuToggle-allform input {
@@ -691,13 +702,53 @@ ul.CTAs a {
     list-style: none;
     margin-top: -7px;
 }
-
+.maincontainer-inbox-navbar{
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
 @media (max-width: 480px) {
+    .navtabs-allform{
+        border-bottom: 1px solid #dee2e6;
+        display: flex !important;
+        /* flex-direction: column; */
+        /* display: inline-flex; */
+        justify-content: space-around;
+    }
+    .maincontainer-inbox-navbar{
+        margin: 1px;
+        padding: 1px;
+    }
+    .inbox-navbar{
+        display: block !important;
+
+    }
+    .sidebars-navbarall-form{
+        // margin-left: 0 !important;
+        margin: auto;
+        width: 92% !important;
+    margin: auto;
+
+    }
+    .archive-navbar{
+        margin-left: 0 !important;
+        margin: auto !important;
+        width: 92% !important;
+    }
+    .content-allform-data{
+        text-align: center;
+    }
+    .inbox-allnavbar{
+        padding: 0 !important;
+    }
     .formlink{
         margin-top: 4px;
     }
     .navbar-allform-nav {
         justify-content: space-around;
+    }
+    .nav-allform-mobile {
+        background-color: #dc143c;
+        height: 69px;
     }
     .navform .button-dropdown{
         top: 0;
@@ -728,4 +779,24 @@ ul.CTAs a {
     .sidebar-offcanvas{
         background-color: #F4F5F7;
     }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+.navtabs-allform{
+    display: block;
+}
+.tablet-navbar{
+    display: flex;
+    flex-direction: row !important;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row !important;
+}
+.archive-navbar{
+    margin-left: 0 !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+}
 }

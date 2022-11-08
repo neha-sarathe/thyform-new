@@ -7,6 +7,7 @@ import { InboxNavbar } from './InboxNavbar';
 import { FaTrashAlt, FaTrashRestoreAlt, FaCheck } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import Mobilenav from './Mobilenav';
 export const Trash = ({ darkmodes, setDarkmodes }) => {
 
     let sidebaroption = ""
@@ -21,13 +22,14 @@ export const Trash = ({ darkmodes, setDarkmodes }) => {
                 <div className='full_width'>
                     <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
                         <Navbarallform />
-                        <div className='border rounded p-4 m-4'>
+                        <Mobilenav darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
+                        <div className='border rounded maincontainer-inbox-navbar'>
                             {/* <h3 className='text-start'>Inbox</h3> */}
 
                             <InboxNavbar />
                             <div className='row'>
                                 <div className='col-md-4'>
-                                    <nav id="sidebars" className={darkmodes ? "text-white border-end" : "text-dark border-end"}>
+                                    <nav id="sidebars" className={darkmodes ? "text-white border-end sidebars-navbarall-form archive-navbar " : "text-dark border-end sidebars-navbarall-form archive-navbar "}>
                                     <div class="input-group">
                       <span class="input-group-prepend">
                         <div class="input-group-text bg-transparent border-right-0 inbox_search">
