@@ -27,7 +27,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                             {/* Direct link div start */}
                             <div className='main_w'>
                                 <div className=' underline d-flex align-items-center '>
-                                    <li className='bg-primary py- px-2 mt-4  text-white fw-bold fs-4 rounded-1'>
+                                    <li className='bg-icon-color py- px-2 mt-4  text-white fw-bold fs-4 rounded-1'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
                                     </li>
                                     <li className='fs-6 text-black mt-5 pb-2 map'>

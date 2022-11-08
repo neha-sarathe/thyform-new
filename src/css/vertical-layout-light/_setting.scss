@@ -997,7 +997,25 @@ body {
 
 .Main_bg:hover {
   background-color: #09f !important;
+  color: #ffffff !important;
 
+}
+.Main_bg p{
+  color: inherit;
+}
+.Main_bg_green:hover {
+  background-color: #58b966 !important;
+  color: #ffffff !important;
+}
+.Main_bg_green p{
+  color: inherit;
+}
+.Main_bg_violet:hover{
+  background-color: #b559d4 !important;
+  color: #ffffff !important;
+}
+.Main_bg_violet p{
+  color: inherit;
 }
 
 .enda {
@@ -1044,9 +1062,9 @@ body {
   border: 1px solid #dc143c;
   color: #fff;
   border-radius: 4px;
-  padding: 12px;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 6px;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 .border-dotted {
@@ -1197,4 +1215,19 @@ body {
 }
 .para-green{
   color: rgb(92 171 64);
+}
+.skip-icon-color{
+  background-color: #58b966;
+}
+.email-icon-color{
+  background-color: #b559d4;
+}
+.pdf-download-btn{
+  background-color: #78bb07;
+  border: 1px solid #78bb07;
+  color: #ffffff;
+}
+.pdf-download-btn:hover{
+  background-color: #07bc0c;
+  border: 1px solid #07bc0c;
 }
