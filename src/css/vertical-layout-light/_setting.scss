@@ -650,7 +650,8 @@ body {
 }
 
 .form-setting-h1 {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
   margin-bottom: 0;
 }
 
@@ -669,8 +670,9 @@ body {
 }
 
 .form-setting-title {
-  font-size: 19px;
+  font-size: 16px;
   margin-bottom: 2px;
+  font-weight: 700;
 }
 
 .form-setting-para {
@@ -711,9 +713,9 @@ body {
   border: 1px solid #dc143c;
   color: #fff;
   border-radius: 4px;
-  padding: 12px;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 7px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
 .thankyou-radio {
@@ -886,6 +888,7 @@ body {
 .heading_css {
   color: #dc143c !important;
   margin-left: 5px !important;
+  font-size: 16px !important;
 }
 
 .succes {
@@ -1031,9 +1034,9 @@ body {
   border: 1px solid #dc143c;
   color: #fff;
   border-radius: 4px;
-  padding: 12px;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 7px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
 .back-btn-in {
@@ -1180,4 +1183,18 @@ body {
 
 .bg-icon-color {
   background-color: #dc143c !important;
+}
+
+.heading_5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.condition-title {
+  font-size: 16px;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+.para-green{
+  color: rgb(92 171 64);
 }

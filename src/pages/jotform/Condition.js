@@ -56,7 +56,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
         <div className="container ">
           <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
-            <div className="col- col_6 set_margin">
+            <div className="col_6 set_margin">
 
               {/* Direct link div start */}
               <div className='main_w'>
@@ -73,7 +73,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               </div>
               {!show ? (
                 <>
-                  <button className="border border-white btn-block" type="button" onClick={() => {
+                  <button className="btn-block" type="button" onClick={() => {
                     setShow(true);
                   }}>
                     <div className='d-flex justify-content-center align-items-center py-2 border-theme'>
@@ -108,7 +108,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
 
                                 <li className='mx-4 '>
 
-                                  <h5 className='remider fw-bold .showhover'>SHOW / HIDE FIELD</h5>
+                                  <h5 className='heading_5 remider fw-bold .showhover'>SHOW / HIDE FIELD</h5>
                                   <p className='remider fs_6 showhover'>Change visibility of field(s) depending on `IF` State conditions.</p>
 
                                 </li>
@@ -137,7 +137,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                   <FaCalculator />
                                 </li>
                                 <li className='mx-4 '>
-                                  <h5 className='remider fw-bold .showhover'>UPDATE / CALCULATE FIELD</h5>
+                                  <h5 className='heading_5 remider fw-bold .showhover'>UPDATE / CALCULATE FIELD</h5>
                                   <p className='remider fs_6 showhover'>Use values from fields to do complex calculations.</p>
                                 </li>
                               </div>
@@ -166,7 +166,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                   <FaStarOfLife />
                                 </li>
                                 <li className='mx-4 '>
-                                  <h5 className='remider fw-bold .showhover'>ENABLE / REQUIRE FIELD</h5>
+                                  <h5 className='heading_5 remider fw-bold .showhover'>ENABLE / REQUIRE FIELD</h5>
                                   <p className='remider fs_6 showhover'>Require, Disable and Set Content Mask on a field.</p>
                                 </li>
                               </div>
@@ -191,7 +191,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                   <FaShare />
                                 </li>
                                 <li className='mx-4 '>
-                                  <h5 className='remider fw-bold .showhover'>SKIP TO / HIDE A PAGE</h5>
+                                  <h5 className='heading_5 remider fw-bold .showhover'>SKIP TO / HIDE A PAGE</h5>
                                   <p className='remider fs_6 showhover'>Allow users to jump to a part of your form according to their choices.</p>
                                 </li>
                               </div>
@@ -216,7 +216,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                   <FaCheckCircle />
                                 </li>
                                 <li className='mx-4 '>
-                                  <h5 className='remider fw-bold .showhover'>CHANGE “THANK YOU” PAGE</h5>
+                                  <h5 className='heading_5 remider fw-bold .showhover'>CHANGE “THANK YOU” PAGE</h5>
                                   <p className='remider fs_6 showhover'>Change "Thank You Page" action according to the form submission.</p>
                                 </li>
                               </div>
@@ -242,7 +242,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                                   <FaEnvelope />
                                 </li>
                                 <li className='mx-4 '>
-                                  <h5 className='remider fw-bold .showhover'>CHANGE E-MAIL RECIPIENT</h5>
+                                  <h5 className='heading_5 remider fw-bold .showhover'>CHANGE E-MAIL RECIPIENT</h5>
                                   <p className='remider fs_6 showhover'>Redirect your e-mail alerts according to the form entry.</p>
                                 </li>
                               </div>

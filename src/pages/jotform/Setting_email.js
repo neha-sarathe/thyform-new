@@ -35,11 +35,11 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
 
               {/* <div className="accordion" id="accordionExample"> */}
 
-              <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+              <div className={"p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark")}>
                 {!show ? (
                   <>
                     <div>
-                      <button className="border border-white btn-block" type="button" onClick={() => {
+                      <button className="btn-block" type="button" onClick={() => {
                         setShow(true);
                       }}>
                         <div className='d-flex justify-content-center align-items-center py-2 border-theme'>
@@ -51,6 +51,12 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                           </div>
                         </div>
                       </button>
+                    </div>
+                    <div className='p-4 text-center'>
+                      <li>
+                        <h5 className='fs-7 fw-bold heading_5 remider para-green'>You don't have any saved emails.</h5>
+                        <p className='paragraph remider'>Create beautiful notification and autoresponder emails.</p>
+                      </li>
                     </div>
                     {/*
                     <form className={' shadow-sm  rounded-1 p-3 position-relative mt-4 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
