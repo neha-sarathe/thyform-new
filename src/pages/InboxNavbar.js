@@ -24,9 +24,9 @@ export const InboxNavbar = ({ darkmodes, setDarkmodes }) => {
                     </ul>
                 </div>
             </nav> */}
-            <nav className={"navbar navbar-expand-lg all-navbar navbar-light bg-light pt-0 pb-0 " + (darkmodes ? "text-dark trans_background border-bottom  " : "text-dark trans_background border-bottom ")}>
-                <div class="container-fluid  ps-1">
-                    <ul class="nav nav-tabs">
+            <nav className={"navbar inbox-allnavbar navbar-expand-lg all-navbar navbar-light bg-light pt-0 pb-0 " + (darkmodes ? "text-dark trans_background border-bottom  " : "text-dark trans_background border-bottom ")}>
+                <div class="container-fluid  ps-1 inbox-navbar">
+                    <ul class="nav nav-tabs navtabs-allform">
                         <li class={"nav-item active formlink inbox_link_bgcolor " + (pageactive[2] === 'inbox' ? "inbox-list-focus1" : '')}>
                             <a href='/allform/inbox' class="inbox_nav_link  "><RiInboxUnarchiveFill/> Inbox</a>
                         </li>
