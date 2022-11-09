@@ -31,6 +31,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
     };
 
     const options = {
+        // maintainAspectRatio : false,
         scales: {
             yAxes: [{
                 ticks: {
@@ -62,7 +63,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
     return (
         <>
             <div className='row'>
-                <div className='col-md-12 m-5 p-5 text-center'>
+                <div className='col-sm-12 optionNavbar-linchart text-center'>
                     {/* <p>You are not authorized to see this form</p> */}
                     <Line data={data} options={options} />
                 </div>
@@ -86,7 +87,7 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
                     </ul>
                 </div>
             </nav> */}
-            <div class="d-flex mb-4 border-bottom ">
+            <div class="option-navbar-detailsshow mb-4 border-bottom ">
                 <div class="p-2 flex-fill d-flex justify-content-center">
                     <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")} type="button" onClick={() => onViewShow('view')}><p className="h1"> 6 </p> Views</button>
                 </div>
@@ -102,8 +103,11 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
             </div>
             <Tabs
                 defaultActiveKey="traffic"
-                id="uncontrolled-tab-example"
-                className="mb-3 "
+                // id="uncontrolled-tab-example"
+                // className="mb-3 "
+                 id="justify-tab-example"
+      className="mb-3"
+      justify
             >
                 <Tab eventKey="traffic" title="TRAFFIC">
                     {viewShow === "response"

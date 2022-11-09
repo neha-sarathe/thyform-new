@@ -395,7 +395,7 @@ export const Dashboard = (props) => {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="col-sm-6">
+                                  <div className="col-sm-6 pl-0">
                                     <div className="d-flex justify-content-between align-items-center">
                                       <div className="circle-progress-width">
                                         <div id="visitperday" className="progressbar-js-circle pr-2">

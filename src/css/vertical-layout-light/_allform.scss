@@ -706,7 +706,40 @@ padding-bottom: 0 !important;
     margin: 1.5rem;
     padding: 1.5rem;
 }
+.optionNavbar-linchart{
+    margin: 0;
+    padding: 3rem;
+}
+.option-navbar-detailsshow{
+    display: flex;
+    flex-wrap: wrap;
+}
 @media (max-width: 480px) {
+    .profile-image-page{
+        margin-top: 26%;
+    }
+    .email-input-myprofile{
+        padding-top: 1.5rem!important;
+    }
+    .optionNavbar-linchart{
+        margin: 0;
+        padding: 0;
+    }
+    .option-navbar-detailsshow{
+        display: block;
+    }
+    .navformAnalytics-nav{
+        display: none !important;
+    }
+    #justify-tab-example-tabpane-device{
+        overflow: scroll;
+    }
+    #justify-tab-example-tabpane-platform{
+        overflow: scroll;
+    }
+    #justify-tab-example-tabpane-traffic{
+        overflow: scroll;
+    }
     .navtabs-allform{
         border-bottom: 1px solid #dee2e6;
         display: flex !important;
@@ -799,4 +832,10 @@ padding-bottom: 0 !important;
     min-width: 100% !important;
     max-width: 100% !important;
 }
+// .navbar .navbar-menu-wrapper{
+//     width: 83% !important;
+// }
+// .navbar .navbar-brand-wrapper{
+//     width: 17% !important;
+// }
 }

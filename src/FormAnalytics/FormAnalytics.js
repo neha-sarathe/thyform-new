@@ -3,7 +3,7 @@ import { NavFormAnalytics } from './NavFormAnalytics';
 import { OptionNavbar } from './OptionNavbar';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-
+import Mobilenav from '../pages/Mobilenav';
 export const FormAnalytics = ({ darkmodes, setDarkmodes }) => {
     console.log("darkmodes on FormAnalytics.....", darkmodes);
     return (
@@ -13,7 +13,7 @@ export const FormAnalytics = ({ darkmodes, setDarkmodes }) => {
                 <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
 
                     <NavFormAnalytics darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
-
+<Mobilenav  darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
                     <div className='border rounded p-4 m-4'>
                      
                         <nav class="navbar navbar-light bg-light">

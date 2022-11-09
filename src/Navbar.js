@@ -4,10 +4,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min';
 import $ from "jquery";
+import { useSelector } from 'react-redux';
 import { FiAlignJustify } from "react-icons/fi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 export const Navbar = ({ darkmodes, setDarkmodes,setMinimizemob }) => {
+  const showimage = useSelector(state=>state);
+  console.log(showimage.ImageData,'showimagessdfs')
   $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
       $('#sidebars').toggleClass('active');
@@ -235,11 +238,12 @@ export const Navbar = ({ darkmodes, setDarkmodes,setMinimizemob }) => {
               </div>
             </li> */}
             <li class="nav-item dropdown d-none d-lg-block user-dropdown">
-              <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="img-xs rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image" /> </a>
+            {showimage && showimage.ImageData && !showimage.ImageData.preview == "" ? <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="img-xs rounded-circle" src={showimage.ImageData.preview} alt="Profile image" /> </a>:<a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="img-xs rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image" /> </a>}  
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
-                  <img class="img-md rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image" />
+                {showimage && showimage.ImageData && !showimage.ImageData.preview == "" ?<img class="img-md rounded-circle" src={showimage.ImageData.preview} alt="Profile image" />:<img class="img-md rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image" />}
                   <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
                   
                   <Link to="/myprofile" className="dropdown-item">Profile Settings</Link>
