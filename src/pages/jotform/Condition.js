@@ -88,7 +88,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                 </>
               ) : (
                 <>
-                  <button className="show-more-btn mb-4 " onClick={() => {
+                  <button className="back-btn-in mb-4 " onClick={() => {
                     setShow(false);
                   }}>   <i className='fa fa-arrow-left text-white'></i>
                   </button>
@@ -108,8 +108,8 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
 
                                 <li className='mx-4 '>
 
-                                  <h5 className='heading_5 remider fw-bold .showhover'>SHOW / HIDE FIELD</h5>
-                                  <p className='remider fs_6 showhover'>Change visibility of field(s) depending on `IF` State conditions.</p>
+                                  <h5 className='heading_5 remider fw-bold'>SHOW / HIDE FIELD</h5>
+                                  <p className='remider fs_6'>Change visibility of field(s) depending on `IF` State conditions.</p>
 
                                 </li>
 
@@ -183,16 +183,16 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/skippage">
-                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                        <div className='d-flex Main_bg_green justify-content-between align-items-center border border-black px-3 py-3'>
                           <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
-                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                <li className='shown px-2 rounded-1 calculater skip-icon-color'>
                                   <FaShare />
                                 </li>
                                 <li className='mx-4 '>
-                                  <h5 className='heading_5 remider fw-bold .showhover'>SKIP TO / HIDE A PAGE</h5>
-                                  <p className='remider fs_6 showhover'>Allow users to jump to a part of your form according to their choices.</p>
+                                  <h5 className='heading_5 remider fw-bold'>SKIP TO / HIDE A PAGE</h5>
+                                  <p className='remider fs_6'>Allow users to jump to a part of your form according to their choices.</p>
                                 </li>
                               </div>
                             </div>
@@ -208,16 +208,16 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changethanks">
-                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                        <div className='d-flex Main_bg_green justify-content-between align-items-center border border-black px-3 py-3'>
                           <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
-                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                <li className='shown px-2 rounded-1 calculater skip-icon-color'>
                                   <FaCheckCircle />
                                 </li>
                                 <li className='mx-4 '>
-                                  <h5 className='heading_5 remider fw-bold .showhover'>CHANGE “THANK YOU” PAGE</h5>
-                                  <p className='remider fs_6 showhover'>Change "Thank You Page" action according to the form submission.</p>
+                                  <h5 className='heading_5 remider fw-bold '>CHANGE “THANK YOU” PAGE</h5>
+                                  <p className='remider fs_6'>Change "Thank You Page" action according to the form submission.</p>
                                 </li>
                               </div>
                             </div>
@@ -234,16 +234,16 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   <div className="accordion mt-3" id="accordionExample">
                     <div className={"accordion-item standard " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                       <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/changeemail">
-                        <div className='d-flex Main_bg justify-content-between align-items-center border border-black px-3 py-3'>
+                        <div className='d-flex Main_bg_violet justify-content-between align-items-center border border-black px-3 py-3'>
                           <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
-                                <li className='shown px-2 rounded-1 calculater' style={{ backgroundColor: "#b559d4" }}>
+                                <li className='shown px-2 rounded-1 calculater email-icon-color'>
                                   <FaEnvelope />
                                 </li>
                                 <li className='mx-4 '>
-                                  <h5 className='heading_5 remider fw-bold .showhover'>CHANGE E-MAIL RECIPIENT</h5>
-                                  <p className='remider fs_6 showhover'>Redirect your e-mail alerts according to the form entry.</p>
+                                  <h5 className='heading_5 remider fw-bold '>CHANGE E-MAIL RECIPIENT</h5>
+                                  <p className='remider fs_6'>Redirect your e-mail alerts according to the form entry.</p>
                                 </li>
                               </div>
                             </div>

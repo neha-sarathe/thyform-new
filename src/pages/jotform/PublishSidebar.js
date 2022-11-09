@@ -259,7 +259,7 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
                       </ul>
                     </Link>
                   </div>
-                  <div className={'quick list-sidebar-jotform p-3 '+ (page[2] === 'Prefill' ? 'list-sidebar-focus' : ' list-sidebarjotform')}>
+                  {/* <div className={'quick list-sidebar-jotform p-3 '+ (page[2] === 'Prefill' ? 'list-sidebar-focus' : ' list-sidebarjotform')}>
                     <Link to='/publish/Prefill'>
                       <ul className='d-flex '>
                         <li className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"#" + (darkmodes ? "fff" : "fff")+ (page[2] === 'Prefill' ?  'fff':'')} viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M88,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H96A8,8,0,0,1,88,64Zm128,56H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM56,56H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Z"></path></svg></li>
@@ -269,7 +269,7 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
                         </li>
                       </ul>
                     </Link>
-                  </div>
+                  </div> */}
                   <div className={'quick list-sidebar-jotform p-3 '+ (page[2] === 'Pdf' ? 'list-sidebar-focus' : ' list-sidebarjotform')}>
                     <Link to='/publish/Pdf'>
                       <ul className='d-flex '>

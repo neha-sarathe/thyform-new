@@ -79,7 +79,7 @@ const Pdf = ({darkmodes,setDarkmodes }) => {
                       </li>
                       <li className='fs-6 text-black mt-5 pb-2 map'>
                         <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")} >PDF</h5>
-                        <p className='paragraph '>Download fillable PDF.</p>
+                        <p className='paragraph'>Download fillable PDF.</p>
                       </li>
                     </div>
                   </div>
@@ -91,16 +91,16 @@ const Pdf = ({darkmodes,setDarkmodes }) => {
                       <div className='d-flex align-items-center justify-content-between'>
                         <div className='main_w'>
                           <div className=' underline d-flex align-items-center '>
-                            <li className='fs-6 text-black map'>
+                            <li className='fs-6 text-black map ml-0'>
                               <h5 className={'fs-8 heading_5 remider '+ (darkmodes ? "text-white " : "text-dark ")}>DOWNLOAD PDF</h5>
-                              <p className='paragraph '>Download fillable version of your form in PDF</p>
+                              <p className='paragraph mb-0'>Download fillable version of your form in PDF</p>
                             </li>
                           </div>
                         </div>
                         <div>
-                          <ul className='d-flex align-items-center justify-content-center'>
+                          <ul className='d-flex align-items-center justify-content-center mb-0'>
                             <li className=''>
-                              <button className='d-flex border border-white bg-success bg-opacity-75 p-2 '>
+                              <button className='d-flex pdf-download-btn bg-opacity-75 p-2 rounded-1'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M74.3,85.7A8.1,8.1,0,0,1,85.7,74.3L120,108.7V24a8,8,0,0,1,16,0v84.7l34.3-34.4a8.1,8.1,0,0,1,11.4,11.4l-48,48a8.2,8.2,0,0,1-11.4,0ZM240,136v64a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V136a16,16,0,0,1,16-16H84.4a3.6,3.6,0,0,1,2.8,1.2L111,145a24.1,24.1,0,0,0,34,0l23.8-23.8a3.6,3.6,0,0,1,2.8-1.2H224A16,16,0,0,1,240,136Zm-40,32a12,12,0,1,0-12,12A12,12,0,0,0,200,168Z"></path></svg>
                                 <p className='text-white fw-semibold fs-6 remider px-2'>DOWNLOAD</p>
 
