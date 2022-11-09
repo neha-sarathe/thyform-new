@@ -9,11 +9,12 @@
     padding: 0.75rem 1.5rem
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
-    color: #ffffff;
-    background-color: #f52b54  ;
-    border-color: #ebedf2 #ebedf2 #ffffff;
+    color: #ffffff !important;
+    background-color: #f52b54 !important;
+    border-color: #ebedf2 #ebedf2 #ffffff !important;
     height: 100%;
 }
+
 .fill-btn{
     background-color: transparent;
     border: none;
@@ -843,4 +844,10 @@ color:black;
 
 .mr-prev-nav{
   margin-top: 16px;
+}
+.link-btn-txt{
+  color: #ffffff !important;
+}
+.link-btn-txt:hover{
+  border-color: transparent !important;
 }

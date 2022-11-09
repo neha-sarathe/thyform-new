@@ -3,6 +3,7 @@ import { FiCheck } from "react-icons/fi";
 import { AiFillCheckCircle } from "react-icons/ai";
 import Navform from './Navform';
 import SettingSidebar from './SettingSidebar';
+// import EditorThanks from './EditorThanks';
 
 const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
   const [radio, setRadio] = useState("Limited");
@@ -73,6 +74,7 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
             {radio === "Limited" ?(
               <>
             <Navform placeholder={"Write something or insert a heart  ♥"} />
+            {/* <EditorThanks/> */}
             </>
             ):(
             <>     

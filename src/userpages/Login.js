@@ -203,7 +203,7 @@ const Login = (props) => {
                         {/* <a href="#" class="auth-link text-black text-end">Forgot password?</a> */}
                       </div>
                       <div class="d-grid mt-3 col-12  mb-2 ms-0 me-0 d-flex justify-content-center login-button-color">
-                        <button class="btn login-btn-width text-white" type="button" onClick={() => { props.setUser(); navigate("../allform/allform"); window.location.reload(false); }}>
+                        <button class="login-btn-css login-btn-width text-white" type="button" onClick={() => { props.setUser(); navigate("../allform/allform"); window.location.reload(false); }}>
                           Log in
                         </button>
                         {/* <button class="btn btn-primary" type="button">Button</button> */}
