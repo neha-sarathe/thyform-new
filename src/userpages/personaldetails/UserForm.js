@@ -85,16 +85,17 @@ const UserForm = (props) => {
         setPinError(false)
     }
     const nextPage = () => {
-        // const regex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$/;
-
+        const regex = /^(?=.*[0-9]{3,3})(?=.*[!@#$%^&*]{5,5})[a-zA-Z0-9!@#$%^&*]{20,20}$/;
+const condition = regex.test(password);
+console.log(condition,'conditionsss12364566')
         if (name === '') {
             setError('Please Enter Username')
         } else if (password === '') {
             setPasswordError('Please enter Password')
         } 
-        // else if (!regex.test(password)) {
-        //     setPasswordError('validation')
-        // } 
+        else if (!regex.test(password)) {
+            setPasswordError('validation')
+        } 
         else if (confirm === '') {
             setConfirmError('Please enter Confirm Password')
         } else if (pinNumber.length < 6) {
@@ -166,6 +167,7 @@ const UserForm = (props) => {
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={password}
                                                     onChange={onPassword}
+                                                    maxLength={20}
                                                 />
                                                 {/* <span className="password_icon" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span> */}
 
@@ -184,6 +186,7 @@ const UserForm = (props) => {
                                                         type="password"
                                                         onChange={onConfirm}
                                                         // value={confirm}
+                                                        maxLength={20}
                                                         placeholder="Enter your confirm password"
                                                         className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     />

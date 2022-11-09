@@ -1,13 +1,14 @@
 import {
     STORAGE_REQUEST,
     STORAGE_SUCCESS,
-    STORAGE_ERROR,
+    STORAGE_ERROR,IMAGE_SAVE_REQUEST,IMAGE_SAVE_SUCCESS,IMAGE_SAVE_ERROR
   } from "../Constants";
   
   const initialState = {
     loading: false,
     Storage:null,
     error: "",
+    ImageData:null
   };
  
   const StorageData = (state = initialState, action) => {
@@ -30,6 +31,23 @@ import {
           Storage: null,
           error: action.error,
         };
+        case IMAGE_SAVE_REQUEST:
+          return {
+            ...state,
+            loading: true,
+          };
+        case IMAGE_SAVE_SUCCESS:
+          return {
+            loading: false,
+            ImageData: action.payload,
+            error: "",
+          };
+        case IMAGE_SAVE_ERROR:
+          return {
+            loader: false,
+            ImageData: null,
+            error: action.error,
+          };
       default:
         return state;
     }
