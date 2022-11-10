@@ -241,7 +241,7 @@ const PersonalDetails = (props) => {
 
     const onPostcode = e => {
         const { value } = e.target;
-        const re = /^[A-Za-z0-9]+$/;
+        const re =/^[0-9a-zA-Z-,]+(\s{0,1}[0-9a-zA-Z-, ])*$/;
         if (value === "" || re.test(value)) {
             setpostCode(value)
         }
