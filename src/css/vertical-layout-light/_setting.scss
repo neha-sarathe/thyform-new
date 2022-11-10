@@ -840,7 +840,7 @@ body {
 }
 
 .jotlogo-width {
-  width: 286px;
+  width: 300px;
   background: #F4F5F7;
 
 }
@@ -1001,21 +1001,26 @@ body {
   color: #ffffff !important;
 
 }
-.Main_bg p{
+
+.Main_bg p {
   color: inherit;
 }
+
 .Main_bg_green:hover {
   background-color: #58b966 !important;
   color: #ffffff !important;
 }
-.Main_bg_green p{
+
+.Main_bg_green p {
   color: inherit;
 }
-.Main_bg_violet:hover{
+
+.Main_bg_violet:hover {
   background-color: #b559d4 !important;
   color: #ffffff !important;
 }
-.Main_bg_violet p{
+
+.Main_bg_violet p {
   color: inherit;
 }
 
@@ -1214,21 +1219,26 @@ body {
   margin-bottom: 2px;
   font-weight: 500;
 }
-.para-green{
-  color: rgb(92 171 64);
+
+.para-green {
+  color: #dc143c;
 }
-.skip-icon-color{
+
+.skip-icon-color {
   background-color: #58b966;
 }
-.email-icon-color{
+
+.email-icon-color {
   background-color: #b559d4;
 }
-.pdf-download-btn{
-  background-color: #78bb07;
-  border: 1px solid #78bb07;
+
+.pdf-download-btn {
+  background-color: #dc143c;
+  border: 1px solid #dc143c;
   color: #ffffff;
 }
-.pdf-download-btn:hover{
-  background-color: #07bc0c;
-  border: 1px solid #07bc0c;
+
+.pdf-download-btn:hover {
+  background-color: #f52b54;
+  border: 1px solid #f52b54;
 }

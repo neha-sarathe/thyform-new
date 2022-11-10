@@ -92,8 +92,9 @@ const RegisterTwo = (props) => {
     }
 
     const nextPage = () => {
-        let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
-        var re =/^[a-z0-9]+(\.?info)?@+[A-Za-z]{5,}?.com$/
+        // let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
+        // var re =/^[a-z0-9]+(\.?info)?@+[A-Za-z]{5,}?.com$/
+        var re =/^[a-z0-9]+(\.?info)?@+[A-Za-z0-9]{5,}?.com$/
         // var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
         var res = re.test(message);
         console.log('res000000000000', res);
@@ -228,6 +229,7 @@ setSelectcheck(true)
                                                         className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                         value={message}
                                                         onChange={handleChange}
+                                                        placeholder="info@xxxxxx.com"
                                                     />
                                                     <p className="para-form show_result">{websiteaddError}</p>
                                                 </div>
