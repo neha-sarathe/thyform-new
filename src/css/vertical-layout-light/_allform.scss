@@ -812,6 +812,10 @@ padding-bottom: 0 !important;
     .sidebar-offcanvas{
         background-color: #F4F5F7;
     }
+    .visitor-circle{
+        padding-left: 0;
+    }
+ 
 }
 
 /* Media Query for Tablets Ipads portrait mode */
@@ -822,6 +826,10 @@ padding-bottom: 0 !important;
 .tablet-navbar{
     display: flex;
     flex-direction: row !important;
+}
+.visitor-cards{
+    position: relative;
+    top: 42px;
 }
 .navbar-nav{
     display: flex;

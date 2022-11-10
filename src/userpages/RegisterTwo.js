@@ -92,24 +92,23 @@ const RegisterTwo = (props) => {
     }
 
     const nextPage = () => {
-        // let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
-        // var re =/^[a-z0-9]+(\.?info)?@+[A-Za-z]{5,}?.com$/
-        var re =/^[a-z0-9]+(\.?info)?@+[A-Za-z0-9]{5,}?.com$/
+        let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
+        const re = /^(info)?@+[0-9A-Za-z]{5,}?.com$/
         // var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
-        var res = re.test(message);
-        console.log('res000000000000', res);
-        console.log(message, 'jfklsdjflksjdlkfjsldf', 'resresres', res, website, 'flsdjklfjsldkfjlksdjkflkds')
+        const resp = re.test(message);
+        console.log('res000000000000', resp);
+        console.log(message, 'jfklsdjflksjdlkfjsldf', 'resresres', resp, website, 'flsdjklfjsldkfjlksdjkflkds')
         if (selectedData === '') {
             setBusinessError('Please select an industry from the dropdown. If your industry is not listed, select other')
         } else if (txt === '') {
             setError('Please enter the number of employees your business has using only numbers')
         } else if (websiteError === false) {
             setWebsiteError('Please select yes or no')
-        } else if (!website === 'yes' || !res) {
+        } else if (!website === 'yes' || !resp) {
             setWebsiteaddError('Enter Website Address')
-        } else if (!res) {
+        } else if (!resp) {
             setWebsiteaddError("Please Enter Website Address")
-        } else if (res == null) {
+        } else if (resp == null) {
             setWebsiteUrl('Please Enter a Valid Website Address')
         }
         else {
@@ -129,10 +128,10 @@ const RegisterTwo = (props) => {
 
 
     };
-    const [selectcheck,setSelectcheck] = useState(false)
-const handlecheck = ()=>{
-setSelectcheck(true)
-}
+    const [selectcheck, setSelectcheck] = useState(false)
+    const handlecheck = () => {
+        setSelectcheck(true)
+    }
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />

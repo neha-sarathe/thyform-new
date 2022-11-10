@@ -21387,12 +21387,12 @@ code {
 }
 
 .home-tab .circle-progress-width {
-  width: 45px;
+  width: 42px;
 }
 
 @media (max-width: 991px) {
   .home-tab .circle-progress-width {
-    width: 50%;
+    width: 32%;
     margin-bottom: 20px;
   }
 }

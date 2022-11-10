@@ -315,7 +315,7 @@ export const Dashboard = (props) => {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="col-lg-8 d-flex flex-column">
+                      <div className="col-lg-12 col-xl-8 d-flex flex-column">
                         <div className="row flex-grow">
                           <div className="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
                             <div className={"card card-rounded " + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
@@ -337,9 +337,9 @@ export const Dashboard = (props) => {
                           </div>
                         </div>
                       </div>
-                      <div className="col-lg-4 d-flex flex-column">
+                      <div className="col-lg-12 col-xl-4 d-flex flex-column">
                         <div className="row flex-grow">
-                          <div className="col-md-6 col-lg-12 grid-margin stretch-card">
+                          <div className="col-md-6 col-lg-6 col-xl-12 grid-margin stretch-card">
                             <div className={"card  card-rounded Summary-status " + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark bg-primary")}>
                               <div className="card-body pb-0">
                                 <h4 className="card-title card-title-dash text-white mb-4">Status Summary</h4>
@@ -377,10 +377,10 @@ export const Dashboard = (props) => {
                               </div>
                             </div>
                           </div>
-                          <div className="col-md-6 col-lg-12 grid-margin stretch-card">
+                          <div className="col-md-6 col-lg-6 col-xl-12 grid-margin stretch-card">
                             <div className={"card card-rounded " + (props.darkmodes ? "text-white dash-chart-dark" : "text-dark dash-chart-light")}>
                               <div className="card-body">
-                                <div className="row">
+                                <div className="row visitor-cards">
                                   <div className="col-sm-6">
                                     <div className="d-flex justify-content-between align-items-center mb-2 mb-sm-0">
                                       <div className="circle-progress-width">
@@ -395,11 +395,11 @@ export const Dashboard = (props) => {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="col-sm-6 pl-0">
+                                  <div className="col-sm-6 visitor-circle">
                                     <div className="d-flex justify-content-between align-items-center">
                                       <div className="circle-progress-width">
                                         <div id="visitperday" className="progressbar-js-circle pr-2">
-                                          <div class="spinner-border text-light spinner_size" role="status">
+                                          <div class="spinner-border spinner-border-md text-primary spinner_size" role="status">
                                           <span class="visually-hidden">Loading...</span>
                                         </div></div>
                                       </div>
