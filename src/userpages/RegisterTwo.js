@@ -93,7 +93,7 @@ const RegisterTwo = (props) => {
 
     const nextPage = () => {
         let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
-       const re =/^[a-z0-9]*.info?@+[0-9A-Za-z]{5,}?.com$/
+       const re =/^(info)?@+[0-9A-Za-z]{5,}?.com$/
         // var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
        const resp = re.test(message);
         console.log('res000000000000', resp);
