@@ -28,7 +28,7 @@ const Register = (props) => {
   const [directorError, setDirectorError] = useState(false);
   const [checkError, setCheckError] = useState(false);
   const [website, setWebsite] = useState(false);
-  const [websiteName, setWebsiteName] = useState('www');
+  const [websiteName, setWebsiteName] = useState('');
   const [soleError, setSoleError] = useState(false);
   const [industryError, setIndustryError] = useState(false);
   const [employError, setEmployError] = useState(false);
@@ -38,6 +38,7 @@ const Register = (props) => {
   const [websiteUrl, setWebsiteUrl] = useState(false);
   const [searchText, setSearchText] = useState('');
   const [otherWebsiteName, setOtherWebsiteName] = useState('');
+  const [txtnoErr, setTxtnoErr] = useState(false);
 
 
   const companyHandle = (value) => {
@@ -129,11 +130,12 @@ const Register = (props) => {
 
   const onEmployeesNo = e => {
     const { value } = e.target;
-
-
     const re = /^[0-9\b]+$/;
-    if (value === "" || re.test(value)) {
+    if (value === "" || value.length <= 5 && re.test(value)) {
       setTxtno(value);
+      setTxtnoErr(false)
+    } else {
+      setTxtnoErr('Please enter no more than 5 characters.')
     }
     setEmployError(false)
   }
@@ -159,8 +161,6 @@ const Register = (props) => {
 
   const onBusinessNameOther = e => {
     const { value } = e.target;
-
-
     const re = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
     if (value === "" || re.test(value)) {
       setTxtbn2(value);
@@ -178,17 +178,21 @@ const Register = (props) => {
 
   const onEmployeesNoOther = e => {
     const { value } = e.target;
-
-
     const re = /^[0-9\b]+$/;
-    if (value === "" || re.test(value)) {
+    if (value === "" || value.length <= 5 && re.test(value)) {
       setTxtno2(value);
+      setEmpNoErr(false)
+    } else {
+      setEmpNoErr('Please enter no more than 5 characters.')
     }
     setOtherempError(false)
   }
   const onPostcode = e => {
     const { value } = e.target;
-    setpostCode(value)
+    const re = /^[0-9a-zA-Z-,]+(\s{0,1}[0-9a-zA-Z-, ])*$/;
+    if (value === "" || re.test(value)) {
+      setpostCode(value)
+    }
     setOtherPostcodeError(false)
   }
 
@@ -269,6 +273,20 @@ const Register = (props) => {
     setChecked(!checked)
     setCheckError(false)
   }
+  const handleFind = () => {
+    if (postCode === " ") {
+      console.log("errorrrrrrrrrrrrrrr", postCode);
+      setFindError("Please enter your postcode, press Find address and select your address from the options")
+    }
+    else {
+      setShow2(true)
+      setFindError(false)
+    }
+  }
+  const handleAddressSelect = (value) => {
+    setAddressSelect(value)
+
+  }
 
   const [otherBusinessError, setOtherBusinessError] = useState(false);
   const [otherIndustryError, setOtherIndustryError] = useState(false);
@@ -276,8 +294,16 @@ const Register = (props) => {
   const [otherPostcodeError, setOtherPostcodeError] = useState(false);
   // const [otherSpendError, setOtherSpendError] = useState(false);
   const [otherWebsiteError, setOtherWebsiteError] = useState(false);
+  const [empNoErr, setEmpNoErr] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [findError, setFindError] = useState(false);
+  const [addressSelect, setAddressSelect] = useState('');
+  const [websiteaddError,setWebsiteaddError]=useState(false);
 
   const nextPage = () => {
+    const re = /^(info)?@+[0-9A-Za-z]{5,}?.com$/
+    const resp = re.test(websiteName);
+    console.log('res000000000000', resp);
     if (radio === "Limited") {
       if (txt === '') {
         setError('We could not find that company. Please enter at least the first three characters of your company name or your full company registration number.')
@@ -294,27 +320,31 @@ const Register = (props) => {
       if (txtbn === '') {
         setSoleError('Please enter your business name')
       } else if (industryData === '') {
-        setIndustryError('Please select an industry from the dropdown. If your industry isn not listed, select other')
+        setIndustryError('Please select an industry from the dropdown. If your industry is not listed, select other')
       } else if (txtno === '') {
         setEmployError('Please enter the number of employees your business has using only numbers')
       } else if (website === false) {
         setWebsiteSoleError('Please select yes or no')
-      } else {
+      } else if (!resp) {
+        setWebsiteaddError('Please Enter a Valid Website Address')
+    } else if (resp == null) {
+        setWebsiteUrl('Please Enter Website Address')
+    } else {
         navigate('/registerthree')
       }
     } else {
       if (txtbn2 === '') {
-        setOtherBusinessError('Please select your business type')
-      } else if (txtno2 === '') {
+        setOtherBusinessError('Please enter your business name')
       } else if (industryName === '') {
-        setOtherIndustryError('Please select your business type')
+        setOtherIndustryError('Please select an industry from the dropdown')
       } else if (txtno2 === '') {
-        setOtherempError('Please select your business type')
+        setOtherempError('Please enter number of employees')
       } else if (postCode === '') {
-        setOtherPostcodeError('Please select your business type')
+        setOtherPostcodeError('Please enter your postcode, press Find address and select your address from the options')
       } else if (otherWebsiteName === '') {
         setOtherWebsiteError('Please select yes or no')
-      } else {
+      } 
+      else {
         navigate('/registerfour')
       }
     }
@@ -332,14 +362,13 @@ const Register = (props) => {
   }
   const onWebsite = (value) => {
     setWebsiteName(value)
-    var res = websiteName.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-
-    if (res == null) {
-      setWebsiteUrl('Please enter a valid website address')
-    }
-    else {
-      setWebsiteUrl(true)
-    }
+    // var res = websiteName.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    //     if (res == null) {
+    //   setWebsiteUrl('Please enter a valid website address')
+    // }
+    // else {
+    //   setWebsiteUrl(true)
+    // }
   }
 
 
@@ -708,6 +737,7 @@ const Register = (props) => {
                             value={txtno}
                             onChange={onEmployeesNo} />
                           <p className="para-form show_result">{employError}</p>
+                          <p className="para-form show_result">{txtnoErr}</p>
                         </div>
 
                       </div>
@@ -773,8 +803,9 @@ const Register = (props) => {
                               className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                               value={websiteName}
                               onChange={(event) => onWebsite(event.target.value)}
+                              placeholder="info@xxxxxx.com"
                             />
-                            <p className="para-form show_result">{websiteUrl}</p>
+                            <p className="para-form show_result">{websiteUrl} {websiteaddError}</p>
                           </div>
                         </div>
                         : ''}
@@ -884,7 +915,7 @@ const Register = (props) => {
                           <input type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} placeholder="Enter"
                             value={txtno2}
                             onChange={onEmployeesNoOther} />
-                          <p className="para-form show_result">{otherempError}</p>
+                          <p className="para-form show_result">{otherempError} {empNoErr}</p>
                         </div>
 
                       </div>
@@ -903,7 +934,7 @@ const Register = (props) => {
                             />
 
                             <div className="ps-4 find-btn-postcode">
-                              <button type="submit" className="btn-default btn-find-post">
+                              <button type="submit" className="btn-default btn-find-post" onClick={handleFind}>
                                 Find &nbsp;  <i className="icon-search " style={{ transform: 'rotate(80deg)' }}></i>
                               </button>
                             </div></div>
@@ -911,7 +942,7 @@ const Register = (props) => {
                           {!show ? (
                             <p
                               onClick={() => {
-                                setShow(true);
+                                (setShow(true) || setShow2(!show2));
                               }}
                               className="pt-2"
                             >
@@ -920,7 +951,7 @@ const Register = (props) => {
                           ) : (
                             <p
                               onClick={() => {
-                                setShow(false);
+                                (setShow(false) || setShow2(!show2));
                               }}
                             >
                               Find address by lookup
@@ -929,8 +960,32 @@ const Register = (props) => {
                         </div>
 
                       </div>
+                      {show2 ? (<div className="d-flex mt-3 align-items-center">
+                        <div className=" lables-div">
+                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address</label>
+                        </div>
+                        <div className="search-input-div">
+                          <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                            id="exampleFormControlSelect2"
+                            value={addressSelect}
+                            placeholder="Enter Address"
+                          >
+                            <option value=''>select</option>
+                            {select_data.map((option, index) => (
+                              <option key={index} value={option.value}>
+                                {option.value}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
 
-                      {show ? (
+                      </div>
+                      ) : (
+                        " "
+                      )
+                      }
+
+                      {show || addressSelect ? (
                         <>
                           {" "}
                           <div>

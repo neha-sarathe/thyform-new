@@ -5,6 +5,7 @@ import Navform from './Navform';
 import SettingSidebar from './SettingSidebar';
 // import EditorThanks from './EditorThanks';
 
+
 const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
   const [radio, setRadio] = useState("Limited");
   const [show, setShow] = useState(false);
@@ -75,6 +76,8 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
               <>
             <Navform placeholder={"Write something or insert a heart  ♥"} />
             {/* <EditorThanks/> */}
+           
+            
             </>
             ):(
             <>     

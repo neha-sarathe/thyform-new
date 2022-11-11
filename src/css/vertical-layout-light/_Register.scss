@@ -512,3 +512,6 @@ input[type=checkbox] {
 .business-btn-height {
     height: 37px;
 }
+.btn:focus{
+    box-shadow: none !important;
+    }
