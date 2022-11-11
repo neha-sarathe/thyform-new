@@ -74,10 +74,10 @@ const Register = (props) => {
         list = selectedItem.parentNode,
         x = window.event.clientX,
         y = window.event.clientY;
-
+console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.elementFromPoint(x, y),'document.elementFromPoint(x, y);')
       selectedItem.classList.add('drag-sort-active');
       let swapItem = document.elementFromPoint(x, y) === null ? selectedItem : document.elementFromPoint(x, y);
-
+      console.log(selectedItem.nextSibling,'list === swapItem.parentNode',swapItem,'swapItem',selectedItem.previosSibling)
       if (list === swapItem.parentNode) {
         swapItem = swapItem !== selectedItem.nextSibling ? swapItem : swapItem.nextSibling;
         list.insertBefore(selectedItem, swapItem);

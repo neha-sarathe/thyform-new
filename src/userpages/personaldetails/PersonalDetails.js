@@ -33,7 +33,7 @@ const PersonalDetails = (props) => {
     const [dateofBirthError, setDateofBirthError] = useState(false);
     const [nationality, setNationality] = useState('');
     const [nationalityError, setNationalityError] = useState(false);
-    const [PhoneNumber, setPhoneNumber] = useState('0');
+    const [PhoneNumber, setPhoneNumber] = useState(0);
     const [PhoneNumberError, setPhoneNumberError] = useState(false);
     const [mobileNumber, setMobileNumber] = useState('07');
     const [mobileNumberError, setMobileNumberError] = useState(false);
@@ -181,7 +181,7 @@ const PersonalDetails = (props) => {
             setNationalityError('Please select an nationality from the dropdown')
         } else if (postCode === '') {
             setOtherPostcodeError('Please enter your postcode, press Find address and select your address from the options')
-        } else if (PhoneNumber === '0') {
+        } else if (PhoneNumber === 0) {
             setPhoneNumberError('Please enter your work phone number')
         } else if (mobileNumber === '07') {
             setMobileNumberError('Please enter a valid UK mobile number starting with 07')
@@ -251,7 +251,7 @@ const PersonalDetails = (props) => {
     const onPhoneNumber = e => {
         const { value } = e.target;
         const re = /^[0-9\b]+$/;
-        if (value.length <= 11 && re.test(value)) {
+        if (value === '' || value.length <= 11 && re.test(value)) {
             setPhoneNumber(value)
 
         }

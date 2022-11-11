@@ -337,7 +337,11 @@ input {
   color: #ffffff;
   background-color: #f3969a;
 }
-
+.field-icon-useform{
+    position: relative;
+    top: -32px;
+    left: 380px;
+}
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
     .second-lable {
@@ -345,7 +349,10 @@ input {
         margin-left: 0;
 
     }
-
+    .field-icon-useform{
+        top: -31px;
+    left: 218px;
+    }
     .search-by-margin {
         margin-top: 102px;
     }
@@ -437,9 +444,24 @@ input {
     }
 }
 
+
 /* Media Query for low resolution  Tablets, Ipads */
 
 /* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 768px) {
+    .field-icon-useform {
+        position: relative;
+        top: -32px;
+        left: 421px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .field-icon-useform {
+        position: relative;
+        top: -32px;
+        left: 259px;
+    }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
     .second-lable {
         font-size: 13px;

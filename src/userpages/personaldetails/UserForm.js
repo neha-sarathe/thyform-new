@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight, FiCheck } from 'react-icons/fi'
 import Dark from "../../DarkAuth";
+
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import Select from 'react-select';
 
@@ -26,7 +27,14 @@ const UserForm = (props) => {
 
     const [noMatchError, setNoMatchError] = useState('');
     const [noPinMatch, setNoPinMatch] = useState('');
-
+    const [hide, setHide] = useState(true)
+    const [confirmhide, setConfirmhide] = useState(true)
+    const hideSwitch = ev => {
+      setHide(!hide)
+    }
+    const hideConfirmSwitch = ev => {
+        setConfirmhide(!confirmhide)
+      }
     // const [hide, setHide] = useState(true)
     // const [hide2, setHide2] = useState(true)
 
@@ -162,13 +170,14 @@ console.log(condition,'conditionsss12364566')
 
                                                 <input
                                                     // type={hide ? 'password' : 'input'}
-                                                    type="password"
+                                                type={hide ? 'password' : 'input'}
                                                     placeholder="Enter your password"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={password}
                                                     onChange={onPassword}
                                                     maxLength={20}
                                                 />
+                                                   <span className="password__show field-icon-useform" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span>
                                                 {/* <span className="password_icon" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span> */}
 
                                                 <p className="para-form show_result">{passwordError}</p>
@@ -183,15 +192,16 @@ console.log(condition,'conditionsss12364566')
                                                 <div >
                                                     <input
                                                         // type={hide2 ? 'password' : 'input'}
-                                                        type="password"
+                                                        type={confirmhide ? 'password' : 'input'}
                                                         onChange={onConfirm}
                                                         // value={confirm}
                                                         required
                                                         minLength={8}
                                                         maxLength={20}
-                                                        placeholder="Enter your confirm password"
-                                                        className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                                                        placeholder="confirm password"
+                                                        className={"search-input  " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     />
+                                                       <span className="password__show field-icon-useform" onClick={hideConfirmSwitch}>{confirmhide ? <FiEyeOff /> : <FiEye />}</span>
                                                     {/* <span className="confirm_icon" onClick={hideSwitch2}>{hide2 ? <FiEyeOff /> : <FiEye />}</span> */}
                                                 </div>
                                                 <p className="para-form show_result">{confirmError}</p>
