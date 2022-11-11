@@ -111,7 +111,6 @@ input {
 
 .search-input:focus {
     border: 2px solid black;
-
 }
 
 .search-input::placeholder {
@@ -203,7 +202,7 @@ input {
 }
 
 .form-check-label {
-    margin-left: 18px !important;
+    margin-left: 30px !important;
 }
 
 .field-required {
@@ -228,7 +227,7 @@ input {
 }
 
 .auth-form-btn {
-   padding: 8px 32px;
+    padding: 8px 32px;
     font-size: 20px;
     line-height: 1.3333333;
     border-radius: 6px;
@@ -261,7 +260,7 @@ input {
 
 .register-here:hover {
     cursor: pointer;
-    color: #f52b54;
+    color: #f52b54 !important;
 }
 
 .FBKub {
@@ -306,6 +305,11 @@ input {
     padding: 1rem 0.75rem !important;
 }
 
+.input_height_register:focus {
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+}
+
 .para_col {
     color: #dc143c;
 }
@@ -331,11 +335,12 @@ input {
 .lable-fix-width {
     width: 25%;
 }
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #f3969a;
+
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #f3969a;
 }
 .field-icon-useform{
     position: relative;
@@ -529,4 +534,6 @@ input[type=checkbox] {
 .business-btn-height {
     height: 37px;
 }
-
+.btn:focus{
+    box-shadow: none !important;
+    }

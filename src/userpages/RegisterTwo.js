@@ -93,9 +93,9 @@ const RegisterTwo = (props) => {
 
     const nextPage = () => {
         let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
-       const re =/^(info)?@+[0-9A-Za-z]{5,}?.com$/
+        const re = /^(info)?@+[0-9A-Za-z]{5,}?.com$/
         // var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
-       const resp = re.test(message);
+        const resp = re.test(message);
         console.log('res000000000000', resp);
         console.log(message, 'jfklsdjflksjdlkfjsldf', 'resresres', resp, website, 'flsdjklfjsldkfjlksdjkflkds')
         if (selectedData === '') {
@@ -128,10 +128,10 @@ const RegisterTwo = (props) => {
 
 
     };
-    const [selectcheck,setSelectcheck] = useState(false)
-const handlecheck = ()=>{
-setSelectcheck(true)
-}
+    const [selectcheck, setSelectcheck] = useState(false)
+    const handlecheck = () => {
+        setSelectcheck(true)
+    }
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -228,6 +228,7 @@ setSelectcheck(true)
                                                         className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                         value={message}
                                                         onChange={handleChange}
+                                                        placeholder="info@xxxxxx.com"
                                                     />
                                                     <p className="para-form show_result">{websiteaddError}</p>
                                                 </div>
