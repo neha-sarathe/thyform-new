@@ -68,8 +68,8 @@ a:focus {
 //     margin: auto;
 // }
 .allform-logo-div {
-    width: 185px;
-    height: auto;
+    width: 189px;
+    height: 55px;
     margin: auto;
 }
 /* ---------------------------------------------------
@@ -277,11 +277,11 @@ ul.CTAs a {
 
 }
 .allform-nav-formlink{
-    padding-top: 12px;
+    // padding-top: 12px;
 }
 .navform .button-dropdown {
     position: relative;
-    top: -4px;
+    top: 1px;
 }
 
 .navform li .drop {
@@ -819,6 +819,31 @@ padding-bottom: 0 !important;
 }
 
 /* Media Query for Tablets Ipads portrait mode */
+@media (min-width:480px) and (max-width:768px) {
+    .all-form-sidebars {
+        display: none !important;
+    }
+
+    .desktop-navall-form{
+        display: none !important;
+    }
+    .nav-allform-mobile {
+        display: block ;
+    }
+    .sidebars-inbox {
+        margin-left: 0 !important;
+    }
+    .sidebars-inbox {
+        min-width: 100% !important;
+        max-width: 100%;
+     
+    }
+    .wrapper-allform {
+        display: block;
+        width: 100%;
+        align-items: stretch;
+    }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
 .navtabs-allform{
     display: block;

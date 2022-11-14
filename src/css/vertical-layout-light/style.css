@@ -9327,7 +9327,9 @@ progress {
     max-width: 1320px;
   }
 }
-
+body{
+  top: 0 !important;
+}
 .row {
   --bs-gutter-x: 30px;
   --bs-gutter-y: 0;
@@ -13214,7 +13216,7 @@ fieldset:disabled .wizard > .actions a,
 
 .navbar-brand {
     display: inline-block;
-    /* padding-top: 0; */
+    padding-top: 0 !important;
     padding-bottom: 0.125rem !important;
     /* margin-right: 1rem; */
     font-size: 1.25rem;

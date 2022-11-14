@@ -93,7 +93,8 @@ const RegisterTwo = (props) => {
 
     const nextPage = () => {
         let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
-        const re = /^(info)?@+[0-9A-Za-z]{5,}?.com$/
+        
+        const re = /^(info)?@+[0-9A-Za-z.]{5,}?.com$/
         // var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
         const resp = re.test(message);
         console.log('res000000000000', resp);
@@ -104,14 +105,16 @@ const RegisterTwo = (props) => {
             setError('Please enter the number of employees your business has using only numbers')
         } else if (websiteError === false) {
             setWebsiteError('Please select yes or no')
-        } else if (!website === 'yes' || !resp) {
+        } else if(website === 'no') {
+            setWebsiteUrl(true)
+            navigate('/registerthree')
+        }else if (!website === 'yes' || !website === 'no' || !resp) {
             setWebsiteaddError('Enter Website Address')
         } else if (!resp) {
             setWebsiteaddError("Please Enter Website Address")
         } else if (resp == null) {
             setWebsiteUrl('Please Enter a Valid Website Address')
-        }
-        else {
+        } else{
             setWebsiteUrl(true)
             navigate('/registerthree')
         }

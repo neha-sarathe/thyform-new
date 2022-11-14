@@ -31,7 +31,7 @@ export const Archive = ({ darkmodes, setDarkmodes }) => {
                             <InboxNavbar />
                             <div className='row'>
                                 <div className='col-md-12 col-lg-4'>
-                                    <nav id="sidebars" className={darkmodes ? "text-white border-end sidebars-navbarall-form archive-navbar" : "text-dark border-end sidebars-navbarall-form archive-navbar"}>
+                                    <nav id="sidebars" className={darkmodes ? "sidebars-inbox text-white border-end sidebars-navbarall-form archive-navbar" : "sidebars-inbox text-dark border-end sidebars-navbarall-form archive-navbar"}>
                                     <div class="input-group">
                       <span class="input-group-prepend">
                         <div class="input-group-text bg-transparent border-right-0 inbox_search">
