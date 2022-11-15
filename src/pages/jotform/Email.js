@@ -378,7 +378,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class="form-select date-width" aria-label="Default select example">
+                                      <select class={"form-select date-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -394,7 +394,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class="form-select date-width" aria-label="Default select example">
+                                      <select class={"form-select date-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -410,7 +410,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class="form-select date-width" aria-label="Default select example">
+                                      <select class={"form-select date-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -428,7 +428,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-6 mt-3">
                                 <h2 className="form-setting-title">Send Time</h2>
                                 <div>
-                                  <select class="form-select time-select-width" aria-label="Default select example">
+                                  <select class={"form-select time-select-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -440,7 +440,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-6 mt-3">
                                 <h2 className="form-setting-title">Timezone</h2>
                                 <div>
-                                  <select class="form-select time-select-width" aria-label="Default select example">
+                                  <select class={"form-select time-select-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -503,7 +503,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   )}
                                   selected={startDate}
                                   onChange={(date) => setStartDate(date)}
-                                  className={"date_schedule " + (darkmodes ? "text-white bg-dark" : "text-dark bg-white")}
+                                  className={"date_schedule " + (darkmodes ? "select_dark" : "text-dark bg-white")}
                                 />
                               </div>
                               <div class="form-group col-md-6 mt-3">
@@ -559,7 +559,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   )}
                                   selected={startDate}
                                   onChange={(date) => setStartDate(date)}
-                                  className={"date_schedule " + (darkmodes ? "text-white bg-dark" : "text-dark bg-white")}
+                                  className={"date_schedule " + (darkmodes ? "select_dark" : "text-dark bg-white")}
                                 />
                               </div>
                             </div>

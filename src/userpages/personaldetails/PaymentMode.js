@@ -64,7 +64,7 @@ const PaymentMode = (props) => {
                                         <div className="container-fluid p-0 mt-5 pt-3">
                                             <div className="row justify-content-center">
                                                 <div className="col-12 col-sm-4 ">
-                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark border-light" : "text-dark bg-white border-dark")}> 
                                                         <div className="card-body">
                                                             <h5 className="card-title">Monthly</h5>
                                                             <div className="d-flex">
@@ -78,7 +78,7 @@ const PaymentMode = (props) => {
                                                     </div>
                                                 </div>
                                                 <div className="col-12 col-sm-4">
-                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark border-light" : "text-dark bg-white border-dark")}>
                                                         <div className="card-body">
                                                             <h5 className="card-title">Half Yearly</h5>
                                                             <div className="d-flex">
@@ -93,7 +93,7 @@ const PaymentMode = (props) => {
                                                     </div>
                                                 </div>
                                                 <div className="col-12 col-sm-4">
-                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
+                                                    <div className={"card card_style card_center " + (props.darkmodes ? "text-white bg-dark border-light" : "text-dark bg-white border-dark")}>
                                                         <div className="card-body">
                                                             <h5 className="card-title">Yearly</h5>
                                                             <div className="d-flex">

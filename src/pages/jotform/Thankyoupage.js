@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import { FiCheck } from "react-icons/fi";
 import { AiFillCheckCircle } from "react-icons/ai";
-import Navform from './Navform';
+// import Navform from './Navform';
 import SettingSidebar from './SettingSidebar';
-// import EditorThanks from './EditorThanks';
-
+import Editor from './Editor';
 
 const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
   const [radio, setRadio] = useState("Limited");
@@ -72,28 +70,28 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
               </div>
             </div>
             <hr />
-            {radio === "Limited" ?(
+            {radio === "Limited" ? (
               <>
-            <Navform placeholder={"Write something or insert a heart  ♥"} />
-            {/* <EditorThanks/> */}
-           
-            
-            </>
-            ):(
-            <>     
-             <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}> 
-               <div class="row mainsetting-div">
-                      <div class="form-group col-md-12 mt-3">
-                        <h2 className="form-setting-title">Enter URL</h2>
-                        <div>
-                          <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")}/> 
-                        </div>
+                {/* <Navform placeholder={"Write something or insert a heart  ♥"} /> */}
+              
+                <Editor/>
+              
+              </>
+            ) : (
+              <>
+                <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+                  <div class="row mainsetting-div">
+                    <div class="form-group col-md-12 mt-3">
+                      <h2 className="form-setting-title">Enter URL</h2>
+                      <div>
+                        <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                       </div>
                     </div>
-                    </div>
-            </>
-)
-}
+                  </div>
+                </div>
+              </>
+            )
+            }
           </div>
         </div>
 
