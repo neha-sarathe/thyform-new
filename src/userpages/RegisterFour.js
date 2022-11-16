@@ -3,6 +3,40 @@ import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight } from 'react-icons/fi'
 import Dark from "../DarkAuth";
 import countryListAllIsoData from "./CountryList"
+import Select from 'react-select';
+const colourStyles = {
+    menuList: styles => ({
+        ...styles,
+        background: 'papayawhip',
+        border: styles.isFocused ? "1px solid #ff8b67" : "1px solid #cccccc",
+    }),
+ 
+    option: (styles, {isFocused, isSelected}) => ({
+        ...styles,
+        
+        background: isFocused
+            ? '#DC143C'
+            : isSelected
+                ? '#DC143C'
+                : undefined,
+                color: isFocused
+                ? '#ffffff'
+                : isSelected
+                    ? '#ffffff'
+                    : undefined,
+        zIndex: 1
+    }),
+    menu: base => ({
+        ...base,
+        zIndex: 100
+    })
+    }
+    
+const options = [
+    { value: 'Yes', label: 'Yes' },
+    { value: 'No', label: 'No' },
+  ];
+  
 const RegisterFour = (props) => {
 
     const navigate = useNavigate();
@@ -88,7 +122,7 @@ const RegisterFour = (props) => {
         setContractsError(false)
     }
 
-
+    const [selectedOption, setSelectedOption] = useState(null);
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -123,15 +157,25 @@ const RegisterFour = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business receive payments from outside the UK?*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1">
-                                                <select
+                                                {/* <select
                                                     onChange={(event) => handleorganisation(event.target.value)}
-                                                    className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                                    className={"search-input decorated " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
                                                 >Website address*
                                                     <option>Select</option>
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
-                                                </select>
+                                                </select> */}
+                                                <Select
+   // defaultValue={[colourOptions[2], colourOptions[3]]}
+      name="colors"
+      defaultValue={selectedOption}
+        onChange={setSelectedOption}
+        options={options}
+      className="basic-multi-select"
+      classNamePrefix="select"
+      styles={colourStyles}
+   />
                                                 <h6 className="para-form mt-2">This could be for goods & services or funding</h6>
                                                 <p className="para-form show_result">{websiteError}</p>
                                             </div>

@@ -28,12 +28,16 @@ const PayProcedure = (props) => {
     // const [countryError, setCountryError] = useState(false);
     /*validations */
     const onCardNo = e => {
-        const { value } = e.target;
-
-
-        const re = /^[0-9\b]+$/;
-        if (value === "" || value.length <= 19 && re.test(value)) {
-            setCardno(value);
+        const formatNum = e.target.value;
+        const valArray = formatNum.split(' ').join('').split('');
+        if(isNaN(valArray.join('')))
+            return;
+        if(valArray.length === 20)
+            return
+        if(valArray.length % 4 === 0) {
+            setCardno(formatNum + " ");
+        }else{
+            setCardno(formatNum)
         }
         setCardError(false);
     }
