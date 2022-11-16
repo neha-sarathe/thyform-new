@@ -24,7 +24,7 @@ export const InboxNavbar = ({ darkmodes, setDarkmodes }) => {
                     </ul>
                 </div>
             </nav> */}
-            <nav className={"navbar inbox-allnavbar navbar-expand-lg all-navbar navbar-light bg-light pt-0 pb-0 " + (darkmodes ? "text-dark trans_background border-bottom  " : "text-dark trans_background border-bottom ")}>
+            <nav className={"navbar inbox-allnavbar navbar-expand-lg all-navbar navbar-light pt-0 pb-0 pl-0 " + (darkmodes ? "text-dark trans_background border-bottom  " : "text-dark trans_background border-bottom ")}>
                 <div class="container-fluid  ps-1 inbox-navbar">
                     <ul class="nav nav-tabs navtabs-allform">
                         <li class={"nav-item active formlink inbox_link_bgcolor " + (pageactive[2] === 'inbox' ? "inbox-list-focus1" : '')}>

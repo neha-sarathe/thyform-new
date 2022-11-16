@@ -52,7 +52,7 @@ const Allform = ({ darkmodes, setDarkmodes }) => {
         <Mobilenav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
         <div style={{ width: '100%' }}>
 
-          <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
+          <div id="content" className={darkmodes ? "text-white bg-dark" : "text-dark bg-light"}>
 
             <Navbarallform darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
             <h1 className='text-center'> All Forms</h1>

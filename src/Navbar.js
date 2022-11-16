@@ -109,7 +109,7 @@ export const Navbar = ({ darkmodes, setDarkmodes,setMinimizemob }) => {
   return (
     <>
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
-        <div class={"text-center navbar-brand-wrapper d-flex align-items-center justify-content-start " + (darkmodes ? "text-white body-dark bg-mini-dark" : "text-dark body-light bg-mini-light")}>
+        <div class={"text-center navbar-brand-wrapper d-flex align-items-center justify-content-start " + (darkmodes ? "text-white bg-dark bg-mini-dark" : "text-dark bg-light bg-mini-light")}>
           <div class="me-3">
             <button onClick={onCheck} class={"navbar-toggler  align-self-center " + (darkmodes ? "text-white " : "text-dark ") + (check ? "sidebar-icon-only " : " ")} type="button" data-bs-toggle="minimize" >
               <FiAlignJustify />
@@ -124,7 +124,7 @@ export const Navbar = ({ darkmodes, setDarkmodes,setMinimizemob }) => {
             </Link>
           </div>
         </div>
-        <div class={"navbar-menu-wrapper d-flex align-items-top " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+        <div class={"navbar-menu-wrapper d-flex align-items-top " + (darkmodes ? "text-white bg-dark" : "text-dark bg-light")}>
           <ul class="p-0">
             <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
               <h3 class="welcome-text" style={{ color: '#808191' }}>Good Morning, <span class={"text-black fw-bold " + (darkmodes ? "text-white " : "text-dark ")}>John Doe</span></h3>

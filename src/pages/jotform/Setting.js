@@ -228,7 +228,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
           </li> */}
 
 
-      <main className={"page-content " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+      <main className={"page-content " + (darkmodes ? "text-white bg-dark" : "text-dark bg-light")}>
 
 
         <SettingSidebar
@@ -243,7 +243,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
         <div
           class={
             "container-fluid setting-form  " +
-            (darkmodes ? "text-white body-dark " : "text-dark body-light ") +
+            (darkmodes ? "text-white bg-dark " : "text-dark bg-light ") +
             (jottoggled ? "" : "setting_form_ml")
           }
         >

@@ -6,7 +6,7 @@ const Jotform = ({darkmodes,setDarkmodes }) => {
 
   return (
     <>
-      <div className={darkmodes ? "body-dark formbuilder-dark" : 'formbuilder-light'}>
+      <div className={darkmodes ? "bg-dark formbuilder-dark" : 'formbuilder-light'}>
         <br/>
         <br/>
         <br/>

@@ -19,7 +19,7 @@ const MobileNotification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled
     return (
         <>
             <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled} />
-            <main className={"page-content " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+            <main className={"page-content " + (darkmodes ? "text-white bg-dark" : "text-dark bg-light")}>
                 <div className="container">
                     <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}

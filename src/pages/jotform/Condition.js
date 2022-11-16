@@ -52,7 +52,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
     <>
       <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled} />
       {/* Condition page */}
-      <main className={"page-content " + (darkmodes ? "text-white body-dark condition-height" : "text-dark body-light condition-height")}>
+      <main className={"page-content " + (darkmodes ? "text-white bg-dark condition-height" : "text-dark body-light condition-height")}>
         <div className="container ">
           <div className="row felx align-items-center justify-content-center">
             {/* main div start */}

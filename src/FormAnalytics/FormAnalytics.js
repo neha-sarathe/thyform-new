@@ -10,21 +10,21 @@ export const FormAnalytics = ({ darkmodes, setDarkmodes }) => {
         <>
             <div className="wrapper">
 
-                <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
+                <div id="content" className={darkmodes ? "text-white bg-dark" : "text-dark bg-light"}>
 
                     <NavFormAnalytics darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
-<Mobilenav  darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
+                    <Mobilenav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
                     <div className='border rounded p-4 m-4'>
-                     
-                        <nav class="navbar navbar-light bg-light">
+
+                        <nav class="navbar navbar-light ">
                             <div class="container-fluid">
-                                <span class="navbar-brand mb-0 h4">FORM ANALYTICS</span>
+                                <span class={"navbar-brand mb-0 h4 " + (darkmodes ? "text-white bg-dark" : "text-dark bg-light")}>FORM ANALYTICS</span>
                             </div>
                         </nav>
                         <Tabs
                             defaultActiveKey="week"
                             id="justify-tab-example"
-                            className={"mb-3 "+(darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                            className={"mb-3 " + (darkmodes ? "text-white bg-dark " : "text-dark bg-light ")}
                         >
                             <Tab eventKey="week" title="This Week">
 
@@ -40,7 +40,7 @@ export const FormAnalytics = ({ darkmodes, setDarkmodes }) => {
                                 <OptionNavbar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
                             </Tab>
                         </Tabs>
-                 
+
                     </div>
                 </div>
             </div>
