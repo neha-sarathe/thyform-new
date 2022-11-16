@@ -111,7 +111,7 @@ const RegisterThree = (props) => {
                                                 <span className="input-group-text euro_size" id="basic-addon1">£</span>
                                                 <input
                                                     type="text"
-                                                    className={"form-control search-input radius_sal input_height_register " + (props.darkmodes ? "text-white form-control-dark" : "text-dark")}
+                                                    className={"form-control search-input radius_sal input_height_register " + (props.darkmodes ? "text-white select-box-dark" : "text-dark")}
                                                     placeholder="" aria-label="Username"
                                                     aria-describedby="basic-addon1" value={txt} onChange={onInputChange}
                                                 />

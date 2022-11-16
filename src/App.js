@@ -110,7 +110,7 @@ function App() {
     <>
       {user && window.location.pathname === '/dashboard' || window.location.pathname === "/charts" || window.location.pathname
         === "/morris" || window.location.pathname === "/myprofile" ? (
-        <>  <div class={"container-scroller" + (darkmode ? "text-white body-dark" : "text-dark body-light")}>
+        <>  <div class={"container-scroller " + (darkmode ? "text-white bg-dark" : "text-dark bg-light")}>
           <div class="container-fluid container-fluid-main page-body-wrapper">
             <Router>
               <Sidbar minimizemob={minimizemob} setMinimizemob={setMinimizemob} darkmodes={darkmode} setDarkmodes={setDarkmode} /><Navbar minimizemob={minimizemob} setMinimizemob={setMinimizemob} darkmodes={darkmode} setDarkmodes={setDarkmode} /> <Dark darkmodes={darkmode} setDarkmodes={setDarkmode} />

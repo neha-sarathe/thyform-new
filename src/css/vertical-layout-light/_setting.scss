@@ -842,7 +842,7 @@ body {
 .jotlogo-width {
   width: 300px;
   background: #F4F5F7;
-
+  height: 64px;
 }
 
 .preview-div-switch {
@@ -1241,4 +1241,9 @@ body {
 .pdf-download-btn:hover {
   background-color: #f52b54;
   border: 1px solid #f52b54;
+}
+
+.date-enter-value:focus {
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
 }

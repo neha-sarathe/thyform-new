@@ -84,6 +84,10 @@
     // color: #20252a ;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
 }
+.input-login:focus{
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+}
 
 .login-dark-text {
     color: white !important;

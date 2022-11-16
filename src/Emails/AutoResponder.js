@@ -15,7 +15,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
 
             {/* Setting_email page */}
 
-            <main className={"page-content setting-email  " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+            <main className={"page-content setting-email  " + (darkmodes ? "text-white bg-dark" : "text-dark bg-light")}>
                 <div className="container">
                     <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}
@@ -43,7 +43,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                     defaultActiveKey="email"
                                     id="fill-tab-example"
                                     fill
-                                    className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                                    className={"mb-3 " + (darkmodes ? "text-white bg-dark " : "text-dark bg-light ")}
                                 >
                                     <Tab eventKey="email" title="EMAIL" >
 

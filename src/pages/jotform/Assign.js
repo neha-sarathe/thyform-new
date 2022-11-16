@@ -47,7 +47,7 @@ const Assign = ({darkmodes,setDarkmodes }) => {
             <i className="fas fa-bars"></i>
           </a>
 
-          <main className={"page-content " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+          <main className={"page-content " + (darkmodes ? "text-white bg-dark" : "text-dark bg-light")}>
             {/* <Settingform /> */}
             {/* <Thankyoupage /> */}
             {/* main container */}

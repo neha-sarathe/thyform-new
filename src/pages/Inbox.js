@@ -24,7 +24,7 @@ const Inbox = ({ darkmodes, setDarkmodes }) => {
         <AllformNav darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
         {/* <Mobilenav darkmodes={darkmodes} setDarkmodes={setDarkmodes}/> */}
         <div className='full_width'>
-          <div id="content" className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
+          <div id="content" className={darkmodes ? "text-white bg-dark" : "text-dark bg-light"}>
             <Navbarallform />
             <Mobilenav darkmodes={darkmodes} setDarkmodes={setDarkmodes}/>
             <div className='border rounded maincontainer-inbox-navbar'>

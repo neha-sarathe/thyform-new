@@ -7,7 +7,7 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
   return (
     <>
       <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
-      <main className={"page-content " + (darkmodes ? "text-white body-dark condition-height" : "text-dark body-light condition-height")}>
+      <main className={"page-content " + (darkmodes ? "text-white bg-dark condition-height" : "text-dark bg-light condition-height")}>
         <div className="container ">
           <div className="row flex align-items-center justify-content-center mr-top">
             <div className="col_6 condition_margin_adjust">

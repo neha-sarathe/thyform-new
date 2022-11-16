@@ -75,7 +75,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
             <i className="fas fa-bars"></i>
           </a>
 
-          <main className={"page-content " + (darkmodes ? "text-white body-dark" : "text-dark body-light")}>
+          <main className={"page-content " + (darkmodes ? "text-white bg-dark" : "text-dark body-light")}>
 
             {/* <Thankyoupage /> */}
             {/* main container */}
@@ -222,7 +222,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                           defaultActiveKey="email"
                           id="fill-tab-example"
                           fill
-                          className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                          className={"mb-3 " + (darkmodes ? "text-white bg-dark " : "text-dark body-light ")}
                         >
                           <Tab eventKey="email" title="EMAIL" >
 
@@ -304,7 +304,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                           defaultActiveKey="email"
                           id="fill-tab-example"
                           fill
-                          className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                          className={"mb-3 " + (darkmodes ? "text-white bg-dark " : "text-dark body-light ")}
                         >
                           <Tab eventKey="email" title="EMAIL" >
 
@@ -371,14 +371,14 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               defaultActiveKey="daily"
                               id="fill-tab-example"
                               fill
-                              className={"mb-3 " + (darkmodes ? "text-white body-dark " : "text-dark body-light ")}
+                              className={"mb-3 " + (darkmodes ? "text-white bg-dark " : "text-dark body-light ")}
                             >
                               <Tab eventKey="daily" title="Daily">
                                 <div class="row mainsetting-div">
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class={"form-select date-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                      <select class={"form-select date-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -394,7 +394,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class={"form-select date-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                      <select class={"form-select date-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -410,7 +410,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class={"form-select date-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                      <select class={"form-select date-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -428,7 +428,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-6 mt-3">
                                 <h2 className="form-setting-title">Send Time</h2>
                                 <div>
-                                  <select class={"form-select time-select-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                  <select class={"form-select time-select-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -440,7 +440,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-6 mt-3">
                                 <h2 className="form-setting-title">Timezone</h2>
                                 <div>
-                                  <select class={"form-select time-select-width "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                  <select class={"form-select time-select-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>

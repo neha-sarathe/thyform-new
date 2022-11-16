@@ -17,7 +17,7 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
       <div>
         <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled} />
       </div>
-      <div className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>
+      <div className={darkmodes ? "text-white bg-dark" : "text-dark body-light"}>
         <div className={"container setting-form setting_form_ml  " + (darkmodes ? "setting_ml-form" : "setting_ml-form")}>
           <div>
             <div className="form-setting-div">
