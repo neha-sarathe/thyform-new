@@ -150,7 +150,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                     </button>
                     <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/notification">
                       <div className=''>
-                        <form className='bg-white shadow-sm  rounded-1 p-3 position-relative'>
+                        <form className={'shadow-sm  rounded-1 p-3 position-relative border '+(darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white ")}>
                           <fieldset>
                             <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
@@ -159,8 +159,8 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M207.8,112a79.7,79.7,0,0,0-79.2-80H128a79.9,79.9,0,0,0-79.8,80c0,34.3-7.1,53.7-13,63.9a16.2,16.2,0,0,0-.1,16.1A15.9,15.9,0,0,0,49,200H88a40,40,0,0,0,80,0h39a15.9,15.9,0,0,0,13.9-8,16.2,16.2,0,0,0-.1-16.1C214.9,165.7,207.8,146.3,207.8,112ZM128,224a24.1,24.1,0,0,1-24-24h48A24.1,24.1,0,0,1,128,224ZM224.9,73.3a9.3,9.3,0,0,1-3.5.8,7.9,7.9,0,0,1-7.2-4.5,97,97,0,0,0-35-38.8,8,8,0,0,1,8.5-13.6,111.7,111.7,0,0,1,40.8,45.4A8,8,0,0,1,224.9,73.3Zm-190.3.8a9.3,9.3,0,0,1-3.5-.8,8,8,0,0,1-3.6-10.7A111.7,111.7,0,0,1,68.3,17.2a8,8,0,0,1,8.5,13.6,97,97,0,0,0-35,38.8A7.9,7.9,0,0,1,34.6,74.1Z"></path></svg>
                                   </li>
                                   <li className='fs-6 text-black map'>
-                                    <h5 className='fs-7 fw-bold heading_5 remider'>NOTIFICATION EMAIL</h5>
-                                    <p className='paragraph remider'>Receive an email when someone fills your form.</p>
+                                    <h5 className={'fs-7 fw-bold heading_5 remider '+ (darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white ")}>NOTIFICATION EMAIL</h5>
+                                    <p className={'paragraph remider '+ (darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white ")}>Receive an email when someone fills your form.</p>
                                   </li>
                                 </div>
                               </div>
@@ -181,7 +181,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                     </Link>
                     <Link className={darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white "} to="/autoresponder">
                       <div className='mt-4'>
-                        <form className='bg-white shadow  rounded-1 p-3 position-relative '>
+                        <form className={'shadow rounded-1 p-3 position-relative border '+(darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white ")}>
                           <fieldset>
                             <div className='d-flex align-items-center justify-content-between '>
                               <div className='main_w'>
@@ -190,8 +190,8 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M207.8,112a79.7,79.7,0,0,0-79.2-80H128a79.9,79.9,0,0,0-79.8,80c0,34.3-7.1,53.7-13,63.9a16.2,16.2,0,0,0-.1,16.1A15.9,15.9,0,0,0,49,200H88a40,40,0,0,0,80,0h39a15.9,15.9,0,0,0,13.9-8,16.2,16.2,0,0,0-.1-16.1C214.9,165.7,207.8,146.3,207.8,112ZM128,224a24.1,24.1,0,0,1-24-24h48A24.1,24.1,0,0,1,128,224ZM224.9,73.3a9.3,9.3,0,0,1-3.5.8,7.9,7.9,0,0,1-7.2-4.5,97,97,0,0,0-35-38.8,8,8,0,0,1,8.5-13.6,111.7,111.7,0,0,1,40.8,45.4A8,8,0,0,1,224.9,73.3Zm-190.3.8a9.3,9.3,0,0,1-3.5-.8,8,8,0,0,1-3.6-10.7A111.7,111.7,0,0,1,68.3,17.2a8,8,0,0,1,8.5,13.6,97,97,0,0,0-35,38.8A7.9,7.9,0,0,1,34.6,74.1Z"></path></svg>
                                   </li>
                                   <li className='fs-6 text-black map'>
-                                    <h5 className='fs-7 fw-bold heading_5 remider'>AUTORESPONDER EMAIL</h5>
-                                    <p className='paragraph remider'>Send autoresponder email to the person who fills your form. </p>
+                                    <h5 className={'fs-7 fw-bold heading_5 remider '+(darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white ")}>AUTORESPONDER EMAIL</h5>
+                                    <p className={'paragraph remider '+(darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white ")}>Send autoresponder email to the person who fills your form. </p>
                                   </li>
                                 </div>
                               </div>

@@ -36,9 +36,9 @@ export const Trash = ({ darkmodes, setDarkmodes }) => {
                           <i class="fa fa-search"></i>
                         </div>
                       </span>
-                      <input class="form-control py-2 border-right-0 border form_padding search_col" type="search" placeholder='Search' id="example-search-input" />
+                      <input class="form-control py-2 border-right-0 border form_padding search_col shadow-none" type="search" placeholder='Search' id="example-search-input" />
                       <span class="input-group-append">
-                        <button class="btn btn-outline-secondary border-left-0 border btn_height" type="button">
+                        <button class={"btn btn-outline-secondary border btn_height " +(darkmodes ? "text-white bg-dark" : "text-dark bg-light")} type="button">
                           Filter  <FiFilter />
                         </button>
                       </span>
@@ -54,12 +54,12 @@ export const Trash = ({ darkmodes, setDarkmodes }) => {
                                         <ul class="list-unstyled components">
                                             {/* <h4 className='side-head text-white'>MY FORMS</h4> */}
                                             <li>
-                                                <Link to='' ><div className={'allform-list link_color ' + (sidebaroption[2] === '' ? 'allform-list-focus1' : ' ')}>form 1</div></Link>
+                                                <Link to='' ><div className={'allform-list ' + (sidebaroption[2] === '' ? 'allform-list-focus1' : ' ') +(darkmodes ? "text-white bg-dark" : "text-dark bg-light")}>form 1</div></Link>
 
 
                                             </li>
                                             <li >
-                                                <Link to='' ><div className={'allform-list link_color ' + (sidebaroption[2] === ' ' ? 'allform-list-focus1' : ' ')}>form 2</div></Link>
+                                                <Link to='' ><div className={'allform-list ' + (sidebaroption[2] === ' ' ? 'allform-list-focus1' : ' ') +(darkmodes ? "text-white bg-dark" : "text-dark bg-light")}>form 2</div></Link>
                                             </li>
 
 
@@ -67,7 +67,7 @@ export const Trash = ({ darkmodes, setDarkmodes }) => {
                                     </nav>
                                 </div>
                                 <div className='col-md-8'>
-                                    <p className='link_color'>
+                                    <p className={darkmodes ? "text-white bg-dark" : "text-dark bg-light"}>
                                         YOU DON’T HAVE ANY DELETED SUBMISSIONS
                                     </p>
                                 </div>
