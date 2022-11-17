@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useRef,useState} from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import SettingSidebar from '../pages/jotform/SettingSidebar'
 import { FaCheckCircle } from "react-icons/fa";
-
+import SelectBox from '../userpages/SelectBox';
 const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
+    const ref = useRef();
     const navigate = useNavigate();
 
     return (
