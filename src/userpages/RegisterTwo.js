@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight, FiCheck } from 'react-icons/fi'
 import Dark from "../DarkAuth";
+import SelectBox from "./SelectBox";
 const RegisterTwo = (props) => {
 
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ const RegisterTwo = (props) => {
     const [error, setError] = useState(false);
     const [businessError, setBusinessError] = useState(false);
     const [websiteError, setWebsiteError] = useState(false);
-    const [website, setWebsite] = useState(false);
+    const [website1, setWebsite1] = useState(false);
     const [maxValue, setMaxValue] = useState(false);
     const [message, setMessage] = useState('');
     const [websiteaddError, setWebsiteaddError] = useState(false);
@@ -79,13 +80,17 @@ const RegisterTwo = (props) => {
 
     }
     const select_data = [
-        { key: 'america', value: 'Example 1' },
-        { key: 'unitedkingdom', value: 'Example 2' },
-        { key: 'india', value: 'Example 3' },
-        { key: 'germany', value: 'Example 4' },
-        { key: 'argentina', value: 'Example 5' }
+        { label: 'america', value: 'Example 1' },
+        { label: 'unitedkingdom', value: 'Example 2' },
+        { label: 'india', value: 'Example 3' },
+        { label: 'germany', value: 'Example 4' },
+        { label: 'argentina', value: 'Example 5' }
     ]
-
+    const options = [
+        { label: 'yes', value: 'yes' },
+        { label: 'no', value: 'no' },
+       
+    ]
     const handleSelect = (value) => {
         setSelectedData(value)
         setBusinessError(false)
@@ -98,17 +103,17 @@ const RegisterTwo = (props) => {
         // var re = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
         const resp = re.test(message);
         console.log('res000000000000', resp);
-        console.log(message, 'jfklsdjflksjdlkfjsldf', 'resresres', resp, website, 'flsdjklfjsldkfjlksdjkflkds')
+        console.log(message, 'jfklsdjflksjdlkfjsldf', 'resresres', resp, website1, 'flsdjklfjsldkfjlksdjkflkds')
         if (selectedData === '') {
             setBusinessError('Please select an industry from the dropdown. If your industry is not listed, select other')
         } else if (txt === '') {
             setError('Please enter the number of employees your business has using only numbers')
         } else if (websiteError === false) {
             setWebsiteError('Please select yes or no')
-        } else if(website === 'no') {
+        } else if(website1 === 'no') {
             setWebsiteUrl(true)
             navigate('/registerthree')
-        }else if (!website === 'yes' || !website === 'no' || !resp) {
+        }else if (!website1 === 'yes' || !website1 === 'no' || !resp) {
             setWebsiteaddError('Enter Website Address')
         } else if (!resp) {
             setWebsiteaddError("Please Enter Website Address")
@@ -121,7 +126,7 @@ const RegisterTwo = (props) => {
     }
 
     const handleorganisation = (value) => {
-        setWebsite(value)
+        setWebsite1(value)
         setWebsiteError(true)
     }
 
@@ -168,7 +173,8 @@ const RegisterTwo = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Industry*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1">
-                                                <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                            <SelectBox handleorganisation={handleSelect}  website={selectedData}   options={select_data} input1={ref} isDisabled={true}/>
+                                                {/* <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
                                                     ref={ref}
                                                     value={selectedData}
@@ -179,7 +185,7 @@ const RegisterTwo = (props) => {
                                                             {option.value}
                                                         </option>
                                                     ))}
-                                                </select>
+                                                </select> */}
                                                 <p className="para-form show_result">{businessError}</p>
                                             </div>
                                         </div>
@@ -207,7 +213,8 @@ const RegisterTwo = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business have a website?*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1">
-                                                <select
+                                            <SelectBox handleorganisation={handleorganisation}  website={selectedData}   options={options} input1={ref} isDisabled={true}/>   
+                                                {/* <select
                                                     onChange={(event) => handleorganisation(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
@@ -215,12 +222,12 @@ const RegisterTwo = (props) => {
                                                     <option>Select</option>
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
-                                                </select>
+                                                </select> */}
                                                 <p className="para-form show_result">{websiteError}</p>
 
                                             </div>
                                         </div>
-                                        {website === 'yes' ?
+                                        {website1 === 'yes' ?
                                             <div className=" mt-4 selectflex">
                                                 <div className="w-100">
                                                     <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Website address*</label>

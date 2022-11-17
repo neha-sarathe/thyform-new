@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useRef} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight, FiCheck } from 'react-icons/fi'
 import Dark from "../../DarkAuth";
@@ -7,10 +7,11 @@ import DatePicker from "react-datepicker";
 import moment from 'moment';
 import { getMonth, getYear } from 'date-fns';
 import range from "lodash/range";
+import SelectBox from "../SelectBox";
 import countryListAllIsoData from "../CountryList";
 
 const PersonalDetails = (props) => {
-
+    const ref = useRef(null);
     const navigate = useNavigate();
     const [startDate, setStartDate] = useState(new Date());
     const [txt, setTxt] = useState('');
@@ -55,11 +56,11 @@ const PersonalDetails = (props) => {
     const [findError, setFindError] = useState(false);
 
     const select_data = [
-        { key: 'america', value: 'Example 1' },
-        { key: 'unitedkingdom', value: 'Example 2' },
-        { key: 'india', value: 'Example 3' },
-        { key: 'germany', value: 'Example 4' },
-        { key: 'argentina', value: 'Example 5' }
+        {label: 'america', value: 'Example 1' },
+        {label: 'unitedkingdom', value: 'Example 2' },
+        {label: 'india', value: 'Example 3' },
+        {label: 'germany', value: 'Example 4' },
+        {label: 'argentina', value: 'Example 5' }
     ]
 
     const day_data = [
@@ -438,7 +439,8 @@ const PersonalDetails = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Title*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1">
-                                                <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                            <SelectBox handleorganisation={handleSelect} website={selectedData} options={select_data} input1={ref} isDisabled={true}/>
+                                                {/* <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
                                                     value={selectedData}
                                                 >
@@ -448,7 +450,7 @@ const PersonalDetails = (props) => {
                                                             {option.value}
                                                         </option>
                                                     ))}
-                                                </select>
+                                                </select> */}
                                                 <p className="para-form show_result">{businessError}</p>
                                             </div>
                                         </div>
@@ -606,7 +608,7 @@ const PersonalDetails = (props) => {
                                                     placeholder="Search"
                                                 /> */}
 
-                                                <select
+                                                {/* <select
                                                     onChange={(event) => handleNationality(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
@@ -617,8 +619,8 @@ const PersonalDetails = (props) => {
                                                             {option.name}
                                                         </option>
                                                     ))}
-                                                </select>
-
+                                                </select> */}
+   <SelectBox handleorganisation={handleNationality} website={nationality} options={countryListAllIsoData} input1={ref} isDisabled={true}/>
                                                 <p className="para-form show_result">{nationalityError}</p>
                                             </div>
                                             {/* <div className="search-input-div search-input-div1">

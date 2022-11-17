@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight } from 'react-icons/fi'
 import Dark from "../DarkAuth";
 import countryListAllIsoData from "./CountryList"
 import Select from 'react-select';
+import SelectBox from './SelectBox'
 const colourStyles = {
     menuList: styles => ({
         ...styles,
@@ -33,12 +34,12 @@ const colourStyles = {
     }
     
 const options = [
-    { value: 'Yes', label: 'Yes' },
-    { value: 'No', label: 'No' },
+    { value: 'yes', label: 'Yes' },
+    { value: 'no', label: 'No' },
   ];
   
 const RegisterFour = (props) => {
-
+    const ref = useRef(null);
     const navigate = useNavigate();
     const [websiteError, setWebsiteError] = useState(false);
     const [website, setWebsite] = useState('');
@@ -101,10 +102,7 @@ const RegisterFour = (props) => {
 
     }
 
-    const handleorganisation = (value) => {
-        setWebsite(value)
-        setWebsiteError(false)
-    }
+
 
 
     const handlePayments = (value) => {
@@ -122,7 +120,13 @@ const RegisterFour = (props) => {
         setContractsError(false)
     }
 
-    const [selectedOption, setSelectedOption] = useState(null);
+    // const [selectedOption, setSelectedOption] = useState(null);
+    const handleorganisation = (event) => {
+        console.log(event,'envvent target cvalue')
+        setWebsite(event)
+        setWebsiteError(false)
+    }
+    console.log(website,'websitewebsite')
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -166,27 +170,29 @@ const RegisterFour = (props) => {
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
                                                 </select> */}
-                                                <Select
+                                                <SelectBox handleorganisation={handleorganisation} website={website} options={options} input1={ref} isDisabled={true}/>
+                                                {/* <Select
    // defaultValue={[colourOptions[2], colourOptions[3]]}
       name="colors"
-      defaultValue={selectedOption}
-        onChange={setSelectedOption}
+      defaultValue={website}
+        onChange={ handleorganisation}
         options={options}
       className="basic-multi-select"
       classNamePrefix="select"
       styles={colourStyles}
-   />
+   /> */}
                                                 <h6 className="para-form mt-2">This could be for goods & services or funding</h6>
                                                 <p className="para-form show_result">{websiteError}</p>
                                             </div>
                                         </div>
-                                        {website === 'yes' ?
+                                        {website == 'yes' ?
                                             <div className="selectflex">
                                                 <div className="w-100">
                                                     <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Which countries do you receive payments from?*</label>
                                                 </div>
                                                 <div className="search-input-div div-search-inputs search-input-div1 pb-4">
-                                                    <select
+                                                <SelectBox handleorganisation={handlePayments} website={payment} options={countryListAllIsoData} input1={ref} isDisabled={true}/>
+                                                    {/* <select
                                                         onChange={(event) => handlePayments(event.target.value)}
                                                         className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                         id="exampleFormControlSelect2"
@@ -197,7 +203,7 @@ const RegisterFour = (props) => {
                                                                 {option.name}
                                                             </option>
                                                         ))}
-                                                    </select>
+                                                    </select> */}
                                                     <p className="para-form show_result">{paymentError}</p>
 
                                                 </div>
@@ -210,7 +216,7 @@ const RegisterFour = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Do you or any people within your business have political connections?*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1 pb-4">
-                                                <select
+                                                {/* <select
                                                     onChange={(event) => handleConnections(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
@@ -218,7 +224,8 @@ const RegisterFour = (props) => {
                                                     <option>Select</option>
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
-                                                </select>
+                                                </select> */}
+                                                <SelectBox handleorganisation={handleConnections} website={connections} options={options} input1={ref} isDisabled={true}/>
                                                 <p className="para-form show_result">{connectionsError}</p>
 
                                             </div>
@@ -228,7 +235,8 @@ const RegisterFour = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Is your business involved in any public contracts? e.g. government, council or NHS*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1 pb-4">
-                                                <select
+                                            <SelectBox handleorganisation={handleContracts} website={contracts} options={options} input1={ref} isDisabled={true}/>
+                                                {/* <select
                                                     onChange={(event) => handleContracts(event.target.value)}
                                                     className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
@@ -236,7 +244,7 @@ const RegisterFour = (props) => {
                                                     <option>Select</option>
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
-                                                </select>
+                                                </select> */}
                                                 <p className="para-form show_result">{contractsError}</p>
 
                                             </div>

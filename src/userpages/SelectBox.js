@@ -29,20 +29,23 @@ const colourStyles = {
     })
     }
     
-const options = [
-    { value: 'Yes', label: 'Yes' },
-    { value: 'No', label: 'No' },
-  ];
+// const options = [
+//     { value: 'Yes', label: 'Yes' },
+//     { value: 'No', label: 'No' },
+//   ];
   
-const SelectBox = ({defaultValue,handleorganisation})=>{
+const SelectBox = ({handleorganisation,website,options,isDisabled,input1})=>{
     const [selectedOption, setSelectedOption] = useState(null);
+    console.log(isDisabled,'isDisabledisDisabledisDisabledisDisabled')
     return(
         <>
              <Select
    // defaultValue={[colourOptions[2], colourOptions[3]]}
       name="colors"
-      defaultValue={selectedOption}
-        onChange={(event)=>{setSelectedOption(event); handleorganisation(event.target.value)}}
+      ref={input1}
+      isDisabled={!isDisabled  ? true : false}
+      defaultValue={website}
+        onChange={(event)=>{handleorganisation(event.value)}}
         options={options}
       className="basic-multi-select"
       classNamePrefix="select"
