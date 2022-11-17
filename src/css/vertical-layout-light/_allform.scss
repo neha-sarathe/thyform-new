@@ -276,9 +276,9 @@ ul.CTAs a {
     list-style: none;
 
 }
-.allform-nav-formlink{
-    // padding-top: 12px;
-}
+// .allform-nav-formlink{
+//     padding-top: 12px;
+// }
 .navform .button-dropdown {
     position: relative;
     top: 1px;
@@ -477,7 +477,7 @@ padding-bottom: 0 !important;
 }
 
 .search_col {
-    background-color: transparent;
+    background-color: transparent !important;
     color: #616161;
     height: calc(1.5em + 1.12rem + 2px) !important;
 }
