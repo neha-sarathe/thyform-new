@@ -34,7 +34,8 @@
 .jotlist {
   display: flex;
   width: 100%;
-  height: auto;
+  // height: auto;
+  height: 65px;
   margin: auto;
   max-width: 100%;
   // justify-content: center;
@@ -110,7 +111,7 @@
 }
 
 .tox .tox-menubar {
- justify-content:space-between;
+  justify-content: space-between;
 }
 
 @keyframes spring {

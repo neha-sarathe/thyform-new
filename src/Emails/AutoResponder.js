@@ -31,8 +31,8 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                 <div className="container">
                     <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}
-                        <div className="col-md-10  set_margin">
-                            <button className=" back-btn-in mt-4" onClick={() => {
+                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-10 set_margin set_margin_mob">
+                            <button className=" back-btn-in mt-5" onClick={() => {
                                 navigate("/setting/settingemail")
                             }}>   <i className='fa fa-arrow-left text-white'></i>
                             </button>

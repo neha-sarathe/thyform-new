@@ -44,7 +44,7 @@ export const JotformNav = ({ checked, setChecked, darkmodes, setDarkmodes, setJo
             <i className='fa fa-arrow-left text-white'></i>
           </a>
         </div>
-        <div className='col-md-5 col-sm-5 col-xs-5 col-lg-5 pl-0 pe-0'>
+        <div className='col-md-4 col-sm-5 col-xs-5 col-lg-5 pl-0 pe-0'>
 
           <div className='d-flex justify-content-center'>
             <NavLink to='/jotform' className={'jotlink-a ' + (page[1] === 'jotform' ? 'jotlinkfocus' : '')}  ><li className='jot-link jot-link-tab'>BUILD</li></NavLink>
@@ -52,9 +52,9 @@ export const JotformNav = ({ checked, setChecked, darkmodes, setDarkmodes, setJo
             <NavLink to='/publish/publish' className={'jotlink-a ' + (page[1] === 'publish' ? 'jotlinkfocus' : '')} ><li className='jot-link jot-link-tab'>PUBLISH</li></NavLink>
           </div>
         </div>
-        <div className='col-md-5 col-sm-5 col-xs-5 col-lg-5'>
-          <div className='preview-div-switch preview-div-switch-tab '><p className='Preview d-flex pt-2'><span className='preview-position'>Preview Form</span>
-            <div class="form-switch" style={{ fontSize: "18px" }}>
+        <div className='col-md-7 col-sm-5 col-xs-5 col-lg-5'>
+          <div className='preview-div-switch preview-div-switch-tab '><p className='Preview d-flex pt-2 preview-para-tab'><span className='preview-position prev-position-tab'>Preview Form</span>
+            <div class="form-switch preview-toggle-tab" style={{ fontSize: "18px" }}>
               <input class="form-check-input switch" type="checkbox" role="switch" onChange={e => handleChange(e)}
                 defaultChecked={checked} />
             </div>
