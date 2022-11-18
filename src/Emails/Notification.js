@@ -1,13 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useRef } from 'react'
 import SettingSidebar from '../pages/jotform/SettingSidebar';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Navform from '../pages/jotform/Navform';
 import { useNavigate } from 'react-router-dom';
-
+import SelectBox from '../userpages/SelectBox';
 const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
   const navigate = useNavigate();
+  const ref = useRef();
   const [show, setShow] = useState(false);
+  const [selectedData1, setSelectedData1] = useState('')
+  const handleSelect = (value) => {
+    console.log('value......', value);
+    setSelectedData1(value)
+}
+const select_data1 = [
+  {label: 'america', value: 'Example 1' },
+  {label: 'unitedkingdom', value: 'Example 2' },
+  {label: 'india', value: 'Example 3' },
+  {label: 'germany', value: 'Example 4' },
+  {label: 'argentina', value: 'Example 5' }
+]
   return (
     <>
       <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
@@ -73,11 +86,12 @@ const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Sender Name</h2>
                         <div>
-                          <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
+                        <SelectBox handleorganisation={handleSelect} website={selectedData1} options={select_data1} input1={ref} isDisabled={true}/>
+                          {/* <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                             <option value="volvo">Please Select</option>
                             <option value="saab">Example</option>
 
-                          </select>
+                          </select> */}
                         </div>
                       </div>
                     </div>
@@ -85,10 +99,11 @@ const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Reply-to Email</h2>
                         <div>
-                          <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
+                        <SelectBox handleorganisation={handleSelect} website={selectedData1} options={select_data1} ref={ref} isDisabled={true}/>
+                          {/* <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                             <option value="volvo">Please Select</option>
                             <option value="saab">Example</option>
-                          </select>
+                          </select> */}
                         </div>
                       </div>
                     </div>

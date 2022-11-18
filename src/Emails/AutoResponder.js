@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import SettingSidebar from '../pages/jotform/SettingSidebar';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Navform from '../pages/jotform/Navform';
 import { useNavigate } from 'react-router-dom';
-
+import SelectBox from '../userpages/SelectBox';
 const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
+    const ref = useRef();
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
-
+    const [autoresponse, setAutoresponse] = useState('')
+    const handleSelect = (value) => {
+      console.log('value......', value);
+      setAutoresponse(value)
+  }
+  const select_data1 = [
+    {label: 'america', value: 'Example 1' },
+    {label: 'unitedkingdom', value: 'Example 2' },
+    {label: 'india', value: 'Example 3' },
+    {label: 'germany', value: 'Example 4' },
+    {label: 'argentina', value: 'Example 5' }
+  ]
     return (
         <>
             <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
@@ -74,11 +86,12 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                             <div class="form-group col-md-12 mt-3">
                                                 <h2 className="form-setting-title">Sender Name</h2>
                                                 <div>
-                                                    <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
+                                                <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
+                                                    {/* <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                                                         <option value="volvo">Please Select</option>
                                                         <option value="saab">Example</option>
 
-                                                    </select>
+                                                    </select> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -86,10 +99,11 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                             <div class="form-group col-md-12 mt-3">
                                                 <h2 className="form-setting-title">Reply-to Email</h2>
                                                 <div>
-                                                    <select className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
+                                                    {/* <select className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                                                         <option value="volvo">Please Select</option>
                                                         <option value="saab">Example</option>
-                                                    </select>
+                                                    </select> */}
+                                                       <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
                                                 </div>
                                             </div>
                                         </div>
@@ -193,10 +207,11 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                                 <h2 className="form-setting-title">Send Emails Later</h2>
                                                 <p className="form-setting-para">Users can receive reminder emails many days after they fill a form.</p>
                                                 <div>
-                                                    <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
+                                                <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
+                                                    {/* <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                                                         <option value="volvo">Right away</option>
                                                         <option value="saab">Example</option>
-                                                    </select>
+                                                    </select> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -270,10 +285,11 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                                 <h2 className="form-setting-title">Sender Email</h2>
                                                 <p className="form-setting-para">Users can receive emails using your own SMTP server instead of Jotform's servers.</p>
                                                 <div>
-                                                    <select className={"form-setting-input " +(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
+                                                    {/* <select className={"form-setting-input " +(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                                                         <option value="volvo">Please Select</option>
                                                         <option value="saab">+Add New Email Address</option>
-                                                    </select>
+                                                    </select> */}
+                                                    <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
                                                 </div>
                                             </div>
                                         </div>

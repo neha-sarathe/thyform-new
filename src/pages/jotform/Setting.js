@@ -1,12 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useRef, useReducer } from 'react'
 import $ from 'jquery'
 import { FiSettings } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import condition_icon from '../../images/contion_icon.svg';
 import Mobile_icon from '../../images/Mobile_icon.svg'
 import SettingSidebar from "./SettingSidebar";
+import SelectBox from '../../userpages/SelectBox';
+const select_data = [
+  { label: 'america', value: 'Example 1' },
+  { label: 'unitedkingdom', value: 'Example 2' },
+  { label: 'india', value: 'Example 3' },
+  { label: 'germany', value: 'Example 4' },
+  { label: 'argentina', value: 'Example 5' }
+]
 const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
+  const ref = useRef();
   const [show, setShow] = useState(false);
+  const [nationality1, setNationality] = useState('');
   console.log("jottoggledqd", jottoggled)
   useEffect(() => {
     $(".sidebar-dropdown > a").click(function () {
@@ -39,7 +49,11 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
     // });
 
   }, [])
+  const handleNationality = (value) => {
+    console.log('value', value);
+    setNationality(value);
 
+}
   return (
     <>
 
@@ -292,12 +306,13 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   </p>
 
                   <div>
-                    <select className={"form-setting-input " + (darkmodes ? "select_dark  " : "text-dark body-light ")} name="cars" id="cars">
+                    {/* <select className={"form-setting-input " + (darkmodes ? "select_dark  " : "text-dark body-light ")} name="cars" id="cars">
                       <option value="volvo">Volvo</option>
                       <option value="saab">Saab</option>
                       <option value="opel">Opel</option>
                       <option value="audi">Audi</option>
-                    </select>
+                    </select> */}
+                     <SelectBox handleorganisation={handleNationality} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
                   </div>
                 </div>
               </div>

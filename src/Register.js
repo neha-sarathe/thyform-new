@@ -1,8 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiSearch, FiChevronRight } from 'react-icons/fi'
+import SelectBox from './userpages/SelectBox'
 // import register2 from '../public/images/auth/register-bg.png'
 import Dark from "./DarkAuth";
+
+
+const select_data = [
+  { label: 'america', value: 'Example 1' },
+  { label: 'unitedkingdom', value: 'Example 2' },
+  { label: 'india', value: 'Example 3' },
+  { label: 'germany', value: 'Example 4' },
+  { label: 'argentina', value: 'Example 5' }
+]
 const Register = (props) => {
   const navigate = useNavigate();
   const [radio, setRadio] = useState("Limited");
@@ -27,7 +37,7 @@ const Register = (props) => {
   const [businessError, setBusinessError] = useState(false);
   const [directorError, setDirectorError] = useState(false);
   const [checkError, setCheckError] = useState(false);
-  const [website, setWebsite] = useState(false);
+  const [websites, setWebsites] = useState(false);
   const [websiteName, setWebsiteName] = useState('');
   const [soleError, setSoleError] = useState(false);
   const [industryError, setIndustryError] = useState(false);
@@ -219,7 +229,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
   const handleClick = () => {
     input1.current.focus();
     if (txt && txt.length >= 3) {
-
+      setSearchText(txt)
       const query = txt;
 
       const ar = [{ link: "apple" },
@@ -235,6 +245,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
 
       setShowResults(false);
       setSearchText(txt)
+    
     }
     else {
       setShowResults(true);
@@ -252,13 +263,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
 
   }
   // const select_data = ['United States of America', 'United Kingdom', 'India', 'Germany', 'Argentina']
-  const select_data = [
-    { key: 'america', value: 'Example 1' },
-    { key: 'unitedkingdom', value: 'Example 2' },
-    { key: 'india', value: 'Example 3' },
-    { key: 'germany', value: 'Example 4' },
-    { key: 'argentina', value: 'Example 5' }
-  ]
+
 
   const handleSelect = (value) => {
     setSelectedData(value)
@@ -323,7 +328,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
         setIndustryError('Please select an industry from the dropdown. If your industry is not listed, select other')
       } else if (txtno === '') {
         setEmployError('Please enter the number of employees your business has using only numbers')
-      } else if (website === false) {
+      } else if (websites === false) {
         setWebsiteSoleError('Please select yes or no')
       } else if (!resp) {
         setWebsiteaddError('Please Enter a Valid Website Address')
@@ -352,7 +357,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
   }
 
   const handleorganisation = (value) => {
-    setWebsite(value)
+    setWebsites(value)
     setWebsiteSoleError(false)
   }
 
@@ -371,7 +376,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
     // }
   }
 
-
+console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
   return (
     <>
       <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -538,8 +543,9 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                           >
                             <option value=''>select</option>
                             {select_data && select_data.map((data, i) => <option key={i} value={data}>{data}</option>)}
-                          </select> */}
-                          <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                          // </select> */}
+                           <SelectBox handleorganisation={handleSelect} input1={input1} website={selectedData}  isDisabled={searchText} options={select_data} />
+                          {/* <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                             ref={input1}
                             disabled={searchText ? false : true}
@@ -551,7 +557,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                                 {option.value}
                               </option>
                             ))}
-                          </select>
+                          </select> */}
                           <p className="para-form show_result">{businessError}</p>
 
                         </div>
@@ -577,7 +583,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                             <option>Germany</option>
                             <option>Argentina</option>
                           </select> */}
-                          <select onChange={(event) => handleDirectorSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                          {/* <select onChange={(event) => handleDirectorSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                             disabled={selectedData ? false : true}
                             value={directorSelect}
@@ -588,7 +594,8 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                                 {option.value}
                               </option>
                             ))}
-                          </select>
+                          </select> */}
+                            <SelectBox handleorganisation={handleDirectorSelect}  website={directorSelect}   options={select_data} input1={input1}  isDisabled={searchText}/>
                           <p className="para-form show_result">{directorError}</p>
                           {
                             selectedData ? <h6 className="mt-1">Please select the senior director. For example, a director with the majority of shareholdings or voting rights for the company.</h6> : ''
@@ -709,7 +716,8 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <select
+                          <SelectBox handleorganisation={handleIndustry}  website={industryData}   options={select_data} input1={input1} isDisabled={true}/>
+                          {/* <select
                             onChange={(event) => handleIndustry(event.target.value)}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
@@ -721,7 +729,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                             <option value="india">India</option>
                             <option value="germany">Germany</option>
                             <option value="argentina">Argentina</option>
-                          </select>
+                          </select> */}
                           <p className="para-form show_result">{industryError}</p>
                         </div>
 
@@ -779,7 +787,8 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <select
+                          <SelectBox handleorganisation={handleorganisation}  website={websites}   options={select_data} input1={input1} isDisabled={true}/>
+                          {/* <select
                             onChange={(event) => handleorganisation(event.target.value)}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
@@ -787,12 +796,12 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                             <option>Select</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
-                          </select>
+                          </select> */}
                           <p className="para-form show_result">{websiteSoleError}</p>
                         </div>
 
                       </div>
-                      {website === 'yes' ?
+                      {websites === 'yes' ?
                         <div className="d-flex mt-4 align-items-center">
                           <div className=" lables-div">
                             <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Website address*</label>
@@ -888,7 +897,8 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <select
+                          <SelectBox handleorganisation={handleOtherIndustry}  website={industryName}   options={select_data} input1={input1} isDisabled={true}/>
+                          {/* <select
                             onChange={(event) => handleOtherIndustry(event.target.value)}
                             value={industryName}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -900,7 +910,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                             <option value='India'>India</option>
                             <option value='Germany'>Germany</option>
                             <option value='Argentina'>Argentina</option>
-                          </select>
+                          </select> */}
                           <p className="para-form show_result">{otherIndustryError}</p>
                         </div>
 
@@ -965,7 +975,8 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address</label>
                         </div>
                         <div className="search-input-div">
-                          <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                        <SelectBox handleorganisation={handleAddressSelect}  website={addressSelect}   options={select_data} input1={input1} isDisabled={true}/>
+                          {/* <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                             value={addressSelect}
                             placeholder="Enter Address"
@@ -976,7 +987,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                                 {option.value}
                               </option>
                             ))}
-                          </select>
+                          </select> */}
                         </div>
 
                       </div>
@@ -1097,7 +1108,8 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <select
+                          <SelectBox handleorganisation={handleOtherwebsite}  website={otherWebsiteName}   options={select_data} input1={input1} isDisabled={true}/>
+                          {/* <select
                             onChange={(event) => handleOtherwebsite(event.target.value)}
                             value={otherWebsiteName}
                             className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
@@ -1106,7 +1118,7 @@ console.log(item.target,'xdata',y,'ydata',selectedItem,'selectedItem',document.e
                             <option>Select</option>
                             <option value='yes'>Yes</option>
                             <option value='no'>No</option>
-                          </select>
+                          </select> */}
                           <p className="para-form show_result">{otherWebsiteError}</p>
 
                         </div>

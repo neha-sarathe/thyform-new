@@ -1,11 +1,24 @@
-import React from 'react'
+import React,{useRef,useState} from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import SettingSidebar from '../pages/jotform/SettingSidebar'
 import { FaStarOfLife } from "react-icons/fa";
-
+import SelectBox from '../userpages/SelectBox';
 const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
     const navigate = useNavigate();
+    const ref = useRef();
 
+    const [enablefield, setEnablefield] = useState('')
+    const handleSelect = (value) => {
+      console.log('value......', value);
+      setEnablefield(value)
+  }
+  const select_data1 = [
+    {label: 'america', value: 'Example 1' },
+    {label: 'unitedkingdom', value: 'Example 2' },
+    {label: 'india', value: 'Example 3' },
+    {label: 'germany', value: 'Example 4' },
+    {label: 'argentina', value: 'Example 5' }
+  ]
     return (
         <>
             <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
@@ -41,12 +54,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
                                         </li>
                                         <li className='width_show_field'>
 
-                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
-                                                <option value="volvo">Please select a field</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option value="audi">Audi</option>
-                                            </select>
+                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                                         </li>
                                     </div>
@@ -60,13 +68,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                                         </li>
                                         <li className='show_field_adjust'>
-
-                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
-                                                <option value="volvo">Please select a field</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option value="audi">Audi</option>
-                                            </select>
+                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                                         </li>
                                     </div>
@@ -80,13 +82,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                                         </li>
                                         <li className='show_field_adjust'>
-
-                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
-                                                <option value="volvo">Please select a field</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option value="audi">Audi</option>
-                                            </select>
+                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                                         </li>
                                     </div>
@@ -100,14 +96,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                                         </li>
                                         <li className='show_field_do'>
-
-                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
-                                                <option value="volvo">Please select condition action</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option value="audi">Audi</option>
-                                            </select>
-
+                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
                                         </li>
                                     </div>
                                 </div>
@@ -120,14 +109,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                                         </li>
                                         <li className='show_field_option'>
-
-                                            <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
-                                                <option value="volvo">Please select a field</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option value="audi">Audi</option>
-                                            </select>
-
+                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
                                         </li>
                                     </div>
                                 </div>
