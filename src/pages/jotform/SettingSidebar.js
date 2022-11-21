@@ -31,7 +31,7 @@ const SettingSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar, jottog
                     {/* <div id="show-sidebar" class="btn btn-sm btn-dark" onClick={handleToggle1}>
                         <i class="fas fa-bars" ></i>
                     </div> */}
-                    <nav id="sidebarsetting" className={"sidebar-wrapper2 " + (darkmodes ? "text-white body-dark border-end" : "text-dark body-light border-end")}>
+                    <nav id="sidebarsetting" className={"sidebar-wrapper2 settingsidbar-desk " + (darkmodes ? "text-white body-dark border-end" : "text-dark body-light border-end")}>
                         <div class="sidebar-content">
                             {/* <div class="sidebar-brand">
 

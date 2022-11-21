@@ -69,6 +69,7 @@ import Changethanks from './Condition/Changethanks';
 import ChangeEmail from './Condition/ChangeEmail';
 import Notification from './Emails/Notification';
 import AutoResponder from './Emails/AutoResponder';
+import JotformnavMob from './pages/jotform/JotformnavMob';
 
 const LightTheme = {
   pageBackground: "white",
@@ -150,24 +151,26 @@ function App() {
           || window.location.pathname === "/publish/publish" || window.location.pathname === "/setting/setting" || window.location.pathname
           === "/Newform" || window.location.pathname === "/setting/settingform" || window.location.pathname === "/setting/settingemail"
           || window.location.pathname === "/setting/thankyoupage" || window.location.pathname === "/publish/Assign"
-          || window.location.pathname === "/publish/Email" 
+          || window.location.pathname === "/publish/Email"
           || window.location.pathname === "/publish/Pdf" || window.location.pathname === "/setting/condition"
           || window.location.pathname === "/setting/mobilenotification"
           || window.location.pathname === "/showfield"
-          || window.location.pathname === "/updatefield" 
+          || window.location.pathname === "/updatefield"
           || window.location.pathname === "/enablefield"
           || window.location.pathname === "/skippage"
           || window.location.pathname === "/changethanks"
-          || window.location.pathname === "/changeemail" 
-          || window.location.pathname === "/notification" 
+          || window.location.pathname === "/changeemail"
+          || window.location.pathname === "/notification"
           || window.location.pathname === "/autoresponder" ? (
 
           <Router>
-            {checked ? <div className='d-flex fixed-top'><div className='jotlogo-width'>  <div className='allform-logo-div'>
+            {checked ? <><div className=' fixed-top jotformnav-desk'><div className='jotlogo-width'>  <div className='allform-logo-div'>
               <a class="navbar-brand brand-logo" href="#">
                 <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
               </a>
-            </div></div><div className=''><JotformNav checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} /></div></div> : ''}
+            </div></div><div className=''><JotformNav checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} /></div></div>
+            <JotformnavMob checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />
+            </> : ''}
             {checked ? <Routes>
               {/* <Route path='/allform' element={<Allform />} /> */}
               <Route path='/jotform' element={<Jotform checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
@@ -195,7 +198,7 @@ function App() {
               <Route path='/changeemail' element={<ChangeEmail jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/notification' element={<Notification jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/autoresponder' element={<AutoResponder jottoggled={jottoggled} setJottoggled={setJottoggled} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
-              
+
               {/* <Route path='/phone' element={<Phone />} /> */}
             </Routes> : <Phone checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />
 
@@ -208,13 +211,13 @@ function App() {
             {/* <Route path='/allform' element={<Allform />} />
             <Route path='/jotform' element={<Jotform />} /> */}
             <Route path="/" element={<PaymentMode darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
-            <Route path="/register" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
-            <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
-            <Route path="/registerthree" element={<RegisterThree darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
-            <Route path="/registerfour" element={<RegisterFour darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
+            <Route path="/register" element={<Register darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
+            <Route path="/registertwo" element={<RegisterTwo darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
+            <Route path="/registerthree" element={<RegisterThree darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
+            <Route path="/registerfour" element={<RegisterFour darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
             <Route path="/personaldetails" element={<PersonalDetails darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
-            <Route path="/userform" element={<UserForm darkmodes={darkmode} setDarkmodes={setDarkmode}priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
-            <Route path="/payprocedure" element={<PayProcedure darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle}/>} />
+            <Route path="/userform" element={<UserForm darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
+            <Route path="/payprocedure" element={<PayProcedure darkmodes={darkmode} setDarkmodes={setDarkmode} priceSelect={priceSelect} setPriceSelect={setPriceSelect} toggle={toggle} setToggle={setToggle} />} />
             <Route path='/login' element={<Login setUser={handleLogin} darkmodes={darkmode} setDarkmodes={setDarkmode} usertoken={user} />} />
 
 

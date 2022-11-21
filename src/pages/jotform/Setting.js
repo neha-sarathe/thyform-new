@@ -256,9 +256,9 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
 
         <div
           class={
-            "container-fluid setting-form  " +
+            "container-fluid setting-form setting-form-mob " +
             (darkmodes ? "text-white bg-dark " : "text-dark bg-light ") +
-            (jottoggled ? "" : "setting_form_ml")
+            (jottoggled ? "" : "setting_form_ml setting_form_ml_mob ")
           }
         >
           <div className="settingform-main">
@@ -279,7 +279,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
             </div>
             <div
               className={
-                "form-set-main-div " +
+                "form-set-main-div form-set-main-div-mob " +
                 (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")
               }
             >
@@ -331,7 +331,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
               ) : (
                 <div
                   className={
-                    "form-set-main-div " +
+                    "form-set-main-div form-set-main-div-mob " +
                     (darkmodes
                       ? "text-white dash-chart-dark"
                       : "text-dark bg-white")
@@ -365,7 +365,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                           id="cars"
                         >
                           <option value="volvo">
-                            Please select the current language of your form.
+                            Please select language
                           </option>
                           <option value="saab">Saab</option>
                           <option value="opel">Opel</option>
