@@ -10,7 +10,7 @@ export const Editor = () => {
     setState({ value });
   };
   return (
-    <div className="text-editor">
+    <div className="text-editor text-editor-tab ml-0">
       <EditorToolbar />
       <ReactQuill
         theme="snow"

@@ -56,7 +56,7 @@ const Condition = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
         <div className="container ">
           <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
-            <div className="col_6 set_margin">
+            <div className="col-sm-2 col-md-8 col-lg-8 col-xl-10 set_margin set_margin_mob">
 
               {/* Direct link div start */}
               <div className='main_w'>
