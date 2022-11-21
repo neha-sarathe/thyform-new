@@ -15,7 +15,7 @@ const MobileNotification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled
         alert("Text was submitted: " + content);
         event.preventDefault();
     }
-
+const [fullscreen,setFullscreen] = useState('fullscreen')
     return (
         <>
             <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled} />
@@ -144,7 +144,7 @@ const MobileNotification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled
                                                             menu: {
                                                                 file: { title: 'Filesdfdsfds', items: 'newdocument restoredraft | preview | print ' },
                                                                 edit: { title: '', items: '' },
-                                                                view: { title: 'fullscreen', items: ' preview fullscreen' },
+                                                                view: { title:fullscreen,items: ' preview fullscreen' },
                                                                 insert: { title: 'Insert', items: 'image link media template codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor toc | insertdatetime' },
                                                                 format: { title: 'Format', items: 'bold italic underline strikethrough superscript subscript codeformat | formats blockformats fontformats fontsizes align lineheight | forecolor backcolor | removeformat' },
                                                                 tools: { title: 'Tools', items: 'spellchecker spellcheckerlanguage | code wordcount' },
@@ -155,7 +155,7 @@ const MobileNotification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled
                                                             menubar: 'format | view '
                                                             , toolbar: 'fullscreen',
                                                             initialValue: '<p>Once upon a time...</p>',
-                                                            selector: "textarea.simple",
+                                                            selector: "textarea",
                                                             toolbar: 'formatselect',
                                                             plugins: [
 

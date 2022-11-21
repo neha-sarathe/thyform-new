@@ -13254,12 +13254,7 @@ fieldset:disabled .wizard > .actions a,
   flex-grow: 1;
   align-items: center;
 }
-.sidebar-mini{
-  right:0 !important;
-  left:0 !important;
-  position: fixed !important;
-  top: -19px !important;
-  }
+
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -31426,7 +31421,7 @@ height: auto;
 }
 
 .auth .brand-logo img {
-  width: 150px;
+  width: 197px;
 }
 
 .auth form .form-group {

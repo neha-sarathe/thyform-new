@@ -392,7 +392,7 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
               </div>
 
               <div className="col-lg-6 d-flex align-items-center justify-content-center">
-                <div className="auth-form-transparent text-left p-3">
+                <div className="auth-form-transparent mt-0 text-left p-3">
                   <div className="brand-logo">
                     {/* <img
                       src="https://www.bootstrapdash.com/demo/star-admin2-pro/template/images/logo.svg"

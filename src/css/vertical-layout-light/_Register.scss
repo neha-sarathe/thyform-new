@@ -447,6 +447,12 @@ input {
     .sidebar-mini {
         top: -40px !important;
     }
+    .sidebar-mini{
+        right:0 !important;
+        left:0 !important;
+        position: fixed !important;
+        top: -19px !important;
+        }
 }
 
 
@@ -459,6 +465,12 @@ input {
         top: -32px;
         left: 421px;
     }
+    .sidebar-mini{
+        right:0 !important;
+        left:0 !important;
+        position: fixed !important;
+        top: -19px !important;
+        }
 }
 @media (min-width: 1024px) and (max-width: 1024px) {
     .field-icon-useform {

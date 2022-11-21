@@ -34,7 +34,7 @@ const colourStyles = {
 //     { value: 'No', label: 'No' },
 //   ];
   
-const SelectBox = ({handleorganisation,website,options,isDisabled,input1})=>{
+const SelectBox = ({handleorganisation,website,options,isDisabled,input1,darkmodes,setDarkmodes})=>{
     const [selectedOption, setSelectedOption] = useState(null);
     console.log(isDisabled,'isDisabledisDisabledisDisabledisDisabled')
     return(
@@ -47,7 +47,8 @@ const SelectBox = ({handleorganisation,website,options,isDisabled,input1})=>{
       defaultValue={website}
         onChange={(event)=>{handleorganisation(event.value)}}
         options={options}
-      className="basic-multi-select"
+        className={"basic-multi-select  "+(darkmodes ? "select_dark" : "text-dark body-light")}
+
       classNamePrefix="select"
       styles={colourStyles}
    />
