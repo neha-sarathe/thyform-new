@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useContext} from 'react';
 import logo from './logo.svg';
-import { Navigate } from 'react-router-dom';
+import { useNavigate,UNSAFE_NavigationContext } from 'react-router-dom';
 import styled from "styled-components";
 import AllformNav from './pages/AllformNav';
 import './App.css';
@@ -106,7 +106,20 @@ function App() {
   }, [])
   const handleLogin = () => localStorage.setItem('user', 'token');
   const handleLogout = () => setUser('');
-
+  // const navigation = useContext(UNSAFE_NavigationContext).navigator;
+  // const navigate  = useNavigate();
+  // useEffect(() => {
+  //   let unlisten = navigation.listen((locationListener) => {
+  //     if (locationListener.action === "POP") {
+  //       //do your stuff on back button click
+  //       navigate("/");
+  //     }
+  //   });
+  //   return(() => {
+  //     unlisten();
+  //   })
+  // }, []);
+  
   return (
     <>
       {user && window.location.pathname === '/dashboard' || window.location.pathname === "/charts" || window.location.pathname

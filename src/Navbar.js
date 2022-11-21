@@ -108,7 +108,7 @@ export const Navbar = ({ darkmodes, setDarkmodes,setMinimizemob }) => {
   }
   return (
     <>
-      <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <nav className={"navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row mobile-phone-profilenav " + (darkmodes ? "text-white " : "text-dark ")}>
         <div class={"text-center navbar-brand-wrapper d-flex align-items-center justify-content-start " + (darkmodes ? "text-white bg-dark bg-mini-dark" : "text-dark bg-light bg-mini-light")}>
           <div class="me-3">
             <button onClick={onCheck} class={"navbar-toggler  align-self-center " + (darkmodes ? "text-white " : "text-dark ") + (check ? "sidebar-icon-only " : " ")} type="button" data-bs-toggle="minimize" >
@@ -260,19 +260,31 @@ export const Navbar = ({ darkmodes, setDarkmodes,setMinimizemob }) => {
               </div>
             </li>
           </ul>
-          <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+          <ul class=" ms-auto mobile-phone-profile">
+          <li class="nav-item  dropdown d-lg-block user-dropdown">
             {showimage && showimage.ImageData && !showimage.ImageData.preview == "" ? <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <img class="img-xs rounded-circle" src={showimage.ImageData.preview} alt="Profile image" /> </a>:<a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <img class="img-xs rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image" /> </a>}  
-              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <div class="dropdown-menu mobile-profile-popup dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                 {showimage && showimage.ImageData && !showimage.ImageData.preview == "" ?<img class="img-md rounded-circle" src={showimage.ImageData.preview} alt="Profile image" />:<img class="img-md rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image" />}
                   <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
                   
                   <Link to="/myprofile" className="dropdown-item">Profile Settings</Link>
                   <Link to="#" className="dropdown-item">Upgrade</Link>
-                 
+              
+              <div id="create-form" class="create-form">
+                <a href='/jotform' class=""> <button className='create-form-btn'>Create Form</button></a>
+              </div>
+              <div id="create-form mt-3" class="create-form">
+                <a href="/allform/allform"  >
+             {/* <RiLayoutGridLine
+                className={"name-icon" + (darkmodes ? "text-white " : "text-dark ")} /> */}
+             <button className='create-form-btn mt-3'>All Forms</button>
+              {/* <i className="menu-arrow "></i> */}
+           
+              </a>
+              </div>
                   {/* <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p> */}
                
                 {/* <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
@@ -283,6 +295,7 @@ export const Navbar = ({ darkmodes, setDarkmodes,setMinimizemob }) => {
                 </div>
               </div>
             </li>
+
           </ul>
           <button onClick={onCheckmobile} className="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
             <FiAlignJustify />

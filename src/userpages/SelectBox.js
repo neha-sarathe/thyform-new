@@ -4,7 +4,7 @@ import Select from 'react-select';
 const colourStyles = {
     menuList: styles => ({
         ...styles,
-        background: 'papayawhip',
+        // background: 'papayawhip',
         border: styles.isFocused ? "1px solid #ff8b67" : "1px solid #cccccc",
     }),
  
@@ -26,6 +26,15 @@ const colourStyles = {
     menu: base => ({
         ...base,
         zIndex: 100
+    }),
+    control: (base, state) => ({
+        ...base,
+        border: state.isFocused && '2px solid black',
+        // This line disable the blue border
+        boxShadow: state.isFocused && 0,
+        '&:hover': {
+           border: state.isFocused && '2px solid black'
+        }
     })
     }
     
