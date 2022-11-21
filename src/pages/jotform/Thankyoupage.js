@@ -18,7 +18,7 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
         <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled} />
       </div>
       <div className={darkmodes ? "text-white bg-dark" : "text-dark body-light"}>
-        <div className={"container setting-form setting_form_ml  " + (darkmodes ? "setting_ml-form" : "setting_ml-form")}>
+        <div className={"container thankyou-form thankyou-form-tab thankyou_ml thankyou-ml-mob  " + (darkmodes ? "setting_ml-form" : "setting_ml-form")}>
           <div>
             <div className="form-setting-div">
               {" "}
@@ -34,7 +34,9 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
               </div>
             </div>
             <div className='row d-flex '>
-              <div className='col-6'><div className={'thankyou-radio ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
+              {/* <div className='col-6'> */}
+  <div className="col-sm-2 col-md-10 col-lg-5 col-xl-5 submission-mb-mob">
+                <div className={'thankyou-radio ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                 <input
                   id="individual"
                   checked={radio === "Limited"}
@@ -45,13 +47,13 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                     handleRadio("Limited");
                   }}
                 />
-                <label for="individual">
+                <label for="individual" className='thankyou-label-tab'>
                   <span></span>Show a Thank You Page after Submission
                 </label>
 
               </div>
               </div>
-              <div className='col-6'>
+              <div className="col-sm-2 col-md-10 col-lg-5 col-xl-5">
                 <div className={'thankyou-radio ' + (darkmodes ? "text-white dash-chart-dark " : "text-dark bg-white ")}>
                   <input
                     id="organization"
@@ -63,7 +65,7 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                       handleRadio("Sole");
                     }}
                   />
-                  <label for="organization" >
+                  <label for="organization" className='thankyou-label-tab' >
                     <span></span>Redirect to an external link after submission
                   </label>
                 </div>
@@ -81,7 +83,7 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
               <>
                 <div className={"accordion-item standard p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                   <div class="row mainsetting-div">
-                    <div class="form-group col-md-12 mt-3">
+                    <div class="form-group col-md-10 mt-3">
                       <h2 className="form-setting-title">Enter URL</h2>
                       <div>
                         <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />

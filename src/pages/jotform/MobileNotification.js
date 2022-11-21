@@ -23,7 +23,9 @@ const [fullscreen,setFullscreen] = useState('fullscreen')
                 <div className="container">
                     <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}
-                        <div className="col- col_6 set_margin">
+                        {/* <div className="col- col_6 set_margin"> */}
+                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-10 set_margin set_margin_mob">
+
                             {/* <div id="app-cover1">
   <div class="row row1">
    
@@ -122,13 +124,13 @@ const [fullscreen,setFullscreen] = useState('fullscreen')
                                                     </div>
                                                     <div className='d-flex notification-div-main mt-3 bg-info align-items-center justify-content-center'>
 
-                                                        <div className="col-md-6 notification-div">
-                                                            <p className="notification-para1">To receive mobile notifications</p>
-                                                            <p className="notification-para2">download the Jotform Mobile Forms app.</p>
+                                                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-8 notification-div">
+                                                            <p className="notify-para1">To receive mobile notifications</p>
+                                                            <p className="notify-para2">download the Jotform Mobile Forms app.</p>
                                                         </div>
-                                                        <div className="col-md-6 d-flex justify-content-center">
+                                                        <div className="col-sm-2 col-md-4 col-lg-4 col-xl-4 banner-btn-div banner-btn-div_mob">
                                                             <div className="banner-col-btn1"><img src="https://cdn.jotfor.ms/assets/img/mobile/app-store-blue.svg" /></div>
-                                                            <div className="banner-col-btn2"><img src="https://cdn.jotfor.ms/assets/img/mobile/google-play-blue.svg" /></div>
+                                                            <div className="banner-col-btn2 banner-btn2-mob"><img src="https://cdn.jotfor.ms/assets/img/mobile/google-play-blue.svg" /></div>
                                                         </div>
 
                                                     </div>

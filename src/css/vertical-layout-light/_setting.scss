@@ -1116,7 +1116,7 @@ body {
 }
 
 .mr-top {
-  margin-top: 80px;
+  margin-top: 65px;
 }
 
 .condition_margin_adjust {
@@ -1262,6 +1262,48 @@ body {
   left: 27px;
   top: 3px;
 }
+.notify-para1 {
+    font-size: 13px;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+.notify-para2 {
+  font-size: 14px;
+  color: #ffffff;
+}
+.banner-btn-div{
+  justify-content: center!important;
+  display: flex!important;
+}
+/* quill editor css start */
+.text-editor {
+  width: 96%;
+  margin: 0 auto;
+}
+.ql-editor {
+  min-height: 100px;
+}
+//   .ql-toolbar .ql-stroke {
+//     fill: none !important;
+//     stroke: #dc143c !important;
+//   }
+
+//   .ql-toolbar .ql-fill {
+//     fill: #dc143c !important;
+//     stroke: none !important;
+//   }
+
+//   .ql-toolbar .ql-picker {
+//     color: #dc143c !important;
+//   }
+
+/* quill editor css end */
+.thankyou_ml{
+  margin-left: 325px !important;
+}
+.thankyou-form{
+  padding: 75px 20px;
+}
 
 /* Media Query for Mobile Devices */
 
@@ -1292,7 +1334,25 @@ body {
   .set_margin_mob {
     margin: 10px 0px 0px 0px;
 }
-
+.condition_margin_mob {
+  margin: 0px 0px 0px 0px;
+}
+.thankyou-ml-mob{
+  margin-left: 0px !important;
+}
+.banner-btn-div_mob{
+  justify-content: unset !important;
+  display: block!important;
+}
+.banner-btn2-mob {
+   margin: 40px 0px 0px 0px !important;
+}
+.submission-mb-mob{
+  margin-bottom: 10px;
+}
+.thankyou-label-tab{
+  font-size: 9px;
+}
 }
 
 /* Media Query for tablets */
@@ -1338,11 +1398,47 @@ preview-div-switch-tab {
 .set_margin_mob{
   margin: 25px 0px 0px 284px;
 }
+.condition_margin_mob {
+  margin: 0px 0px 0px 284px;
+}
+
+.banner-btn-div_mob{
+  justify-content: unset !important;
+  display: block!important;
+  padding: 12px 0px;
+}
+.banner-btn2-mob {
+   margin: 30px 0px 0px 0px !important;
+}
+.thankyou-ml-mob{
+  margin-left: 200px !important;
+}
+.text-editor-tab{
+  width: 88%;
+}
+.thankyou-label-tab{
+  font-size: 13px;
+}
+.thankyou-form-tab {
+  padding: 75px 130px !important;
+}
+.submission-mb-mob{
+  margin-bottom: 10px;
+}
 }
 
 /* only for laptop screen */
 @media (min-width: 1024px) and (max-width: 1024px) {
   .form-set-main-div-mob {
     width: 86%;
+}
+.thankyou-label-tab{
+  font-size: 10px;
+}
+}
+
+@media (min-width: 1920px) and (max-width: 2560px)  {
+  .thankyou-ml-mob{
+    margin-left: 598px !important;
 }
 }
