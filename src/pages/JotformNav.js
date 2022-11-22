@@ -56,7 +56,7 @@ export const JotformNav = ({ checked, setChecked, darkmodes, setDarkmodes, setJo
           <div className='preview-div-switch preview-div-switch-tab '><p className='Preview d-flex pt-2 preview-para-tab'><span className='preview-position prev-position-tab'>Preview Form</span>
             <div class="form-switch preview-toggle-tab" style={{ fontSize: "18px" }}>
               <input class="form-check-input switch" type="checkbox" role="switch" onChange={e => handleChange(e)}
-                defaultChecked={checked} />
+                 />
             </div>
           </p></div>
         </div>

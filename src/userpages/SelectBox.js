@@ -4,7 +4,6 @@ import Select from 'react-select';
 const colourStyles = {
     menuList: styles => ({
         ...styles,
-        // background: 'papayawhip',
         border: styles.isFocused ? "1px solid #ff8b67" : "1px solid #cccccc",
     }),
  
