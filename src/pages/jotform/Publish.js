@@ -53,7 +53,8 @@ const Publish = ({darkmodes,setDarkmodes }) => {
             <div className="container ml_contain">
               <div className="row flex align-items-center justify-content-center">
                 {/* main div start */}
-                <div className="col_6 mt-5">
+                {/* <div className="col_6 mt-5"> */}
+                <div className='col-sm-2 col-md-12 col-lg-10 col-xl-10 mt-5'>
                   {/* <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                     <div>
                       <ul className='d-flex align-items-center pt-3'>
@@ -149,10 +150,12 @@ const Publish = ({darkmodes,setDarkmodes }) => {
 
                   {/* two blocks div start*/}
                   <div className={' p-4 mt-4 rounded-1 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                    <div className='d-flex align-items-center justify-content-between '>
+                    <div className='quick-div quick-div-mob '>
                       <li>
+                        <div>
                         <h6 className='fw-bold'>SHARE FORM</h6>
                         <p className='font'>Share your form link in various social posts and through  email.</p>
+                        </div>
                       </li>
                       <li>
                         <button className='bg-info rounded-3 border-white py-2 px-3 text-white _option'>
@@ -163,7 +166,7 @@ const Publish = ({darkmodes,setDarkmodes }) => {
                   </div>
                   {/* 2nd block div */}
                   <div className={' p-4 mt-4 rounded-1 ' + (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
-                    <div className='d-flex align-items-center justify-content-between '>
+                    <div className='quick-div quick-div-mob '>
                       <li>
                         <h6 className='fw-bold'>CREATE APP</h6>
                         <p className='font'>Create an app to store all of your form in one place and easily share them with others. start with this form!</p>

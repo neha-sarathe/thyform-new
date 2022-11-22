@@ -801,7 +801,7 @@ body {
 
 .font {
   font-size: 12px;
-  width: 360px;
+  // width: 360px;
 }
 
 .parlanch {
@@ -1304,7 +1304,11 @@ body {
 .thankyou-form{
   padding: 75px 20px;
 }
-
+.quick-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+}
 /* Media Query for Mobile Devices */
 
 @media (max-width: 480px) {
@@ -1352,6 +1356,15 @@ body {
 }
 .thankyou-label-tab{
   font-size: 9px;
+}
+.publish-sidebar-desk{
+  display: none !important;
+}
+
+.quick-div-mob{
+  display: block !important;
+  align-items: unset !important;
+  justify-content: unset !important;
 }
 }
 

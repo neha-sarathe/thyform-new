@@ -85,7 +85,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
 
                 {!show && !show2 ? (
                   <>
-                    <div className="col_6 mt-5">
+                    <div className="col-sm-2 col-md-12 col-lg-10 col-xl-10 mt-5">
                       {/* <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                         <div>
                           <ul className='d-flex align-items-center pt-3'>
@@ -154,9 +154,11 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                           <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
-                                <li className='shown px-2 rounded-1 calculater bg-success'>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
-                                </li>
+                                <div>
+                                  <li className='shown px-2 rounded-1 calculater bg-success pb-2'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
+                                  </li>
+                                </div>
                                 <li className='mx-4 '>
                                   <h5 className='form-setting-title remider fw-bold .showhover' align="left">SHARE ON EMAIL</h5>
                                   <p className='remider fs_6 showhover'>Share a direct link to  your form via email.</p>
@@ -179,9 +181,11 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                           <div className="accordion-header" id="headingOne">
                             <div className=''>
                               <div className='d-flex '>
-                                <li className='shown px-2 rounded-1 calculater bg-success'>
+                                <div>
+                                <li className='shown px-2 rounded-1 calculater bg-success pb-2'>
                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M208,32H48A16,16,0,0,0,32,48V159.9h0V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V168H76.7L96,187.3a15.9,15.9,0,0,0,11.3,4.7h41.4a15.9,15.9,0,0,0,11.3-4.7L179.3,168H208v40Z"></path></svg>
                                 </li>
+                                </div>
                                 <li className='mx-4 '>
                                   <h5 className='form-setting-title remider fw-bold .showhover' align="left">SCHEDULE A REMINDER EMAIL</h5>
                                   <p className='remider fs_6 showhover'>Send periodic emails to remind people to fill out your form.</p>
@@ -200,8 +204,8 @@ const Email = ({ darkmodes, setDarkmodes }) => {
 
                 ) : show ? (
                   <>
-                    <div className='col_6 mt-5'>
-                    <div className='main_w'>
+                    <div className='col-sm-2 col-md-12 col-lg-10 col-xl-10 mt-5'>
+                      <div className='main_w'>
                         <div className=' underline d-flex align-items-center '>
                           <li className='bg-icon-color py- px-2 mt-4  text-white fw-bold fs-4 rounded'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
@@ -230,7 +234,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-12 mt-3">
                                 <h2 className="form-setting-title">Email Subject*</h2>
                                 <div>
-                                  <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")}  />
+                                  <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                                 </div>
                               </div>
                             </div>
@@ -251,7 +255,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-12 mt-3">
                                 <h2 className="form-setting-title">Sender Name</h2>
                                 <div>
-                                  <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")}  />
+                                  <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                                 </div>
                               </div>
                             </div>
@@ -259,7 +263,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-12 mt-3">
                                 <h2 className="form-setting-title">Reply-to Email*</h2>
                                 <div>
-                                  <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")} />
+                                  <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                                 </div>
                               </div>
                             </div>
@@ -267,7 +271,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-12 mt-3">
                                 <h2 className="form-setting-title">To*</h2>
                                 <div>
-                                  <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")} />
+                                  <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                                 </div>
                               </div>
                             </div>
@@ -282,8 +286,8 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                   </>
                 ) : (
                   <>
-                    <div className='col_6 mt-5'>
-                    <div className='main_w'>
+                    <div className='col-sm-2 col-md-12 col-lg-10 col-xl-10 mt-5'>
+                      <div className='main_w'>
                         <div className=' underline d-flex align-items-center '>
                           <li className='bg-icon-color py- px-2 mt-4  text-white fw-bold fs-4 rounded'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
@@ -312,7 +316,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-12 mt-3">
                                 <h2 className="form-setting-title">Email Subject*</h2>
                                 <div>
-                                  <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")} />
+                                  <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                                 </div>
                               </div>
                             </div>
@@ -335,7 +339,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-12 mt-3">
                                 <h2 className="form-setting-title">Sender Name</h2>
                                 <div>
-                                  <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")} />
+                                  <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                                 </div>
                               </div>
                             </div>
@@ -343,7 +347,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-12 mt-3">
                                 <h2 className="form-setting-title">Reply-to Email*</h2>
                                 <div>
-                                  <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")} />
+                                  <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                                 </div>
                               </div>
                             </div>
@@ -351,7 +355,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-12 mt-3">
                                 <h2 className="form-setting-title">To*</h2>
                                 <div>
-                                  <input type="text" className={"form-setting-input "+(darkmodes ? "text-white body-dark" : "text-dark body-light")} />
+                                  <input type="text" className={"form-setting-input " + (darkmodes ? "text-white body-dark" : "text-dark body-light")} />
                                 </div>
                               </div>
                             </div>
@@ -378,7 +382,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class={"form-select date-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                      <select class={"form-select date-width date-enter-value " + (darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -394,7 +398,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class={"form-select date-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                      <select class={"form-select date-width date-enter-value " + (darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -410,7 +414,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                                   <div class="form-group col-md-12 mt-3">
                                     <h2 className="form-setting-title">Send Date</h2>
                                     <div>
-                                      <select class={"form-select date-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                      <select class={"form-select date-width date-enter-value " + (darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -428,7 +432,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-6 mt-3">
                                 <h2 className="form-setting-title">Send Time</h2>
                                 <div>
-                                  <select class={"form-select time-select-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                  <select class={"form-select time-select-width date-enter-value " + (darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -440,7 +444,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
                               <div class="form-group col-md-6 mt-3">
                                 <h2 className="form-setting-title">Timezone</h2>
                                 <div>
-                                  <select class={"form-select time-select-width date-enter-value "+(darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
+                                  <select class={"form-select time-select-width date-enter-value " + (darkmodes ? "select_dark " : "text-dark body-light ")} aria-label="Default select example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>

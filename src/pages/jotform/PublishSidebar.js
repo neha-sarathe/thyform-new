@@ -48,7 +48,7 @@ const PublishSidebar = ({ darkmodes, setDarkmodes, isOpen, toggleSidebar }) => {
           {/* <a id="show-sidebarw" class="btn btn-sm btn-dark" href="#">
             <i class="fas fa-bars"></i>
           </a> */}
-          <nav id="sidebarsetting" className={"sidebar-wrapper2 " + (darkmodes ? "text-white body-dark border-end" : "text-dark body-light border-end")}>
+          <nav id="sidebarsetting" className={"sidebar-wrapper2 publish-sidebar-desk " + (darkmodes ? "text-white body-dark border-end" : "text-dark body-light border-end")}>
             <div className="sidebar-content">
               {/* <div className="sidebar-brand">
 

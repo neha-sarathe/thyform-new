@@ -54,7 +54,8 @@ const Assign = ({darkmodes,setDarkmodes }) => {
             <div className="container ml_contain">
               <div className="row felx align-items-center justify-content-center">
                 {/* main div start */}
-                <div className="col_6 mt-5">
+                {/* <div className="col_6 mt-5"> */}
+                  <div className='col-sm-2 col-md-12 col-lg-10 col-xl-10 mt-5'>
                   {/* <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                     <div>
                       <ul className='d-flex align-items-center pt-3'>

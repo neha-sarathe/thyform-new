@@ -53,7 +53,8 @@ const Pdf = ({darkmodes,setDarkmodes }) => {
             <div className="container ml_contain">
               <div className="row felx align-items-center justify-content-center">
                 {/* main div start */}
-                <div className="col_6 mt-5">
+                {/* <div className="col_6 mt-5"> */}
+                <div className='col-sm-2 col-md-12 col-lg-10 col-xl-10 mt-5'>
                   {/* <div className='d-flex justify-content-between pt-2 mt-5 big_div '>
                     <div>
                       <ul className='d-flex align-items-center pt-3'>
@@ -88,7 +89,7 @@ const Pdf = ({darkmodes,setDarkmodes }) => {
 
                   <form className={'shadow-sm  rounded-1 p-3 '+ (darkmodes ? "text-white dash-chart-dark" : "text-dark bg-white")}>
                     <fieldset>
-                      <div className='d-flex align-items-center justify-content-between'>
+                      <div className='quick-div quick-div-mob'>
                         <div className='main_w'>
                           <div className=' underline d-flex align-items-center '>
                             <li className='fs-6 text-black map ml-0'>
