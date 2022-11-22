@@ -83,10 +83,12 @@ const UserForm = (props) => {
         setPinNumberError(false)
     }
     const onPin = e => {
-        if (e.target.value != pinNumber) {
+        const re = /^[0-9\b]+$/;
+        
+        if (e.target.value != pinNumber ) {
             setNoPinMatch("Not Match")
         }
-        else {
+        else if(e.target.value  === "" || e.target.value.length < 11 && re.test(e.target.value )) {
             setPin(e.target.value)
             setNoPinMatch('')
         }

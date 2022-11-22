@@ -11,8 +11,9 @@ import SelectBox from "../SelectBox";
 import countryListAllIsoData from "../CountryList";
 
 const PersonalDetails = (props) => {
-    const ref = useRef(null);
+    const ref = useRef();
     const navigate = useNavigate();
+    const [numberchecked, setNumberChecked] = React.useState(false);
     const [startDate, setStartDate] = useState(new Date());
     const [txt, setTxt] = useState('');
     const [selectedData, setSelectedData] = useState('')
@@ -54,7 +55,7 @@ const PersonalDetails = (props) => {
     const [show2, setShow2] = useState(false);
     const [addressSelect, setAddressSelect] = useState('')
     const [findError, setFindError] = useState(false);
-
+ const awayMessageText = "07"
     const select_data = [
         {label: 'america', value: 'Example 1' },
         {label: 'unitedkingdom', value: 'Example 2' },
@@ -62,7 +63,11 @@ const PersonalDetails = (props) => {
         {label: 'germany', value: 'Example 4' },
         {label: 'argentina', value: 'Example 5' }
     ]
-
+    const numberhandleChange = () => {
+        setNumberChecked(!numberchecked);
+       
+      }
+      console.log('numberchecked',numberchecked)
     const day_data = [
         { key: '1', value: '11' },
         { key: '2', value: '12' },
@@ -261,8 +266,21 @@ const PersonalDetails = (props) => {
     const onMobileNumber = e => {
         const { value } = e.target;
         const re = /^[0-9\b]+$/;
-        if (value.length <= 11 && re.test(value)) {
-            setMobileNumber(value)
+        if (value.length < 2) {
+            // value = '07';
+            if(numberchecked){
+                setMobileNumber(PhoneNumber)
+            }else{
+                setMobileNumber('07')
+            }
+        
+          }else if (value.length <= 11 && re.test(value)) {
+            if(numberchecked){
+                setMobileNumber(PhoneNumber)
+            }else{
+                setMobileNumber(value)
+            }
+           
         }
         setMobileNumberError(false)
     }
@@ -803,7 +821,7 @@ const PersonalDetails = (props) => {
                                                 <input
                                                     type="text"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                    value={mobileNumber}
+                                                    value={mobileNumber} prefix="07"
                                                     onChange={onMobileNumber}
                                                 />
                                                 <h6 className="mt-2">Please enter numbers only. Spaces are not allowed.</h6>
@@ -811,6 +829,7 @@ const PersonalDetails = (props) => {
                                                 <label className="float-none d-flex align-items-baseline" style={{ cursor: "pointer" }}>
                                                     <input type="checkbox"
                                                         className="mx-1"
+                                                        onChange={numberhandleChange}
                                                     />
 
                                                     <div>

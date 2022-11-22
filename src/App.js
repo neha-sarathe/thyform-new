@@ -88,7 +88,7 @@ const themes = {
   dark: DarkTheme,
 }
 function App() {
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
   const [user, setUser] = React.useState('');
   const [minimizemob, setMinimizemob] = useState(false);
   const [jotform, setJotform] = React.useState('jotform');
@@ -119,7 +119,22 @@ function App() {
   //     unlisten();
   //   })
   // }, []);
+  const UnloadBeacon = ({
+    url,
+    payload = () => {},
+    children
+  }) => {
+    const eventHandler = () => navigator.sendBeacon(url, payload())
   
+    useEffect(() => {
+      window.addEventListener('unload', eventHandler, true)
+      return () => {
+        window.removeEventListener('unload', eventHandler, true)
+      }
+    }, [])
+  
+    return children
+  }
   return (
     <>
       {user && window.location.pathname === '/dashboard' || window.location.pathname === "/charts" || window.location.pathname
@@ -177,14 +192,14 @@ function App() {
           || window.location.pathname === "/autoresponder" ? (
 
           <Router>
-            {checked ? <><div className=' fixed-top jotformnav-desk'><div className='jotlogo-width'>  <div className='allform-logo-div'>
+            {!checked ? <><div className=' fixed-top jotformnav-desk'><div className='jotlogo-width'>  <div className='allform-logo-div'>
               <a class="navbar-brand brand-logo" href="#">
                 <img src="../../images/Logo.png" alt="logo" className='allform-logo' />
               </a>
             </div></div><div className=''><JotformNav checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} /></div></div>
             <JotformnavMob checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />
             </> : ''}
-            {checked ? <Routes>
+            {!checked ? <Routes>
               {/* <Route path='/allform' element={<Allform />} /> */}
               <Route path='/jotform' element={<Jotform checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
               <Route path='/publish/publish' element={<Publish jottoggled={jottoggled} setJottoggled={setJottoggled} checked={checked} setChecked={setChecked} darkmodes={darkmode} setDarkmodes={setDarkmode} />} />
