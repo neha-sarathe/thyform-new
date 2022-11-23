@@ -24,7 +24,7 @@ const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
             <main className={"page-content " + (darkmodes ? "text-white bg-dark condition-height" : "text-dark bg-light condition-height")}>
                 <div className="container ">
                     <div className="row felx align-items-center justify-content-center mr-top">
-                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-10 condition_margin_adjust condition_margin_mob">
+                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-8 condition_margin_adjust condition_margin_mob">
 
                             <button className="back-btn-in mt-4 " onClick={() => {
                                 navigate("/setting/condition")
@@ -34,7 +34,7 @@ const Changethanks = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
                             <div className='main_w'>
                                 <div className=' underline d-flex align-items-center '>
 
-                                    <li className='shown px-2 rounded-1 mt-4 py-2'>
+                                <li className='shown px-2 rounded-1 calculater skip-icon-color pb-2 mt-4'>
                                         <FaCheckCircle />
                                     </li>
 

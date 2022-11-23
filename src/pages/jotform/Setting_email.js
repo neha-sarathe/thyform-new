@@ -17,7 +17,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
         <div className="container">
           <div className="row felx align-items-center justify-content-center">
             {/* main div start */}
-            <div className="col-sm-2 col-md-8 col-lg-8 col-xl-10 set_margin set_margin_mob">
+            <div className="col-sm-2 col-md-8 col-lg-8 col-xl-8 set_margin set_margin_mob">
               {/* Direct link div start */}
               <div className='main_w'>
                 <div className=' underline d-flex align-items-center '>
@@ -35,7 +35,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
 
               {/* <div className="accordion" id="accordionExample"> */}
 
-              <div className={"p-3 " + (darkmodes ? "text-white dash-chart-dark" : "text-dark")}>
+              <div className={ (darkmodes ? "text-white dash-chart-dark" : "text-dark")}>
                 {!show ? (
                   <>
                     <div>
@@ -173,7 +173,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                               </div>
                             </div>
                           </fieldset>
-                          <div className='position-absolute succes bg-opacity-75'>
+                          <div className='position-absolute succes success-resp bg-opacity-75'>
 
                           </div>
                         </form>
@@ -204,7 +204,7 @@ const Setting_email = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                               </div>
                             </div>
                           </fieldset>
-                          <div className='position-absolute bg-success ut'>
+                          <div className='position-absolute bg-success ut success-resp'>
 
                           </div>
                         </form>

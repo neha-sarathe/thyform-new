@@ -954,3 +954,48 @@ div.mob-border-vertical {
 .link-btn-txt:hover {
   border-color: transparent !important;
 }
+
+/* Media Query for Mobile Devices */
+
+@media (max-width: 480px) {
+  .formpage_desktop-mob_res{
+    width: 92%;
+  }
+  .tab-content-mob{
+    padding: 0px 0px;
+  }
+.tab-scroll-res{
+  overflow: scroll;
+}
+.formpage_desktop-tab-res{
+  width: 100%;
+}
+.tab1-horizontal-res{
+  width: 200%;
+}
+.formpage_desktop-res{
+  width: 75%;
+}
+}
+
+/* Media Query for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .formpage_desktop-mob_res{
+    width: 60%;
+  }
+  .tab-content-mob{
+    padding: 0px 0px;
+  }
+  .tab1-horizontal-res{
+    width: 95%;
+  }
+  .formpage_desktop-res{
+    width: 75%;
+  }
+}
+/* for container width in desktop of preview form */
+@media (min-width: 1200px){
+.container_width_res {
+    max-width: 1535px !important;
+}
+}

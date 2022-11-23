@@ -31,7 +31,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                 <div className="container">
                     <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}
-                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-10 set_margin set_margin_mob">
+                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-8 set_margin set_margin_mob">
                             <button className=" back-btn-in mt-5" onClick={() => {
                                 navigate("/setting/settingemail")
                             }}>   <i className='fa fa-arrow-left text-white'></i>
@@ -289,6 +289,9 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                                         <option value="volvo">Please Select</option>
                                                         <option value="saab">+Add New Email Address</option>
                                                     </select> */}
+
+
+
                                                     <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
                                                 </div>
                                             </div>

@@ -24,7 +24,7 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
         <div className="container ">
           <div className="row flex align-items-center justify-content-center mr-top">
           {/* <div className="col_6 condition_margin_adjust"> */}
-            <div className="col-sm-2 col-md-8 col-lg-8 col-xl-10 condition_margin_adjust condition_margin_mob">
+            <div className="col-sm-2 col-md-8 col-lg-8 col-xl-8 condition_margin_adjust condition_margin_mob">
               
             <button className="back-btn-in mt-4 " onClick={() => {
                     navigate("/setting/condition")
