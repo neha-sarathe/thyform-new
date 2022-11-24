@@ -20,7 +20,7 @@ const Updatefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
   ]
     return (
     <>
-      <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
+      <SettingSidebar  darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
       <main className={"page-content " + (darkmodes ? "text-white bg-dark condition-height" : "text-dark bg-light condition-height")}>
         <div className="container ">
           <div className="row felx align-items-center justify-content-center mr-top">
@@ -59,7 +59,7 @@ const Updatefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                       </select> */}
- <SelectBox handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
+ <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
                     </li>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ const Updatefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                     </li>
                     <li className='show_field_adjust'>
-                    <SelectBox handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
+                    <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
                       {/* <select className={"condition-first-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
                         <option value="volvo">Please select a field</option>
                         <option value="saab">Saab</option>
@@ -93,7 +93,7 @@ const Updatefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
                     </li>
                     <li className='show_field_adjust'>
 
-                    <SelectBox handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
+                    <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                     </li>
                   </div>
@@ -107,7 +107,7 @@ const Updatefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                     </li>
                     <li className='show_field_do'>
-                    <SelectBox handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
+                    <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                     </li>
                   </div>
@@ -121,7 +121,7 @@ const Updatefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                     </li>
                     <li className='show_field_option'>
-                    <SelectBox handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
+                    <SelectBox darkmodes={darkmodes} handleorganisation={handleSelect} website={updatefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                     </li>
                   </div>

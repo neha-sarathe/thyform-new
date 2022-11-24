@@ -161,26 +161,9 @@ const RegisterFour = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Does your business receive payments from outside the UK?*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1">
-                                                {/* <select
-                                                    onChange={(event) => handleorganisation(event.target.value)}
-                                                    className={"search-input decorated " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                                                    id="exampleFormControlSelect2"
-                                                >Website address*
-                                                    <option>Select</option>
-                                                    <option value="yes">Yes</option>
-                                                    <option value="no">No</option>
-                                                </select> */}
-                                                <SelectBox handleorganisation={handleorganisation} website={website} options={options} input1={ref} isDisabled={true}/>
-                                                {/* <Select
-   // defaultValue={[colourOptions[2], colourOptions[3]]}
-      name="colors"
-      defaultValue={website}
-        onChange={ handleorganisation}
-        options={options}
-      className="basic-multi-select"
-      classNamePrefix="select"
-      styles={colourStyles}
-   /> */}
+                                    
+                                                <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleorganisation} website={website} options={options} input1={ref} isDisabled={true}/>
+                                               
                                                 <h6 className="para-form mt-2">This could be for goods & services or funding</h6>
                                                 <p className="para-form show_result">{websiteError}</p>
                                             </div>
@@ -191,19 +174,7 @@ const RegisterFour = (props) => {
                                                     <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Which countries do you receive payments from?*</label>
                                                 </div>
                                                 <div className="search-input-div div-search-inputs search-input-div1 pb-4">
-                                                <SelectBox handleorganisation={handlePayments} website={payment} options={countryListAllIsoData} input1={ref} isDisabled={true}/>
-                                                    {/* <select
-                                                        onChange={(event) => handlePayments(event.target.value)}
-                                                        className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                                                        id="exampleFormControlSelect2"
-                                                    >Website address*
-                                                        <option value=''>select</option>
-                                                        {countryListAllIsoData && countryListAllIsoData.map((option, index) => (
-                                                            <option key={index} value={option.code}>
-                                                                {option.name}
-                                                            </option>
-                                                        ))}
-                                                    </select> */}
+                                                <SelectBox  darkmodes={props.darkmodes} handleorganisation={handlePayments} website={payment} options={countryListAllIsoData} input1={ref} isDisabled={true}/>
                                                     <p className="para-form show_result">{paymentError}</p>
 
                                                 </div>
@@ -225,7 +196,7 @@ const RegisterFour = (props) => {
                                                     <option value="yes">Yes</option>
                                                     <option value="no">No</option>
                                                 </select> */}
-                                                <SelectBox handleorganisation={handleConnections} website={connections} options={options} input1={ref} isDisabled={true}/>
+                                                <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleConnections} website={connections} options={options} input1={ref} isDisabled={true}/>
                                                 <p className="para-form show_result">{connectionsError}</p>
 
                                             </div>
@@ -235,16 +206,7 @@ const RegisterFour = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Is your business involved in any public contracts? e.g. government, council or NHS*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1 pb-4">
-                                            <SelectBox handleorganisation={handleContracts} website={contracts} options={options} input1={ref} isDisabled={true}/>
-                                                {/* <select
-                                                    onChange={(event) => handleContracts(event.target.value)}
-                                                    className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                                                    id="exampleFormControlSelect2"
-                                                >Website address*
-                                                    <option>Select</option>
-                                                    <option value="yes">Yes</option>
-                                                    <option value="no">No</option>
-                                                </select> */}
+                                            <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleContracts} website={contracts} options={options} input1={ref} isDisabled={true}/>
                                                 <p className="para-form show_result">{contractsError}</p>
 
                                             </div>

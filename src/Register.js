@@ -399,9 +399,11 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                       alt="logo"
                     /> */}
                     <div>
-                      <a className="navbar-brand brand-logo" href="/">
+                   {props.darkmodes ? <a className="navbar-brand brand-logo thy-logo-pyment" href="/">
+                        <img src="../../images/thy-logo.png" alt="logo" />
+                      </a>:<a className="navbar-brand brand-logo thy-logo-pyment" href="/">
                         <img src="../../images/Logo.png" alt="logo" />
-                      </a>
+                      </a>}   
 
                     </div>
                   </div>
@@ -544,7 +546,7 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                             <option value=''>select</option>
                             {select_data && select_data.map((data, i) => <option key={i} value={data}>{data}</option>)}
                           // </select> */}
-                           <SelectBox handleorganisation={handleSelect} input1={input1} website={selectedData}  isDisabled={searchText} options={select_data} />
+                           <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleSelect} input1={input1} website={selectedData}  isDisabled={searchText} options={select_data} />
                           {/* <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                             id="exampleFormControlSelect2"
                             ref={input1}
@@ -595,7 +597,7 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                               </option>
                             ))}
                           </select> */}
-                            <SelectBox handleorganisation={handleDirectorSelect}  website={directorSelect}   options={select_data} input1={input1}  isDisabled={searchText}/>
+                            <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleDirectorSelect}  website={directorSelect}   options={select_data} input1={input1}  isDisabled={searchText}/>
                           <p className="para-form show_result">{directorError}</p>
                           {
                             selectedData ? <h6 className="mt-1">Please select the senior director. For example, a director with the majority of shareholdings or voting rights for the company.</h6> : ''
@@ -716,20 +718,8 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <SelectBox handleorganisation={handleIndustry}  website={industryData}   options={select_data} input1={input1} isDisabled={true}/>
-                          {/* <select
-                            onChange={(event) => handleIndustry(event.target.value)}
-                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                            id="exampleFormControlSelect2"
-                            value={industryData}
-                          >
-                            <option>Select</option>
-                            <option value="america">United States of America</option>
-                            <option value="kingdom">United Kingdom</option>
-                            <option value="india">India</option>
-                            <option value="germany">Germany</option>
-                            <option value="argentina">Argentina</option>
-                          </select> */}
+                          <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleIndustry}  website={industryData}   options={select_data} input1={input1} isDisabled={true}/>
+                          
                           <p className="para-form show_result">{industryError}</p>
                         </div>
 
@@ -749,24 +739,7 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                         </div>
 
                       </div>
-                      {  /* <div className="d-flex mt-3 align-items-center">
-                        <div className=" lables-div">
-                          <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Are you a contractor or freelancer?*</label>
-                        </div>
-                        <div className="search-input-div">
-                      
-                          <select
-                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                            id="exampleFormControlSelect2"
-                          >
-                            <option>Select</option>
-                            <option>Yes</option>
-                            <option>No</option>
-                          </select>
-                        </div>
-
-                      </div>
-*/}
+                    
                       {/* <div className="d-flex mt-3 align-items-center">
                         <div className=" lables-div">
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>
@@ -787,16 +760,7 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <SelectBox handleorganisation={handleorganisation}  website={websites}   options={select_data} input1={input1} isDisabled={true}/>
-                          {/* <select
-                            onChange={(event) => handleorganisation(event.target.value)}
-                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                            id="exampleFormControlSelect2"
-                          >Website address*
-                            <option>Select</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                          </select> */}
+                          <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleorganisation}  website={websites}   options={select_data} input1={input1} isDisabled={true}/>
                           <p className="para-form show_result">{websiteSoleError}</p>
                         </div>
 
@@ -897,7 +861,7 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <SelectBox handleorganisation={handleOtherIndustry}  website={industryName}   options={select_data} input1={input1} isDisabled={true}/>
+                          <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleOtherIndustry}  website={industryName}   options={select_data} input1={input1} isDisabled={true}/>
                           {/* <select
                             onChange={(event) => handleOtherIndustry(event.target.value)}
                             value={industryName}
@@ -975,19 +939,8 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                           <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Registered business address</label>
                         </div>
                         <div className="search-input-div">
-                        <SelectBox handleorganisation={handleAddressSelect}  website={addressSelect}   options={select_data} input1={input1} isDisabled={true}/>
-                          {/* <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                            id="exampleFormControlSelect2"
-                            value={addressSelect}
-                            placeholder="Enter Address"
-                          >
-                            <option value=''>select</option>
-                            {select_data.map((option, index) => (
-                              <option key={index} value={option.value}>
-                                {option.value}
-                              </option>
-                            ))}
-                          </select> */}
+                        <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleAddressSelect}  website={addressSelect}   options={select_data} input1={input1} isDisabled={true}/>
+                          
                         </div>
 
                       </div>
@@ -1108,17 +1061,7 @@ console.log(searchText,'searchTextsearchTextsearchTextsearchText',txt)
                         </div>
                         <div className="search-input-div">
                           {/* <input type='search' placeholder='Enter your business name*' className='search-input'/> */}
-                          <SelectBox handleorganisation={handleOtherwebsite}  website={otherWebsiteName}   options={select_data} input1={input1} isDisabled={true}/>
-                          {/* <select
-                            onChange={(event) => handleOtherwebsite(event.target.value)}
-                            value={otherWebsiteName}
-                            className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
-                            id="exampleFormControlSelect2"
-                          >
-                            <option>Select</option>
-                            <option value='yes'>Yes</option>
-                            <option value='no'>No</option>
-                          </select> */}
+                          <SelectBox  darkmodes={props.darkmodes} handleorganisation={handleOtherwebsite}  website={otherWebsiteName}   options={select_data} input1={input1} isDisabled={true}/>
                           <p className="para-form show_result">{otherWebsiteError}</p>
 
                         </div>

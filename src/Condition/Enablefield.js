@@ -54,7 +54,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
                                         </li>
                                         <li className='width_show_field'>
 
-                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
+                                        <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                                         </li>
                                     </div>
@@ -68,7 +68,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                                         </li>
                                         <li className='show_field_adjust'>
-                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
+                                        <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                                         </li>
                                     </div>
@@ -82,7 +82,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                                         </li>
                                         <li className='show_field_adjust'>
-                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
+                                        <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
 
                                         </li>
                                     </div>
@@ -96,7 +96,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                                         </li>
                                         <li className='show_field_do'>
-                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
+                                        <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
                                         </li>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@ const Enablefield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => 
 
                                         </li>
                                         <li className='show_field_option'>
-                                        <SelectBox handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
+                                        <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={enablefield} options={select_data1} input1={ref} isDisabled={true}/>
                                         </li>
                                     </div>
                                 </div>
