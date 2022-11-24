@@ -69,7 +69,7 @@ const Email = ({ darkmodes, setDarkmodes }) => {
   return (
     <>
       <PublishSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
-      <main>
+      <main className='page-content'>
         <div className="page-wrapper chiller-theme toggled ">
           <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
             <i className="fas fa-bars"></i>

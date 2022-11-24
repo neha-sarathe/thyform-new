@@ -238,7 +238,7 @@ console.log(condition,'conditionsss12364566')
                                                 <input
                                                     type="text"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
-                                                    value={pin}
+                                                    // value={pin}
                                                     onChange={onPin}
                                                     placeholder="Enter your confirm pin number"
                                                 />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiChevronRight, FiCheck } from 'react-icons/fi'
 import Dark from "../../DarkAuth";
@@ -42,7 +42,7 @@ const PersonalDetails = (props) => {
     const [emailAddress, setEmailAddress] = useState('');
     const [emailAddressError, setEmailAddressError] = useState(false);
     const [confirmEmailError, setConfirmEmailError] = useState(false);
-    const [checkedConfirm, setCheckedConfirm] = useState(false);
+    // const [checkedConfirm, setCheckedConfirm] = useState(false);
     const [checkedConfirmError, setCheckedConfirmError] = useState(false);
     const [BuildingName, setBuildingName] = useState('');
     const [townName, setTownName] = useState('');
@@ -55,19 +55,19 @@ const PersonalDetails = (props) => {
     const [show2, setShow2] = useState(false);
     const [addressSelect, setAddressSelect] = useState('')
     const [findError, setFindError] = useState(false);
- const awayMessageText = "07"
+    const awayMessageText = "07"
     const select_data = [
-        {label: 'america', value: 'Example 1' },
-        {label: 'unitedkingdom', value: 'Example 2' },
-        {label: 'india', value: 'Example 3' },
-        {label: 'germany', value: 'Example 4' },
-        {label: 'argentina', value: 'Example 5' }
+        { label: 'america', value: 'Example 1' },
+        { label: 'unitedkingdom', value: 'Example 2' },
+        { label: 'india', value: 'Example 3' },
+        { label: 'germany', value: 'Example 4' },
+        { label: 'argentina', value: 'Example 5' }
     ]
     const numberhandleChange = () => {
         setNumberChecked(!numberchecked);
-       
-      }
-      console.log('numberchecked',numberchecked)
+
+    }
+    console.log('numberchecked', numberchecked)
     const day_data = [
         { key: '1', value: '11' },
         { key: '2', value: '12' },
@@ -172,7 +172,7 @@ const PersonalDetails = (props) => {
     const handleAddressSelect = (value) => {
         setAddressSelect(value)
         // setAddSelectError(false)
-      }
+    }
     const nextPage = () => {
         let pattern = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i;
         if (selectedData === '') {
@@ -203,9 +203,10 @@ const PersonalDetails = (props) => {
             setConfirmEmailError('Email does not match')
         } else if (checked === false) {
             setCheckError('Please read the Terms & Conditions and check the box to show you agree to them')
-        } else if (checkedConfirm === false) {
-            setCheckedConfirmError('Please acknowledge the cover of the Financial Services Compensation Scheme')
         }
+        // else if (checkedConfirm === false) {
+        //     setCheckedConfirmError('Please acknowledge the cover of the Financial Services Compensation Scheme')
+        // }
         // else if (houseno === '') {
         //     setHouseError('Please enter your House number')
         // }
@@ -239,15 +240,15 @@ const PersonalDetails = (props) => {
         setChecked(!checked)
         setCheckError(false)
     }
-    const onCheckbox = () => {
-        setCheckedConfirm(!checkedConfirm)
-        setCheckedConfirmError(false)
-    }
+    // const onCheckbox = () => {
+    //     setCheckedConfirm(!checkedConfirm)
+    //     setCheckedConfirmError(false)
+    // }
 
 
     const onPostcode = e => {
         const { value } = e.target;
-        const re =/^[0-9a-zA-Z-,]+(\s{0,1}[0-9a-zA-Z-, ])*$/;
+        const re = /^[0-9a-zA-Z-,]+(\s{0,1}[0-9a-zA-Z-, ])*$/;
         if (value === "" || re.test(value)) {
             setpostCode(value)
         }
@@ -268,19 +269,19 @@ const PersonalDetails = (props) => {
         const re = /^[0-9\b]+$/;
         if (value.length < 2) {
             // value = '07';
-            if(numberchecked){
+            if (numberchecked) {
                 setMobileNumber(PhoneNumber)
-            }else{
+            } else {
                 setMobileNumber('07')
             }
-        
-          }else if (value.length <= 11 && re.test(value)) {
-            if(numberchecked){
+
+        } else if (value.length <= 11 && re.test(value)) {
+            if (numberchecked) {
                 setMobileNumber(PhoneNumber)
-            }else{
+            } else {
                 setMobileNumber(value)
             }
-           
+
         }
         setMobileNumberError(false)
     }
@@ -407,22 +408,23 @@ const PersonalDetails = (props) => {
         "November",
         "December",
     ];
-    const handleFind =()=>{
-        if(postCode===" "){
+    const handleFind = () => {
+        if (postCode === " ") {
             console.log("errorrrrrrrrrrrrrrr", postCode);
             setFindError("Please enter your postcode, press Find address and select your address from the options")
         }
-        else{
-        setShow2(true)
-        setFindError(false)
-         } }
-         var fromMax = moment().add(0, 'day')
-         var eighteenYearsAgo = moment().subtract("years", 18);
-        //  console.log(this.state.playerId, OneSignal, 'jflkdskjfjdsl')
-         var valid = function (current) {
- 
-             return (eighteenYearsAgo.isAfter(current) && fromMax >= current);
-         };
+        else {
+            setShow2(true)
+            setFindError(false)
+        }
+    }
+    var fromMax = moment().add(0, 'day')
+    var eighteenYearsAgo = moment().subtract("years", 18);
+    //  console.log(this.state.playerId, OneSignal, 'jflkdskjfjdsl')
+    var valid = function (current) {
+
+        return (eighteenYearsAgo.isAfter(current) && fromMax >= current);
+    };
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -457,7 +459,7 @@ const PersonalDetails = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Title*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1">
-                                            <SelectBox handleorganisation={handleSelect} website={selectedData} options={select_data} input1={ref} isDisabled={true}/>
+                                                <SelectBox handleorganisation={handleSelect} website={selectedData} options={select_data} input1={ref} isDisabled={true} />
                                                 {/* <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
                                                     value={selectedData}
@@ -514,9 +516,9 @@ const PersonalDetails = (props) => {
                                             <div className="search-input-div div-search-inputs search-input-div1 d-flex">
                                                 {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="dd/MM/yyyy" className={"date_pick "+ (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")} /> */}
                                                 <DatePicker
-                                         
-                                                 filterDate={valid}
-                                                maxDate={moment().subtract(18, "years")}
+
+                                                    filterDate={valid}
+                                                    maxDate={moment().subtract(18, "years")}
                                                     renderCustomHeader={({
                                                         date,
                                                         changeYear,
@@ -638,7 +640,7 @@ const PersonalDetails = (props) => {
                                                         </option>
                                                     ))}
                                                 </select> */}
-   <SelectBox handleorganisation={handleNationality} website={nationality} options={countryListAllIsoData} input1={ref} isDisabled={true}/>
+                                                <SelectBox handleorganisation={handleNationality} website={nationality} options={countryListAllIsoData} input1={ref} isDisabled={true} />
                                                 <p className="para-form show_result">{nationalityError}</p>
                                             </div>
                                             {/* <div className="search-input-div search-input-div1">
@@ -688,7 +690,7 @@ const PersonalDetails = (props) => {
                                                 {!show ? (
                                                     <p
                                                         onClick={() => {
-                                                            (setShow(true)||setShow2(!show2));
+                                                            (setShow(true) || setShow2(!show2));
                                                         }}
                                                         className="pt-2"
                                                     >
@@ -697,7 +699,7 @@ const PersonalDetails = (props) => {
                                                 ) : (
                                                     <p
                                                         onClick={() => {
-                                                            (setShow(false)||setShow2(!show2));
+                                                            (setShow(false) || setShow2(!show2));
                                                         }}
                                                     >
                                                         Find address by lookup
@@ -706,13 +708,13 @@ const PersonalDetails = (props) => {
                                             </div>
 
                                         </div>
-                                        {show2 ?(
-                                             <div className="selectflex mt-4">
-                                             <div className="lable-fix-width">
-                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Home Address*</label>
-                                             </div>
-                                             <div className="search-input-div div-search-inputs search-input-div1">
-                                             {/* <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                        {show2 ? (
+                                            <div className="selectflex mt-4">
+                                                <div className="lable-fix-width">
+                                                    <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Home Address*</label>
+                                                </div>
+                                                <div className="search-input-div div-search-inputs search-input-div1">
+                                                    {/* <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
                                                     value={addressSelect}
                                                     placeholder="Enter Address"
@@ -724,14 +726,14 @@ const PersonalDetails = (props) => {
                                                         </option>
                                                     ))}
                                                 </select> */}
-                                                 <SelectBox handleorganisation={handleSelect}  website={selectedData}   options={select_data} input1={ref} isDisabled={true}/>
-                                             </div>
+                                                    <SelectBox handleorganisation={handleSelect} website={selectedData} options={select_data} input1={ref} isDisabled={true} />
+                                                </div>
 
-                                         </div>
+                                            </div>
                                         ) : (
                                             " "
                                         )
-}
+                                        }
                                         {show || addressSelect ? (
                                             <>
                                                 {" "}
@@ -783,8 +785,8 @@ const PersonalDetails = (props) => {
                                                             <input
                                                                 value={townName}
                                                                 onChange={onTownName}
-                                                                type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")} 
-                                                                placeholder="Town or City"/>
+                                                                type="text" className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
+                                                                placeholder="Town or City" />
                                                         </div>
 
                                                     </div>
@@ -793,7 +795,7 @@ const PersonalDetails = (props) => {
                                         ) : (
                                             " "
                                         )}
-                                        
+
                                         <h4 className="heading-form dark-mode-text">Tell Us How We Can Contact You</h4>
                                         <div className="selectflex mt-4">
                                             <div className="lable-fix-width">
@@ -892,7 +894,7 @@ const PersonalDetails = (props) => {
                                                 <p className="para-form show_result">{checkError}</p>
                                             </div>
                                         </label>
-                                        <label className="float-none d-flex align-items-baseline" style={{ cursor: "pointer" }}>
+                                        {/* <label className="float-none d-flex align-items-baseline" style={{ cursor: "pointer" }}>
                                             <input type="checkbox"
                                                 defaultChecked={checkedConfirm}
                                                 onChange={onCheckbox}
@@ -901,8 +903,9 @@ const PersonalDetails = (props) => {
 
                                             <div><h6 className="fw-bold mt-3">I acknowledge the cover of the <a href="/#" className="confirm_text"> Financial Services Compensation Scheme</a><br /></h6>
                                                 <p className="para-form show_result">{checkedConfirmError}</p>
-                                                <h6 className="fw-bold mt-3">You can see the fee information for this account <a href="/#" className="confirm_text">here</a> </h6></div>
-                                        </label>
+                                                <h6 className="fw-bold mt-3">You can see the fee information for this account <a href="/#" className="confirm_text">here</a> </h6>
+                                            </div>
+                                        </label> */}
                                         <div className="mt-3 text-end  align-items-center justify-content-around">
                                             <p className="already-login">
                                                 Already account please{" "}

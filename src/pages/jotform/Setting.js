@@ -359,7 +359,8 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                       </p>
 
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
@@ -370,7 +371,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                           <option value="saab">Saab</option>
                           <option value="opel">Opel</option>
                           <option value="audi">Audi</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -414,14 +415,16 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         securely.{" "}
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">No</option>
                           <option value="saab">Yes</option>
-                        </select>
+                        </select> */}
+
                       </div>
                     </div>
                   </div>
@@ -447,14 +450,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         Enable or disable autofill on your form.{" "}
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">Enabled</option>
                           <option value="saab">Disabled</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -500,7 +504,8 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         prevent multiple form submissions.{" "}
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
@@ -508,7 +513,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                           <option value="volvo">No Check</option>
                           <option value="saab">Enabled</option>
                           <option value="saab">Disabled</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -519,14 +524,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         Do not allow previously entered values.{" "}
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">No Check</option>
                           <option value="saab">Email</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -537,14 +543,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         Check your form's accessibility.
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">Disabled</option>
                           <option value="saab">Enabled</option>
-                        </select>
+                        </select> */}
                       </div>
                       <label className="float-none d-flex align-items-start mt-4">
                         <input
@@ -579,14 +586,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         Do you want to send HTTP POST data to the Thank-You page?
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">No</option>
                           <option value="saab">Yes</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -600,7 +608,8 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         conditional logic?
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
@@ -608,7 +617,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                           <option value="volvo">Clear on Submit</option>
                           <option value="saab">Clear on Being Hidden</option>
                           <option value="volvo">Don't Clear</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -620,14 +629,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         fields.
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">Enabled</option>
                           <option value="saab">Disabled</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -636,14 +646,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                       <h2 className="form-setting-title">Form Layout</h2>
 
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark" : "text-dark body-light")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">All questions on one page</option>
                           <option value="saab">Single question per page</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -656,14 +667,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         Navigation between errors on form
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">No</option>
                           <option value="saab">Yes</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -674,14 +686,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         Prevent other users from cloning this form.
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">No</option>
                           <option value="saab">Yes</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>
@@ -694,14 +707,15 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         Allow browsers to store and autocomplete form fields.
                       </p>
                       <div>
-                        <select
+                      <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                        {/* <select
                           className={"form-setting-input " + (darkmodes ? "select_dark " : "text-dark body-light ")}
                           name="cars"
                           id="cars"
                         >
                           <option value="volvo">No</option>
                           <option value="saab">Yes</option>
-                        </select>
+                        </select> */}
                       </div>
                     </div>
                   </div>

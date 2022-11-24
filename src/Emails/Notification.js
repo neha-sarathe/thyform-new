@@ -5,9 +5,17 @@ import Tabs from 'react-bootstrap/Tabs';
 import Navform from '../pages/jotform/Navform';
 import { useNavigate } from 'react-router-dom';
 import SelectBox from '../userpages/SelectBox';
+const select_data = [
+  { label: 'america', value: 'Example 1' },
+  { label: 'unitedkingdom', value: 'Example 2' },
+  { label: 'india', value: 'Example 3' },
+  { label: 'germany', value: 'Example 4' },
+  { label: 'argentina', value: 'Example 5' }
+]
 const Notification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
   const navigate = useNavigate();
   const ref = useRef();
+  const [nationality1, setNationality] = useState('');
   const [show, setShow] = useState(false);
   const [selectedData1, setSelectedData1] = useState('')
   const handleSelect = (value) => {
@@ -21,6 +29,11 @@ const select_data1 = [
   {label: 'germany', value: 'Example 4' },
   {label: 'argentina', value: 'Example 5' }
 ]
+const handleNationality = (value) => {
+  console.log('value', value);
+  setNationality(value);
+
+}
   return (
     <>
       <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
@@ -289,10 +302,11 @@ const select_data1 = [
                         <h2 className="form-setting-title">Sender Email</h2>
                         <p className="form-setting-para">Users can receive emails using your own SMTP server instead of Jotform's servers.</p>
                         <div>
-                          <select className={"form-setting-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
+                        <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                          {/* <select className={"form-setting-input "+(darkmodes ? "select_dark" : "text-dark body-light")} name="cars" id="cars">
                             <option value="volvo">Please Select</option>
                             <option value="saab">+Add New Email Address</option>
-                          </select>
+                          </select> */}
                         </div>
                       </div>
                     </div>
