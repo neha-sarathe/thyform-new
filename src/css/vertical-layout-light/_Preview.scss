@@ -944,7 +944,7 @@ div.mob-border-vertical {
 }
 
 .mr-prev-nav {
-  margin-top: 16px;
+  margin-top: 0px;
 }
 
 .link-btn-txt {
@@ -976,6 +976,9 @@ div.mob-border-vertical {
 .formpage_desktop-res{
   width: 75%;
 }
+.formpage_nav_mob {
+display: none;
+}
 }
 
 /* Media Query for tablets */
@@ -991,6 +994,9 @@ div.mob-border-vertical {
   }
   .formpage_desktop-res{
     width: 75%;
+  }
+  .formpage_input-res {
+    width: 9rem;
   }
 }
 /* for container width in desktop of preview form */

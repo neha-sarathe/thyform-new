@@ -28,10 +28,10 @@ const PreviewNav = ({ checked, setChecked, darkmodes, setDarkmodes }) => {
   return (
     <>
       <Dark darkmodes={darkmodes} setDarkmodes={setDarkmodes} />
-      <div className={"formpage_nav formpage-nav-light mr-prev-nav"}>
+      <div className={"formpage_nav formpage-nav-light mr-prev-nav formpage_nav_mob"}>
         <div className="formpage_first_div">
           <div>
-            <input className="formpage_input" />
+            <input className="formpage_input formpage_input-res " />
             <span className="icon-span">
               <FiExternalLink className="send_icon" />
             </span>
