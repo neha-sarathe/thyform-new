@@ -712,7 +712,7 @@ const PersonalDetails = (props) => {
                                                  <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Home Address*</label>
                                              </div>
                                              <div className="search-input-div div-search-inputs search-input-div1">
-                                             <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
+                                             {/* <select onChange={(event) => handleAddressSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
                                                     value={addressSelect}
                                                     placeholder="Enter Address"
@@ -723,7 +723,8 @@ const PersonalDetails = (props) => {
                                                             {option.value}
                                                         </option>
                                                     ))}
-                                                </select>
+                                                </select> */}
+                                                 <SelectBox handleorganisation={handleSelect}  website={selectedData}   options={select_data} input1={ref} isDisabled={true}/>
                                              </div>
 
                                          </div>
