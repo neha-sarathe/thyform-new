@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AiFillCheckCircle } from "react-icons/ai";
+
 // import Navform from './Navform';
 import SettingSidebar from './SettingSidebar';
 import Editor from './Editor';
@@ -17,8 +18,13 @@ const Thankyoupage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =>
       <div>
         <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled} />
       </div>
+<<<<<<< HEAD
+      <div className={darkmodes ? "text-white bg-dark thankyou-page-container" : "text-dark body-light thankyou-page-container"}>
+        <div className={"container thankyou-form thankyou-form-tab thankyou_ml thankyou-ml-mob  " + (darkmodes ? "setting_ml-form" : "setting_ml-form")}>
+=======
       <div className={darkmodes ? "text-white bg-dark" : "text-dark body-light"}>
         <div className={"container container-resp thankyou-form thankyou-form-tab thankyou_ml thankyou-ml-mob  " + (darkmodes ? "setting_ml-form" : "setting_ml-form")}>
+>>>>>>> a4bec10b1ae2e82c14834ed338dfca2fcc5e05c9
           <div>
             <div className="form-setting-div">
               {" "}

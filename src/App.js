@@ -136,7 +136,7 @@ function App() {
     return children
   }
   return (
-    <>
+    <div style={{height: '100%'}}>
       {user && window.location.pathname === '/dashboard' || window.location.pathname === "/charts" || window.location.pathname
         === "/morris" || window.location.pathname === "/myprofile" ? (
         <>  <div class={"container-scroller " + (darkmode ? "text-white bg-dark" : "text-dark bg-light")}>
@@ -250,7 +250,7 @@ function App() {
 
 
           </Routes> </Router>
-        ) : ''}</>
+        ) : ''}</div>
   );
 }
 

@@ -54,7 +54,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                   </li>
                   <li className='width_show_field'>
 
-                  <SelectBox handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
+                  <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
 
                   </li>
                 </div>
@@ -68,7 +68,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
 
                   </li>
                   <li className='show_field_adjust'>
-                  <SelectBox handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
+                  <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
                   </li>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
 
                   </li>
                   <li className='show_field_adjust'>
-                  <SelectBox handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
+                  <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
 
                   </li>
                 </div>
@@ -95,7 +95,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
 
                   </li>
                   <li className='show_field_do'>
-                  <SelectBox handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
+                  <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
                   </li>
                 </div>
               </div>
@@ -108,7 +108,7 @@ const Skippage = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
 
                   </li>
                   <li className='show_field_page'>
-                  <SelectBox handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
+                  <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={skippage} options={select_data1} input1={ref} isDisabled={true}/>
                   </li>
                 </div>
               </div>

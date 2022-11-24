@@ -59,7 +59,7 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                       </select> */}
-  <SelectBox handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
+  <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
                     </li>
                   </div>
                 </div>
@@ -79,7 +79,7 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                       </select> */}
- <SelectBox handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
+ <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
                     </li>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                       </select> */}
- <SelectBox handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
+ <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
                     </li>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                       </select> */}
- <SelectBox handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
+ <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
                     </li>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ const Showfield = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                       </select> */}
- <SelectBox handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
+ <SelectBox  darkmodes={darkmodes} handleorganisation={handleSelect} website={showfield} options={select_data1} input1={ref} isDisabled={true}/>
                     </li>
                   </div>
                 </div>

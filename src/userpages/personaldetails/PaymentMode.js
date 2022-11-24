@@ -49,9 +49,12 @@ const PaymentMode = (props) => {
                                 <div className="auth-form-transparent text-left p-3">
                                     <div className="brand-logo">
                                         <div>
-                                            <a className="navbar-brand brand-logo" href="/">
+                                            {props.darkmodes ? <a className="navbar-brand brand-logo thy-logo-pyment" href="/">
+                                                <img src="../../images/thy-logo.png" alt="logo" />
+                                            </a>:<a className="navbar-brand brand-logo thy-logo-pyment" href="/">
                                                 <img src="../../images/Logo.png" alt="logo" />
-                                            </a>
+                                            </a> }
+                                            
 
                                         </div>
                                     </div>

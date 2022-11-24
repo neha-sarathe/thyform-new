@@ -312,7 +312,7 @@ const Setting = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
                       <option value="opel">Opel</option>
                       <option value="audi">Audi</option>
                     </select> */}
-                     <SelectBox handleorganisation={handleNationality} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
+                     <SelectBox handleorganisation={handleNationality} darkmodes={darkmodes} website={nationality1} options={select_data} input1={ref} isDisabled={true}/>
                   </div>
                 </div>
               </div>

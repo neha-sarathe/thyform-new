@@ -14,6 +14,7 @@ export const MyThemeProvider = ({ children }) => {
   const Wrapper = styled.div`
     background-color: ${backgroundColor};
     color: ${textColor};
+    height: 100%;
   `;
 
   const toggle = () => {
