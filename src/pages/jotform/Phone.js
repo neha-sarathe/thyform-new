@@ -66,8 +66,8 @@ export const Phone = ({ checked, setChecked, darkmodes, setDarkmodes }) => {
     <>
       <div> <PreviewNav checked={checked} setChecked={setChecked} darkmodes={darkmodes} setDarkmodes={setDarkmodes} /></div>
 
-      <div style={{ paddingTop: "57px" }} className={darkmodes ? "text-white body-dark" : "text-dark body-light"}>  <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div style={{ paddingTop: "57px" }} className={darkmodes ? "text-dark body-dark" : "text-dark body-light"}>  <div class="tab-content tab-content-mob" id="myTabContent">
+        <div class="tab-pane fade show active tab-scroll-res" id="home" role="tabpanel" aria-labelledby="home-tab">
           <div className="formpage_container">
             <h6 className={"mt-3  " + (darkmodes ? "text-white " : "text-dark ")}>ORIENTATION</h6>
             <div>
@@ -79,7 +79,7 @@ export const Phone = ({ checked, setChecked, darkmodes, setDarkmodes }) => {
               </span>
             </div>
             {show ? (
-              <div className="formpage_desktop-mob">
+              <div className="formpage_desktop-mob formpage_desktop-mob_res">
                 <div className="mobile-border">
                   <div className="mobile_heading">
                     <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
@@ -217,8 +217,8 @@ export const Phone = ({ checked, setChecked, darkmodes, setDarkmodes }) => {
           {/* <div className='mobile-view'><div className='form-head-mobile'><h4 className='form-text-mobile'>Form</h4></div><div><div className='form-btn-mobile'><button className='btn  w-100 btn-submit-mobile'>Submit</button></div></div></div> */}
 
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div className="formpage_container">
-          <h6 className="mt-3">ORIENTATION</h6>
+        <div class="tab-pane fade tab-scroll-res" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div className="formpage_container">
+          <h6 className={"mt-3 "+ (darkmodes ? "text-white " : "text-dark ")}>ORIENTATION</h6>
           <div>
             <span className="incon-container" onClick={handleMobile}>
               <IoIosTabletPortrait className="formpage_icon-tabland" />
@@ -228,7 +228,7 @@ export const Phone = ({ checked, setChecked, darkmodes, setDarkmodes }) => {
             </span>
           </div>
           {show ? (
-            <div className="formpage_desktop-tab">
+            <div className="formpage_desktop-tab formpage_desktop-tab-res">
               <div className="tab-border">
                 <div className="desktop_heading">
                   <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
@@ -287,7 +287,7 @@ export const Phone = ({ checked, setChecked, darkmodes, setDarkmodes }) => {
               </h1>
             </div>
           ) : (
-            <div className="formpage_desktop-tab1-horizontal">
+            <div className="formpage_desktop-tab1-horizontal tab1-horizontal-res">
               <h1 className="vertical-tab-button">
                 <span class="dot-vertical"></span>
               </h1>
@@ -349,13 +349,13 @@ export const Phone = ({ checked, setChecked, darkmodes, setDarkmodes }) => {
           )}
         </div></div>
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div className="formpage_container">
-          <div className="formpage_desktop">
+          <div className="formpage_desktop formpage_desktop-res ">
             <div className="desktop_heading ps-3">
               <h1 className={darkmodes ? "text-dark" : "text-dark"}>Heading</h1>
             </div>
 
             <form>
-              <div class="row jumbotron me-0 mr-0 ml-0 ms-0 mt-3 container">
+              <div class="row jumbotron me-0 mr-0 ml-0 ms-0 mt-3 container container_width_res">
                 <div class="col-sm-6 form-group">
                   <label for="name-f">First Name</label>
                   <input

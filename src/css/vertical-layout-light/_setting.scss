@@ -801,7 +801,7 @@ body {
 
 .font {
   font-size: 12px;
-  width: 360px;
+  // width: 360px;
 }
 
 .parlanch {
@@ -1304,7 +1304,19 @@ body {
 .thankyou-form{
   padding: 75px 20px;
 }
-
+.quick-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+}
+.quick-setting-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.display-setting {
+  display: flex;
+}
 /* Media Query for Mobile Devices */
 
 @media (max-width: 480px) {
@@ -1352,6 +1364,29 @@ body {
 }
 .thankyou-label-tab{
   font-size: 9px;
+}
+.publish-sidebar-desk{
+  display: none !important;
+}
+
+.quick-div-mob{
+  display: block !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+}
+.quick-setting-icon-res{
+  display: block;
+  align-items: unset;
+  justify-content: unset;
+}
+.display-setting-res {
+  display: block;
+}
+.set-resp{
+  margin-left: 0px;
+}
+.success-resp{
+  height: 112px;
 }
 }
 
@@ -1425,6 +1460,9 @@ preview-div-switch-tab {
 .submission-mb-mob{
   margin-bottom: 10px;
 }
+.success-resp{
+  height: 112px;
+}
 }
 
 /* only for laptop screen */
@@ -1435,10 +1473,23 @@ preview-div-switch-tab {
 .thankyou-label-tab{
   font-size: 10px;
 }
+.success-resp{
+  height: 90px;
+}
 }
 
 @media (min-width: 1920px) and (max-width: 2560px)  {
   .thankyou-ml-mob{
     margin-left: 598px !important;
+}
+}
+
+/* container-width of thank you page */
+@media (min-width: 1200px){
+.container-resp {
+    max-width: 1050px !important;
+}
+.thankyou-form-tab {
+  padding: 125px 20px;
 }
 }

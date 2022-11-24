@@ -560,3 +560,11 @@ input[type=checkbox] {
 .btn:focus {
     box-shadow: none !important;
 }
+/* Eye icons of password for large desktop screen*/
+@media (min-width: 1900px){
+.field-icon-useform {
+    position: relative;
+    top: -32px;
+    left: 808px;
+}
+}

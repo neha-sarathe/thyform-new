@@ -4,6 +4,7 @@ import { Editor } from "@tinymce/tinymce-react";
 import { BiFullscreen } from "react-icons/bi";
 import { FaSadCry } from "react-icons/fa";
 import { FiShuffle } from "react-icons/fi";
+import { MdSendToMobile } from "react-icons/md";
 const MobileNotification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) => {
     const [content, setState] = useState();
 
@@ -15,7 +16,7 @@ const MobileNotification = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled
         alert("Text was submitted: " + content);
         event.preventDefault();
     }
-const [fullscreen,setFullscreen] = useState('fullscreen')
+    const [fullscreen, setFullscreen] = useState('fullscreen')
     return (
         <>
             <SettingSidebar jottoggled={jottoggled} darkmodes={darkmodes} setJottoggled={setJottoggled} />
@@ -24,7 +25,7 @@ const [fullscreen,setFullscreen] = useState('fullscreen')
                     <div className="row felx align-items-center justify-content-center">
                         {/* main div start */}
                         {/* <div className="col- col_6 set_margin"> */}
-                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-10 set_margin set_margin_mob">
+                        <div className="col-sm-2 col-md-8 col-lg-8 col-xl-8 set_margin set_margin_mob">
 
                             {/* <div id="app-cover1">
   <div class="row row1">
@@ -45,7 +46,8 @@ const [fullscreen,setFullscreen] = useState('fullscreen')
                             <div className='main_w'>
                                 <div className=' underline d-flex align-items-center '>
                                     <li className='bg-icon-color py- px-2 mt-4  text-white fw-bold fs-4 rounded-1'>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg>
+                                        {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.7,128,40,181.8V74.2Zm11.8,10.9,12.1,11a8,8,0,0,0,10.8,0l12.1-11L203.4,192H52.6ZM157.3,128,216,74.2V181.8Z"></path></svg> */}
+                                        <MdSendToMobile />
                                     </li>
                                     <li className='fs-6 text-black mt-5 pb-2 map'>
                                         <h5 className={'fs-8 heading_5 remider ' + (darkmodes ? "text-white" : "text-dark ")} >MOBILE NOTIFICATION</h5>
@@ -146,7 +148,7 @@ const [fullscreen,setFullscreen] = useState('fullscreen')
                                                             menu: {
                                                                 file: { title: 'Filesdfdsfds', items: 'newdocument restoredraft | preview | print ' },
                                                                 edit: { title: '', items: '' },
-                                                                view: { title:fullscreen,items: ' preview fullscreen' },
+                                                                view: { title: fullscreen, items: ' preview fullscreen' },
                                                                 insert: { title: 'Insert', items: 'image link media template codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor toc | insertdatetime' },
                                                                 format: { title: 'Format', items: 'bold italic underline strikethrough superscript subscript codeformat | formats blockformats fontformats fontsizes align lineheight | forecolor backcolor | removeformat' },
                                                                 tools: { title: 'Tools', items: 'spellchecker spellcheckerlanguage | code wordcount' },

@@ -8,10 +8,10 @@ const PayProcedure = (props) => {
     const navigate = useNavigate();
     const [cardno, setCardno] = useState('');
     const [cardError, setCardError] = useState(false);
-    // const [expiration, setExpiration] = useState('');
-    // const [expirationError, setExpirationError] = useState(false);
-    // const [secureCode, setSecureCode] = useState('');
-    // const [secureCodeError, setSecureCodeError] = useState(false);
+    const [expiration, setExpiration] = useState('');
+    const [expirationError, setExpirationError] = useState(false);
+    const [secureCode, setSecureCode] = useState('');
+    const [secureCodeError, setSecureCodeError] = useState(false);
     // const [fname, setFname] = useState('');
     // const [fnameError, setFnameError] = useState(false);
     // const [surname, setSurname] = useState('');
@@ -41,16 +41,16 @@ const PayProcedure = (props) => {
         }
         setCardError(false);
     }
-    // const onExpiration = e => {
-    //     const { value } = e.target;
-    //     setExpiration(value);
-    //     setExpirationError(false);
-    // }
-    // const onSecureCode = e => {
-    //     const { value } = e.target;
-    //     setSecureCode(value);
-    //     setSecureCodeError(false);
-    // }
+    const onExpiration = e => {
+        const { value } = e.target;
+        setExpiration(value);
+        setExpirationError(false);
+    }
+    const onSecureCode = e => {
+        const { value } = e.target;
+        setSecureCode(value);
+        setSecureCodeError(false);
+    }
     // const onFname = e => {
     //     const { value } = e.target;
     //     setFname(value);
@@ -91,12 +91,12 @@ const PayProcedure = (props) => {
         if (cardno.length < 19 ) {
             setCardError('Please Enter valid Card Number.')
         }
-        // else if (expiration === "") {
-        //     setExpirationError('Please Enter Expiration')
-        // }
-        // else if (secureCode === "") {
-        //     setSecureCodeError('Please Enter Security Code')
-        // }
+        else if (expiration === "") {
+            setExpirationError('Please Enter Expiration')
+        }
+        else if (secureCode === "") {
+            setSecureCodeError('Please Enter Security Code')
+        }
         // else if (fname === "") {
         //     setFnameError('Please Enter First Name')
         // }
@@ -174,18 +174,18 @@ const PayProcedure = (props) => {
                                                 <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Expiration*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="MM/YY"
-                                                        // value={expiration}
-                                                        // onChange={onExpiration} 
+                                                        value={expiration}
+                                                        onChange={onExpiration} 
                                                         />
-                                                    {/* <p className="para-form show_result">{expirationError}</p> */}
+                                                    <p className="para-form show_result">{expirationError}</p>
                                                 </div>
                                                 <div class="search-pay-div col-md-6 pt-4">
                                                     <label>Security Code*</label>
                                                     <input type="text" className={"search-input " + (props.darkmodes ? " bg-dark login-dark-text " : " bg-light login-light-text ")} placeholder="Security Code"
-                                                        // value={secureCode}
-                                                        // onChange={onSecureCode} 
+                                                        value={secureCode}
+                                                        onChange={onSecureCode} 
                                                         />
-                                                    {/* <p className="para-form show_result">{secureCodeError}</p> */}
+                                                    <p className="para-form show_result">{secureCodeError}</p>
                                                 </div>
                                             </div>
                                             <div className='row'>
