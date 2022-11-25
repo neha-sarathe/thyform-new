@@ -99,7 +99,7 @@ const handleNationality = (value) => {
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Sender Name</h2>
                         <div>
-                        <SelectBox handleorganisation={handleSelect} website={selectedData1} options={select_data1} input1={ref} isDisabled={true}/>
+                        <SelectBox darkmodes={darkmodes} handleorganisation={handleSelect} website={selectedData1} options={select_data1} input1={ref} isDisabled={true}/>
                           {/* <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                             <option value="volvo">Please Select</option>
                             <option value="saab">Example</option>
@@ -112,7 +112,7 @@ const handleNationality = (value) => {
                       <div class="form-group col-md-12 mt-3">
                         <h2 className="form-setting-title">Reply-to Email</h2>
                         <div>
-                        <SelectBox handleorganisation={handleSelect} website={selectedData1} options={select_data1} ref={ref} isDisabled={true}/>
+                        <SelectBox darkmodes={darkmodes} handleorganisation={handleSelect} website={selectedData1} options={select_data1} ref={ref} isDisabled={true}/>
                           {/* <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                             <option value="volvo">Please Select</option>
                             <option value="saab">Example</option>

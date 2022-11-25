@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import SettingSidebar from '../pages/jotform/SettingSidebar';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -11,16 +11,16 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
     const [show, setShow] = useState(false);
     const [autoresponse, setAutoresponse] = useState('')
     const handleSelect = (value) => {
-      console.log('value......', value);
-      setAutoresponse(value)
-  }
-  const select_data1 = [
-    {label: 'america', value: 'Example 1' },
-    {label: 'unitedkingdom', value: 'Example 2' },
-    {label: 'india', value: 'Example 3' },
-    {label: 'germany', value: 'Example 4' },
-    {label: 'argentina', value: 'Example 5' }
-  ]
+        console.log('value......', value);
+        setAutoresponse(value)
+    }
+    const select_data1 = [
+        { label: 'america', value: 'Example 1' },
+        { label: 'unitedkingdom', value: 'Example 2' },
+        { label: 'india', value: 'Example 3' },
+        { label: 'germany', value: 'Example 4' },
+        { label: 'argentina', value: 'Example 5' }
+    ]
     return (
         <>
             <SettingSidebar darkmodes={darkmodes} setDarkmodes={setDarkmodes} jottoggled={jottoggled} setJottoggled={setJottoggled} />
@@ -63,7 +63,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                             <div class="form-group col-md-12 mt-3">
                                                 <h2 className="form-setting-title">Email Subject*</h2>
                                                 <div>
-                                                    <input type="text" className={"form-setting-input "+(darkmodes? "text-white":"text-dark") }/>
+                                                    <input type="text" className={"form-setting-input " + (darkmodes ? "text-white" : "text-dark")} />
                                                 </div>
                                             </div>
                                         </div>
@@ -86,7 +86,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                             <div class="form-group col-md-12 mt-3">
                                                 <h2 className="form-setting-title">Sender Name</h2>
                                                 <div>
-                                                <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
+                                                    <SelectBox handleorganisation={handleSelect} darkmodes={darkmodes} website={autoresponse} options={select_data1} input1={ref} isDisabled={true} />
                                                     {/* <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                                                         <option value="volvo">Please Select</option>
                                                         <option value="saab">Example</option>
@@ -103,7 +103,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                                         <option value="volvo">Please Select</option>
                                                         <option value="saab">Example</option>
                                                     </select> */}
-                                                       <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
+                                                    <SelectBox darkmodes={darkmodes} handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true} />
                                                 </div>
                                             </div>
                                         </div>
@@ -111,7 +111,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                             <div class="form-group col-md-12 mt-3">
                                                 <h2 className="form-setting-title">Recipient Email*</h2>
                                                 <div>
-                                                    <input type="text" className={"form-setting-input "+(darkmodes? "text-white":"text-dark")} />
+                                                    <input type="text" className={"form-setting-input " + (darkmodes ? "text-white" : "text-dark")} />
                                                 </div>
                                             </div>
                                         </div>
@@ -207,7 +207,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
                                                 <h2 className="form-setting-title">Send Emails Later</h2>
                                                 <p className="form-setting-para">Users can receive reminder emails many days after they fill a form.</p>
                                                 <div>
-                                                <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
+                                                    <SelectBox darkmodes={darkmodes} handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true} />
                                                     {/* <select className={"form-setting-input "+(darkmodes ? "select_dark " : "text-dark body-light ")} name="cars" id="cars">
                                                         <option value="volvo">Right away</option>
                                                         <option value="saab">Example</option>
@@ -292,7 +292,7 @@ const AutoResponder = ({ darkmodes, setDarkmodes, jottoggled, setJottoggled }) =
 
 
 
-                                                    <SelectBox handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true}/>
+                                                    <SelectBox darkmodes={darkmodes} handleorganisation={handleSelect} website={autoresponse} options={select_data1} input1={ref} isDisabled={true} />
                                                 </div>
                                             </div>
                                         </div>

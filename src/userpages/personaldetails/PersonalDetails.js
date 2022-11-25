@@ -459,7 +459,7 @@ const PersonalDetails = (props) => {
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Title*</label>
                                             </div>
                                             <div className="search-input-div div-search-inputs search-input-div1">
-                                                <SelectBox handleorganisation={handleSelect} website={selectedData} options={select_data} input1={ref} isDisabled={true} />
+                                                <SelectBox darkmodes={props.darkmodes} handleorganisation={handleSelect} website={selectedData} options={select_data} input1={ref} isDisabled={true} />
                                                 {/* <select onChange={(event) => handleSelect(event.target.value)} className={"search-input " + (props.darkmodes ? "select-box-dark" : "select-box-white")}
                                                     id="exampleFormControlSelect2"
                                                     value={selectedData}
@@ -640,7 +640,7 @@ const PersonalDetails = (props) => {
                                                         </option>
                                                     ))}
                                                 </select> */}
-                                                <SelectBox handleorganisation={handleNationality} website={nationality} options={countryListAllIsoData} input1={ref} isDisabled={true} />
+                                                <SelectBox darkmodes={props.darkmodes} handleorganisation={handleNationality} website={nationality} options={countryListAllIsoData} input1={ref} isDisabled={true} />
                                                 <p className="para-form show_result">{nationalityError}</p>
                                             </div>
                                             {/* <div className="search-input-div search-input-div1">
@@ -726,7 +726,7 @@ const PersonalDetails = (props) => {
                                                         </option>
                                                     ))}
                                                 </select> */}
-                                                    <SelectBox handleorganisation={handleSelect} website={selectedData} options={select_data} input1={ref} isDisabled={true} />
+                                                    <SelectBox darkmodes={props.darkmodes} handleorganisation={handleSelect} website={selectedData} options={select_data} input1={ref} isDisabled={true} />
                                                 </div>
 
                                             </div>

@@ -25,16 +25,16 @@ const UserForm = (props) => {
     const [pin, setPin] = useState('');
     const [pinError, setPinError] = useState(false);
 
-    const [noMatchError, setNoMatchError] = useState('');
-    const [noPinMatch, setNoPinMatch] = useState('');
+    const [noMatchError, setNoMatchError] = useState(false);
+    const [noPinMatch, setNoPinMatch] = useState(false);
     const [hide, setHide] = useState(true)
     const [confirmhide, setConfirmhide] = useState(true)
     const hideSwitch = ev => {
-      setHide(!hide)
+        setHide(!hide)
     }
     const hideConfirmSwitch = ev => {
         setConfirmhide(!confirmhide)
-      }
+    }
     // const [hide, setHide] = useState(true)
     // const [hide2, setHide2] = useState(true)
 
@@ -82,42 +82,54 @@ const UserForm = (props) => {
         }
         setPinNumberError(false)
     }
+    // const onPin = e => {
+    //     const { value } = e.target;
+    //     const re = /^[0-9\b]+$/;
+    //     if (value != pinNumber) {
+    //         setNoPinMatch("Not Match")
+    //     }
+    //     else if (value === "" || value.length < 11 && re.test(value)) {
+    //         setPin(value)
+    //         setNoPinMatch('')
+    //     }
+    //     setPinError(false)
+    // }
     const onPin = e => {
-        const re = /^[0-9\b]+$/;
-        
-        if (e.target.value != pinNumber ) {
+       
+     if (e.target.value != pinNumber) {
             setNoPinMatch("Not Match")
         }
-        else if(e.target.value  === "" || e.target.value.length < 11 && re.test(e.target.value )) {
+        else {
             setPin(e.target.value)
-            setNoPinMatch('')
+            setNoPinMatch(false)
         }
         setPinError(false)
     }
+
     const nextPage = () => {
         const regex = /^(?=.*[0-9]{1,3})(?=.*[!@#$%^&*]{1,5})[a-zA-Z0-9!@#$%^&*]{8,20}$/;
-const condition = regex.test(password);
-console.log(condition,'conditionsss12364566')
+        const condition = regex.test(password);
+        console.log(condition, 'conditionsss12364566')
         if (name === '') {
             setError('Please Enter Username')
         } else if (password === '') {
             setPasswordError('Please enter Password')
-        } 
+        }
         else if (!regex.test(password)) {
             setPasswordError('validation')
-        } 
-        else if (confirm === '') {
+        }
+        else if (confirm === '' && noMatchError === "Not Match") {
             setConfirmError('Please enter Confirm Password')
         } else if (pinNumber.length < 6) {
             setPinNumberError('Please enter Pin Number')
-        } else if (pin === '') {
+        } else if (pin === '' && noPinMatch === "Not Match") {
             setPinError('Please enter Confirm Pin Number')
         }
         else {
             navigate('/payprocedure')
         }
     }
-
+console.log("pin error", noPinMatch);
     return (
         <>
             <Dark darkmodes={props.darkmodes} setDarkmodes={props.setDarkmodes} />
@@ -172,21 +184,21 @@ console.log(condition,'conditionsss12364566')
 
                                                 <input
                                                     // type={hide ? 'password' : 'input'}
-                                                type={hide ? 'password' : 'input'}
+                                                    type={hide ? 'password' : 'input'}
                                                     placeholder="Enter your password"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     value={password}
                                                     onChange={onPassword}
                                                     maxLength={20}
                                                 />
-                                                   <span className="password__show field-icon-useform" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span>
+                                                <span className="password__show field-icon-useform" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span>
                                                 {/* <span className="password_icon" onClick={hideSwitch}>{hide ? <FiEyeOff /> : <FiEye />}</span> */}
 
                                                 <p className="para-form show_result">{passwordError}</p>
                                             </div>
 
                                         </div>
-                                        <div className="selectflex mt-4">
+                                        <div className="selectflex">
                                             <div className="lable-fix-width">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Confirm Password*</label>
                                             </div>
@@ -203,7 +215,7 @@ console.log(condition,'conditionsss12364566')
                                                         placeholder="confirm password"
                                                         className={"search-input  " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     />
-                                                       <span className="password__show field-icon-useform" onClick={hideConfirmSwitch}>{confirmhide ? <FiEyeOff /> : <FiEye />}</span>
+                                                    <span className="password__show field-icon-useform" onClick={hideConfirmSwitch}>{confirmhide ? <FiEyeOff /> : <FiEye />}</span>
                                                     {/* <span className="confirm_icon" onClick={hideSwitch2}>{hide2 ? <FiEyeOff /> : <FiEye />}</span> */}
                                                 </div>
                                                 <p className="para-form show_result">{confirmError}</p>
@@ -212,7 +224,7 @@ console.log(condition,'conditionsss12364566')
 
                                         </div>
 
-                                        <div className="selectflex mt-4">
+                                        <div className="selectflex">
                                             <div className="lable-fix-width">
                                                 <label className={"lable-form " + (props.darkmodes ? "text-white bg-dark" : "text-dark bg-white")}>Pin*</label>
                                             </div>
@@ -239,6 +251,9 @@ console.log(condition,'conditionsss12364566')
                                                     type="text"
                                                     className={"search-input " + (props.darkmodes ? "text-white" : "text-dark")}
                                                     // value={pin}
+                                                    required
+                                                    minLength={6}
+                                                    maxLength={10}
                                                     onChange={onPin}
                                                     placeholder="Enter your confirm pin number"
                                                 />

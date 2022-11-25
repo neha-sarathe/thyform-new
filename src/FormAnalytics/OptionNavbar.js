@@ -89,16 +89,16 @@ export const OptionNavbar = ({ darkmodes, setDarkmodes }) => {
             </nav> */}
             <div class="option-navbar-detailsshow mb-4 border-bottom ">
                 <div class="p-2 flex-fill d-flex justify-content-center">
-                    <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white bg-dark " : "text-dark bg-light ")} type="button" onClick={() => onViewShow('view')}><p className="h1"> 6 </p> Views</button>
+                    <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white " : "text-dark ")} type="button" onClick={() => onViewShow('view')}><p className="h1"> 6 </p> Views</button>
                 </div>
                 <div class="p-2 flex-fill d-flex justify-content-center">
-                    <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white bg-dark " : "text-dark bg-light ")} type="button" onClick={() => onViewShow('response')}><p className="h1"> 4 </p> Responses</button>
+                    <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white " : "text-dark ")} type="button" onClick={() => onViewShow('response')}><p className="h1"> 4 </p> Responses</button>
                 </div>
                 <div class="p-2 flex-fill d-flex justify-content-center">
-                    <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white bg-dark " : "text-dark bg-light ")} type="button" onClick={() => onViewShow('conversionRate')}><p className="h1"> 64% </p> Conversion Rate</button>
+                    <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white " : "text-dark ")} type="button" onClick={() => onViewShow('conversionRate')}><p className="h1"> 64% </p> Conversion Rate</button>
                 </div>
                 <div class="p-2 flex-fill d-flex justify-content-center">
-                    <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white bg-dark " : "text-dark bg-light ")} type="button" onClick={() => onViewShow('avgTime')}><p className="h1"> 00:00 </p> Avg. Time</button>
+                    <button class={"btn btn-primary btn-lg my-2 my-sm-0 px-5 button_col btn_width_form " + (darkmodes ? "text-white " : "text-dark ")} type="button" onClick={() => onViewShow('avgTime')}><p className="h1"> 00:00 </p> Avg. Time</button>
                 </div>
             </div>
             <Tabs
